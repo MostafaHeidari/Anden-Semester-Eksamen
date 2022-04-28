@@ -9,6 +9,7 @@ public interface ILogin {
     void setUsername(String username);
     String getPassword();
     void setPassword(String password);
-    Boolean isAdmin();
+    String getUserType();
+    void setUserType(String UserType);
 
 }
