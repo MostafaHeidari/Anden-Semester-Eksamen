@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@CSS/Login.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.FrontPageController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@CSS/Login.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.LoginController">
 
     <children>
         <Label alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="159.0" layoutY="108.0" text="SOSU Documentation System" textFill="WHITE">

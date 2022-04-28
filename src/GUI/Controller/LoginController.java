@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class FrontPageController {
+public class LoginController {
     @FXML
     private Button btnLogin;
     public void Login() throws IOException {
