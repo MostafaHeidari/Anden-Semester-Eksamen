@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane onKeyPressed="#handleOnKeyPressed" stylesheets="CSS/Login.css" prefHeight="483.0" prefWidth="746.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.LoginController">
-
+<AnchorPane stylesheets="@CSS/Login.css" onKeyPressed="#handleOnKeyPressed"  prefHeight="483.0" prefWidth="746.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.LoginController">
     <children>
         <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="69.0" prefHeight="38.0" prefWidth="758.0" text="SOSU Documentation System" textAlignment="CENTER">
             <font>
