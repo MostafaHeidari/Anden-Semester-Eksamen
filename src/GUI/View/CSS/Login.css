@@ -4,7 +4,7 @@ Redefine of the background color, to a dark blue color.
 
 .root {
     -fx-base: rgb(26, 119, 99);
-    -fx-background: rgb(25, 50, 65);
+    -fx-background: rgb(187, 229, 232);
 
     /* make controls like buttons a little bit lighter for a relaxed design effect */
     -fx-color: derive(-fx-base, 15%);

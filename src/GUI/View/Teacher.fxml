@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="485.0" prefWidth="697.0" style="-fx-background-color: #BBE5E8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Teacher">
+   <children>
+      <Label layoutX="39.0" layoutY="55.0" text="Velkommen til Lærer Administration">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="608.0" layoutY="22.0" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE" />
+      <TableView layoutX="39.0" layoutY="106.0" prefHeight="301.0" prefWidth="626.0">
+        <columns>
+          <TableColumn prefWidth="119.20001220703125" text="ID " />
+          <TableColumn prefWidth="141.59996032714844" text="Navn" />
+            <TableColumn prefWidth="158.39996337890625" text="Efternavn" />
+            <TableColumn prefWidth="204.0" text="Adgangkode" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="256.0" layoutY="429.0" prefHeight="27.0" prefWidth="123.0" style="-fx-border-color: #001569;" text="Opret" textFill="#2b2121">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="398.0" layoutY="429.0" prefHeight="27.0" prefWidth="123.0" style="-fx-border-color: #001569;" text="Rediger " textFill="#2b2121">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="538.0" layoutY="429.0" prefHeight="27.0" prefWidth="123.0" ripplerFill="#fafafa" style="-fx-border-color: #001569;" text="Slet" textFill="#2b2121">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
