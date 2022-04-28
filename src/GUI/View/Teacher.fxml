@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="485.0" prefWidth="697.0" style="-fx-background-color: #BBE5E8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.TeacherController">
+<AnchorPane prefHeight="485.0" prefWidth="697.0" stylesheets="@CSS/Teacher.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.TeacherController">
    <children>
-      <Label layoutX="39.0" layoutY="55.0" text="Velkommen til Lærer Administration">
+      <Label fx:id="Title" layoutX="39.0" layoutY="55.0" text="Velkommen til Lærer Administration">
          <font>
             <Font size="18.0" />
          </font>
@@ -27,22 +27,22 @@
             <TableColumn prefWidth="204.0" text="Adgangkode" />
         </columns>
       </TableView>
-      <JFXButton layoutX="256.0" layoutY="429.0" prefHeight="27.0" prefWidth="123.0" style="-fx-border-color: #001569;" text="Opret" textFill="#2b2121">
+      <JFXButton fx:id="BtnOpret" buttonType="RAISED" layoutX="242.0" layoutY="429.0" prefHeight="27.0" prefWidth="123.0" ripplerFill="#020e3b" text="Opret" textFill="#2b2121">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton layoutX="398.0" layoutY="429.0" prefHeight="27.0" prefWidth="123.0" style="-fx-border-color: #001569;" text="Rediger " textFill="#2b2121">
+      <JFXButton fx:id="BtnRediger" buttonType="RAISED" layoutX="391.0" layoutY="429.0" prefHeight="27.0" prefWidth="123.0" ripplerFill="#020e3b" text="Rediger " textFill="#2b2121" AnchorPane.rightAnchor="182.8">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton layoutX="538.0" layoutY="429.0" prefHeight="27.0" prefWidth="123.0" ripplerFill="#fafafa" style="-fx-border-color: #C8102E;" text="Slet" textFill="#2b2121">
+      <JFXButton fx:id="BtnSlet" buttonType="RAISED" layoutX="538.0" layoutY="429.0" prefHeight="27.0" prefWidth="123.0" ripplerFill="#fafafa" text="Slet" textFill="#2b2121" AnchorPane.rightAnchor="35.8">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton fx:id="klasserKnnap" layoutX="122.0" layoutY="429.0" onAction="#klasserBtn" prefHeight="27.0" prefWidth="123.0" style="-fx-border-color: #001569;" text="Klasser" textFill="#2b2121">
+      <JFXButton fx:id="klasserKnnap" buttonType="RAISED" layoutX="90.0" layoutY="429.0" onAction="#klasserBtn" prefHeight="27.0" prefWidth="123.0" ripplerFill="#020e3b" text="Klasser" textFill="#2b2121">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

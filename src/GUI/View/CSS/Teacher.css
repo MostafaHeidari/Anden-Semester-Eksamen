@@ -1,0 +1,57 @@
+
+.root{
+     -fx-background-color: #BBE5E8;
+
+}
+
+
+#Title{
+      -fx-text-fill: #2B2121;
+      -fx-font-size: 18px;
+}
+
+/* define the button action*/
+#btnLogin:hover {
+     -fx-cursor: hand;
+}
+
+/* define border color to these 2 Fileds*/
+#txtFieldUsername, #txtPasswordField {
+     -fx-border-color: #001569;
+}
+
+#txtFieldUsername:hover {
+     -fx-border-color: #15B559;
+}
+
+#txtPasswordField:hover {
+     -fx-border-color: #15B559;
+}
+
+/* Button font size and background color*/
+#klasserKnnap, #BtnOpret, #BtnRediger, #BtnSlet{
+     -fx-font-size: 15px;
+     -fx-border-color:  #001569;
+ }
+
+#klasserKnnap:hover{
+     -fx-font-size: 15px;
+     -fx-background-color: #001569;
+     -fx-text-fill: white;
+}
+#BtnOpret:hover{
+     -fx-font-size: 15px;
+     -fx-background-color: #001569;
+     -fx-text-fill: white;
+}
+
+#BtnRediger:hover{
+     -fx-font-size: 15px;
+     -fx-background-color: #001569;
+     -fx-text-fill: white;
+}
+#BtnSlet:hover{
+     -fx-font-size: 15px;
+     -fx-background-color: #C8102E;
+     -fx-text-fill: white;
+}
