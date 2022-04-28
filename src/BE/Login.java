@@ -30,18 +30,6 @@ public class Login implements ILogin {
     }
 
     /**
-     * Constructor with username and password
-     * @param username
-     * @param password
-     */
-    public Login(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-
-
-
-    /**
      * Gets the id
      * @return id
      */
