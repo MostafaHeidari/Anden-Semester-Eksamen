@@ -16,7 +16,7 @@ public class FrontPageController {
     public void Login() throws IOException {
         Stage switcher = (Stage) btnLogin.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Patient.fxml"));
-        switcher.setTitle("AdminManagement");
+        switcher.setTitle("Patient");
         Scene scene = new Scene(root);
         switcher.setScene(scene);
     }
