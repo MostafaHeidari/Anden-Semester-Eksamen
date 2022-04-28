@@ -3,6 +3,7 @@ package GUI.Controller;
 import BE.Login;
 import GUI.Model.LoginModel;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +16,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class LoginController {
+    public FontAwesomeIconView LockIkon;
+    public FontAwesomeIconView userIkon;
     @FXML
     private Button btnLogin;
     @FXML

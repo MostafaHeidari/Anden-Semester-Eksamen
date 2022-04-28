@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="GUI.Controller.TeacherKlasseAndStudentsController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="900.0" prefWidth="1800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.TeacherKlasseAndStudentsController">
+   <children>
+      <TableView layoutX="27.0" layoutY="51.0" prefHeight="706.0" prefWidth="617.0">
+         <columns>
+            <TableColumn prefWidth="119.20001220703125" text="ID " />
+            <TableColumn prefWidth="141.59996032714844" text="Navn" />
+            <TableColumn prefWidth="158.39996337890625" text="Efternavn" />
+            <TableColumn prefWidth="204.0" text="Email" />
+         </columns>
+      </TableView>
+      <TableView layoutX="1398.0" layoutY="51.0" prefHeight="706.0" prefWidth="336.0">
+         <columns>
+            <TableColumn prefWidth="119.20001220703125" text="ID " />
+            <TableColumn prefWidth="220.0" text="ClasseName" />
+         </columns>
+      </TableView>
+      <TableView layoutX="741.0" layoutY="51.0" prefHeight="706.0" prefWidth="570.0">
+         <columns>
+            <TableColumn prefWidth="119.20001220703125" text="ID " />
+            <TableColumn prefWidth="126.0" text="ClasseName" />
+            <TableColumn prefWidth="184.0" text="Name" />
+            <TableColumn prefWidth="139.0" text="Efternavn" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="TilbageForside" layoutX="1682.0" layoutY="832.0" onAction="#TilbageForsideBtn" text="Tilbage til Forside" />
+      <JFXButton layoutX="1615.0" layoutY="832.0" text="Button" />
+   </children>
 </AnchorPane>
