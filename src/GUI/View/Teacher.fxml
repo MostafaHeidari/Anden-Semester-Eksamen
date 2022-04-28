@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="485.0" prefWidth="697.0" style="-fx-background-color: #BBE5E8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Teacher">
    <children>
       <Label layoutX="39.0" layoutY="55.0" text="Velkommen til Lærer Administration">
@@ -16,7 +15,10 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <JFXButton layoutX="608.0" layoutY="22.0" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE" />
+      <JFXButton layoutX="608.0" layoutY="22.0" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
       <TableView layoutX="39.0" layoutY="106.0" prefHeight="301.0" prefWidth="626.0">
         <columns>
           <TableColumn prefWidth="119.20001220703125" text="ID " />
@@ -27,17 +29,17 @@
       </TableView>
       <JFXButton layoutX="256.0" layoutY="429.0" prefHeight="27.0" prefWidth="123.0" style="-fx-border-color: #001569;" text="Opret" textFill="#2b2121">
          <cursor>
-            <Cursor fx:constant="OPEN_HAND" />
+            <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
       <JFXButton layoutX="398.0" layoutY="429.0" prefHeight="27.0" prefWidth="123.0" style="-fx-border-color: #001569;" text="Rediger " textFill="#2b2121">
          <cursor>
-            <Cursor fx:constant="OPEN_HAND" />
+            <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton layoutX="538.0" layoutY="429.0" prefHeight="27.0" prefWidth="123.0" ripplerFill="#fafafa" style="-fx-border-color: #001569;" text="Slet" textFill="#2b2121">
+      <JFXButton layoutX="538.0" layoutY="429.0" prefHeight="27.0" prefWidth="123.0" ripplerFill="#fafafa" style="-fx-border-color: #C8102E;" text="Slet" textFill="#2b2121">
          <cursor>
-            <Cursor fx:constant="OPEN_HAND" />
+            <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
    </children>
