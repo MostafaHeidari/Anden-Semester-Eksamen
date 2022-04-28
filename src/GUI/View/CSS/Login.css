@@ -1,27 +1,30 @@
-/**
-Redefine of the background color, to a dark blue color.
- */
 
+
+/* define the background color by using of a radial gradient.*/
 .root {
-    -fx-content-display: center;
-    -fx-background-size: 100%;
-    -fx-background-repeat: no-repeat;
-   -fx-background-color: #BBE5E8;
+     -fx-background-color: radial-gradient(focus-angle 300deg, focus-distance 50%, center 40% 40%, radius 100%, rgb(255, 255, 255) 60%, rgb(187, 229, 232) 40%);
 }
 
-
+/* define the button action*/
 #btnLogin:hover {
-
     -fx-cursor: hand;
 }
 
-#UserNameField, #PasswordField {
-    -fx-border-color: #543f3f;
+/* define border color to these 2 Fileds*/
+#txtFieldUsername, #txtPasswordField {
+    -fx-border-color: #001569;
 }
 
+#txtFieldUsername:hover {
+    -fx-border-color: #15B559;
+}
 
+#txtPasswordField:hover {
+    -fx-border-color: #15B559;
+}
 
-#btnLogin{
+/* Button login font size and background color*/
+#btnLogin {
     -fx-font-size: 15px;
     -fx-background-color: #001569;
 }
