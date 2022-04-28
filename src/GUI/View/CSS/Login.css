@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,400;1,700&display=swap');
+/**
+Redefine of the background color, to a dark blue color.
+ */
+
+.root {
+    -fx-base: rgb(26, 119, 99);
+    -fx-background: rgb(25, 50, 65);
+
+    /* make controls like buttons a little bit lighter for a relaxed design effect */
+    -fx-color: derive(-fx-base, 15%);
+
+    /* text fields and table rows background */
+    -fx-control-inner-background: transparent;
+    /* version of -fx-control-inner-background for alternative rows */
+    -fx-control-inner-background-alt: derive(-fx-control-inner-background, 2.5%);
+
+    /* text colors depending on background's brightness */
+    -fx-light-text-color: rgb(255, 255, 255);
+
+
+    /* A bright blue for highlighting/accenting objects.  For example: selected
+     * text; selected items in menus, lists, trees, and tables; progress bars */
+    -fx-accent: rgb(0, 171, 208);
+
+    /* color of non-focused yet selected elements */
+    -fx-selection-bar-non-focused: rgb(255, 255, 255);
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #ce8640;
+}
+.table-row-cell:selected .text {
+    -fx-text-fill: #ffffff;
+}
+
+.table-row-cell {
+    -fx-background-color: transparent;
+}
+/* Keep prompt invisible when focused (above color fix overrides it) */
+.text-input:focused {
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.50);
+}
+.text-field{
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.50);
+}
+.scroll-bar{
+    -fx-opacity: 0.35;
+}
+
+
+/* Fix scroll bar buttons arrows colors */
+.scroll-bar > .increment-button > .increment-arrow,
+.scroll-bar > .decrement-button > .decrement-arrow {
+    -fx-background-color: -fx-mark-highlight-color, rgb(220, 220, 220);
+
+}
+
+.scroll-bar > .increment-button:hover > .increment-arrow,
+.scroll-bar > .decrement-button:hover > .decrement-arrow {
+    -fx-background-color: -fx-mark-highlight-color, rgb(240, 240, 240);
+}
+
+.scroll-bar > .increment-button:pressed > .increment-arrow,
+.scroll-bar > .decrement-button:pressed > .decrement-arrow {
+    -fx-background-color: -fx-mark-highlight-color, rgb(255, 255, 255);
+}
+#textInfo{
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+#tcAbsence{
+    /* -fx-alignment: center-right; */
+    -fx-alignment: center;
+}
+#tcTotal{
+    -fx-alignment: center;
+}
+#tcPresent{
+    -fx-alignment: center;
+}
+
+#Name{
+    -fx-font-family: 'Lobster Two', cursive;
+    -fx-font-size: 60;
+}
