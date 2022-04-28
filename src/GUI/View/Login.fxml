@@ -1,45 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@CSS/Login.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.LoginController">
+<AnchorPane prefHeight="483.0" prefWidth="746.0" stylesheets="@CSS/Login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.FrontPageController">
 
     <children>
-        <Label alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="159.0" layoutY="108.0" text="SOSU Documentation System" textFill="WHITE">
+        <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="69.0" prefHeight="38.0" prefWidth="758.0" text="SOSU Documentation System" textAlignment="CENTER" textFill="#262424">
             <font>
-                <Font name="Copperplate Gothic Bold" size="48.0" />
+                <Font name="Arial Black" size="24.0" />
             </font>
             <effect>
                 <Glow />
             </effect>
         </Label>
-        <TextField fx:id="txtFieldUsername" alignment="CENTER" layoutX="350.0" layoutY="225.0" prefHeight="27.0" prefWidth="199.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: white;">
-            <effect>
-                <DropShadow height="62.03" radius="17.9375" width="11.72" />
-            </effect>
+        <TextField fx:id="txtFieldUsername" layoutX="274.0" layoutY="174.0" prefHeight="38.0" prefWidth="244.0" promptText="Brugernavn" style="-fx-border-color: #2B2121;">
          <font>
             <Font size="14.0" />
          </font>
         </TextField>
-        <PasswordField fx:id="txtPasswordField" alignment="CENTER" layoutX="350.0" layoutY="300.0" prefHeight="27.0" prefWidth="199.0" promptText="Password" style="-fx-background-color: Transparent; -fx-border-color: White;">
+        <PasswordField fx:id="txtPasswordField" layoutX="274.0" layoutY="232.0" prefHeight="38.0" prefWidth="244.0" promptText="Adgangskode" style="-fx-border-color: #2B2121;">
          <font>
             <Font size="14.0" />
-         </font></PasswordField>
-
-        <Button fx:id="btnLogin" layoutX="310.0" layoutY="375.0" mnemonicParsing="false" prefHeight="40.0" onAction="#Login" prefWidth="277.0" text="SOSU System Login">
-            <effect>
-                <DropShadow />
-            </effect>
-            <font>
-                <Font size="19.0" />
-            </font>
-        </Button>
+         </font>
+      </PasswordField>
+      <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="274.0" layoutY="308.0" prefHeight="38.0" prefWidth="244.0" text="Login" textFill="WHITE" />
+      <FontAwesomeIconView fx:id="LockIkon" fill="#2b2121" glyphName="LOCK" layoutX="239.0" layoutY="260.0" selectionEnd="1" size="25" text="" wrappingWidth="14.142857551574593" />
+      <FontAwesomeIconView fx:id="userIkon" fill="#2b2121" glyphName="USER" layoutX="239.0" layoutY="202.0" selectionEnd="1" selectionFill="#543f3f" size="25" text="" wrappingWidth="14.142857551574707" />
     </children>
 </AnchorPane>
