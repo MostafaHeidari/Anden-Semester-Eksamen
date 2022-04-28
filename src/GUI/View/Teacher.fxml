@@ -2,50 +2,59 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="485.0" prefWidth="697.0" stylesheets="@CSS/Teacher.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.TeacherController">
+<AnchorPane prefHeight="472.0" prefWidth="720.0" stylesheets="@CSS/Teacher.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.TeacherController">
    <children>
-      <Label fx:id="Title" layoutX="39.0" layoutY="55.0" text="Velkommen til Lærer Administration">
+      <Label fx:id="Title" layoutX="216.0" layoutY="21.0" text="Velkommen til Lærer Administration">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <JFXButton layoutX="608.0" layoutY="22.0" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE">
+      <JFXButton layoutX="606.0" layoutY="22.0" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <TableView layoutX="39.0" layoutY="106.0" prefHeight="301.0" prefWidth="626.0">
-        <columns>
-          <TableColumn prefWidth="119.20001220703125" text="ID " />
-          <TableColumn prefWidth="141.59996032714844" text="Navn" />
-            <TableColumn prefWidth="158.39996337890625" text="Efternavn" />
-            <TableColumn prefWidth="204.0" text="Adgangkode" />
-        </columns>
-      </TableView>
-      <JFXButton fx:id="BtnOpret" buttonType="RAISED" layoutX="242.0" layoutY="429.0" prefHeight="27.0" prefWidth="123.0" ripplerFill="#020e3b" text="Opret" textFill="#2b2121">
+      <JFXButton fx:id="BtnOpret" buttonType="RAISED" layoutX="232.0" layoutY="403.0" prefHeight="27.0" prefWidth="123.0" ripplerFill="#020e3b" text="Opret/Borger" textFill="#2b2121">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton fx:id="BtnRediger" buttonType="RAISED" layoutX="391.0" layoutY="429.0" prefHeight="27.0" prefWidth="123.0" ripplerFill="#020e3b" text="Rediger " textFill="#2b2121" AnchorPane.rightAnchor="182.8">
+      <JFXButton fx:id="klasserKnnap" buttonType="RAISED" layoutX="80.0" layoutY="403.0" onAction="#klasserBtn" prefHeight="27.0" prefWidth="123.0" ripplerFill="#020e3b" text="Klasser" textFill="#2b2121">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton fx:id="BtnSlet" buttonType="RAISED" layoutX="538.0" layoutY="429.0" prefHeight="27.0" prefWidth="123.0" ripplerFill="#fafafa" text="Slet" textFill="#2b2121" AnchorPane.rightAnchor="35.8">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
-      <JFXButton fx:id="klasserKnnap" buttonType="RAISED" layoutX="90.0" layoutY="429.0" onAction="#klasserBtn" prefHeight="27.0" prefWidth="123.0" ripplerFill="#020e3b" text="Klasser" textFill="#2b2121">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
+      <GridPane fx:id="GridPane" layoutX="78.0" layoutY="106.0" prefHeight="227.0" prefWidth="275.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField promptText="Navn" />
+            <TextField fx:id="efterNavnFiled" layoutX="10.0" layoutY="18.0" prefHeight="38.0" prefWidth="275.0" promptText="Efternavn" GridPane.rowIndex="1" />
+            <TextField fx:id="cprField" layoutX="10.0" layoutY="60.0" prefHeight="36.0" prefWidth="275.0" promptText="CPR-nr" GridPane.rowIndex="2" />
+            <TextField fx:id="navnFileld" prefHeight="36.0" prefWidth="275.0" promptText="Navn" />
+            <TextField fx:id="TelefonField" layoutX="10.0" layoutY="93.0" prefHeight="36.0" prefWidth="275.0" promptText="Telefon nummer" GridPane.rowIndex="3" />
+            <TextField fx:id="ageField" prefHeight="38.0" prefWidth="275.0" promptText="Alder" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <CheckBox layoutX="152.0" layoutY="344.0" mnemonicParsing="false" text="Mand" />
+      <CheckBox layoutX="77.0" layoutY="344.0" mnemonicParsing="false" text="Kvinde" />
+      <TextArea fx:id="infoBox" layoutX="393.0" layoutY="109.0" prefHeight="221.0" prefWidth="267.0" promptText="Skriv information her" />
    </children>
 </AnchorPane>
