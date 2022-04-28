@@ -11,6 +11,8 @@ import java.io.IOException;
 
 public class TeacherKlasseAndStudentsController {
     public JFXButton TilbageForside;
+    public JFXButton nyKlasse;
+    public JFXButton nyStudent1;
 
     public void TilbageForsideBtn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) TilbageForside.getScene().getWindow();
@@ -18,5 +20,11 @@ public class TeacherKlasseAndStudentsController {
         Scene scene = new Scene(root);
         switcher.setTitle("EventCoordinatorManagement");
         switcher.setScene(scene);
+    }
+
+    public void nyKlasseBtn(ActionEvent actionEvent) {
+    }
+
+    public void nyStudentBtn(ActionEvent actionEvent) {
     }
 }

@@ -29,7 +29,8 @@
             <TableColumn prefWidth="139.0" text="Efternavn" />
          </columns>
       </TableView>
-      <JFXButton fx:id="TilbageForside" layoutX="1682.0" layoutY="832.0" onAction="#TilbageForsideBtn" text="Tilbage til Forside" />
-      <JFXButton layoutX="1615.0" layoutY="832.0" text="Button" />
+      <JFXButton fx:id="TilbageForside" layoutX="1659.0" layoutY="832.0" onAction="#TilbageForsideBtn" text="Tilbage til Forside" />
+      <JFXButton fx:id="nyKlasse" layoutX="1574.0" layoutY="832.0" onAction="#nyKlasseBtn" text="Ny Klasse" />
+      <JFXButton fx:id="nyStudent1" layoutX="27.0" layoutY="820.0" onAction="#nyStudentBtn" text="Ny Student" />
    </children>
 </AnchorPane>
