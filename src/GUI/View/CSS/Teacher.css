@@ -43,7 +43,7 @@
 }
 
 /* Button font size and background color*/
-#klasserKnnap, #BtnOpret, #BtnRediger, #BtnSlet{
+#klasserKnnap, #BtnOpret, #BtnRediger, #BtnSlet, #BtnOpretStudent{
      -fx-font-size: 15px;
      -fx-border-color:  #001569;
  }
@@ -54,6 +54,11 @@
      -fx-text-fill: white;
 }
 #BtnOpret:hover{
+     -fx-font-size: 15px;
+     -fx-background-color: #001569;
+     -fx-text-fill: white;
+}
+#BtnOpretStudent:hover{
      -fx-font-size: 15px;
      -fx-background-color: #001569;
      -fx-text-fill: white;
