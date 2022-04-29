@@ -1,6 +1,6 @@
 package DAL;
 
-import BE.Klasse;
+import BE.Class;
 import DAL.db.DatabaseConnector;
 
 import java.io.IOException;
@@ -8,28 +8,28 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class KlasseDAO {
+public class ClassDAO {
 
     private DatabaseConnector DC;
 
-    public KlasseDAO() throws IOException
+    public ClassDAO() throws IOException
     {
         DC = new DatabaseConnector();
     }
 
-    public Klasse uploadKlasseInfo(String klasseNavn) throws SQLException {
+    public Class uploadClassInfo(String klasseNavn) throws SQLException {
         Connection connection = DC.getConnection();
 
         String sql = "INSERT INTO ClassTable(ClassName,Class) VALUES (?,?);";
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
         ps.setString(1, klasseNavn);;
-        ps.setString(2, "klasse");
+        ps.setString(2, "Class");
         int affectedRows = ps.executeUpdate();
         if (affectedRows == 1) {
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
                 int klasseId = rs.getInt(1);
-                Klasse klasseCord = new Klasse(klasseId, klasseNavn);
+                Class klasseCord = new Class(klasseId, klasseNavn);
                 return klasseCord;
             }
 
@@ -37,19 +37,20 @@ public class KlasseDAO {
         return null;
     }
 
-    public List<Klasse> getAllKlasser() throws SQLException {
+
+    public List<Class> getAllClasses() throws SQLException {
         Connection con = DC.getConnection();
 
-        List<Klasse>  allKlasser= new ArrayList<>();
+        List<Class>  allClasses= new ArrayList<>();
 
 
-        String sql = "SELECT * FROM ClassTable WHERE Class = 'klasse'";
+        String sql = "SELECT * FROM ClassTable";
         Statement statement = con.createStatement();
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) { // Creates and adds Klasser objects into an array list
-            Klasse klasseCord = new Klasse(rs.getInt("ClassID"), rs.getString("ClassName"));
-            allKlasser.add(klasseCord);
+            Class klasseCord = new Class(rs.getInt("ClassID"), rs.getString("ClassName"));
+            allClasses.add(klasseCord);
         }
-        return allKlasser;
+        return allClasses;
     }
 }

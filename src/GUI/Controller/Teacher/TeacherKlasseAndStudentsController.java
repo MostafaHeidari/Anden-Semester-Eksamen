@@ -1,6 +1,6 @@
 package GUI.Controller.Teacher;
 
-import GUI.Model.KlasseModel;
+import GUI.Model.ClassModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -19,7 +19,7 @@ import java.util.ResourceBundle;
 
 public class TeacherKlasseAndStudentsController implements Initializable {
 
-    private KlasseModel klasseModel;
+    private ClassModel klasseModel;
 
     @FXML
     public JFXButton TilbageForside;
@@ -47,7 +47,7 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     }
 
     public TeacherKlasseAndStudentsController() throws IOException {
-        this.klasseModel = new KlasseModel();
+        this.klasseModel = new ClassModel();
     }
 
     public void TilbageForsideBtn(ActionEvent actionEvent) throws IOException {
@@ -81,7 +81,7 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         tcKlasseNavn.setCellValueFactory(new PropertyValueFactory<>("klasseNavn"));
 
 
-        tvKlasseInfomationer.setItems(klasseModel.getAllKlasser());
+        tvKlasseInfomationer.setItems(klasseModel.getAllClasses());
     }
 
 

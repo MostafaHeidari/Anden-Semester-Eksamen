@@ -1,10 +1,10 @@
 package BE;
 
-public class Klasse {
+public class Class {
     public int klasseId;
     public String klasseNavn;
 
-    public Klasse(int klasseId, String klasseNavn) {
+    public Class(int klasseId, String klasseNavn) {
         this.klasseId = klasseId;
         this.klasseNavn = klasseNavn;
     }

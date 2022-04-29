@@ -6,16 +6,15 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="452.0" prefWidth="472.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.CreateKlasseController">
+<AnchorPane prefHeight="452.0" prefWidth="472.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.CreateClassController">
    <children>
-      <TextField fx:id="klasseNavnTxt" layoutX="195.0" layoutY="159.0" />
+      <TextField fx:id="classNavnTxt" layoutX="195.0" layoutY="159.0" />
       <Text layoutX="87.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KlasseNavn:">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <JFXButton fx:id="Gemknap" layoutX="344.0" layoutY="329.0" onAction="#GemBtn" text="Gem" />
-      <JFXButton fx:id="TilbageKnap" layoutX="102.0" layoutY="329.0" onAction="#TilbageBtn" text="Tilbage" />
+      <JFXButton fx:id="saveButton" layoutX="344.0" layoutY="329.0" onAction="#saveBtn" text="Gem" />
+      <JFXButton fx:id="backButton" layoutX="102.0" layoutY="329.0" onAction="#backBtn" text="Tilbage" />
    </children>
 </AnchorPane>
