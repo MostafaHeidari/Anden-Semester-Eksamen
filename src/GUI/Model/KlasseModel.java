@@ -21,6 +21,11 @@ public class KlasseModel {
         klasseManger = new KlasseManger();
     }
 
+    public ObservableList<Klasse> getAllKlasser() {
+        klasseList = klasseManger.getAllKlasser();
+        return klasseList;
+    }
+
     public void uploadKlasseInfo(String klasseNavn) throws SQLException {
         klasseList.add(klasseManger.uploadKlasseInfo(klasseNavn));
     }

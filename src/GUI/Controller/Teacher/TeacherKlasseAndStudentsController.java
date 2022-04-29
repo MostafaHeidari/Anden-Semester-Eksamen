@@ -1,18 +1,54 @@
 package GUI.Controller.Teacher;
 
+import GUI.Model.KlasseModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class TeacherKlasseAndStudentsController {
+public class TeacherKlasseAndStudentsController implements Initializable {
+
+    private KlasseModel klasseModel;
+
+    @FXML
     public JFXButton TilbageForside;
+    @FXML
     public JFXButton nyKlasse;
+    @FXML
     public JFXButton nyStudent1;
+
+    @FXML
+    public TableView tvKlasseInfomationer;
+    @FXML
+    public TableColumn tcKlasseId;
+    @FXML
+    public TableColumn tcKlasseNavn;
+
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        try {
+            setKlasseTableView();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public TeacherKlasseAndStudentsController() throws IOException {
+        this.klasseModel = new KlasseModel();
+    }
 
     public void TilbageForsideBtn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) TilbageForside.getScene().getWindow();
@@ -37,4 +73,17 @@ public class TeacherKlasseAndStudentsController {
         switcher.setTitle("EventCoordinatorManagement");
         switcher.setScene(scene);
     }
+
+    private void setKlasseTableView() throws IOException {
+
+        tcKlasseId.setCellValueFactory(new PropertyValueFactory<>("klasseId"));
+
+        tcKlasseNavn.setCellValueFactory(new PropertyValueFactory<>("klasseNavn"));
+
+
+        tvKlasseInfomationer.setItems(klasseModel.getAllKlasser());
+    }
+
+
+
 }

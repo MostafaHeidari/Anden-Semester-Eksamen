@@ -16,10 +16,10 @@
             <TableColumn text="Alder" />
          </columns>
       </TableView>
-      <TableView layoutX="1398.0" layoutY="51.0" prefHeight="706.0" prefWidth="336.0">
+      <TableView fx:id="tvKlasseInfomationer" layoutX="1398.0" layoutY="51.0" prefHeight="706.0" prefWidth="336.0">
          <columns>
-            <TableColumn prefWidth="119.20001220703125" text="ID " />
-            <TableColumn prefWidth="220.0" text="ClasseName" />
+            <TableColumn fx:id="tcKlasseId" prefWidth="119.20001220703125" text="ID " />
+            <TableColumn fx:id="tcKlasseNavn" prefWidth="220.0" text="KlasseNavn" />
          </columns>
       </TableView>
       <TableView layoutX="741.0" layoutY="51.0" prefHeight="706.0" prefWidth="570.0">
