@@ -4,6 +4,7 @@ import GUI.Model.OpretStudentModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
@@ -19,6 +20,9 @@ public class OpretStudentController {
     @FXML
     private TextField Adgangskode;
 
+    @FXML
+    private TableView OpretStudentTableView;
+
     private OpretStudentModel opretStudentModel = new OpretStudentModel();
 
     public OpretStudentController() throws IOException {
@@ -27,6 +31,7 @@ public class OpretStudentController {
     public void OpretStudent(ActionEvent actionEvent) {
         System.out.println(OpretStudent.getText());
         System.out.println(Brugernavn.getText());
+
     }
 
     public void RedigereStudent(ActionEvent actionEvent) {

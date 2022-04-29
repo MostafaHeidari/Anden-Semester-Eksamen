@@ -15,7 +15,7 @@
       <JFXButton layoutX="229.0" layoutY="477.0" text="Slet Student" />
       <JFXButton onAction="#RedigereStudent" layoutX="350.0" layoutY="477.0" text="Redigere Student" />
       <JFXButton layoutX="506.0" layoutY="478.0" text="Tilbage" />
-      <TableView layoutX="281.0" layoutY="119.0" prefHeight="265.0" prefWidth="322.0">
+      <TableView fx:id="OpretStudentTableView" layoutX="281.0" layoutY="119.0" prefHeight="265.0" prefWidth="322.0">
         <columns>
           <TableColumn prefWidth="75.0" text="ID" />
           <TableColumn prefWidth="75.0" text="Brugernavn" />
