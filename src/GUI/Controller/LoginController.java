@@ -26,6 +26,7 @@ public class LoginController {
     @FXML
     private TextField txtPasswordField;
 
+   /*instant variable databasen*/
     private LoginModel loginModel = new LoginModel();
 
     public LoginController() throws IOException {
