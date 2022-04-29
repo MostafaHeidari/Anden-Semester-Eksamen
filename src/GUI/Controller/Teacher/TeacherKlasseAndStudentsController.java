@@ -22,9 +22,9 @@ public class TeacherKlasseAndStudentsController {
         switcher.setScene(scene);
     }
 
-    public void nyKlasseBtn(ActionEvent actionEvent) {
+    public void nyKlasseBtn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) TilbageForside.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateKlasse.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("EventCoordinatorManagement");
         switcher.setScene(scene);

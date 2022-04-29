@@ -17,7 +17,7 @@ public class StudentDAO {
     public Student uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder) throws SQLException {
         Connection connection = DC.getConnection();
 
-        String sql = "INSERT INTO StudentTable (NameStudent,LastNameStudent,EmailStudent,StudentAge) VALUES (?,?,?,?,?);";
+        String sql = "INSERT INTO StudentTable (NameStudent,LastNameStudent,EmailStudent,StudentAge,Student) VALUES (?,?,?,?,?);";
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
         ps.setString(1, studentNavn);
         ps.setString(2, studentEfternavn);
