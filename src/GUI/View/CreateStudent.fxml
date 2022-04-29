@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="452.0" prefWidth="472.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.CreateStudentController">
+   <children>
+      <TextField fx:id="NavnTxt" layoutX="182.0" layoutY="82.0" />
+      <TextField fx:id="EfternavnTxt" layoutX="182.0" layoutY="132.0" />
+      <TextField fx:id="EmailTxt" layoutX="182.0" layoutY="196.0" />
+      <TextField fx:id="AlderTxt" layoutX="182.0" layoutY="267.0" />
+      <Text layoutX="120.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Navn:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="87.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Efternavn:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="110.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Mail:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="119.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alder:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="Gemknap" layoutX="352.0" layoutY="347.0" onAction="#GemBtn" text="Gem" />
+      <JFXButton fx:id="TilbageKnap" layoutX="110.0" layoutY="347.0" onAction="#TilbageBtn" text="Tilbage" />
+   </children>
+</AnchorPane>
