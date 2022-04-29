@@ -1,4 +1,4 @@
-package GUI.Controller;
+package GUI.Controller.Teacher;
 
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
