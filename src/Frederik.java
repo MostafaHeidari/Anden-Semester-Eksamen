@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 public class Frederik extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
         primaryStage.setTitle("SOSUS System");
         primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);

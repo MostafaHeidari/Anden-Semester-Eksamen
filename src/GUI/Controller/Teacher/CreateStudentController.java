@@ -43,7 +43,7 @@ public class CreateStudentController {
 
     private void cancel(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) Gemknap.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/TeacherKlasseAndStudents.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("EventCoordinatorManagement");
         switcher.setScene(scene);

@@ -16,7 +16,7 @@ public class TeacherKlasseAndStudentsController {
 
     public void TilbageForsideBtn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) TilbageForside.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("EventCoordinatorManagement");
         switcher.setScene(scene);
@@ -27,7 +27,7 @@ public class TeacherKlasseAndStudentsController {
 
     public void nyStudentBtn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) TilbageForside.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/CreateStudent.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("EventCoordinatorManagement");
         switcher.setScene(scene);
