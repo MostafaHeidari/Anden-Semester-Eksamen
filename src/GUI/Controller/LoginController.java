@@ -37,7 +37,7 @@ public class LoginController {
         System.out.println(txtPasswordField.getText());
 
         Login login =  loginModel.login(txtFieldUsername.getText(), txtPasswordField.getText());
-        if(login.getUserType().equals("Student") || login.getUserType().equals("Student")){
+        if(login.getUserType().equals("Student") || login.getUserType().equals("Teacher")){
             Stage switcher = (Stage) btnLogin.getScene().getWindow();
             Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Patient.fxml"));
             switcher.setTitle("Patient");
