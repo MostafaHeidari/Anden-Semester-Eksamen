@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="472.0" prefWidth="720.0" stylesheets="@CSS/Teacher.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.TeacherController">
+<AnchorPane prefHeight="472.0" prefWidth="720.0" stylesheets="@CSS/Teacher.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.TeacherController">
    <children>
       <Label fx:id="Title" layoutX="216.0" layoutY="21.0" text="Velkommen til Lærer Administration">
          <font>
@@ -56,5 +56,10 @@
       <CheckBox layoutX="152.0" layoutY="344.0" mnemonicParsing="false" text="Mand" />
       <CheckBox layoutX="77.0" layoutY="344.0" mnemonicParsing="false" text="Kvinde" />
       <TextArea fx:id="infoBox" layoutX="393.0" layoutY="109.0" prefHeight="221.0" prefWidth="267.0" promptText="Skriv information her" />
+      <JFXButton fx:id="BtnOpretStudent" onAction="#OpretStudent" buttonType="RAISED" layoutX="385.0" layoutY="403.0" prefHeight="27.0" prefWidth="123.0" ripplerFill="#020e3b" text="Opret Student" textFill="#2b2121">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
    </children>
 </AnchorPane>
