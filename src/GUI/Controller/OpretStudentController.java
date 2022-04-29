@@ -17,7 +17,7 @@ public class OpretStudentController {
     private TextField Adgangskode;
 
     public void OpretStudent(ActionEvent actionEvent) {
-        
+
     }
 
     public void RedigereStudent(ActionEvent actionEvent) {
