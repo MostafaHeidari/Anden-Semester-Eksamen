@@ -55,7 +55,7 @@ public class LoginController {
         /**
          * If Teacher then login
          */
-        if(login.getUserType().equals("Teacher")){
+        else {
             Stage switcher = (Stage) btnLogin.getScene().getWindow();
             Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
             switcher.setTitle("Teacher");
