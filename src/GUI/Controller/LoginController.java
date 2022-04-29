@@ -36,11 +36,20 @@ public class LoginController {
         System.out.println(txtFieldUsername.getText());
         System.out.println(txtPasswordField.getText());
 
+
         Login login =  loginModel.login(txtFieldUsername.getText(), txtPasswordField.getText());
-        if(login.getUserType().equals("Student") || login.getUserType().equals("Teacher")){
+        if(login.getUserType().equals("Student")){
             Stage switcher = (Stage) btnLogin.getScene().getWindow();
             Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Patient.fxml"));
             switcher.setTitle("Patient");
+            Scene scene = new Scene(root);
+            switcher.setScene(scene);
+        }
+
+        if(login.getUserType().equals("Teacher")){
+            Stage switcher = (Stage) btnLogin.getScene().getWindow();
+            Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher.fxml"));
+            switcher.setTitle("Teacher");
             Scene scene = new Scene(root);
             switcher.setScene(scene);
         }
