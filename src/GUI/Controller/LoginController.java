@@ -4,7 +4,6 @@ import BE.Login;
 import GUI.Model.LoginModel;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -48,7 +47,7 @@ public class LoginController {
 
         if(login.getUserType().equals("Teacher")){
             Stage switcher = (Stage) btnLogin.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
             switcher.setTitle("Teacher");
             Scene scene = new Scene(root);
             switcher.setScene(scene);

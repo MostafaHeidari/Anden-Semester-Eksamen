@@ -1,4 +1,4 @@
-package GUI.Controller;
+package GUI.Controller.Teacher;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -15,7 +15,7 @@ public class TeacherController {
 
     public void klasserBtn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) klasserKnnap.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/TeacherKlasseAndStudents.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("EventCoordinatorManagement");
         switcher.setScene(scene);
