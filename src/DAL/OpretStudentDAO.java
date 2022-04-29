@@ -5,10 +5,7 @@ import BE.OpretStudent;
 import DAL.db.DatabaseConnector;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 
 public class OpretStudentDAO {
@@ -19,18 +16,22 @@ public class OpretStudentDAO {
 
     public Login addStudent(String Username, String Password) throws SQLException {
 
-        String sql = "INSERT INTO Login(Username, Password, Usertype) VALUES (?,?,Student)";
+        String sql = "INSERT INTO Login(Username, Password, Usertype) VALUES (?,?,?)";
         try(Connection connection = connector.getConnection()){
-            PreparedStatement st = connection.prepareStatement(sql);
+            PreparedStatement st = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             st.setString(1, Username);
             st.setString(2, Password);
-            ResultSet rs = st.executeQuery();
-            if (rs.next()){
-                int id = rs.getInt("UserID");
-                String username = rs.getString("Username");
-                String password = rs.getString("Password");
-                String UserType = rs.getString("Usertype");
-                return new Login(id, username, password, UserType);
+            st.setString(3, "Student");
+            int affectedRows = st.executeUpdate();
+            if (affectedRows == 1) {
+                ResultSet rs = st.getGeneratedKeys();
+                if (rs.next()) {
+                    int id = rs.getInt("UserId");
+                    String username = rs.getString("Username");
+                    String password = rs.getString("Password");
+                    String UserType = rs.getString("Usertype");
+                    return new Login(id, username, password, UserType);
+                }
             }
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
