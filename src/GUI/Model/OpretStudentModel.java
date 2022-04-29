@@ -1,8 +1,6 @@
 package GUI.Model;
 
 import BE.Login;
-import BE.OpretStudent;
-import BLL.LoginManager;
 import BLL.OpretStudentManager;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 

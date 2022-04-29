@@ -10,12 +10,18 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class LoginDAO {
+
+    /*instant variable databasen*/
     private final DatabaseConnector connector = DatabaseConnector.getInstance();
 
+    /*Constractor */
     public LoginDAO() throws IOException {
     }
 
-
+    /**
+     * Login method
+     * Prepared statement to access database login
+     * */
     public Login login(String Username, String Password) {
         String sql = "SELECT * FROM Login WHERE Username =? AND Password =?;";
         try(Connection connection = connector.getConnection()){

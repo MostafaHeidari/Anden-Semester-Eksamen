@@ -9,6 +9,7 @@ import java.sql.SQLException;
 public class OpretStudentManager {
     private OpretStudentDAO opretStudentDAO;
 
+
     public OpretStudentManager() throws IOException {
         opretStudentDAO = new OpretStudentDAO();
     }

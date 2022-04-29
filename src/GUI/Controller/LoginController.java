@@ -26,16 +26,23 @@ public class LoginController {
     @FXML
     private TextField txtPasswordField;
 
+   /*instant variable databasen*/
     private LoginModel loginModel = new LoginModel();
 
     public LoginController() throws IOException {
     }
 
     public void Login() throws IOException, SQLServerException {
+        /**
+         * Testing in terminal to see right data from user
+         */
         System.out.println(txtFieldUsername.getText());
         System.out.println(txtPasswordField.getText());
 
 
+        /**
+         * If Student then login
+         */
         Login login =  loginModel.login(txtFieldUsername.getText(), txtPasswordField.getText());
         if(login.getUserType().equals("Student")){
             Stage switcher = (Stage) btnLogin.getScene().getWindow();
@@ -45,6 +52,9 @@ public class LoginController {
             switcher.setScene(scene);
         }
 
+        /**
+         * If Teacher then login
+         */
         if(login.getUserType().equals("Teacher")){
             Stage switcher = (Stage) btnLogin.getScene().getWindow();
             Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));

@@ -1,7 +1,6 @@
 package DAL;
 
 import BE.Login;
-import BE.OpretStudent;
 import DAL.db.DatabaseConnector;
 
 import java.io.IOException;
