@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="GUI.View.OpretStudentController"
-            prefHeight="600.0" prefWidth="900.0">
 
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.OpretStudentController">
+   <children>
+      <TextField fx:id="Brugernavn" layoutX="105.0" layoutY="158.0" promptText="Brugernavn" />
+      <TextField fx:id="Adgangskode" layoutX="105.0" layoutY="202.0" promptText="Adgangskode" />
+      <JFXButton fx:id="OpretStudent" onAction="#OpretStudent" layoutX="105.0" layoutY="477.0" text="Opret Student" />
+      <JFXButton layoutX="229.0" layoutY="477.0" text="Slet Student" />
+      <JFXButton onAction="#RedigereStudent" layoutX="350.0" layoutY="477.0" text="Redigere Student" />
+      <JFXButton layoutX="506.0" layoutY="478.0" text="Tilbage" />
+      <TableView fx:id="OpretStudentTableView" layoutX="281.0" layoutY="119.0" prefHeight="265.0" prefWidth="322.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="75.0" text="Brugernavn" />
+            <TableColumn prefWidth="95.0" text="Adgangskode" />
+            <TableColumn prefWidth="76.0" text="Usertype" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>
