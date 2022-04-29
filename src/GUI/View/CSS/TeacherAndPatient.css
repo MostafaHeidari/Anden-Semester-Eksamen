@@ -3,6 +3,8 @@
      -fx-background-color: white;
 }
 
+
+
 #infoBox{
      -fx-background-color:  #BBE5E8;
 }
@@ -60,6 +62,27 @@
 }
 #BtnOpretStudent:hover{
      -fx-font-size: 15px;
+     -fx-background-color: #001569;
+     -fx-text-fill: white;
+}
+
+
+/* patient styles start form her*/
+#Patient{
+     -fx-background-color: #BBE5E8;
+}
+
+#btnLogout{
+     -fx-background-color: #001569;
+     -fx-text-fill: white;
+}
+
+#btnInfo{
+     -fx-border-color: #001569;
+}
+
+#btnInfo:hover{
+     -fx-border-color: #001569;
      -fx-background-color: #001569;
      -fx-text-fill: white;
 }
