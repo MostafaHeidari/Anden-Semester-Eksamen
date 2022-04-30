@@ -2,6 +2,7 @@ package GUI.Controller.Teacher;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -10,8 +11,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class TeacherController {
-    public JFXButton klasserKnnap;
-    public JFXButton BtnOpretStudent;
+    @FXML
+    private JFXButton klasserKnnap;
+    @FXML
+    private JFXButton BtnOpretStudent;
+    @FXML
+    private JFXButton BtnOpretBorger;
 
     public void klasserBtn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) klasserKnnap.getScene().getWindow();
@@ -24,6 +29,14 @@ public class TeacherController {
     public void OpretStudent(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) BtnOpretStudent.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("Opret Student");
+        switcher.setScene(scene);
+    }
+
+    public void OpretBorger(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) BtnOpretBorger.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Student");
         switcher.setScene(scene);

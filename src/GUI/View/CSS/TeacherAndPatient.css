@@ -45,7 +45,7 @@
 }
 
 /* Button font size and background color*/
-#klasserKnnap, #BtnOpret, #BtnRediger, #BtnSlet, #BtnOpretStudent{
+#klasserKnnap, #BtnOpretBorger, #BtnRediger, #BtnSlet, #BtnOpretStudent{
      -fx-font-size: 15px;
      -fx-border-color:  #001569;
  }
