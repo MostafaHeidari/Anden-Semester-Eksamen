@@ -12,7 +12,7 @@
      -fx-text-fill: red;
 }
 
-#navnFileld,#efterNavnFiled,#cprField,#TelefonField,#ageField{
+#navnField,#efterNavnField,#cprField,#EmailField,#TelefonField,#adgangskodField{
      -fx-control-inner-background: #15B559;
      -fx-text-fill: #2B2121;
      -fx-background-color:  #EBF3EB;
@@ -43,7 +43,7 @@
 }
 
 /* Button font size and background color*/
-#klasserKnnap, #BtnOpretBorger, #BtnRediger, #BtnSlet, #BtnOpretStudent, #BtnTilbage{
+#klasserKnnap, #BtnOpretBorger, #BtnRediger, #BtnSlet, #BtnOpretStudent{
      -fx-font-size: 15px;
      -fx-border-color:  #001569;
      -fx-background-color: #15B559;
@@ -77,11 +77,7 @@
      -fx-border-color: #15B559;
      -fx-border-width: 1,5px;
 }
-#BtnTilbage:hover{
-     -fx-font-size: 15px;
-     -fx-background-color: #001569;
-     -fx-text-fill: white;
-}
+
 
 /* patient styles start form her*/
 #Patient{
@@ -102,5 +98,9 @@
      -fx-background-color: #001569;
      -fx-text-fill: white;
 }
+
+
+
+
 
 

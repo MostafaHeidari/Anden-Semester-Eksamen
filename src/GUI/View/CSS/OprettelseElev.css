@@ -1,0 +1,42 @@
+/*    "Oprettelse af Elev" styling of elements   */
+
+
+#BtnOpretElev, #BtnTilbage, #BtnRedigerElev, #BtnSletElev {
+    -fx-font-size: 12px;
+    -fx-background-color: #009B42;
+    -fx-text-fill: white;
+}
+
+
+#BtnOpretElev:hover {
+    -fx-text-fill: white;
+    -fx-border-color: #001569;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+}
+
+#BtnTilbage:hover {
+    -fx-text-fill: white;
+    -fx-border-color: #001569;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+}
+
+#BtnRedigerElev:hover {
+    -fx-text-fill: white;
+    -fx-border-color: #001569;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+}
+
+#BtnSletElev:hover {
+    -fx-text-fill: white;
+    -fx-border-color: #001569;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+}
+
+
+
+
+
