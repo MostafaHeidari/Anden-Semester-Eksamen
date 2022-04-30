@@ -45,7 +45,7 @@ public class TeacherController {
     }
 
     public void LogOut(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) BtnOpretStudent.getScene().getWindow();
+        Stage switcher = (Stage) Logud.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Login.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSUS System");
