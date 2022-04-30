@@ -3,6 +3,7 @@ package GUI.Controller.Teacher;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -13,12 +14,18 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class CreateStudentController {
-    public JFXButton Gemknap;
-    public JFXButton TilbageKnap;
-    public TextField NavnTxt;
-    public TextField EfternavnTxt;
-    public TextField EmailTxt;
-    public TextField AlderTxt;
+    @FXML
+    private JFXButton Gemknap;
+    @FXML
+    private JFXButton BtnTilbage;
+    @FXML
+    private TextField NavnTxt;
+    @FXML
+    private TextField EfternavnTxt;
+    @FXML
+    private TextField EmailTxt;
+    @FXML
+    private TextField AlderTxt;
 
     public void GemBtn(ActionEvent actionEvent) throws IOException, SQLException {
         String studentNavn = NavnTxt.getText();
@@ -46,6 +53,14 @@ public class CreateStudentController {
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("EventCoordinatorManagement");
+        switcher.setScene(scene);
+    }
+
+    public void BtnTilbage(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) BtnTilbage.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("Forside");
         switcher.setScene(scene);
     }
 }

@@ -45,7 +45,7 @@
 }
 
 /* Button font size and background color*/
-#klasserKnnap, #BtnOpretBorger, #BtnRediger, #BtnSlet, #BtnOpretStudent{
+#klasserKnnap, #BtnOpretBorger, #BtnRediger, #BtnSlet, #BtnOpretStudent, #BtnTilbage{
      -fx-font-size: 15px;
      -fx-border-color:  #001569;
  }
@@ -65,7 +65,11 @@
      -fx-background-color: #001569;
      -fx-text-fill: white;
 }
-
+#BtnTilbage:hover{
+     -fx-font-size: 15px;
+     -fx-background-color: #001569;
+     -fx-text-fill: white;
+}
 
 /* patient styles start form her*/
 #Patient{

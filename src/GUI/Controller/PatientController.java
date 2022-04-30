@@ -18,7 +18,7 @@ public class PatientController {
         Stage switcher = (Stage) btnLogout.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Login.fxml"));
         Scene scene = new Scene(root);
-        switcher.setTitle("SOSUS System");
+        switcher.setTitle("SOSU System");
         switcher.setScene(scene);
     }
 }
