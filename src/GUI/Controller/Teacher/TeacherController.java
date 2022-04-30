@@ -17,6 +17,8 @@ public class TeacherController {
     private JFXButton BtnOpretStudent;
     @FXML
     private JFXButton BtnOpretBorger;
+    @FXML
+    private JFXButton Logud;
 
     public void klasserBtn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) klasserKnnap.getScene().getWindow();
@@ -39,6 +41,14 @@ public class TeacherController {
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Student");
+        switcher.setScene(scene);
+    }
+
+    public void LogOut(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) BtnOpretStudent.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Login.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("SOSUS System");
         switcher.setScene(scene);
     }
 }
