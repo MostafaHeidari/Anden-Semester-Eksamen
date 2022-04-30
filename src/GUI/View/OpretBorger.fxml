@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="590.0" prefWidth="824.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.TeacherController">
+   <children>
+      <Pane layoutY="1.0" opacity="0.09" prefHeight="594.0" prefWidth="824.0" style="-fx-background-color: lightgreen;" />
+      <Pane layoutY="-3.0" prefHeight="596.0" prefWidth="824.0">
+         <children>
+            <Label layoutX="71.0" layoutY="146.0" prefHeight="49.0" prefWidth="283.0" text="Borger oplysninger">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="72.0" layoutY="490.0" prefHeight="38.0" prefWidth="147.0" style="-fx-background-color: green;" text="Gem oplysninger" textFill="WHITE" />
+            <GridPane fx:id="GridPane1" layoutX="72.0" layoutY="206.0" prefHeight="227.0" prefWidth="275.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField promptText="Navn" />
+                  <TextField fx:id="navnFileld" prefHeight="36.0" prefWidth="275.0" promptText="Navn" />
+                  <TextField fx:id="efterNavnFiled1" layoutX="10.0" layoutY="18.0" prefHeight="38.0" prefWidth="275.0" promptText="Efternavn" GridPane.rowIndex="1" />
+                  <TextField fx:id="cprField" layoutX="10.0" layoutY="60.0" prefHeight="36.0" prefWidth="275.0" promptText="CPR-nr" GridPane.rowIndex="2" />
+                  <TextField fx:id="TelefonField1" layoutX="10.0" layoutY="93.0" prefHeight="36.0" prefWidth="275.0" promptText="Telefon nummer" GridPane.rowIndex="3" />
+                  <TextField fx:id="ageField1" prefHeight="38.0" prefWidth="275.0" promptText="Alder" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+            <TextArea fx:id="infoBox" layoutX="380.0" layoutY="214.0" prefHeight="215.0" prefWidth="405.0" promptText="Generelle Oplysninger" />
+            <CheckBox layoutX="150.0" layoutY="446.0" mnemonicParsing="false" text="Mand" />
+            <CheckBox layoutX="75.0" layoutY="446.0" mnemonicParsing="false" text="Kvinde" />
+            <Label layoutX="264.0" layoutY="42.0" text="Oprettelse af borger">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="732.0" layoutY="41.0" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

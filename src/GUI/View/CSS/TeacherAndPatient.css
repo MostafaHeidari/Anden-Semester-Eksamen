@@ -3,8 +3,6 @@
      -fx-background-color: white;
 }
 
-
-
 #infoBox{
      -fx-background-color:  #BBE5E8;
 }
@@ -48,22 +46,36 @@
 #klasserKnnap, #BtnOpretBorger, #BtnRediger, #BtnSlet, #BtnOpretStudent, #BtnTilbage{
      -fx-font-size: 15px;
      -fx-border-color:  #001569;
+     -fx-background-color: #15B559;
+     -fx-text-fill: white;
  }
+
+#BtnOpretBorger:hover{
+     -fx-font-size: 15px;
+     -fx-background-color: white;
+     -fx-text-fill: #2B2121;
+     -fx-border-color: #15B559;
+}
 
 #klasserKnnap:hover{
      -fx-font-size: 15px;
-     -fx-background-color: #001569;
-     -fx-text-fill: white;
+     -fx-background-color: white;
+     -fx-text-fill: #2B2121;
+     -fx-border-color: #15B559;
+     -fx-border-width: 1,5px;
 }
 #BtnOpret:hover{
      -fx-font-size: 15px;
      -fx-background-color: #001569;
      -fx-text-fill: white;
+     -fx-border-width: 1,5px;
 }
 #BtnOpretStudent:hover{
      -fx-font-size: 15px;
-     -fx-background-color: #001569;
-     -fx-text-fill: white;
+     -fx-background-color: white;
+     -fx-text-fill: #2B2121;
+     -fx-border-color: #15B559;
+     -fx-border-width: 1,5px;
 }
 #BtnTilbage:hover{
      -fx-font-size: 15px;
