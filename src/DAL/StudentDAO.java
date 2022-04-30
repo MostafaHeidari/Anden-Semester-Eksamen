@@ -10,10 +10,10 @@ import java.sql.*;
 public class StudentDAO {
     private DatabaseConnector DC;
 
-    public StudentDAO() throws IOException
-    {
+    public StudentDAO() throws IOException {
         DC = new DatabaseConnector();
     }
+
     public Student uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder) throws SQLException {
         Connection connection = DC.getConnection();
 
@@ -29,11 +29,27 @@ public class StudentDAO {
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
                 int studentId = rs.getInt(1);
-                Student studentCord = new Student(studentId, studentNavn, studentEfternavn,studentEmail,studentAlder);
+                Student studentCord = new Student(studentId, studentNavn, studentEfternavn, studentEmail, studentAlder);
                 return studentCord;
             }
 
         }
         return null;
+    }
+
+
+    /* Student update */
+    public void editStudent(Student studentUpdate) throws Exception {
+        try (Connection connection = DC.getConnection()) {
+            String sql = "UPDATE Login SET ;";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, studentUpdate.getNavn());
+            preparedStatement.setString(2, studentUpdate.getEfternavn());
+            preparedStatement.setString(3, studentUpdate.getEmail());
+            preparedStatement.setString(4, studentUpdate.getAge());
+            preparedStatement.setInt(5, studentUpdate.getStudentId());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 }
