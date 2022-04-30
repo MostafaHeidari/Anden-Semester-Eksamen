@@ -23,7 +23,7 @@ public class TeacherController {
 
     public void OpretStudent(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) BtnOpretStudent.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/OpretStudent.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/aa.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Student");
         switcher.setScene(scene);

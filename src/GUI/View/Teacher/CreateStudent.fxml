@@ -1,39 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="452.0" prefWidth="472.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.CreateStudentController">
+<AnchorPane prefHeight="485.0" prefWidth="901.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.CreateStudentController">
    <children>
-      <TextField fx:id="NavnTxt" layoutX="182.0" layoutY="82.0" />
-      <TextField fx:id="EfternavnTxt" layoutX="182.0" layoutY="132.0" />
-      <TextField fx:id="EmailTxt" layoutX="182.0" layoutY="196.0" />
-      <TextField fx:id="AlderTxt" layoutX="182.0" layoutY="267.0" />
-      <Text layoutX="120.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Navn:">
+      <Pane layoutY="-9.0" opacity="0.09" prefHeight="492.0" prefWidth="490.0" style="-fx-background-color: lightgreen;" />
+      <GridPane fx:id="GridPane" layoutX="83.0" layoutY="165.0" prefHeight="187.0" prefWidth="328.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField prefHeight="98.0" prefWidth="318.0" promptText="Navn">
+               <GridPane.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="efterNavnFiled" layoutX="10.0" layoutY="18.0" prefHeight="113.0" prefWidth="318.0" promptText="Efternavn" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="TelefonField" layoutX="10.0" layoutY="93.0" prefHeight="88.0" prefWidth="318.0" promptText="Brugernavn" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="ageField" prefHeight="77.0" prefWidth="318.0" promptText="Adgangskode" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="efterNavnFiled1" prefHeight="28.0" prefWidth="319.0" promptText="E-mail" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <JFXButton fx:id="BtnOpret" layoutX="82.0" layoutY="379.0" prefHeight="28.0" prefWidth="94.0" style="-fx-background-color: green;" text="Opret Elev" textFill="WHITE" />
+      <JFXButton fx:id="BtnSlet" layoutX="312.0" layoutY="379.0" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: green;" text="Slet Elev" textFill="WHITE" />
+      <JFXButton fx:id="BtnRediger" layoutX="197.0" layoutY="379.0" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: green;" text="Rediger Elev" textFill="WHITE" />
+      <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="83.0" layoutY="92.0" opacity="0.46" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/person.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="154.0" layoutY="39.0" text="Oprettelse af Elev">
          <font>
-            <Font size="18.0" />
+            <Font size="20.0" />
          </font>
-      </Text>
-      <Text layoutX="87.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Efternavn:">
+      </Label>
+      <TableView layoutX="491.0" layoutY="86.0" prefHeight="394.0" prefWidth="410.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Navn" />
+          <TableColumn prefWidth="87.20001220703125" text="Efternavn" />
+            <TableColumn prefWidth="108.79998779296875" text="Brugernavn" />
+            <TableColumn prefWidth="133.5999755859375" text="Adgangskode" />
+        </columns>
+      </TableView>
+      <Label layoutX="632.0" layoutY="30.0" text="List af Eleverne">
          <font>
-            <Font size="18.0" />
+            <Font size="20.0" />
          </font>
-      </Text>
-      <Text layoutX="110.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Mail:">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <Text layoutX="119.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alder:">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <JFXButton fx:id="Gemknap" layoutX="352.0" layoutY="347.0" onAction="#GemBtn" text="Gem" />
-      <JFXButton fx:id="TilbageKnap" layoutX="110.0" layoutY="347.0" onAction="#TilbageBtn" text="Tilbage" />
+      </Label>
    </children>
 </AnchorPane>
