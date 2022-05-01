@@ -97,7 +97,7 @@ public class CreateStudentController {
     }
 
     /*this button must to log out*/
-    public void LogOut(ActionEvent actionEvent) throws IOException {
+    public void LogOutAction(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) Logud.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Login.fxml"));
         Scene scene = new Scene(root);
