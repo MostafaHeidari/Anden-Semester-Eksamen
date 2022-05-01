@@ -26,6 +26,11 @@ public class StudentModel {
     }
 
 
+    public ObservableList<Student> getStudentsList() throws IOException {
+        //studentsList = studentManger.getAllEvents();
+        return studentsList;
+    }
+
     // Edits a student using the editStudent method from userManager //
     /*
     public void editStudent(Student student) throws Exception {
