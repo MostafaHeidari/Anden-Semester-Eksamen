@@ -90,8 +90,14 @@
                </font>
             </Label>
             <Line endX="100.0" layoutX="34.0" layoutY="90.0" startX="-14.899984359741211" startY="1.52587890625E-5" stroke="WHITE" />
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="49.0" layoutY="535.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
          </children>
       </Pane>
+      <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="770.0" layoutY="60.0" size="20" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
    </children>
    <stylesheets>
       <URL value="@../CSS/TeacherAndPatient.css" />

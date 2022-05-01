@@ -1,10 +1,16 @@
 /*    "Oprettelse af Elev" styling of elements   */
 
 
-#BtnOpretElev, #BtnRedigerElev, #BtnSletElev {
+#BtnOpretElev, #BtnRedigerElev, #BtnSletElev,#BtnGamOplysinger {
     -fx-font-size: 12px;
     -fx-background-color: #009B42;
     -fx-text-fill: white;
+}
+
+#txtnavnEditStudentField,#txtEfterNavnEditStudentField,#txtcprField,#txtEmailEditStudentField,#txtTelefonField,#txtTelefonField,#txtAlderEditStudentFiled{
+    -fx-control-inner-background: #15B559;
+    -fx-text-fill: #2B2121;
+    -fx-background-color:  #D4D3BE;
 }
 
 #BtnTilbage {
@@ -35,6 +41,13 @@
 }
 
 #BtnSletElev:hover {
+    -fx-text-fill: white;
+    -fx-border-color: #001569;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+}
+
+#BtnGamOplysinger:hover {
     -fx-text-fill: white;
     -fx-border-color: #001569;
     -fx-border-width: 2px;
