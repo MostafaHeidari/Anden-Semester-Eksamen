@@ -45,23 +45,19 @@
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="adgangskodField" prefHeight="77.0" prefWidth="318.0" promptText="Adgangskode" GridPane.rowIndex="4">
-               <GridPane.margin>
-                  <Insets bottom="5.0" top="5.0" />
-               </GridPane.margin>
-            </TextField>
-            <TextField fx:id="EmailField" prefHeight="28.0" prefWidth="319.0" promptText="E-mail" GridPane.rowIndex="2" />
+            <TextField fx:id="EmailField" prefHeight="36.0" prefWidth="328.0" promptText="E-mail" GridPane.rowIndex="2" />
+            <TextField fx:id="AlderFiled" prefHeight="88.0" prefWidth="318.0" promptText="Alder" GridPane.rowIndex="4" />
          </children>
       </GridPane>
-      <JFXButton fx:id="BtnOpretElev" layoutX="82.0" layoutY="379.0" prefHeight="28.0" prefWidth="94.0" stylesheets="@../CSS/OprettelseElev.css" text="Opret Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnOpretElev" layoutX="82.0" layoutY="379.0" onAction="#OpretElevAction" prefHeight="28.0" prefWidth="94.0" stylesheets="@../CSS/OprettelseElev.css" text="Opret Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="BtnSletElev" layoutX="312.0" layoutY="379.0" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/OprettelseElev.css" text="Slet Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnSletElev" layoutX="312.0" layoutY="379.0" onAction="#SletElevAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/OprettelseElev.css" text="Slet Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="BtnRedigerElev" layoutX="197.0" layoutY="379.0" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/OprettelseElev.css" text="Rediger Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnRedigerElev" layoutX="197.0" layoutY="379.0" onAction="#RedigerElevAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/OprettelseElev.css" text="Rediger Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
@@ -80,15 +76,16 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <TableView layoutX="513.0" layoutY="92.0" prefHeight="394.0" prefWidth="410.0">
+      <TableView layoutX="478.0" layoutY="92.0" prefHeight="380.0" prefWidth="461.0">
         <columns>
           <TableColumn prefWidth="75.0" text="Navn" />
-          <TableColumn prefWidth="87.20001220703125" text="Efternavn" />
-            <TableColumn prefWidth="108.79998779296875" text="Brugernavn" />
-            <TableColumn prefWidth="133.5999755859375" text="Adgangskode" />
+          <TableColumn prefWidth="104.0" text="Efternavn" />
+            <TableColumn prefWidth="84.79998779296875" text="E-mail" />
+            <TableColumn prefWidth="105.5999755859375" text="Brugernavn" />
+            <TableColumn prefWidth="124.7999267578125" text="Alder" />
         </columns>
       </TableView>
-      <Label layoutX="634.0" layoutY="36.0" text="List af Eleverne">
+      <Label layoutX="680.0" layoutY="39.0" text="List af Eleverne">
          <font>
             <Font size="20.0" />
          </font>

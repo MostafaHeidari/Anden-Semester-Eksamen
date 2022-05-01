@@ -19,19 +19,27 @@ public class CreateStudentController {
     @FXML
     private JFXButton BtnTilbage;
     @FXML
-    private TextField NavnTxt;
+    private JFXButton BtnOpretElev;
     @FXML
-    private TextField EfternavnTxt;
+    private JFXButton BtnRedigerElev;
     @FXML
-    private TextField EmailTxt;
+    private JFXButton BtnSletElev;
+
+
     @FXML
-    private TextField AlderTxt;
+    private TextField navnField;
+    @FXML
+    private TextField efterNavnField;
+    @FXML
+    private TextField EmailField;
+    @FXML
+    private TextField AlderFiled;
 
     public void GemBtn(ActionEvent actionEvent) throws IOException, SQLException {
-        String studentNavn = NavnTxt.getText();
-        String studentEfternavn = EfternavnTxt.getText();
-        String studentEmail = (EmailTxt.getText());
-        String studentAlder = AlderTxt.getText();
+        String studentNavn = navnField.getText();
+        String studentEfternavn = efterNavnField.getText();
+        String studentEmail = (EmailField.getText());
+        String studentAlder = AlderFiled.getText();
 
         uploadStudentInfo(studentNavn, studentEfternavn, studentEmail, studentAlder);
 
@@ -62,5 +70,19 @@ public class CreateStudentController {
         Scene scene = new Scene(root);
         switcher.setTitle("Forside");
         switcher.setScene(scene);
+    }
+
+
+    public void OpretElevAction(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) BtnOpretElev.getScene().getWindow();
+    }
+
+    public void SletElevAction(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) BtnRedigerElev.getScene().getWindow();
+
+    }
+
+    public void RedigerElevAction(ActionEvent event)  throws IOException{
+        Stage switcher = (Stage) BtnSletElev.getScene().getWindow();
     }
 }
