@@ -2,6 +2,7 @@ package DAL;
 
 import BE.Student;
 import DAL.db.DatabaseConnector;
+import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.ObservableList;
 
 import java.io.IOException;
@@ -48,6 +49,22 @@ public class StudentDAO {
             preparedStatement.setString(3, studentUpdate.getEmail());
             preparedStatement.setString(4, studentUpdate.getAge());
             preparedStatement.setInt(5, studentUpdate.getStudentId());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
+
+    /*
+     * Deletes a student
+     */
+    public void deleteStudent(Student student) {
+        String sql1 = "DELETE FROM UserTable WHERE UserID = (?);";
+        try (Connection connection = DC.getConnection()) {
+            PreparedStatement ps1 = connection.prepareStatement(sql1, Statement.RETURN_GENERATED_KEYS);
+            ps1.setInt(1, student.getStudentId());
+            ps1.executeUpdate();
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

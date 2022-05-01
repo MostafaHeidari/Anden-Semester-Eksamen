@@ -31,4 +31,11 @@ public class StudentManger {
     }
 
  */
+
+/*
+    public void deleteStudent(Student selectedStudent) {
+        StudentDAO.deleteStudent(selectedStudent);
+    }
+
+ */
 }

@@ -26,11 +26,20 @@ public class StudentModel {
     }
 
 
-    /* Edits a student using the editStudent method from userManager */
-
-
-
+    // Edits a student using the editStudent method from userManager //
+    /*
     public void editStudent(Student student) throws Exception {
         studentManger.editStudent(student);
     }
+
+     */
+
+    /* Deletes student using the deleteStudent method from StudentManager */
+    /*
+    public void deletStudent (Student selectedStudent) {
+        studentManger.deleteStudent(selectedStudent);
+        studentsList.remove(selectedStudent);
+    }
+
+     */
 }
