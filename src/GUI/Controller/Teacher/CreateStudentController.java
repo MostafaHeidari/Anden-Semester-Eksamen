@@ -24,6 +24,10 @@ public class CreateStudentController {
     @FXML
     private JFXButton BtnSletElev;
 
+    @FXML
+    private JFXButton BtnTilbageOpretStudent;
+    @FXML
+    private JFXButton Logud;
 
     @FXML
     private TextField txtnavnField;
@@ -38,7 +42,6 @@ public class CreateStudentController {
     private JFXButton BtnGamOplysinger;
 
 
-
     public void OpretElevActionButton(ActionEvent actionEvent) throws IOException, SQLException {
         String studentNavn = txtnavnField.getText();
         String studentEfternavn = txtefterNavnField.getText();
@@ -51,7 +54,7 @@ public class CreateStudentController {
     private void uploadStudentInfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder) throws IOException, SQLException {
         StudentModel studentModelInfo = new StudentModel();
 
-        studentModelInfo.uploadStudentinfo(studentNavn,studentEfternavn,studentEmail,studentAlder);
+        studentModelInfo.uploadStudentinfo(studentNavn, studentEfternavn, studentEmail, studentAlder);
     }
 
     public void TilbageBtn(ActionEvent actionEvent) throws IOException {
@@ -66,6 +69,7 @@ public class CreateStudentController {
         switcher.setScene(scene);
     }
 
+    /* this button turn back to teacher window*/
     public void BtnTilbage(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) BtnTilbage.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
@@ -74,9 +78,17 @@ public class CreateStudentController {
         switcher.setScene(scene);
     }
 
+    /* this button turn back to createStudent window*/
+    public void BtnTilbageOpretStudentAction(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) BtnTilbageOpretStudent.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setScene(scene);
+    }
 
 
-    public void RedigerElevAction(ActionEvent actionEvent)  throws IOException{
+    /* this button edit the Student*/
+    public void RedigerElevAction(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) BtnRedigerElev.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/EditStudent.fxml"));
         Scene scene = new Scene(root);
@@ -84,13 +96,21 @@ public class CreateStudentController {
         switcher.setScene(scene);
     }
 
-    public void SletElevAction(ActionEvent event) throws IOException {
- 
+    /*this button must to log out*/
+    public void LogOut(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) Logud.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Login.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setScene(scene);
     }
 
+    /*this button must to delete the selected student*/
+    public void SletElevAction(ActionEvent event) throws IOException {
+
+    }
+
+    /*this button must to save the selected students information*/
     public void GamOplysingerActionButton(ActionEvent actionEvent) {
     }
 
-    public void LogOut(ActionEvent actionEvent) {
-    }
 }
