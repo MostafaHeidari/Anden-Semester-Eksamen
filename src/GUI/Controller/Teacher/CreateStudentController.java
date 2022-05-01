@@ -14,8 +14,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class CreateStudentController {
-    @FXML
-    private JFXButton Gemknap;
+
     @FXML
     private JFXButton BtnTilbage;
     @FXML
@@ -27,22 +26,20 @@ public class CreateStudentController {
 
 
     @FXML
-    private TextField navnField;
+    private TextField txtnavnField;
     @FXML
-    private TextField efterNavnField;
+    private TextField txtefterNavnField;
     @FXML
-    private TextField EmailField;
+    private TextField txtEmailField;
     @FXML
-    private TextField AlderFiled;
+    private TextField txtAlderFiled;
 
-    public void GemBtn(ActionEvent actionEvent) throws IOException, SQLException {
-        String studentNavn = navnField.getText();
-        String studentEfternavn = efterNavnField.getText();
-        String studentEmail = (EmailField.getText());
-        String studentAlder = AlderFiled.getText();
-
+    public void OpretElevActionButton(ActionEvent actionEvent) throws IOException, SQLException {
+        String studentNavn = txtnavnField.getText();
+        String studentEfternavn = txtefterNavnField.getText();
+        String studentEmail = (txtEmailField.getText());
+        String studentAlder = txtAlderFiled.getText();
         uploadStudentInfo(studentNavn, studentEfternavn, studentEmail, studentAlder);
-
         cancel(actionEvent);
     }
 
@@ -57,7 +54,7 @@ public class CreateStudentController {
     }
 
     private void cancel(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) Gemknap.getScene().getWindow();
+        Stage switcher = (Stage) BtnOpretElev.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("EventCoordinatorManagement");
@@ -73,8 +70,8 @@ public class CreateStudentController {
     }
 
 
-    public void OpretElevAction(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) BtnOpretElev.getScene().getWindow();
+    public void RedigerElevAction(ActionEvent event)  throws IOException{
+        Stage switcher = (Stage) BtnSletElev.getScene().getWindow();
     }
 
     public void SletElevAction(ActionEvent event) throws IOException {
@@ -82,7 +79,4 @@ public class CreateStudentController {
 
     }
 
-    public void RedigerElevAction(ActionEvent event)  throws IOException{
-        Stage switcher = (Stage) BtnSletElev.getScene().getWindow();
-    }
 }

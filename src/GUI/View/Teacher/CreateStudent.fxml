@@ -50,7 +50,7 @@
             <TextField fx:id="txtAlderFiled" prefHeight="88.0" prefWidth="318.0" promptText="Alder" GridPane.rowIndex="4" />
          </children>
       </GridPane>
-      <JFXButton fx:id="BtnOpretElev" layoutX="199.0" layoutY="404.0" onAction="#OpretElevAction" prefHeight="28.0" prefWidth="94.0" stylesheets="@../CSS/OprettelseElev.css" text="Opret Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnOpretElev" layoutX="199.0" layoutY="404.0" onAction="#OpretElevActionButton" prefHeight="28.0" prefWidth="94.0" stylesheets="@../CSS/OprettelseElev.css" text="Opret Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
