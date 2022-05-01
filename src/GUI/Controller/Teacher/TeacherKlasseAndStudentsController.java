@@ -84,6 +84,4 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         tvKlasseInfomationer.setItems(klasseModel.getAllClasses());
     }
 
-
-
 }
