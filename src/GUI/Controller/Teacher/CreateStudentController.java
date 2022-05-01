@@ -34,6 +34,11 @@ public class CreateStudentController {
     @FXML
     private TextField txtAlderFiled;
 
+    @FXML
+    private JFXButton BtnGamOplysinger;
+
+
+
     public void OpretElevActionButton(ActionEvent actionEvent) throws IOException, SQLException {
         String studentNavn = txtnavnField.getText();
         String studentEfternavn = txtefterNavnField.getText();
@@ -70,13 +75,22 @@ public class CreateStudentController {
     }
 
 
-    public void RedigerElevAction(ActionEvent event)  throws IOException{
-        Stage switcher = (Stage) BtnSletElev.getScene().getWindow();
+
+    public void RedigerElevAction(ActionEvent actionEvent)  throws IOException{
+        Stage switcher = (Stage) BtnRedigerElev.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/EditStudent.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("Rediger Elev");
+        switcher.setScene(scene);
     }
 
     public void SletElevAction(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) BtnRedigerElev.getScene().getWindow();
-
+ 
     }
 
+    public void GamOplysingerActionButton(ActionEvent actionEvent) {
+    }
+
+    public void LogOut(ActionEvent actionEvent) {
+    }
 }

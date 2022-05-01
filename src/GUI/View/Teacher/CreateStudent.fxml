@@ -42,12 +42,12 @@
                </GridPane.margin>
             </TextField>
             <TextField fx:id="txtEmailField" prefHeight="36.0" prefWidth="328.0" promptText="E-mail" GridPane.rowIndex="2" />
-            <TextField fx:id="txtTelefonField" layoutX="10.0" layoutY="93.0" prefHeight="88.0" prefWidth="318.0" promptText="Brugernavn" GridPane.rowIndex="3">
+            <TextField fx:id="txtTelefonField" layoutX="10.0" layoutY="93.0" prefHeight="88.0" prefWidth="318.0" promptText="Brugernavn" style="-fx-background-color: EBF3EB;" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="txtAlderFiled" prefHeight="88.0" prefWidth="318.0" promptText="Alder" GridPane.rowIndex="4" />
+            <TextField fx:id="txtAlderFiled" prefHeight="88.0" prefWidth="328.0" promptText="Alder" GridPane.rowIndex="4" />
          </children>
       </GridPane>
       <JFXButton fx:id="BtnOpretElev" layoutX="199.0" layoutY="404.0" onAction="#OpretElevActionButton" prefHeight="28.0" prefWidth="94.0" stylesheets="@../CSS/OprettelseElev.css" text="Opret Elev" textFill="WHITE">

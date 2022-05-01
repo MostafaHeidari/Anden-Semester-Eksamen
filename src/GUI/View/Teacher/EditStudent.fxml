@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.View.Teacher.EditStudent">
+<AnchorPane prefHeight="450.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.CreateStudentController">
    <children>
       <GridPane fx:id="GridPane" layoutX="205.0" layoutY="152.0" prefHeight="187.0" prefWidth="328.0" stylesheets="@../CSS/OprettelseElev.css">
          <columnConstraints>
@@ -61,7 +61,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <Pane prefHeight="450.0" prefWidth="147.0" style="-fx-background-color: #BBE5E8;">
+      <Pane prefHeight="450.0" prefWidth="147.0" style="-fx-background-color: #D4D3BE;">
          <children>
             <JFXButton fx:id="BtnTilbage" layoutY="396.0" onAction="#BtnTilbage" prefHeight="40.0" prefWidth="147.0" stylesheets="@../CSS/OprettelseElev.css" text="Tilbage">
                <cursor>
