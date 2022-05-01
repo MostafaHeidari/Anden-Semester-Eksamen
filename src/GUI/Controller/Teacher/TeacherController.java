@@ -19,6 +19,8 @@ public class TeacherController {
     private JFXButton BtnOpretBorger;
     @FXML
     private JFXButton Logud;
+    @FXML
+    private JFXButton BtnLogOutOfBorger;
 
     public void klasserBtn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) klasserKnnap.getScene().getWindow();
@@ -46,6 +48,17 @@ public class TeacherController {
 
     public void LogOut(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) Logud.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Login.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("SOSUS System");
+        switcher.setScene(scene);
+    }
+
+    public void Tilbage(ActionEvent actionEvent) {
+    }
+
+    public void LogOutOfBorger(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) BtnLogOutOfBorger.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Login.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSUS System");
