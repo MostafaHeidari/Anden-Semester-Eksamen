@@ -101,7 +101,7 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         tvKlasseInfomationer.setItems(klasseModel.getAllClasses());
     }
 
-    public void setStudentTableView() {
+    public void setStudentTableView() throws IOException {
         tcStudentId.setCellValueFactory(new PropertyValueFactory<>("studentId"));
 
         tcNameStudent.setCellValueFactory(new PropertyValueFactory<>("studentName"));

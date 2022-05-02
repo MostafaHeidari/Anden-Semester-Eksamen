@@ -72,11 +72,11 @@ public class EditStudentController {
     public void setSelectedStudent(Student student){
         txtnavnEditStudentField.setText(student.getStduentName());
         txtEfterNavnEditStudentField.setText(student.getEfternavn());
-        txtEmailEditStudentField.setText(student.getEmail());
         txtAlderEditStudentFiled.setText(student.getAge());
+        txtEmailEditStudentField.setText(student.getEmail());
+
         this.selectedStudent = student;
     }
-
 
 
     /* log ud button */

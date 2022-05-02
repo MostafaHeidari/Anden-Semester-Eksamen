@@ -21,26 +21,29 @@ public class StudentModel {
         studentManger = new StudentManger();
     }
 
-    public ObservableList<Student> getAllStudents() {
-        studentsList = studentManger.getAllStudents();
-        return studentsList;
-    }
-
     public void uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder) throws SQLException {
         studentsList.add(studentManger.uploadStudentinfo(studentNavn,studentEfternavn,studentEmail,studentAlder));
     }
 
 
-    public ObservableList<Student> getStudentsList() throws IOException {
-        //studentsList = studentManger.getAllEvents();
+    public ObservableList<Student> getAllStudents() throws IOException {
+        studentsList = studentManger.getAllStudents();
         return studentsList;
     }
 
     // Edits a student using the editStudent method from userManager 3 //
-
+/*
     public void editStudent(Student student) throws Exception {
         studentManger.editStudent(student);
     }
+
+ */
+    public void editStudent(Student student) throws Exception {
+        studentManger.editStudent(student);
+        studentsList.clear();
+        studentsList.addAll(studentManger.getAllStudents());
+    }
+
 
 
 

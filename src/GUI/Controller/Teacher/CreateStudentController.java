@@ -20,6 +20,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class CreateStudentController implements Initializable {
@@ -79,8 +80,11 @@ public class CreateStudentController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        setStudentTableView();
-
+        try {
+            setStudentTableView();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         tvStudent.setOnMouseClicked((MouseEvent event) -> {
             setSelectedStudent();
         });
@@ -144,7 +148,7 @@ public class CreateStudentController implements Initializable {
     /* this button edit the Student 4*/
     public void RedigerElevAction(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) BtnRedigerElev.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/EditStudent.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/View/Teacher/EditStudent.fxml")));
         Scene scene = new Scene(root);
         switcher.setTitle("Rediger Elev");
         EditStudentController.updateStudentInfo(selectedStudent);
@@ -153,7 +157,7 @@ public class CreateStudentController implements Initializable {
         if (selectedStudent != null) {
             Student selectedStudent = (Student) tvStudent.getSelectionModel().getSelectedItem();
 
-            FXMLLoader parent = new FXMLLoader(getClass().getResource("/GUI/View/EventCoordinatorViews/editEvent.fxml"));
+            FXMLLoader parent = new FXMLLoader(getClass().getResource("/GUI/View/Teacher/EditStudent.fxml"));
             Scene mainWindowScene = null;
             try {
                 mainWindowScene = new Scene(parent.load());
@@ -179,7 +183,7 @@ public class CreateStudentController implements Initializable {
     public void GamOplysingerActionButton(ActionEvent actionEvent) {
     }
 
-    public void setStudentTableView(){
+    public void setStudentTableView() throws IOException {
         tcId.setCellValueFactory(new PropertyValueFactory<>("studentId"));
 
         tcNameStudent.setCellValueFactory(new PropertyValueFactory<>("studentName"));
