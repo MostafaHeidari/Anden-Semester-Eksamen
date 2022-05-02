@@ -1,7 +1,5 @@
 package GUI.Controller.Teacher;
 
-import BE.Student;
-import GUI.Model.OpretStudentLoginModel;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -14,6 +12,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -68,7 +67,7 @@ public class CreateStudentController implements Initializable {
     @FXML
     public TableColumn tcAge;
 
-    public Student selectedStudent;
+    public Object selectedStudent;
 
 
 
@@ -79,6 +78,10 @@ public class CreateStudentController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         setStudentTableView();
+
+        tvStudent.setOnMouseClicked((MouseEvent event) -> {
+            setSelectedStudent();
+        });
     }
 
 
