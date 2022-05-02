@@ -13,7 +13,7 @@
     -fx-background-color:  #BBE5E8;
 }
 
-#BtnTilbage,#BtnTilbageOpretStudent {
+#BtnTilbage,#BtnTilbageOpretStudent,#tilbageKlasser,#tilbageBogerBtn {
     -fx-font-size: 12px;
     -fx-text-fill: #001569;
     -fx-border-color: #009B42;
