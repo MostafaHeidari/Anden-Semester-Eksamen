@@ -8,16 +8,16 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.CategoryController">
    <children>
-      <Text layoutX="329.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Helbredstilstande">
+      <Text layoutX="329.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Helbredstilstande">
          <font>
             <Font size="31.0" />
          </font>
       </Text>
-      <HBox layoutX="122.0" layoutY="78.0" prefHeight="583.0" prefWidth="670.0">
+      <HBox layoutX="130.0" layoutY="38.0" prefHeight="553.0" prefWidth="670.0">
          <children>
             <VBox prefHeight="583.0" prefWidth="197.0">
                <children>
-                  <HBox prefHeight="153.0" prefWidth="204.0" style="-fx-background-color: yellow;">
+                  <HBox onMouseClicked="" prefHeight="153.0" prefWidth="204.0" style="-fx-background-color: yellow;">
                      <children>
                         <VBox prefHeight="153.0" prefWidth="203.0">
                            <children>
