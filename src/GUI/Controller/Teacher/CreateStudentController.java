@@ -80,7 +80,7 @@ public class CreateStudentController implements Initializable {
         String studentEmail = (txtEmailField.getText());
         String studentAlder = txtAlderFiled.getText();
         uploadStudentInfo(studentNavn, studentEfternavn, studentEmail, studentAlder);
-        cancel(actionEvent);
+
     }
 
     private void uploadStudentInfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder) throws IOException, SQLException {
@@ -92,20 +92,11 @@ public class CreateStudentController implements Initializable {
         txtefterNavnField.clear();
         txtEmailField.clear();
         txtAlderFiled.clear();
+        tvStudent.refresh();
 
     }
 
-    public void TilbageBtn(ActionEvent actionEvent) throws IOException {
-        cancel(actionEvent);
-    }
 
-    private void cancel(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) BtnOpretElev.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
-        Scene scene = new Scene(root);
-        switcher.setTitle("EventCoordinatorManagement");
-        switcher.setScene(scene);
-    }
 
     /* this button turn back to teacher window*/
     public void BtnTilbage(ActionEvent actionEvent) throws IOException {

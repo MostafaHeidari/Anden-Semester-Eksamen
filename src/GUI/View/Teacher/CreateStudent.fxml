@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="558.0" prefWidth="1118.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.CreateStudentController">
+<AnchorPane prefHeight="558.0" prefWidth="1248.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.CreateStudentController">
    <children>
       <GridPane fx:id="GridPane" layoutX="200.0" layoutY="169.0" prefHeight="213.0" prefWidth="328.0">
          <columnConstraints>
@@ -62,17 +62,17 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <TableView fx:id="tvStudent" layoutX="583.0" layoutY="79.0" prefHeight="402.0" prefWidth="507.0">
+      <TableView fx:id="tvStudent" layoutX="583.0" layoutY="79.0" prefHeight="402.0" prefWidth="619.0">
         <columns>
             <TableColumn fx:id="tcId" prefWidth="55.0" text="Id" />
           <TableColumn fx:id="tcNameStudent" prefWidth="75.0" text="Navn" />
           <TableColumn fx:id="tcLastName" prefWidth="104.0" text="Efternavn" />
-            <TableColumn fx:id="tcEmail" prefWidth="84.79998779296875" text="E-mail" />
-            <TableColumn fx:id="tcAge" prefWidth="55.0" text="Alder" />
-            <TableColumn prefWidth="136.0" text="Brugernavn" />
+            <TableColumn fx:id="tcEmail" prefWidth="221.0" text="E-mail" />
+            <TableColumn fx:id="tcAge" minWidth="0.0" prefWidth="46.0" text="Alder" />
+            <TableColumn prefWidth="117.0" text="Brugernavn" />
         </columns>
       </TableView>
-      <Label layoutX="811.0" layoutY="43.0" text="List af Eleverne" textFill="#2b2121">
+      <Label layoutX="861.0" layoutY="43.0" text="List af Eleverne" textFill="#2b2121">
          <font>
             <Font size="14.0" />
          </font>
@@ -98,7 +98,7 @@
             </FontAwesomeIconView>
          </children>
       </Pane>
-      <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="782.0" layoutY="60.0" size="20" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
+      <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="819.0" layoutY="60.0" size="20" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
       <Label layoutX="236.0" layoutY="114.0" text="Indtast elevoplysninger" textFill="#2b2121">
          <font>
             <Font size="14.0" />
