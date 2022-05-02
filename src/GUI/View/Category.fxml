@@ -17,7 +17,7 @@
          <children>
             <VBox prefHeight="583.0" prefWidth="197.0">
                <children>
-                  <HBox fx:id="HBox" onMouseClicked="#Test" prefHeight="153.0" prefWidth="204.0" style="-fx-background-color: yellow;">
+                  <HBox fx:id="HBox" onMouseClicked="#Test" prefHeight="153.0" prefWidth="204.0">
                      <children>
                         <VBox prefHeight="153.0" prefWidth="203.0">
                            <children>
@@ -55,7 +55,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="153.0" prefWidth="204.0" style="-fx-background-color: Green;">
+                  <HBox prefHeight="153.0" prefWidth="204.0">
                      <children>
                         <VBox prefHeight="153.0" prefWidth="205.0">
                            <children>
@@ -93,7 +93,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="153.0" prefWidth="204.0" style="-fx-background-color: yellow;">
+                  <HBox prefHeight="153.0" prefWidth="204.0">
                      <children>
                         <VBox prefHeight="153.0" prefWidth="210.0">
                            <children>
@@ -131,7 +131,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <VBox prefHeight="153.0" prefWidth="205.0" style="-fx-background-color: green;">
+                  <VBox prefHeight="153.0" prefWidth="205.0">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
                            <font>
@@ -169,7 +169,7 @@
             </VBox>
             <VBox prefHeight="583.0" prefWidth="232.0">
                <children>
-                  <HBox prefHeight="153.0" prefWidth="511.0" style="-fx-background-color: red;">
+                  <HBox prefHeight="153.0" prefWidth="511.0">
                      <children>
                         <VBox prefHeight="153.0" prefWidth="233.0">
                            <children>
@@ -207,7 +207,45 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="153.0" prefWidth="511.0" style="-fx-background-color: Orange;">
+                  <HBox prefHeight="153.0" prefWidth="511.0">
+                     <children>
+                        <VBox prefHeight="139.0" prefWidth="231.0" style="-fx-border-width: 3px;">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="153.0" prefWidth="204.0">
                      <children>
                         <VBox prefHeight="153.0" prefWidth="233.0">
                            <children>
@@ -245,45 +283,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="153.0" prefWidth="204.0" style="-fx-background-color: red;">
-                     <children>
-                        <VBox prefHeight="153.0" prefWidth="233.0">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
-                                 <font>
-                                    <Font size="21.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </VBox>
-                     </children>
-                  </HBox>
-                  <VBox prefHeight="153.0" prefWidth="205.0" style="-fx-background-color: Orange;">
+                  <VBox prefHeight="153.0" prefWidth="205.0">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
                            <font>
@@ -321,7 +321,7 @@
             </VBox>
             <VBox prefHeight="583.0" prefWidth="241.0">
                <children>
-                  <HBox prefHeight="153.0" prefWidth="204.0" style="-fx-background-color: yellow;">
+                  <HBox prefHeight="153.0" prefWidth="204.0">
                      <children>
                         <VBox prefHeight="153.0" prefWidth="240.0">
                            <children>
@@ -359,7 +359,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="153.0" prefWidth="204.0" style="-fx-background-color: Green;">
+                  <HBox prefHeight="153.0" prefWidth="204.0">
                      <children>
                         <VBox prefHeight="153.0" prefWidth="240.0">
                            <children>
@@ -397,7 +397,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="153.0" prefWidth="204.0" style="-fx-background-color: yellow;">
+                  <HBox prefHeight="153.0" prefWidth="204.0">
                      <children>
                         <VBox prefHeight="153.0" prefWidth="240.0">
                            <children>
@@ -435,7 +435,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <VBox prefHeight="153.0" prefWidth="205.0" style="-fx-background-color: Green;">
+                  <VBox prefHeight="153.0" prefWidth="205.0">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
                            <font>
