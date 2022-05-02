@@ -40,6 +40,20 @@
     -fx-background-color: #009B42;
 }
 
+#tilbageKlasser:hover {
+    -fx-text-fill: white;
+    -fx-border-color: #009B42;
+    -fx-border-width: 2px;
+    -fx-background-color: #009B42;
+}
+#tilbageBogerBtn:hover {
+    -fx-text-fill: white;
+    -fx-border-color: #009B42;
+    -fx-border-width: 2px;
+    -fx-background-color: #009B42;
+}
+
+
 
 #BtnRedigerElev:hover {
     -fx-text-fill: white;

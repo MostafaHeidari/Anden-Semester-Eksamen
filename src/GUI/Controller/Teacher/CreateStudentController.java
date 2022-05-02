@@ -162,4 +162,9 @@ public class CreateStudentController implements Initializable {
     }
 
 
+    public void btnTilbageKlasser(ActionEvent event) {
+    }
+
+    public void btnTilbageBoger(ActionEvent event) {
+    }
 }
