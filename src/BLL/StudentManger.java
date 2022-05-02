@@ -23,14 +23,14 @@ public class StudentManger {
             return(studentDAO.uploadStudentinfo(studentNavn,studentEfternavn,studentEmail,studentAlder));
     }
 
-/*
-     // Edits a student using the editStudent method from userDAO //
+
+     // Edits a student using the editStudent method from userDAO 2 //
 
     public void editStudent(Student student) throws Exception {
-        StudentDAO.editStudent(student);
+        studentDAO.editStudent(student);  // object
     }
 
- */
+
 
 /*
     public void deleteStudent(Student selectedStudent) {

@@ -37,16 +37,17 @@ public class StudentDAO {
     }
 
 
-    /* Student update */
+    /* Student update ok  1*/
     public void editStudent(Student studentUpdate) throws Exception {
         try (Connection connection = DC.getConnection()) {
-            String sql = "UPDATE Login SET ;";
+            String sql = "UPDATE StudentTable SET NameStudent= (?), LastNameStudent=(?), EmailStudent=(?), StudentAge=(?), WHERE StudentID = (?);";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, studentUpdate.getStduentName());
             preparedStatement.setString(2, studentUpdate.getEfternavn());
             preparedStatement.setString(3, studentUpdate.getEmail());
             preparedStatement.setString(4, studentUpdate.getAge());
             preparedStatement.setInt(5, studentUpdate.getStudentId());
+            preparedStatement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

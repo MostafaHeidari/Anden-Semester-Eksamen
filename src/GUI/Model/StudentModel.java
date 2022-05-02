@@ -31,13 +31,13 @@ public class StudentModel {
         return studentsList;
     }
 
-    // Edits a student using the editStudent method from userManager //
-    /*
+    // Edits a student using the editStudent method from userManager 3 //
+
     public void editStudent(Student student) throws Exception {
         studentManger.editStudent(student);
     }
 
-     */
+
 
     /* Deletes student using the deleteStudent method from StudentManager */
     /*

@@ -23,9 +23,12 @@ public class OpretStudentModel {
         opretStudentManager = new OpretStudentManager();
     }
 
+    /*
     public static ObservableList getStudents() {
         return null;
     }
+    
+     */
 
     /**
      * Gets the login username and the password using login from loginManager
