@@ -55,7 +55,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="153.0" prefWidth="204.0">
+                  <HBox fx:id="HBox1" prefHeight="153.0" prefWidth="204.0" onMouseClicked="#Test1">
                      <children>
                         <VBox prefHeight="153.0" prefWidth="205.0" styleClass="Category">
                            <children>
