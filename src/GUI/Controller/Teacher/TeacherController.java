@@ -28,7 +28,7 @@ public class TeacherController {
         Stage switcher = (Stage) klasserKnnap.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
         Scene scene = new Scene(root);
-        switcher.setTitle("EventCoordinatorManagement");
+        switcher.setTitle("Classe Manger");
         switcher.setScene(scene);
     }
 
@@ -44,7 +44,7 @@ public class TeacherController {
         Stage switcher = (Stage) BtnOpretBorger.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/OpretBorger.fxml"));
         Scene scene = new Scene(root);
-        switcher.setTitle("Opret Student");
+        switcher.setTitle("Opret Borger");
         switcher.setScene(scene);
     }
 

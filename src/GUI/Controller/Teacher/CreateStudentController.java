@@ -24,7 +24,10 @@ public class CreateStudentController implements Initializable {
 
     public StudentModel studentModel;
 
-
+    @FXML
+    public JFXButton tilbageKlasser;
+    @FXML
+    public JFXButton tilbageBogerBtn;
     @FXML
     private JFXButton BtnTilbage;
     @FXML
@@ -162,9 +165,19 @@ public class CreateStudentController implements Initializable {
     }
 
 
-    public void btnTilbageKlasser(ActionEvent event) {
+    public void btnTilbageKlasser(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) tilbageKlasser.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("Classe Manger");
+        switcher.setScene(scene);
     }
 
-    public void btnTilbageBoger(ActionEvent event) {
+    public void btnTilbageBoger(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) tilbageBogerBtn.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/OpretBorger.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("Opret Borger");
+        switcher.setScene(scene);
     }
 }
