@@ -14,7 +14,7 @@
           <TableColumn prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
-      <JFXButton fx:id="btnInfo" layoutX="764.0" layoutY="535.0" prefHeight="27.0" prefWidth="90.0" text="Se Info">
+      <JFXButton fx:id="btnInfo" onAction="#InfoCategorys" layoutX="764.0" layoutY="535.0" prefHeight="27.0" prefWidth="90.0" text="Se Info">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
