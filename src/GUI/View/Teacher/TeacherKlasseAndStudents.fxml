@@ -9,9 +9,9 @@
    <children>
       <TableView fx:id="tvStudent" layoutX="27.0" layoutY="51.0" prefHeight="706.0" prefWidth="706.0">
          <columns>
-            <TableColumn prefWidth="119.20001220703125" text="ID " />
-            <TableColumn fx:id="tcNameStudent" prefWidth="141.59996032714844" text="Navn" />
-            <TableColumn fx:id="tcEfterName" prefWidth="158.39996337890625" text="Efternavn" />
+            <TableColumn fx:id="tcStudentId" prefWidth="48.0" text="ID " />
+            <TableColumn fx:id="tcNameStudent" prefWidth="148.0" text="Navn" />
+            <TableColumn fx:id="tcEfterName" prefWidth="225.0" text="Efternavn" />
             <TableColumn fx:id="tcEmail" prefWidth="204.0" text="Email" />
             <TableColumn fx:id="tcAlder" text="Alder" />
          </columns>
@@ -32,6 +32,6 @@
       </TableView>
       <JFXButton fx:id="TilbageForside" layoutX="1659.0" layoutY="832.0" onAction="#TilbageForsideBtn" text="Tilbage til Forside" />
       <JFXButton fx:id="nyKlasse" layoutX="1574.0" layoutY="832.0" onAction="#nyKlasseBtn" text="Ny Klasse" />
-      <JFXButton fx:id="nyStudent1" layoutX="27.0" layoutY="820.0" onAction="#nyStudentBtn" text="Ny Student" />
+      <JFXButton fx:id="nyStudent1" layoutX="27.0" layoutY="820.0" onAction="#nyStudentBtn" text="Ny Elev" />
    </children>
 </AnchorPane>

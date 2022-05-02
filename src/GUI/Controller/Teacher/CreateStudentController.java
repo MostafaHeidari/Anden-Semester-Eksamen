@@ -75,11 +75,16 @@ public class CreateStudentController implements Initializable {
 
 
     public void OpretElevActionButton(ActionEvent actionEvent) throws IOException, SQLException {
-        String studentNavn = txtnavnField.getText();
-        String studentEfternavn = txtefterNavnField.getText();
-        String studentEmail = (txtEmailField.getText());
-        String studentAlder = txtAlderFiled.getText();
-        uploadStudentInfo(studentNavn, studentEfternavn, studentEmail, studentAlder);
+        if (txtnavnField.getText() == "" || txtefterNavnField.getText() == "" || txtEmailField.getText() == "" || txtAlderFiled.getText() == ""){
+
+        }
+        else {
+            String studentNavn = txtnavnField.getText();
+            String studentEfternavn = txtefterNavnField.getText();
+            String studentEmail = (txtEmailField.getText());
+            String studentAlder = txtAlderFiled.getText();
+            uploadStudentInfo(studentNavn, studentEfternavn, studentEmail, studentAlder);
+        }
 
     }
 
@@ -87,7 +92,6 @@ public class CreateStudentController implements Initializable {
         StudentModel studentModelInfo = new StudentModel();
 
         studentModelInfo.uploadStudentinfo(studentNavn, studentEfternavn, studentEmail, studentAlder);
-
         txtnavnField.clear();
         txtefterNavnField.clear();
         txtEmailField.clear();

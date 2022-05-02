@@ -1,6 +1,7 @@
 package GUI.Controller.Teacher;
 
 import GUI.Model.ClassModel;
+import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -19,7 +20,8 @@ import java.util.ResourceBundle;
 
 public class TeacherKlasseAndStudentsController implements Initializable {
 
-    @FXML
+    public StudentModel studentModel;
+
     private ClassModel klasseModel;
 
     @FXML
@@ -41,6 +43,8 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     @FXML
     public TableColumn tcNameStudent;
     @FXML
+    public TableColumn tcStudentId;
+    @FXML
     public TableColumn tcEfterName;
     @FXML
     public TableColumn tcEmail;
@@ -52,13 +56,15 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         try {
             setKlasseTableView();
+            setStudentTableView();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public TeacherKlasseAndStudentsController() throws IOException {
-        this.klasseModel = new ClassModel();
+        klasseModel = new ClassModel();
+        studentModel = new StudentModel();
     }
 
     public void TilbageForsideBtn(ActionEvent actionEvent) throws IOException {
@@ -95,8 +101,18 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         tvKlasseInfomationer.setItems(klasseModel.getAllClasses());
     }
 
-    public void setStudentTableView(){
-        tcNameStudent.setCellValueFactory(new PropertyValueFactory<>("studentName"));
-    }
+    public void setStudentTableView() {
+        tcStudentId.setCellValueFactory(new PropertyValueFactory<>("studentId"));
 
+        tcNameStudent.setCellValueFactory(new PropertyValueFactory<>("studentName"));
+
+        tcEfterName.setCellValueFactory(new PropertyValueFactory<>("lastName"));
+
+        tcEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+
+        tcAlder.setCellValueFactory(new PropertyValueFactory<>("age"));
+
+
+        tvStudent.setItems(studentModel.getAllStudents());
+    }
 }
