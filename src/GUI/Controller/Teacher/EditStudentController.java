@@ -7,11 +7,9 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
 
-
-public class editStudentController {
+public class EditStudentController {
 
 
     public TextField txtnavnEditStudentField;
@@ -25,7 +23,10 @@ public class editStudentController {
 
     private StudentModel studentModel = new StudentModel();
 
-    public editStudentController() throws IOException {
+    public EditStudentController() throws IOException {
+    }
+
+    public static void updateStudentInfo(Object selectedStudent) {
     }
 
     public void OpretElevActionButton(ActionEvent actionEvent) throws Exception {
@@ -33,6 +34,12 @@ public class editStudentController {
         String updateStudentEfterNavn = txtEfterNavnEditStudentField.getText();
         String updateStudentAlder = txtAlderEditStudentFiled.getText();
         String updateStudentEmail = txtEmailEditStudentField.getText();
+
+        this.selectedStudent.setStduentName(updateStudentName);
+        this.selectedStudent.setEfternavn(updateStudentEfterNavn);
+        this.selectedStudent.setEmail(updateStudentAlder);
+        this.selectedStudent.setAge(updateStudentEmail);
+        studentModel.editStudent(this.selectedStudent);
 
 
 
@@ -47,7 +54,21 @@ public class editStudentController {
          */
     }
 
+    public void setSelectedStudent(Student student){
+        txtnavnEditStudentField.setText(student.getStduentName());
+        txtEfterNavnEditStudentField.setText(student.getEfternavn());
+        txtEmailEditStudentField.setText(student.getEmail());
+        txtAlderEditStudentFiled.setText(student.getAge());
+        this.selectedStudent = student;
+    }
+
 
     public void GamOplysingerActionButton(ActionEvent actionEvent) {
+    }
+
+    public void LogOutAction(ActionEvent actionEvent) {
+    }
+
+    public void BtnTilbageOpretStudentAction(ActionEvent actionEvent) {
     }
 }
