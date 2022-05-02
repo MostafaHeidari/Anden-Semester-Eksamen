@@ -2,14 +2,14 @@ package BE;
 
 public class Student {
     public int studentId;
-    public String navn;
+    public String studentName;
     public String efternavn;
     public String email;
     public String age;
 
     public Student(int studentId,String navn, String efternavn, String email, String age) {
         this.studentId = studentId;
-        this.navn = navn;
+        this.studentName = navn;
         this.efternavn = efternavn;
         this.email = email;
         this.age = age;
@@ -23,12 +23,12 @@ public class Student {
         this.studentId = studentId;
     }
 
-    public String getNavn() {
-        return navn;
+    public String getStduentName() {
+        return studentName;
     }
 
-    public void setNavn(String navn) {
-        this.navn = navn;
+    public void setStduentName(String stduentName) {
+        this.studentName = stduentName;
     }
 
     public String getEfternavn() {
@@ -60,7 +60,7 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "studentId=" + studentId +
-                ", navn='" + navn + '\'' +
+                ", navn='" + studentName + '\'' +
                 ", efternavn='" + efternavn + '\'' +
                 ", email='" + email + '\'' +
                 ", age='" + age + '\'' +

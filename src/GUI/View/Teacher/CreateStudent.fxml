@@ -62,13 +62,13 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <TableView layoutX="623.0" layoutY="79.0" prefHeight="402.0" prefWidth="467.0">
+      <TableView fx:id="tvStudent" layoutX="623.0" layoutY="79.0" prefHeight="402.0" prefWidth="467.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Navn" />
-          <TableColumn prefWidth="104.0" text="Efternavn" />
-            <TableColumn prefWidth="84.79998779296875" text="E-mail" />
-            <TableColumn prefWidth="105.5999755859375" text="Brugernavn" />
-            <TableColumn prefWidth="124.7999267578125" text="Alder" />
+          <TableColumn fx:id="tcNameStudent" prefWidth="75.0" text="Navn" />
+          <TableColumn fx:id="tcEfterName" prefWidth="104.0" text="Efternavn" />
+            <TableColumn fx:id="tcEmail" prefWidth="84.79998779296875" text="E-mail" />
+            <TableColumn fx:id="tcAlder" prefWidth="55.0" text="Alder" />
+            <TableColumn prefWidth="176.0" text="Brugernavn" />
         </columns>
       </TableView>
       <Label layoutX="811.0" layoutY="43.0" text="List af Eleverne" textFill="#2b2121">

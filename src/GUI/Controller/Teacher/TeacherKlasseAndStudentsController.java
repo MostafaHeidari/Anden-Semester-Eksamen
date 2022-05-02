@@ -19,6 +19,7 @@ import java.util.ResourceBundle;
 
 public class TeacherKlasseAndStudentsController implements Initializable {
 
+    @FXML
     private ClassModel klasseModel;
 
     @FXML
@@ -35,6 +36,16 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     @FXML
     public TableColumn tcKlasseNavn;
 
+    @FXML
+    public TableView tvStudent;
+    @FXML
+    public TableColumn tcNameStudent;
+    @FXML
+    public TableColumn tcEfterName;
+    @FXML
+    public TableColumn tcEmail;
+    @FXML
+    public TableColumn tcAlder;
 
 
     @Override
@@ -82,6 +93,10 @@ public class TeacherKlasseAndStudentsController implements Initializable {
 
 
         tvKlasseInfomationer.setItems(klasseModel.getAllClasses());
+    }
+
+    public void setStudentTableView(){
+        tcNameStudent.setCellValueFactory(new PropertyValueFactory<>("studentName"));
     }
 
 }

@@ -2,8 +2,6 @@ package DAL;
 
 import BE.Student;
 import DAL.db.DatabaseConnector;
-import com.microsoft.sqlserver.jdbc.SQLServerException;
-import javafx.collections.ObservableList;
 
 import java.io.IOException;
 import java.sql.*;
@@ -44,7 +42,7 @@ public class StudentDAO {
         try (Connection connection = DC.getConnection()) {
             String sql = "UPDATE Login SET ;";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, studentUpdate.getNavn());
+            preparedStatement.setString(1, studentUpdate.getStduentName());
             preparedStatement.setString(2, studentUpdate.getEfternavn());
             preparedStatement.setString(3, studentUpdate.getEmail());
             preparedStatement.setString(4, studentUpdate.getAge());
