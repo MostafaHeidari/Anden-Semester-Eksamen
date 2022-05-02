@@ -21,23 +21,33 @@ public class editStudentController {
     public TextField txtAlderEditStudentFiled;
     public JFXButton BtnGamOplysinger;
 
+    private Student selectedStudent;
+
     private StudentModel studentModel = new StudentModel();
 
     public editStudentController() throws IOException {
     }
-/*
+
     public void OpretElevActionButton(ActionEvent actionEvent) throws Exception {
+        String updateStudentName = txtnavnEditStudentField.getText();
+        String updateStudentEfterNavn = txtEfterNavnEditStudentField.getText();
+        String updateStudentAlder = txtAlderEditStudentFiled.getText();
+        String updateStudentEmail = txtEmailEditStudentField.getText();
+
+
+
+        /*
         String studentNavn = txtnavnEditStudentField.getText();
         String studentEfternavn = txtEfterNavnEditStudentField.getText();
         String studentEmail = (txtEmailEditStudentField.getText());
         String studentAlder = txtAlderEditStudentFiled.getText();
         Student student = new Student(studentId, studentNavn, studentEfternavn ,studentEmail, studentAlder);
         studentModel.editStudent(student);
-        cancel(actionEvent);
+
+         */
     }
+
 
     public void GamOplysingerActionButton(ActionEvent actionEvent) {
     }
-
- */
 }

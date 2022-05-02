@@ -1,5 +1,6 @@
 package GUI.Controller.Teacher;
 
+import BE.Student;
 import GUI.Model.OpretStudentLoginModel;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
@@ -66,6 +67,10 @@ public class CreateStudentController implements Initializable {
     public TableColumn tcEmail;
     @FXML
     public TableColumn tcAge;
+
+    public Student selectedStudent;
+
+
 
     public CreateStudentController() throws IOException {
         studentModel = new StudentModel();
@@ -179,5 +184,11 @@ public class CreateStudentController implements Initializable {
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Borger");
         switcher.setScene(scene);
+    }
+
+    public void setSelectedStudent(){
+        if (tvStudent.getSelectionModel().getSelectedItem() != null){
+            selectedStudent = tvStudent.getSelectionModel().getSelectedItem();
+        }
     }
 }

@@ -37,13 +37,9 @@ public class StudentManger {
         return studentsObs;
     }
 
-/*
-     // Edits a student using the editStudent method from userDAO //
 
 
      // Edits a student using the editStudent method from userDAO 2 //
-
-
     public void editStudent(Student student) throws Exception {
         studentDAO.editStudent(student);  // object
     }

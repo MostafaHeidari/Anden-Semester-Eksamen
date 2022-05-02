@@ -37,12 +37,11 @@ public class StudentModel {
     }
 
     // Edits a student using the editStudent method from userManager 3 //
-/*
+
     public void editStudent(Student student) throws Exception {
         studentManger.editStudent(student);
     }
 
- */
 
 
 
