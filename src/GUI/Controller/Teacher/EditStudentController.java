@@ -35,8 +35,8 @@ public class EditStudentController {
         String updateStudentAlder = txtAlderEditStudentFiled.getText();
         String updateStudentEmail = txtEmailEditStudentField.getText();
 
-        this.selectedStudent.setStduentName(updateStudentName);
-        this.selectedStudent.setEfternavn(updateStudentEfterNavn);
+        this.selectedStudent.setStudentName(updateStudentName);
+        this.selectedStudent.setLastName(updateStudentEfterNavn);
         this.selectedStudent.setEmail(updateStudentAlder);
         this.selectedStudent.setAge(updateStudentEmail);
         studentModel.editStudent(this.selectedStudent);
@@ -55,8 +55,8 @@ public class EditStudentController {
     }
 
     public void setSelectedStudent(Student student){
-        txtnavnEditStudentField.setText(student.getStduentName());
-        txtEfterNavnEditStudentField.setText(student.getEfternavn());
+        txtnavnEditStudentField.setText(student.getStudentName());
+        txtEfterNavnEditStudentField.setText(student.getLastName());
         txtEmailEditStudentField.setText(student.getEmail());
         txtAlderEditStudentFiled.setText(student.getAge());
         this.selectedStudent = student;

@@ -43,8 +43,8 @@ public class StudentDAO {
         try (Connection connection = DC.getConnection()) {
             String sql = "UPDATE StudentTable SET NameStudent= (?), LastNameStudent=(?), EmailStudent=(?), StudentAge=(?), WHERE StudentID = (?);";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, studentUpdate.getStduentName());
-            preparedStatement.setString(2, studentUpdate.getEfternavn());
+            preparedStatement.setString(1, studentUpdate.getStudentName());
+            preparedStatement.setString(2, studentUpdate.getLastName());
             preparedStatement.setString(3, studentUpdate.getEmail());
             preparedStatement.setString(4, studentUpdate.getAge());
             preparedStatement.setInt(5, studentUpdate.getStudentId());

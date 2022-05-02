@@ -23,20 +23,20 @@ public class Student {
         this.studentId = studentId;
     }
 
-    public String getStduentName() {
+    public String getStudentName() {
         return studentName;
     }
 
-    public void setStduentName(String stduentName) {
-        this.studentName = stduentName;
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 
-    public String getEfternavn() {
+    public String getLastName() {
         return lastName;
     }
 
-    public void setEfternavn(String efternavn) {
-        this.lastName = efternavn;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {

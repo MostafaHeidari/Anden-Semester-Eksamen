@@ -25,6 +25,7 @@ import java.util.ResourceBundle;
 public class CreateStudentController implements Initializable {
 
     public StudentModel studentModel;
+    private EditStudentController editStudentController;
 
     @FXML
     public JFXButton tilbageKlasser;
@@ -74,7 +75,8 @@ public class CreateStudentController implements Initializable {
 
 
     public CreateStudentController() throws IOException {
-        studentModel = new StudentModel();
+        this.studentModel = new StudentModel();
+        this.editStudentController = new EditStudentController();
     }
 
     @Override
@@ -143,28 +145,26 @@ public class CreateStudentController implements Initializable {
 
     /* this button edit the Student 4*/
     public void RedigerElevAction(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) BtnRedigerElev.getScene().getWindow();
+      /*  Stage switcher = (Stage) BtnRedigerElev.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/EditStudent.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Rediger Elev");
         EditStudentController.updateStudentInfo(selectedStudent);
         switcher.setScene(scene);
 
+       */
         if (selectedStudent != null) {
             Student selectedStudent = (Student) tvStudent.getSelectionModel().getSelectedItem();
 
-            FXMLLoader parent = new FXMLLoader(getClass().getResource("/GUI/View/EventCoordinatorViews/editEvent.fxml"));
-            Scene mainWindowScene = null;
-            try {
-                mainWindowScene = new Scene(parent.load());
-            } catch (IOException exception) {
-                exception.printStackTrace();
-            }
-            Stage editStudentController = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            editStudentController.setScene(mainWindowScene);
-            EditStudentController editStudentController1 = parent.getController();
-            editStudentController1.setSelectedStudent(selectedStudent);
-            editStudentController.show();
+            Parent root1;
+            FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/GUI/View/Teacher/EditStudent.fxml"));
+            root1 = (Parent) fxmlLoader1.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));
+
+            fxmlLoader1.<EditStudentController>getController().setSelectedStudent(selectedStudent);
+
+            stage.show();
         }
     }
 
