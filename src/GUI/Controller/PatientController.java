@@ -25,7 +25,7 @@ public class PatientController {
 
     public void InfoCategorys(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) btnInfo.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Category.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Category.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);

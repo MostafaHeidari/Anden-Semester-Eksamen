@@ -24,7 +24,7 @@ public class OpretStudentModel {
     }
 
     public static ObservableList getStudents() {
-
+        return null;
     }
 
     /**
