@@ -55,7 +55,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox fx:id="HBox1" prefHeight="153.0" prefWidth="204.0" onMouseClicked="#Test1">
+                  <HBox fx:id="HBox1" onMouseClicked="#Test1" prefHeight="153.0" prefWidth="204.0">
                      <children>
                         <VBox prefHeight="153.0" prefWidth="205.0" styleClass="Category">
                            <children>
@@ -323,7 +323,7 @@
                <children>
                   <HBox prefHeight="153.0" prefWidth="204.0">
                      <children>
-                        <VBox prefHeight="153.0" prefWidth="240.0" styleClass="Category">
+                        <VBox prefHeight="79.0" prefWidth="241.0" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
                                  <font>
@@ -361,7 +361,7 @@
                   </HBox>
                   <HBox prefHeight="153.0" prefWidth="204.0">
                      <children>
-                        <VBox prefHeight="153.0" prefWidth="240.0" styleClass="Category">
+                        <VBox prefHeight="165.0" prefWidth="241.0" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
                                  <font>
@@ -399,7 +399,7 @@
                   </HBox>
                   <HBox prefHeight="153.0" prefWidth="204.0">
                      <children>
-                        <VBox prefHeight="153.0" prefWidth="240.0" styleClass="Category">
+                        <VBox prefHeight="62.0" prefWidth="241.0" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
                                  <font>
@@ -435,7 +435,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <VBox prefHeight="153.0" prefWidth="205.0" styleClass="Category">
+                  <VBox prefHeight="128.0" prefWidth="187.0" styleClass="Category">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
                            <font>
