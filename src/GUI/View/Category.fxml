@@ -17,7 +17,7 @@
          <children>
             <VBox prefHeight="583.0" prefWidth="197.0">
                <children>
-                  <HBox onMouseClicked="" prefHeight="153.0" prefWidth="204.0" style="-fx-background-color: yellow;">
+                  <HBox fx:id="HBox" onMouseClicked="#Test" prefHeight="153.0" prefWidth="204.0" style="-fx-background-color: yellow;">
                      <children>
                         <VBox prefHeight="153.0" prefWidth="203.0">
                            <children>
