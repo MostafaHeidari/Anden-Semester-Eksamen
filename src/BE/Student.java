@@ -3,14 +3,14 @@ package BE;
 public class Student {
     public int studentId;
     public String studentName;
-    public String efternavn;
+    public String lastName;
     public String email;
     public String age;
 
     public Student(int studentId,String navn, String efternavn, String email, String age) {
         this.studentId = studentId;
         this.studentName = navn;
-        this.efternavn = efternavn;
+        this.lastName = efternavn;
         this.email = email;
         this.age = age;
     }
@@ -32,11 +32,11 @@ public class Student {
     }
 
     public String getEfternavn() {
-        return efternavn;
+        return lastName;
     }
 
     public void setEfternavn(String efternavn) {
-        this.efternavn = efternavn;
+        this.lastName = efternavn;
     }
 
     public String getEmail() {
@@ -61,7 +61,7 @@ public class Student {
         return "Student{" +
                 "studentId=" + studentId +
                 ", navn='" + studentName + '\'' +
-                ", efternavn='" + efternavn + '\'' +
+                ", efternavn='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", age='" + age + '\'' +
                 '}';

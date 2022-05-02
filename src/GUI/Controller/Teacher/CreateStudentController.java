@@ -1,5 +1,6 @@
 package GUI.Controller.Teacher;
 
+import GUI.Model.OpretStudentModel;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -7,7 +8,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -41,6 +45,17 @@ public class CreateStudentController {
     @FXML
     private JFXButton BtnGamOplysinger;
 
+    @FXML
+    public TableView tvStudent;
+    @FXML
+    public TableColumn tcNameStudent;
+    @FXML
+    public TableColumn tcLastName;
+    @FXML
+    public TableColumn tcEmail;
+    @FXML
+    public TableColumn tcAge;
+
 
     public void OpretElevActionButton(ActionEvent actionEvent) throws IOException, SQLException {
         String studentNavn = txtnavnField.getText();
@@ -55,6 +70,12 @@ public class CreateStudentController {
         StudentModel studentModelInfo = new StudentModel();
 
         studentModelInfo.uploadStudentinfo(studentNavn, studentEfternavn, studentEmail, studentAlder);
+
+        txtnavnField.clear();
+        txtefterNavnField.clear();
+        txtEmailField.clear();
+        txtAlderFiled.clear();
+
     }
 
     public void TilbageBtn(ActionEvent actionEvent) throws IOException {
@@ -111,6 +132,18 @@ public class CreateStudentController {
 
     /*this button must to save the selected students information*/
     public void GamOplysingerActionButton(ActionEvent actionEvent) {
+    }
+
+    public void setStudentTableView(){
+        tcNameStudent.setCellValueFactory(new PropertyValueFactory<>("studentName"));
+
+        tcLastName.setCellValueFactory(new PropertyValueFactory<>("lastName"));
+
+        tcEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+
+        tcAge.setCellValueFactory(new PropertyValueFactory<>("age"));
+
+        tvStudent.setItems(OpretStudentModel.getStudents());
     }
 
 }

@@ -1,13 +1,18 @@
 package GUI.Model;
 
 import BE.Login;
+import BE.Student;
 import BLL.OpretStudentManager;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
 public class OpretStudentModel {
+    private ObservableList<Student> studentsList = FXCollections.observableArrayList();
+
     private OpretStudentManager opretStudentManager;
 
     /**
@@ -16,6 +21,10 @@ public class OpretStudentModel {
      */
     public OpretStudentModel() throws IOException {
         opretStudentManager = new OpretStudentManager();
+    }
+
+    public static ObservableList getStudents() {
+
     }
 
     /**
