@@ -41,7 +41,7 @@ public class StudentManger {
 
      // Edits a student using the editStudent method from userDAO 2 //
     public void editStudent(Student student) throws Exception {
-        studentDAO.editStudent(student);  // object
+        studentDAO.editStudent(student);
     }
 
 
