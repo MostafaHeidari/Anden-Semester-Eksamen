@@ -7,10 +7,10 @@ import java.io.IOException;
 import java.sql.*;
 
 
-public class OpretStudentDAO {
+public class OpretStudentLoginDAO {
     private final DatabaseConnector connector = DatabaseConnector.getInstance();
 
-    public OpretStudentDAO() throws IOException {
+    public OpretStudentLoginDAO() throws IOException {
     }
 
     public Login addStudent(String Username, String Password) throws SQLException {

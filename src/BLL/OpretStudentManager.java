@@ -1,17 +1,17 @@
 package BLL;
 
 import BE.Login;
-import DAL.OpretStudentDAO;
+import DAL.OpretStudentLoginDAO;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
 public class OpretStudentManager {
-    private OpretStudentDAO opretStudentDAO;
+    private OpretStudentLoginDAO opretStudentDAO;
 
 
     public OpretStudentManager() throws IOException {
-        opretStudentDAO = new OpretStudentDAO();
+        opretStudentDAO = new OpretStudentLoginDAO();
     }
 
     public Login opretStudent(String username, String password) throws SQLException {

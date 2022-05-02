@@ -21,6 +21,11 @@ public class StudentModel {
         studentManger = new StudentManger();
     }
 
+    public ObservableList<Student> getAllStudents() {
+        studentsList = studentManger.getAllStudents();
+        return studentsList;
+    }
+
     public void uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder) throws SQLException {
         studentsList.add(studentManger.uploadStudentinfo(studentNavn,studentEfternavn,studentEmail,studentAlder));
     }

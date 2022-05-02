@@ -10,8 +10,7 @@ import javafx.collections.ObservableList;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class OpretStudentModel {
-    private ObservableList<Student> studentsList = FXCollections.observableArrayList();
+public class OpretStudentLoginModel {
 
     private OpretStudentManager opretStudentManager;
 
@@ -19,13 +18,10 @@ public class OpretStudentModel {
      * Constructor
      * @throws IOException
      */
-    public OpretStudentModel() throws IOException {
+    public OpretStudentLoginModel() throws IOException {
         opretStudentManager = new OpretStudentManager();
     }
 
-    public static ObservableList getStudents() {
-
-    }
 
     /**
      * Gets the login username and the password using login from loginManager

@@ -2,6 +2,8 @@ package BLL;
 
 import BE.Student;
 import DAL.StudentDAO;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -21,6 +23,17 @@ public class StudentManger {
 
     public Student uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder) throws SQLException {
             return(studentDAO.uploadStudentinfo(studentNavn,studentEfternavn,studentEmail,studentAlder));
+    }
+
+    public ObservableList<Student> getAllStudents() {
+        ObservableList<Student> studentsObs = FXCollections.observableArrayList();
+
+        try {
+            studentsObs.addAll(studentDAO.getAllStudents());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return studentsObs;
     }
 
 /*

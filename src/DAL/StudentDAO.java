@@ -5,6 +5,8 @@ import DAL.db.DatabaseConnector;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class StudentDAO {
     private DatabaseConnector DC;
@@ -67,4 +69,27 @@ public class StudentDAO {
             throwables.printStackTrace();
         }
     }
+
+
+
+    public List<Student> getAllStudents() throws SQLException {
+        Connection con = DC.getConnection();
+
+        List<Student> allStudents = new ArrayList<>();
+
+
+        String sql = "SELECT * FROM StudentTable";
+        Statement statement = con.createStatement();
+        ResultSet rs = statement.executeQuery(sql);
+        while (rs.next()) { // Creates and adds song objects into an array list
+            Student studentCord = new Student(rs.getInt("StudentID"),rs.getString("NameStudent"),rs.getString("LastNameStudent"),
+                    rs.getString("EmailStudent"),rs.getString("StudentAge"));
+            allStudents.add(studentCord);
+        }
+        return allStudents;
+    }
+
+
+
+
 }

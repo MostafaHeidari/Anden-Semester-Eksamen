@@ -1,11 +1,12 @@
 package GUI.Controller.Teacher;
 
-import GUI.Model.OpretStudentModel;
+import GUI.Model.OpretStudentLoginModel;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
@@ -15,9 +16,14 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
-public class CreateStudentController {
+public class CreateStudentController implements Initializable {
+
+    public StudentModel studentModel;
+
 
     @FXML
     private JFXButton BtnTilbage;
@@ -48,6 +54,8 @@ public class CreateStudentController {
     @FXML
     public TableView tvStudent;
     @FXML
+    public TableColumn tcId;
+    @FXML
     public TableColumn tcNameStudent;
     @FXML
     public TableColumn tcLastName;
@@ -55,6 +63,15 @@ public class CreateStudentController {
     public TableColumn tcEmail;
     @FXML
     public TableColumn tcAge;
+
+    public CreateStudentController() throws IOException {
+        studentModel = new StudentModel();
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        setStudentTableView();
+    }
 
 
     public void OpretElevActionButton(ActionEvent actionEvent) throws IOException, SQLException {
@@ -135,6 +152,8 @@ public class CreateStudentController {
     }
 
     public void setStudentTableView(){
+        tcId.setCellValueFactory(new PropertyValueFactory<>("studentId"));
+
         tcNameStudent.setCellValueFactory(new PropertyValueFactory<>("studentName"));
 
         tcLastName.setCellValueFactory(new PropertyValueFactory<>("lastName"));
@@ -143,7 +162,9 @@ public class CreateStudentController {
 
         tcAge.setCellValueFactory(new PropertyValueFactory<>("age"));
 
-        tvStudent.setItems(OpretStudentModel.getStudents());
+
+        tvStudent.setItems(studentModel.getAllStudents());
     }
+
 
 }

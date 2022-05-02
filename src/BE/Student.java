@@ -7,10 +7,10 @@ public class Student {
     public String email;
     public String age;
 
-    public Student(int studentId,String navn, String efternavn, String email, String age) {
+    public Student(int studentId, String studentName, String lastName, String email, String age) {
         this.studentId = studentId;
-        this.studentName = navn;
-        this.lastName = efternavn;
+        this.studentName = studentName;
+        this.lastName = lastName;
         this.email = email;
         this.age = age;
     }
