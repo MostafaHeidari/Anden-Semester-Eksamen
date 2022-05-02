@@ -23,6 +23,14 @@ public class OpretStudentLoginModel {
     }
 
 
+    /*
+    public static ObservableList getStudents() {
+        return null;
+    }
+    
+     */
+
+
     /**
      * Gets the login username and the password using login from loginManager
      * @param username

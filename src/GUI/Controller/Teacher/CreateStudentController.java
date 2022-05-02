@@ -125,20 +125,20 @@ public class CreateStudentController implements Initializable {
     }
 
 
-    /* this button edit the Student*/
-    public void RedigerElevAction(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) BtnRedigerElev.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/EditStudent.fxml"));
-        Scene scene = new Scene(root);
-        switcher.setTitle("Rediger Elev");
-        switcher.setScene(scene);
-    }
-
     /*this button must to log out*/
     public void LogOutAction(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) Logud.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Login.fxml"));
         Scene scene = new Scene(root);
+        switcher.setScene(scene);
+    }
+
+    /* this button edit the Student 4*/
+    public void RedigerElevAction(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) BtnRedigerElev.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/EditStudent.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("Rediger Elev");
         switcher.setScene(scene);
     }
 
