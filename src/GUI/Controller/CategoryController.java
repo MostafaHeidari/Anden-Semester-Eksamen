@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class CategoryController {
-    
+
     @FXML
     private javafx.scene.layout.HBox HBox;
 
