@@ -1,13 +1,13 @@
 package GUI.Controller.Teacher;
 
 import BE.Student;
+import GUI.Controller.SimpleDialogController;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
@@ -20,7 +20,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class CreateStudentController implements Initializable {
@@ -34,12 +33,6 @@ public class CreateStudentController implements Initializable {
     public JFXButton tilbageBogerBtn;
     @FXML
     private JFXButton BtnTilbage;
-    @FXML
-    private JFXButton BtnOpretElev;
-    @FXML
-    private JFXButton BtnRedigerElev;
-    @FXML
-    private JFXButton BtnSletElev;
 
     @FXML
     private JFXButton BtnTilbageOpretStudent;
@@ -54,9 +47,8 @@ public class CreateStudentController implements Initializable {
     private TextField txtEmailField;
     @FXML
     private TextField txtAlderFiled;
-
     @FXML
-    private JFXButton BtnGamOplysinger;
+    private TextField txtUserField;
 
     @FXML
     public TableView tvStudent;
@@ -70,8 +62,10 @@ public class CreateStudentController implements Initializable {
     public TableColumn tcEmail;
     @FXML
     public TableColumn tcAge;
+    @FXML
+    public TableColumn tcUserName;
 
-    public Object selectedStudent;
+    public Student selectedStudent;
 
 
 
@@ -82,6 +76,7 @@ public class CreateStudentController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         try {
             setStudentTableView();
         } catch (IOException e) {
@@ -100,24 +95,29 @@ public class CreateStudentController implements Initializable {
         else {
             String studentNavn = txtnavnField.getText();
             String studentEfternavn = txtefterNavnField.getText();
-            String studentEmail = (txtEmailField.getText());
+            String studentEmail = txtEmailField.getText();
             String studentAlder = txtAlderFiled.getText();
-            uploadStudentInfo(studentNavn, studentEfternavn, studentEmail, studentAlder);
-        }
+            String StudentAccount = txtUserField.getText();
 
+            uploadStudentInfo(studentNavn, studentEfternavn, studentEmail, studentAlder,StudentAccount);
+        }
     }
 
-    private void uploadStudentInfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder) throws IOException, SQLException {
+    private void uploadStudentInfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder, String userName) throws IOException, SQLException {
         StudentModel studentModelInfo = new StudentModel();
 
-        studentModelInfo.uploadStudentinfo(studentNavn, studentEfternavn, studentEmail, studentAlder);
+        studentModelInfo.uploadStudentinfo(studentNavn, studentEfternavn, studentEmail, studentAlder, userName);
 
         txtnavnField.clear();
         txtefterNavnField.clear();
         txtEmailField.clear();
         txtAlderFiled.clear();
 
+
         tvStudent.getItems().clear();
+
+        txtUserField.clear();
+
 
         tvStudent.setItems(studentModel.getAllStudents());
     }
@@ -150,6 +150,7 @@ public class CreateStudentController implements Initializable {
         switcher.setScene(scene);
     }
 
+
     /* this button edit the Student 4*/
     public void RedigerElevAction(ActionEvent actionEvent) throws IOException {
         if (selectedStudent != null) {
@@ -169,11 +170,6 @@ public class CreateStudentController implements Initializable {
 
 
 
-    /*this button must to delete the selected student*/
-    public void SletElevAction(ActionEvent event) throws IOException {
-
-    }
-
     /*this button must to save the selected students information*/
     public void GamOplysingerActionButton(ActionEvent actionEvent) {
     }
@@ -189,9 +185,12 @@ public class CreateStudentController implements Initializable {
 
         tcAge.setCellValueFactory(new PropertyValueFactory<>("age"));
 
+        tcUserName.setCellValueFactory(new PropertyValueFactory<>("UserName"));
 
         tvStudent.setItems(studentModel.getAllStudents());
     }
+
+
 
 
     public void btnTilbageKlasser(ActionEvent event) throws IOException {
@@ -210,10 +209,19 @@ public class CreateStudentController implements Initializable {
         switcher.setScene(scene);
     }
 
-    public void setSelectedStudent(){
-        if (tvStudent.getSelectionModel().getSelectedItem() != null){
-            selectedStudent = tvStudent.getSelectionModel().getSelectedItem();
+
+
+    //remove student method //
+    public void SletElevAction(ActionEvent actionEvent) {
+        if (SimpleDialogController.delete() && selectedStudent != null) {
+            studentModel.removeStudent(selectedStudent);
         }
     }
 
+    private void setSelectedStudent() {
+        if (tvStudent.getSelectionModel().getSelectedItem() != null)
+        {
+            selectedStudent = (Student) tvStudent.getSelectionModel().getSelectedItem();
+        }
+    }
 }

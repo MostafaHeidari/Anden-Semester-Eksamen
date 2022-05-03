@@ -6,91 +6,126 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.CategoryController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #BBE5E8;" stylesheets="@CSS/Category.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.CategoryController">
    <children>
-      <Text layoutX="329.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Helbredstilstande">
+      <Text layoutX="348.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Helbredstilstande">
          <font>
             <Font size="31.0" />
          </font>
       </Text>
-      <HBox layoutX="130.0" layoutY="38.0" prefHeight="553.0" prefWidth="670.0">
+      <HBox alignment="CENTER" layoutY="56.0" prefHeight="520.0" prefWidth="900.0">
          <children>
-            <VBox prefHeight="583.0" prefWidth="197.0">
+            <VBox alignment="CENTER" prefHeight="520.0" prefWidth="0.0" style="-fx-border-width: 2;">
                <children>
-                  <HBox fx:id="HBox" onMouseClicked="#Test" prefHeight="153.0" prefWidth="204.0">
+                  <HBox fx:id="HBox" onMouseClicked="#Test" prefHeight="153.0" prefWidth="350.0" style="-fx-border-width: 2;">
                      <children>
-                        <VBox prefHeight="153.0" prefWidth="203.0" styleClass="Category">
+                        <VBox prefHeight="69.0" prefWidth="267.0" style="-fx-border-color: grey; -fx-background-color: white;" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Funktionsniveau">
                                  <font>
-                                    <Font size="21.0" />
+                                    <Font size="20.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med personlig pleje">
+                              <Text fx:id="funktionsniveau_1" onMouseClicked="#funktionsniveau_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med personlig pleje">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med daglige aktiviteter">
+                              <Text fx:id="funktionsniveau_2" onMouseClicked="#funktionsniveau_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med daglige aktiviteter">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
                            </children>
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox fx:id="HBox1" onMouseClicked="#Test1" prefHeight="153.0" prefWidth="204.0">
+                  <HBox prefHeight="153.0" prefWidth="204.0" style="-fx-border-width: 2;">
                      <children>
-                        <VBox prefHeight="153.0" prefWidth="205.0" styleClass="Category">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Respiration og cirkulation">
-                                 <font>
-                                    <Font size="21.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Respirationsproblemer">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cirkulationsproblemer">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </VBox>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="153.0" prefWidth="204.0">
-                     <children>
-                        <VBox prefHeight="153.0" prefWidth="210.0" styleClass="Category">
+                        <VBox style="-fx-background-color: white; -fx-border-color: grey; -fx-min-height: 10;" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bevægeapparat">
                                  <font>
-                                    <Font size="21.0" />
+                                    <Font size="20.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med mobilitet og bevægelse">
+                              <Text fx:id="bevægeapparat_1" onMouseClicked="#bevægeapparat_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med mobilitet og bevægelse">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
                            </children>
                         </VBox>
                      </children>
                   </HBox>
-                  <VBox prefHeight="153.0" prefWidth="205.0" styleClass="Category">
+                  <HBox prefHeight="96.0" prefWidth="299.0" style="-fx-border-width: 2;">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Seksualitet">
+                        <VBox prefHeight="59.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Seksualitet">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="seksualitet_1" onMouseClicked="#seksualitet_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med seksualitet">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox style="-fx-background-color: white; -fx-min-height: 230; -fx-border-color: grey; -fx-min-width: 10;" styleClass="Category">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hud og slimhinder">
                            <font>
-                              <Font size="21.0" />
+                              <Font size="20.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med seksualitet">
+                        <Text fx:id="hudogslimhinder_1" onMouseClicked="#hudogslimhinder_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med kirurgisk sår">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="hudogslimhinder_2" onMouseClicked="#hudogslimhinder_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med diabetisk sår">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="hudogslimhinder_3" onMouseClicked="#hudogslimhinder_3" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med cancersår">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="hudogslimhinder_4" onMouseClicked="#hudogslimhinder_4" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med tryksår">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="hudogslimhinder_5" onMouseClicked="#hudogslimhinder_5" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med arterielt sår">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="hudogslimhinder_6" onMouseClicked="#hudogslimhinder_6" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med venøst sår">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="hudogslimhinder_7" onMouseClicked="#hudogslimhinder_7" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med blandingssår">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="hudogslimhinder_8" onMouseClicked="#hudogslimhinder_8" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med traumesår">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="hudogslimhinder_9" onMouseClicked="#hudogslimhinder_9" strokeType="OUTSIDE" strokeWidth="0.0" text="Andre problemer med hud og slimhinder">
+                           <font>
+                              <Font size="14.0" />
                            </font>
                         </Text>
                      </children>
@@ -99,228 +134,193 @@
             </VBox>
             <VBox prefHeight="583.0" prefWidth="232.0">
                <children>
-                  <HBox prefHeight="153.0" prefWidth="511.0">
+                  <HBox fx:id="HBox1" maxHeight="79.0" onMouseClicked="#Test1" prefHeight="79.0" prefWidth="227.0">
                      <children>
-                        <VBox prefHeight="193.0" prefWidth="232.0" styleClass="Category">
+                        <VBox minHeight="90.0" prefHeight="90.0" prefWidth="233.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ernæring">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Respiration og cirkulation">
                                  <font>
-                                    <Font size="21.0" />
+                                    <Font size="20.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text fx:id="respirationogcirkulation_1" onMouseClicked="#respirationogcirkulation_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Respirationsproblemer">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text fx:id="respirationogcirkulation_2" onMouseClicked="#respirationogcirkulation_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Cirkulationsproblemer">
                                  <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
                            </children>
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="153.0" prefWidth="511.0">
+                  <VBox prefHeight="156.0" prefWidth="227.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                      <children>
-                        <VBox prefHeight="139.0" prefWidth="304.0" styleClass="Category">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
-                                 <font>
-                                    <Font size="21.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </VBox>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="153.0" prefWidth="204.0">
-                     <children>
-                        <VBox prefHeight="153.0" prefWidth="233.0" styleClass="Category">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
-                                 <font>
-                                    <Font size="21.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </VBox>
-                     </children>
-                  </HBox>
-                  <VBox prefHeight="153.0" prefWidth="205.0" styleClass="Category">
-                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ernæring">
                            <font>
-                              <Font size="21.0" />
+                              <Font size="20.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                        <Text fx:id="ernæring_1" onMouseClicked="#ernæring_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med væskeindtag">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                        <Text fx:id="ernæring_2" onMouseClicked="#ernæring_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med fødeindtag">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                        <Text fx:id="ernæring_3" onMouseClicked="#ernæring_3" strokeType="OUTSIDE" strokeWidth="0.0" text="Uhensigtsmæssig vægtændring">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                        <Text fx:id="ernæring_4" onMouseClicked="#ernæring_4" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med overvægt">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                        <Text fx:id="ernæring_5" onMouseClicked="#ernæring_5" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med undervægt">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="14.0" />
                            </font>
                         </Text>
                      </children>
                   </VBox>
-               </children>
-            </VBox>
-            <VBox prefHeight="583.0" prefWidth="232.0">
-               <children>
                   <HBox prefHeight="153.0" prefWidth="511.0">
                      <children>
-                        <VBox prefHeight="193.0" prefWidth="232.0" styleClass="Category">
+                        <VBox maxHeight="226.0" prefHeight="226.0" prefWidth="288.0" style="-fx-min-height: 200px; -fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Smerter og sanseindtryk">
                                  <font>
-                                    <Font size="21.0" />
+                                    <Font size="20.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text fx:id="smerterogsanseindtryk_1" onMouseClicked="#smerterogsanseindtryk_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Akutte smerter">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text fx:id="smerterogsanseindtryk_2" onMouseClicked="#smerterogsanseindtryk_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Periodevise smerter">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text fx:id="smerterogsanseindtryk_3" onMouseClicked="#smerterogsanseindtryk_3" strokeType="OUTSIDE" strokeWidth="0.0" text="Kroniske smerter">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text fx:id="smerterogsanseindtryk_4" onMouseClicked="#smerterogsanseindtryk_4" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med synssans">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text fx:id="smerterogsanseindtryk_5" onMouseClicked="#smerterogsanseindtryk_5" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med lugtesans">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="smerterogsanseindtryk_6" onMouseClicked="#smerterogsanseindtryk_6" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med hørelse">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="smerterogsanseindtryk_7" onMouseClicked="#smerterogsanseindtryk_7" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med smagssans">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="smerterogsanseindtryk_8" onMouseClicked="#smerterogsanseindtryk_8" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med følesans">
+                                 <font>
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
                            </children>
                         </VBox>
                      </children>
                   </HBox>
+                  <HBox maxHeight="99.0" prefHeight="99.0" prefWidth="227.0">
+                     <children>
+                        <VBox minHeight="75.0" prefHeight="90.0" prefWidth="264.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Søvn og hvile">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="søvnoghvile_1" onMouseClicked="#søvnoghvile_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Døgnrytmeproblemer">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="søvnoghvile_2" onMouseClicked="#søvnoghvile_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Søvnproblemer">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="519.0" prefWidth="242.0">
+               <children>
                   <HBox prefHeight="153.0" prefWidth="511.0">
                      <children>
-                        <VBox prefHeight="139.0" prefWidth="304.0" styleClass="Category">
+                        <VBox minHeight="162.0" prefHeight="162.0" prefWidth="318.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Viden og udvikling">
                                  <font>
-                                    <Font size="21.0" />
+                                    <Font size="20.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text fx:id="videnogudvikling_1" onMouseClicked="#videnogudvikling_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med hudkommelse">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text fx:id="videnogudvikling_2" onMouseClicked="#videnogudvikling_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med indsigt i">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text fx:id="videnogudvikling_3" onMouseClicked="#videnogudvikling_3" strokeType="OUTSIDE" strokeWidth="0.0" text="Behandlingsformål">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text fx:id="videnogudvikling_4" onMouseClicked="#videnogudvikling_4" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med sygdomsindsigt">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text fx:id="videnogudvikling_5" onMouseClicked="#videnogudvikling_5" strokeType="OUTSIDE" strokeWidth="0.0" text="Kognitive Problemer">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="89.0" prefWidth="257.0">
+                     <children>
+                        <VBox maxHeight="74.0" minHeight="6.0" prefHeight="74.0" prefWidth="327.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kommunikation">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="kommunikation_1" onMouseClicked="#kommunikation_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med kommunikation">
+                                 <font>
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
                            </children>
@@ -329,72 +329,67 @@
                   </HBox>
                   <HBox prefHeight="153.0" prefWidth="204.0">
                      <children>
-                        <VBox prefHeight="139.0" prefWidth="232.0" styleClass="Category">
+                        <VBox prefHeight="138.0" prefWidth="313.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Psykosociale forhold">
                                  <font>
-                                    <Font size="21.0" />
+                                    <Font size="20.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text fx:id="psykosocialeforhold_1" onMouseClicked="#psykosocialeforhold_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med socialt samvær">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text fx:id="psykosocialeforhold_2" onMouseClicked="#psykosocialeforhold_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Emotionelle problemer">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text fx:id="psykosocialeforhold_3" onMouseClicked="#psykosocialeforhold_3" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med misbrug">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text fx:id="psykosocialeforhold_4" onMouseClicked="#psykosocialeforhold_4" strokeType="OUTSIDE" strokeWidth="0.0" text="Mentale problemer">
                                  <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </Text>
                            </children>
                         </VBox>
                      </children>
                   </HBox>
-                  <VBox prefHeight="153.0" prefWidth="271.0" styleClass="Category">
+                  <VBox prefHeight="194.0" prefWidth="257.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Udskillelse af affaldsstoffer">
                            <font>
-                              <Font size="21.0" />
+                              <Font size="20.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                        <Text fx:id="udskillelseafaffaldsstoffer_1" onMouseClicked="#udskillelseafaffaldsstoffer_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med vandladning">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                        <Text fx:id="udskillelseafaffaldsstoffer_2" onMouseClicked="#udskillelseafaffaldsstoffer_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med urininkontinens">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                        <Text fx:id="udskillelseafaffaldsstoffer_3" onMouseClicked="#udskillelseafaffaldsstoffer_3" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med afføringsindkontinens">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                        <Text fx:id="udskillelseafaffaldsstoffer_4" onMouseClicked="#udskillelseafaffaldsstoffer_4" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med mave og tarm">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                        <Text fx:id="udskillelseafaffaldsstoffer_5" onMouseClicked="#udskillelseafaffaldsstoffer_5" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med væske fra dræn">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="14.0" />
                            </font>
                         </Text>
                      </children>

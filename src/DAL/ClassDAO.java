@@ -32,7 +32,6 @@ public class ClassDAO {
                 SchoolClass klasseCord = new SchoolClass(klasseId, klasseNavn);
                 return klasseCord;
             }
-
         }
         return null;
     }

@@ -22,8 +22,8 @@ public class StudentManger {
 
 
 
-    public Student uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder) throws SQLException {
-            return(studentDAO.uploadStudentinfo(studentNavn,studentEfternavn,studentEmail,studentAlder));
+    public Student uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder, String userName) throws SQLException {
+            return(studentDAO.uploadStudentinfo(studentNavn,studentEfternavn,studentEmail,studentAlder, userName));
     }
 
 
@@ -50,11 +50,7 @@ public class StudentManger {
     }
 
 
-
-/*
-    public void deleteStudent(Student selectedStudent) {
-        StudentDAO.deleteStudent(selectedStudent);
+    public void removeStudent(Student selectedStudent) {
+        studentDAO.removeStudent(selectedStudent);
     }
-
- */
 }

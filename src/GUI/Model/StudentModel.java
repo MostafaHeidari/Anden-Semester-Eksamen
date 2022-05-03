@@ -30,8 +30,8 @@ public class StudentModel {
         classModel = new ClassModel();
     }
 
-    public void uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder) throws SQLException {
-        studentsList.add(studentManger.uploadStudentinfo(studentNavn,studentEfternavn,studentEmail,studentAlder));
+    public void uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder, String userName) throws SQLException {
+        studentsList.add(studentManger.uploadStudentinfo(studentNavn,studentEfternavn,studentEmail,studentAlder,userName));
     }
 
 
@@ -41,12 +41,7 @@ public class StudentModel {
     }
 
     // Edits a student using the editStudent method from userManager 3 //
-/*
-    public void editStudent(Student student) throws Exception {
-        studentManger.editStudent(student);
-    }
 
- */
     public void editStudent(Student student) throws Exception {
         studentManger.editStudent(student);
         studentsList.clear();
@@ -69,11 +64,9 @@ public class StudentModel {
 
 
     /* Deletes student using the deleteStudent method from StudentManager */
-    /*
-    public void deletStudent (Student selectedStudent) {
-        studentManger.deleteStudent(selectedStudent);
+
+    public void removeStudent (Student selectedStudent) {
+        studentManger.removeStudent(selectedStudent);
         studentsList.remove(selectedStudent);
     }
-
-     */
 }
