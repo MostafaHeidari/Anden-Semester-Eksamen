@@ -26,7 +26,6 @@ public class EditStudentController {
     @FXML
     public TextField txtAlderEditStudentFiled;
 
-
     @FXML
     private JFXButton BtnTilbageOpretStudent;
     @FXML

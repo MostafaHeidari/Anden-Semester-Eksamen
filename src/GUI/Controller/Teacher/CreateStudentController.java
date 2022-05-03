@@ -20,7 +20,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class CreateStudentController implements Initializable {
@@ -34,12 +33,6 @@ public class CreateStudentController implements Initializable {
     public JFXButton tilbageBogerBtn;
     @FXML
     private JFXButton BtnTilbage;
-    @FXML
-    private JFXButton BtnOpretElev;
-    @FXML
-    private JFXButton BtnRedigerElev;
-    @FXML
-    private JFXButton BtnSletElev;
 
     @FXML
     private JFXButton BtnTilbageOpretStudent;
@@ -54,9 +47,6 @@ public class CreateStudentController implements Initializable {
     private TextField txtEmailField;
     @FXML
     private TextField txtAlderFiled;
-
-    @FXML
-    private JFXButton BtnGamOplysinger;
 
     @FXML
     public TableView tvStudent;
@@ -82,6 +72,7 @@ public class CreateStudentController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         try {
             setStudentTableView();
         } catch (IOException e) {
@@ -115,8 +106,6 @@ public class CreateStudentController implements Initializable {
         txtefterNavnField.clear();
         txtEmailField.clear();
         txtAlderFiled.clear();
-
-
     }
 
 
@@ -147,25 +136,6 @@ public class CreateStudentController implements Initializable {
         switcher.setScene(scene);
     }
 
-    /* this button edit the Student 4*/
-    public void RedigerElevAction(ActionEvent actionEvent) throws IOException {
-        if (selectedStudent != null) {
-            Student selectedStudent = (Student) tvStudent.getSelectionModel().getSelectedItem();
-            Parent root1;
-            FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/GUI/View/Teacher/EditStudent.fxml"));
-            root1 = (Parent) fxmlLoader1.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-
-            fxmlLoader1.<EditStudentController>getController().setSelectedStudent(selectedStudent);
-
-            stage.show();
-
-        }
-    }
-
-
-
 
     /*this button must to save the selected students information*/
     public void GamOplysingerActionButton(ActionEvent actionEvent) {
@@ -182,9 +152,10 @@ public class CreateStudentController implements Initializable {
 
         tcAge.setCellValueFactory(new PropertyValueFactory<>("age"));
 
-
         tvStudent.setItems(studentModel.getAllStudents());
     }
+
+
 
 
     public void btnTilbageKlasser(ActionEvent event) throws IOException {
@@ -212,10 +183,28 @@ public class CreateStudentController implements Initializable {
         }
     }
 
+    /* this button edit the Student 4*/
+    public void RedigerElevAction(ActionEvent actionEvent) throws IOException {
+        if (selectedStudent != null) {
+            Student selectedStudent = (Student) tvStudent.getSelectionModel().getSelectedItem();
+            Parent root1;
+            FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/GUI/View/Teacher/EditStudent.fxml"));
+            root1 = fxmlLoader1.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));
+
+            fxmlLoader1.<EditStudentController>getController().setSelectedStudent(selectedStudent);
+            stage.show();
+        }
+
+    }
+
     private void setSelectedStudent() {
         if (tvStudent.getSelectionModel().getSelectedItem() != null)
         {
             selectedStudent = (Student) tvStudent.getSelectionModel().getSelectedItem();
         }
     }
+
+
 }
