@@ -33,6 +33,6 @@
       <JFXButton fx:id="TilbageForside" layoutX="1659.0" layoutY="832.0" onAction="#TilbageForsideBtn" text="Tilbage til Forside" />
       <JFXButton fx:id="nyKlasse" layoutX="1574.0" layoutY="832.0" onAction="#nyKlasseBtn" text="Ny Klasse" />
       <JFXButton fx:id="nyStudent1" layoutX="27.0" layoutY="820.0" onAction="#nyStudentBtn" text="Ny Elev" />
-      <JFXButton fx:id="nyStudent11" layoutX="83.0" layoutY="820.0" onAction="#nyStudentBtn" text="Tilføj elev til Klasse" />
+      <JFXButton fx:id="addStudentToClass" layoutX="83.0" layoutY="820.0" onAction="#addStudentToClassBtn" text="Tilføj elev til Klasse" />
    </children>
 </AnchorPane>

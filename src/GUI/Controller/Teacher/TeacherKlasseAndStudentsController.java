@@ -22,6 +22,7 @@ public class TeacherKlasseAndStudentsController implements Initializable {
 
     public StudentModel studentModel;
 
+
     private ClassModel klasseModel;
 
     @FXML
@@ -30,6 +31,8 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     public JFXButton nyKlasse;
     @FXML
     public JFXButton nyStudent1;
+    @FXML
+    public JFXButton addStudentToClass;
 
     @FXML
     public TableView tvKlasseInfomationer;
@@ -114,5 +117,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
 
 
         tvStudent.setItems(studentModel.getAllStudents());
+    }
+
+    public void addStudentToClassBtn(ActionEvent event) {
+        
     }
 }
