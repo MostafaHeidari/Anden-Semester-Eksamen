@@ -1,6 +1,6 @@
 package BLL;
 
-import BE.Class;
+import BE.SchoolClass;
 import DAL.ClassDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -14,12 +14,12 @@ public class ClassManger {
     public ClassManger() throws IOException {
     }
 
-    public Class uploadClassInfo(String className) throws SQLException {
+    public SchoolClass uploadClassInfo(String className) throws SQLException {
         return (classDAO.uploadClassInfo(className));
     }
 
-    public ObservableList<Class> getAllClasses() {
-        ObservableList<Class> classesObs = FXCollections.observableArrayList();
+    public ObservableList<SchoolClass> getAllClasses() {
+        ObservableList<SchoolClass> classesObs = FXCollections.observableArrayList();
 
 
         try {

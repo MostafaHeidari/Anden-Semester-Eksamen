@@ -1,7 +1,9 @@
 package DAL;
 
+import BE.SchoolClass;
 import BE.Student;
 import DAL.db.DatabaseConnector;
+import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.io.IOException;
 import java.sql.*;
@@ -60,10 +62,23 @@ public class StudentDAO {
      */
     public void deleteStudent(Student student) {
         String sql1 = "DELETE FROM UserTable WHERE UserID = (?);";
+        String sql2 = "DELETE FROM ClassStudents WHERE StudentID = (?);";
+        String sql3 = "DELETE FROM StudentTable WHERE StudentID = (?);";
+
+
         try (Connection connection = DC.getConnection()) {
+
             PreparedStatement ps1 = connection.prepareStatement(sql1, Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps2 = connection.prepareStatement(sql2, Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps3 = connection.prepareStatement(sql3, Statement.RETURN_GENERATED_KEYS);
+
             ps1.setInt(1, student.getStudentId());
+            ps2.setInt(1, student.getStudentId());
+            ps3.setInt(1, student.getStudentId());
+
             ps1.executeUpdate();
+            ps2.executeUpdate();
+            ps3.executeUpdate();
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -89,4 +104,18 @@ public class StudentDAO {
         return allStudents;
     }
 
+    public void addStudentToClass(SchoolClass selectedClass, Student selectedStudent) throws SQLException {
+        Connection connection = DC.getConnection();
+        int cId = selectedClass.getClassId();
+        int sId = selectedStudent.getStudentId();
+
+        String sql = "INSERT INTO ClassStudents (ClassID , StudentID) VALUES ((?), (?)); ";
+
+        PreparedStatement pst = connection.prepareStatement(sql);
+
+        pst.setInt(1, cId);
+        pst.setInt(2, sId);
+
+        pst.executeUpdate();
+    }
 }

@@ -16,23 +16,21 @@
             <TableColumn fx:id="tcAlder" text="Alder" />
          </columns>
       </TableView>
-      <TableView fx:id="tvKlasseInfomationer" layoutX="1398.0" layoutY="51.0" prefHeight="706.0" prefWidth="336.0">
+      <TableView fx:id="tvKlasseInfomationer" layoutX="894.0" layoutY="51.0" prefHeight="706.0" prefWidth="336.0">
          <columns>
             <TableColumn fx:id="tcKlasseId" prefWidth="119.20001220703125" text="ID " />
             <TableColumn fx:id="tcKlasseNavn" prefWidth="220.0" text="KlasseNavn" />
          </columns>
       </TableView>
-      <TableView layoutX="741.0" layoutY="51.0" prefHeight="706.0" prefWidth="570.0">
+      <TableView fx:id="tvStudentsInClasses" layoutX="1292.0" layoutY="51.0" prefHeight="706.0" prefWidth="444.0">
          <columns>
-            <TableColumn prefWidth="119.20001220703125" text="ID " />
-            <TableColumn prefWidth="126.0" text="ClasseName" />
-            <TableColumn prefWidth="184.0" text="Name" />
-            <TableColumn prefWidth="139.0" text="Efternavn" />
+            <TableColumn fx:id="tcStudentNameInClass" prefWidth="196.0" text="Name" />
+            <TableColumn fx:id="tcLastNameInClass" prefWidth="247.0" text="Efternavn" />
          </columns>
       </TableView>
       <JFXButton fx:id="TilbageForside" layoutX="1659.0" layoutY="832.0" onAction="#TilbageForsideBtn" text="Tilbage til Forside" />
-      <JFXButton fx:id="nyKlasse" layoutX="1574.0" layoutY="832.0" onAction="#nyKlasseBtn" text="Ny Klasse" />
-      <JFXButton fx:id="nyStudent1" layoutX="27.0" layoutY="820.0" onAction="#nyStudentBtn" text="Ny Elev" />
-      <JFXButton fx:id="addStudentToClass" layoutX="83.0" layoutY="820.0" onAction="#addStudentToClassBtn" text="Tilføj elev til Klasse" />
+      <JFXButton fx:id="nyKlasse" layoutX="900.0" layoutY="785.0" onAction="#nyKlasseBtn" text="Ny Klasse" />
+      <JFXButton fx:id="nyStudent1" layoutX="27.0" layoutY="785.0" onAction="#nyStudentBtn" text="Ny Elev" />
+      <JFXButton fx:id="addStudentToClass" layoutX="756.0" layoutY="142.0" onAction="#addStudentToClassBtn" text="Tilføj elev til Klasse" />
    </children>
 </AnchorPane>

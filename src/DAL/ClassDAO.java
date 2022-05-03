@@ -1,6 +1,6 @@
 package DAL;
 
-import BE.Class;
+import BE.SchoolClass;
 import DAL.db.DatabaseConnector;
 
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class ClassDAO {
         DC = new DatabaseConnector();
     }
 
-    public Class uploadClassInfo(String klasseNavn) throws SQLException {
+    public SchoolClass uploadClassInfo(String klasseNavn) throws SQLException {
         Connection connection = DC.getConnection();
 
         String sql = "INSERT INTO ClassTable(ClassName,Class) VALUES (?,?);";
@@ -29,7 +29,7 @@ public class ClassDAO {
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
                 int klasseId = rs.getInt(1);
-                Class klasseCord = new Class(klasseId, klasseNavn);
+                SchoolClass klasseCord = new SchoolClass(klasseId, klasseNavn);
                 return klasseCord;
             }
 
@@ -38,17 +38,17 @@ public class ClassDAO {
     }
 
 
-    public List<Class> getAllClasses() throws SQLException {
+    public List<SchoolClass> getAllClasses() throws SQLException {
         Connection con = DC.getConnection();
 
-        List<Class>  allClasses= new ArrayList<>();
+        List<SchoolClass>  allClasses= new ArrayList<>();
 
 
         String sql = "SELECT * FROM ClassTable";
         Statement statement = con.createStatement();
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) { // Creates and adds Klasser objects into an array list
-            Class klasseCord = new Class(rs.getInt("ClassID"), rs.getString("ClassName"));
+            SchoolClass klasseCord = new SchoolClass(rs.getInt("ClassID"), rs.getString("ClassName"));
             allClasses.add(klasseCord);
         }
         return allClasses;

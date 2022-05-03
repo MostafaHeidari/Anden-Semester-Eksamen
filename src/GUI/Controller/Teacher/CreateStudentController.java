@@ -117,7 +117,9 @@ public class CreateStudentController implements Initializable {
         txtEmailField.clear();
         txtAlderFiled.clear();
 
+        tvStudent.getItems().clear();
 
+        tvStudent.setItems(studentModel.getAllStudents());
     }
 
 
@@ -159,7 +161,7 @@ public class CreateStudentController implements Initializable {
             stage.setScene(new Scene(root1));
 
             fxmlLoader1.<EditStudentController>getController().setSelectedStudent(selectedStudent);
-
+            fxmlLoader1.<EditStudentController>getController().setSelectedTable(tvStudent);
             stage.show();
 
         }

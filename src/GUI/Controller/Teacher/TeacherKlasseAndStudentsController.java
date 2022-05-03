@@ -1,5 +1,7 @@
 package GUI.Controller.Teacher;
 
+import BE.SchoolClass;
+import BE.Student;
 import GUI.Model.ClassModel;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
@@ -16,6 +18,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class TeacherKlasseAndStudentsController implements Initializable {
@@ -24,6 +27,10 @@ public class TeacherKlasseAndStudentsController implements Initializable {
 
 
     private ClassModel klasseModel;
+
+    public Student selectedStudent;
+
+    public SchoolClass selectedClass;
 
     @FXML
     public JFXButton TilbageForside;
@@ -54,12 +61,23 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     @FXML
     public TableColumn tcAlder;
 
+    @FXML
+    public TableView tvStudentsInClasses;
+    @FXML
+    public TableColumn tcClaseNameForStudentClasses;
+    @FXML
+    public TableColumn tcStudentNameInClass;
+    @FXML
+    public TableColumn tcLastNameInClass;
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
             setKlasseTableView();
             setStudentTableView();
+            setStudentsInClasses(); 
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -96,15 +114,16 @@ public class TeacherKlasseAndStudentsController implements Initializable {
 
     private void setKlasseTableView() throws IOException {
 
-        tcKlasseId.setCellValueFactory(new PropertyValueFactory<>("klasseId"));
+        tcKlasseId.setCellValueFactory(new PropertyValueFactory<>("classId"));
 
-        tcKlasseNavn.setCellValueFactory(new PropertyValueFactory<>("klasseNavn"));
+        tcKlasseNavn.setCellValueFactory(new PropertyValueFactory<>("className"));
 
 
         tvKlasseInfomationer.setItems(klasseModel.getAllClasses());
     }
 
     public void setStudentTableView() throws IOException {
+
         tcStudentId.setCellValueFactory(new PropertyValueFactory<>("studentId"));
 
         tcNameStudent.setCellValueFactory(new PropertyValueFactory<>("studentName"));
@@ -119,7 +138,22 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         tvStudent.setItems(studentModel.getAllStudents());
     }
 
-    public void addStudentToClassBtn(ActionEvent event) {
-        
+    public void setStudentsInClasses(){
+
+        tcStudentNameInClass.setCellValueFactory(new PropertyValueFactory<Student, String>("studentName"));
+
+        tcLastNameInClass.setCellValueFactory(new PropertyValueFactory<Student, String>("lastName"));
+
+
+        tvStudentsInClasses.setItems(studentModel.setStudentsInClasses());
+
+    }
+
+    public void addStudentToClassBtn(ActionEvent event) throws SQLException {
+        studentModel.addStudentToClass(
+                selectedClass,
+                selectedStudent);
+        tvStudentsInClasses.getItems().add(selectedClass);
+        tvStudentsInClasses.refresh();
     }
 }
