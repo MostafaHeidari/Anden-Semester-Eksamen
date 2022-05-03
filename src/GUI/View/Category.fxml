@@ -13,13 +13,13 @@
             <Font size="31.0" />
          </font>
       </Text>
-      <HBox layoutX="130.0" layoutY="38.0" prefHeight="553.0" prefWidth="670.0">
+      <HBox layoutX="75.0" layoutY="38.0" prefHeight="553.0" prefWidth="670.0">
          <children>
             <VBox prefHeight="583.0" prefWidth="197.0">
                <children>
                   <HBox fx:id="HBox" onMouseClicked="#Test" prefHeight="153.0" prefWidth="204.0">
                      <children>
-                        <VBox prefHeight="476.0" prefWidth="268.0" styleClass="Category">
+                        <VBox prefHeight="123.0" prefWidth="317.0" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Funktionsniveau">
                                  <font>
@@ -42,7 +42,7 @@
                   </HBox>
                   <HBox prefHeight="153.0" prefWidth="204.0">
                      <children>
-                        <VBox prefHeight="109.0" prefWidth="268.0" styleClass="Category">
+                        <VBox prefHeight="88.0" prefWidth="274.0" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bevægeapparat">
                                  <font>
@@ -60,7 +60,7 @@
                   </HBox>
                   <HBox prefHeight="67.0" prefWidth="268.0">
                      <children>
-                        <VBox prefHeight="50.0" prefWidth="227.0" styleClass="Category">
+                        <VBox minHeight="96.0" prefHeight="96.0" prefWidth="274.0" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Seksualitet">
                                  <font>
@@ -76,7 +76,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <VBox prefHeight="14.0" prefWidth="268.0" styleClass="Category">
+                  <VBox prefHeight="306.0" prefWidth="274.0" styleClass="Category">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hud og slimhinder">
                            <font>
@@ -134,9 +134,9 @@
             </VBox>
             <VBox prefHeight="583.0" prefWidth="232.0">
                <children>
-                  <HBox fx:id="HBox1" onMouseClicked="#Test1" prefHeight="153.0" prefWidth="204.0">
+                  <HBox fx:id="HBox1" maxHeight="79.0" onMouseClicked="#Test1" prefHeight="79.0" prefWidth="227.0">
                      <children>
-                        <VBox prefHeight="44.0" prefWidth="227.0" styleClass="Category">
+                        <VBox minHeight="90.0" prefHeight="90.0" prefWidth="227.0" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Respiration og cirkulation">
                                  <font>
@@ -157,7 +157,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <VBox prefHeight="183.0" prefWidth="227.0" styleClass="Category">
+                  <VBox prefHeight="156.0" prefWidth="227.0" styleClass="Category">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ernæring">
                            <font>
@@ -193,7 +193,7 @@
                   </VBox>
                   <HBox prefHeight="153.0" prefWidth="511.0">
                      <children>
-                        <VBox prefHeight="279.0" prefWidth="227.0" styleClass="Category">
+                        <VBox maxHeight="226.0" prefHeight="211.0" prefWidth="227.0" style="-fx-min-height: 226px;" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Smerter og sanseindtryk">
                                  <font>
@@ -244,9 +244,9 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="153.0" prefWidth="204.0">
+                  <HBox maxHeight="99.0" prefHeight="99.0" prefWidth="227.0">
                      <children>
-                        <VBox prefHeight="153.0" prefWidth="233.0" styleClass="Category">
+                        <VBox minHeight="75.0" prefHeight="54.0" prefWidth="227.0" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Søvn og hvile">
                                  <font>
@@ -273,34 +273,34 @@
                <children>
                   <HBox prefHeight="153.0" prefWidth="511.0">
                      <children>
-                        <VBox prefHeight="193.0" prefWidth="232.0" styleClass="Category">
+                        <VBox minHeight="162.0" prefHeight="162.0" prefWidth="257.0" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Viden og udvikling">
                                  <font>
                                     <Font size="21.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med hudkommelse">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med indsigt i">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Behandlingsformål">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med sygdomsindsigt">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kognitive Problemer">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
@@ -309,36 +309,16 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="153.0" prefWidth="511.0">
+                  <HBox prefHeight="89.0" prefWidth="257.0">
                      <children>
-                        <VBox prefHeight="139.0" prefWidth="304.0" styleClass="Category">
+                        <VBox maxHeight="74.0" minHeight="6.0" prefHeight="74.0" prefWidth="257.0" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kommunikation">
                                  <font>
                                     <Font size="21.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med kommunikation">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
@@ -349,34 +329,29 @@
                   </HBox>
                   <HBox prefHeight="153.0" prefWidth="204.0">
                      <children>
-                        <VBox prefHeight="139.0" prefWidth="232.0" styleClass="Category">
+                        <VBox prefHeight="151.0" prefWidth="257.0" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Psykosociale forhold">
                                  <font>
                                     <Font size="21.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med socialt samvær">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Emotionelle problemer">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med misbrug">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mentale problemer">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
@@ -385,34 +360,34 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <VBox prefHeight="153.0" prefWidth="271.0" styleClass="Category">
+                  <VBox prefHeight="194.0" prefWidth="257.0" styleClass="Category">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Udskillelse af affaldsstoffer">
                            <font>
                               <Font size="21.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med vandladning">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med urininkontinens">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med afføringsindkontinens">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med mave og tarm">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med væske fra dræn">
                            <font>
                               <Font size="16.0" />
                            </font>
