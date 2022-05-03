@@ -8,7 +8,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
@@ -76,10 +75,6 @@ public class CreateStudentController implements Initializable {
 
 
 
-
-
-
-
     public CreateStudentController() throws IOException {
         this.studentModel = new StudentModel();
         this.editStudentController = new EditStudentController();
@@ -109,7 +104,6 @@ public class CreateStudentController implements Initializable {
             String studentAlder = txtAlderFiled.getText();
             uploadStudentInfo(studentNavn, studentEfternavn, studentEmail, studentAlder);
         }
-
     }
 
     private void uploadStudentInfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder) throws IOException, SQLException {
