@@ -111,11 +111,12 @@ public class CreateStudentController implements Initializable {
         StudentModel studentModelInfo = new StudentModel();
 
         studentModelInfo.uploadStudentinfo(studentNavn, studentEfternavn, studentEmail, studentAlder);
+
         txtnavnField.clear();
         txtefterNavnField.clear();
         txtEmailField.clear();
         txtAlderFiled.clear();
-        tvStudent.refresh();
+
 
     }
 

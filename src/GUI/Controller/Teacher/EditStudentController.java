@@ -58,6 +58,12 @@ public class EditStudentController {
 
         studentModel.editStudent(this.selectedStudent);
 
+        Stage switcher = (Stage) BtnTilbageOpretStudent.getScene().getWindow();
+        switcher.setTitle("Create student");
+        switcher.close();
+
+
+
         /*
         String studentNavn = txtnavnEditStudentField.getText();
         String studentEfternavn = txtEfterNavnEditStudentField.getText();
@@ -94,10 +100,8 @@ public class EditStudentController {
     /* tilbage button*/
     public void BtnTilbageOpretStudentAction(ActionEvent actionEvent) throws IOException {
             Stage switcher = (Stage) BtnTilbageOpretStudent.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
-            Scene scene = new Scene(root);
             switcher.setTitle("Create student");
-            switcher.setScene(scene);
+            switcher.close();
 
     }
 }
