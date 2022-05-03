@@ -1,3 +1,5 @@
+package GUI.Controller;
+
 import javax.swing.*;
 
 public class SimpleDialogController {

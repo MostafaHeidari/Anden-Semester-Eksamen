@@ -1,5 +1,6 @@
 package GUI.Controller.Teacher;
 
+import GUI.Controller.SimpleDialogController;
 import BE.Student;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
@@ -33,6 +34,9 @@ public class EditStudentController {
     private JFXButton BtnTilbageOpretStudent;
     @FXML
     private JFXButton Logud;
+
+    @FXML
+    private JFXButton BtnSletElev;
 
 
     private Student selectedStudent;
@@ -75,7 +79,7 @@ public class EditStudentController {
          */
     }
 
-    public void setSelectedStudent(Student student){
+    public void setSelectedStudent(Student student) {
         txtnavnEditStudentField.setText(student.getStudentName());
         txtEfterNavnEditStudentField.setText(student.getLastName());
         txtEmailEditStudentField.setText(student.getEmail());
@@ -88,20 +92,20 @@ public class EditStudentController {
 
     /* log ud button */
     public void LogOutAction(ActionEvent actionEvent) throws IOException {
-             Stage switcher = (Stage) Logud.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Login.fxml"));
-            Scene scene = new Scene(root);
-            switcher.setTitle("Create student");
-            switcher.setScene(scene);
+        Stage switcher = (Stage) Logud.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Login.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("Create student");
+        switcher.setScene(scene);
 
 
     }
 
     /* tilbage button*/
     public void BtnTilbageOpretStudentAction(ActionEvent actionEvent) throws IOException {
-            Stage switcher = (Stage) BtnTilbageOpretStudent.getScene().getWindow();
-            switcher.setTitle("Create student");
-            switcher.close();
+        Stage switcher = (Stage) BtnTilbageOpretStudent.getScene().getWindow();
+        switcher.setTitle("Create student");
+        switcher.close();
 
     }
 }

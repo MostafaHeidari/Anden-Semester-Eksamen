@@ -2,6 +2,7 @@ package DAL;
 
 import BE.Student;
 import DAL.db.DatabaseConnector;
+import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.io.IOException;
 import java.sql.*;
@@ -58,18 +59,17 @@ public class StudentDAO {
     /*
      * Deletes a student
      */
-    public void deleteStudent(Student student) {
-        String sql1 = "DELETE FROM UserTable WHERE UserID = (?);";
+    public void removeStudent(Student selectedStudent) {
+        String sql = "DELETE FROM StudentTable WHERE StudentID = (?);";
         try (Connection connection = DC.getConnection()) {
-            PreparedStatement ps1 = connection.prepareStatement(sql1, Statement.RETURN_GENERATED_KEYS);
-            ps1.setInt(1, student.getStudentId());
+            PreparedStatement ps1 = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps1.setInt(1, selectedStudent.getStudentId());
             ps1.executeUpdate();
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }
-
 
 
     public List<Student> getAllStudents() throws SQLException {
@@ -82,8 +82,8 @@ public class StudentDAO {
         Statement statement = con.createStatement();
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) { // Creates and adds song objects into an array list
-            Student studentCord = new Student(rs.getInt("StudentID"),rs.getString("NameStudent"),rs.getString("LastNameStudent"),
-                    rs.getString("EmailStudent"),rs.getString("StudentAge"));
+            Student studentCord = new Student(rs.getInt("StudentID"), rs.getString("NameStudent"), rs.getString("LastNameStudent"),
+                    rs.getString("EmailStudent"), rs.getString("StudentAge"));
             allStudents.add(studentCord);
         }
         return allStudents;
