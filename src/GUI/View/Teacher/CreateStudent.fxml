@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="558.0" prefWidth="1248.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.CreateStudentController">
+<AnchorPane prefHeight="604.0" prefWidth="1374.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.CreateStudentController">
    <children>
       <GridPane fx:id="GridPane" layoutX="200.0" layoutY="169.0" prefHeight="213.0" prefWidth="328.0">
          <columnConstraints>
@@ -54,22 +54,22 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="BtnSletElev" layoutX="706.0" layoutY="505.0" onAction="#SletElevAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/OprettelseElev.css" text="Slet Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnSletElev" layoutX="704.0" layoutY="525.0" onAction="#SletElevAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/OprettelseElev.css" text="Slet Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="BtnRedigerElev" layoutX="583.0" layoutY="505.0" onAction="#RedigerElevAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/OprettelseElev.css" text="Rediger Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnRedigerElev" layoutX="581.0" layoutY="525.0" onAction="#RedigerElevAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/OprettelseElev.css" text="Rediger Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <TableView fx:id="tvStudent" layoutX="583.0" layoutY="79.0" prefHeight="402.0" prefWidth="619.0">
+      <TableView fx:id="tvStudent" layoutX="583.0" layoutY="79.0" prefHeight="423.0" prefWidth="754.0">
         <columns>
             <TableColumn fx:id="tcId" prefWidth="55.0" text="Id" />
-          <TableColumn fx:id="tcNameStudent" prefWidth="75.0" text="Navn" />
-          <TableColumn fx:id="tcLastName" prefWidth="104.0" text="Efternavn" />
-            <TableColumn fx:id="tcEmail" prefWidth="221.0" text="E-mail" />
-            <TableColumn fx:id="tcAge" minWidth="0.0" prefWidth="46.0" text="Alder" />
-            <TableColumn prefWidth="117.0" text="Brugernavn" />
+          <TableColumn fx:id="tcNameStudent" prefWidth="160.53326416015625" text="Navn" />
+          <TableColumn fx:id="tcLastName" prefWidth="147.46673583984375" text="Efternavn" />
+            <TableColumn fx:id="tcEmail" prefWidth="129.33343505859375" text="E-mail" />
+            <TableColumn fx:id="tcAge" minWidth="0.0" prefWidth="128.800048828125" text="Alder" />
+            <TableColumn prefWidth="134.93310546875" text="Brugernavn" />
         </columns>
       </TableView>
       <Label layoutX="861.0" layoutY="43.0" text="List af Eleverne" textFill="#2b2121">
@@ -78,9 +78,9 @@
          </font>
       </Label>
       <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="199.0" layoutY="135.0" size="30" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
-      <Pane layoutY="-2.0" prefHeight="560.0" prefWidth="179.0" style="-fx-background-color: #D4D3BE;">
+      <Pane layoutY="-2.0" prefHeight="606.0" prefWidth="182.0" style="-fx-background-color: #D4D3BE;">
          <children>
-            <JFXButton fx:id="BtnTilbage" layoutY="510.0" onAction="#BtnTilbage" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/OprettelseElev.css" text="Tilbage">
+            <JFXButton fx:id="BtnTilbage" layoutY="564.0" onAction="#BtnTilbage" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/OprettelseElev.css" text="Tilbage">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -91,27 +91,27 @@
                </font>
             </Label>
             <Line endX="100.0" layoutX="34.0" layoutY="90.0" startX="-14.899984359741211" startY="1.52587890625E-5" stroke="WHITE" />
-            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="49.0" layoutY="535.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="49.0" layoutY="589.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="tilbageKlasser" layoutY="448.0" onAction="#btnTilbageKlasser" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/OprettelseElev.css" text="Klasser">
+            <JFXButton fx:id="tilbageKlasser" layoutY="502.0" onAction="#btnTilbageKlasser" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/OprettelseElev.css" text="Klasser">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="tilbageBogerBtn" layoutY="386.0" onAction="#btnTilbageBoger" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/OprettelseElev.css" text="Boger">
+            <JFXButton fx:id="tilbageBogerBtn" layoutY="440.0" onAction="#btnTilbageBoger" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/OprettelseElev.css" text="Boger">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="49.0" layoutY="473.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="49.0" layoutY="527.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="49.0" layoutY="411.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="49.0" layoutY="465.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
