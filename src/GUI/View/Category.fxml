@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.CategoryController">
    <children>
-      <Text layoutX="329.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Helbredstilstande">
+      <Text layoutX="348.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Helbredstilstande">
          <font>
             <Font size="31.0" />
          </font>
