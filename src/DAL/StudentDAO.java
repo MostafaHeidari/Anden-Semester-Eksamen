@@ -16,21 +16,22 @@ public class StudentDAO {
         DC = new DatabaseConnector();
     }
 
-    public Student uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder) throws SQLException {
+    public Student uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder, String userName ) throws SQLException {
         Connection connection = DC.getConnection();
 
-        String sql = "INSERT INTO StudentTable (NameStudent,LastNameStudent,EmailStudent,StudentAge) VALUES (?,?,?,?);";
+        String sql = "INSERT INTO StudentTable (NameStudent,LastNameStudent,EmailStudent,StudentAge,UserName) VALUES (?,?,?,?,?);";
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
         ps.setString(1, studentNavn);
         ps.setString(2, studentEfternavn);
         ps.setString(3, studentEmail);
         ps.setString(4, studentAlder);
+        ps.setString(5, userName);
         int affectedRows = ps.executeUpdate();
         if (affectedRows == 1) {
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
                 int studentId = rs.getInt(1);
-                Student studentCord = new Student(studentId, studentNavn, studentEfternavn, studentEmail, studentAlder);
+                Student studentCord = new Student(studentId, studentNavn, studentEfternavn, studentEmail, studentAlder,userName);
                 return studentCord;
             }
 
@@ -39,7 +40,7 @@ public class StudentDAO {
     }
 
 
-    /* Student update ok  1*/
+    /* Student update */
     public void editStudent(Student studentUpdate) throws Exception {
         try (Connection connection = DC.getConnection()) {
             String sql = "UPDATE StudentTable SET NameStudent= (?), LastNameStudent=(?), EmailStudent=(?), StudentAge=(?) WHERE StudentID = (?);";
@@ -83,10 +84,9 @@ public class StudentDAO {
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) { // Creates and adds song objects into an array list
             Student studentCord = new Student(rs.getInt("StudentID"), rs.getString("NameStudent"), rs.getString("LastNameStudent"),
-                    rs.getString("EmailStudent"), rs.getString("StudentAge"));
+                    rs.getString("EmailStudent"), rs.getString("StudentAge"),rs.getString("UserName"));
             allStudents.add(studentCord);
         }
         return allStudents;
     }
-
 }

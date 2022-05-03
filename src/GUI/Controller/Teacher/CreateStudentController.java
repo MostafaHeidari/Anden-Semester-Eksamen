@@ -47,6 +47,8 @@ public class CreateStudentController implements Initializable {
     private TextField txtEmailField;
     @FXML
     private TextField txtAlderFiled;
+    @FXML
+    private TextField txtUserField;
 
     @FXML
     public TableView tvStudent;
@@ -60,6 +62,8 @@ public class CreateStudentController implements Initializable {
     public TableColumn tcEmail;
     @FXML
     public TableColumn tcAge;
+    @FXML
+    public TableColumn tcUserName;
 
     public Student selectedStudent;
 
@@ -91,21 +95,25 @@ public class CreateStudentController implements Initializable {
         else {
             String studentNavn = txtnavnField.getText();
             String studentEfternavn = txtefterNavnField.getText();
-            String studentEmail = (txtEmailField.getText());
+            String studentEmail = txtEmailField.getText();
             String studentAlder = txtAlderFiled.getText();
-            uploadStudentInfo(studentNavn, studentEfternavn, studentEmail, studentAlder);
+            String StudentAccount = txtUserField.getText();
+
+            uploadStudentInfo(studentNavn, studentEfternavn, studentEmail, studentAlder,StudentAccount);
         }
     }
 
-    private void uploadStudentInfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder) throws IOException, SQLException {
+    private void uploadStudentInfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder, String userName) throws IOException, SQLException {
         StudentModel studentModelInfo = new StudentModel();
 
-        studentModelInfo.uploadStudentinfo(studentNavn, studentEfternavn, studentEmail, studentAlder);
+        studentModelInfo.uploadStudentinfo(studentNavn, studentEfternavn, studentEmail, studentAlder, userName);
 
         txtnavnField.clear();
         txtefterNavnField.clear();
         txtEmailField.clear();
         txtAlderFiled.clear();
+        txtUserField.clear();
+
     }
 
 
@@ -152,6 +160,8 @@ public class CreateStudentController implements Initializable {
 
         tcAge.setCellValueFactory(new PropertyValueFactory<>("age"));
 
+        tcUserName.setCellValueFactory(new PropertyValueFactory<>("UserName"));
+
         tvStudent.setItems(studentModel.getAllStudents());
     }
 
@@ -196,7 +206,6 @@ public class CreateStudentController implements Initializable {
             fxmlLoader1.<EditStudentController>getController().setSelectedStudent(selectedStudent);
             stage.show();
         }
-
     }
 
     private void setSelectedStudent() {
@@ -205,6 +214,4 @@ public class CreateStudentController implements Initializable {
             selectedStudent = (Student) tvStudent.getSelectionModel().getSelectedItem();
         }
     }
-
-
 }

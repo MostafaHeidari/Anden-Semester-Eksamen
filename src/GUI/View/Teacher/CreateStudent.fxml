@@ -42,7 +42,7 @@
                </GridPane.margin>
             </TextField>
             <TextField fx:id="txtEmailField" prefHeight="36.0" prefWidth="328.0" promptText="E-mail" GridPane.rowIndex="2" />
-            <TextField fx:id="txtTelefonField" layoutX="10.0" layoutY="93.0" prefHeight="88.0" prefWidth="318.0" promptText="Brugernavn" style="-fx-background-color: EBF3EB;" GridPane.rowIndex="3">
+            <TextField fx:id="txtUserField" layoutX="10.0" layoutY="93.0" prefHeight="88.0" prefWidth="318.0" promptText="Brugernavn" style="-fx-background-color: EBF3EB;" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
@@ -69,7 +69,7 @@
           <TableColumn fx:id="tcLastName" prefWidth="147.46673583984375" text="Efternavn" />
             <TableColumn fx:id="tcEmail" prefWidth="129.33343505859375" text="E-mail" />
             <TableColumn fx:id="tcAge" minWidth="0.0" prefWidth="128.800048828125" text="Alder" />
-            <TableColumn prefWidth="134.93310546875" text="Brugernavn" />
+            <TableColumn fx:id="tcUserName" prefWidth="134.93310546875" text="Brugernavn" />
         </columns>
       </TableView>
       <Label layoutX="861.0" layoutY="43.0" text="List af Eleverne" textFill="#2b2121">

@@ -6,13 +6,24 @@ public class Student {
     public String lastName;
     public String email;
     public String age;
+    public String userName;
 
-    public Student(int studentId, String studentName, String lastName, String email, String age) {
+    public Student(int studentId, String studentName, String lastName, String email, String age,String userName) {
         this.studentId = studentId;
         this.studentName = studentName;
         this.lastName = lastName;
         this.email = email;
         this.age = age;
+        this.userName = userName;
+
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public int getStudentId() {
@@ -55,15 +66,15 @@ public class Student {
         this.age = age;
     }
 
-
     @Override
     public String toString() {
         return "Student{" +
                 "studentId=" + studentId +
-                ", navn='" + studentName + '\'' +
-                ", efternavn='" + lastName + '\'' +
+                ", studentName='" + studentName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", age='" + age + '\'' +
+                ", userName='" + userName + '\'' +
                 '}';
     }
 }
