@@ -21,17 +21,17 @@
                      <children>
                         <VBox prefHeight="153.0" prefWidth="203.0" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Funktionsniveau">
                                  <font>
                                     <Font size="21.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med personlig pleje">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sub test">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med daglige aktiviteter">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
