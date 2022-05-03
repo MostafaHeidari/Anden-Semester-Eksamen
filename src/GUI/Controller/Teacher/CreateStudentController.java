@@ -1,6 +1,7 @@
 package GUI.Controller.Teacher;
 
 import BE.Student;
+import GUI.Controller.SimpleDialogController;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -71,7 +72,11 @@ public class CreateStudentController implements Initializable {
     @FXML
     public TableColumn tcAge;
 
-    public Object selectedStudent;
+    public Student selectedStudent;
+
+
+
+
 
 
 
@@ -167,10 +172,6 @@ public class CreateStudentController implements Initializable {
 
 
 
-    /*this button must to delete the selected student*/
-    public void SletElevAction(ActionEvent event) throws IOException {
-
-    }
 
     /*this button must to save the selected students information*/
     public void GamOplysingerActionButton(ActionEvent actionEvent) {
@@ -208,10 +209,19 @@ public class CreateStudentController implements Initializable {
         switcher.setScene(scene);
     }
 
-    public void setSelectedStudent(){
-        if (tvStudent.getSelectionModel().getSelectedItem() != null){
-            selectedStudent = tvStudent.getSelectionModel().getSelectedItem();
+
+
+    //remove student method //
+    public void SletElevAction(ActionEvent actionEvent) {
+        if (SimpleDialogController.delete() && selectedStudent != null) {
+            studentModel.removeStudent(selectedStudent);
         }
     }
 
+    private void setSelectedStudent() {
+        if (tvStudent.getSelectionModel().getSelectedItem() != null)
+        {
+            selectedStudent = (Student) tvStudent.getSelectionModel().getSelectedItem();
+        }
+    }
 }
