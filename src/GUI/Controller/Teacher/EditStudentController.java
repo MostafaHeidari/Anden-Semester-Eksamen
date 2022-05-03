@@ -1,6 +1,5 @@
 package GUI.Controller.Teacher;
 
-import GUI.Controller.SimpleDialogController;
 import BE.Student;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
@@ -11,7 +10,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 
@@ -28,15 +26,12 @@ public class EditStudentController {
     @FXML
     public TextField txtAlderEditStudentFiled;
 
-    @FXML
-    private JFXButton BtnGamOplysinger;
+
     @FXML
     private JFXButton BtnTilbageOpretStudent;
     @FXML
     private JFXButton Logud;
 
-    @FXML
-    private JFXButton BtnSletElev;
 
 
     private Student selectedStudent;
@@ -46,37 +41,27 @@ public class EditStudentController {
     public EditStudentController() throws IOException {
     }
 
-    public static void updateStudentInfo(Object selectedStudent) {
-    }
 
+
+   /* this method save the information of student*/
     public void GamOplysingerActionButton(ActionEvent actionEvent) throws Exception {
         String updateStudentName = txtnavnEditStudentField.getText();
         String updateStudentEfterNavn = txtEfterNavnEditStudentField.getText();
         String updateStudentAlder = txtAlderEditStudentFiled.getText();
         String updateStudentEmail = txtEmailEditStudentField.getText();
 
+
         this.selectedStudent.setStudentName(updateStudentName);
         this.selectedStudent.setLastName(updateStudentEfterNavn);
-        this.selectedStudent.setEmail(updateStudentAlder);
-        this.selectedStudent.setAge(updateStudentEmail);
+        this.selectedStudent.setEmail(updateStudentEmail);
+        this.selectedStudent.setAge(updateStudentAlder);
 
         studentModel.editStudent(this.selectedStudent);
 
+        /*turn back to Create student window*/
         Stage switcher = (Stage) BtnTilbageOpretStudent.getScene().getWindow();
         switcher.setTitle("Create student");
         switcher.close();
-
-
-
-        /*
-        String studentNavn = txtnavnEditStudentField.getText();
-        String studentEfternavn = txtEfterNavnEditStudentField.getText();
-        String studentEmail = (txtEmailEditStudentField.getText());
-        String studentAlder = txtAlderEditStudentFiled.getText();
-        Student student = new Student(studentId, studentNavn, studentEfternavn ,studentEmail, studentAlder);
-        studentModel.editStudent(student);
-
-         */
     }
 
     public void setSelectedStudent(Student student) {
