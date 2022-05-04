@@ -113,10 +113,10 @@ public class CreateStudentController implements Initializable {
         txtEmailField.clear();
         txtAlderFiled.clear();
 
+        txtUserField.clear();
+
 
         tvStudent.getItems().clear();
-
-        txtUserField.clear();
 
 
         tvStudent.setItems(studentModel.getAllStudents());

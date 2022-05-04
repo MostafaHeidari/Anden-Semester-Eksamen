@@ -81,6 +81,8 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        setSelectedClass();
+        setSelectedStudent();
     }
 
     public TeacherKlasseAndStudentsController() throws IOException {
@@ -155,5 +157,19 @@ public class TeacherKlasseAndStudentsController implements Initializable {
                 selectedStudent);
         tvStudentsInClasses.getItems().add(selectedClass);
         tvStudentsInClasses.refresh();
+    }
+
+    private void setSelectedClass() {
+        if (tvKlasseInfomationer.getSelectionModel().getSelectedItem() != null)
+        {
+            selectedClass = (SchoolClass) tvKlasseInfomationer.getSelectionModel().getSelectedItem();
+        }
+    }
+
+    private void setSelectedStudent() {
+        if (tvStudent.getSelectionModel().getSelectedItem() != null)
+        {
+            selectedStudent = (Student) tvStudent.getSelectionModel().getSelectedItem();
+        }
     }
 }
