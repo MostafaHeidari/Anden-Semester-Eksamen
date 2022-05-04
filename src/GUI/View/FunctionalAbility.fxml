@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.FunctionalAbilityController">
+   <children>
+      <VBox layoutX="14.0" layoutY="100.0" prefHeight="486.0" prefWidth="872.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="131.5" prefWidth="872.0">
+               <children>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="131.5" prefWidth="112.5">
+                     <children>
+                        <ImageView fitHeight="131.5" fitWidth="112.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/Functional%20ablilities%200-4/0.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="131.5" prefWidth="112.5">
+                     <children>
+                        <ImageView fitHeight="131.5" fitWidth="112.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/Functional%20ablilities%200-4/1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="131.5" prefWidth="112.5">
+                     <children>
+                        <ImageView fitHeight="131.5" fitWidth="112.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/Functional%20ablilities%200-4/2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="131.5" prefWidth="112.5">
+                     <children>
+                        <ImageView fitHeight="131.5" fitWidth="112.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/Functional%20ablilities%200-4/3.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="131.5" prefWidth="112.5">
+                     <children>
+                        <ImageView fitHeight="131.5" fitWidth="112.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/Functional%20ablilities%200-4/4.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="131.5" prefWidth="112.5">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="9" textAlignment="CENTER" wrappingWidth="112.5">
+                           <font>
+                              <Font size="110.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="872.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ingen/ubetydelige&#10;begrænsninger" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lette&#10;begrænsninger" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Moderate&#10;begrænsninger" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Svære&#10;Begrænsninger" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Totale&#10;begrænsninger" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ikke relevant" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="18.0" prefWidth="872.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
+                     <children>
+                        <JFXCheckBox alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
+                           <font>
+                              <Font />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXCheckBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
+                     <children>
+                        <JFXCheckBox alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
+                           <font>
+                              <Font />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXCheckBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
+                     <children>
+                        <JFXCheckBox alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
+                           <font>
+                              <Font />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXCheckBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
+                     <children>
+                        <JFXCheckBox alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
+                           <font>
+                              <Font />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXCheckBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
+                     <children>
+                        <JFXCheckBox alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
+                           <font>
+                              <Font />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXCheckBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
+                     <children>
+                        <JFXCheckBox alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
+                           <font>
+                              <Font />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXCheckBox>
+                     </children>
+                  </VBox>
+               </children></HBox>
+         </children>
+      </VBox>
+      <Button layoutX="111.0" layoutY="232.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="112.5" style="-fx-background-color: transparent;">
+         <tooltip>
+            <Tooltip contentDisplay="BOTTOM" text="Borgeren klarer selv aktiviteten." />
+         </tooltip>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="223.5" layoutY="232.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="112.5" style="-fx-background-color: transparent;">
+         <tooltip>
+            <Tooltip fx:id="tt2" text="Borgeren er aktiv og har kun behov for lidt hjælp." />
+         </tooltip>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="b3" layoutX="337.0" layoutY="232.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="112.5" style="-fx-background-color: transparent;">
+         <tooltip>
+            <Tooltip text="Borgeren er aktiv men har behov for moderat hjælp." />
+         </tooltip>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="449.5" layoutY="232.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="112.5" style="-fx-background-color: transparent;">
+         <tooltip>
+            <Tooltip text="Borgeren deltager under forudsætning af omfattende hjælp." />
+         </tooltip>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="563.0" layoutY="232.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="112.5" style="-fx-background-color: transparent;">
+         <tooltip>
+            <Tooltip text="Borgeren kan ikke selv og får hjælp til alt." />
+         </tooltip>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="675.0" layoutY="232.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="112.5" style="-fx-background-color: transparent;">
+         <tooltip>
+            <Tooltip text="Det er ikke relevant at registrere en vurdering for borgerens funktionsevne." />
+         </tooltip>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text layoutX="268.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Funktionsevnetilstande">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
