@@ -13,13 +13,13 @@ import java.io.IOException;
 public class SubcategoryController {
 
     @FXML
-    private JFXButton BtnTilbage;
+    private JFXButton btnTilbage;
 
     @FXML
-    private JFXButton BtnLogud;
+    private JFXButton btnLogud;
 
     public void subCategoryTilbage(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) BtnTilbage.getScene().getWindow();
+        Stage switcher = (Stage) btnTilbage.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Category.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU System");
@@ -27,7 +27,7 @@ public class SubcategoryController {
     }
 
     public void subCategoryLogud(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) BtnLogud.getScene().getWindow();
+        Stage switcher = (Stage) btnLogud.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Login.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU System");
