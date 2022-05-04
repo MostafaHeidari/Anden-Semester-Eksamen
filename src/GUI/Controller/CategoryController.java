@@ -153,4 +153,10 @@ public class CategoryController {
 
     public void udskillelseafaffaldsstoffer_5(MouseEvent mouseEvent) {
     }
+
+    public void Test(MouseEvent mouseEvent) {
+    }
+
+    public void Test1(MouseEvent mouseEvent) {
+    }
 }
