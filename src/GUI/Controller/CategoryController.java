@@ -19,16 +19,26 @@ public class CategoryController {
     @FXML
     private Text funktionsniveau_2;
 
-    public void funktionsniveau_1(MouseEvent mouseEvent) throws IOException {
-        if(funktionsniveau_1.equals())
+    private String knap;
+
+
+    private void skiftVindue(String vindue) throws IOException {
+
         Stage switcher = (Stage) HBox.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/SubCatergories/SC_funktionsniveau_1.fxml"));
         Scene scene = new Scene(root);
-        switcher.setTitle("SOSU System");
+        switcher.setTitle(vindue);
         switcher.setScene(scene);
     }
 
-    public void funktionsniveau_2(MouseEvent mouseEvent) {
+    public void funktionsniveau_1(MouseEvent mouseEvent) throws IOException {
+        knap = "funktionsniveau_1";
+        skiftVindue(knap);
+    }
+
+    public void funktionsniveau_2(MouseEvent mouseEvent) throws IOException {
+        knap = "funktionsniveau_2";
+        skiftVindue(knap);
     }
 
     public void bevægeapparat_1(MouseEvent mouseEvent) {
