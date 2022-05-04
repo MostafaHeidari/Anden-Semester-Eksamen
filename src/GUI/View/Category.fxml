@@ -31,7 +31,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="funktionsniveau_2" onMouseClicked="#funktionsniveau_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med daglige aktiviteter">
+                              <Text fx:id="funktionsniveau_2" onMouseClicked="#funktionsniveau_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med daglige aktiviteter">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
