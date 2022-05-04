@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -13,8 +14,13 @@ public class CategoryController {
 
     @FXML
     private javafx.scene.layout.HBox HBox;
+    @FXML
+    private Text funktionsniveau_1;
+    @FXML
+    private Text funktionsniveau_2;
 
     public void funktionsniveau_1(MouseEvent mouseEvent) throws IOException {
+        if(funktionsniveau_1.equals())
         Stage switcher = (Stage) HBox.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/SubCatergories/SC_funktionsniveau_1.fxml"));
         Scene scene = new Scene(root);
