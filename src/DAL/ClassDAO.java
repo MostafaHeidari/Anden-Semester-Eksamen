@@ -50,6 +50,7 @@ public class ClassDAO {
             SchoolClass klasseCord = new SchoolClass(rs.getInt("ClassID"), rs.getString("ClassName"));
             allClasses.add(klasseCord);
         }
+
         return allClasses;
     }
 }

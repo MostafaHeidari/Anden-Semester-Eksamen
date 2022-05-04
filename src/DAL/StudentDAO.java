@@ -105,19 +105,4 @@ public class StudentDAO {
         return allStudents;
     }
 
-
-    public void addStudentToClass(SchoolClass selectedClass, Student selectedStudent) throws SQLException {
-        Connection connection = DC.getConnection();
-        int cId = selectedClass.getClassId();
-        int sId = selectedStudent.getStudentId();
-
-        String sql = "INSERT INTO ClassStudents (ClassID , StudentID) VALUES ((?), (?)); ";
-
-        PreparedStatement pst = connection.prepareStatement(sql);
-
-        pst.setInt(1, cId);
-        pst.setInt(2, sId);
-
-        pst.executeUpdate();
-    }
 }

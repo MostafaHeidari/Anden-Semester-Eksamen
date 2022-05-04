@@ -3,6 +3,7 @@ package BLL;
 import BE.SchoolClass;
 import BE.Student;
 import DAL.StudentDAO;
+import DAL.StudentInClassesDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -11,13 +12,16 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class StudentManger {
-    StudentDAO studentDAO = new StudentDAO();
+    StudentDAO studentDAO;
+    StudentInClassesDAO studentInClassesDAO;
+
     /**
      * Constructor
      * @throws IOException
      */
     public StudentManger() throws IOException {
         studentDAO = new StudentDAO();
+        studentInClassesDAO = new StudentInClassesDAO();
     }
 
 
@@ -46,7 +50,7 @@ public class StudentManger {
     }
 
     public void addStudentToClass(SchoolClass selectedClass, Student selectedStudent) throws SQLException {
-        studentDAO.addStudentToClass(selectedClass, selectedStudent);
+        studentInClassesDAO.addStudentToClass(selectedClass, selectedStudent);
     }
 
 

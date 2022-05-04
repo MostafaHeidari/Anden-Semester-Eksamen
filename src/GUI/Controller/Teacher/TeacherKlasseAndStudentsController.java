@@ -140,6 +140,8 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         tvStudent.setItems(studentModel.getAllStudents());
     }
 
+
+
     public void setStudentsInClasses(){
 
         tcStudentNameInClass.setCellValueFactory(new PropertyValueFactory<Student, String>("studentName"));
