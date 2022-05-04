@@ -50,15 +50,15 @@
             <TextField fx:id="txtAlderFiled" prefHeight="36.0" prefWidth="328.0" promptText="Alder" GridPane.rowIndex="4" />
          </children>
       </GridPane>
-      <JFXButton fx:id="BtnOpretElev" layoutX="200.0" layoutY="402.0" onAction="#OpretElevActionButton" prefHeight="28.0" prefWidth="94.0" stylesheets="@../CSS/OprettelseElev.css" text="Opret Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnOpretElev" layoutX="200.0" layoutY="402.0" onAction="#OpretElevActionButton" prefHeight="28.0" prefWidth="94.0" stylesheets="@../CSS/CreateStudent.css" text="Opret Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="BtnSletElev" layoutX="706.0" layoutY="525.0" onAction="#SletElevAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/OprettelseElev.css" text="Slet Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnSletElev" layoutX="706.0" layoutY="525.0" onAction="#SletElevAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/CreateStudent.css" text="Slet Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="BtnRedigerElev" layoutX="583.0" layoutY="525.0" onAction="#RedigerElevAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/OprettelseElev.css" text="Rediger Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnRedigerElev" layoutX="583.0" layoutY="525.0" onAction="#RedigerElevAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/CreateStudent.css" text="Rediger Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
@@ -80,7 +80,7 @@
       <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="200.0" layoutY="132.0" size="30" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
       <Pane layoutY="-2.0" prefHeight="606.0" prefWidth="179.0" style="-fx-background-color: #D4D3BE;">
          <children>
-            <JFXButton fx:id="BtnTilbage" layoutY="564.0" onAction="#BtnTilbage" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/OprettelseElev.css" text="Tilbage">
+            <JFXButton fx:id="BtnTilbage" layoutY="564.0" onAction="#BtnTilbage" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -96,12 +96,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="tilbageKlasser" layoutY="502.0" onAction="#btnTilbageKlasser" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/OprettelseElev.css" text="Klasser">
+            <JFXButton fx:id="tilbageKlasser" layoutY="502.0" onAction="#btnTilbageKlasser" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Klasser">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="tilbageBogerBtn" layoutY="440.0" onAction="#btnTilbageBoger" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/OprettelseElev.css" text="Boger">
+            <JFXButton fx:id="tilbageBogerBtn" layoutY="440.0" onAction="#btnTilbageBoger" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Boger">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -127,6 +127,6 @@
    </children>
    <stylesheets>
       <URL value="@../CSS/TeacherAndPatient.css" />
-      <URL value="@../CSS/OprettelseElev.css" />
+      <URL value="@../CSS/CreateStudent.css" />
    </stylesheets>
 </AnchorPane>
