@@ -44,7 +44,7 @@ public class StudentDAO {
     /* Student update */
     public void editStudent(Student studentUpdate) throws Exception {
         try (Connection connection = DC.getConnection()) {
-            String sql = "UPDATE StudentTable SET NameStudent= (?), LastNameStudent=(?), EmailStudent=(?), StudentAge=(?) WHERE StudentID = (?);";
+            String sql = "UPDATE StudentTable SET NameStudent= (?), LastNameStudent=(?), EmailStudent=(?), StudentAge=(?), UserName= (?) WHERE StudentID = (?);";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, studentUpdate.getStudentName());
             preparedStatement.setString(2, studentUpdate.getLastName());
