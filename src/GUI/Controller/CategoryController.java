@@ -1,5 +1,7 @@
 package GUI.Controller;
 
+import com.jfoenix.controls.JFXButton;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,8 +20,16 @@ public class CategoryController {
     private Text funktionsniveau_1;
     @FXML
     private Text funktionsniveau_2;
+    @FXML
+    private JFXButton btnCategoryTilbage;
 
-
+    public void CategoryTilbage(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) btnCategoryTilbage.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Patient.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("SOSU System");
+        switcher.setScene(scene);
+    }
 
     private void skiftVindue(String vindue) throws IOException {
 
