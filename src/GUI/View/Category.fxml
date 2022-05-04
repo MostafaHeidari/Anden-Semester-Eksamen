@@ -295,11 +295,6 @@
                                     <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="videnogudvikling_4" onMouseClicked="#videnogudvikling_5" strokeType="OUTSIDE" strokeWidth="0.0" text="Kognitive Problemer">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Text>
                            </children>
                         </VBox>
                      </children>
