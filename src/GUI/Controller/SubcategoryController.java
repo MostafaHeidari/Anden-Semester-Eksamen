@@ -6,17 +6,22 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class SubcategoryController {
 
+    public Text subCatText;
     @FXML
     private JFXButton btnTilbage;
 
     @FXML
     private JFXButton btnLogud;
+
+    private String knap;
+
 
     public void subCategoryTilbage(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) btnTilbage.getScene().getWindow();
@@ -32,5 +37,12 @@ public class SubcategoryController {
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
+    }
+
+    public void subCategorySave(ActionEvent actionEvent) {
+        Stage switcher = (Stage) btnTilbage.getScene().getWindow();
+        knap = switcher.getTitle();
+        subCatText.setText(knap);
+
     }
 }
