@@ -57,4 +57,15 @@ public class StudentManger {
     public void removeStudent(Student selectedStudent) {
         studentDAO.removeStudent(selectedStudent);
     }
+
+    public ObservableList<Student> getAllStudentsByClass(int classId) {
+        ObservableList<Student> studentsObs = FXCollections.observableArrayList();
+
+        try {
+            studentsObs.addAll(studentInClassesDAO.getAllStudentsInClass(classId));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return studentsObs;
+    }
 }

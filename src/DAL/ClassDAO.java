@@ -20,10 +20,9 @@ public class ClassDAO {
     public SchoolClass uploadClassInfo(String klasseNavn) throws SQLException {
         Connection connection = DC.getConnection();
 
-        String sql = "INSERT INTO ClassTable(ClassName,Class) VALUES (?,?);";
+        String sql = "INSERT INTO ClassTable(ClassName) VALUES (?);";
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
         ps.setString(1, klasseNavn);;
-        ps.setString(2, "Class");
         int affectedRows = ps.executeUpdate();
         if (affectedRows == 1) {
             ResultSet rs = ps.getGeneratedKeys();

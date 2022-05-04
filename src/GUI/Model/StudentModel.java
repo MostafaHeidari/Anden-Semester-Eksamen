@@ -18,7 +18,7 @@ public class StudentModel {
 
 
     private ObservableList<Student> studentsList = FXCollections.observableArrayList();
-    private ObservableList<Student> studentInClassesList;
+    private ObservableList<Student> studentInClassesList = FXCollections.observableArrayList();
 
 
 
@@ -51,12 +51,12 @@ public class StudentModel {
     public void addStudentToClass(SchoolClass selectedClass, Student selectedStudent) throws SQLException {
         studentManger.addStudentToClass(selectedClass,selectedStudent);
         studentInClassesList.add(selectedStudent);
-        classModel.uploadKlasseInfo(String.valueOf(selectedClass));
     }
 
 
-    public ObservableList<Student> setStudentsInClasses(){
-        return null;
+    public ObservableList<Student> setStudentsInClass(int classId){
+        studentsList = studentManger.getAllStudentsByClass(classId);
+        return studentsList;
     }
 
 

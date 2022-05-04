@@ -14,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -29,6 +30,8 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     private ClassModel klasseModel;
 
     public Student selectedStudent;
+
+    public Student selectedStudentInClass;
 
     public SchoolClass selectedClass;
 
@@ -81,8 +84,15 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        setSelectedClass();
-        setSelectedStudent();
+        tvKlasseInfomationer.setOnMouseClicked((MouseEvent event) -> {
+            setSelectedItems();
+        });
+        tvStudent.setOnMouseClicked((MouseEvent event) -> {
+            setSelectedItems();
+        });
+        tvStudentsInClasses.setOnMouseClicked((MouseEvent event) -> {
+            setSelectedItems();
+        });
     }
 
     public TeacherKlasseAndStudentsController() throws IOException {
@@ -122,6 +132,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
 
 
         tvKlasseInfomationer.setItems(klasseModel.getAllClasses());
+        if(tvKlasseInfomationer.getItems().size() > 0){ //Set den valgte til den første i listen, hvis der er nogen
+            selectedClass = (SchoolClass) tvKlasseInfomationer.getItems().get(0);
+        }
     }
 
     public void setStudentTableView() throws IOException {
@@ -137,8 +150,12 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         tcAlder.setCellValueFactory(new PropertyValueFactory<>("age"));
 
 
-        tvStudent.setItems(studentModel.getAllStudents());
-    }
+            try {
+                tvStudent.setItems(studentModel.getAllStudents());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 
 
 
@@ -149,29 +166,35 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         tcLastNameInClass.setCellValueFactory(new PropertyValueFactory<Student, String>("lastName"));
 
 
-        tvStudentsInClasses.setItems(studentModel.setStudentsInClasses());
+        tvStudentsInClasses.setItems(studentModel.setStudentsInClass(selectedClass.classId));
 
     }
 
-    public void addStudentToClassBtn(ActionEvent event) throws SQLException {
-        studentModel.addStudentToClass(
-                selectedClass,
-                selectedStudent);
-        tvStudentsInClasses.getItems().add(selectedClass);
-        tvStudentsInClasses.refresh();
-    }
-
-    private void setSelectedClass() {
-        if (tvKlasseInfomationer.getSelectionModel().getSelectedItem() != null)
-        {
-            selectedClass = (SchoolClass) tvKlasseInfomationer.getSelectionModel().getSelectedItem();
-        }
-    }
-
-    private void setSelectedStudent() {
+    private void setSelectedItems() {
         if (tvStudent.getSelectionModel().getSelectedItem() != null)
         {
             selectedStudent = (Student) tvStudent.getSelectionModel().getSelectedItem();
         }
+        if (tvKlasseInfomationer.getSelectionModel().getSelectedItem() != null)
+        {
+            selectedClass = (SchoolClass) tvKlasseInfomationer.getSelectionModel().getSelectedItem();
+            setStudentsInClasses();
+        }
+        if (tvStudentsInClasses.getSelectionModel().getSelectedItem() != null)
+        {
+            selectedStudentInClass = (Student) tvStudentsInClasses.getSelectionModel().getSelectedItem();
+        }
+    }
+
+    public void addStudentToClassBtn(ActionEvent event) {
+        try {
+            studentModel.addStudentToClass(
+                    selectedClass,
+                    selectedStudent);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        tvStudentsInClasses.setItems(studentModel.setStudentsInClass(selectedClass.classId));
+        tvStudentsInClasses.refresh();
     }
 }
