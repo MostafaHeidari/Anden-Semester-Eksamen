@@ -40,9 +40,13 @@ public class SubcategoryController {
     }
 
     public void subCategorySave(ActionEvent actionEvent) {
-        Stage switcher = (Stage) btnTilbage.getScene().getWindow();
-        knap = switcher.getTitle();
-        subCatText.setText(knap);
+        //Stage switcher = (Stage) btnTilbage.getScene().getWindow();
+        //knap = switcher.getTitle();
+        //subCatText.setText(knap);
 
+    }
+    public void setId(String knap){
+        this.knap = knap;
+        subCatText.setText(knap);
     }
 }

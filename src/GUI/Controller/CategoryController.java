@@ -25,9 +25,14 @@ public class CategoryController {
     private void skiftVindue(String vindue) throws IOException {
 
         Stage switcher = (Stage) HBox.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/SubCatergories/SC_funktionsniveau_1.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/SubCatergories/SC_funktionsniveau_1.fxml"));
+        Parent root = loader.load();
         Scene scene = new Scene(root);
-        switcher.setTitle(vindue);
+
+        SubcategoryController controller = loader.getController();
+        controller.setId(vindue);
+
+        switcher.setTitle("SOSU System");
         switcher.setScene(scene);
     }
 
