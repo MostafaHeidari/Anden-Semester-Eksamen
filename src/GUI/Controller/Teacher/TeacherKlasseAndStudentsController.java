@@ -25,6 +25,7 @@ import java.util.ResourceBundle;
 public class TeacherKlasseAndStudentsController implements Initializable {
 
     public StudentModel studentModel;
+    public JFXButton deleteStudentInClass;
 
 
     private ClassModel klasseModel;
@@ -196,5 +197,8 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         }
         tvStudentsInClasses.setItems(studentModel.setStudentsInClass(selectedClass.classId));
         tvStudentsInClasses.refresh();
+    }
+
+    public void deleteStudentInClassBtn(ActionEvent event) {
     }
 }

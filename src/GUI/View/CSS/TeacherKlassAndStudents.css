@@ -52,3 +52,16 @@
     -fx-background-color: #15B559;
     -fx-text-fill: white;
 }
+
+#deleteStudentInClass:hover {
+    -fx-font-size: 15px;
+    -fx-border-color: #001569;
+    -fx-background-color: #15B559;
+    -fx-text-fill: white;
+}
+
+#deleteStudentInClass{
+    fx-font-size: 12px;
+    -fx-background-color: #009B42;
+    -fx-text-fill: white;
+}
