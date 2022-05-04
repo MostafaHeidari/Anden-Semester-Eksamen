@@ -40,7 +40,7 @@ public class SubcategoryController {
     }
 
     public void subCategorySave(ActionEvent actionEvent) {
-        
+
 
     }
     public void setId(String knap){

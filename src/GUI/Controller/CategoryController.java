@@ -19,7 +19,6 @@ public class CategoryController {
     @FXML
     private Text funktionsniveau_2;
 
-    private String knap;
 
 
     private void skiftVindue(String vindue) throws IOException {
@@ -37,13 +36,11 @@ public class CategoryController {
     }
 
     public void funktionsniveau_1(MouseEvent mouseEvent) throws IOException {
-        knap = "funktionsniveau_1";
-        skiftVindue(knap);
+        skiftVindue("funktionsniveau_1");
     }
 
     public void funktionsniveau_2(MouseEvent mouseEvent) throws IOException {
-        knap = "funktionsniveau_2";
-        skiftVindue(knap);
+        skiftVindue("funktionsniveau_2");
     }
 
     public void bevægeapparat_1(MouseEvent mouseEvent) {
