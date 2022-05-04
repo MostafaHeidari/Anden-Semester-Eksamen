@@ -285,22 +285,17 @@
                                     <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="videnogudvikling_2" onMouseClicked="#videnogudvikling_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med indsigt i">
+                              <Text fx:id="videnogudvikling_2" onMouseClicked="#videnogudvikling_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med indsigt i Behandlingsformål">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="videnogudvikling_3" onMouseClicked="#videnogudvikling_3" strokeType="OUTSIDE" strokeWidth="0.0" text="Behandlingsformål">
+                              <Text fx:id="videnogudvikling_3" onMouseClicked="#videnogudvikling_4" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med sygdomsindsigt">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="videnogudvikling_4" onMouseClicked="#videnogudvikling_4" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med sygdomsindsigt">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Text>
-                              <Text fx:id="videnogudvikling_5" onMouseClicked="#videnogudvikling_5" strokeType="OUTSIDE" strokeWidth="0.0" text="Kognitive Problemer">
+                              <Text fx:id="videnogudvikling_4" onMouseClicked="#videnogudvikling_5" strokeType="OUTSIDE" strokeWidth="0.0" text="Kognitive Problemer">
                                  <font>
                                     <Font size="14.0" />
                                  </font>

@@ -24,7 +24,7 @@ public class CategoryController {
     private void skiftVindue(String vindue) throws IOException {
 
         Stage switcher = (Stage) HBox.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/SubCatergories/SC_funktionsniveau_1.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/SubCategories.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 
@@ -36,140 +36,179 @@ public class CategoryController {
     }
 
     public void funktionsniveau_1(MouseEvent mouseEvent) throws IOException {
-        skiftVindue("funktionsniveau_1");
+        skiftVindue("Problemer med personlig pleje");
     }
 
     public void funktionsniveau_2(MouseEvent mouseEvent) throws IOException {
-        skiftVindue("funktionsniveau_2");
+        skiftVindue("Problemer med daglige aktiviteter");
     }
 
-    public void bevægeapparat_1(MouseEvent mouseEvent) {
+    public void bevægeapparat_1(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med mobilitet og bevægelse");
     }
 
-    public void seksualitet_1(MouseEvent mouseEvent) {
+    public void seksualitet_1(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med seksualitet");
     }
 
-    public void hudogslimhinder_1(MouseEvent mouseEvent) {
+    public void hudogslimhinder_1(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med kirurgisk sår");
     }
 
-    public void hudogslimhinder_2(MouseEvent mouseEvent) {
+    public void hudogslimhinder_2(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med diabetisk sår");
     }
 
-    public void hudogslimhinder_3(MouseEvent mouseEvent) {
+    public void hudogslimhinder_3(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med cancersår");
     }
 
-    public void hudogslimhinder_4(MouseEvent mouseEvent) {
+    public void hudogslimhinder_4(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med tryksår");
     }
 
-    public void hudogslimhinder_5(MouseEvent mouseEvent) {
+    public void hudogslimhinder_5(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med arterielt sår");
     }
 
-    public void hudogslimhinder_6(MouseEvent mouseEvent) {
+    public void hudogslimhinder_6(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med venøst sår");
     }
 
-    public void hudogslimhinder_7(MouseEvent mouseEvent) {
+    public void hudogslimhinder_7(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med blandingssår");
     }
 
-    public void hudogslimhinder_8(MouseEvent mouseEvent) {
+    public void hudogslimhinder_8(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med traumesår");
     }
 
-    public void hudogslimhinder_9(MouseEvent mouseEvent) {
+    public void hudogslimhinder_9(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Andre problemer med hud og slimhinder");
     }
 
-    public void respirationogcirkulation_1(MouseEvent mouseEvent) {
+    public void respirationogcirkulation_1(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Respirationsproblemer");
     }
 
-    public void respirationogcirkulation_2(MouseEvent mouseEvent) {
+    public void respirationogcirkulation_2(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Cirkulationsproblemer");
     }
 
-    public void ernæring_1(MouseEvent mouseEvent) {
+    public void ernæring_1(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med væskeindtag");
     }
 
-    public void ernæring_2(MouseEvent mouseEvent) {
+    public void ernæring_2(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med fødeindtag");
     }
 
-    public void ernæring_3(MouseEvent mouseEvent) {
+    public void ernæring_3(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Uhensigtsmæssig vægtændring");
     }
 
-    public void ernæring_4(MouseEvent mouseEvent) {
+    public void ernæring_4(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med overvægt");
     }
 
-    public void ernæring_5(MouseEvent mouseEvent) {
+    public void ernæring_5(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med undervægt");
     }
 
-    public void smerterogsanseindtryk_1(MouseEvent mouseEvent) {
+    public void smerterogsanseindtryk_1(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Akutte smerter");
     }
 
-    public void smerterogsanseindtryk_2(MouseEvent mouseEvent) {
+    public void smerterogsanseindtryk_2(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Periodevise smerter");
     }
 
-    public void smerterogsanseindtryk_3(MouseEvent mouseEvent) {
+    public void smerterogsanseindtryk_3(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Kroniske smerter");
     }
 
-    public void smerterogsanseindtryk_4(MouseEvent mouseEvent) {
+    public void smerterogsanseindtryk_4(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med synssans");
     }
 
-    public void smerterogsanseindtryk_5(MouseEvent mouseEvent) {
+    public void smerterogsanseindtryk_5(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med lugtesans");
     }
 
-    public void smerterogsanseindtryk_6(MouseEvent mouseEvent) {
+    public void smerterogsanseindtryk_6(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med hørelse");
     }
 
-    public void smerterogsanseindtryk_7(MouseEvent mouseEvent) {
+    public void smerterogsanseindtryk_7(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med smagssans");
     }
 
-    public void smerterogsanseindtryk_8(MouseEvent mouseEvent) {
+    public void smerterogsanseindtryk_8(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med følesans");
     }
 
-    public void søvnoghvile_1(MouseEvent mouseEvent) {
+    public void søvnoghvile_1(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Døgnrytmeproblemer");
     }
 
-    public void søvnoghvile_2(MouseEvent mouseEvent) {
+    public void søvnoghvile_2(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Søvnproblemer");
     }
 
-    public void videnogudvikling_1(MouseEvent mouseEvent) {
+    public void videnogudvikling_1(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med hudkommelse");
     }
 
-    public void videnogudvikling_2(MouseEvent mouseEvent) {
+    public void videnogudvikling_2(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med indsigt i Behandlingsformål");
     }
 
-    public void videnogudvikling_3(MouseEvent mouseEvent) {
+    public void videnogudvikling_3(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med sygdomsindsigt");
     }
 
-    public void videnogudvikling_4(MouseEvent mouseEvent) {
+    public void videnogudvikling_4(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Kognitive Problemer");
     }
 
-    public void videnogudvikling_5(MouseEvent mouseEvent) {
+    public void kommunikation_1(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med kommunikation");
     }
 
-    public void kommunikation_1(MouseEvent mouseEvent) {
+    public void psykosocialeforhold_1(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med socialt samvær");
     }
 
-    public void psykosocialeforhold_1(MouseEvent mouseEvent) {
+    public void psykosocialeforhold_2(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Emotionelle problemer");
     }
 
-    public void psykosocialeforhold_2(MouseEvent mouseEvent) {
+    public void psykosocialeforhold_3(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med misbrug");
     }
 
-    public void psykosocialeforhold_3(MouseEvent mouseEvent) {
+    public void psykosocialeforhold_4(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Mentale problemer");
     }
 
-    public void psykosocialeforhold_4(MouseEvent mouseEvent) {
+    public void udskillelseafaffaldsstoffer_1(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med vandladning");
     }
 
-    public void udskillelseafaffaldsstoffer_1(MouseEvent mouseEvent) {
+    public void udskillelseafaffaldsstoffer_2(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med urininkontinens");
     }
 
-    public void udskillelseafaffaldsstoffer_2(MouseEvent mouseEvent) {
+    public void udskillelseafaffaldsstoffer_3(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med afføringsindkontinens");
     }
 
-    public void udskillelseafaffaldsstoffer_3(MouseEvent mouseEvent) {
+    public void udskillelseafaffaldsstoffer_4(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med mave og tarm");
     }
 
-    public void udskillelseafaffaldsstoffer_4(MouseEvent mouseEvent) {
-    }
-
-    public void udskillelseafaffaldsstoffer_5(MouseEvent mouseEvent) {
+    public void udskillelseafaffaldsstoffer_5(MouseEvent mouseEvent) throws IOException {
+        skiftVindue("Problemer med væske fra dræn");
     }
 
     public void Test(MouseEvent mouseEvent) {
