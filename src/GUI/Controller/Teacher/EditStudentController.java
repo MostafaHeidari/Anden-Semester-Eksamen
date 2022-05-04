@@ -49,6 +49,7 @@ public class EditStudentController {
         String updateStudentEfterNavn = txtEfterNavnEditStudentField.getText();
         String updateStudentAlder = txtAlderEditStudentFiled.getText();
         String updateStudentEmail = txtEmailEditStudentField.getText();
+        //String updateStudentEmail = txtEmailEditStudentField.getText();
 
 
         this.selectedStudent.setStudentName(updateStudentName);

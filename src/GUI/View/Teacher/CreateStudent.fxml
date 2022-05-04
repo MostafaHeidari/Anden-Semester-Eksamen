@@ -47,18 +47,18 @@
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="txtAlderFiled" prefHeight="88.0" prefWidth="328.0" promptText="Alder" GridPane.rowIndex="4" />
+            <TextField fx:id="txtAlderFiled" prefHeight="36.0" prefWidth="328.0" promptText="Alder" GridPane.rowIndex="4" />
          </children>
       </GridPane>
       <JFXButton fx:id="BtnOpretElev" layoutX="200.0" layoutY="402.0" onAction="#OpretElevActionButton" prefHeight="28.0" prefWidth="94.0" stylesheets="@../CSS/OprettelseElev.css" text="Opret Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="BtnSletElev" layoutX="704.0" layoutY="525.0" onAction="#SletElevAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/OprettelseElev.css" text="Slet Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnSletElev" layoutX="706.0" layoutY="525.0" onAction="#SletElevAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/OprettelseElev.css" text="Slet Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="BtnRedigerElev" layoutX="581.0" layoutY="525.0" onAction="#RedigerElevAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/OprettelseElev.css" text="Rediger Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnRedigerElev" layoutX="583.0" layoutY="525.0" onAction="#RedigerElevAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/OprettelseElev.css" text="Rediger Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
@@ -77,8 +77,8 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="199.0" layoutY="135.0" size="30" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
-      <Pane layoutY="-2.0" prefHeight="606.0" prefWidth="182.0" style="-fx-background-color: #D4D3BE;">
+      <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="200.0" layoutY="132.0" size="30" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
+      <Pane layoutY="-2.0" prefHeight="606.0" prefWidth="179.0" style="-fx-background-color: #D4D3BE;">
          <children>
             <JFXButton fx:id="BtnTilbage" layoutY="564.0" onAction="#BtnTilbage" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/OprettelseElev.css" text="Tilbage">
                <cursor>
@@ -119,7 +119,7 @@
          </children>
       </Pane>
       <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="819.0" layoutY="60.0" size="20" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
-      <Label layoutX="236.0" layoutY="114.0" text="Indtast elevoplysninger" textFill="#2b2121">
+      <Label layoutX="237.0" layoutY="111.0" text="Indtast elevoplysninger" textFill="#2b2121">
          <font>
             <Font size="14.0" />
          </font>
