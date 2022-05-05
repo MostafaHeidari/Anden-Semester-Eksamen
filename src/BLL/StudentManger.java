@@ -4,6 +4,7 @@ import BE.SchoolClass;
 import BE.Student;
 import DAL.StudentDAO;
 import DAL.StudentInClassesDAO;
+import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -25,9 +26,6 @@ public class StudentManger {
     }
 
 
-
-
-
     public ObservableList<Student> getAllStudents() {
         ObservableList<Student> studentsObs = FXCollections.observableArrayList();
 
@@ -41,16 +39,33 @@ public class StudentManger {
 
 
 
-     // Edits a student using the editStudent method from userDAO 2 //
+    /**
+     * Gets the editStudent student using editStudent from studentDAO
+     * @param student
+     * @return
+     * @throws SQLServerException
+     */
     public void editStudent(Student student) throws Exception {
         studentDAO.editStudent(student);
     }
 
+    /**
+     * Gets the addStudentToClass selectedClass and selectedStudent using addStudentToClass from studentDAO
+     * @param selectedClass
+     * @param selectedStudent
+     * @return
+     * @throws SQLServerException
+     */
     public void addStudentToClass(SchoolClass selectedClass, Student selectedStudent) throws SQLException {
         studentInClassesDAO.addStudentToClass(selectedClass, selectedStudent);
     }
 
-
+    /**
+     * Gets the removeStudent selectedStudent using removeStudent from studentDAO
+     * @param selectedStudent
+     * @return
+     * @throws SQLServerException
+     */
     public void removeStudent(Student selectedStudent) {
         studentDAO.removeStudent(selectedStudent);
     }
