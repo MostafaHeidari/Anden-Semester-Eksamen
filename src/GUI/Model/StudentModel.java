@@ -2,8 +2,8 @@ package GUI.Model;
 
 import BE.SchoolClass;
 import BE.Student;
-import BLL.StudentManger;
-import BLL.StudentsInClassManger;
+import BLL.StudentManager;
+import BLL.StudentsInClassManager;
 import DAL.StudentDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -16,7 +16,7 @@ public class StudentModel {
 
     StudentDAO studentDAO = new StudentDAO();
     private ClassModel classModel;
-    private StudentsInClassManger studentsInClassManger;
+    private StudentsInClassManager studentsInClassManger;
 
 
     private ObservableList<Student> studentsList = FXCollections.observableArrayList();
@@ -25,40 +25,40 @@ public class StudentModel {
 
 
 
-    private StudentManger studentManger;
+    private StudentManager studentManager;
 
     public StudentModel() throws IOException {
-        studentManger = new StudentManger();
+        studentManager = new StudentManager();
         classModel = new ClassModel();
-        studentsInClassManger = new StudentsInClassManger();
+        studentsInClassManger = new StudentsInClassManager();
     }
 
     public void uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder, String userName) throws SQLException {
-        studentsList.add(studentManger.uploadStudentinfo(studentNavn,studentEfternavn,studentEmail,studentAlder,userName));
+        studentsList.add(studentManager.uploadStudentinfo(studentNavn,studentEfternavn,studentEmail,studentAlder,userName));
     }
 
 
     public ObservableList<Student> getAllStudents() throws IOException {
-        studentsList = studentManger.getAllStudents();
+        studentsList = studentManager.getAllStudents();
         return studentsList;
     }
 
     // Edits a student using the editStudent method from userManager 3 //
 
     public void editStudent(Student student) throws Exception {
-        studentManger.editStudent(student);
+        studentManager.editStudent(student);
         studentsList.clear();
-        studentsList.addAll(studentManger.getAllStudents());
+        studentsList.addAll(studentManager.getAllStudents());
     }
 
     public void addStudentToClass(SchoolClass selectedClass, Student selectedStudent) throws SQLException {
-        studentManger.addStudentToClass(selectedClass,selectedStudent);
+        studentManager.addStudentToClass(selectedClass,selectedStudent);
         studentInClassesList.add(selectedStudent);
     }
 
 
     public ObservableList<Student> setStudentsInClass(int classId){
-        studentsList = studentManger.getAllStudentsByClass(classId);
+        studentsList = studentManager.getAllStudentsByClass(classId);
         return studentsList;
     }
 
@@ -69,7 +69,7 @@ public class StudentModel {
     /* Deletes student using the deleteStudent method from StudentManager */
 
     public void removeStudent (Student selectedStudent) {
-        studentManger.removeStudent(selectedStudent);
+        studentManager.removeStudent(selectedStudent);
         studentsList.remove(selectedStudent);
     }
 

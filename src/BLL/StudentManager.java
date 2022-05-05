@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-public class StudentManger {
+public class StudentManager {
     StudentDAO studentDAO;
     StudentInClassesDAO studentInClassesDAO;
 
@@ -20,7 +20,7 @@ public class StudentManger {
      * Constructor
      * @throws IOException
      */
-    public StudentManger() throws IOException {
+    public StudentManager() throws IOException {
         studentDAO = new StudentDAO();
         studentInClassesDAO = new StudentInClassesDAO();
     }

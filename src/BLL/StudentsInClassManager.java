@@ -8,7 +8,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerException;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class StudentsInClassManger {
+public class StudentsInClassManager {
     private StudentInClassesDAO studentInClassesDAO;
 
     /**
@@ -16,7 +16,7 @@ public class StudentsInClassManger {
      * @return
      * @throws SQLServerException
      */
-    public StudentsInClassManger() throws IOException {
+    public StudentsInClassManager() throws IOException {
         studentInClassesDAO = new StudentInClassesDAO();
     }
 
