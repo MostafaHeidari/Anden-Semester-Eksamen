@@ -25,6 +25,7 @@ import java.util.ResourceBundle;
 public class CreateStudentController implements Initializable {
 
     public StudentModel studentModel;
+    public JFXButton citizenInfomation;
     private EditStudentController editStudentController;
 
     @FXML
@@ -223,5 +224,8 @@ public class CreateStudentController implements Initializable {
         {
             selectedStudent = (Student) tvStudent.getSelectionModel().getSelectedItem();
         }
+    }
+
+    public void citizenInfomationBtn(ActionEvent event) {
     }
 }
