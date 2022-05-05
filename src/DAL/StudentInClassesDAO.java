@@ -62,5 +62,21 @@ public class StudentInClassesDAO {
         return allStudentsInClasses;
     }
 
+    //removes a Student from a single Class
+    //@param Class
+    //@param Student
+    public void deleteStudentInClass(SchoolClass selectedClass, Student selectedStudentInClass) throws SQLException {
+        Connection connection = DC.getConnection();
+        int cId = selectedClass.getClassId();
+        int mId = selectedStudentInClass.getStudentId();
 
+        String sql = "DELETE FROM ClassStudents WHERE ClassID = (?) AND StudentID = (?); ";
+
+        PreparedStatement pst = connection.prepareStatement(sql);
+
+        pst.setInt(1, cId);
+        pst.setInt(2, mId);
+
+        pst.executeUpdate();
+    }
 }
