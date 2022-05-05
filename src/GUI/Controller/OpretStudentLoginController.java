@@ -42,5 +42,4 @@ public class OpretStudentLoginController {
     public void RedigereStudent(ActionEvent actionEvent) {
 
     }
-
 }

@@ -24,8 +24,9 @@ public class SubcategoryController {
     @FXML
     private JFXButton btnLogud;
 
+   // this is instance variable is not used to now//
     private int caseID = 27;
-    private String knap;
+    private String problemName;
 
     CategoryModel categoryModel = new CategoryModel();
 
@@ -49,17 +50,18 @@ public class SubcategoryController {
         switcher.setScene(scene);
     }
 
+    // this button is used to save the information to databassen. if the databassen is empty //
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
+        if (categoryModel.readCategory(caseID,problemName) == null){
 
-        if (categoryModel.readCategory(caseID,knap) == null){
-
-            categoryModel.createCategory(caseID,knap,txtBeskrivelse.getText());
+            categoryModel.createCategory(caseID,problemName,txtBeskrivelse.getText());
         }
-        categoryModel.updateCategory(caseID,knap,txtBeskrivelse.getText());
-
+        categoryModel.updateCategory(caseID,problemName,txtBeskrivelse.getText());
     }
+
+    //
     public void setId(String knap) throws SQLException {
-        this.knap = knap;
+        this.problemName = knap;
         txtBeskrivelse.setText(categoryModel.readCategory(caseID,knap));
         subCatText.setText(knap);
     }

@@ -24,6 +24,7 @@ public class CategoryController {
     @FXML
     private JFXButton btnCategoryTilbage;
 
+    // this button is used to turn back to Category window//
     public void CategoryTilbage(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) btnCategoryTilbage.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Patient.fxml"));
@@ -32,6 +33,7 @@ public class CategoryController {
         switcher.setScene(scene);
     }
 
+    // this method is used to change the window to Subcategory//
     private void skiftVindue(String vindue) throws IOException, SQLException {
 
         Stage switcher = (Stage) HBox.getScene().getWindow();
@@ -46,6 +48,7 @@ public class CategoryController {
         switcher.setScene(scene);
     }
 
+    // fxml event on mouse click//
     public void funktionsniveau_1(MouseEvent mouseEvent) throws IOException, SQLException {
         skiftVindue("Problemer med personlig pleje");
     }
