@@ -10,6 +10,7 @@ import java.sql.SQLException;
 public class CategoryManager {
 
     CategoryDAO categoryDAO = new CategoryDAO();
+
     /**
      * Constructor
      * @throws IOException

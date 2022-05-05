@@ -14,9 +14,20 @@ public class StudentInClassesDAO {
 
     private DatabaseConnector DC;
 
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public StudentInClassesDAO() throws IOException {
         DC = new DatabaseConnector();
     }
+
+    /**
+     * his method gets a addStudentToClass from the database
+     * @param selectedClass
+     * @param selectedStudent
+     * @throws SQLServerException
+     */
     public void addStudentToClass(SchoolClass selectedClass, Student selectedStudent) throws SQLException {
         Connection connection = DC.getConnection();
         int cId = selectedClass.getClassId();
@@ -32,6 +43,13 @@ public class StudentInClassesDAO {
         pst.executeUpdate();
     }
 
+
+    /**
+     * This method gets a list of student with getAllStudentsInClass from the database
+     * @param classId
+     * @return allStudentsInClasses from database
+     * @throws SQLServerException
+     */
     public List<Student> getAllStudentsInClass(int classId) {
         ArrayList<Student> allStudentsInClasses = new ArrayList<>();
 
@@ -62,9 +80,12 @@ public class StudentInClassesDAO {
         return allStudentsInClasses;
     }
 
-    //removes a Student from a single Class
-    //@param Class
-    //@param Student
+    /**
+     * his method gets a deleteStudentInClass from the database
+     * @param selectedClass
+     * @param selectedStudentInClass
+     * @throws SQLServerException
+     */
     public void deleteStudentInClass(SchoolClass selectedClass, Student selectedStudentInClass) throws SQLException {
         Connection connection = DC.getConnection();
         int cId = selectedClass.getClassId();
