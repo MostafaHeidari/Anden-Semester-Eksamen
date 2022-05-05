@@ -59,10 +59,10 @@ public class SubcategoryController {
         categoryModel.updateCategory(caseID,problemName,txtBeskrivelse.getText());
     }
 
-    //
-    public void setId(String knap) throws SQLException {
-        this.problemName = knap;
-        txtBeskrivelse.setText(categoryModel.readCategory(caseID,knap));
-        subCatText.setText(knap);
+    // this method is used to sende information from en controller to other controller//
+    public void setId(String problemName) throws SQLException {
+        this.problemName = problemName;
+        txtBeskrivelse.setText(categoryModel.readCategory(caseID,problemName));
+        subCatText.setText(problemName);
     }
 }
