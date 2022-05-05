@@ -16,13 +16,13 @@ import java.sql.SQLException;
 
 public class SubcategoryController {
 
-    public Text subCatText;
-    public TextArea txtBeskrivelse;
     @FXML
     private JFXButton btnTilbage;
-
     @FXML
     private JFXButton btnLogud;
+
+    public Text subCatText;
+    public TextArea txtBeskrivelse;
 
    // this is instance variable is not used to now//
     private int caseID = 27;

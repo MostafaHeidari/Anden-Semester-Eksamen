@@ -9,6 +9,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -35,19 +36,34 @@
                <GridPane.margin>
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
+               <effect>
+                  <InnerShadow height="8.16" radius="2.125" width="2.34" />
+               </effect>
             </TextField>
             <TextField fx:id="txtefterNavnField" layoutX="10.0" layoutY="18.0" prefHeight="113.0" prefWidth="318.0" promptText="Efternavn" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
+               <effect>
+                  <InnerShadow height="8.16" radius="2.125" width="2.34" />
+               </effect>
             </TextField>
-            <TextField fx:id="txtEmailField" prefHeight="36.0" prefWidth="328.0" promptText="E-mail" GridPane.rowIndex="2" />
+            <TextField fx:id="txtEmailField" prefHeight="36.0" prefWidth="328.0" promptText="E-mail" GridPane.rowIndex="2">
+               <effect>
+                  <InnerShadow height="8.16" radius="2.125" width="2.34" />
+               </effect></TextField>
             <TextField fx:id="txtUserField" layoutX="10.0" layoutY="93.0" prefHeight="88.0" prefWidth="318.0" promptText="Brugernavn" style="-fx-background-color: EBF3EB;" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
+               <effect>
+                  <InnerShadow height="8.16" radius="2.125" width="2.34" />
+               </effect>
             </TextField>
-            <TextField fx:id="txtAlderFiled" prefHeight="36.0" prefWidth="328.0" promptText="Alder" GridPane.rowIndex="4" />
+            <TextField fx:id="txtAlderFiled" prefHeight="36.0" prefWidth="243.0" promptText="Alder" GridPane.rowIndex="4">
+               <effect>
+                  <InnerShadow height="8.16" radius="2.125" width="2.34" />
+               </effect></TextField>
          </children>
       </GridPane>
       <JFXButton fx:id="BtnOpretElev" layoutX="299.0" layoutY="404.0" onAction="#OpretElevActionButton" prefHeight="28.0" prefWidth="94.0" stylesheets="@../CSS/CreateStudent.css" text="Opret Elev" textFill="WHITE">
@@ -120,6 +136,9 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+               <effect>
+                  <InnerShadow height="28.07" radius="11.1975" width="18.72" />
+               </effect>
             </JFXButton>
             <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="21.0" layoutY="401.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
                <cursor>
@@ -135,9 +154,9 @@
          </font>
       </Label>
       <Label alignment="CENTER" layoutX="207.0" layoutY="182.0" text="Navn           " />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="207.0" layoutY="228.0" text="Efternavn      " />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="206.0" layoutY="277.0" text="E-mail          " />
-      <Label alignment="CENTER" layoutX="206.0" layoutY="320.0" text="BrugerNavn" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="206.0" layoutY="228.0" text="Efternavn      " />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="206.0" layoutY="268.0" text="E-mail          " />
+      <Label alignment="CENTER" layoutX="206.0" layoutY="316.0" text="BrugerNavn" />
       <Label alignment="CENTER" layoutX="207.0" layoutY="359.0" text="Alder           " />
    </children>
    <stylesheets>

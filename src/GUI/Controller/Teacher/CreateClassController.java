@@ -21,9 +21,7 @@ public class CreateClassController {
 
     public void saveBtn(ActionEvent actionEvent) throws IOException, SQLException {
         String klasseNavn = classNavnTxt.getText();
-
         uploadClassInfo(klasseNavn);
-
         cancel(actionEvent);
     }
 
