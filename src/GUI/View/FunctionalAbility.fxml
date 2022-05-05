@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXCheckBox?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
@@ -143,7 +144,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
                      <children>
-                        <JFXCheckBox fx:id="cb3" alignment="CENTER" contentDisplay="CENTER" onAction="#Checked3" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" text="CheckBox" textAlignment="CENTER">
+                        <JFXCheckBox fx:id="cb3" alignment="CENTER" contentDisplay="CENTER" onAction="#Checked3" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
                            <font>
                               <Font />
                            </font>
@@ -364,5 +365,6 @@
             <Font size="10.0" />
          </font>
       </Text>
+      <JFXButton fx:id="Button" layoutX="834.0" layoutY="557.0" onAction="#buttonSave" prefHeight="29.0" prefWidth="52.0" styleClass="Button" stylesheets="@CSS/FunctionalAbility.css" text="Gem" />
    </children>
 </AnchorPane>
