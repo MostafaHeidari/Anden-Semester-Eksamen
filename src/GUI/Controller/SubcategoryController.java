@@ -51,8 +51,11 @@ public class SubcategoryController {
 
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
 
+        if (categoryModel.readCategory(caseID,knap) == null){
 
-        categoryModel.createCategory(caseID,knap,txtBeskrivelse.getText());
+            categoryModel.createCategory(caseID,knap,txtBeskrivelse.getText());
+        }
+        categoryModel.updateCategory(caseID,knap,txtBeskrivelse.getText());
 
     }
     public void setId(String knap) throws SQLException {
