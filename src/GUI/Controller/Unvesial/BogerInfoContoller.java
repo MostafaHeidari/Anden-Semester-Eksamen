@@ -32,7 +32,7 @@ public class BogerInfoContoller {
     }
 
     public void btnTilbageBoger(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) tilbageBogerBtn.getScene().getWindow();
+        Stage switcher = (Stage) BtnTilbage.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/OpretBorger.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Borger");
