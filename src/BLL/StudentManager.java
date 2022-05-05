@@ -45,7 +45,6 @@ public class StudentManager {
     /**
      * Gets the editStudent student using editStudent from studentDAO
      * @param student
-     * @return
      * @throws SQLServerException
      */
     public void editStudent(Student student) throws Exception {
@@ -56,7 +55,6 @@ public class StudentManager {
      * Gets the addStudentToClass selectedClass and selectedStudent using addStudentToClass from studentDAO
      * @param selectedClass
      * @param selectedStudent
-     * @return
      * @throws SQLServerException
      */
     public void addStudentToClass(SchoolClass selectedClass, Student selectedStudent) throws SQLException {
@@ -66,7 +64,6 @@ public class StudentManager {
     /**
      * Gets the removeStudent selectedStudent using removeStudent from studentDAO
      * @param selectedStudent
-     * @return
      * @throws SQLServerException
      */
     public void removeStudent(Student selectedStudent) {

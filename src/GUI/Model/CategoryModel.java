@@ -24,7 +24,6 @@ public class CategoryModel {
      * @param caseID
      * @param ProblemNavn
      * @param ProblemBeskrivelse
-     * @return
      * @throws SQLServerException
      */
     public void createCategory(int caseID, String ProblemNavn, String ProblemBeskrivelse) throws SQLException{
@@ -47,7 +46,6 @@ public class CategoryModel {
      * @param caseID
      * @param ProblemNavn
      * @param ProblemBeskrivelse
-     * @return
      * @throws SQLServerException
      */
     public void updateCategory(int caseID, String ProblemNavn, String ProblemBeskrivelse) throws SQLException{

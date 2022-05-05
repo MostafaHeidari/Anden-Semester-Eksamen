@@ -37,7 +37,6 @@ public class ClassModel {
     /**
      * Gets the uploadKlasseInfo className using uploadKlasseInfo from classManger
      * @param className
-     * @return
      * @throws SQLServerException
      */
     public void uploadKlasseInfo(String className) throws SQLException {

@@ -25,7 +25,6 @@ public class StudentsInClassManager {
      * Gets the deleteStudentInClass selectedClass and selectedStudentInClass using deleteStudentInClass from studentInClassesDAO
      * @param selectedClass
      * @param selectedStudentInClass
-     * @return
      * @throws SQLServerException
      */
     public void deleteStudentInClass(SchoolClass selectedClass, Student selectedStudentInClass) throws SQLException {
