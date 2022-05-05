@@ -2,6 +2,7 @@ package BLL;
 
 import BE.SchoolClass;
 import DAL.ClassDAO;
+import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -11,9 +12,19 @@ import java.sql.SQLException;
 public class ClassManger {
     ClassDAO classDAO = new ClassDAO();
 
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public ClassManger() throws IOException {
     }
 
+    /**
+     * Gets the SchoolClass className using SchoolClass from ClassDAO
+     * @param className
+     * @return
+     * @throws SQLServerException
+     */
     public SchoolClass uploadClassInfo(String className) throws SQLException {
         return (classDAO.uploadClassInfo(className));
     }
