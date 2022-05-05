@@ -29,10 +29,12 @@ public class ClassManger {
         return (classDAO.uploadClassInfo(className));
     }
 
+    /**
+     * Gets the list of getAllClasses using the getAllClasses method in classDAO.
+     * @return a list of getAllClasses
+     */
     public ObservableList<SchoolClass> getAllClasses() {
         ObservableList<SchoolClass> classesObs = FXCollections.observableArrayList();
-
-
         try {
             classesObs.addAll(classDAO.getAllClasses());
         } catch (Exception e) {

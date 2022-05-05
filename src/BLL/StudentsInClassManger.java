@@ -11,10 +11,23 @@ import java.sql.SQLException;
 public class StudentsInClassManger {
     private StudentInClassesDAO studentInClassesDAO;
 
+    /**
+     * Gets the StudentsInClassManger using StudentsInClassManger from studentInClassesDAO
+     * @return
+     * @throws SQLServerException
+     */
     public StudentsInClassManger() throws IOException {
         studentInClassesDAO = new StudentInClassesDAO();
     }
 
+
+    /**
+     * Gets the deleteStudentInClass selectedClass and selectedStudentInClass using deleteStudentInClass from studentInClassesDAO
+     * @param selectedClass
+     * @param selectedStudentInClass
+     * @return
+     * @throws SQLServerException
+     */
     public void deleteStudentInClass(SchoolClass selectedClass, Student selectedStudentInClass) throws SQLException {
         studentInClassesDAO.deleteStudentInClass(selectedClass,selectedStudentInClass);
 

@@ -25,7 +25,10 @@ public class StudentManger {
         studentInClassesDAO = new StudentInClassesDAO();
     }
 
-
+    /**
+     * Gets the list of getAllStudents using the getAllStudents method in studentDAO.
+     * @return a list of getAllStudents
+     */
     public ObservableList<Student> getAllStudents() {
         ObservableList<Student> studentsObs = FXCollections.observableArrayList();
 
@@ -70,6 +73,11 @@ public class StudentManger {
         studentDAO.removeStudent(selectedStudent);
     }
 
+
+    /**
+     * Gets the list of getAllStudentsByClass using the getAllStudentsByClass method in studentInClassesDAO.
+     * @return a list of studentInClassesDAO
+     */
     public ObservableList<Student> getAllStudentsByClass(int classId) {
         ObservableList<Student> studentsObs = FXCollections.observableArrayList();
 
@@ -81,6 +89,16 @@ public class StudentManger {
         return studentsObs;
     }
 
+    /**
+     * Gets the uploadStudentinfo studentNavn, studentEfternavn, studentEmail, studentAlder and userName using uploadStudentinfo from studentDAO
+     * @param studentNavn
+     * @param studentEfternavn
+     * @param studentEmail
+     * @param studentAlder
+     * @param userName
+     * @return
+     * @throws SQLServerException
+     */
     public Student uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder, String userName) throws SQLException {
         return(studentDAO.uploadStudentinfo(studentNavn,studentEfternavn,studentEmail,studentAlder, userName));
     }
