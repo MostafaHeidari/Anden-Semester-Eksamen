@@ -26,10 +26,6 @@ import java.util.ResourceBundle;
 public class TeacherKlasseAndStudentsController implements Initializable {
 
     public StudentModel studentModel;
-    public JFXButton deleteStudentInClass;
-
-
-    private ClassModel klasseModel;
 
 
     public Student selectedStudent;
@@ -38,14 +34,22 @@ public class TeacherKlasseAndStudentsController implements Initializable {
 
     public SchoolClass selectedClass;
 
-    @FXML
-    public JFXButton TilbageForside;
+
     @FXML
     public JFXButton nyKlasse;
     @FXML
     public JFXButton nyStudent1;
     @FXML
     public JFXButton addStudentToClass;
+    @FXML
+    public JFXButton deleteStudentInClass;
+    @FXML
+    public JFXButton tilbageElever;
+    @FXML
+    public JFXButton tilbageBogerBtn;
+
+
+    private ClassModel klasseModel;
 
     @FXML
     public TableView tvKlasseInfomationer;
@@ -104,26 +108,26 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     }
 
     public void TilbageForsideBtn(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) TilbageForside.getScene().getWindow();
+        Stage switcher = (Stage) tilbageElever.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
         Scene scene = new Scene(root);
-        switcher.setTitle("EventCoordinatorManagement");
+        switcher.setTitle("Teacher");
         switcher.setScene(scene);
     }
 
     public void nyKlasseBtn(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) TilbageForside.getScene().getWindow();
+        Stage switcher = (Stage) tilbageElever.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateKlasse.fxml"));
         Scene scene = new Scene(root);
-        switcher.setTitle("EventCoordinatorManagement");
+        switcher.setTitle("Classe Manger");
         switcher.setScene(scene);
     }
 
     public void nyStudentBtn(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) TilbageForside.getScene().getWindow();
+        Stage switcher = (Stage) tilbageElever.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
         Scene scene = new Scene(root);
-        switcher.setTitle("EventCoordinatorManagement");
+        switcher.setTitle("Opret Student");
         switcher.setScene(scene);
     }
 
@@ -209,5 +213,29 @@ public class TeacherKlasseAndStudentsController implements Initializable {
             tvStudentsInClasses.getItems().remove(selectedStudentInClass);
             tvStudentsInClasses.refresh();
         }
+    }
+
+    public void btnTilbageBoger(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) tilbageBogerBtn.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/OpretBorger.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("Opret Borger");
+        switcher.setScene(scene);
+    }
+
+    public void citizenInfomationBtn(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) tilbageElever.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/CitizenInfo.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("Borger Informationer");
+        switcher.setScene(scene);
+    }
+
+    public void btnTilbageElever(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) tilbageElever.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("Opret Student");
+        switcher.setScene(scene);
     }
 }

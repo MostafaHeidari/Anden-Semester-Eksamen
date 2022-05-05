@@ -77,7 +77,7 @@ public class TeacherController {
         Stage switcher = (Stage) citizentBoutten.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/CitizenInfo.fxml"));
         Scene scene = new Scene(root);
-        switcher.setTitle("SOSUS System");
+        switcher.setTitle("Borger Informationer");
         switcher.setScene(scene);
     }
 }

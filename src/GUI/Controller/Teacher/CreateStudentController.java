@@ -226,6 +226,11 @@ public class CreateStudentController implements Initializable {
         }
     }
 
-    public void citizenInfomationBtn(ActionEvent event) {
+    public void citizenInfomationBtn(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) tilbageBogerBtn.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/CitizenInfo.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("Borger Informationer");
+        switcher.setScene(scene);
     }
 }
