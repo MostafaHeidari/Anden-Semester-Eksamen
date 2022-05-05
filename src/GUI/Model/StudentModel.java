@@ -3,6 +3,7 @@ package GUI.Model;
 import BE.SchoolClass;
 import BE.Student;
 import BLL.StudentManger;
+import BLL.StudentsInClassManger;
 import DAL.StudentDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,6 +16,7 @@ public class StudentModel {
 
     StudentDAO studentDAO = new StudentDAO();
     private ClassModel classModel;
+    private StudentsInClassManger studentsInClassManger;
 
 
     private ObservableList<Student> studentsList = FXCollections.observableArrayList();
@@ -68,5 +70,11 @@ public class StudentModel {
     public void removeStudent (Student selectedStudent) {
         studentManger.removeStudent(selectedStudent);
         studentsList.remove(selectedStudent);
+    }
+
+    public void deleteStudentInClass(SchoolClass selectedClass, Student selectedStudentInClass) throws SQLException {
+        studentsInClassManger.deleteStudentInClass(selectedClass,selectedStudentInClass);
+        studentInClassesList.remove(selectedStudentInClass);
+        classModel.uploadKlasseInfo(String.valueOf(selectedClass));
     }
 }

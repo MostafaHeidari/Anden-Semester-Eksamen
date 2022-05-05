@@ -2,6 +2,7 @@ package GUI.Controller.Teacher;
 
 import BE.SchoolClass;
 import BE.Student;
+import GUI.Controller.SimpleDialogController;
 import GUI.Model.ClassModel;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
@@ -29,6 +30,7 @@ public class TeacherKlasseAndStudentsController implements Initializable {
 
 
     private ClassModel klasseModel;
+
 
     public Student selectedStudent;
 
@@ -199,6 +201,13 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         tvStudentsInClasses.refresh();
     }
 
-    public void deleteStudentInClassBtn(ActionEvent event) {
+    public void deleteStudentInClassBtn(ActionEvent event) throws SQLException {
+        if(SimpleDialogController.delete()){
+            studentModel.deleteStudentInClass(selectedClass,
+             selectedStudentInClass
+            );
+            tvStudentsInClasses.getItems().remove(selectedStudentInClass);
+            tvStudentsInClasses.refresh();
+        }
     }
 }
