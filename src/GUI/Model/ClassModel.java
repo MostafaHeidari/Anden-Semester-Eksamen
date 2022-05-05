@@ -16,7 +16,7 @@ public class ClassModel {
     private ObservableList<SchoolClass> classList = FXCollections.observableArrayList();
 
     private ClassManger classManger;
-    
+
     /**
      * Constructor
      * @throws IOException
