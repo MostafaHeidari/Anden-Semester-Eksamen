@@ -20,7 +20,7 @@ public class CategoryDAO {
 
     public void createCategory(int caseID, String ProblemNavn, String ProblemBeskrivelse) throws SQLException {
 
-        String sql = "INSERT INTO ProblemBeskrivelse(caseID,ProblemNavn,ProblemBeskrivelse) VALUES (?,?,?);";
+        String sql = "INSERT INTO Helbredstilstande(caseID,ProblemNavn,ProblemBeskrivelse) VALUES (?,?,?);";
 
         try(Connection connection = DC.getConnection()){
 
@@ -66,7 +66,7 @@ public class CategoryDAO {
 
     public void updateCategory(int caseID, String ProblemNavn, String ProblemBeskrivelse) throws SQLException {
 
-        String sql = "UPDATE ProblemBeskrivelse SET ProblemBeskrivelse = (?)  WHERE caseID = ? AND ProblemNavn = ?;";
+        String sql = "UPDATE Helbredstilstande SET ProblemBeskrivelse = (?)  WHERE caseID = ? AND ProblemNavn = ?;";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -83,7 +83,7 @@ public class CategoryDAO {
     }
 
     public void deleteCategory(int caseID, String ProblemNavn, String ProblemBeskrivelse) throws SQLException {
-        String sql = "DELETE FROM ProblemBeskrivelse WHERE caseID = ? AND ProblemNavn = ?;";
+        String sql = "DELETE FROM Helbredstilstande WHERE caseID = ? AND ProblemNavn = ?;";
 
         try(Connection connection = DC.getConnection()){
 
