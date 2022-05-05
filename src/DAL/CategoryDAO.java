@@ -34,9 +34,8 @@ public class CategoryDAO {
             if (affectedRows == 1) {
                 ResultSet rs = ps.getGeneratedKeys();
                 if (rs.next()) {
-                    int klasseId = rs.getInt(1);
-                    SchoolClass klasseCord = new SchoolClass(klasseId, klasseNavn);
-                    return klasseCord;
+
+                    return rs.getString(1);
                 }
             }
             return null;*/
@@ -84,20 +83,6 @@ public class CategoryDAO {
             ps.setString(3, ProblemNavn);
 
             int affectedRows = ps.executeUpdate();
-            /*
-            if (affectedRows == 1) {
-                ResultSet rs = ps.getGeneratedKeys();
-                if (rs.next()) {
-
-                    return rs.getString(1);
-                }
-            }
-            return null;*/
-        } catch (SQLException sqlException) {
-            sqlException.printStackTrace();
-        }
-        try(Connection connection = DC.getConnection()){
-
             /*
             if (affectedRows == 1) {
                 ResultSet rs = ps.getGeneratedKeys();
