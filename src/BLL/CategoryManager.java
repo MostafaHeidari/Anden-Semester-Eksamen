@@ -13,8 +13,8 @@ public class CategoryManager {
     public CategoryManager() throws IOException {
     }
 
-    //this method is used to create category
+    //this method sender information til categoryDAO //
     public void createCategory(int caseID, String ProblemNavn, String ProblemBeskrivelse) throws SQLException {
-
+        categoryDAO.createCategory(caseID,ProblemNavn,ProblemBeskrivelse);
     }
 }
