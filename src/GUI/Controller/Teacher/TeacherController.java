@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class TeacherController {
+    public JFXButton citizentBoutten;
     @FXML
     private JFXButton klasserKnnap;
     @FXML
@@ -69,6 +70,14 @@ public class TeacherController {
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Login.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSUS System");
+        switcher.setScene(scene);
+    }
+
+    public void citizentBouttenBtn(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) citizentBoutten.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/CitizenInfo.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("Borger Informationer");
         switcher.setScene(scene);
     }
 }

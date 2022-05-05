@@ -30,6 +30,7 @@ public class StudentModel {
     public StudentModel() throws IOException {
         studentManger = new StudentManger();
         classModel = new ClassModel();
+        studentsInClassManger = new StudentsInClassManger();
     }
 
     public void uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder, String userName) throws SQLException {

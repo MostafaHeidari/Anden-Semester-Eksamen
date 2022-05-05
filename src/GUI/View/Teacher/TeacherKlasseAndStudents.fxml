@@ -9,11 +9,12 @@
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="787.0" prefWidth="1499.0" stylesheets="@../CSS/TeacherKlassAndStudents.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.TeacherKlasseAndStudentsController">
+<AnchorPane prefHeight="787.0" prefWidth="1654.0" stylesheets="@../CSS/TeacherKlassAndStudents.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.TeacherKlasseAndStudentsController">
    <children>
-      <Pane layoutX="24.0" layoutY="57.0" prefHeight="56.0" prefWidth="498.0" style="-fx-background-color: #FFFFFF;">
+      <Pane layoutX="194.0" layoutY="63.0" prefHeight="56.0" prefWidth="498.0" style="-fx-background-color: #FFFFFF;">
          <effect>
             <DropShadow height="9.3" radius="5.32" width="13.98" />
          </effect>
@@ -25,7 +26,7 @@
             </Label>
          </children>
       </Pane>
-      <TableView fx:id="tvStudent" layoutX="21.0" layoutY="124.0" prefHeight="514.0" prefWidth="499.0">
+      <TableView fx:id="tvStudent" layoutX="191.0" layoutY="130.0" prefHeight="514.0" prefWidth="499.0">
          <columns>
             <TableColumn fx:id="tcStudentId" prefWidth="48.0" text="ID " />
             <TableColumn fx:id="tcNameStudent" prefWidth="114.4000244140625" text="Navn" />
@@ -34,37 +35,33 @@
             <TableColumn fx:id="tcAlder" prefWidth="105.5999755859375" text="Alder" />
          </columns>
       </TableView>
-      <TableView fx:id="tvKlasseInfomationer" layoutX="705.0" layoutY="125.0" prefHeight="514.0" prefWidth="256.0">
+      <TableView fx:id="tvKlasseInfomationer" layoutX="875.0" layoutY="131.0" prefHeight="514.0" prefWidth="256.0">
          <columns>
             <TableColumn fx:id="tcKlasseId" prefWidth="70.933349609375" text="ID " />
             <TableColumn fx:id="tcKlasseNavn" prefWidth="192.79998779296875" text="KlasseNavn" />
          </columns>
       </TableView>
-      <TableView fx:id="tvStudentsInClasses" layoutX="1041.0" layoutY="123.0" prefHeight="514.0" prefWidth="396.0">
+      <TableView fx:id="tvStudentsInClasses" layoutX="1211.0" layoutY="129.0" prefHeight="514.0" prefWidth="396.0">
          <columns>
             <TableColumn fx:id="tcStudentNameInClass" prefWidth="196.0" text="Name" />
             <TableColumn fx:id="tcLastNameInClass" prefWidth="197.5999755859375" text="Efternavn" />
          </columns>
       </TableView>
-      <JFXButton fx:id="TilbageForside" layoutX="1290.0" layoutY="712.0" onAction="#TilbageForsideBtn" prefHeight="34.0" prefWidth="134.0" text="Tilbage til Forside">
+      <JFXButton fx:id="nyKlasse" layoutX="875.0" layoutY="665.0" onAction="#nyKlasseBtn" prefHeight="34.0" prefWidth="256.0" text="Ny Klasse">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="nyKlasse" layoutX="705.0" layoutY="659.0" onAction="#nyKlasseBtn" prefHeight="34.0" prefWidth="256.0" text="Ny Klasse">
+      <JFXButton fx:id="addStudentToClass" alignment="TOP_LEFT" layoutX="709.0" layoutY="185.0" onAction="#addStudentToClassBtn" prefHeight="27.0" prefWidth="141.0" text="Tilføj elev til Klasse">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="addStudentToClass" alignment="TOP_LEFT" layoutX="539.0" layoutY="179.0" onAction="#addStudentToClassBtn" prefHeight="27.0" prefWidth="141.0" text="Tilføj elev til Klasse">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor></JFXButton>
-      <FontAwesomeIconView fx:id="pile" fill="WHITE" layoutX="660.0" layoutY="199.0" selectionStart="1" size="20" tabSize="20" text="" />
-      <JFXButton fx:id="nyStudent1" layoutX="22.0" layoutY="659.0" onAction="#nyStudentBtn" prefHeight="34.0" prefWidth="498.0" text="Ny Elev">
+      <FontAwesomeIconView fx:id="pile" fill="WHITE" layoutX="830.0" layoutY="205.0" selectionStart="1" size="20" tabSize="20" text="" />
+      <JFXButton fx:id="nyStudent1" layoutX="192.0" layoutY="665.0" onAction="#nyStudentBtn" prefHeight="34.0" prefWidth="498.0" text="Ny Elev">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <Pane layoutX="704.0" layoutY="53.0" prefHeight="56.0" prefWidth="252.0" style="-fx-background-color: #FFFFFF;">
+      <Pane layoutX="874.0" layoutY="59.0" prefHeight="56.0" prefWidth="252.0" style="-fx-background-color: #FFFFFF;">
          <effect>
             <DropShadow height="9.3" radius="5.32" width="13.98" />
          </effect>
@@ -76,7 +73,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="1042.0" layoutY="56.0" prefHeight="56.0" prefWidth="396.0" style="-fx-background-color: #FFFFFF;">
+      <Pane layoutX="1212.0" layoutY="62.0" prefHeight="56.0" prefWidth="396.0" style="-fx-background-color: #FFFFFF;">
          <effect>
             <DropShadow height="9.3" radius="5.32" width="13.98" />
          </effect>
@@ -88,10 +85,60 @@
             </Label>
          </children>
       </Pane>
-      <JFXButton fx:id="deleteStudentInClass" layoutX="1042.0" layoutY="659.0" onAction="#deleteStudentInClassBtn" prefHeight="34.0" prefWidth="396.0" text="Fjen Student fra Klasse">
+      <JFXButton fx:id="deleteStudentInClass" layoutX="1212.0" layoutY="665.0" onAction="#deleteStudentInClassBtn" prefHeight="34.0" prefWidth="396.0" text="Fjen Student fra Klasse">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
+      <Pane layoutX="-4.0" layoutY="-8.0" prefHeight="795.0" prefWidth="179.0" style="-fx-background-color: #D4D3BE;">
+         <children>
+            <JFXButton fx:id="BtnTilbage" layoutY="741.0" onAction="#TilbageForsideBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="14.0" layoutY="47.0" text="Oprettelse af Elev">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="34.0" layoutY="90.0" startX="-14.899984359741211" startY="1.52587890625E-5" stroke="WHITE" />
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="40.0" layoutY="769.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <JFXButton fx:id="tilbageElever" layoutY="679.0" onAction="#btnTilbageElever" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Elever">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="tilbageBogerBtn" layoutY="623.0" onAction="#btnTilbageBoger" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Boger">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="40.0" layoutY="705.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="40.0" layoutY="649.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <JFXButton fx:id="citizenInfomation" layoutY="569.0" onAction="#citizenInfomationBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="BogerInfomationer">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="18.0" layoutY="595.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

@@ -116,6 +116,16 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
+            <JFXButton fx:id="citizenInfomation" layoutY="375.0" onAction="#citizenInfomationBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="BogerInfomationer">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="21.0" layoutY="401.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
          </children>
       </Pane>
       <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="819.0" layoutY="60.0" size="20" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
