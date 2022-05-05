@@ -65,4 +65,8 @@ public class StudentManger {
         }
         return studentsObs;
     }
+
+    public Student uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder, String userName) throws SQLException {
+        return(studentDAO.uploadStudentinfo(studentNavn,studentEfternavn,studentEmail,studentAlder, userName));
+    }
 }
