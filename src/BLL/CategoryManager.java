@@ -17,4 +17,15 @@ public class CategoryManager {
     public void createCategory(int caseID, String ProblemNavn, String ProblemBeskrivelse) throws SQLException {
         categoryDAO.createCategory(caseID,ProblemNavn,ProblemBeskrivelse);
     }
+
+
+    // read category method
+    public String readCategory(int caseID, String ProblemNavn) throws SQLException {
+        return categoryDAO.readCategory(caseID,ProblemNavn);
+    }
+
+    //update category method
+    public void updateCategory(int caseID, String ProblemNavn, String ProblemBeskrivelse) throws SQLException{
+        categoryDAO.updateCategory(caseID,ProblemNavn,ProblemBeskrivelse);
+    }
 }
