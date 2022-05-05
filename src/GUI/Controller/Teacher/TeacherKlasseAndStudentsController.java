@@ -87,13 +87,13 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        tvStudentsInClasses.setOnMouseClicked((MouseEvent event) -> {
+            setSelectedItems();
+        });
         tvKlasseInfomationer.setOnMouseClicked((MouseEvent event) -> {
             setSelectedItems();
         });
         tvStudent.setOnMouseClicked((MouseEvent event) -> {
-            setSelectedItems();
-        });
-        tvStudentsInClasses.setOnMouseClicked((MouseEvent event) -> {
             setSelectedItems();
         });
     }
@@ -174,6 +174,10 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     }
 
     private void setSelectedItems() {
+        if (tvStudentsInClasses.getSelectionModel().getSelectedItem() != null)
+        {
+            selectedStudentInClass = (Student) tvStudentsInClasses.getSelectionModel().getSelectedItem();
+        }
         if (tvStudent.getSelectionModel().getSelectedItem() != null)
         {
             selectedStudent = (Student) tvStudent.getSelectionModel().getSelectedItem();
@@ -182,10 +186,6 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         {
             selectedClass = (SchoolClass) tvKlasseInfomationer.getSelectionModel().getSelectedItem();
             setStudentsInClasses();
-        }
-        if (tvStudentsInClasses.getSelectionModel().getSelectedItem() != null)
-        {
-            selectedStudentInClass = (Student) tvStudentsInClasses.getSelectionModel().getSelectedItem();
         }
     }
 
