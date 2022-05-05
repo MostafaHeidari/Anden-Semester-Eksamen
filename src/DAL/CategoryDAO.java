@@ -30,15 +30,7 @@ public class CategoryDAO {
             ps.setString(3, ProblemBeskrivelse);
 
             int affectedRows = ps.executeUpdate();
-            /*
-            if (affectedRows == 1) {
-                ResultSet rs = ps.getGeneratedKeys();
-                if (rs.next()) {
 
-                    return rs.getString(1);
-                }
-            }
-            return null;*/
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
         }
@@ -83,15 +75,7 @@ public class CategoryDAO {
             ps.setString(3, ProblemNavn);
 
             int affectedRows = ps.executeUpdate();
-            /*
-            if (affectedRows == 1) {
-                ResultSet rs = ps.getGeneratedKeys();
-                if (rs.next()) {
 
-                    return rs.getString(1);
-                }
-            }
-            return null;*/
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
         }
@@ -108,15 +92,7 @@ public class CategoryDAO {
             ps.setString(2, ProblemNavn);
 
             int affectedRows = ps.executeUpdate();
-            /*
-            if (affectedRows == 1) {
-                ResultSet rs = ps.getGeneratedKeys();
-                if (rs.next()) {
 
-                    return rs.getString(1);
-                }
-            }
-            return null;*/
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
         }
