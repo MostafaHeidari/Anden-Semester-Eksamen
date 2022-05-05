@@ -32,13 +32,18 @@ public class BogerInfoContoller {
     }
 
     public void btnTilbageBoger(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) tilbageBogerBtn.getScene().getWindow();
+        Stage switcher = (Stage) BtnTilbage.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/OpretBorger.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Borger");
         switcher.setScene(scene);
     }
 
-    public void btnTilbageElever(ActionEvent event) {
+    public void btnTilbageElever(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) tilbageKlasser.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("Opret Student");
+        switcher.setScene(scene);
     }
 }
