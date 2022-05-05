@@ -12,7 +12,7 @@
      -fx-text-fill: red;
 }
 
-#txtnavnField,#txtefterNavnField,#txtcprField,#txtEmailField,#txtTelefonField,#txtadgangskodField,#txtAlderFiled{
+#txtnavnField,#txtefterNavnField,#txtcprField,#txtEmailField,#txtTelefonField,#txtadgangskodField,#txtAlderFiled,#txtUserField{
      -fx-control-inner-background: #15B559;
      -fx-text-fill: #2B2121;
      -fx-background-color:  #EBF3EB;

@@ -28,6 +28,9 @@ public class EditStudentController {
     public TextField txtAlderEditStudentFiled;
 
     @FXML
+    public TextField txtUserNameEditField;
+
+    @FXML
     private JFXButton BtnTilbageOpretStudent;
     @FXML
     private JFXButton Logud;
@@ -43,18 +46,21 @@ public class EditStudentController {
 
 
 
-   /* this method save the information of student*/
+   /*Student update action.This method save the information of student*/
     public void GamOplysingerActionButton(ActionEvent actionEvent) throws Exception {
         String updateStudentName = txtnavnEditStudentField.getText();
         String updateStudentEfterNavn = txtEfterNavnEditStudentField.getText();
-        String updateStudentAlder = txtAlderEditStudentFiled.getText();
         String updateStudentEmail = txtEmailEditStudentField.getText();
-        //String updateStudentEmail = txtEmailEditStudentField.getText();
+        String updateStudentAlder = txtAlderEditStudentFiled.getText();
+        String updateStudentUser = txtUserNameEditField.getText();
+
+
 
 
         this.selectedStudent.setStudentName(updateStudentName);
         this.selectedStudent.setLastName(updateStudentEfterNavn);
         this.selectedStudent.setEmail(updateStudentEmail);
+        this.selectedStudent.setUserName(updateStudentUser);
         this.selectedStudent.setAge(updateStudentAlder);
 
         studentModel.editStudent(this.selectedStudent);
@@ -69,8 +75,8 @@ public class EditStudentController {
         txtnavnEditStudentField.setText(student.getStudentName());
         txtEfterNavnEditStudentField.setText(student.getLastName());
         txtEmailEditStudentField.setText(student.getEmail());
+        txtUserNameEditField.setText(student.getUserName());
         txtAlderEditStudentFiled.setText(student.getAge());
-        txtEmailEditStudentField.setText(student.getEmail());
 
         this.selectedStudent = student;
     }

@@ -50,7 +50,8 @@ public class StudentDAO {
             preparedStatement.setString(2, studentUpdate.getLastName());
             preparedStatement.setString(3, studentUpdate.getEmail());
             preparedStatement.setString(4, studentUpdate.getAge());
-            preparedStatement.setInt(5, studentUpdate.getStudentId());
+            preparedStatement.setString(5, studentUpdate.getUserName());
+            preparedStatement.setInt(6, studentUpdate.getStudentId());
             preparedStatement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();

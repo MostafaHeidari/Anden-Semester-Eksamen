@@ -32,14 +32,14 @@ public class StudentInClassesDAO {
         pst.executeUpdate();
     }
 
-    public List<Student> getAllStudentsInClasses(int ClassId) {
+    public List<Student> getAllStudentsInClass(int classId) {
         ArrayList<Student> allStudentsInClasses = new ArrayList<>();
 
         try (Connection connection = DC.getConnection()) {
 
-            String sql = "SELECT * FROM StudentTable INNER JOIN ClassStudents ON ClassStudents.StudentID = Student.Id WHERE ClassStudents.ClassID = ?;";
+            String sql = "SELECT StudentTable.* FROM StudentTable INNER JOIN ClassStudents ON StudentTable.StudentID = ClassStudents.StudentID WHERE ClassStudents.ClassID = (?);";
             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            statement.setInt(1, ClassId);
+            statement.setInt(1, classId);
             statement.execute();
             ResultSet rs = statement.getResultSet();
             while (rs.next()) {
@@ -48,7 +48,7 @@ public class StudentInClassesDAO {
                 String email = rs.getString("EmailStudent");
                 String age = rs.getString("StudentAge");
                 String username = rs.getString("UserName");
-                int id = rs.getInt("Id");
+                int id = rs.getInt("StudentID");
 
                 allStudentsInClasses.add(new Student(id, name, lastName, email, age, username));
 

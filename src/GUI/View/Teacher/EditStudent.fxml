@@ -13,9 +13,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.EditStudentController">
+<AnchorPane prefHeight="450.0" prefWidth="693.0" stylesheets="@../CSS/CreateStudent.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.EditStudentController">
    <children>
-      <GridPane fx:id="GridPane" layoutX="205.0" layoutY="152.0" prefHeight="187.0" prefWidth="328.0" stylesheets="@../CSS/OprettelseElev.css">
+      <GridPane fx:id="GridPane" layoutX="269.0" layoutY="162.0" prefHeight="187.0" prefWidth="328.0" stylesheets="@../CSS/OprettelseElev.css">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
          </columnConstraints>
@@ -38,7 +38,7 @@
                </GridPane.margin>
             </TextField>
             <TextField fx:id="txtEmailEditStudentField" prefHeight="31.0" prefWidth="328.0" promptText="E-mail" GridPane.rowIndex="2" />
-            <TextField fx:id="txtTelefonField" layoutX="10.0" layoutY="93.0" prefHeight="88.0" prefWidth="318.0" promptText="Brugernavn" GridPane.rowIndex="3">
+            <TextField fx:id="txtUserNameEditField" layoutX="10.0" layoutY="93.0" prefHeight="88.0" prefWidth="318.0" promptText="Brugernavn" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
@@ -46,17 +46,17 @@
             <TextField fx:id="txtAlderEditStudentFiled" prefHeight="32.0" prefWidth="328.0" promptText="Alder" GridPane.rowIndex="4" />
          </children>
       </GridPane>
-      <JFXButton fx:id="BtnGamOplysinger" layoutX="413.0" layoutY="365.0" onAction="#GamOplysingerActionButton" prefHeight="28.0" prefWidth="119.0" stylesheets="@../CSS/OprettelseElev.css" text="Gem oplysninger" textFill="WHITE">
+      <JFXButton fx:id="BtnGamOplysinger" layoutX="477.0" layoutY="377.0" onAction="#GamOplysingerActionButton" prefHeight="28.0" prefWidth="119.0" stylesheets="@../CSS/OprettelseElev.css" text="Gem oplysninger" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <Label layoutX="205.0" layoutY="72.0" text="Redigerede det udvalgte Elev">
+      <Label layoutX="271.0" layoutY="81.0" text="Redigerede det udvalgte Elev">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <JFXButton fx:id="Logud" layoutX="577.0" layoutY="32.0" onAction="#LogOutAction" style="-fx-background-color: #009B42;" text="Log ud" textFill="WHITE">
+      <JFXButton fx:id="Logud" layoutX="618.0" layoutY="28.0" onAction="#LogOutAction" style="-fx-background-color: #009B42;" text="Log ud" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -75,5 +75,10 @@
             </FontAwesomeIconView>
          </children>
       </Pane>
+      <Label alignment="CENTER" layoutX="149.0" layoutY="173.0" prefHeight="18.0" prefWidth="119.0" text="Navn           " />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="151.0" layoutY="211.0" prefHeight="18.0" prefWidth="119.0" text="Efternavn      " />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="247.0" prefHeight="18.0" prefWidth="119.0" text="E-mail          " />
+      <Label alignment="CENTER" layoutX="148.0" layoutY="285.0" prefHeight="18.0" prefWidth="119.0" text="BrugerNavn" />
+      <Label alignment="CENTER" layoutX="146.0" layoutY="324.0" prefHeight="18.0" prefWidth="126.0" text="Alder           " />
    </children>
 </AnchorPane>

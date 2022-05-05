@@ -7,7 +7,7 @@
     -fx-text-fill: white;
 }
 
-#txtnavnEditStudentField,#txtEfterNavnEditStudentField,#txtcprField,#txtEmailEditStudentField,#txtTelefonField,#txtAlderEditStudentFiled,#txtUserField{
+#txtnavnEditStudentField,#txtEfterNavnEditStudentField,#txtcprField,#txtEmailEditStudentField,#txtTelefonField,#txtAlderEditStudentFiled,#txtUserNameEditField{
     -fx-control-inner-background: #15B559;
     -fx-text-fill: #2B2121;
     -fx-background-color:  #BBE5E8;
