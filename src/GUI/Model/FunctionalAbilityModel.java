@@ -11,6 +11,10 @@ public class FunctionalAbilityModel {
     FunctionalAbilityDAO functionalAbilityDAO = new FunctionalAbilityDAO();
     private FunctionalAbilityManager functionalAbilityManager;
 
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public FunctionalAbilityModel() throws IOException {
         functionalAbilityManager = new FunctionalAbilityManager();
     }
