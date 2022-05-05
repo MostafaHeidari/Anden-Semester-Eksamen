@@ -107,7 +107,11 @@ public class StudentDAO {
         }
     }
 
-
+    /**
+     * This method gets a list of Student with getAllStudents from the database
+     * @return getAllStudents from database
+     * @throws SQLServerException
+     */
     public List<Student> getAllStudents() throws SQLException {
         Connection con = DC.getConnection();
 

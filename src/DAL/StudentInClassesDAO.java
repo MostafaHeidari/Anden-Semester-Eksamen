@@ -45,7 +45,7 @@ public class StudentInClassesDAO {
 
 
     /**
-     * This method gets a list of student with getAllStudentsInClass from the database
+     * This method gets a list of Student with getAllStudentsInClass from the database
      * @param classId
      * @return allStudentsInClasses from database
      * @throws SQLServerException

@@ -2,6 +2,7 @@ package DAL;
 
 import BE.Login;
 import DAL.db.DatabaseConnector;
+import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.io.IOException;
 import java.sql.*;
@@ -10,9 +11,20 @@ import java.sql.*;
 public class OpretStudentLoginDAO {
     private final DatabaseConnector connector = DatabaseConnector.getInstance();
 
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public OpretStudentLoginDAO() throws IOException {
     }
 
+    /**
+     * this method gets a addStudent from the database
+     * @param Username
+     * @param Password
+     * @return
+     * @throws SQLServerException
+     */
     public Login addStudent(String Username, String Password) throws SQLException {
 
         String sql = "INSERT INTO Login(Username, Password, Usertype) VALUES (?,?,?)";
