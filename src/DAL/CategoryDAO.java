@@ -47,18 +47,17 @@ public class CategoryDAO {
             ps.setInt(1, caseID);
             ps.setString(2, ProblemNavn);
 
-            int affectedRows = ps.executeUpdate();
-
-            if (affectedRows == 1) {
-                ResultSet rs = ps.getGeneratedKeys();
-                if (rs.next()) {
-
-                    return rs.getString(1);
-                }
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                String result = rs.getString(1);
+                System.out.println(result);
+                return result;
             }
+
             return null;
 
         } catch (SQLException sqlException) {
+            System.out.println("test3");
             sqlException.printStackTrace();
         }
         return null;
