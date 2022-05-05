@@ -3,6 +3,7 @@ package DAL;
 import BE.Login;
 import BE.SchoolClass;
 import DAL.db.DatabaseConnector;
+import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.io.IOException;
 import java.sql.*;
@@ -13,11 +14,22 @@ public class CategoryDAO {
 
     private DatabaseConnector DC;
 
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public CategoryDAO() throws IOException
     {
         DC = new DatabaseConnector();
     }
 
+    /**
+     * this method gets a createCategory from the database
+     * @param caseID
+     * @param ProblemNavn
+     * @param ProblemBeskrivelse
+     * @throws SQLServerException
+     */
     public void createCategory(int caseID, String ProblemNavn, String ProblemBeskrivelse) throws SQLException {
 
         String sql = "INSERT INTO Helbredstilstande(caseID,ProblemNavn,ProblemBeskrivelse) VALUES (?,?,?);";
@@ -36,7 +48,12 @@ public class CategoryDAO {
         }
     }
 
-
+    /**
+     * this method gets a readCategory from the database
+     * @param caseID
+     * @param ProblemNavn
+     * @throws SQLServerException
+     */
     public String readCategory(int caseID, String ProblemNavn) throws SQLException {
 
         String sql = "SELECT ProblemBeskrivelse FROM Helbredstilstande WHERE caseID = (?) AND ProblemNavn = (?);";
@@ -63,6 +80,13 @@ public class CategoryDAO {
         return null;
     }
 
+    /**
+     * this method gets a updateCategory from the database
+     * @param caseID
+     * @param ProblemNavn
+     * @param ProblemBeskrivelse
+     * @throws SQLServerException
+     */
     public void updateCategory(int caseID, String ProblemNavn, String ProblemBeskrivelse) throws SQLException {
 
         String sql = "UPDATE Helbredstilstande SET ProblemBeskrivelse = (?)  WHERE caseID = (?) AND ProblemNavn = (?);";
@@ -81,6 +105,13 @@ public class CategoryDAO {
 
     }
 
+    /**
+     * this method gets a deleteCategory from the database
+     * @param caseID
+     * @param ProblemNavn
+     * @param ProblemBeskrivelse
+     * @throws SQLServerException
+     */
     public void deleteCategory(int caseID, String ProblemNavn, String ProblemBeskrivelse) throws SQLException {
         String sql = "DELETE FROM Helbredstilstande WHERE caseID = ? AND ProblemNavn = ?;";
 

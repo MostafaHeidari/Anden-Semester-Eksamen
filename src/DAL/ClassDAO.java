@@ -2,6 +2,7 @@ package DAL;
 
 import BE.SchoolClass;
 import DAL.db.DatabaseConnector;
+import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.io.IOException;
 import java.sql.*;
@@ -12,11 +13,21 @@ public class ClassDAO {
 
     private DatabaseConnector DC;
 
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public ClassDAO() throws IOException
     {
         DC = new DatabaseConnector();
     }
 
+    /**
+     * this method gets a uploadClassInfo from the database
+     * @param klasseNavn
+     * @return
+     * @throws SQLServerException
+     */
     public SchoolClass uploadClassInfo(String klasseNavn) throws SQLException {
         Connection connection = DC.getConnection();
 
@@ -35,7 +46,11 @@ public class ClassDAO {
         return null;
     }
 
-
+    /**
+     * This method gets a list of SchoolClass with getAllClasses from the database
+     * @return allClasses from database
+     * @throws SQLServerException
+     */
     public List<SchoolClass> getAllClasses() throws SQLException {
         Connection con = DC.getConnection();
 

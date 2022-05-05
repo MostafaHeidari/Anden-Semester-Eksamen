@@ -13,6 +13,7 @@ public class DatabaseConnector {
     private static DatabaseConnector instance = null;
     private static final String PROP_FILE = "config.properties";
     private final SQLServerDataSource dataSource;
+
     /**
      * Constructor for the database connector.
      */
