@@ -126,7 +126,6 @@ public class Student {
     /**
      * ToString method
      * @return studentId, studentName, lastName, email, age, userName
-     *
      */
     @Override
     public String toString() {
