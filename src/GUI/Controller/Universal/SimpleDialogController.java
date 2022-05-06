@@ -1,4 +1,4 @@
-package GUI.Controller.Unvesial;
+package GUI.Controller.Universal;
 
 import javax.swing.*;
 
