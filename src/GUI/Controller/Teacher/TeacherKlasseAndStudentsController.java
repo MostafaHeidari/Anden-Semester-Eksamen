@@ -2,7 +2,8 @@ package GUI.Controller.Teacher;
 
 import BE.SchoolClass;
 import BE.Student;
-import GUI.Controller.Unvesial.SimpleDialogController;
+
+import GUI.Controller.Universal.SimpleDialogController;
 import GUI.Model.ClassModel;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
@@ -27,6 +28,8 @@ public class TeacherKlasseAndStudentsController implements Initializable {
 
     public StudentModel studentModel;
 
+    public ClassModel classModel;
+
 
     public Student selectedStudent;
 
@@ -47,9 +50,6 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     public JFXButton tilbageElever;
     @FXML
     public JFXButton tilbageBogerBtn;
-
-
-    private ClassModel klasseModel;
 
     @FXML
     public TableView tvKlasseInfomationer;
@@ -99,7 +99,7 @@ public class TeacherKlasseAndStudentsController implements Initializable {
             tvKlasseInfomationer.getItems().clear();
 
 
-            tvKlasseInfomationer.setItems(klasseModel.getAllClasses());
+            tvKlasseInfomationer.setItems(classModel.getAllClasses());
         });
         tvKlasseInfomationer.setOnMouseClicked((MouseEvent event) -> {
             setSelectedItems();
@@ -114,7 +114,7 @@ public class TeacherKlasseAndStudentsController implements Initializable {
      * @throws IOException
      */
     public TeacherKlasseAndStudentsController() throws IOException {
-        klasseModel = new ClassModel();
+        classModel = new ClassModel();
         studentModel = new StudentModel();
     }
 
@@ -161,7 +161,7 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         tcKlasseNavn.setCellValueFactory(new PropertyValueFactory<>("className"));
 
 
-        tvKlasseInfomationer.setItems(klasseModel.getAllClasses());
+        tvKlasseInfomationer.setItems(classModel.getAllClasses());
         if(tvKlasseInfomationer.getItems().size() > 0){ //Set den valgte til den første i listen, hvis der er nogen
             selectedClass = (SchoolClass) tvKlasseInfomationer.getItems().get(0);
         }
@@ -283,5 +283,11 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Student");
         switcher.setScene(scene);
+    }
+
+    public void deleteAClassBtn(ActionEvent event) {
+        if (SimpleDialogController.delete())
+            classModel.deleteAClass(selectedClass);
+            tvKlasseInfomationer.refresh();
     }
 }

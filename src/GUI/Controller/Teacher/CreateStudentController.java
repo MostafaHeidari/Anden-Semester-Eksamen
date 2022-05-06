@@ -1,7 +1,7 @@
 package GUI.Controller.Teacher;
 
 import BE.Student;
-import GUI.Controller.Unvesial.SimpleDialogController;
+import GUI.Controller.Universal.SimpleDialogController;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;

@@ -42,4 +42,9 @@ public class ClassModel {
     public void uploadKlasseInfo(String className) throws SQLException {
         classList.add(classManger.uploadClassInfo(className));
     }
+
+    public void deleteAClass(SchoolClass selectedClass) {
+        classList.remove(selectedClass);
+        classManger.deleteAClass(selectedClass);
+    }
 }

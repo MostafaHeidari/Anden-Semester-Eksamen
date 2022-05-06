@@ -140,5 +140,11 @@
             </FontAwesomeIconView>
          </children>
       </Pane>
+      <JFXButton fx:id="deleteAClass" alignment="TOP_LEFT" layoutX="709.0" layoutY="220.0" onAction="#deleteAClassBtn" prefHeight="27.0" prefWidth="141.0" text="Delete en Klasse">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <FontAwesomeIconView fx:id="pile1" fill="WHITE" layoutX="830.0" layoutY="240.0" selectionStart="1" size="20" tabSize="20" text="" />
    </children>
 </AnchorPane>
