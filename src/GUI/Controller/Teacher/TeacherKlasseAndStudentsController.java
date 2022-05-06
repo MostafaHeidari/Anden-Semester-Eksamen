@@ -285,6 +285,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         switcher.setScene(scene);
     }
 
+    /**
+     * delete a class
+     */
     public void deleteAClassBtn(ActionEvent event) {
         if (SimpleDialogController.delete())
             classModel.deleteAClass(selectedClass);

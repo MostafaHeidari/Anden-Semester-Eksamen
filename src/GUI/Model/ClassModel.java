@@ -43,6 +43,10 @@ public class ClassModel {
         classList.add(classManger.uploadClassInfo(className));
     }
 
+    /**
+     * Gets the deleteAClass selectedClass using deleteAClass from classManger
+     * @param selectedClass
+     */
     public void deleteAClass(SchoolClass selectedClass) {
         classList.remove(selectedClass);
         classManger.deleteAClass(selectedClass);
