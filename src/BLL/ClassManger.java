@@ -1,7 +1,7 @@
 package BLL;
 
 import BE.SchoolClass;
-import DAL.ClassDAO;
+import DAL.db.Teacher.ClassDAO;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

@@ -4,7 +4,7 @@ import BE.SchoolClass;
 import BE.Student;
 import BLL.StudentManager;
 import BLL.StudentsInClassManager;
-import DAL.StudentDAO;
+import DAL.db.Teacher.StudentDAO;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
