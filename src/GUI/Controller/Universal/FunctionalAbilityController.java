@@ -26,7 +26,6 @@ public class FunctionalAbilityController implements Initializable {
 
     @FXML
     private Button Button;
-
     @FXML
     private CheckBox cb1;
     @FXML
@@ -62,14 +61,20 @@ public class FunctionalAbilityController implements Initializable {
     private String[] stringResult;
 
 
-
-
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public FunctionalAbilityController() throws IOException {
         this.functionalAbilityModel = new FunctionalAbilityModel();
         this.functionalAbilityDAO = new FunctionalAbilityDAO();
     }
 
-    //deselects all other checkboxes, when you select one
+    /**
+     * deselects all other checkboxes, when you select one
+     * @param actionEvent
+     * @param row
+     */
     private void deselectOthers (ActionEvent actionEvent, CheckBox[] row){
         final Node source = (Node) actionEvent.getSource();
         String id = source.getId();
@@ -82,7 +87,10 @@ public class FunctionalAbilityController implements Initializable {
         }
     }
 
-    //Nuværende tilstands knapper
+    /**
+     * nuværende tilstands knapper
+     * @param actionEvent
+     */
     public void Checked1(ActionEvent actionEvent) {
         deselectOthers(actionEvent, row1);
     }
@@ -107,8 +115,10 @@ public class FunctionalAbilityController implements Initializable {
         deselectOthers(actionEvent, row1);
     }
 
-
-    //Kommene tilstands knapper
+    /**
+     * Kommene tilstands knapper
+     * @param actionEvent
+     */
     public void checked21(ActionEvent actionEvent) {
         deselectOthers(actionEvent, row2);
     }
@@ -133,6 +143,12 @@ public class FunctionalAbilityController implements Initializable {
         deselectOthers(actionEvent, row2);
     }
 
+    /**
+     * saves functional ability
+     * @param actionEvent
+     * @throws IOException
+     * @throws SQLException
+     */
     public void buttonSave(ActionEvent actionEvent) throws IOException, SQLException {
 
 //switches scene when you press save
@@ -164,6 +180,11 @@ public class FunctionalAbilityController implements Initializable {
         //save choice to database
     }
 
+    /**
+     * initialize
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //array of checkboxes in row 1 and 2

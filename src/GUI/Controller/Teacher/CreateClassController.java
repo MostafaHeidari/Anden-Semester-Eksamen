@@ -19,7 +19,10 @@ public class CreateClassController {
     public TextField classNavnTxt;
     ClassModel classModelInfo = new ClassModel();
 
-
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public CreateClassController() throws IOException {
     }
 

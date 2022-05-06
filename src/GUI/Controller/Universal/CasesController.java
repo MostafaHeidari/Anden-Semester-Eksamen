@@ -37,6 +37,9 @@ public class CasesController {
     @FXML
     public Text LastNameCitizen;
 
+    /**
+     * Goes to CitizenInfo view
+     */
     public void backToLastPageBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) backToLastPage.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/CitizenInfo.fxml"));
@@ -45,6 +48,9 @@ public class CasesController {
         switcher.setScene(scene);
     }
 
+    /**
+     * Goes to TeacherKlasseAndStudents view
+     */
     public void backClassBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) backClass.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
@@ -53,6 +59,9 @@ public class CasesController {
         switcher.setScene(scene);
     }
 
+    /**
+     * Goes to CreateCitizen view
+     */
     public void backCitizenBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) backCitizen.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateCitizen.fxml"));
@@ -61,6 +70,9 @@ public class CasesController {
         switcher.setScene(scene);
     }
 
+    /**
+     * Goes to CreateStudent view
+     */
     public void backStudentBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) backStudent.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));

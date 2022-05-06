@@ -37,11 +37,17 @@ public class CitizenInfoContoller implements Initializable {
     @FXML
     public TableColumn tcCitizenAlder;
 
-
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public CitizenInfoContoller() throws IOException {
         citizenInfoModel = new CitizenInfoModel();
     }
 
+    /**
+     * initialize
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -51,6 +57,9 @@ public class CitizenInfoContoller implements Initializable {
         }
     }
 
+    /**
+     * Sets the StudentTableView
+     */
     public void setStudentTableView() throws IOException {
 
         tcCitizenId.setCellValueFactory(new PropertyValueFactory<>("citizenId"));
@@ -65,7 +74,9 @@ public class CitizenInfoContoller implements Initializable {
         tvCitizenInfo.setItems(citizenInfoModel.getAllCitizens());
     }
 
-
+    /**
+     * Goes to Teacher view
+     */
     public void backToLastPageBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) BtnTilbage.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
@@ -74,6 +85,9 @@ public class CitizenInfoContoller implements Initializable {
         switcher.setScene(scene);
     }
 
+    /**
+     * Goes to TeacherKlasseAndStudents view
+     */
     public void backClassBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) tilbageKlasser.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
@@ -82,6 +96,9 @@ public class CitizenInfoContoller implements Initializable {
         switcher.setScene(scene);
     }
 
+    /**
+     * Goes to CreateCitizen view
+     */
     public void backCitizenBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) BtnTilbage.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateCitizen.fxml"));
@@ -90,6 +107,9 @@ public class CitizenInfoContoller implements Initializable {
         switcher.setScene(scene);
     }
 
+    /**
+     * Goes to CreateStudent view
+     */
     public void backStudentBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) tilbageKlasser.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));

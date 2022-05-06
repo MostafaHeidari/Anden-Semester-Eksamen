@@ -30,10 +30,16 @@ public class SubcategoryController {
 
     CategoryModel categoryModel = new CategoryModel();
 
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public SubcategoryController() throws IOException {
     }
 
-
+    /**
+     * Goes to Category view
+     */
     public void subCategoryTilbage(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) btnTilbage.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Category.fxml"));
@@ -42,6 +48,9 @@ public class SubcategoryController {
         switcher.setScene(scene);
     }
 
+    /**
+     * Goes to Login view
+     */
     public void subCategoryLogud(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) btnLogud.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Login.fxml"));
@@ -50,7 +59,11 @@ public class SubcategoryController {
         switcher.setScene(scene);
     }
 
-    // this button is used to save the information to databassen. if the databassen is empty //
+    /**
+     * this button is used to save the information to databassen. if the databassen is empty
+     * @param actionEvent
+     * @throws SQLException
+     */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
         if (categoryModel.readCategory(caseID,problemName) == null){
 
@@ -59,7 +72,11 @@ public class SubcategoryController {
         categoryModel.updateCategory(caseID,problemName,txtBeskrivelse.getText());
     }
 
-    // this method is used to sende information from en controller to other controller//
+    /**
+     * this method is used to sende information from en controller to other controller
+     * @param problemName
+     * @throws SQLException
+     */
     public void setId(String problemName) throws SQLException {
         this.problemName = problemName;
         txtBeskrivelse.setText(categoryModel.readCategory(caseID,problemName));

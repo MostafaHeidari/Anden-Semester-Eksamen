@@ -1,10 +1,15 @@
 package GUI.Controller.Universal;
 
 import javax.swing.*;
+import java.io.IOException;
 
 public class SimpleDialogController {
     JFrame f;
 
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public SimpleDialogController(){f = new JFrame();}
 
     /**
