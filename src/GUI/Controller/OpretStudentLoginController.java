@@ -27,9 +27,16 @@ public class OpretStudentLoginController {
 
     private OpretStudentLoginModel opretStudentModel = new OpretStudentLoginModel();
 
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public OpretStudentLoginController() throws IOException {
     }
 
+    /**
+     * Creating student login
+     */
     public void OpretStudent(ActionEvent actionEvent) throws SQLException {
         System.out.println(Brugernavn.getText());
         System.out.println(Adgangskode.getText());

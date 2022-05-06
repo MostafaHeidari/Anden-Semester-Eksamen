@@ -15,6 +15,10 @@ public class PatientController {
     private JFXButton btnLogout;
     @FXML
     private JFXButton btnInfo;
+
+    /**
+     * Log out and goes to the Login view
+     */
     public void LogOut(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) btnLogout.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Login.fxml"));
@@ -23,6 +27,9 @@ public class PatientController {
         switcher.setScene(scene);
     }
 
+    /**
+     * Goes to the Category view
+     */
     public void InfoCategorys(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) btnInfo.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Category.fxml"));

@@ -22,7 +22,9 @@ public class TeacherController {
     @FXML
     private JFXButton Logud;
 
-
+    /**
+     * Goes to the TeacherKlasseAndStudents view
+     */
     public void klasserBtn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) klasserKnnap.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
@@ -31,6 +33,9 @@ public class TeacherController {
         switcher.setScene(scene);
     }
 
+    /**
+     * Goes to the CreateStudent view
+     */
     public void OpretStudent(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) BtnOpretStudent.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
@@ -39,6 +44,9 @@ public class TeacherController {
         switcher.setScene(scene);
     }
 
+    /**
+     * Goes to the CreateCitizen view
+     */
     public void OpretBorger(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) BtnOpretBorger.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateCitizen.fxml"));
@@ -47,6 +55,9 @@ public class TeacherController {
         switcher.setScene(scene);
     }
 
+    /**
+     * Log out and goes to the Login view
+     */
     public void LogOut(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) Logud.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Login.fxml"));
@@ -55,6 +66,9 @@ public class TeacherController {
         switcher.setScene(scene);
     }
 
+    /**
+     * Goes to the CitizenInfo view
+     */
     public void citizentBouttenBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) citizentBoutten.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/CitizenInfo.fxml"));
@@ -62,7 +76,4 @@ public class TeacherController {
         switcher.setTitle("Borger Informationer");
         switcher.setScene(scene);
     }
-
-
-
 }

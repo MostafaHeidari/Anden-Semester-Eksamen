@@ -81,7 +81,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     public TableColumn tcLastNameInClass;
 
 
-
+    /**
+     * initialize
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -107,11 +109,18 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         });
     }
 
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public TeacherKlasseAndStudentsController() throws IOException {
         klasseModel = new ClassModel();
         studentModel = new StudentModel();
     }
 
+    /**
+     * Goes to the Teacher view
+     */
     public void TilbageForsideBtn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) tilbageElever.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
@@ -120,6 +129,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         switcher.setScene(scene);
     }
 
+    /**
+     * Goes to the CreateKlasse view
+     */
     public void nyKlasseBtn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) tilbageElever.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateKlasse.fxml"));
@@ -128,6 +140,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         switcher.setScene(scene);
     }
 
+    /**
+     * Goes to the CreateStudent view
+     */
     public void nyStudentBtn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) tilbageElever.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
@@ -136,6 +151,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         switcher.setScene(scene);
     }
 
+    /**
+     * Sets the setKlasseTableView
+     */
     private void setKlasseTableView() throws IOException {
 
         tcKlasseId.setCellValueFactory(new PropertyValueFactory<>("classId"));
@@ -149,6 +167,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         }
     }
 
+    /**
+     * Sets the setStudentTableView
+     */
     public void setStudentTableView() throws IOException {
 
         tcStudentId.setCellValueFactory(new PropertyValueFactory<>("studentId"));
@@ -170,7 +191,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         }
 
 
-
+    /**
+     * Sets the setStudentsInClasses
+     */
     public void setStudentsInClasses(){
 
         tcStudentNameInClass.setCellValueFactory(new PropertyValueFactory<Student, String>("studentName"));
@@ -182,6 +205,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
 
     }
 
+    /**
+     * Sets the setSelectedItems
+     */
     private void setSelectedItems() {
         if (tvStudentsInClasses.getSelectionModel().getSelectedItem() != null)
         {
@@ -198,6 +224,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         }
     }
 
+    /**
+     * add the student to a class
+     */
     public void addStudentToClassBtn(ActionEvent event) {
         try {
             studentModel.addStudentToClass(
@@ -210,6 +239,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         tvStudentsInClasses.refresh();
     }
 
+    /**
+     * delete the student to a class
+     */
     public void deleteStudentInClassBtn(ActionEvent event) throws SQLException {
         if(SimpleDialogController.delete()){
             studentModel.deleteStudentInClass(selectedClass,
@@ -220,6 +252,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         }
     }
 
+    /**
+     * Goes to the CreateCitizen view
+     */
     public void btnTilbageBoger(ActionEvent event) throws IOException {
         Stage switcher = (Stage) tilbageBogerBtn.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateCitizen.fxml"));
@@ -228,6 +263,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         switcher.setScene(scene);
     }
 
+    /**
+     * Goes to the CitizenInfo view
+     */
     public void citizenInfomationBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) tilbageElever.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/CitizenInfo.fxml"));
@@ -236,6 +274,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         switcher.setScene(scene);
     }
 
+    /**
+     * Goes to the CreateStudent view
+     */
     public void btnTilbageElever(ActionEvent event) throws IOException {
         Stage switcher = (Stage) tilbageElever.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));

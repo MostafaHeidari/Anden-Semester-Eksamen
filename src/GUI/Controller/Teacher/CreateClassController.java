@@ -19,23 +19,37 @@ public class CreateClassController {
     public TextField classNavnTxt;
     ClassModel classModelInfo = new ClassModel();
 
+
     public CreateClassController() throws IOException {
     }
 
+
+    /**
+     * Saves the klasseNavn
+     */
     public void saveBtn(ActionEvent actionEvent) throws IOException, SQLException {
         String klasseNavn = classNavnTxt.getText();
         uploadClassInfo(klasseNavn);
         cancel(actionEvent);
     }
 
+    /**
+     * uploads the classinfo
+     */
     private void uploadClassInfo(String className) throws SQLException, IOException {
         classModelInfo.uploadKlasseInfo(className);
     }
 
+    /**
+     * Goes to the previous view
+     */
     public void backBtn(ActionEvent actionEvent) throws IOException {
         cancel(actionEvent);
     }
 
+    /**
+     * Cancel and goes to the TeacherKlasseAndStudents view
+     */
     private void cancel(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) saveButton.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
