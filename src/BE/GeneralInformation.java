@@ -1,6 +1,6 @@
 package BE;
 
-public class GeneralInfo {
+public class GeneralInformation {
     //alle these info variables takes from SOSU Sketches //
     private int id;
     private String mestring;
@@ -16,7 +16,7 @@ public class GeneralInfo {
     private String Netvaerk;
 
     // the Constructor of GenralInfo class
-    public GeneralInfo(int id, String mestring, String motivation, String ressourcer, String roller, String vaner, String uddannelseJOB, String livshistorie, String helbredsoplysninger, String hjaelpemidler, String boligIndretning, String netvaerk) {
+    public GeneralInformation(int id, String mestring, String motivation, String ressourcer, String roller, String vaner, String uddannelseJOB, String livshistorie, String helbredsoplysninger, String hjaelpemidler, String boligIndretning, String netvaerk) {
         this.id = id;
         this.mestring = mestring;
         this.motivation = motivation;
