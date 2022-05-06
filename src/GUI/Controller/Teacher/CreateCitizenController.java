@@ -26,7 +26,7 @@ public class CreateCitizenController {
 
     public void citizenInfomationBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) BtnLogOutOfBorger.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/CitizenInfo.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/CitizenInfo.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Borger Informationer");
         switcher.setScene(scene);
@@ -50,7 +50,7 @@ public class CreateCitizenController {
 
     public void LogOutOfBorger(ActionEvent event) throws IOException {
         Stage switcher = (Stage) BtnLogOutOfBorger.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Login.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSUS System");
         switcher.setScene(scene);

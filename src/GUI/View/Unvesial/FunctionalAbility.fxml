@@ -114,7 +114,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
                      <children>
-                        <JFXCheckBox fx:id="cb1" alignment="CENTER" contentDisplay="CENTER" onAction="#Checked1" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
+                        <JFXCheckBox fx:id="cb1" alignment="CENTER" contentDisplay="CENTER" onAction="#Checked1" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@../CSS/FunctionalAbility.css" textAlignment="CENTER">
                            <font>
                               <Font />
                            </font>
@@ -129,7 +129,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
                      <children>
-                        <JFXCheckBox fx:id="cb2" alignment="CENTER" contentDisplay="CENTER" onAction="#Checked2" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
+                        <JFXCheckBox fx:id="cb2" alignment="CENTER" contentDisplay="CENTER" onAction="#Checked2" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@../CSS/FunctionalAbility.css" textAlignment="CENTER">
                            <font>
                               <Font />
                            </font>
@@ -144,7 +144,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
                      <children>
-                        <JFXCheckBox fx:id="cb3" alignment="CENTER" contentDisplay="CENTER" onAction="#Checked3" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
+                        <JFXCheckBox fx:id="cb3" alignment="CENTER" contentDisplay="CENTER" onAction="#Checked3" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@../CSS/FunctionalAbility.css" textAlignment="CENTER">
                            <font>
                               <Font />
                            </font>
@@ -159,7 +159,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
                      <children>
-                        <JFXCheckBox fx:id="cb4" alignment="CENTER" contentDisplay="CENTER" onAction="#Checked4" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
+                        <JFXCheckBox fx:id="cb4" alignment="CENTER" contentDisplay="CENTER" onAction="#Checked4" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@../CSS/FunctionalAbility.css" textAlignment="CENTER">
                            <font>
                               <Font />
                            </font>
@@ -174,7 +174,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
                      <children>
-                        <JFXCheckBox fx:id="cb5" alignment="CENTER" contentDisplay="CENTER" onAction="#Checked5" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
+                        <JFXCheckBox fx:id="cb5" alignment="CENTER" contentDisplay="CENTER" onAction="#Checked5" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@../CSS/FunctionalAbility.css" textAlignment="CENTER">
                            <font>
                               <Font />
                            </font>
@@ -189,7 +189,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
                      <children>
-                        <JFXCheckBox fx:id="cb6" alignment="CENTER" contentDisplay="CENTER" onAction="#Checked6" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
+                        <JFXCheckBox fx:id="cb6" alignment="CENTER" contentDisplay="CENTER" onAction="#Checked6" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@../CSS/FunctionalAbility.css" textAlignment="CENTER">
                            <font>
                               <Font />
                            </font>
@@ -207,7 +207,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
                      <children>
-                        <JFXCheckBox fx:id="cb21" alignment="CENTER" contentDisplay="CENTER" onAction="#checked21" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
+                        <JFXCheckBox fx:id="cb21" alignment="CENTER" contentDisplay="CENTER" onAction="#checked21" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@../CSS/FunctionalAbility.css" textAlignment="CENTER">
                            <font>
                               <Font />
                            </font>
@@ -222,7 +222,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
                      <children>
-                        <JFXCheckBox fx:id="cb22" alignment="CENTER" contentDisplay="CENTER" onAction="#checked22" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
+                        <JFXCheckBox fx:id="cb22" alignment="CENTER" contentDisplay="CENTER" onAction="#checked22" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@../CSS/FunctionalAbility.css" textAlignment="CENTER">
                            <font>
                               <Font />
                            </font>
@@ -237,7 +237,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
                      <children>
-                        <JFXCheckBox fx:id="cb23" alignment="CENTER" contentDisplay="CENTER" onAction="#checked23" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
+                        <JFXCheckBox fx:id="cb23" alignment="CENTER" contentDisplay="CENTER" onAction="#checked23" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@../CSS/FunctionalAbility.css" textAlignment="CENTER">
                            <font>
                               <Font />
                            </font>
@@ -252,7 +252,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
                      <children>
-                        <JFXCheckBox fx:id="cb24" alignment="CENTER" contentDisplay="CENTER" onAction="#checked24" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
+                        <JFXCheckBox fx:id="cb24" alignment="CENTER" contentDisplay="CENTER" onAction="#checked24" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@../CSS/FunctionalAbility.css" textAlignment="CENTER">
                            <font>
                               <Font />
                            </font>
@@ -267,7 +267,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
                      <children>
-                        <JFXCheckBox fx:id="cb25" alignment="CENTER" contentDisplay="CENTER" onAction="#checked25" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
+                        <JFXCheckBox fx:id="cb25" alignment="CENTER" contentDisplay="CENTER" onAction="#checked25" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@../CSS/FunctionalAbility.css" textAlignment="CENTER">
                            <font>
                               <Font />
                            </font>
@@ -282,7 +282,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="112.5">
                      <children>
-                        <JFXCheckBox fx:id="cb26" alignment="CENTER" contentDisplay="CENTER" onAction="#checked26" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@CSS/FunctionalAbility.css" textAlignment="CENTER">
+                        <JFXCheckBox fx:id="cb26" alignment="CENTER" contentDisplay="CENTER" onAction="#checked26" prefHeight="18.0" prefWidth="112.5" styleClass="no-label-checkbox" stylesheets="@../CSS/FunctionalAbility.css" textAlignment="CENTER">
                            <font>
                               <Font />
                            </font>
@@ -365,6 +365,6 @@
             <Font size="10.0" />
          </font>
       </Text>
-      <JFXButton fx:id="Button" layoutX="834.0" layoutY="557.0" onAction="#buttonSave" prefHeight="29.0" prefWidth="52.0" styleClass="Button" stylesheets="@CSS/FunctionalAbility.css" text="Gem" />
+      <JFXButton fx:id="Button" layoutX="834.0" layoutY="557.0" onAction="#buttonSave" prefHeight="29.0" prefWidth="52.0" styleClass="Button" stylesheets="@../CSS/FunctionalAbility.css" text="Gem" />
    </children>
 </AnchorPane>

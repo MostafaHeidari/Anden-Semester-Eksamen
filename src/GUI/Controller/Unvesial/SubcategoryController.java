@@ -36,7 +36,7 @@ public class SubcategoryController {
 
     public void subCategoryTilbage(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) btnTilbage.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Category.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Category.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
@@ -44,7 +44,7 @@ public class SubcategoryController {
 
     public void subCategoryLogud(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) btnLogud.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Login.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);

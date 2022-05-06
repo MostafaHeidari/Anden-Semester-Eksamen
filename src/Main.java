@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Login.fxml"));
         primaryStage.setTitle("SOSUS System");
         primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);

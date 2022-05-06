@@ -1,7 +1,7 @@
 package GUI.Controller.Teacher;
 
 import BE.Student;
-import GUI.Controller.SimpleDialogController;
+import GUI.Controller.Unvesial.SimpleDialogController;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -146,7 +146,7 @@ public class CreateStudentController implements Initializable {
     /*this button must to log out*/
     public void LogOutAction(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) Logud.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Login.fxml"));
         Scene scene = new Scene(root);
         switcher.setScene(scene);
     }
@@ -204,7 +204,7 @@ public class CreateStudentController implements Initializable {
 
     public void btnTilbageBoger(ActionEvent event) throws IOException {
         Stage switcher = (Stage) tilbageBogerBtn.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/OpretBorger.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateCitizen.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Borger");
         switcher.setScene(scene);
@@ -228,7 +228,7 @@ public class CreateStudentController implements Initializable {
 
     public void citizenInfomationBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) tilbageBogerBtn.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/CitizenInfo.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/CitizenInfo.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Borger Informationer");
         switcher.setScene(scene);

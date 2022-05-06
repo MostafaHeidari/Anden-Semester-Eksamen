@@ -12,7 +12,7 @@
      -fx-text-fill: red;
 }
 
-#txtnavnField,#txtefterNavnField,#txtcprField,#txtEmailField,#txtTelefonField,#txtadgangskodField,#txtAlderFiled,#txtUserField{
+#txtnavnField,#txtefterNavnField,#txtcprField,#txtEmailField,#txtTelefonField,#txtadgangskodField,#txtAlderFiled,#txtUserField,#caseInfo{
      -fx-control-inner-background: #15B559;
      -fx-text-fill: #2B2121;
      -fx-background-color:  #EBF3EB;
@@ -113,6 +113,8 @@
      -fx-background-color: #15B559;
      -fx-text-fill: white;
 }
+
+
 
 
 
