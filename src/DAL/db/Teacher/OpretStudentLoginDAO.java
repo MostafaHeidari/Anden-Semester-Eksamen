@@ -1,4 +1,4 @@
-package DAL;
+package DAL.db.Teacher;
 
 import BE.Login;
 import DAL.db.DatabaseConnector;

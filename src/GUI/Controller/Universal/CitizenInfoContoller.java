@@ -66,7 +66,7 @@ public class CitizenInfoContoller implements Initializable {
     }
 
 
-    public void BtnTilbage(ActionEvent event) throws IOException {
+    public void backToLastPageBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) BtnTilbage.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
         Scene scene = new Scene(root);
@@ -74,7 +74,7 @@ public class CitizenInfoContoller implements Initializable {
         switcher.setScene(scene);
     }
 
-    public void btnTilbageKlasser(ActionEvent event) throws IOException {
+    public void backClassBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) tilbageKlasser.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
         Scene scene = new Scene(root);
@@ -82,7 +82,7 @@ public class CitizenInfoContoller implements Initializable {
         switcher.setScene(scene);
     }
 
-    public void btnTilbageBoger(ActionEvent event) throws IOException {
+    public void backCitizenBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) BtnTilbage.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateCitizen.fxml"));
         Scene scene = new Scene(root);
@@ -90,7 +90,7 @@ public class CitizenInfoContoller implements Initializable {
         switcher.setScene(scene);
     }
 
-    public void btnTilbageElever(ActionEvent event) throws IOException {
+    public void backStudentBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) tilbageKlasser.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
         Scene scene = new Scene(root);
