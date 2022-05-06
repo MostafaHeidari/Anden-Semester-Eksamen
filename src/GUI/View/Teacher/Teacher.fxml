@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="517.0" prefWidth="641.0" stylesheets="@../CSS/TeacherAndPatient.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.TeacherController">
+<AnchorPane prefHeight="566.0" prefWidth="641.0" stylesheets="@../CSS/TeacherAndPatient.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.TeacherController">
    <children>
       <Pane layoutX="-1.0" layoutY="58.0" prefHeight="58.0" prefWidth="642.0" style="-fx-background-color: #D4D3BE;">
          <children>
@@ -17,31 +17,31 @@
                   <Font name="System Bold" size="38.0" />
                </font>
             </Label>
-            <FontAwesomeIconView fill="#2b2121" layoutX="191.0" layoutY="39.0" size="30" text="" />
+            <FontAwesomeIconView fill="WHITE" layoutX="139.0" layoutY="39.0" size="30" text="" />
          </children>
       </Pane>
       <JFXButton fx:id="Logud" layoutX="567.0" layoutY="22.0" onAction="#LogOut" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="BtnOpretBorger" buttonType="RAISED" layoutX="139.0" layoutY="282.0" onAction="#OpretBorger" prefHeight="58.0" prefWidth="382.0" ripplerFill="#020e3b" text="Opret/Borger" textFill="#2b2121">
+      <JFXButton fx:id="BtnOpretBorger" buttonType="RAISED" layoutX="145.0" layoutY="284.0" onAction="#OpretBorger" prefHeight="58.0" prefWidth="382.0" ripplerFill="#020e3b" text="Opret/Borger" textFill="#2b2121">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton fx:id="klasserKnnap" buttonType="RAISED" layoutX="139.0" layoutY="357.0" onAction="#klasserBtn" prefHeight="58.0" prefWidth="382.0" ripplerFill="#020e3b" text="Klasser" textFill="#2b2121">
+      <JFXButton fx:id="klasserKnnap" buttonType="RAISED" layoutX="145.0" layoutY="359.0" onAction="#klasserBtn" prefHeight="58.0" prefWidth="382.0" ripplerFill="#020e3b" text="Klasser" textFill="#2b2121">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton fx:id="BtnOpretStudent" buttonType="RAISED" layoutX="140.0" layoutY="206.0" onAction="#OpretStudent" prefHeight="57.0" prefWidth="381.0" ripplerFill="#020e3b" text="Opret Student" textFill="#2b2121">
+      <JFXButton fx:id="BtnOpretStudent" buttonType="RAISED" layoutX="146.0" layoutY="208.0" onAction="#OpretStudent" prefHeight="57.0" prefWidth="381.0" ripplerFill="#020e3b" text="Opret Student" textFill="#2b2121">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
       <Label layoutX="139.0" layoutY="149.0" text="Efternavn" />
       <Label layoutX="139.0" layoutY="126.0" text="Navn" />
-      <JFXButton fx:id="citizentBoutten" buttonType="RAISED" layoutX="140.0" layoutY="428.0" onAction="#citizentBouttenBtn" prefHeight="58.0" prefWidth="382.0" ripplerFill="#020e3b" text="BogerInfo" textFill="#2b2121">
+      <JFXButton fx:id="citizentBoutten" buttonType="RAISED" layoutX="145.0" layoutY="436.0" onAction="#citizentBouttenBtn" prefHeight="58.0" prefWidth="382.0" ripplerFill="#020e3b" text="BogerInfo" textFill="#2b2121">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

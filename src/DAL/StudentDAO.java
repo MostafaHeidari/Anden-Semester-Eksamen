@@ -13,10 +13,21 @@ import java.util.List;
 public class StudentDAO {
     private DatabaseConnector DC;
 
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public StudentDAO() throws IOException {
         DC = new DatabaseConnector();
     }
 
+    /**
+     * his method gets a uploadStudentinfo from the database
+     * @param studentNavn
+     * @param studentEfternavn
+     * @return uploadStudentinfo
+     * @throws SQLServerException
+     */
     public Student uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder, String userName ) throws SQLException {
         Connection connection = DC.getConnection();
 
@@ -41,7 +52,11 @@ public class StudentDAO {
     }
 
 
-    /* Student update */
+    /**
+     * his method gets a editStudent from the database
+     * @param studentUpdate
+     * @throws SQLServerException
+     */
     public void editStudent(Student studentUpdate) throws Exception {
         try (Connection connection = DC.getConnection()) {
             String sql = "UPDATE StudentTable SET NameStudent= (?), LastNameStudent=(?), EmailStudent=(?), StudentAge=(?), UserName= (?) WHERE StudentID = (?);";
@@ -59,10 +74,11 @@ public class StudentDAO {
     }
 
 
-    /*
-     * Deletes a student
+    /**
+     * his method gets a removeStudent from the database
+     * @param student
+     * @throws SQLServerException
      */
-
     public void removeStudent(Student student) {
         String sql1 = "DELETE FROM UserTable WHERE UserID = (?);";
         String sql2 = "DELETE FROM ClassStudents WHERE StudentID = (?);";
@@ -91,7 +107,11 @@ public class StudentDAO {
         }
     }
 
-
+    /**
+     * This method gets a list of Student with getAllStudents from the database
+     * @return getAllStudents from database
+     * @throws SQLServerException
+     */
     public List<Student> getAllStudents() throws SQLException {
         Connection con = DC.getConnection();
 

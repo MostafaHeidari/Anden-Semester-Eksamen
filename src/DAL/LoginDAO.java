@@ -2,6 +2,7 @@ package DAL;
 
 import BE.Login;
 import DAL.db.DatabaseConnector;
+import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -11,17 +12,22 @@ import java.sql.SQLException;
 
 public class LoginDAO {
 
-    /*instant variable databasen*/
     private final DatabaseConnector connector = DatabaseConnector.getInstance();
 
-    /*Constractor */
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public LoginDAO() throws IOException {
     }
 
     /**
-     * Login method
-     * Prepared statement to access database login
-     * */
+     * this method gets a login from the database
+     * @param Username
+     * @param Password
+     * @return
+     * @throws SQLServerException
+     */
     public Login login(String Username, String Password) {
         String sql = "SELECT * FROM Login WHERE Username =? AND Password =?;";
         try(Connection connection = connector.getConnection()){
