@@ -775,4 +775,5 @@ public class BCrypt {
             ret |= hashed_bytes[i] ^ try_bytes[i];
         return ret == 0;
     }
+    // Password + Salt -> Encrypt that  vs Password -> Encrypt that
 }

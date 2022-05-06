@@ -33,7 +33,7 @@ public class ClassDAO {
 
         String sql = "INSERT INTO ClassTable(ClassName) VALUES (?);";
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-        ps.setString(1, klasseNavn);;
+        ps.setString(1, klasseNavn);
         int affectedRows = ps.executeUpdate();
         if (affectedRows == 1) {
             ResultSet rs = ps.getGeneratedKeys();

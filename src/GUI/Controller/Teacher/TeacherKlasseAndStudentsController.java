@@ -93,6 +93,11 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         }
         tvStudentsInClasses.setOnMouseClicked((MouseEvent event) -> {
             setSelectedItems();
+
+            tvKlasseInfomationer.getItems().clear();
+
+
+            tvKlasseInfomationer.setItems(klasseModel.getAllClasses());
         });
         tvKlasseInfomationer.setOnMouseClicked((MouseEvent event) -> {
             setSelectedItems();

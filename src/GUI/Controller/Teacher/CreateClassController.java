@@ -17,7 +17,10 @@ public class CreateClassController {
     public JFXButton saveButton;
     public JFXButton backButton;
     public TextField classNavnTxt;
+    ClassModel classModelInfo = new ClassModel();
 
+    public CreateClassController() throws IOException {
+    }
 
     public void saveBtn(ActionEvent actionEvent) throws IOException, SQLException {
         String klasseNavn = classNavnTxt.getText();
@@ -26,8 +29,6 @@ public class CreateClassController {
     }
 
     private void uploadClassInfo(String className) throws SQLException, IOException {
-        ClassModel classModelInfo = new ClassModel();
-
         classModelInfo.uploadKlasseInfo(className);
     }
 
