@@ -69,12 +69,18 @@ public class CreateStudentController implements Initializable {
     public Student selectedStudent;
 
 
-
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public CreateStudentController() throws IOException {
         this.studentModel = new StudentModel();
         this.editStudentController = new EditStudentController();
     }
 
+    /**
+     * initialize
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -88,7 +94,9 @@ public class CreateStudentController implements Initializable {
         });
     }
 
-
+    /**
+     * Creating a student with the OpretElevActionButton method
+     */
     public void OpretElevActionButton(ActionEvent actionEvent) throws IOException, SQLException {
         if (txtnavnField.getText() == "" || txtefterNavnField.getText() == "" || txtEmailField.getText() == "" || txtAlderFiled.getText() == ""){
 
@@ -104,6 +112,9 @@ public class CreateStudentController implements Initializable {
         }
     }
 
+    /**
+     * uploads a student info with the uploadStudentInfo method
+     */
     private void uploadStudentInfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder, String userName) throws IOException, SQLException {
         StudentModel studentModelInfo = new StudentModel();
 
@@ -124,8 +135,9 @@ public class CreateStudentController implements Initializable {
     }
 
 
-
-    /* this button turn back to teacher window*/
+    /**
+     * Goes to the Teacher view
+     */
     public void BtnTilbage(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) BtnTilbage.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
@@ -134,7 +146,9 @@ public class CreateStudentController implements Initializable {
         switcher.setScene(scene);
     }
 
-    /* this button turn back to createStudent window*/
+    /**
+     * Goes to the CreateStudent view
+     */
     public void BtnTilbageOpretStudentAction(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) BtnTilbageOpretStudent.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
@@ -143,7 +157,9 @@ public class CreateStudentController implements Initializable {
     }
 
 
-    /*this button must to log out*/
+    /**
+     * Log out and goes to the Login view
+     */
     public void LogOutAction(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) Logud.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Login.fxml"));
@@ -152,7 +168,9 @@ public class CreateStudentController implements Initializable {
     }
 
 
-    /* this button edit the Student 4*/
+    /**
+     * edit a student with the RedigerElevAction method
+     */
     public void RedigerElevAction(ActionEvent actionEvent) throws IOException {
         if (selectedStudent != null) {
             Student selectedStudent = (Student) tvStudent.getSelectionModel().getSelectedItem();
@@ -170,8 +188,9 @@ public class CreateStudentController implements Initializable {
     }
 
 
-
-    /*this button must to save the selected students information*/
+    /**
+     * this button must to save the selected students information
+     */
     public void GamOplysingerActionButton(ActionEvent actionEvent) {
     }
 
@@ -193,7 +212,9 @@ public class CreateStudentController implements Initializable {
 
 
 
-
+    /**
+     * Goes to the TeacherKlasseAndStudents view
+     */
     public void btnTilbageKlasser(ActionEvent event) throws IOException {
         Stage switcher = (Stage) tilbageKlasser.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
@@ -202,6 +223,9 @@ public class CreateStudentController implements Initializable {
         switcher.setScene(scene);
     }
 
+    /**
+     * Goes to the CreateCitizen view
+     */
     public void btnTilbageBoger(ActionEvent event) throws IOException {
         Stage switcher = (Stage) tilbageBogerBtn.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateCitizen.fxml"));
@@ -211,14 +235,18 @@ public class CreateStudentController implements Initializable {
     }
 
 
-
-    //remove student method //
+    /**
+     * remove a student with the SletElevAction method
+     */
     public void SletElevAction(ActionEvent actionEvent) {
         if (SimpleDialogController.delete() && selectedStudent != null) {
             studentModel.removeStudent(selectedStudent);
         }
     }
 
+    /**
+     * selects a student with the setSelectedStudent method
+     */
     private void setSelectedStudent() {
         if (tvStudent.getSelectionModel().getSelectedItem() != null)
         {
@@ -226,6 +254,9 @@ public class CreateStudentController implements Initializable {
         }
     }
 
+    /**
+     * Goes to the CitizenInfo view
+     */
     public void citizenInfomationBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) tilbageBogerBtn.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/CitizenInfo.fxml"));

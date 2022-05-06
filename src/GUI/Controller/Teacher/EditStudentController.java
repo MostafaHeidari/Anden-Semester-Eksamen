@@ -41,21 +41,22 @@ public class EditStudentController {
 
     private final StudentModel studentModel = new StudentModel();
 
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public EditStudentController() throws IOException {
     }
 
-
-
-   /*Student update action.This method save the information of student*/
+    /**
+     * Student update action.This method save the information of student
+     */
     public void GamOplysingerActionButton(ActionEvent actionEvent) throws Exception {
         String updateStudentName = txtnavnEditStudentField.getText();
         String updateStudentEfterNavn = txtEfterNavnEditStudentField.getText();
         String updateStudentEmail = txtEmailEditStudentField.getText();
         String updateStudentAlder = txtAlderEditStudentFiled.getText();
         String updateStudentUser = txtUserNameEditField.getText();
-
-
-
 
         this.selectedStudent.setStudentName(updateStudentName);
         this.selectedStudent.setLastName(updateStudentEfterNavn);
@@ -71,6 +72,10 @@ public class EditStudentController {
         switcher.close();
     }
 
+    /**
+     * Set selected student
+     * @param student
+     */
     public void setSelectedStudent(Student student) {
         txtnavnEditStudentField.setText(student.getStudentName());
         txtEfterNavnEditStudentField.setText(student.getLastName());
@@ -82,7 +87,9 @@ public class EditStudentController {
     }
 
 
-    /* log ud button */
+    /**
+     * Log out and goes to the Login view
+     */
     public void LogOutAction(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) Logud.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Login.fxml"));
@@ -93,7 +100,9 @@ public class EditStudentController {
 
     }
 
-    /* tilbage button*/
+    /**
+     * Goes to the previous view
+     */
     public void BtnTilbageOpretStudentAction(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) BtnTilbageOpretStudent.getScene().getWindow();
         switcher.setTitle("Create student");
@@ -101,7 +110,10 @@ public class EditStudentController {
 
     }
 
-
+    /**
+     * Clear the selectedTable
+     * @param tvStudent
+     */
     public void setSelectedTable(TableView tvStudent) {
         tvStudent.getItems().clear();
 
