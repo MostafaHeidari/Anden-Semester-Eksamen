@@ -5,32 +5,32 @@ public class GeneralInformation {
     private int id;
     private String mestring;
     private String motivation;
-    private String ressourcer;
-    private String roller;
-    private String vaner;
-    private String uddannelseJOB;
-    private String livshistorie;
-    private String Helbredsoplysninger;
-    private String Hjaelpemidler;
-    private String BoligIndretning;
-    private String Netvaerk;
+    private String resources;
+    private String roles;
+    private String habits;
+    private String educationAndJob;
+    private String lifestory;
+    private String healthInformation;
+    private String Aids;
+    private String homeLayout;
+    private String network;
 
     // the Constructor of GenralInfo class
-    public GeneralInformation(int id, String mestring, String motivation, String ressourcer, String roller, String vaner, String uddannelseJOB, String livshistorie, String helbredsoplysninger, String hjaelpemidler, String boligIndretning, String netvaerk) {
+
+    public GeneralInformation(int id, String mestring, String motivation, String resources, String roles, String habits, String educationAndJob, String lifestory, String healthInformation, String aids, String homeLayout, String network) {
         this.id = id;
         this.mestring = mestring;
         this.motivation = motivation;
-        this.ressourcer = ressourcer;
-        this.roller = roller;
-        this.vaner = vaner;
-        this.uddannelseJOB = uddannelseJOB;
-        this.livshistorie = livshistorie;
-        Helbredsoplysninger = helbredsoplysninger;
-        Hjaelpemidler = hjaelpemidler;
-        BoligIndretning = boligIndretning;
-        Netvaerk = netvaerk;
+        this.resources = resources;
+        this.roles = roles;
+        this.habits = habits;
+        this.educationAndJob = educationAndJob;
+        this.lifestory = lifestory;
+        this.healthInformation = healthInformation;
+        Aids = aids;
+        this.homeLayout = homeLayout;
+        this.network = network;
     }
-
 
     public int getId() {
         return id;
@@ -56,94 +56,93 @@ public class GeneralInformation {
         this.motivation = motivation;
     }
 
-    public String getRessourcer() {
-        return ressourcer;
+    public String getResources() {
+        return resources;
     }
 
-    public void setRessourcer(String ressourcer) {
-        this.ressourcer = ressourcer;
+    public void setResources(String resources) {
+        this.resources = resources;
     }
 
-    public String getRoller() {
-        return roller;
+    public String getRoles() {
+        return roles;
     }
 
-    public void setRoller(String roller) {
-        this.roller = roller;
+    public void setRoles(String roles) {
+        this.roles = roles;
     }
 
-    public String getVaner() {
-        return vaner;
+    public String getHabits() {
+        return habits;
     }
 
-    public void setVaner(String vaner) {
-        this.vaner = vaner;
+    public void setHabits(String habits) {
+        this.habits = habits;
     }
 
-    public String getUddannelseJOB() {
-        return uddannelseJOB;
+    public String getEducationAndJob() {
+        return educationAndJob;
     }
 
-    public void setUddannelseJOB(String uddannelseJOB) {
-        this.uddannelseJOB = uddannelseJOB;
+    public void setEducationAndJob(String educationAndJob) {
+        this.educationAndJob = educationAndJob;
     }
 
-    public String getLivshistorie() {
-        return livshistorie;
+    public String getLifestory() {
+        return lifestory;
     }
 
-    public void setLivshistorie(String livshistorie) {
-        this.livshistorie = livshistorie;
+    public void setLifestory(String lifestory) {
+        this.lifestory = lifestory;
     }
 
-    public String getHelbredsoplysninger() {
-        return Helbredsoplysninger;
+    public String getHealthInformation() {
+        return healthInformation;
     }
 
-    public void setHelbredsoplysninger(String helbredsoplysninger) {
-        Helbredsoplysninger = helbredsoplysninger;
+    public void setHealthInformation(String healthInformation) {
+        this.healthInformation = healthInformation;
     }
 
-    public String getHjaelpemidler() {
-        return Hjaelpemidler;
+    public String getAids() {
+        return Aids;
     }
 
-    public void setHjaelpemidler(String hjaelpemidler) {
-        Hjaelpemidler = hjaelpemidler;
+    public void setAids(String aids) {
+        Aids = aids;
     }
 
-    public String getBoligIndretning() {
-        return BoligIndretning;
+    public String getHomeLayout() {
+        return homeLayout;
     }
 
-    public void setBoligIndretning(String boligIndretning) {
-        BoligIndretning = boligIndretning;
+    public void setHomeLayout(String homeLayout) {
+        this.homeLayout = homeLayout;
     }
 
-    public String getNetvaerk() {
-        return Netvaerk;
+    public String getNetwork() {
+        return network;
     }
 
-    public void setNetvaerk(String netvaerk) {
-        Netvaerk = netvaerk;
+    public void setNetwork(String network) {
+        this.network = network;
     }
-
 
     @Override
     public String toString() {
-        return "GeneralInfo{" +
+        return "GeneralInformation{" +
                 "id=" + id +
                 ", mestring='" + mestring + '\'' +
                 ", motivation='" + motivation + '\'' +
-                ", ressourcer='" + ressourcer + '\'' +
-                ", roller='" + roller + '\'' +
-                ", vaner='" + vaner + '\'' +
-                ", uddannelseJOB='" + uddannelseJOB + '\'' +
-                ", livshistorie='" + livshistorie + '\'' +
-                ", Helbredsoplysninger='" + Helbredsoplysninger + '\'' +
-                ", Hjælpemidler='" + Hjaelpemidler + '\'' +
-                ", BoligIndretning='" + BoligIndretning + '\'' +
-                ", Netværk='" + Netvaerk + '\'' +
+                ", resources='" + resources + '\'' +
+                ", roles='" + roles + '\'' +
+                ", habits='" + habits + '\'' +
+                ", educationAndJob='" + educationAndJob + '\'' +
+                ", lifestory='" + lifestory + '\'' +
+                ", healthInformation='" + healthInformation + '\'' +
+                ", Aids='" + Aids + '\'' +
+                ", homeLayout='" + homeLayout + '\'' +
+                ", network='" + network + '\'' +
                 '}';
     }
 }
