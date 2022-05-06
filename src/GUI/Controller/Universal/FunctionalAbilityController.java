@@ -1,8 +1,7 @@
-package GUI.Controller.Unvesial;
+package GUI.Controller.Universal;
 
 import DAL.FunctionalAbilityDAO;
 import GUI.Model.FunctionalAbilityModel;
-import javafx.beans.value.ChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,7 +13,6 @@ import javafx.stage.Stage;
 import javafx.scene.control.CheckBox;
 import javafx.scene.Node;
 
-import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;

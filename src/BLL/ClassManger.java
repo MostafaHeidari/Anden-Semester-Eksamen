@@ -42,4 +42,8 @@ public class ClassManger {
         }
         return classesObs;
     }
+
+    public void deleteAClass(SchoolClass selectedClass) {
+        classDAO.deleteAClass(selectedClass);
+    }
 }

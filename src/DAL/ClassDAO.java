@@ -33,7 +33,7 @@ public class ClassDAO {
 
         String sql = "INSERT INTO ClassTable(ClassName) VALUES (?);";
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-        ps.setString(1, klasseNavn);;
+        ps.setString(1, klasseNavn);
         int affectedRows = ps.executeUpdate();
         if (affectedRows == 1) {
             ResultSet rs = ps.getGeneratedKeys();
@@ -66,5 +66,28 @@ public class ClassDAO {
         }
 
         return allClasses;
+    }
+
+    public void deleteAClass(SchoolClass selectedClass) {
+        int pId = selectedClass.getClassId();
+
+        String sql1 = "DELETE FROM ClassStudents WHERE ClassID = (?);";
+        String sql2 = "DELETE FROM ClassTable WHERE ClassID = (?);";
+
+        try(Connection connection = DC.getConnection())
+        {
+            PreparedStatement ps1 = connection.prepareStatement(sql1,Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps2 = connection.prepareStatement(sql2,Statement.RETURN_GENERATED_KEYS);
+
+            ps1.setInt(1, pId);
+            ps2.setInt(1, pId);
+            ps1.executeUpdate();
+            ps2.executeUpdate();
+
+        } catch (SQLServerException throwables) {
+            throwables.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 }
