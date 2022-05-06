@@ -43,6 +43,10 @@ public class ClassManger {
         return classesObs;
     }
 
+    /**
+     * Gets the deleteAClass, selectedClass using deleteAClass from classDAO
+     * @param selectedClass
+     */
     public void deleteAClass(SchoolClass selectedClass) {
         classDAO.deleteAClass(selectedClass);
     }
