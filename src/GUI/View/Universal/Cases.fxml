@@ -45,8 +45,8 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <Text fx:id="nameCitizen" layoutX="250.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text fx:id="LastNameCitizen" layoutX="272.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="nameCitizenTxt" layoutX="250.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="lastNameCitizenTxt" layoutX="272.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text layoutX="324.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Boger">
          <font>
             <Font size="22.0" />

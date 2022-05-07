@@ -41,7 +41,7 @@ public class CategoryController {
     private void skiftVindue(String vindue) throws IOException, SQLException {
 
         Stage switcher = (Stage) HBox.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Unvesial/SubCategories.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SubCategories.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 

@@ -1,5 +1,6 @@
 package GUI.Controller.Universal;
 
+import BE.Citizen;
 import GUI.Model.CitizenInfoModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -11,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -22,20 +24,22 @@ public class CitizenInfoContoller implements Initializable {
 
     private CitizenInfoModel citizenInfoModel;
 
+    public Citizen selectedCitizen;
+
     public JFXButton caseInfo;
-    public JFXButton BtnTilbage;
-    public JFXButton tilbageKlasser;
-    public JFXButton tilbageBogerBtn;
+    public JFXButton backClass;
+    public JFXButton backStudent;
+    public JFXButton backCitizen;
     @FXML
-    public TableView tvCitizenInfo;
+    public TableView<Citizen>  tvCitizenInfo;
     @FXML
-    public TableColumn tcCitizenId;
+    public TableColumn<Citizen, Integer> tcCitizenId;
     @FXML
-    public TableColumn tcNameCitizen;
+    public TableColumn<Citizen, String>  tcNameCitizen;
     @FXML
-    public TableColumn tcCitizenEfterName;
+    public TableColumn<Citizen, String>  tcCitizenEfterName;
     @FXML
-    public TableColumn tcCitizenAlder;
+    public TableColumn<Citizen, String>  tcCitizenAlder;
 
     /**
      * Constructor
@@ -55,6 +59,9 @@ public class CitizenInfoContoller implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        tvCitizenInfo.setOnMouseClicked((MouseEvent event) -> {
+            setSelectedItems();
+        });
     }
 
     /**
@@ -72,13 +79,14 @@ public class CitizenInfoContoller implements Initializable {
 
 
         tvCitizenInfo.setItems(citizenInfoModel.getAllCitizens());
+
     }
 
     /**
      * Goes to Teacher view
      */
     public void backToLastPageBtn(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) BtnTilbage.getScene().getWindow();
+        Stage switcher = (Stage) backClass.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Forside");
@@ -89,7 +97,7 @@ public class CitizenInfoContoller implements Initializable {
      * Goes to TeacherKlasseAndStudents view
      */
     public void backClassBtn(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) tilbageKlasser.getScene().getWindow();
+        Stage switcher = (Stage) backStudent.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Classe Manger");
@@ -100,7 +108,7 @@ public class CitizenInfoContoller implements Initializable {
      * Goes to CreateCitizen view
      */
     public void backCitizenBtn(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) BtnTilbage.getScene().getWindow();
+        Stage switcher = (Stage) backCitizen.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateCitizen.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Borger");
@@ -111,7 +119,7 @@ public class CitizenInfoContoller implements Initializable {
      * Goes to CreateStudent view
      */
     public void backStudentBtn(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) tilbageKlasser.getScene().getWindow();
+        Stage switcher = (Stage) backStudent.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Student");
@@ -119,7 +127,26 @@ public class CitizenInfoContoller implements Initializable {
     }
 
 
-    public void caseInfoBtn(ActionEvent event) {
+    public void caseInfoBtn(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) caseInfo.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Cases.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
+        CasesController casesController = fxmlLoader.<CasesController>getController();
+        casesController.setCitizenID(selectedCitizen);
+        Scene scene = new Scene(root);
+        switcher.setTitle("SOSU System");
+        switcher.setScene(scene);
+    }
+
+
+    /**
+     * Changes selected Name  in the adminEventMangerTableViewName
+     */
+    private void setSelectedItems() {
+        if (tvCitizenInfo.getSelectionModel().getSelectedItem() != null)
+        {
+            selectedCitizen = tvCitizenInfo.getSelectionModel().getSelectedItem();
+        }
 
     }
 }

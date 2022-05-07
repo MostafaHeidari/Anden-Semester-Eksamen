@@ -92,7 +92,7 @@ public class EditStudentController {
      */
     public void LogOutAction(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) Logud.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Create student");
         switcher.setScene(scene);

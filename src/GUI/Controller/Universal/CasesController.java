@@ -1,5 +1,7 @@
 package GUI.Controller.Universal;
 
+import BE.Citizen;
+import GUI.Model.CaseModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,12 +10,17 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class CasesController {
+
+    private Citizen selectedCitizen;
+
+    public CaseModel caseModel;
 
 
     @FXML
@@ -33,16 +40,20 @@ public class CasesController {
     public JFXButton backStudent;
 
     @FXML
-    public Text nameCitizen;
+    public Text nameCitizenTxt;
     @FXML
-    public Text LastNameCitizen;
+    public Text lastNameCitizenTxt;
+
+    public CasesController() throws IOException {
+        caseModel = new CaseModel();
+    }
 
     /**
      * Goes to CitizenInfo view
      */
     public void backToLastPageBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) backToLastPage.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/CitizenInfo.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/CitizenInfo.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Borger Informationer");
         switcher.setScene(scene);
@@ -79,5 +90,21 @@ public class CasesController {
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Student");
         switcher.setScene(scene);
+    }
+
+    private void setCaseView(){
+
+        tcCaseId.setCellValueFactory(new PropertyValueFactory<>("caseId"));
+
+        tcCaseInfo.setCellValueFactory(new PropertyValueFactory<>("caseInformation"));
+
+        tvCase.setItems(caseModel.getAllCases(selectedCitizen.getCitizenId()));
+    }
+
+    public void setCitizenID(Citizen citizen) {
+        selectedCitizen = citizen;
+        nameCitizenTxt.setText(citizen.getCitizenName());
+        lastNameCitizenTxt.setText(citizen.getCitizenLastName());
+        setCaseView();
     }
 }
