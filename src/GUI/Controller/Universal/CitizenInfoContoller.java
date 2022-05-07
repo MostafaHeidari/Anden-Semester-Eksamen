@@ -22,14 +22,23 @@ import java.util.ResourceBundle;
 public class CitizenInfoContoller implements Initializable {
 
 
+
     private CitizenInfoModel citizenInfoModel;
 
     public Citizen selectedCitizen;
 
+
+    @FXML
     public JFXButton caseInfo;
+    @FXML
     public JFXButton backClass;
+    @FXML
     public JFXButton backStudent;
+    @FXML
     public JFXButton backCitizen;
+    @FXML
+    public JFXButton createCase;
+
     @FXML
     public TableView<Citizen>  tvCitizenInfo;
     @FXML
@@ -148,5 +157,14 @@ public class CitizenInfoContoller implements Initializable {
             selectedCitizen = tvCitizenInfo.getSelectionModel().getSelectedItem();
         }
 
+    }
+
+    public void createCaseBtn(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) createCase.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/CreateCase.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
+        Scene scene = new Scene(root);
+        switcher.setTitle("SOSU System");
+        switcher.setScene(scene);
     }
 }
