@@ -11,15 +11,15 @@
       <TableView fx:id="tableViewPatients" layoutX="50.0" layoutY="100.0" prefHeight="400.0" prefWidth="800.0">
         <columns>
           <TableColumn id="ID" prefWidth="75.0" text="ID" />
-          <TableColumn id="Name" prefWidth="196.0" text="Name" />
-            <TableColumn id="Age" minWidth="0.0" prefWidth="75.0" text="Age" />
+          <TableColumn id="Name" prefWidth="196.0" text="Navn" />
+            <TableColumn id="Age" minWidth="0.0" prefWidth="75.0" text="Alder" />
         </columns>
       </TableView>
       <JFXButton fx:id="btnInfo" layoutX="764.0" layoutY="535.0" onAction="#InfoCategorys" prefHeight="27.0" prefWidth="90.0" text="Se Info">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="btnLogout" layoutX="800.0" layoutY="35.0" onAction="#LogOut" text="Logout">
+      <JFXButton fx:id="btnLogout" layoutX="800.0" layoutY="35.0" onAction="#LogOut" text="Log ud">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>

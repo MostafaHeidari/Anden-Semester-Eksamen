@@ -7,7 +7,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -18,30 +17,26 @@ public class CategoryController {
     @FXML
     private javafx.scene.layout.HBox HBox;
     @FXML
-    private Text funktionsniveau_1;
-    @FXML
-    private Text funktionsniveau_2;
-    @FXML
-    private JFXButton btnCategoryTilbage;
+    private JFXButton btnCategoryBack;
 
     /**
      * Goes to Patient view
      */
-    public void CategoryTilbage(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) btnCategoryTilbage.getScene().getWindow();
+    public void CategoryBack(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) btnCategoryBack.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Patient.fxml"));
         Scene scene = new Scene(root);
-        switcher.setTitle("SOSU System");
+        switcher.setTitle("SOSU Helbredstilstande");
         switcher.setScene(scene);
     }
 
     /**
      * Goes to SubCategories view
      */
-    private void skiftVindue(String vindue) throws IOException, SQLException {
+    private void shiftWindow(String vindue) throws IOException, SQLException {
 
         Stage switcher = (Stage) HBox.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Unvesial/SubCategories.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SubCategories.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 
@@ -56,307 +51,301 @@ public class CategoryController {
      * Subcategory changing text
      */
     public void funktionsniveau_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med personlig pleje");
+        shiftWindow("Problemer med personlig pleje");
     }
 
     /**
      * Subcategory changing text
      */
     public void funktionsniveau_2(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med daglige aktiviteter");
+        shiftWindow("Problemer med daglige aktiviteter");
     }
 
     /**
      * Subcategory changing text
      */
     public void bevægeapparat_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med mobilitet og bevægelse");
+        shiftWindow("Problemer med mobilitet og bevægelse");
     }
 
     /**
      * Subcategory changing text
      */
     public void seksualitet_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med seksualitet");
+        shiftWindow("Problemer med seksualitet");
     }
 
     public void hudogslimhinder_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med kirurgisk sår");
+        shiftWindow("Problemer med kirurgisk sår");
     }
 
     /**
      * Subcategory changing text
      */
     public void hudogslimhinder_2(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med diabetisk sår");
+        shiftWindow("Problemer med diabetisk sår");
     }
 
     /**
      * Subcategory changing text
      */
     public void hudogslimhinder_3(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med cancersår");
+        shiftWindow("Problemer med cancersår");
     }
 
     /**
      * Subcategory changing text
      */
     public void hudogslimhinder_4(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med tryksår");
+        shiftWindow("Problemer med tryksår");
     }
 
     /**
      * Subcategory changing text
      */
     public void hudogslimhinder_5(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med arterielt sår");
+        shiftWindow("Problemer med arterielt sår");
     }
 
     /**
      * Subcategory changing text
      */
     public void hudogslimhinder_6(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med venøst sår");
+        shiftWindow("Problemer med venøst sår");
     }
 
     /**
      * Subcategory changing text
      */
     public void hudogslimhinder_7(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med blandingssår");
+        shiftWindow("Problemer med blandingssår");
     }
 
     /**
      * Subcategory changing text
      */
     public void hudogslimhinder_8(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med traumesår");
+        shiftWindow("Problemer med traumesår");
     }
 
     /**
      * Subcategory changing text
      */
     public void hudogslimhinder_9(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Andre problemer med hud og slimhinder");
+        shiftWindow("Andre problemer med hud og slimhinder");
     }
 
     /**
      * Subcategory changing text
      */
     public void respirationogcirkulation_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Respirationsproblemer");
+        shiftWindow("Respirationsproblemer");
     }
 
     /**
      * Subcategory changing text
      */
     public void respirationogcirkulation_2(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Cirkulationsproblemer");
+        shiftWindow("Cirkulationsproblemer");
     }
 
     /**
      * Subcategory changing text
      */
     public void ernæring_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med væskeindtag");
+        shiftWindow("Problemer med væskeindtag");
     }
 
     /**
      * Subcategory changing text
      */
     public void ernæring_2(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med fødeindtag");
+        shiftWindow("Problemer med fødeindtag");
     }
 
     /**
      * Subcategory changing text
      */
     public void ernæring_3(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Uhensigtsmæssig vægtændring");
+        shiftWindow("Uhensigtsmæssig vægtændring");
     }
 
     /**
      * Subcategory changing text
      */
     public void ernæring_4(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med overvægt");
+        shiftWindow("Problemer med overvægt");
     }
 
     /**
      * Subcategory changing text
      */
     public void ernæring_5(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med undervægt");
+        shiftWindow("Problemer med undervægt");
     }
 
     /**
      * Subcategory changing text
      */
     public void smerterogsanseindtryk_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Akutte smerter");
+        shiftWindow("Akutte smerter");
     }
 
     /**
      * Subcategory changing text
      */
     public void smerterogsanseindtryk_2(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Periodevise smerter");
+        shiftWindow("Periodevise smerter");
     }
 
     /**
      * Subcategory changing text
      */
     public void smerterogsanseindtryk_3(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Kroniske smerter");
+        shiftWindow("Kroniske smerter");
     }
 
     /**
      * Subcategory changing text
      */
     public void smerterogsanseindtryk_4(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med synssans");
+        shiftWindow("Problemer med synssans");
     }
 
     /**
      * Subcategory changing text
      */
     public void smerterogsanseindtryk_5(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med lugtesans");
+        shiftWindow("Problemer med lugtesans");
     }
 
     /**
      * Subcategory changing text
      */
     public void smerterogsanseindtryk_6(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med hørelse");
+        shiftWindow("Problemer med hørelse");
     }
 
     /**
      * Subcategory changing text
      */
     public void smerterogsanseindtryk_7(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med smagssans");
+        shiftWindow("Problemer med smagssans");
     }
 
     /**
      * Subcategory changing text
      */
     public void smerterogsanseindtryk_8(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med følesans");
+        shiftWindow("Problemer med følesans");
     }
 
     /**
      * Subcategory changing text
      */
     public void søvnoghvile_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Døgnrytmeproblemer");
+        shiftWindow("Døgnrytmeproblemer");
     }
 
     /**
      * Subcategory changing text
      */
     public void søvnoghvile_2(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Søvnproblemer");
+        shiftWindow("Søvnproblemer");
     }
 
     /**
      * Subcategory changing text
      */
     public void videnogudvikling_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med hudkommelse");
+        shiftWindow("Problemer med hudkommelse");
     }
 
     public void videnogudvikling_2(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med indsigt i Behandlingsformål");
+        shiftWindow("Problemer med indsigt i Behandlingsformål");
     }
 
     /**
      * Subcategory changing text
      */
     public void videnogudvikling_3(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med sygdomsindsigt");
+        shiftWindow("Problemer med sygdomsindsigt");
     }
 
     /**
      * Subcategory changing text
      */
     public void videnogudvikling_4(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Kognitive Problemer");
+        shiftWindow("Kognitive Problemer");
     }
 
     /**
      * Subcategory changing text
      */
     public void kommunikation_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med kommunikation");
+        shiftWindow("Problemer med kommunikation");
     }
 
     /**
      * Subcategory changing text
      */
     public void psykosocialeforhold_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med socialt samvær");
+        shiftWindow("Problemer med socialt samvær");
     }
 
     /**
      * Subcategory changing text
      */
     public void psykosocialeforhold_2(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Emotionelle problemer");
+        shiftWindow("Emotionelle problemer");
     }
 
     /**
      * Subcategory changing text
      */
     public void psykosocialeforhold_3(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med misbrug");
+        shiftWindow("Problemer med misbrug");
     }
 
     /**
      * Subcategory changing text
      */
     public void psykosocialeforhold_4(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Mentale problemer");
+        shiftWindow("Mentale problemer");
     }
 
     /**
      * Subcategory changing text
      */
     public void udskillelseafaffaldsstoffer_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med vandladning");
+        shiftWindow("Problemer med vandladning");
     }
 
     /**
      * Subcategory changing text
      */
     public void udskillelseafaffaldsstoffer_2(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med urininkontinens");
+        shiftWindow("Problemer med urininkontinens");
     }
 
     /**
      * Subcategory changing text
      */
     public void udskillelseafaffaldsstoffer_3(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med afføringsindkontinens");
+        shiftWindow("Problemer med afføringsindkontinens");
     }
 
     /**
      * Subcategory changing text
      */
     public void udskillelseafaffaldsstoffer_4(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med mave og tarm");
+        shiftWindow("Problemer med mave og tarm");
     }
 
     /**
      * Subcategory changing text
      */
     public void udskillelseafaffaldsstoffer_5(MouseEvent mouseEvent) throws IOException, SQLException {
-        skiftVindue("Problemer med væske fra dræn");
-    }
-
-    public void Test(MouseEvent mouseEvent) {
-    }
-
-    public void Test1(MouseEvent mouseEvent) {
+        shiftWindow("Problemer med væske fra dræn");
     }
 }

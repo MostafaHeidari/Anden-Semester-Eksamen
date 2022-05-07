@@ -42,7 +42,7 @@ public class CasesController {
      */
     public void backToLastPageBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) backToLastPage.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/CitizenInfo.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/CitizenInfo.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Borger Informationer");
         switcher.setScene(scene);

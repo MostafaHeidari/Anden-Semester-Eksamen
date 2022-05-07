@@ -17,12 +17,12 @@ import java.sql.SQLException;
 public class SubcategoryController {
 
     @FXML
-    private JFXButton btnTilbage;
+    private JFXButton btnBack;
     @FXML
-    private JFXButton btnLogud;
+    private JFXButton btnLogOut;
 
     public Text subCatText;
-    public TextArea txtBeskrivelse;
+    public TextArea txtDescription;
 
    // this is instance variable is not used to now//
     private int caseID = 27;
@@ -40,9 +40,9 @@ public class SubcategoryController {
     /**
      * Goes to Category view
      */
-    public void subCategoryTilbage(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) btnTilbage.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Category.fxml"));
+    public void subCategoryBack(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) btnBack.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Category.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
@@ -51,9 +51,9 @@ public class SubcategoryController {
     /**
      * Goes to Login view
      */
-    public void subCategoryLogud(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) btnLogud.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Login.fxml"));
+    public void subCategoryLogOut(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) btnLogOut.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
@@ -67,9 +67,9 @@ public class SubcategoryController {
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
         if (categoryModel.readCategory(caseID,problemName) == null){
 
-            categoryModel.createCategory(caseID,problemName,txtBeskrivelse.getText());
+            categoryModel.createCategory(caseID,problemName,txtDescription.getText());
         }
-        categoryModel.updateCategory(caseID,problemName,txtBeskrivelse.getText());
+        categoryModel.updateCategory(caseID,problemName,txtDescription.getText());
     }
 
     /**
@@ -79,7 +79,7 @@ public class SubcategoryController {
      */
     public void setId(String problemName) throws SQLException {
         this.problemName = problemName;
-        txtBeskrivelse.setText(categoryModel.readCategory(caseID,problemName));
+        txtDescription.setText(categoryModel.readCategory(caseID,problemName));
         subCatText.setText(problemName);
     }
 }
