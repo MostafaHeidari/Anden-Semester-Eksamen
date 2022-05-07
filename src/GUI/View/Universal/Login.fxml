@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane stylesheets="@../CSS/Login.css" onKeyPressed="#handleOnKeyPressed" prefHeight="483.0" prefWidth="746.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Unvesial.LoginController">
+<AnchorPane stylesheets="@../CSS/Login.css" onKeyPressed="#handleOnKeyPressed" prefHeight="483.0" prefWidth="746.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.LoginController">
     <children>
-        <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="69.0" prefHeight="38.0" prefWidth="758.0" text="SOSU Documentation System" textAlignment="CENTER">
+        <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="69.0" prefHeight="38.0" prefWidth="758.0" text="SOSU Dokumentations System" textAlignment="CENTER">
             <font>
                 <Font name="Arial Black" size="24.0" />
             </font>
@@ -29,7 +29,7 @@
             <Font size="14.0" />
          </font>
       </PasswordField>
-      <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="274.0" layoutY="308.0" onAction="#Login" prefHeight="38.0" prefWidth="244.0" ripplerFill="#00000091" text="Login" textFill="WHITE" />
+      <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="274.0" layoutY="308.0" onAction="#Login" prefHeight="38.0" prefWidth="244.0" ripplerFill="#00000091" text="Log ind" textFill="WHITE" />
       <FontAwesomeIconView fx:id="LockIkon" fill="#2b2121" glyphName="LOCK" layoutX="239.0" layoutY="260.0" selectionEnd="1" size="25" text="" wrappingWidth="14.142857551574593" />
       <FontAwesomeIconView fx:id="userIkon" fill="#2b2121" glyphName="USER" layoutX="239.0" layoutY="202.0" selectionEnd="1" selectionFill="#543f3f" size="25" text="" wrappingWidth="14.142857551574707" />
     </children>

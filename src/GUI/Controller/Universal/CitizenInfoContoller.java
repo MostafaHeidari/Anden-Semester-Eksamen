@@ -100,7 +100,7 @@ public class CitizenInfoContoller implements Initializable {
         Stage switcher = (Stage) backStudent.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
         Scene scene = new Scene(root);
-        switcher.setTitle("Classe Manger");
+        switcher.setTitle("Klassen");
         switcher.setScene(scene);
     }
 

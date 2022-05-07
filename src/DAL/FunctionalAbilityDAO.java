@@ -21,24 +21,24 @@ public class FunctionalAbilityDAO {
 
     /**
      * this method gets a uploadCaseID from the database
-     * @param tilstand
-     * @param fremtidigTilstand
-     * @return
+     * @param condition
+     * @param futureCondition
+     * @return functionalAbilityCord
      * @throws SQLServerException
      */
-    public FunctionalAbility uploadCaseID(String tilstand, String fremtidigTilstand) throws SQLException {
+    public FunctionalAbility uploadCaseID(String condition, String futureCondition) throws SQLException {
         Connection connection = DC.getConnection();
 
-        String sql = "INSERT INTO FunctionalAbility (tilstand, fremtidigtilstand) VALUES (?,?);";
+        String sql = "INSERT INTO FunctionalAbility (condition, fremtidigtilstand) VALUES (?,?);";
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-        ps.setString(1, tilstand);
-        ps.setString(2, fremtidigTilstand);
+        ps.setString(1, condition);
+        ps.setString(2, futureCondition);
         int affectedRows = ps.executeUpdate();
         if (affectedRows == 1) {
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
                 int CaseID = rs.getInt(1);
-                FunctionalAbility functionalAbilityCord = new FunctionalAbility(CaseID, tilstand, fremtidigTilstand);
+                FunctionalAbility functionalAbilityCord = new FunctionalAbility(CaseID, condition, futureCondition);
                 return functionalAbilityCord;
             }
         }

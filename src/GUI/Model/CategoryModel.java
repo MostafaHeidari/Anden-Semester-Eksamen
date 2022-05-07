@@ -20,35 +20,35 @@ public class CategoryModel {
     }
 
     /**
-     * Gets the createCategory caseID, ProblemNavn and ProblemBeskrivelse using createCategory from CategoryManager
+     * Gets the createCategory caseID, ProblemName and ProblemDescription using createCategory from CategoryManager
      * @param caseID
-     * @param ProblemNavn
-     * @param ProblemBeskrivelse
+     * @param ProblemName
+     * @param ProblemDescription
      * @throws SQLServerException
      */
-    public void createCategory(int caseID, String ProblemNavn, String ProblemBeskrivelse) throws SQLException{
-        categoryManager.createCategory(caseID, ProblemNavn, ProblemBeskrivelse);
+    public void createCategory(int caseID, String ProblemName, String ProblemDescription) throws SQLException{
+        categoryManager.createCategory(caseID, ProblemName, ProblemDescription);
     }
 
     /**
-     * Gets the readCategory caseID and ProblemNavn using readCategory from CategoryManager
+     * Gets the readCategory caseID and ProblemName using readCategory from CategoryManager
      * @param caseID
-     * @param ProblemNavn
+     * @param ProblemName
      * @return
      * @throws SQLServerException
      */
-    public String readCategory(int caseID, String ProblemNavn) throws SQLException{
-        return categoryManager.readCategory(caseID, ProblemNavn);
+    public String readCategory(int caseID, String ProblemName) throws SQLException{
+        return categoryManager.readCategory(caseID, ProblemName);
     }
 
     /**
-     * Gets the updateCategory caseID, ProblemNavn and ProblemBeskrivelse using updateCategory from CategoryManager
+     * Gets the updateCategory caseID, ProblemName and ProblemDescription using updateCategory from CategoryManager
      * @param caseID
-     * @param ProblemNavn
-     * @param ProblemBeskrivelse
+     * @param ProblemName
+     * @param ProblemDescription
      * @throws SQLServerException
      */
-    public void updateCategory(int caseID, String ProblemNavn, String ProblemBeskrivelse) throws SQLException{
-        categoryManager.updateCategory(caseID, ProblemNavn, ProblemBeskrivelse);
+    public void updateCategory(int caseID, String ProblemName, String ProblemDescription) throws SQLException{
+        categoryManager.updateCategory(caseID, ProblemName, ProblemDescription);
     }
 }
