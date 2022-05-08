@@ -1,6 +1,7 @@
 package GUI.Controller.Teacher;
 
 import BE.Student;
+import GUI.Controller.Universal.NotFilledTxtFieldController;
 import GUI.Controller.Universal.SimpleDialogController;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
@@ -15,6 +16,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Popup;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -25,7 +27,7 @@ import java.util.ResourceBundle;
 public class CreateStudentController implements Initializable {
 
     public StudentModel studentModel;
-    public JFXButton citizenInfomation;
+
     private EditStudentController editStudentController;
 
     @FXML
@@ -34,11 +36,11 @@ public class CreateStudentController implements Initializable {
     public JFXButton BtnBackPatient;
     @FXML
     private JFXButton BtnBack;
+    @FXML
+    public JFXButton citizenInfomation;
+    @FXML
+    public JFXButton BtnCreateStudent;
 
-    @FXML
-    private JFXButton BtnTilbageOpretStudent;
-    @FXML
-    private JFXButton Logud;
 
     @FXML
     private TextField txtNameField;
@@ -99,7 +101,11 @@ public class CreateStudentController implements Initializable {
      */
     public void CreateStudentActionButton(ActionEvent actionEvent) throws IOException, SQLException {
         if (txtNameField.getText() == "" || txtLastnameField.getText() == "" || txtEmailField.getText() == "" || txtAgeField.getText() == ""){
-
+            Popup popup = new Popup();
+            NotFilledTxtFieldController controller = new NotFilledTxtFieldController();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/NotFilledTxtField.fxml"));
+            loader.setController(controller);
+            popup.getContent().add((Parent)loader.load());
         }
         else {
             String studentName = txtNameField.getText();
@@ -150,7 +156,7 @@ public class CreateStudentController implements Initializable {
      * Goes to the CreateStudent view
      */
     public void BtnTilbageOpretStudentAction(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) BtnTilbageOpretStudent.getScene().getWindow();
+        Stage switcher = (Stage) BtnCreateStudent.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
         Scene scene = new Scene(root);
         switcher.setScene(scene);
@@ -161,7 +167,7 @@ public class CreateStudentController implements Initializable {
      * Log out and goes to the Login view
      */
     public void LogOutAction(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) Logud.getScene().getWindow();
+        Stage switcher = (Stage) BtnBack.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
         Scene scene = new Scene(root);
         switcher.setScene(scene);

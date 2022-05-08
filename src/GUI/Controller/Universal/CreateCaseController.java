@@ -12,6 +12,7 @@ public class CreateCaseController {
     public TextField caseNameTxt;
 
     public void saveCaseBtn(ActionEvent event) {
+
     }
 
     public void LogOutAction(ActionEvent event) {

@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane style="" prefHeight="647.0" prefWidth="802.0" stylesheets="@../CSS/CitizentInfo.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.CitizenInfoContoller">
+<AnchorPane prefHeight="647.0" prefWidth="802.0" style="" stylesheets="@../CSS/CitizentInfo.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.CitizenInfoContoller">
     <children>
         <Pane layoutX="390.0" layoutY="25.0" prefHeight="56.0" prefWidth="377.0" style="-fx-background-color: #FFFFFF;">
             <effect>
@@ -61,7 +61,7 @@
                     </cursor>
                 </JFXButton>
 
-                <JFXButton fx:id="backCitizen" layoutY="469.0" onAction="#backCitizenBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Borger">
+                <JFXButton fx:id="backCitizen" layoutX="10.0" layoutY="490.0" onAction="#backCitizenBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Borger">
                     <cursor>
                         <Cursor fx:constant="HAND" />
                     </cursor>
@@ -89,6 +89,6 @@
             </children>
         </Pane>
       <JFXButton fx:id="caseInfo" layoutX="281.0" layoutY="573.0" onAction="#caseInfoBtn" prefHeight="33.0" prefWidth="101.0" text="Se Cases" />
-      <JFXButton fx:id="createCase" layoutX="281.0" layoutY="534.0" onAction="#createCaseBtn" text="Opret Case" />
+      <JFXButton fx:id="createCase" layoutX="281.0" layoutY="534.0" onAction="#createCaseBtn" prefHeight="33.0" prefWidth="101.0" text="Opret Case" />
     </children>
 </AnchorPane>
