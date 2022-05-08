@@ -29,7 +29,7 @@ public class FunctionalAbilityDAO {
     public FunctionalAbility uploadCaseID(String condition, String futureCondition) throws SQLException {
         Connection connection = DC.getConnection();
 
-        String sql = "INSERT INTO FunctionalAbility (condition, fremtidigtilstand) VALUES (?,?);";
+        String sql = "INSERT INTO FunctionalAbility (condition, futureCondition) VALUES (?,?);";
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
         ps.setString(1, condition);
         ps.setString(2, futureCondition);

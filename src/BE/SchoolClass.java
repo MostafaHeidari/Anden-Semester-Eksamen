@@ -13,12 +13,12 @@ public class SchoolClass {
 
     /**
      * @param klasseId
-     * @param klasseNavn
-     * Constructor with SchoolClass, klasseId and klasseNavn
+     * @param klasseName
+     * Constructor with SchoolClass, klasseId and klasseName
      */
-    public SchoolClass(int klasseId, String klasseNavn) {
+    public SchoolClass(int klasseId, String klasseName) {
         this.classId = klasseId;
-        this.className = klasseNavn;
+        this.className = klasseName;
     }
 
     /**
@@ -55,10 +55,10 @@ public class SchoolClass {
     }
 
     /**
-     * Sets the klasseNavn
-     * @param klasseNavn
+     * Sets the klasseName
+     * @param klasseName
      */
-    public void setClassName(String klasseNavn) {
+    public void setClassName(String klasseName) {
         this.className = className;
     }
 

@@ -24,23 +24,23 @@ public class ClassDAO {
 
     /**
      * this method gets a uploadClassInfo from the database
-     * @param klasseNavn
+     * @param className
      * @return
      * @throws SQLServerException
      */
-    public SchoolClass uploadClassInfo(String klasseNavn) throws SQLException {
+    public SchoolClass uploadClassInfo(String className) throws SQLException {
         Connection connection = DC.getConnection();
 
         String sql = "INSERT INTO ClassTable(ClassName) VALUES (?);";
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-        ps.setString(1, klasseNavn);
+        ps.setString(1, className);
         int affectedRows = ps.executeUpdate();
         if (affectedRows == 1) {
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
-                int klasseId = rs.getInt(1);
-                SchoolClass klasseCord = new SchoolClass(klasseId, klasseNavn);
-                return klasseCord;
+                int classId = rs.getInt(1);
+                SchoolClass classCord = new SchoolClass(classId, className);
+                return classCord;
             }
         }
         return null;
@@ -59,9 +59,9 @@ public class ClassDAO {
         String sql = "SELECT * FROM ClassTable";
         Statement statement = con.createStatement();
         ResultSet rs = statement.executeQuery(sql);
-        while (rs.next()) { // Creates and adds Klasser objects into an array list
-            SchoolClass klasseCord = new SchoolClass(rs.getInt("ClassID"), rs.getString("ClassName"));
-            allClasses.add(klasseCord);
+        while (rs.next()) { // Creates and adds classes objects into an array list
+            SchoolClass classCord = new SchoolClass(rs.getInt("ClassID"), rs.getString("ClassName"));
+            allClasses.add(classCord);
         }
 
         return allClasses;

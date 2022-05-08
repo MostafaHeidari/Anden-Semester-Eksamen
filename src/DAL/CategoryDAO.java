@@ -26,20 +26,20 @@ public class CategoryDAO {
     /**
      * this method gets a createCategory from the database
      * @param caseID
-     * @param ProblemNavn
-     * @param ProblemBeskrivelse
+     * @param ProblemName
+     * @param ProblemDescription
      * @throws SQLServerException
      */
-    public void createCategory(int caseID, String ProblemNavn, String ProblemBeskrivelse) throws SQLException {
+    public void createCategory(int caseID, String ProblemName, String ProblemDescription) throws SQLException {
 
-        String sql = "INSERT INTO Helbredstilstande(caseID,ProblemNavn,ProblemBeskrivelse) VALUES (?,?,?);";
+        String sql = "INSERT INTO Helbredstilstande(caseID,ProblemName,ProblemDescription) VALUES (?,?,?);";
 
         try(Connection connection = DC.getConnection()){
 
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, caseID);
-            ps.setString(2, ProblemNavn);
-            ps.setString(3, ProblemBeskrivelse);
+            ps.setString(2, ProblemName);
+            ps.setString(3, ProblemDescription);
 
             int affectedRows = ps.executeUpdate();
 
@@ -51,18 +51,18 @@ public class CategoryDAO {
     /**
      * this method gets a readCategory from the database
      * @param caseID
-     * @param ProblemNavn
+     * @param ProblemName
      * @throws SQLServerException
      */
-    public String readCategory(int caseID, String ProblemNavn) throws SQLException {
+    public String readCategory(int caseID, String ProblemName) throws SQLException {
 
-        String sql = "SELECT ProblemBeskrivelse FROM Helbredstilstande WHERE caseID = (?) AND ProblemNavn = (?);";
+        String sql = "SELECT ProblemDescription FROM Helbredstilstande WHERE caseID = (?) AND ProblemName = (?);";
 
         try(Connection connection = DC.getConnection()){
 
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, caseID);
-            ps.setString(2, ProblemNavn);
+            ps.setString(2, ProblemName);
 
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
@@ -83,19 +83,19 @@ public class CategoryDAO {
     /**
      * this method gets a updateCategory from the database
      * @param caseID
-     * @param ProblemNavn
-     * @param ProblemBeskrivelse
+     * @param ProblemName
+     * @param ProblemDescription
      * @throws SQLServerException
      */
-    public void updateCategory(int caseID, String ProblemNavn, String ProblemBeskrivelse) throws SQLException {
+    public void updateCategory(int caseID, String ProblemName, String ProblemDescription) throws SQLException {
 
-        String sql = "UPDATE Helbredstilstande SET ProblemBeskrivelse = (?)  WHERE caseID = (?) AND ProblemNavn = (?);";
+        String sql = "UPDATE Helbredstilstande SET ProblemDescription = (?)  WHERE caseID = (?) AND ProblemName = (?);";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1, ProblemBeskrivelse);
+            ps.setString(1, ProblemDescription);
             ps.setInt(2, caseID);
-            ps.setString(3, ProblemNavn);
+            ps.setString(3, ProblemName);
 
             int affectedRows = ps.executeUpdate();
 
@@ -108,18 +108,18 @@ public class CategoryDAO {
     /**
      * this method gets a deleteCategory from the database
      * @param caseID
-     * @param ProblemNavn
-     * @param ProblemBeskrivelse
+     * @param ProblemName
+     * @param ProblemDescription
      * @throws SQLServerException
      */
-    public void deleteCategory(int caseID, String ProblemNavn, String ProblemBeskrivelse) throws SQLException {
-        String sql = "DELETE FROM Helbredstilstande WHERE caseID = ? AND ProblemNavn = ?;";
+    public void deleteCategory(int caseID, String ProblemName, String ProblemDescription) throws SQLException {
+        String sql = "DELETE FROM Helbredstilstande WHERE caseID = ? AND ProblemName = ?;";
 
         try(Connection connection = DC.getConnection()){
 
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, caseID);
-            ps.setString(2, ProblemNavn);
+            ps.setString(2, ProblemName);
 
             int affectedRows = ps.executeUpdate();
 
