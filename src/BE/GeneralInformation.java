@@ -1,47 +1,47 @@
 package BE;
 
 public class GeneralInformation {
-    //alle these info variables takes from SOSU Sketches //
+    //all these info variables takes from SOSU Sketches //
     private int id;
     private String mestring;
     private String motivation;
-    private String ressourcer;
-    private String roller;
-    private String vaner;
-    private String uddannelseJOB;
-    private String livshistorie;
-    private String Helbredsoplysninger;
-    private String Hjaelpemidler;
-    private String BoligIndretning;
-    private String Netvaerk;
+    private String resources;
+    private String rolls;
+    private String habits;
+    private String studyJOB;
+    private String lifeStory;
+    private String HealthInformation;
+    private String AssistiveDevices;
+    private String InteriorDesign;
+    private String Network;
 
     /**
      * @param id
      * @param mestring
      * @param motivation
-     * @param ressourcer
-     * @param roller
-     * @param vaner
-     * @param uddannelseJOB
-     * @param livshistorie
-     * @param helbredsoplysninger
-     * @param boligIndretning
-     * @param netvaerk
-     * Constructor with id, mestring,  motivation, ressourcer, roller, vaner, uddannelseJOB, livshistorie, helbredsoplysninger, hjaelpemidler, boligIndretning, netvaerk
+     * @param resources
+     * @param rolls
+     * @param habits
+     * @param studyJOB
+     * @param lifeStory
+     * @param HealthInformation
+     * @param InteriorDesign
+     * @param Network
+     * Constructor with id, mestring,  motivation, resources, rolls, habits, studyJOB, lifeStory, HealthInformation, AssistiveDevices, InteriorDesign, Network
      */
-    public GeneralInformation(int id, String mestring, String motivation, String ressourcer, String roller, String vaner, String uddannelseJOB, String livshistorie, String helbredsoplysninger, String hjaelpemidler, String boligIndretning, String netvaerk) {
+    public GeneralInformation(int id, String mestring, String motivation, String resources, String rolls, String habits, String studyJOB, String lifeStory, String HealthInformation, String AssistiveDevices, String InteriorDesign, String Network) {
         this.id = id;
         this.mestring = mestring;
         this.motivation = motivation;
-        this.ressourcer = ressourcer;
-        this.roller = roller;
-        this.vaner = vaner;
-        this.uddannelseJOB = uddannelseJOB;
-        this.livshistorie = livshistorie;
-        Helbredsoplysninger = helbredsoplysninger;
-        Hjaelpemidler = hjaelpemidler;
-        BoligIndretning = boligIndretning;
-        Netvaerk = netvaerk;
+        this.resources = resources;
+        this.rolls = rolls;
+        this.habits = habits;
+        this.studyJOB = studyJOB;
+        this.lifeStory = lifeStory;
+        this.HealthInformation = HealthInformation;
+        this.AssistiveDevices = AssistiveDevices;
+        this.InteriorDesign = InteriorDesign;
+        this.Network = Network;
     }
 
     /**
@@ -93,152 +93,152 @@ public class GeneralInformation {
     }
 
     /**
-     * Gets the ressourcer
-     * @return ressourcer
+     * Gets the resources
+     * @return resources
      */
-    public String getRessourcer() {
-        return ressourcer;
+    public String getResources() {
+        return resources;
     }
 
     /**
      * Sets the ressourcer
      * @param ressourcer
      */
-    public void setRessourcer(String ressourcer) {
-        this.ressourcer = ressourcer;
+    public void setResources(String ressourcer) {
+        this.resources = resources;
     }
 
     /**
-     * Gets the roller
-     * @return roller
+     * Gets the rolls
+     * @return rolls
      */
-    public String getRoller() {
-        return roller;
+    public String getRolls() {
+        return rolls;
     }
 
     /**
-     * Sets the roller
-     * @param roller
+     * Sets the rolls
+     * @param rolls
      */
-    public void setRoller(String roller) {
-        this.roller = roller;
+    public void setRolls(String rolls) {
+        this.rolls = rolls;
     }
 
     /**
-     * Gets the vaner
-     * @return vaner
+     * Gets the habits
+     * @return habits
      */
-    public String getVaner() {
-        return vaner;
+    public String getHabits() {
+        return habits;
     }
 
     /**
-     * Gets the vaner
-     * @param vaner
+     * Gets the habits
+     * @param habits
      */
-    public void setVaner(String vaner) {
-        this.vaner = vaner;
+    public void setHabits(String habits) {
+        this.habits = habits;
     }
 
     /**
-     * Gets the uddannelseJOB
-     * @return uddannelseJOB
+     * Gets the studyJOB
+     * @return studyJOB
      */
-    public String getUddannelseJOB() {
-        return uddannelseJOB;
+    public String getstudyJOB() {
+        return studyJOB;
     }
 
     /**
-     * Sets the uddannelseJOB
-     * @param uddannelseJOB
+     * Sets the studyJOB
+     * @param studyJOB
      */
-    public void setUddannelseJOB(String uddannelseJOB) {
-        this.uddannelseJOB = uddannelseJOB;
+    public void setstudyJOB(String studyJOB) {
+        this.studyJOB = studyJOB;
     }
 
     /**
-     * Gets the livshistorie
-     * @return livshistorie
+     * Gets the lifeStory
+     * @return lifeStory
      */
-    public String getLivshistorie() {
-        return livshistorie;
+    public String getlifeStory() {
+        return lifeStory;
     }
 
     /**
-     * Sets the livshistorie
-     * @param livshistorie
+     * Sets the lifeStory
+     * @param lifeStory
      */
-    public void setLivshistorie(String livshistorie) {
-        this.livshistorie = livshistorie;
+    public void setlifeStory(String lifeStory) {
+        this.lifeStory = lifeStory;
     }
 
     /**
-     * Gets the Helbredsoplysninger
-     * @return Helbredsoplysninger
+     * Gets the HealthInformation
+     * @return HealthInformation
      */
-    public String getHelbredsoplysninger() {
-        return Helbredsoplysninger;
+    public String getHealthInformation() {
+        return HealthInformation;
     }
 
     /**
-     * Sets the helbredsoplysninger
-     * @param helbredsoplysninger
+     * Sets the HealthInformation
+     * @param HealthInformation
      */
-    public void setHelbredsoplysninger(String helbredsoplysninger) {
-        Helbredsoplysninger = helbredsoplysninger;
+    public void setHealthInformation(String HealthInformation) {
+        HealthInformation = HealthInformation;
     }
 
     /**
-     * Gets the Hjaelpemidler
-     * @return Hjaelpemidler
+     * Gets the AssistiveDevices
+     * @return AssistiveDevices
      */
-    public String getHjaelpemidler() {
-        return Hjaelpemidler;
+    public String getAssistiveDevices() {
+        return AssistiveDevices;
     }
 
     /**
-     * Sets the Hjaelpemidler
-     * @param hjaelpemidler
+     * Sets the AssistiveDevices
+     * @param AssistiveDevices
      */
-    public void setHjaelpemidler(String hjaelpemidler) {
-        Hjaelpemidler = hjaelpemidler;
+    public void setAssistiveDevices(String AssistiveDevices) {
+        AssistiveDevices = AssistiveDevices;
     }
 
     /**
-     * Gets the BoligIndretning
-     * @return BoligIndretning
+     * Gets the InteriorDesign
+     * @return InteriorDesign
      */
-    public String getBoligIndretning() {
-        return BoligIndretning;
+    public String getInteriorDesign() {
+        return InteriorDesign;
     }
 
     /**
-     * Sets the BoligIndretning
-     * @param boligIndretning
+     * Sets the InteriorDesign
+     * @param InteriorDesign
      */
-    public void setBoligIndretning(String boligIndretning) {
-        BoligIndretning = boligIndretning;
+    public void setInteriorDesign(String InteriorDesign) {
+        InteriorDesign = InteriorDesign;
     }
 
     /**
-     * Gets the Netvaerk
-     * @return Netvaerk
+     * Gets the Network
+     * @return Network
      */
-    public String getNetvaerk() {
-        return Netvaerk;
+    public String getNetwork() {
+        return Network;
     }
 
     /**
-     * Sets the netvaerk
-     * @param netvaerk
+     * Sets the Network
+     * @param Network
      */
-    public void setNetvaerk(String netvaerk) {
-        Netvaerk = netvaerk;
+    public void setNetwork(String Network) {
+        Network = Network;
     }
 
     /**
      * ToString method
-     * @return id, mestring, motivation, ressourcer, roller, vaner, uddannelseJOB, livshistorie, Helbredsoplysninger, Hjaelpemidler, BoligIndretning, Netvaerk
+     * @return id, mestring, motivation, resources, rolls, habits, studyJOB, lifeStory, HealthInformation, AssistiveDevices, InteriorDesign, Network
      */
     @Override
     public String toString() {
@@ -246,15 +246,15 @@ public class GeneralInformation {
                 "id=" + id +
                 ", mestring='" + mestring + '\'' +
                 ", motivation='" + motivation + '\'' +
-                ", ressourcer='" + ressourcer + '\'' +
-                ", roller='" + roller + '\'' +
-                ", vaner='" + vaner + '\'' +
-                ", uddannelseJOB='" + uddannelseJOB + '\'' +
-                ", livshistorie='" + livshistorie + '\'' +
-                ", Helbredsoplysninger='" + Helbredsoplysninger + '\'' +
-                ", Hjælpemidler='" + Hjaelpemidler + '\'' +
-                ", BoligIndretning='" + BoligIndretning + '\'' +
-                ", Netværk='" + Netvaerk + '\'' +
+                ", ressourcer='" + resources + '\'' +
+                ", rolls='" + rolls + '\'' +
+                ", habits='" + habits + '\'' +
+                ", studyJOB='" + studyJOB + '\'' +
+                ", lifeStory='" + lifeStory + '\'' +
+                ", HealthInformation='" + HealthInformation + '\'' +
+                ", Hjælpemidler='" + AssistiveDevices + '\'' +
+                ", InteriorDesign='" + InteriorDesign + '\'' +
+                ", Netværk='" + Network + '\'' +
                 '}';
     }
 }

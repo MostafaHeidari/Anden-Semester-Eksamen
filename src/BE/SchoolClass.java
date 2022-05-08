@@ -12,13 +12,13 @@ public class SchoolClass {
     private List<Student> listOfStudents = new ArrayList<>();
 
     /**
-     * @param klasseId
-     * @param klasseName
-     * Constructor with SchoolClass, klasseId and klasseName
+     * @param classId
+     * @param className
+     * Constructor with SchoolClass, classId and className
      */
-    public SchoolClass(int klasseId, String klasseName) {
-        this.classId = klasseId;
-        this.className = klasseName;
+    public SchoolClass(int classId, String className) {
+        this.classId = classId;
+        this.className = className;
     }
 
     /**
@@ -42,7 +42,7 @@ public class SchoolClass {
      * Sets the getClassId
      * @return getClassId
      */
-    public void setClassId(int klasseId) {
+    public void setClassId(int classId) {
         this.classId = classId;
     }
 
@@ -55,10 +55,10 @@ public class SchoolClass {
     }
 
     /**
-     * Sets the klasseName
-     * @param klasseName
+     * Sets the className
+     * @param className
      */
-    public void setClassName(String klasseName) {
+    public void setClassName(String className) {
         this.className = className;
     }
 
