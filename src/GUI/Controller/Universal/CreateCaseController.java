@@ -8,7 +8,7 @@ public class CreateCaseController {
     public JFXButton backTo;
     public JFXButton LogOut;
     public JFXButton saveCase;
-    public TextField InfomationTxt;
+    public TextField InformationTxt;
     public TextField caseNameTxt;
 
     public void saveCaseBtn(ActionEvent event) {
