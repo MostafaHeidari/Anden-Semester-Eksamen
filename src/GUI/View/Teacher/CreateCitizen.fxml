@@ -54,14 +54,14 @@
                   <Font size="33.0" />
                </font>
             </Label>
-            <JFXButton fx:id="BtnLogOutOfBorger" layoutX="871.0" layoutY="35.0" onAction="#LogOutOfBorger" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE">
+            <JFXButton fx:id="BtnLogOutOfPatient" layoutX="871.0" layoutY="35.0" onAction="#LogOutOfPatient" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
             <Pane layoutY="2.0" prefHeight="596.0" prefWidth="179.0" style="-fx-background-color: #D4D3BE;">
                <children>
-                  <JFXButton fx:id="BtnTilbage" layoutY="542.0" onAction="#BtnTilbage" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
+                  <JFXButton fx:id="BtnBack" layoutY="542.0" onAction="#BtnBack" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>

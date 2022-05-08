@@ -35,7 +35,7 @@ public class FunctionalAbility {
      * Sets the condition
      * @return condition
      */
-    public void setCondition(String tilstand) {
+    public void setCondition(String condition) {
         this.condition = condition;
     }
 
