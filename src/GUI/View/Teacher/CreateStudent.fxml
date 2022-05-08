@@ -32,7 +32,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <TextField fx:id="txtnavnField" prefHeight="98.0" prefWidth="318.0" promptText="Navn">
+            <TextField fx:id="txtNameField" prefHeight="98.0" prefWidth="318.0" promptText="Navn">
                <GridPane.margin>
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
@@ -40,7 +40,7 @@
                   <InnerShadow height="8.16" radius="2.125" width="2.34" />
                </effect>
             </TextField>
-            <TextField fx:id="txtefterNavnField" layoutX="10.0" layoutY="18.0" prefHeight="113.0" prefWidth="318.0" promptText="Efternavn" GridPane.rowIndex="1">
+            <TextField fx:id="txtLastnameField" layoutX="10.0" layoutY="18.0" prefHeight="113.0" prefWidth="318.0" promptText="Efternavn" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
@@ -60,13 +60,13 @@
                   <InnerShadow height="8.16" radius="2.125" width="2.34" />
                </effect>
             </TextField>
-            <TextField fx:id="txtAlderFiled" prefHeight="36.0" prefWidth="243.0" promptText="Alder" GridPane.rowIndex="4">
+            <TextField fx:id="txtAgeField" prefHeight="36.0" prefWidth="243.0" promptText="Alder" GridPane.rowIndex="4">
                <effect>
                   <InnerShadow height="8.16" radius="2.125" width="2.34" />
                </effect></TextField>
          </children>
       </GridPane>
-      <JFXButton fx:id="BtnOpretElev" layoutX="299.0" layoutY="404.0" onAction="#OpretElevActionButton" prefHeight="28.0" prefWidth="94.0" stylesheets="@../CSS/CreateStudent.css" text="Opret Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnCreateStudent" layoutX="299.0" layoutY="404.0" onAction="#CreateStudentActionButton" prefHeight="28.0" prefWidth="94.0" stylesheets="@../CSS/CreateStudent.css" text="Opret Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
@@ -74,7 +74,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="BtnRedigerElev" layoutX="583.0" layoutY="525.0" onAction="#RedigerElevAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/CreateStudent.css" text="Rediger Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnRedigerElev" layoutX="583.0" layoutY="525.0" onAction="#EditStudentAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/CreateStudent.css" text="Rediger Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
@@ -96,7 +96,7 @@
       <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="296.0" layoutY="137.0" size="30" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
       <Pane layoutY="-2.0" prefHeight="606.0" prefWidth="179.0" style="-fx-background-color: #D4D3BE;">
          <children>
-            <JFXButton fx:id="BtnTilbage" layoutY="564.0" onAction="#BtnTilbage" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
+            <JFXButton fx:id="BtnBack" layoutY="564.0" onAction="#BtnBack" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -112,12 +112,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="tilbageKlasser" layoutY="502.0" onAction="#btnTilbageKlasser" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Klasser">
+            <JFXButton fx:id="backClasses" layoutY="502.0" onAction="#btnBackClasses" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Klasser">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="tilbageBogerBtn" layoutY="440.0" onAction="#btnTilbageBoger" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Boger">
+            <JFXButton fx:id="BtnBackPatient" layoutY="440.0" onAction="#btnBackPatient" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Boger">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
