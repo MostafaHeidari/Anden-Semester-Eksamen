@@ -134,7 +134,7 @@ public class TeacherKlasseAndStudentsController implements Initializable {
      */
     public void nyKlasseBtn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) tilbageElever.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateKlasse.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateClasses.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Classe Manger");
         switcher.setScene(scene);
