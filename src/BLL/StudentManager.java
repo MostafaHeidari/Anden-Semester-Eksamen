@@ -86,16 +86,16 @@ public class StudentManager {
     }
 
     /**
-     * Gets the uploadStudentinfo studentNavn, studentEfternavn, studentEmail, studentAlder and userName using uploadStudentinfo from studentDAO
-     * @param studentNavn
-     * @param studentEfternavn
+     * Gets the uploadStudentinfo studentName, studentLastname, studentEmail, studentAge and userName using uploadStudentinfo from studentDAO
+     * @param studentName
+     * @param studentLastname
      * @param studentEmail
-     * @param studentAlder
+     * @param studentAge
      * @param userName
      * @return
      * @throws SQLServerException
      */
-    public Student uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder, String userName) throws SQLException {
-        return(studentDAO.uploadStudentinfo(studentNavn,studentEfternavn,studentEmail,studentAlder, userName));
+    public Student uploadStudentinfo(String studentName, String studentLastname, String studentEmail, String studentAge, String userName) throws SQLException {
+        return(studentDAO.uploadStudentinfo(studentName, studentLastname, studentEmail,studentAge, userName));
     }
 }

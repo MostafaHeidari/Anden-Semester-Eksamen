@@ -23,27 +23,27 @@ public class StudentDAO {
 
     /**
      * his method gets a uploadStudentinfo from the database
-     * @param studentNavn
-     * @param studentEfternavn
+     * @param studentName
+     * @param studentLastname
      * @return uploadStudentinfo
      * @throws SQLServerException
      */
-    public Student uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder, String userName ) throws SQLException {
+    public Student uploadStudentinfo(String studentName, String studentLastname, String studentEmail, String studentAge, String userName ) throws SQLException {
         Connection connection = DC.getConnection();
 
         String sql = "INSERT INTO StudentTable (NameStudent,LastNameStudent,EmailStudent,StudentAge,UserName) VALUES (?,?,?,?,?);";
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-        ps.setString(1, studentNavn);
-        ps.setString(2, studentEfternavn);
+        ps.setString(1, studentName);
+        ps.setString(2, studentLastname);
         ps.setString(3, studentEmail);
-        ps.setString(4, studentAlder);
+        ps.setString(4, studentAge);
         ps.setString(5, userName);
         int affectedRows = ps.executeUpdate();
         if (affectedRows == 1) {
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
                 int studentId = rs.getInt(1);
-                Student studentCord = new Student(studentId, studentNavn, studentEfternavn, studentEmail, studentAlder,userName);
+                Student studentCord = new Student(studentId, studentName, studentLastname, studentEmail, studentAge,userName);
                 return studentCord;
             }
 

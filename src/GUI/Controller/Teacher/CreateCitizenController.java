@@ -19,18 +19,18 @@ public class CreateCitizenController {
     /**
      * Goes to TeacherKlasseAndStudents view
      */
-    public void btnTilbageKlasser(ActionEvent event) throws IOException {
+    public void btnBackClasses(ActionEvent event) throws IOException {
         Stage switcher = (Stage) BtnTilbage.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
         Scene scene = new Scene(root);
-        switcher.setTitle("Classe Manger");
+        switcher.setTitle("Klasse Manager");
         switcher.setScene(scene);
     }
 
     /**
      * Goes to CitizenInfo view
      */
-    public void citizenInfomationBtn(ActionEvent event) throws IOException {
+    public void citizenInformationBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) BtnLogOutOfBorger.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/CitizenInfo.fxml"));
         Scene scene = new Scene(root);
@@ -41,7 +41,7 @@ public class CreateCitizenController {
     /**
      * Goes to CreateStudent view
      */
-    public void btnTilbageElever(ActionEvent event) throws IOException {
+    public void btnBackStudent(ActionEvent event) throws IOException {
         Stage switcher = (Stage) BtnLogOutOfBorger.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
         Scene scene = new Scene(root);

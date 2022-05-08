@@ -19,36 +19,36 @@ public class CategoryManager {
     }
 
     /**
-     * Gets the createCategory caseID, ProblemNavn and ProblemBeskrivelse using createCategory from CategoryDAO
+     * Gets the createCategory caseID, ProblemName and ProblemDescription using createCategory from CategoryDAO
      * @param caseID
-     * @param ProblemNavn
-     * @param ProblemBeskrivelse
+     * @param ProblemName
+     * @param ProblemDescription
      * @throws SQLServerException
      */
-    public void createCategory(int caseID, String ProblemNavn, String ProblemBeskrivelse) throws SQLException {
-        categoryDAO.createCategory(caseID,ProblemNavn,ProblemBeskrivelse);
+    public void createCategory(int caseID, String ProblemName, String ProblemDescription) throws SQLException {
+        categoryDAO.createCategory(caseID,ProblemName,ProblemDescription);
     }
 
 
     /**
-     * Gets the readCategory caseID, ProblemNavn and ProblemBeskrivelse using createCategory from CategoryDAO
+     * Gets the readCategory caseID, ProblemName using createCategory from CategoryDAO
      * @param caseID
-     * @param ProblemNavn
+     * @param ProblemName
      * @return
      * @throws SQLServerException
      */
-    public String readCategory(int caseID, String ProblemNavn) throws SQLException {
-        return categoryDAO.readCategory(caseID,ProblemNavn);
+    public String readCategory(int caseID, String ProblemName) throws SQLException {
+        return categoryDAO.readCategory(caseID,ProblemName);
     }
 
     /**
-     * Gets the updateCategory caseID, ProblemNavn and ProblemBeskrivelse using createCategory from CategoryDAO
+     * Gets the updateCategory caseID, ProblemName and ProblemDescription using createCategory from CategoryDAO
      * @param caseID
-     * @param ProblemNavn
-     * @param ProblemBeskrivelse
+     * @param ProblemName
+     * @param ProblemDescription
      * @throws SQLServerException
      */
-    public void updateCategory(int caseID, String ProblemNavn, String ProblemBeskrivelse) throws SQLException{
-        categoryDAO.updateCategory(caseID,ProblemNavn,ProblemBeskrivelse);
+    public void updateCategory(int caseID, String ProblemName, String ProblemDescription) throws SQLException{
+        categoryDAO.updateCategory(caseID,ProblemName,ProblemDescription);
     }
 }
