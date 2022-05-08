@@ -132,7 +132,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="citizenInfomation" layoutX="10.0" layoutY="355.0" onAction="#citizenInfomationBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="BogerInfomationer">
+            <JFXButton fx:id="citizenInformation" layoutX="10.0" layoutY="355.0" onAction="#citizenInformationBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="BogerInfomationer">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

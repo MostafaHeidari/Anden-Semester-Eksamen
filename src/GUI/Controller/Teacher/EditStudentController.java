@@ -31,9 +31,9 @@ public class EditStudentController {
     public TextField txtUserNameEditField;
 
     @FXML
-    private JFXButton BtnTilbageOpretStudent;
+    private JFXButton BtnBackCreateStudent;
     @FXML
-    private JFXButton Logud;
+    private JFXButton Logout;
 
 
 
@@ -67,7 +67,7 @@ public class EditStudentController {
         studentModel.editStudent(this.selectedStudent);
 
         /*turn back to Create student window*/
-        Stage switcher = (Stage) BtnTilbageOpretStudent.getScene().getWindow();
+        Stage switcher = (Stage) BtnBackCreateStudent.getScene().getWindow();
         switcher.setTitle("Create student");
         switcher.close();
     }
@@ -91,7 +91,7 @@ public class EditStudentController {
      * Log out and goes to the Login view
      */
     public void LogOutAction(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) Logud.getScene().getWindow();
+        Stage switcher = (Stage) Logout.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Create student");
@@ -103,8 +103,8 @@ public class EditStudentController {
     /**
      * Goes to the previous view
      */
-    public void BtnTilbageOpretStudentAction(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) BtnTilbageOpretStudent.getScene().getWindow();
+    public void BtnBackCreateStudentAction(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) BtnBackCreateStudent.getScene().getWindow();
         switcher.setTitle("Create student");
         switcher.close();
 

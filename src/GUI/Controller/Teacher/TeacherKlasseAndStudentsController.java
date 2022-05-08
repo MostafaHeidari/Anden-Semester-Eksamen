@@ -266,7 +266,7 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     /**
      * Goes to the CitizenInfo view
      */
-    public void citizenInfomationBtn(ActionEvent event) throws IOException {
+    public void citizenInformationBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) backStudent.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/CitizenInfo.fxml"));
         Scene scene = new Scene(root);
