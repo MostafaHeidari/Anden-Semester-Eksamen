@@ -39,24 +39,24 @@ public class TeacherKlasseAndStudentsController implements Initializable {
 
 
     @FXML
-    public JFXButton nyKlasse;
+    public JFXButton newClass;
     @FXML
-    public JFXButton nyStudent1;
+    public JFXButton newStudent1;
     @FXML
     public JFXButton addStudentToClass;
     @FXML
     public JFXButton deleteStudentInClass;
     @FXML
-    public JFXButton tilbageElever;
+    public JFXButton backStudent;
     @FXML
-    public JFXButton tilbageBogerBtn;
+    public JFXButton backPatientBtn;
 
     @FXML
-    public TableView tvKlasseInfomationer;
+    public TableView tvClassInformation;
     @FXML
-    public TableColumn tcKlasseId;
+    public TableColumn tcClassId;
     @FXML
-    public TableColumn tcKlasseNavn;
+    public TableColumn tcClassName;
 
     @FXML
     public TableView tvStudent;
@@ -65,11 +65,11 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     @FXML
     public TableColumn tcStudentId;
     @FXML
-    public TableColumn tcEfterName;
+    public TableColumn tcLastname;
     @FXML
     public TableColumn tcEmail;
     @FXML
-    public TableColumn tcAlder;
+    public TableColumn tcAge;
 
     @FXML
     public TableView tvStudentsInClasses;
@@ -96,12 +96,12 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         tvStudentsInClasses.setOnMouseClicked((MouseEvent event) -> {
             setSelectedItems();
 
-            tvKlasseInfomationer.getItems().clear();
+            tvClassInformation.getItems().clear();
 
 
-            tvKlasseInfomationer.setItems(classModel.getAllClasses());
+            tvClassInformation.setItems(classModel.getAllClasses());
         });
-        tvKlasseInfomationer.setOnMouseClicked((MouseEvent event) -> {
+        tvClassInformation.setOnMouseClicked((MouseEvent event) -> {
             setSelectedItems();
         });
         tvStudent.setOnMouseClicked((MouseEvent event) -> {
@@ -121,8 +121,8 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     /**
      * Goes to the Teacher view
      */
-    public void TilbageForsideBtn(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) tilbageElever.getScene().getWindow();
+    public void BackFrontpageBtn(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) backStudent.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Teacher");
@@ -132,8 +132,8 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     /**
      * Goes to the CreateKlasse view
      */
-    public void nyKlasseBtn(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) tilbageElever.getScene().getWindow();
+    public void newClassBtn(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) backStudent.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateClasses.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Classe Manger");
@@ -143,8 +143,8 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     /**
      * Goes to the CreateStudent view
      */
-    public void nyStudentBtn(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) tilbageElever.getScene().getWindow();
+    public void newStudentBtn(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) backStudent.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Student");
@@ -156,14 +156,14 @@ public class TeacherKlasseAndStudentsController implements Initializable {
      */
     private void setKlasseTableView() throws IOException {
 
-        tcKlasseId.setCellValueFactory(new PropertyValueFactory<>("classId"));
+        tcClassId.setCellValueFactory(new PropertyValueFactory<>("classId"));
 
-        tcKlasseNavn.setCellValueFactory(new PropertyValueFactory<>("className"));
+        tcClassName.setCellValueFactory(new PropertyValueFactory<>("className"));
 
 
-        tvKlasseInfomationer.setItems(classModel.getAllClasses());
-        if(tvKlasseInfomationer.getItems().size() > 0){ //Set den valgte til den første i listen, hvis der er nogen
-            selectedClass = (SchoolClass) tvKlasseInfomationer.getItems().get(0);
+        tvClassInformation.setItems(classModel.getAllClasses());
+        if(tvClassInformation.getItems().size() > 0){ //Set den valgte til den første i listen, hvis der er nogen
+            selectedClass = (SchoolClass) tvClassInformation.getItems().get(0);
         }
     }
 
@@ -176,11 +176,11 @@ public class TeacherKlasseAndStudentsController implements Initializable {
 
         tcNameStudent.setCellValueFactory(new PropertyValueFactory<>("studentName"));
 
-        tcEfterName.setCellValueFactory(new PropertyValueFactory<>("lastName"));
+        tcLastname.setCellValueFactory(new PropertyValueFactory<>("lastName"));
 
         tcEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
 
-        tcAlder.setCellValueFactory(new PropertyValueFactory<>("age"));
+        tcAge.setCellValueFactory(new PropertyValueFactory<>("age"));
 
 
             try {
@@ -217,9 +217,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         {
             selectedStudent = (Student) tvStudent.getSelectionModel().getSelectedItem();
         }
-        if (tvKlasseInfomationer.getSelectionModel().getSelectedItem() != null)
+        if (tvClassInformation.getSelectionModel().getSelectedItem() != null)
         {
-            selectedClass = (SchoolClass) tvKlasseInfomationer.getSelectionModel().getSelectedItem();
+            selectedClass = (SchoolClass) tvClassInformation.getSelectionModel().getSelectedItem();
             setStudentsInClasses();
         }
     }
@@ -255,8 +255,8 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     /**
      * Goes to the CreateCitizen view
      */
-    public void btnTilbageBoger(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) tilbageBogerBtn.getScene().getWindow();
+    public void btnBackPatient(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) backPatientBtn.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateCitizen.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Borger");
@@ -267,7 +267,7 @@ public class TeacherKlasseAndStudentsController implements Initializable {
      * Goes to the CitizenInfo view
      */
     public void citizenInfomationBtn(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) tilbageElever.getScene().getWindow();
+        Stage switcher = (Stage) backStudent.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/CitizenInfo.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Borger Informationer");
@@ -277,8 +277,8 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     /**
      * Goes to the CreateStudent view
      */
-    public void btnTilbageElever(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) tilbageElever.getScene().getWindow();
+    public void btnBackStudent(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) backStudent.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Student");
@@ -291,6 +291,6 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     public void deleteAClassBtn(ActionEvent event) {
         if (SimpleDialogController.delete())
             classModel.deleteAClass(selectedClass);
-            tvKlasseInfomationer.refresh();
+        tvClassInformation.refresh();
     }
 }
