@@ -70,11 +70,11 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="BtnSletElev" layoutX="706.0" layoutY="525.0" onAction="#SletElevAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/CreateStudent.css" text="Slet Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnDeleteStudent" layoutX="706.0" layoutY="525.0" onAction="#DeleteStudentAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/CreateStudent.css" text="Slet Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="BtnRedigerElev" layoutX="583.0" layoutY="525.0" onAction="#EditStudentAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/CreateStudent.css" text="Rediger Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnEditStudent" layoutX="583.0" layoutY="525.0" onAction="#EditStudentAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/CreateStudent.css" text="Rediger Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>

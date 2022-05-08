@@ -244,7 +244,7 @@ public class CreateStudentController implements Initializable {
     /**
      * remove a student with the SletElevAction method
      */
-    public void SletElevAction(ActionEvent actionEvent) {
+    public void DeleteStudentAction(ActionEvent actionEvent) {
         if (SimpleDialogController.delete() && selectedStudent != null) {
             studentModel.removeStudent(selectedStudent);
         }

@@ -17,15 +17,15 @@ import java.io.IOException;
 public class EditStudentController {
 
     @FXML
-    public TextField txtnavnEditStudentField;
+    public TextField txtnameEditStudentField;
     @FXML
-    public TextField txtEfterNavnEditStudentField;
+    public TextField txtLastnameEditStudentField;
     @FXML
     public TextField txtEmailEditStudentField;
     @FXML
     public TextField txtTelefonField;
     @FXML
-    public TextField txtAlderEditStudentFiled;
+    public TextField txtAgeEditStudentFiled;
 
     @FXML
     public TextField txtUserNameEditField;
@@ -51,11 +51,11 @@ public class EditStudentController {
     /**
      * Student update action.This method save the information of student
      */
-    public void GamOplysingerActionButton(ActionEvent actionEvent) throws Exception {
-        String updateStudentName = txtnavnEditStudentField.getText();
-        String updateStudentEfterNavn = txtEfterNavnEditStudentField.getText();
+    public void SaveInformationActionButton(ActionEvent actionEvent) throws Exception {
+        String updateStudentName = txtnameEditStudentField.getText();
+        String updateStudentEfterNavn = txtLastnameEditStudentField.getText();
         String updateStudentEmail = txtEmailEditStudentField.getText();
-        String updateStudentAlder = txtAlderEditStudentFiled.getText();
+        String updateStudentAlder = txtAgeEditStudentFiled.getText();
         String updateStudentUser = txtUserNameEditField.getText();
 
         this.selectedStudent.setStudentName(updateStudentName);
@@ -77,11 +77,11 @@ public class EditStudentController {
      * @param student
      */
     public void setSelectedStudent(Student student) {
-        txtnavnEditStudentField.setText(student.getStudentName());
-        txtEfterNavnEditStudentField.setText(student.getLastName());
+        txtnameEditStudentField.setText(student.getStudentName());
+        txtLastnameEditStudentField.setText(student.getLastName());
         txtEmailEditStudentField.setText(student.getEmail());
         txtUserNameEditField.setText(student.getUserName());
-        txtAlderEditStudentFiled.setText(student.getAge());
+        txtAgeEditStudentFiled.setText(student.getAge());
 
         this.selectedStudent = student;
     }
