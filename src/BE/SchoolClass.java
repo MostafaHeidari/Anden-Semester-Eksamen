@@ -62,6 +62,10 @@ public class SchoolClass {
         this.className = className;
     }
 
+    /**
+     * Gets the list of Student in classes
+     * @return temp
+     */
     public ObservableList<Student> getStudentsInClasses() {
         ObservableList<Student> temp = FXCollections.observableArrayList(listOfStudents);
         return temp;

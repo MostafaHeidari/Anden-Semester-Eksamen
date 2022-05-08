@@ -1,0 +1,16 @@
+#saveCase{
+    -fx-font-size: 12px;
+    -fx-background-color: #009B42;
+    -fx-text-fill: white;
+}
+
+#LogOut{
+    -fx-font-size: 15px;
+    -fx-background-color: #001569;
+}
+
+#backTo{
+    -fx-font-size: 12px;
+    -fx-text-fill: #001569;
+    -fx-border-color: #797862;
+}

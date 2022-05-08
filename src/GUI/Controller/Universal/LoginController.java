@@ -27,12 +27,20 @@ public class LoginController {
     private TextField txtPasswordField;
 
 
-   /*instant variable databasen*/
     private LoginModel loginModel = new LoginModel();
 
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public LoginController() throws IOException {
     }
 
+    /**
+     * Testing for teacher or Student login
+     * @throws IOException
+     * @throws SQLServerException
+     */
     public void Login() throws IOException, SQLServerException {
         Login login =  loginModel.login(txtFieldUsername.getText(), txtPasswordField.getText());
         /**
@@ -66,6 +74,13 @@ public class LoginController {
 
 
     }
+
+    /**
+     * See what key is pressed
+     * @param keyEvent
+     * @throws IOException
+     * @throws SQLServerException
+     */
     public void handleOnKeyPressed(KeyEvent keyEvent) throws IOException, SQLServerException {
         if (keyEvent.getCode().equals(KeyCode.ENTER)) {
             Login();

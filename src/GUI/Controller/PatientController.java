@@ -11,6 +11,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class PatientController {
+
+
+
     @FXML
     private JFXButton btnLogout;
     @FXML
@@ -21,7 +24,7 @@ public class PatientController {
      */
     public void LogOut(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) btnLogout.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
@@ -31,8 +34,8 @@ public class PatientController {
      * Goes to the Category view
      */
     public void InfoCategorys(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) btnInfo.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Category.fxml"));
+        Stage switcher = (Stage) btnLogout.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Category.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);

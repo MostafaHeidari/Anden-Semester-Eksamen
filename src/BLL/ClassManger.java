@@ -1,7 +1,7 @@
 package BLL;
 
 import BE.SchoolClass;
-import DAL.ClassDAO;
+import DAL.db.Teacher.ClassDAO;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -43,6 +43,10 @@ public class ClassManger {
         return classesObs;
     }
 
+    /**
+     * Gets the deleteAClass, selectedClass using deleteAClass from classDAO
+     * @param selectedClass
+     */
     public void deleteAClass(SchoolClass selectedClass) {
         classDAO.deleteAClass(selectedClass);
     }

@@ -2,15 +2,14 @@ package BLL;
 
 import BE.SchoolClass;
 import BE.Student;
-import DAL.StudentDAO;
-import DAL.StudentInClassesDAO;
+import DAL.db.Teacher.StudentDAO;
+import DAL.db.Teacher.StudentInClassesDAO;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.List;
 
 public class StudentManager {
     StudentDAO studentDAO;

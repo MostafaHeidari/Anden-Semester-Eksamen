@@ -1,49 +1,49 @@
 package BE;
 
 public class FunctionalAbility {
-    public String tilstand;
-    public String fremtidigeTilstand;
+    public String condition;
+    public String futureCondition;
 
     /**
      * @param caseID
-     * @param tilstand
-     * @param fremtidigeTilstand
-     * Constructor with FunctionalAbility, caseID,  tilstand, fremtidigeTilstand
+     * @param condition
+     * @param futureCondition
+     * Constructor with FunctionalAbility, caseID,  condition, futureCondition
      */
-    public FunctionalAbility(int caseID, String tilstand, String fremtidigeTilstand) {
-        this.tilstand = tilstand;
-        this.fremtidigeTilstand = fremtidigeTilstand;
+    public FunctionalAbility(int caseID, String condition, String futureCondition) {
+        this.condition = condition;
+        this.futureCondition = futureCondition;
     }
 
     /**
-     * Gets the tilstand
-     * @return tilstand
+     * Gets the condition
+     * @return condition
      */
-    public String getTilstand() {
-        return tilstand;
+    public String getcondition() {
+        return condition;
     }
 
     /**
-     * Gets the fremtidigeTilstand
-     * @return fremtidigeTilstand
+     * Gets the futureCondition
+     * @return futureCondition
      */
-    public String getFremtidigeTilstand() {
-        return fremtidigeTilstand;
+    public String getfutureCondition() {
+        return futureCondition;
     }
 
     /**
-     * Sets the tilstand
-     * @return tilstand
+     * Sets the condition
+     * @return condition
      */
-    public void setTilstand(String tilstand) {
-        this.tilstand = tilstand;
+    public void setCondition(String tilstand) {
+        this.condition = condition;
     }
 
     /**
-     * Sets the fremtidigeTilstand
-     * @return fremtidigeTilstand
+     * Sets the futureCondition
+     * @return futureCondition
      */
-    public void setFremtidigeTilstand(String fremtidigeTilstand) {
-        this.fremtidigeTilstand = fremtidigeTilstand;
+    public void setFutureCondition(String futureCondition) {
+        this.futureCondition = futureCondition;
     }
 }

@@ -1,5 +1,6 @@
 package GUI.Controller.Universal;
 
+import BE.Citizen;
 import GUI.Model.CitizenInfoModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -11,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -20,28 +22,45 @@ import java.util.ResourceBundle;
 public class CitizenInfoContoller implements Initializable {
 
 
+
     private CitizenInfoModel citizenInfoModel;
 
+    public Citizen selectedCitizen;
+
+
+    @FXML
     public JFXButton caseInfo;
-    public JFXButton BtnTilbage;
-    public JFXButton tilbageKlasser;
-    public JFXButton tilbageBogerBtn;
     @FXML
-    public TableView tvCitizenInfo;
+    public JFXButton backClass;
     @FXML
-    public TableColumn tcCitizenId;
+    public JFXButton backStudent;
     @FXML
-    public TableColumn tcNameCitizen;
+    public JFXButton backCitizen;
     @FXML
-    public TableColumn tcCitizenEfterName;
-    @FXML
-    public TableColumn tcCitizenAlder;
+    public JFXButton createCase;
 
+    @FXML
+    public TableView<Citizen>  tvCitizenInfo;
+    @FXML
+    public TableColumn<Citizen, Integer> tcCitizenId;
+    @FXML
+    public TableColumn<Citizen, String>  tcNameCitizen;
+    @FXML
+    public TableColumn<Citizen, String>  tcCitizenEfterName;
+    @FXML
+    public TableColumn<Citizen, String>  tcCitizenAlder;
 
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public CitizenInfoContoller() throws IOException {
         citizenInfoModel = new CitizenInfoModel();
     }
 
+    /**
+     * initialize
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -49,8 +68,14 @@ public class CitizenInfoContoller implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        tvCitizenInfo.setOnMouseClicked((MouseEvent event) -> {
+            setSelectedItems();
+        });
     }
 
+    /**
+     * Sets the StudentTableView
+     */
     public void setStudentTableView() throws IOException {
 
         tcCitizenId.setCellValueFactory(new PropertyValueFactory<>("citizenId"));
@@ -63,35 +88,47 @@ public class CitizenInfoContoller implements Initializable {
 
 
         tvCitizenInfo.setItems(citizenInfoModel.getAllCitizens());
+
     }
 
-
-    public void BtnTilbage(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) BtnTilbage.getScene().getWindow();
+    /**
+     * Goes to Teacher view
+     */
+    public void backToLastPageBtn(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) backClass.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Forside");
         switcher.setScene(scene);
     }
 
-    public void btnTilbageKlasser(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) tilbageKlasser.getScene().getWindow();
+    /**
+     * Goes to TeacherKlasseAndStudents view
+     */
+    public void backClassBtn(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) backStudent.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
         Scene scene = new Scene(root);
-        switcher.setTitle("Classe Manger");
+        switcher.setTitle("Klassen");
         switcher.setScene(scene);
     }
 
-    public void btnTilbageBoger(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) BtnTilbage.getScene().getWindow();
+    /**
+     * Goes to CreateCitizen view
+     */
+    public void backCitizenBtn(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) backCitizen.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateCitizen.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Borger");
         switcher.setScene(scene);
     }
 
-    public void btnTilbageElever(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) tilbageKlasser.getScene().getWindow();
+    /**
+     * Goes to CreateStudent view
+     */
+    public void backStudentBtn(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) backStudent.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Student");
@@ -99,7 +136,35 @@ public class CitizenInfoContoller implements Initializable {
     }
 
 
-    public void caseInfoBtn(ActionEvent event) {
+    public void caseInfoBtn(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) caseInfo.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Cases.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
+        CasesController casesController = fxmlLoader.<CasesController>getController();
+        casesController.setCitizenID(selectedCitizen);
+        Scene scene = new Scene(root);
+        switcher.setTitle("SOSU System");
+        switcher.setScene(scene);
+    }
 
+
+    /**
+     * Changes selected Name  in the adminEventMangerTableViewName
+     */
+    private void setSelectedItems() {
+        if (tvCitizenInfo.getSelectionModel().getSelectedItem() != null)
+        {
+            selectedCitizen = tvCitizenInfo.getSelectionModel().getSelectedItem();
+        }
+
+    }
+
+    public void createCaseBtn(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) createCase.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/CreateCase.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
+        Scene scene = new Scene(root);
+        switcher.setTitle("SOSU System");
+        switcher.setScene(scene);
     }
 }

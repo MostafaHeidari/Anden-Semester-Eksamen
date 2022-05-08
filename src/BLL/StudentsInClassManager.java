@@ -2,7 +2,7 @@ package BLL;
 
 import BE.SchoolClass;
 import BE.Student;
-import DAL.StudentInClassesDAO;
+import DAL.db.Teacher.StudentInClassesDAO;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.io.IOException;

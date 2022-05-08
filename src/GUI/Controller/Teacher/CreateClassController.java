@@ -19,7 +19,10 @@ public class CreateClassController {
     public TextField classNavnTxt;
     ClassModel classModelInfo = new ClassModel();
 
-
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public CreateClassController() throws IOException {
     }
 
@@ -54,7 +57,7 @@ public class CreateClassController {
         Stage switcher = (Stage) saveButton.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
         Scene scene = new Scene(root);
-        switcher.setTitle("EventCoordinatorManagement");
+        switcher.setTitle("Klassen");
         switcher.setScene(scene);
     }
 }

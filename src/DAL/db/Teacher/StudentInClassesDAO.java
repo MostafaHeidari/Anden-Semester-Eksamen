@@ -1,4 +1,4 @@
-package DAL;
+package DAL.db.Teacher;
 
 import BE.SchoolClass;
 import BE.Student;

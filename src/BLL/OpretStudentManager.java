@@ -1,7 +1,7 @@
 package BLL;
 
 import BE.Login;
-import DAL.OpretStudentLoginDAO;
+import DAL.db.Teacher.OpretStudentLoginDAO;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.io.IOException;

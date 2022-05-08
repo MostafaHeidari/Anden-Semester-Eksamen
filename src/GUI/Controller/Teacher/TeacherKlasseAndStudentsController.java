@@ -268,7 +268,7 @@ public class TeacherKlasseAndStudentsController implements Initializable {
      */
     public void citizenInfomationBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) tilbageElever.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/CitizenInfo.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/CitizenInfo.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Borger Informationer");
         switcher.setScene(scene);
@@ -285,6 +285,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         switcher.setScene(scene);
     }
 
+    /**
+     * delete a class
+     */
     public void deleteAClassBtn(ActionEvent event) {
         if (SimpleDialogController.delete())
             classModel.deleteAClass(selectedClass);

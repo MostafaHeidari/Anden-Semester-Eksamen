@@ -1,4 +1,4 @@
-package DAL;
+package DAL.db.Teacher;
 
 import BE.SchoolClass;
 import DAL.db.DatabaseConnector;
@@ -49,7 +49,6 @@ public class ClassDAO {
     /**
      * This method gets a list of SchoolClass with getAllClasses from the database
      * @return allClasses from database
-     * @throws SQLServerException
      */
     public List<SchoolClass> getAllClasses() throws SQLException {
         Connection con = DC.getConnection();
@@ -68,6 +67,11 @@ public class ClassDAO {
         return allClasses;
     }
 
+    /**
+     * this method gets a deleteAClass from the database
+     * @param selectedClass
+     * @return
+     */
     public void deleteAClass(SchoolClass selectedClass) {
         int pId = selectedClass.getClassId();
 

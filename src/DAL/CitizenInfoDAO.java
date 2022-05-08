@@ -15,11 +15,19 @@ public class CitizenInfoDAO {
 
     private DatabaseConnector DC;
 
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public CitizenInfoDAO() throws IOException
     {
         DC = new DatabaseConnector();
     }
 
+    /**
+     * Gets a list of getAllCitizens
+     * @throws IOException
+     */
     public List<Citizen> getAllCitizens() throws SQLException {
         Connection con = DC.getConnection();
 

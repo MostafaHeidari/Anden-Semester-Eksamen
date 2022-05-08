@@ -2,7 +2,7 @@ package GUI.Model;
 
 import BE.SchoolClass;
 import BLL.ClassManger;
-import DAL.ClassDAO;
+import DAL.db.Teacher.ClassDAO;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -43,6 +43,10 @@ public class ClassModel {
         classList.add(classManger.uploadClassInfo(className));
     }
 
+    /**
+     * Gets the deleteAClass selectedClass using deleteAClass from classManger
+     * @param selectedClass
+     */
     public void deleteAClass(SchoolClass selectedClass) {
         classList.remove(selectedClass);
         classManger.deleteAClass(selectedClass);

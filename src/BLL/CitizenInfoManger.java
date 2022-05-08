@@ -11,11 +11,18 @@ import java.io.IOException;
 public class CitizenInfoManger {
     private CitizenInfoDAO citizenInfoDAO;
 
-
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public CitizenInfoManger() throws IOException {
         citizenInfoDAO = new CitizenInfoDAO();
     }
 
+    /**
+     * Gets the list of getAllCitizens using the getAllCitizens method in citizenInfoDAO.
+     * @return a list of getAllClasses
+     */
     public ObservableList<Citizen> getAllCitizens() {
         ObservableList<Citizen> citizensObs = FXCollections.observableArrayList();
 

@@ -17,12 +17,12 @@ import java.sql.SQLException;
 public class SubcategoryController {
 
     @FXML
-    private JFXButton btnTilbage;
+    private JFXButton btnBack;
     @FXML
-    private JFXButton btnLogud;
+    private JFXButton btnLogOut;
 
     public Text subCatText;
-    public TextArea txtBeskrivelse;
+    public TextArea txtDescription;
 
    // this is instance variable is not used to now//
     private int caseID = 27;
@@ -30,39 +30,57 @@ public class SubcategoryController {
 
     CategoryModel categoryModel = new CategoryModel();
 
+    /**
+     * Constructor
+     * @throws IOException
+     */
     public SubcategoryController() throws IOException {
     }
 
+    /**
+     * Goes to Category view
+     */
 
-    public void subCategoryTilbage(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) btnTilbage.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Category.fxml"));
+    public void subCategoryBack(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) btnBack.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Category.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
     }
 
-    public void subCategoryLogud(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) btnLogud.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Unvesial/Login.fxml"));
+    /**
+     * Goes to Login view
+     */
+    public void subCategoryLogOut(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) btnLogOut.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
     }
 
-    // this button is used to save the information to databassen. if the databassen is empty //
+    /**
+     * this button is used to save the information to databassen. if the databassen is empty
+     * @param actionEvent
+     * @throws SQLException
+     */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
         if (categoryModel.readCategory(caseID,problemName) == null){
 
-            categoryModel.createCategory(caseID,problemName,txtBeskrivelse.getText());
+            categoryModel.createCategory(caseID,problemName,txtDescription.getText());
         }
-        categoryModel.updateCategory(caseID,problemName,txtBeskrivelse.getText());
+        categoryModel.updateCategory(caseID,problemName,txtDescription.getText());
     }
 
-    // this method is used to sende information from en controller to other controller//
+    /**
+     * this method is used to sende information from en controller to other controller
+     * @param problemName
+     * @throws SQLException
+     */
     public void setId(String problemName) throws SQLException {
         this.problemName = problemName;
-        txtBeskrivelse.setText(categoryModel.readCategory(caseID,problemName));
+        txtDescription.setText(categoryModel.readCategory(caseID,problemName));
         subCatText.setText(problemName);
     }
 }

@@ -1,5 +1,5 @@
 
-#caseInfo{
+#caseInfo, #createCase{
     -fx-font-size: 15px;
     -fx-border-color:  #001569;
     -fx-background-color: #15B559;
@@ -8,6 +8,13 @@
 
 
 #caseInfo:hover{
+    -fx-font-size: 15px;
+    -fx-background-color: white;
+    -fx-text-fill: #2B2121;
+    -fx-border-color: #15B559;
+}
+
+#createCase:hover{
     -fx-font-size: 15px;
     -fx-background-color: white;
     -fx-text-fill: #2B2121;
