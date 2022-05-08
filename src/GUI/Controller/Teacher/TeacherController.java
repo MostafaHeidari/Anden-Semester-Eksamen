@@ -12,21 +12,21 @@ import java.io.IOException;
 
 public class TeacherController {
     @FXML
-    public JFXButton citizentBoutten;
+    public JFXButton citizentButton;
     @FXML
-    private JFXButton klasserKnnap;
+    private JFXButton classBtn;
     @FXML
-    private JFXButton BtnOpretStudent;
+    private JFXButton BtnCreateStudent;
     @FXML
-    private JFXButton BtnOpretBorger;
+    private JFXButton BtnCreatePatient;
     @FXML
-    private JFXButton Logud;
+    private JFXButton Logout;
 
     /**
      * Goes to the TeacherKlasseAndStudents view
      */
-    public void klasserBtn(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) klasserKnnap.getScene().getWindow();
+    public void classBtn(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) classBtn.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Classe Manger");
@@ -36,8 +36,8 @@ public class TeacherController {
     /**
      * Goes to the CreateStudent view
      */
-    public void OpretStudent(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) BtnOpretStudent.getScene().getWindow();
+    public void CreateStudent(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) BtnCreateStudent.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Student");
@@ -47,8 +47,8 @@ public class TeacherController {
     /**
      * Goes to the CreateCitizen view
      */
-    public void OpretBorger(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) BtnOpretBorger.getScene().getWindow();
+    public void CreatePatient(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) BtnCreatePatient.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateCitizen.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Borger");
@@ -59,7 +59,7 @@ public class TeacherController {
      * Log out and goes to the Login view
      */
     public void LogOut(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) Logud.getScene().getWindow();
+        Stage switcher = (Stage) Logout.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSUS System");
@@ -69,8 +69,8 @@ public class TeacherController {
     /**
      * Goes to the CitizenInfo view
      */
-    public void citizentBouttenBtn(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) citizentBoutten.getScene().getWindow();
+    public void citizentButtonBtn(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) citizentButton.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/CitizenInfo.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Borger Informationer");
