@@ -1,19 +1,19 @@
 /*    "Oprettelse af Elev" styling of elements   */
 
 
-#BtnCreateStudent, #BtnEditStudent, #BtnDeleteStudent,#BtnGamOplysinger {
+#BtnCreateStudent, #BtnEditStudent, #BtnDeleteStudent,#BtnSaveInformation {
     -fx-font-size: 12px;
     -fx-background-color: #009B42;
     -fx-text-fill: white;
 }
 
-#txtnavnEditStudentField,#txtEfterNavnEditStudentField,#txtcprField,#txtEmailEditStudentField,#txtTelefonField,#txtAlderEditStudentFiled,#txtUserNameEditField{
+#txtnameEditStudentField,#txtLastnameEditStudentField,#txtAgeEditStudentFiled,#txtEmailEditStudentField,#txtTelefonField,#txtAlderEditStudentFiled,#txtUserNameEditField{
     -fx-control-inner-background: #797862;
     -fx-text-fill: #2B2121;
     -fx-background-color:  #BBE5E8;
 }
 
-#BtnBack,#BtnTilbageOpretStudent,#backClasses,#BtnBackPatient,#citizenInformation,#backStudent,#backCitizen,#backClass,#backToLastPage {
+#BtnBack,#BtnBackCreateStudent,#backClasses,#BtnBackPatient,#citizenInformation,#backStudent,#backCitizen,#backClass,#backToLastPage {
     -fx-font-size: 12px;
     -fx-text-fill: #001569;
     -fx-border-color: #797862;
@@ -69,7 +69,7 @@
     -fx-border-radius: 4px;
 }
 
-#BtnGamOplysinger:hover {
+#BtnSaveInformation:hover {
     -fx-text-fill: white;
     -fx-border-color: #001569;
     -fx-border-width: 2px;

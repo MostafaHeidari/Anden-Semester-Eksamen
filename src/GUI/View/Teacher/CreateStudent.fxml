@@ -18,7 +18,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="596.0" prefWidth="1327.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.CreateStudentController">
+<AnchorPane prefHeight="604.0" prefWidth="1285.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.CreateStudentController">
    <children>
       <GridPane fx:id="GridPane" layoutX="298.0" layoutY="170.0" prefHeight="214.0" prefWidth="243.0">
          <columnConstraints>
@@ -78,25 +78,25 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <TableView fx:id="tvStudent" layoutX="583.0" layoutY="79.0" prefHeight="423.0" prefWidth="715.0">
+      <TableView fx:id="tvStudent" layoutX="583.0" layoutY="79.0" prefHeight="423.0" prefWidth="674.0">
         <columns>
             <TableColumn fx:id="tcId" prefWidth="55.0" text="Id" />
-          <TableColumn fx:id="tcNameStudent" prefWidth="136.0" text="Navn" />
-          <TableColumn fx:id="tcLastName" prefWidth="151.20001220703125" text="Efternavn" />
-            <TableColumn fx:id="tcEmail" prefWidth="108.800048828125" text="E-mail" />
-            <TableColumn fx:id="tcAge" minWidth="0.0" prefWidth="137.599853515625" text="Alder" />
-            <TableColumn fx:id="tcUserName" prefWidth="123.199951171875" text="Brugernavn" />
+          <TableColumn fx:id="tcNameStudent" prefWidth="96.0" text="Navn" />
+          <TableColumn fx:id="tcLastName" prefWidth="147.20001220703125" text="Efternavn" />
+            <TableColumn fx:id="tcEmail" prefWidth="125.5999755859375" text="E-mail" />
+            <TableColumn fx:id="tcAge" minWidth="0.0" prefWidth="122.400146484375" text="Alder" />
+            <TableColumn fx:id="tcUserName" prefWidth="124.7999267578125" text="Brugernavn" />
         </columns>
       </TableView>
-      <Label layoutX="861.0" layoutY="43.0" text="List af Eleverne" textFill="#2b2121">
+      <Label layoutX="895.0" layoutY="42.0" text="List af Eleverne" textFill="#2b2121">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
       <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="296.0" layoutY="137.0" size="30" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
-      <Pane layoutY="-2.0" prefHeight="606.0" prefWidth="198.0" style="-fx-background-color: #D4D3BE;">
+      <Pane layoutY="-2.0" prefHeight="606.0" prefWidth="182.0" style="-fx-background-color: #D4D3BE;">
          <children>
-            <JFXButton fx:id="BtnBack" layoutX="10.0" layoutY="544.0" onAction="#BtnBack" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
+            <JFXButton fx:id="BtnBack" layoutX="1.0" layoutY="544.0" onAction="#BtnBack" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -112,12 +112,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="backClasses" layoutX="10.0" layoutY="482.0" onAction="#btnBackClasses" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Klasser">
+            <JFXButton fx:id="backClasses" layoutY="482.0" onAction="#btnBackClasses" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Klasser">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="BtnBackPatient" layoutX="10.0" layoutY="420.0" onAction="#btnBackPatient" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Boger">
+            <JFXButton fx:id="BtnBackPatient" layoutY="420.0" onAction="#btnBackPatient" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Boger">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -132,7 +132,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="citizenInformation" layoutX="10.0" layoutY="355.0" onAction="#citizenInformationBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="BogerInfomationer">
+            <JFXButton fx:id="citizenInformation" layoutX="1.0" layoutY="356.0" onAction="#citizenInformationBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="BogerInfomationer">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -147,17 +147,17 @@
             </FontAwesomeIconView>
          </children>
       </Pane>
-      <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="819.0" layoutY="60.0" size="20" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
+      <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="853.0" layoutY="59.0" size="20" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
       <Label layoutX="333.0" layoutY="116.0" text="Indtast elevoplysninger" textFill="#2b2121">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="259.0" layoutY="183.0" text="Navn  " />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="236.0" layoutY="226.0" text="Efternavn " />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="253.0" layoutY="271.0" text="E-mail " />
-      <Label alignment="CENTER" layoutX="223.0" layoutY="313.0" text="BrugerNavn" />
-      <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="217.0" layoutY="356.0" prefHeight="20.0" prefWidth="70.0" text="Alder " textAlignment="RIGHT" />
+      <Label alignment="CENTER" layoutX="261.0" layoutY="183.0" text="Navn  " />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="238.0" layoutY="226.0" text="Efternavn " />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="255.0" layoutY="271.0" text="E-mail " />
+      <Label alignment="CENTER" layoutX="225.0" layoutY="313.0" text="BrugerNavn" />
+      <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="219.0" layoutY="356.0" prefHeight="20.0" prefWidth="70.0" text="Alder " textAlignment="RIGHT" />
    </children>
    <stylesheets>
       <URL value="@../CSS/TeacherAndPatient.css" />
