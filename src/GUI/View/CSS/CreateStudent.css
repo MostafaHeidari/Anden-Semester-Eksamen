@@ -10,7 +10,7 @@
 #txtnameEditStudentField,#txtLastnameEditStudentField,#txtAgeEditStudentFiled,#txtEmailEditStudentField,#txtTelefonField,#txtAlderEditStudentFiled,#txtUserNameEditField{
     -fx-control-inner-background: #797862;
     -fx-text-fill: #2B2121;
-    -fx-background-color:  #BBE5E8;
+    -fx-background-color:  #EBF3EB;
 }
 
 #BtnBack,#BtnBackCreateStudent,#backClasses,#BtnBackPatient,#citizenInformation,#backStudent,#backCitizen,#backClass,#backToLastPage {
