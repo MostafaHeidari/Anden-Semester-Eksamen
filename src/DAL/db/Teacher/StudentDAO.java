@@ -29,29 +29,24 @@ public class StudentDAO {
      * @throws SQLServerException
      */
     public Student uploadStudentinfo(String studentName, String studentLastname, String studentEmail, String studentAge, String userName ) throws SQLException {
-        // This is the method to create a EventCoordinator in the Database. This is also where the EventCoordinator gets an ID.
+        Connection connection = DC.getConnection();
 
-        try (Connection connection = DC.getConnection()) {
-            String sql = "INSERT INTO CustomerTable (NameCustomer,LastNameCustomer,PhoneNumberCustomer, EmailCustomer,is_checked,Customer) VALUES (?,?,?,?,?,?);";
-
-            PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-
-            ps.setString(1, studentName);
-            ps.setString(2, studentLastname);
-
-
-            ps.executeUpdate();
+        String sql = "INSERT INTO StudentTable (NameStudent,LastNameStudent,EmailStudent,StudentAge,UserName) VALUES (?,?,?,?,?);";
+        PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+        ps.setString(1, studentName);
+        ps.setString(2, studentLastname);
+        ps.setString(3, studentEmail);
+        ps.setString(4, studentAge);
+        ps.setString(5, userName);
+        int affectedRows = ps.executeUpdate();
+        if (affectedRows == 1) {
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
-                int id = rs.getInt(1);
-                //Add relation between Customer and Event
-                setCaseCitizen(id, eventID);
-                return new Customer(id, name, lastName, phoneNumber, email, uploadOver12År);
+                int studentId = rs.getInt(1);
+                Student studentCord = new Student(studentId, studentName, studentLastname, studentEmail, studentAge,userName);
+                return studentCord;
             }
-        } catch (SQLServerException throwables) {
-            throwables.printStackTrace();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+
         }
         return null;
     }
@@ -131,26 +126,5 @@ public class StudentDAO {
         return allStudents;
     }
 
-
-    public void setCaseCitizen(int customerId, int eventId){
-        try (Connection connection = DC.getConnection()) {
-            String sql = "INSERT INTO EventCustomer(CustomerID, EventID) VALUES (?,?);";
-
-            PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-
-            ps.setInt(1, customerId);
-            ps.setInt(2, eventId);
-            ps.executeUpdate();
-            ResultSet rs = ps.getGeneratedKeys();
-            if (rs.next()) {
-                int id = rs.getInt(1);
-                //Add relation between Customer and Event
-            }
-        } catch (SQLServerException throwables) {
-            throwables.printStackTrace();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-    }
 
 }
