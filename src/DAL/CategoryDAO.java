@@ -56,7 +56,7 @@ public class CategoryDAO {
      */
     public String readCategory(int caseID, String ProblemName) throws SQLException {
 
-        String sql = "SELECT ProblemDescription FROM Helbredstilstande WHERE caseID = (?) AND ProblemName = (?);";
+        String sql = "SELECT ProblemDescription FROM HealthConditions WHERE caseID = (?) AND ProblemName = (?);";
 
         try(Connection connection = DC.getConnection()){
 
@@ -89,7 +89,7 @@ public class CategoryDAO {
      */
     public void updateCategory(int caseID, String ProblemName, String ProblemDescription) throws SQLException {
 
-        String sql = "UPDATE Helbredstilstande SET ProblemDescription = (?)  WHERE caseID = (?) AND ProblemName = (?);";
+        String sql = "UPDATE HealthConditions SET ProblemDescription = (?)  WHERE caseID = (?) AND ProblemName = (?);";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -113,7 +113,7 @@ public class CategoryDAO {
      * @throws SQLServerException
      */
     public void deleteCategory(int caseID, String ProblemName, String ProblemDescription) throws SQLException {
-        String sql = "DELETE FROM Helbredstilstande WHERE caseID = ? AND ProblemName = ?;";
+        String sql = "DELETE FROM HealthConditions WHERE caseID = ? AND ProblemName = ?;";
 
         try(Connection connection = DC.getConnection()){
 
