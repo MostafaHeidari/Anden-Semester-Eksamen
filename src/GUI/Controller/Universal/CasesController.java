@@ -18,6 +18,7 @@ import java.io.IOException;
 
 public class CasesController {
 
+
     private Citizen selectedCitizen;
 
     public CaseModel caseModel;
@@ -29,6 +30,8 @@ public class CasesController {
     public TableColumn tcCaseId;
     @FXML
     public TableColumn tcCaseInfo;
+    @FXML
+    public TableColumn tcCaseName;
 
     @FXML
     public JFXButton backToLastPage;
@@ -95,6 +98,8 @@ public class CasesController {
     private void setCaseView(){
 
         tcCaseId.setCellValueFactory(new PropertyValueFactory<>("caseId"));
+
+        tcCaseName.setCellValueFactory(new PropertyValueFactory<>("caseName"));
 
         tcCaseInfo.setCellValueFactory(new PropertyValueFactory<>("caseInformation"));
 
