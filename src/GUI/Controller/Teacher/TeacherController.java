@@ -16,7 +16,7 @@ public class TeacherController {
     @FXML
     private JFXButton classBtn;
     @FXML
-    private JFXButton BtnCreateStudent;
+    private JFXButton BtnCreateStudent1;
     @FXML
     private JFXButton BtnCreatePatient;
     @FXML
@@ -37,7 +37,7 @@ public class TeacherController {
      * Goes to the CreateStudent view
      */
     public void CreateStudent(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) BtnCreateStudent.getScene().getWindow();
+        Stage switcher = (Stage) BtnCreateStudent1.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Student");

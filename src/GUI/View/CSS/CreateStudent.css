@@ -10,7 +10,7 @@
 #txtnameEditStudentField,#txtLastnameEditStudentField,#txtAgeEditStudentFiled,#txtEmailEditStudentField,#txtTelefonField,#txtAlderEditStudentFiled,#txtUserNameEditField{
     -fx-control-inner-background: #797862;
     -fx-text-fill: #2B2121;
-    -fx-background-color:  #BBE5E8;
+    -fx-background-color:  #EBF3EB;
 }
 
 #BtnBack,#BtnBackCreateStudent,#backClasses,#BtnBackPatient,#citizenInformation,#backStudent,#backCitizen,#backClass,#backToLastPage,#backPatientBtn {
@@ -19,6 +19,12 @@
     -fx-border-color: #797862;
 }
 
+#BtnCreateStudent:hover{
+    -fx-text-fill: white;
+    -fx-border-color: #001569;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+}
 #BtnBack:hover {
     -fx-text-fill: white;
     -fx-border-color: #009B42;
@@ -46,12 +52,7 @@
     -fx-background-color: #009B42;
 }
 
-#BtnCreateStudent:hover{
-    -fx-text-fill: white;
-    -fx-border-color: #001569;
-    -fx-border-width: 2px;
-    -fx-border-radius: 4px;
-}
+
 
 #BtnEditStudent:hover {
     -fx-text-fill: white;

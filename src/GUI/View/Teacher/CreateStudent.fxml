@@ -66,15 +66,15 @@
                </effect></TextField>
          </children>
       </GridPane>
-      <JFXButton fx:id="BtnCreateStudent" layoutX="299.0" layoutY="404.0" onAction="#CreateStudentActionButton" prefHeight="28.0" prefWidth="94.0" text="Opret Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnCreateStudent" layoutX="446.0" layoutY="406.0" onAction="#CreateStudentActionButton" prefHeight="28.0" prefWidth="94.0" text="Opret Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="BtnDeleteStudent" layoutX="706.0" layoutY="525.0" onAction="#DeleteStudentAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/CreateStudent.css" text="Slet Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnDeleteStudent" layoutX="932.0" layoutY="528.0" onAction="#DeleteStudentAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/CreateStudent.css" text="Slet Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="BtnEditStudent" layoutX="583.0" layoutY="525.0" onAction="#EditStudentAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/CreateStudent.css" text="Rediger Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnEditStudent" layoutX="809.0" layoutY="528.0" onAction="#EditStudentAction" prefHeight="28.0" prefWidth="100.0" stylesheets="@../CSS/CreateStudent.css" text="Rediger Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>

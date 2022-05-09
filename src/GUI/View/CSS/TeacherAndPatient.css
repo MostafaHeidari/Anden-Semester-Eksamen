@@ -20,7 +20,6 @@
 }
 
 
-
 #Title{
       -fx-text-fill: #2B2121;
       -fx-font-size: 18px;
@@ -45,13 +44,19 @@
 }
 
 /* Button font size and background color*/
-#classBtn, #citizentButton, #BtnSlet, #BtnCreatePatient,#BtnCreateStudent{
+#classBtn,#BtnCreatePatient, #citizentButton, #BtnSlet, #BtnCreateStudent1{
      -fx-font-size: 15px;
      -fx-border-color:  #001569;
      -fx-background-color: #15B559;
      -fx-text-fill: white;
  }
 
+#BtnCreateStudent1:hover{
+     -fx-font-size: 15px;
+     -fx-background-color: white;
+     -fx-text-fill: #2B2121;
+     -fx-border-color: #15B559;
+}
 
 
 #citizentButton:hover{
@@ -118,14 +123,6 @@
      -fx-border-color:  #001569;
      -fx-background-color: #15B559;
      -fx-text-fill: white;
-}
-
-#BtnCreateStudent:hover{
-     -fx-font-size: 15px;
-     -fx-background-color: white;
-     -fx-text-fill: #2B2121;
-     -fx-border-color: #15B559;
-     -fx-border-width: 1,5px;
 }
 
 
