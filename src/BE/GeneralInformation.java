@@ -10,10 +10,10 @@ public class GeneralInformation {
     private String habits;
     private String educationAndJob;
     private String lifeStory;
-    private String healthInformation;
-    private String AssistiveDevices;
-    private String homeLayout;
-    private String Network;
+    private final String healthInformation;
+    private final String AssistiveDevices;
+    private final String homeLayout;
+    private final String Network;
 
     /**
      * @param id
