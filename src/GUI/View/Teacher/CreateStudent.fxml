@@ -18,7 +18,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="604.0" prefWidth="1374.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.CreateStudentController">
+<AnchorPane prefHeight="596.0" prefWidth="1327.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.CreateStudentController">
    <children>
       <GridPane fx:id="GridPane" layoutX="298.0" layoutY="170.0" prefHeight="214.0" prefWidth="243.0">
          <columnConstraints>
@@ -32,7 +32,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <TextField fx:id="txtNameField" prefHeight="98.0" prefWidth="318.0" promptText="Navn">
+            <TextField fx:id="txtNameField" prefHeight="98.0" prefWidth="318.0" promptText="Navn" stylesheets="@../CSS/TeacherAndPatient.css">
                <GridPane.margin>
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
@@ -78,14 +78,14 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <TableView fx:id="tvStudent" layoutX="583.0" layoutY="79.0" prefHeight="423.0" prefWidth="754.0">
+      <TableView fx:id="tvStudent" layoutX="583.0" layoutY="79.0" prefHeight="423.0" prefWidth="715.0">
         <columns>
             <TableColumn fx:id="tcId" prefWidth="55.0" text="Id" />
-          <TableColumn fx:id="tcNameStudent" prefWidth="160.53326416015625" text="Navn" />
-          <TableColumn fx:id="tcLastName" prefWidth="147.46673583984375" text="Efternavn" />
-            <TableColumn fx:id="tcEmail" prefWidth="129.33343505859375" text="E-mail" />
-            <TableColumn fx:id="tcAge" minWidth="0.0" prefWidth="128.800048828125" text="Alder" />
-            <TableColumn fx:id="tcUserName" prefWidth="134.93310546875" text="Brugernavn" />
+          <TableColumn fx:id="tcNameStudent" prefWidth="136.0" text="Navn" />
+          <TableColumn fx:id="tcLastName" prefWidth="151.20001220703125" text="Efternavn" />
+            <TableColumn fx:id="tcEmail" prefWidth="108.800048828125" text="E-mail" />
+            <TableColumn fx:id="tcAge" minWidth="0.0" prefWidth="137.599853515625" text="Alder" />
+            <TableColumn fx:id="tcUserName" prefWidth="123.199951171875" text="Brugernavn" />
         </columns>
       </TableView>
       <Label layoutX="861.0" layoutY="43.0" text="List af Eleverne" textFill="#2b2121">
@@ -153,11 +153,11 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="207.0" layoutY="182.0" text="Navn           " />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="206.0" layoutY="228.0" text="Efternavn      " />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="206.0" layoutY="268.0" text="E-mail          " />
-      <Label alignment="CENTER" layoutX="206.0" layoutY="316.0" text="BrugerNavn" />
-      <Label alignment="CENTER" layoutX="207.0" layoutY="359.0" text="Alder           " />
+      <Label alignment="CENTER" layoutX="259.0" layoutY="183.0" text="Navn  " />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="236.0" layoutY="226.0" text="Efternavn " />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="253.0" layoutY="271.0" text="E-mail " />
+      <Label alignment="CENTER" layoutX="223.0" layoutY="313.0" text="BrugerNavn" />
+      <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="217.0" layoutY="356.0" prefHeight="20.0" prefWidth="70.0" text="Alder " textAlignment="RIGHT" />
    </children>
    <stylesheets>
       <URL value="@../CSS/TeacherAndPatient.css" />

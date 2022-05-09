@@ -19,10 +19,10 @@ public class GeneralInformationDAO {
         this.DC = DC;
     }
 
-    public GeneralInformation createGeneralInformation(String mestring, String motivation, String resources, String roles, String habits, String educationAndJob, String lifestory, String healthInformation, String aids,  String homeLayout,String network) throws SQLException {
+    public GeneralInformation createGeneralInformation(String mestring, String motivation, String resources, String roles, String habits, String educationAndJob, String lifestory, String healthInformation, String AssistiveDevices,  String homeLayout,String network) throws SQLException {
         try (Connection connection = DC.getConnection()) {
             String sql = "INSERT INTO GeneralInformation (Mestring, motivation, Resources, Roles, Habits," +
-                    "EducationAndJob, Lifestory, Network, HealthInformation, Aids, Homelayout) VALUES (?,?,?,?,?,?,?,?,?,?,?);";
+                    "EducationAndJob, Lifestory, Network, HealthInformation, AssistiveDevices, Homelayout) VALUES (?,?,?,?,?,?,?,?,?,?,?);";
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
                 preparedStatement.setString(1, mestring);
                 preparedStatement.setString(2, motivation);
@@ -32,7 +32,7 @@ public class GeneralInformationDAO {
                 preparedStatement.setString(6, educationAndJob);
                 preparedStatement.setString(7, lifestory);
                 preparedStatement.setString(9, healthInformation);
-                preparedStatement.setString(10, aids);
+                preparedStatement.setString(10, AssistiveDevices);
                 preparedStatement.setString(11, homeLayout);
                 preparedStatement.setString(8, network);
                 preparedStatement.execute();
@@ -43,7 +43,7 @@ public class GeneralInformationDAO {
                 }
 
                 GeneralInformation generalInformation = new GeneralInformation(id, mestring, motivation, resources,
-                        roles, habits, educationAndJob, lifestory,healthInformation, aids,homeLayout, network
+                        roles, habits, educationAndJob, lifestory,healthInformation, AssistiveDevices,homeLayout, network
                         );
                 return generalInformation;
             }
