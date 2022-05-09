@@ -8,11 +8,11 @@ public class GeneralInformation {
     private String resources;
     private String rolls;
     private String habits;
-    private String studyJOB;
+    private String educationAndJob;
     private String lifeStory;
-    private String HealthInformation;
+    private String healthInformation;
     private String AssistiveDevices;
-    private String InteriorDesign;
+    private String homeLayout;
     private String Network;
 
     /**
@@ -36,11 +36,11 @@ public class GeneralInformation {
         this.resources = resources;
         this.rolls = rolls;
         this.habits = habits;
-        this.studyJOB = studyJOB;
+        this.educationAndJob = studyJOB;
         this.lifeStory = lifeStory;
-        this.HealthInformation = HealthInformation;
+        this.healthInformation = HealthInformation;
         this.AssistiveDevices = AssistiveDevices;
-        this.InteriorDesign = InteriorDesign;
+        this.homeLayout = InteriorDesign;
         this.Network = Network;
     }
 
@@ -145,7 +145,7 @@ public class GeneralInformation {
      * @return studyJOB
      */
     public String getstudyJOB() {
-        return studyJOB;
+        return educationAndJob;
     }
 
     /**
@@ -153,7 +153,7 @@ public class GeneralInformation {
      * @param studyJOB
      */
     public void setstudyJOB(String studyJOB) {
-        this.studyJOB = studyJOB;
+        this.educationAndJob = studyJOB;
     }
 
     /**
@@ -177,7 +177,7 @@ public class GeneralInformation {
      * @return HealthInformation
      */
     public String getHealthInformation() {
-        return HealthInformation;
+        return healthInformation;
     }
 
     /**
@@ -209,7 +209,7 @@ public class GeneralInformation {
      * @return InteriorDesign
      */
     public String getInteriorDesign() {
-        return InteriorDesign;
+        return homeLayout;
     }
 
     /**
@@ -240,21 +240,23 @@ public class GeneralInformation {
      * ToString method
      * @return id, mestring, motivation, resources, rolls, habits, studyJOB, lifeStory, HealthInformation, AssistiveDevices, InteriorDesign, Network
      */
+
+
     @Override
     public String toString() {
-        return "GeneralInfo{" +
+        return "GeneralInformation{" +
                 "id=" + id +
                 ", mestring='" + mestring + '\'' +
                 ", motivation='" + motivation + '\'' +
-                ", ressourcer='" + resources + '\'' +
+                ", resources='" + resources + '\'' +
                 ", rolls='" + rolls + '\'' +
                 ", habits='" + habits + '\'' +
-                ", studyJOB='" + studyJOB + '\'' +
+                ", educationAndJob='" + educationAndJob + '\'' +
                 ", lifeStory='" + lifeStory + '\'' +
-                ", HealthInformation='" + HealthInformation + '\'' +
-                ", Hjælpemidler='" + AssistiveDevices + '\'' +
-                ", InteriorDesign='" + InteriorDesign + '\'' +
-                ", Netværk='" + Network + '\'' +
+                ", healthInformation='" + healthInformation + '\'' +
+                ", AssistiveDevices='" + AssistiveDevices + '\'' +
+                ", homeLayout='" + homeLayout + '\'' +
+                ", Network='" + Network + '\'' +
                 '}';
     }
 }

@@ -13,7 +13,7 @@
 }
 
 
-#txtnavnField,#txtefterNavnField,#txtcprField,#txtEmailField,#txtTelefonField,#txtadgangskodField,#txtAlderFiled,#txtUserField{
+#txtNameField,#txtLastnameField,#txtcprField,#txtEmailField,#txtTelefonField,#txtadgangskodField,#txtAgeField,#txtUserField{
      -fx-control-inner-background: white;
      -fx-text-fill: #2B2121;
      -fx-background-color:  #EBF3EB;
@@ -44,21 +44,29 @@
 }
 
 /* Button font size and background color*/
-#klasserKnnap, #BtnOpretBorger, #BtnRediger, #BtnSlet, #BtnOpretStudent{
+#classBtn, #BtnCreateStudent, #citizentButton, #BtnSlet, #BtnCreatePatient{
      -fx-font-size: 15px;
      -fx-border-color:  #001569;
      -fx-background-color: #15B559;
      -fx-text-fill: white;
  }
 
-#BtnOpretBorger:hover{
+#BtnCreateStudent:hover{
      -fx-font-size: 15px;
      -fx-background-color: white;
      -fx-text-fill: #2B2121;
      -fx-border-color: #15B559;
 }
 
-#klasserKnnap:hover{
+#citizentButton:hover{
+     -fx-font-size: 15px;
+     -fx-background-color: white;
+     -fx-text-fill: #2B2121;
+     -fx-border-color: #15B559;
+}
+
+
+#classBtn:hover{
      -fx-font-size: 15px;
      -fx-background-color: white;
      -fx-text-fill: #2B2121;
@@ -71,7 +79,7 @@
      -fx-text-fill: white;
      -fx-border-width: 1,5px;
 }
-#BtnOpretStudent:hover{
+#BtnCreatePatient:hover{
      -fx-font-size: 15px;
      -fx-background-color: white;
      -fx-text-fill: #2B2121;

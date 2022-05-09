@@ -32,7 +32,7 @@ public class CategoryDAO {
      */
     public void createCategory(int caseID, String ProblemName, String ProblemDescription) throws SQLException {
 
-        String sql = "INSERT INTO Helbredstilstande(caseID,ProblemName,ProblemDescription) VALUES (?,?,?);";
+        String sql = "INSERT INTO HealthConditions(caseID,ProblemName,ProblemDescription) VALUES (?,?,?);";
 
         try(Connection connection = DC.getConnection()){
 
