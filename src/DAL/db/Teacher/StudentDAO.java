@@ -96,11 +96,11 @@ public class StudentDAO {
             ps3.setInt(1, student.getStudentId());
 
             /* ikke brugt*/
-            /*
+
             ps1.executeUpdate();
             ps2.executeUpdate();
             ps3.executeUpdate();
-                        */
+
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();

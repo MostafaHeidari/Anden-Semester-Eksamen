@@ -1,7 +1,7 @@
 /*    "Oprettelse af Elev" styling of elements   */
 
 
-#BtnOpretElev, #BtnRedigerElev, #BtnSletElev,#BtnGamOplysinger {
+#BtnCreateStudent, #BtnEditStudent, #BtnDeleteStudent,#BtnGamOplysinger {
     -fx-font-size: 12px;
     -fx-background-color: #009B42;
     -fx-text-fill: white;
@@ -13,13 +13,13 @@
     -fx-background-color:  #BBE5E8;
 }
 
-#BtnBack,#BtnTilbageOpretStudent,#backClasses,#BtnBackPatient,#tilbageElever,#backStudent,#backCitizen,#backClass,#backToLastPage {
+#BtnBack,#BtnTilbageOpretStudent,#backClasses,#BtnBackPatient,#citizenInformation,#backStudent,#backCitizen,#backClass,#backToLastPage {
     -fx-font-size: 12px;
     -fx-text-fill: #001569;
     -fx-border-color: #797862;
 }
 
-#BtnOpretElev:hover {
+#BtnCreateStudent:hover {
     -fx-text-fill: white;
     -fx-border-color: #001569;
     -fx-border-width: 2px;
@@ -55,14 +55,14 @@
 
 
 
-#BtnRedigerElev:hover {
+#BtnEditStudent:hover {
     -fx-text-fill: white;
     -fx-border-color: #001569;
     -fx-border-width: 2px;
     -fx-border-radius: 4px;
 }
 
-#BtnSletElev:hover {
+#BtnDeleteStudent:hover {
     -fx-text-fill: white;
     -fx-border-color: #001569;
     -fx-border-width: 2px;
@@ -88,7 +88,7 @@
     -fx-border-color: #797862;
 }
 
-#tilbageElever:hover{
+#citizenInformation:hover{
     -fx-text-fill: white;
     -fx-border-color: #009B42;
     -fx-border-width: 2px;
