@@ -78,4 +78,25 @@ public class CaseDAO {
         }
         return null;
     }
+
+    public void setCaseCitizen(int customerId, int eventId){
+        try (Connection connection = DC.getConnection()) {
+            String sql = "INSERT INTO EventCustomer(CustomerID, EventID) VALUES (?,?);";
+
+            PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+
+            ps.setInt(1, customerId);
+            ps.setInt(2, eventId);
+            ps.executeUpdate();
+            ResultSet rs = ps.getGeneratedKeys();
+            if (rs.next()) {
+                int id = rs.getInt(1);
+                //Add relation between Customer and Event
+            }
+        } catch (SQLServerException throwables) {
+            throwables.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 }
