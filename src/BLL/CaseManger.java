@@ -6,6 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class CaseManger {
 
@@ -26,7 +27,7 @@ public class CaseManger {
         return cases;
     }
 
-    public Case uploadCaseInfo(String caseName, String informationTxt) {
+    public Case uploadCaseInfo(String caseName, String informationTxt) throws SQLException {
         return(caseDAO.uploadCaseInfo(caseName, informationTxt));
 
     }

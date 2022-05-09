@@ -6,6 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class CaseModel {
     private ObservableList<Case> caseList = FXCollections.observableArrayList();
@@ -21,7 +22,7 @@ public class CaseModel {
         return caseList;
     }
 
-    public void uploadCaseInfo(String caseName, String informationTxt) {
+    public void uploadCaseInfo(String caseName, String informationTxt) throws SQLException {
         caseList.add(caseManger.uploadCaseInfo(caseName,informationTxt));
     }
 }
