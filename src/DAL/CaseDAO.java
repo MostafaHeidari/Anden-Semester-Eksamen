@@ -59,13 +59,13 @@ public class CaseDAO {
     public Case uploadCaseInfo(String caseName, String informationTxt, int selectedCitizen) throws SQLException {
         Connection connection = DC.getConnection();
 
-        String sql = "INSERT INTO Cases (CaseID,CaseName,CaseInformation) VALUES (?,?,?);";
+        String sql = "INSERT INTO Cases (CaseName,CaseInformation) VALUES (?,?);";
 
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
         ps.setString(1, caseName);
         ps.setString(2, informationTxt);
-        
+
 
         int affectedRows = ps.executeUpdate();
         if (affectedRows == 1) {
