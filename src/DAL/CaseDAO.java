@@ -65,7 +65,7 @@ public class CaseDAO {
 
         ps.setString(1, caseName);
         ps.setString(2, informationTxt);
-        ps.setInt(3,);
+        
 
         int affectedRows = ps.executeUpdate();
         if (affectedRows == 1) {
