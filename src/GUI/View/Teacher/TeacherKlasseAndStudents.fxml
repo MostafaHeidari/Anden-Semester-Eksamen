@@ -56,7 +56,7 @@
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
       <FontAwesomeIconView fx:id="pile" fill="WHITE" layoutX="830.0" layoutY="205.0" selectionStart="1" size="20" tabSize="20" text="" />
-      <JFXButton fx:id="newStudent1" layoutX="192.0" layoutY="665.0" onAction="#newStudentBtn" prefHeight="34.0" prefWidth="498.0" text="Ny Elev">
+      <JFXButton fx:id="newStudent" layoutX="192.0" layoutY="665.0" onAction="#newStudentBtn" prefHeight="34.0" prefWidth="498.0" text="Ny Elev">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -90,9 +90,9 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <Pane layoutX="-4.0" layoutY="-8.0" prefHeight="795.0" prefWidth="179.0" style="-fx-background-color: #D4D3BE;">
+      <Pane layoutX="-4.0" layoutY="-8.0" prefHeight="795.0" prefWidth="190.0" style="-fx-background-color: #D4D3BE;">
          <children>
-            <JFXButton fx:id="BtnBack" layoutY="741.0" onAction="#BackFrontpageBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
+            <JFXButton fx:id="BtnBack" layoutX="6.0" layoutY="741.0" onAction="#BackFrontpageBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -102,38 +102,38 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Line endX="100.0" layoutX="34.0" layoutY="90.0" startX="-14.899984359741211" startY="1.52587890625E-5" stroke="WHITE" />
-            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="40.0" layoutY="769.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+            <Line endX="125.0" endY="1.52587890625E-5" layoutX="34.0" layoutY="90.0" startX="-14.899984359741211" startY="1.52587890625E-5" stroke="WHITE" />
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="46.0" layoutY="769.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="backStudent" layoutY="679.0" onAction="#btnBackStudent" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Elever">
+            <JFXButton fx:id="backStudent" layoutX="6.0" layoutY="679.0" onAction="#btnBackStudent" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Elever">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="backPatientBtn" layoutY="623.0" onAction="#btnBackPatient" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Borger">
+            <JFXButton fx:id="backPatientBtn" layoutX="6.0" layoutY="623.0" onAction="#btnBackPatient" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Borger">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="40.0" layoutY="705.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="46.0" layoutY="705.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="40.0" layoutY="649.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="46.0" layoutY="649.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="citizenInformation" layoutY="569.0" onAction="#citizenInformationBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Borger Infomationer">
+            <JFXButton fx:id="citizenInformation" layoutX="6.0" layoutY="569.0" onAction="#citizenInformationBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Borger Infomationer">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="18.0" layoutY="595.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="24.0" layoutY="595.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
