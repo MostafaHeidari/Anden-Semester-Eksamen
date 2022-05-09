@@ -30,15 +30,15 @@
          <columns>
             <TableColumn fx:id="tcStudentId" prefWidth="48.0" text="ID " />
             <TableColumn fx:id="tcNameStudent" prefWidth="114.4000244140625" text="Navn" />
-            <TableColumn fx:id="tcEfterName" prefWidth="108.79998779296875" text="Efternavn" />
+            <TableColumn fx:id="tcLastname" prefWidth="108.79998779296875" text="Efternavn" />
             <TableColumn fx:id="tcEmail" prefWidth="119.20001220703125" text="Email" />
-            <TableColumn fx:id="tcAlder" prefWidth="105.5999755859375" text="Alder" />
+            <TableColumn fx:id="tcAge" prefWidth="105.5999755859375" text="Alder" />
          </columns>
       </TableView>
-      <TableView fx:id="tvKlasseInfomationer" layoutX="875.0" layoutY="131.0" prefHeight="514.0" prefWidth="256.0">
+      <TableView fx:id="tvClassInformation" layoutX="875.0" layoutY="131.0" prefHeight="514.0" prefWidth="256.0">
          <columns>
-            <TableColumn fx:id="tcKlasseId" prefWidth="70.933349609375" text="ID " />
-            <TableColumn fx:id="tcKlasseNavn" prefWidth="192.79998779296875" text="KlasseNavn" />
+            <TableColumn fx:id="tcClassId" prefWidth="70.933349609375" text="ID " />
+            <TableColumn fx:id="tcClassName" prefWidth="192.79998779296875" text="KlasseNavn" />
          </columns>
       </TableView>
       <TableView fx:id="tvStudentsInClasses" layoutX="1211.0" layoutY="129.0" prefHeight="514.0" prefWidth="396.0">
@@ -47,7 +47,7 @@
             <TableColumn fx:id="tcLastNameInClass" prefWidth="197.5999755859375" text="Efternavn" />
          </columns>
       </TableView>
-      <JFXButton fx:id="nyKlasse" layoutX="875.0" layoutY="665.0" onAction="#nyKlasseBtn" prefHeight="34.0" prefWidth="256.0" text="Ny Klasse">
+      <JFXButton fx:id="newClass" layoutX="875.0" layoutY="665.0" onAction="#newClassBtn" prefHeight="34.0" prefWidth="256.0" text="Ny Klasse">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
@@ -56,7 +56,7 @@
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
       <FontAwesomeIconView fx:id="pile" fill="WHITE" layoutX="830.0" layoutY="205.0" selectionStart="1" size="20" tabSize="20" text="" />
-      <JFXButton fx:id="nyStudent1" layoutX="192.0" layoutY="665.0" onAction="#nyStudentBtn" prefHeight="34.0" prefWidth="498.0" text="Ny Elev">
+      <JFXButton fx:id="newStudent1" layoutX="192.0" layoutY="665.0" onAction="#newStudentBtn" prefHeight="34.0" prefWidth="498.0" text="Ny Elev">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -92,7 +92,7 @@
       </JFXButton>
       <Pane layoutX="-4.0" layoutY="-8.0" prefHeight="795.0" prefWidth="179.0" style="-fx-background-color: #D4D3BE;">
          <children>
-            <JFXButton fx:id="BtnTilbage" layoutY="741.0" onAction="#TilbageForsideBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
+            <JFXButton fx:id="BtnBack" layoutY="741.0" onAction="#BackFrontpageBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -108,12 +108,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="tilbageElever" layoutY="679.0" onAction="#btnTilbageElever" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Elever">
+            <JFXButton fx:id="backStudent" layoutY="679.0" onAction="#btnBackStudent" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Elever">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="tilbageBogerBtn" layoutY="623.0" onAction="#btnTilbageBoger" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Boger">
+            <JFXButton fx:id="backPatientBtn" layoutY="623.0" onAction="#btnBackPatient" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Borger">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -128,7 +128,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="citizenInfomation" layoutY="569.0" onAction="#citizenInfomationBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="BogerInfomationer">
+            <JFXButton fx:id="citizenInformation" layoutY="569.0" onAction="#citizenInformationBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Borger Infomationer">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

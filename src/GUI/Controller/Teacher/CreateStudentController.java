@@ -1,6 +1,7 @@
 package GUI.Controller.Teacher;
 
 import BE.Student;
+import GUI.Controller.Universal.NotFilledTxtFieldController;
 import GUI.Controller.Universal.SimpleDialogController;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
@@ -15,6 +16,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Popup;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -25,29 +27,29 @@ import java.util.ResourceBundle;
 public class CreateStudentController implements Initializable {
 
     public StudentModel studentModel;
-    public JFXButton citizenInfomation;
+
     private EditStudentController editStudentController;
 
     @FXML
-    public JFXButton tilbageKlasser;
+    public JFXButton backClasses;
     @FXML
-    public JFXButton tilbageBogerBtn;
+    public JFXButton BtnBackPatient;
     @FXML
-    private JFXButton BtnTilbage;
+    private JFXButton BtnBack;
+    @FXML
+    public JFXButton citizenInformation;
+    @FXML
+    public JFXButton BtnCreateStudent;
+
 
     @FXML
-    private JFXButton BtnTilbageOpretStudent;
+    private TextField txtNameField;
     @FXML
-    private JFXButton Logud;
-
-    @FXML
-    private TextField txtnavnField;
-    @FXML
-    private TextField txtefterNavnField;
+    private TextField txtLastnameField;
     @FXML
     private TextField txtEmailField;
     @FXML
-    private TextField txtAlderFiled;
+    private TextField txtAgeField;
     @FXML
     private TextField txtUserField;
 
@@ -97,33 +99,37 @@ public class CreateStudentController implements Initializable {
     /**
      * Creating a student with the OpretElevActionButton method
      */
-    public void OpretElevActionButton(ActionEvent actionEvent) throws IOException, SQLException {
-        if (txtnavnField.getText() == "" || txtefterNavnField.getText() == "" || txtEmailField.getText() == "" || txtAlderFiled.getText() == ""){
-
+    public void CreateStudentActionButton(ActionEvent actionEvent) throws IOException, SQLException {
+        if (txtNameField.getText() == "" || txtLastnameField.getText() == "" || txtEmailField.getText() == "" || txtAgeField.getText() == ""){
+            Popup popup = new Popup();
+            NotFilledTxtFieldController controller = new NotFilledTxtFieldController();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/NotFilledTxtField.fxml"));
+            loader.setController(controller);
+            popup.getContent().add((Parent)loader.load());
         }
         else {
-            String studentNavn = txtnavnField.getText();
-            String studentEfternavn = txtefterNavnField.getText();
+            String studentName = txtNameField.getText();
+            String studentLastname = txtLastnameField.getText();
             String studentEmail = txtEmailField.getText();
-            String studentAlder = txtAlderFiled.getText();
+            String studentAge = txtAgeField.getText();
             String StudentAccount = txtUserField.getText();
 
-            uploadStudentInfo(studentNavn, studentEfternavn, studentEmail, studentAlder,StudentAccount);
+            uploadStudentInfo(studentName, studentLastname, studentEmail, studentAge,StudentAccount);
         }
     }
 
     /**
      * uploads a student info with the uploadStudentInfo method
      */
-    private void uploadStudentInfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder, String userName) throws IOException, SQLException {
+    private void uploadStudentInfo(String studentName, String studentLastname, String studentEmail, String studentAge, String userName) throws IOException, SQLException {
         StudentModel studentModelInfo = new StudentModel();
 
-        studentModelInfo.uploadStudentinfo(studentNavn, studentEfternavn, studentEmail, studentAlder, userName);
+        studentModelInfo.uploadStudentinfo(studentName, studentLastname, studentEmail, studentAge, userName);
 
-        txtnavnField.clear();
-        txtefterNavnField.clear();
+        txtNameField.clear();
+        txtLastnameField.clear();
         txtEmailField.clear();
-        txtAlderFiled.clear();
+        txtAgeField.clear();
 
         txtUserField.clear();
 
@@ -138,8 +144,8 @@ public class CreateStudentController implements Initializable {
     /**
      * Goes to the Teacher view
      */
-    public void BtnTilbage(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) BtnTilbage.getScene().getWindow();
+    public void BtnBack(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) BtnBack.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Forside");
@@ -150,7 +156,7 @@ public class CreateStudentController implements Initializable {
      * Goes to the CreateStudent view
      */
     public void BtnTilbageOpretStudentAction(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) BtnTilbageOpretStudent.getScene().getWindow();
+        Stage switcher = (Stage) BtnCreateStudent.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
         Scene scene = new Scene(root);
         switcher.setScene(scene);
@@ -161,7 +167,7 @@ public class CreateStudentController implements Initializable {
      * Log out and goes to the Login view
      */
     public void LogOutAction(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) Logud.getScene().getWindow();
+        Stage switcher = (Stage) BtnBack.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
         Scene scene = new Scene(root);
         switcher.setScene(scene);
@@ -169,9 +175,9 @@ public class CreateStudentController implements Initializable {
 
 
     /**
-     * edit a student with the RedigerElevAction method
+     * edit a student with the EditStudentAction method
      */
-    public void RedigerElevAction(ActionEvent actionEvent) throws IOException {
+    public void EditStudentAction(ActionEvent actionEvent) throws IOException {
         if (selectedStudent != null) {
             Student selectedStudent = (Student) tvStudent.getSelectionModel().getSelectedItem();
             Parent root1;
@@ -215,8 +221,8 @@ public class CreateStudentController implements Initializable {
     /**
      * Goes to the TeacherKlasseAndStudents view
      */
-    public void btnTilbageKlasser(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) tilbageKlasser.getScene().getWindow();
+    public void btnBackClasses(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) backClasses.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Classe Manger");
@@ -226,8 +232,8 @@ public class CreateStudentController implements Initializable {
     /**
      * Goes to the CreateCitizen view
      */
-    public void btnTilbageBoger(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) tilbageBogerBtn.getScene().getWindow();
+    public void btnBackPatient(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) BtnBackPatient.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateCitizen.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Borger");
@@ -238,7 +244,7 @@ public class CreateStudentController implements Initializable {
     /**
      * remove a student with the SletElevAction method
      */
-    public void SletElevAction(ActionEvent actionEvent) {
+    public void DeleteStudentAction(ActionEvent actionEvent) {
         if (SimpleDialogController.delete() && selectedStudent != null) {
             studentModel.removeStudent(selectedStudent);
         }
@@ -257,8 +263,8 @@ public class CreateStudentController implements Initializable {
     /**
      * Goes to the CitizenInfo view
      */
-    public void citizenInfomationBtn(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) tilbageBogerBtn.getScene().getWindow();
+    public void citizenInformationBtn(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) BtnBackPatient.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/CitizenInfo.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Borger Informationer");

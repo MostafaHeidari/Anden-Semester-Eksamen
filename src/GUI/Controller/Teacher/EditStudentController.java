@@ -17,23 +17,23 @@ import java.io.IOException;
 public class EditStudentController {
 
     @FXML
-    public TextField txtnavnEditStudentField;
+    public TextField txtnameEditStudentField;
     @FXML
-    public TextField txtEfterNavnEditStudentField;
+    public TextField txtLastnameEditStudentField;
     @FXML
     public TextField txtEmailEditStudentField;
     @FXML
     public TextField txtTelefonField;
     @FXML
-    public TextField txtAlderEditStudentFiled;
+    public TextField txtAgeEditStudentFiled;
 
     @FXML
     public TextField txtUserNameEditField;
 
     @FXML
-    private JFXButton BtnTilbageOpretStudent;
+    private JFXButton BtnBackCreateStudent;
     @FXML
-    private JFXButton Logud;
+    private JFXButton Logout;
 
 
 
@@ -51,11 +51,11 @@ public class EditStudentController {
     /**
      * Student update action.This method save the information of student
      */
-    public void GamOplysingerActionButton(ActionEvent actionEvent) throws Exception {
-        String updateStudentName = txtnavnEditStudentField.getText();
-        String updateStudentEfterNavn = txtEfterNavnEditStudentField.getText();
+    public void SaveInformationActionButton(ActionEvent actionEvent) throws Exception {
+        String updateStudentName = txtnameEditStudentField.getText();
+        String updateStudentEfterNavn = txtLastnameEditStudentField.getText();
         String updateStudentEmail = txtEmailEditStudentField.getText();
-        String updateStudentAlder = txtAlderEditStudentFiled.getText();
+        String updateStudentAlder = txtAgeEditStudentFiled.getText();
         String updateStudentUser = txtUserNameEditField.getText();
 
         this.selectedStudent.setStudentName(updateStudentName);
@@ -67,7 +67,7 @@ public class EditStudentController {
         studentModel.editStudent(this.selectedStudent);
 
         /*turn back to Create student window*/
-        Stage switcher = (Stage) BtnTilbageOpretStudent.getScene().getWindow();
+        Stage switcher = (Stage) BtnBackCreateStudent.getScene().getWindow();
         switcher.setTitle("Create student");
         switcher.close();
     }
@@ -77,11 +77,11 @@ public class EditStudentController {
      * @param student
      */
     public void setSelectedStudent(Student student) {
-        txtnavnEditStudentField.setText(student.getStudentName());
-        txtEfterNavnEditStudentField.setText(student.getLastName());
+        txtnameEditStudentField.setText(student.getStudentName());
+        txtLastnameEditStudentField.setText(student.getLastName());
         txtEmailEditStudentField.setText(student.getEmail());
         txtUserNameEditField.setText(student.getUserName());
-        txtAlderEditStudentFiled.setText(student.getAge());
+        txtAgeEditStudentFiled.setText(student.getAge());
 
         this.selectedStudent = student;
     }
@@ -91,7 +91,7 @@ public class EditStudentController {
      * Log out and goes to the Login view
      */
     public void LogOutAction(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) Logud.getScene().getWindow();
+        Stage switcher = (Stage) Logout.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Create student");
@@ -103,8 +103,8 @@ public class EditStudentController {
     /**
      * Goes to the previous view
      */
-    public void BtnTilbageOpretStudentAction(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) BtnTilbageOpretStudent.getScene().getWindow();
+    public void BtnBackCreateStudentAction(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) BtnBackCreateStudent.getScene().getWindow();
         switcher.setTitle("Create student");
         switcher.close();
 

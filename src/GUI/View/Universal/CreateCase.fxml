@@ -30,14 +30,14 @@
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="InfomationTxt" layoutX="10.0" layoutY="18.0" prefHeight="105.0" prefWidth="326.0" promptText="Infomation" GridPane.rowIndex="1">
+            <TextField fx:id="InformationTxt" layoutX="10.0" layoutY="18.0" prefHeight="105.0" prefWidth="326.0" promptText="Infomation" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
             </TextField>
          </children>
       </GridPane>
-      <JFXButton fx:id="saveCase" layoutX="487.0" layoutY="387.0" onAction="#saveCaseBtn" prefHeight="28.0" prefWidth="119.0" stylesheets="@../CSS/OprettelseElev.css" text="Gem oplysninger" textFill="WHITE">
+      <JFXButton fx:id="saveCase" layoutX="487.0" layoutY="387.0" onAction="#saveCaseBtn" prefHeight="28.0" prefWidth="119.0" stylesheets="@../CSS/CreateStudent.css" text="Gem oplysninger" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

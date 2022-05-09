@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="452.0" prefWidth="472.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.CreateClassController">
    <children>
-      <TextField fx:id="classNavnTxt" layoutX="195.0" layoutY="159.0" />
+      <TextField fx:id="classNameTxt" layoutX="195.0" layoutY="159.0" />
       <Text layoutX="87.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KlasseNavn:">
          <font>
             <Font size="18.0" />

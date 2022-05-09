@@ -46,9 +46,9 @@ public class CitizenInfoContoller implements Initializable {
     @FXML
     public TableColumn<Citizen, String>  tcNameCitizen;
     @FXML
-    public TableColumn<Citizen, String>  tcCitizenEfterName;
+    public TableColumn<Citizen, String>  tcCitizenLastname;
     @FXML
-    public TableColumn<Citizen, String>  tcCitizenAlder;
+    public TableColumn<Citizen, String>  tcCitizenAge;
 
     /**
      * Constructor
@@ -82,9 +82,9 @@ public class CitizenInfoContoller implements Initializable {
 
         tcNameCitizen.setCellValueFactory(new PropertyValueFactory<>("citizenName"));
 
-        tcCitizenEfterName.setCellValueFactory(new PropertyValueFactory<>("citizenLastName"));
+        tcCitizenLastname.setCellValueFactory(new PropertyValueFactory<>("citizenLastName"));
 
-        tcCitizenAlder.setCellValueFactory(new PropertyValueFactory<>("citizenAge"));
+        tcCitizenAge.setCellValueFactory(new PropertyValueFactory<>("citizenAge"));
 
 
         tvCitizenInfo.setItems(citizenInfoModel.getAllCitizens());
