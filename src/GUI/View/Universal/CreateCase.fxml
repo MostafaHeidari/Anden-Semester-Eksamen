@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane stylesheets="@../CSS/CreateCase.css" prefHeight="455.0" prefWidth="676.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.CreateCaseController">
+<AnchorPane prefHeight="455.0" prefWidth="676.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.CreateCaseController">
    <children>
       <GridPane fx:id="GridPane" layoutX="279.0" layoutY="172.0" prefHeight="187.0" prefWidth="326.0">
          <columnConstraints>
@@ -37,7 +37,7 @@
             </TextField>
          </children>
       </GridPane>
-      <JFXButton fx:id="saveCase" layoutX="487.0" layoutY="387.0" onAction="#saveCaseBtn" prefHeight="28.0" prefWidth="119.0" stylesheets="@../CSS/CreateStudent.css" text="Gem oplysninger" textFill="WHITE">
+      <JFXButton fx:id="saveCase" layoutX="487.0" layoutY="387.0" onAction="#saveCaseBtn" prefHeight="28.0" prefWidth="119.0" stylesheets="@../CSS/CreateCase.css" text="Gem oplysninger" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -54,7 +54,7 @@
       </JFXButton>
       <Pane prefHeight="455.0" prefWidth="162.0" style="-fx-background-color: #D4D3BE;">
          <children>
-            <JFXButton fx:id="backTo" layoutX="8.0" layoutY="389.0" onAction="#backToPatientsBtn" prefHeight="40.0" prefWidth="147.0" stylesheets="@../CSS/OprettelseElev.css" text="Tilbage">
+            <JFXButton fx:id="backTo" layoutX="8.0" layoutY="389.0" onAction="#backToPatientsBtn" prefHeight="40.0" prefWidth="147.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

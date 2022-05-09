@@ -1,6 +1,8 @@
 package GUI.Controller.Universal;
 
+import BE.Citizen;
 import GUI.Model.CaseModel;
+import GUI.Model.CitizenInfoModel;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -15,6 +17,9 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class CreateCaseController {
+
+    public Citizen selectedCitizen;;
+
     public JFXButton backTo;
     public JFXButton LogOut;
     public JFXButton saveCase;
@@ -24,8 +29,11 @@ public class CreateCaseController {
     @FXML
     public TextField caseNameTxt;
 
-    public void saveCaseBtn(ActionEvent event) {
-
+    public void saveCaseBtn(ActionEvent event) throws SQLException, IOException {
+        String uploadCaseName = caseNameTxt.getText();
+        String uploadCaseInformation = InformationTxt.getText();
+        uploadCaseInfo(uploadCaseName, uploadCaseInformation, selectedCitizen.getCitizenId());
+        backToPatientsBtn(event);
     }
 
     public void LogOutAction(ActionEvent event) throws IOException {
@@ -48,9 +56,13 @@ public class CreateCaseController {
     /**
      * uploads a student info with the uploadStudentInfo method
      */
-    private void uploadCaseInfo(String caseName, String informationTxt) throws IOException, SQLException {
+    private void uploadCaseInfo(String caseName, String informationTxt, int selectedCitizen) throws IOException, SQLException {
         CaseModel caseModel = new CaseModel();
 
-        caseModel.uploadCaseInfo(caseName, informationTxt);
+        caseModel.uploadCaseInfo(caseName, informationTxt,selectedCitizen);
+    }
+
+    public void setCitizenID(Citizen citizen) {
+        selectedCitizen = citizen;
     }
 }

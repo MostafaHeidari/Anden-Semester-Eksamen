@@ -56,21 +56,24 @@ public class CaseDAO {
         return allCases;
     }
 
-    public Case uploadCaseInfo(String caseName, String informationTxt) throws SQLException {
+    public Case uploadCaseInfo(String caseName, String informationTxt, int selectedCitizen) throws SQLException {
         Connection connection = DC.getConnection();
 
-        String sql = "INSERT INTO StudentTable (NameStudent,LastNameStudent,EmailStudent,StudentAge,UserName) VALUES (?,?,?,?,?);";
+        String sql = "INSERT INTO Cases (CaseID,CaseName,CaseInformation) VALUES (?,?,?);";
 
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
         ps.setString(1, caseName);
         ps.setString(2, informationTxt);
+        ps.setInt(3,);
 
         int affectedRows = ps.executeUpdate();
         if (affectedRows == 1) {
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
                 int caseId = rs.getInt(1);
+                //Add relation between case and citizen
+                setCaseCitizen(caseId, selectedCitizen);
                 Case caseCord = new Case(caseId, caseName, informationTxt);
                 return caseCord;
             }
@@ -79,14 +82,14 @@ public class CaseDAO {
         return null;
     }
 
-    public void setCaseCitizen(int customerId, int eventId){
+    public void setCaseCitizen(int caseId, int citizenId){
         try (Connection connection = DC.getConnection()) {
-            String sql = "INSERT INTO EventCustomer(CustomerID, EventID) VALUES (?,?);";
+            String sql = "INSERT INTO PatientsCases (CaseID, PatientsID) VALUES (?,?);";
 
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
-            ps.setInt(1, customerId);
-            ps.setInt(2, eventId);
+            ps.setInt(1, caseId);
+            ps.setInt(2, citizenId);
             ps.executeUpdate();
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {

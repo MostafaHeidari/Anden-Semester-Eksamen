@@ -22,7 +22,7 @@ public class CaseModel {
         return caseList;
     }
 
-    public void uploadCaseInfo(String caseName, String informationTxt) throws SQLException {
-        caseList.add(caseManger.uploadCaseInfo(caseName,informationTxt));
+    public void uploadCaseInfo(String caseName, String informationTxt, int selectedCitizen) throws SQLException {
+        caseList.add(caseManger.uploadCaseInfo(caseName,informationTxt,selectedCitizen));
     }
 }

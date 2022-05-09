@@ -27,8 +27,8 @@ public class CaseManger {
         return cases;
     }
 
-    public Case uploadCaseInfo(String caseName, String informationTxt) throws SQLException {
-        return(caseDAO.uploadCaseInfo(caseName, informationTxt));
+    public Case uploadCaseInfo(String caseName, String informationTxt, int selectedCitizen) throws SQLException {
+        return(caseDAO.uploadCaseInfo(caseName, informationTxt,selectedCitizen));
 
     }
 }
