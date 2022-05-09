@@ -66,7 +66,7 @@
                </effect></TextField>
          </children>
       </GridPane>
-      <JFXButton fx:id="BtnCreateStudent" layoutX="299.0" layoutY="404.0" onAction="#CreateStudentActionButton" prefHeight="28.0" prefWidth="94.0" stylesheets="@../CSS/CreateStudent.css" text="Opret Elev" textFill="WHITE">
+      <JFXButton fx:id="BtnCreateStudent" layoutX="299.0" layoutY="404.0" onAction="#CreateStudentActionButton" prefHeight="28.0" prefWidth="94.0" text="Opret Elev" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
@@ -96,7 +96,7 @@
       <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="296.0" layoutY="137.0" size="30" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
       <Pane layoutY="-2.0" prefHeight="606.0" prefWidth="182.0" style="-fx-background-color: #D4D3BE;">
          <children>
-            <JFXButton fx:id="BtnBack" layoutX="1.0" layoutY="544.0" onAction="#BtnBack" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
+            <JFXButton fx:id="BtnBack" layoutX="-1.0" layoutY="544.0" onAction="#BtnBack" prefHeight="40.0" prefWidth="182.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -112,12 +112,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="backClasses" layoutY="482.0" onAction="#btnBackClasses" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Klasser">
+            <JFXButton fx:id="backClasses" layoutX="-2.0" layoutY="482.0" onAction="#btnBackClasses" prefHeight="40.0" prefWidth="182.0" stylesheets="@../CSS/CreateStudent.css" text="Klasser">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="BtnBackPatient" layoutY="420.0" onAction="#btnBackPatient" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Boger">
+            <JFXButton fx:id="BtnBackPatient" layoutX="-2.0" layoutY="420.0" onAction="#btnBackPatient" prefHeight="40.0" prefWidth="182.0" stylesheets="@../CSS/CreateStudent.css" text="Boger">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -132,7 +132,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="citizenInformation" layoutX="1.0" layoutY="356.0" onAction="#citizenInformationBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="BogerInfomationer">
+            <JFXButton fx:id="citizenInformation" layoutX="-2.0" layoutY="359.0" onAction="#citizenInformationBtn" prefHeight="40.0" prefWidth="182.0" stylesheets="@../CSS/CreateStudent.css" text="BogerInfomationer">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -140,7 +140,7 @@
                   <InnerShadow height="28.07" radius="11.1975" width="18.72" />
                </effect>
             </JFXButton>
-            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="31.0" layoutY="381.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="25.0" layoutY="384.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
