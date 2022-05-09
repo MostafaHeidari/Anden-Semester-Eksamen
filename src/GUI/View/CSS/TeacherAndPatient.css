@@ -44,19 +44,14 @@
 }
 
 /* Button font size and background color*/
-#classBtn, #BtnCreateStudent, #citizentButton, #BtnSlet, #BtnCreatePatient{
+#classBtn, #citizentButton, #BtnSlet, #BtnCreatePatient{
      -fx-font-size: 15px;
      -fx-border-color:  #001569;
      -fx-background-color: #15B559;
      -fx-text-fill: white;
  }
 
-#BtnCreateStudent:hover{
-     -fx-font-size: 15px;
-     -fx-background-color: white;
-     -fx-text-fill: #2B2121;
-     -fx-border-color: #15B559;
-}
+
 
 #citizentButton:hover{
      -fx-font-size: 15px;
@@ -79,6 +74,7 @@
      -fx-text-fill: white;
      -fx-border-width: 1,5px;
 }
+
 #BtnCreatePatient:hover{
      -fx-font-size: 15px;
      -fx-background-color: white;
