@@ -25,4 +25,9 @@ public class CaseManger {
         }
         return cases;
     }
+
+    public Case uploadCaseInfo(String caseName, String informationTxt) {
+        return(caseDAO.uploadCaseInfo(caseName, informationTxt));
+
+    }
 }

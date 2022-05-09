@@ -20,4 +20,8 @@ public class CaseModel {
         caseList = caseManger.getAllCases(citizenId);
         return caseList;
     }
+
+    public void uploadCaseInfo(String caseName, String informationTxt) {
+        caseList.add(caseManger.uploadCaseInfo(caseName,informationTxt));
+    }
 }

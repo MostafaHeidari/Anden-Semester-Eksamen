@@ -1,6 +1,7 @@
 package DAL;
 
 import BE.Case;
+import BE.Student;
 import DAL.db.DatabaseConnector;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 
@@ -53,5 +54,28 @@ public class CaseDAO {
         }
 
         return allCases;
+    }
+
+    public Case uploadCaseInfo(String caseName, String informationTxt) throws SQLException {
+        Connection connection = DC.getConnection();
+
+        String sql = "INSERT INTO StudentTable (NameStudent,LastNameStudent,EmailStudent,StudentAge,UserName) VALUES (?,?,?,?,?);";
+
+        PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+
+        ps.setString(1, caseName);
+        ps.setString(2, informationTxt);
+
+        int affectedRows = ps.executeUpdate();
+        if (affectedRows == 1) {
+            ResultSet rs = ps.getGeneratedKeys();
+            if (rs.next()) {
+                int caseId = rs.getInt(1);
+                Case caseCord = new Case(caseId, caseName, informationTxt);
+                return caseCord;
+            }
+
+        }
+        return null;
     }
 }
