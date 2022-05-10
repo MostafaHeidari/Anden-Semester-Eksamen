@@ -13,8 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="652.0" prefWidth="939.0" stylesheets="@../CSS/CreateCase.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.CasesController">
+<AnchorPane prefHeight="650.0" prefWidth="950.0" stylesheets="@../CSS/CreateCase.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.CasesController">
       <Pane layoutX="469.0" layoutY="33.0" prefHeight="56.0" prefWidth="467.0" style="-fx-background-color: #FFFFFF;">
          <effect>
             <DropShadow height="9.3" radius="5.32" width="13.98" />
@@ -29,7 +28,7 @@
             <Text layoutX="212.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste af Cases" />
          </children>
       </Pane>
-      <TableView fx:id="tvCase" layoutX="469.0" layoutY="103.0" prefHeight="514.0" prefWidth="467.0">
+      <TableView fx:id="tvCase" layoutX="469.0" layoutY="103.0" prefHeight="533.0" prefWidth="467.0">
          <columns>
             <TableColumn fx:id="tcCaseId" prefWidth="48.0" text="ID " />
             <TableColumn fx:id="tcCaseName" prefWidth="95.0" text="CaseNavn" />
@@ -61,7 +60,7 @@
       </Text>
       <Pane prefHeight="650.0" prefWidth="199.0" style="-fx-background-color: #D4D3BE;">
          <children>
-            <JFXButton fx:id="backToLastPage" layoutX="14.0" layoutY="592.0" onAction="#backToLastPageBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
+            <JFXButton fx:id="backToLastPage" layoutX="14.0" layoutY="593.0" onAction="#backToLastPageBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -72,45 +71,44 @@
                </font>
             </Text>
             <Line endX="148.0" layoutX="34.0" layoutY="100.0" startX="-14.899984359741211" startY="1.52587890625E-5" stroke="WHITE" />
-            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="63.0" layoutY="617.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="63.0" layoutY="618.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="backClass" layoutX="14.0" layoutY="539.0" onAction="#backClassBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Klasser">
+            <JFXButton fx:id="backClass" layoutX="14.0" layoutY="533.0" onAction="#backClassBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Klasser">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
 
-            <JFXButton fx:id="backCitizen" layoutX="14.0" layoutY="488.0" onAction="#backCitizenBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Borger">
+            <JFXButton fx:id="backCitizen" layoutX="14.0" layoutY="473.0" onAction="#backCitizenBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Borger">
 
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="63.0" layoutY="564.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="63.0" layoutY="558.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="63.0" layoutY="513.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="63.0" layoutY="498.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="backStudent" layoutX="14.0" layoutY="436.0" onAction="#backStudentBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Elever">
+            <JFXButton fx:id="backStudent" layoutX="14.0" layoutY="413.0" onAction="#backStudentBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Elever">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="63.0" layoutY="462.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="63.0" layoutY="439.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
          </children>
       </Pane>
-      <JFXButton fx:id="deleteCase" layoutX="382.0" layoutY="588.0" onAction="#deleteCaseBtn" prefHeight="29.0" prefWidth="80.0" text="Slet" />
+      <JFXButton fx:id="deleteCase" layoutX="382.0" layoutY="607.0" onAction="#deleteCaseBtn" prefHeight="29.0" prefWidth="80.0" text="Slet" />
    </AnchorPane>
-
