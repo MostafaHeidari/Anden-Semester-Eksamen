@@ -59,19 +59,19 @@
             <Font size="22.0" />
          </font>
       </Text>
-      <Pane prefHeight="650.0" prefWidth="200.0" style="-fx-background-color: #D4D3BE;">
+      <Pane prefHeight="650.0" prefWidth="199.0" style="-fx-background-color: #D4D3BE;">
          <children>
             <JFXButton fx:id="backToLastPage" layoutX="14.0" layoutY="592.0" onAction="#backToLastPageBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <Label layoutX="64.0" layoutY="31.0" text="Cases" textFill="WHITE">
+            <Text fill="WHITE" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cases" textAlignment="CENTER" wrappingWidth="199.0">
                <font>
                   <Font size="32.0" />
                </font>
-            </Label>
-            <Line endX="148.0" layoutX="34.0" layoutY="90.0" startX="-14.899984359741211" startY="1.52587890625E-5" stroke="WHITE" />
+            </Text>
+            <Line endX="148.0" layoutX="34.0" layoutY="100.0" startX="-14.899984359741211" startY="1.52587890625E-5" stroke="WHITE" />
             <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="63.0" layoutY="617.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
                <cursor>
                   <Cursor fx:constant="HAND" />
