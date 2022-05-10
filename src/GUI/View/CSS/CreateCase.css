@@ -1,4 +1,4 @@
-#saveCase{
+#saveCase, #DeleteCase{
     -fx-font-size: 12px;
     -fx-background-color: #009B42;
     -fx-text-fill: white;
@@ -16,6 +16,12 @@
 }
 
 #saveCase:hover{
+    -fx-border-color: #009B42;
+    -fx-background-color: #001569;
+    -fx-border-width: 1;
+}
+
+#DeleteCase:hover{
     -fx-border-color: #009B42;
     -fx-background-color: #001569;
     -fx-border-width: 1;

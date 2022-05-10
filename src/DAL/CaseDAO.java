@@ -114,4 +114,25 @@ public class CaseDAO {
             throwables.printStackTrace();
         }
     }
+
+    public void deleteCase(Case selectedCase) {
+        String sql1 = "DELETE FROM ClassStudents WHERE StudentID = (?);";
+        String sql2 = "DELETE FROM StudentTable WHERE StudentID = (?);";
+
+        try (Connection connection = DC.getConnection()) {
+
+            PreparedStatement ps1 = connection.prepareStatement(sql1, Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps2 = connection.prepareStatement(sql2, Statement.RETURN_GENERATED_KEYS);
+
+            ps1.setInt(1, selectedCase.getCaseId());
+            ps2.setInt(1, selectedCase.getCaseId());
+
+            ps1.executeUpdate();
+            ps2.executeUpdate();
+
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 }

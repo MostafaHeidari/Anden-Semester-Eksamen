@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="652.0" prefWidth="939.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.CasesController">
+<AnchorPane prefHeight="652.0" prefWidth="939.0" stylesheets="@../CSS/CreateCase.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.CasesController">
    <children>
       <Pane layoutX="437.0" layoutY="36.0" prefHeight="56.0" prefWidth="467.0" style="-fx-background-color: #FFFFFF;">
          <effect>
@@ -111,6 +111,6 @@
             </FontAwesomeIconView>
          </children>
       </Pane>
-      <JFXButton fx:id="DeleteCase" layoutX="372.0" layoutY="595.0" onAction="#DeleteCaseBtn" text="Slet" />
+      <JFXButton fx:id="deleteCase" layoutX="342.0" layoutY="591.0" onAction="#deleteCaseBtn" prefHeight="29.0" prefWidth="80.0" text="Slet" />
    </children>
 </AnchorPane>

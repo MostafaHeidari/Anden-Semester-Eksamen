@@ -1,11 +1,14 @@
 package GUI.Controller.Universal;
 
+import BE.Case;
 import BE.Citizen;
+import BE.Student;
 import GUI.Model.CaseModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
@@ -15,14 +18,18 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class CasesController {
+public class CasesController implements Initializable {
 
 
-    public JFXButton DeleteCase;
+    public JFXButton deleteCase;
     private Citizen selectedCitizen;
 
     public CaseModel caseModel;
+
+    public Case selectedCase;
 
 
     @FXML
@@ -50,6 +57,11 @@ public class CasesController {
 
     public CasesController() throws IOException {
         caseModel = new CaseModel();
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        setSelectedCase();
     }
 
     /**
@@ -114,7 +126,21 @@ public class CasesController {
         setCaseView();
     }
 
-    public void DeleteCaseBtn(ActionEvent actionEvent) {
-
+    public void deleteCaseBtn(ActionEvent actionEvent) {
+        if (SimpleDialogController.delete() && selectedCase != null) {
+            caseModel.deleteCase(selectedCase);
+        }
     }
+
+    /**
+     * selects a student with the setSelectedCase method
+     */
+    private void setSelectedCase() {
+        if (tvCase.getSelectionModel().getSelectedItem() != null)
+        {
+            selectedCase = (Case) tvCase.getSelectionModel().getSelectedItem();
+        }
+    }
+
+
 }
