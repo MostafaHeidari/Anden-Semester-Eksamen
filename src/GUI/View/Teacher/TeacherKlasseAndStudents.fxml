@@ -147,5 +147,10 @@
       </JFXButton>
       <FontAwesomeIconView fx:id="pile1" fill="WHITE" layoutX="773.0" layoutY="247.0" selectionStart="1" size="20" tabSize="20" text="" />
       <Line endX="148.0" layoutX="34.0" layoutY="100.0" startX="-14.899984359741211" startY="1.52587890625E-5" stroke="WHITE" />
+      <JFXButton fx:id="BtnLogOutOfClass" layoutX="1213.0" layoutY="14.0" onAction="#LogOutOfClass" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
    </children>
 </AnchorPane>
