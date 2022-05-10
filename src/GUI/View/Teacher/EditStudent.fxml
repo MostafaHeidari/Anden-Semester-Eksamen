@@ -52,7 +52,7 @@
             <InnerShadow height="2.28" radius="1.81" width="6.96" />
          </effect>
       </GridPane>
-      <JFXButton fx:id="BtnSaveInformation" layoutX="477.0" layoutY="377.0" onAction="#SaveInformationActionButton" prefHeight="28.0" prefWidth="119.0" stylesheets="@../CSS/OprettelseElev.css" text="Gem oplysninger" textFill="WHITE">
+      <JFXButton fx:id="BtnSaveInformation" layoutX="499.0" layoutY="377.0" onAction="#SaveInformationActionButton" prefHeight="28.0" prefWidth="119.0" stylesheets="@../CSS/OprettelseElev.css" text="Gem oplysninger" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -64,12 +64,12 @@
       </JFXButton>
       <Pane prefHeight="450.0" prefWidth="199.0" style="-fx-background-color: #D4D3BE;">
          <children>
-            <JFXButton fx:id="BtnBackCreateStudent" layoutX="14.0" layoutY="396.0" onAction="#BtnBackCreateStudentAction" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/OprettelseElev.css" text="Tilbage">
+            <JFXButton fx:id="BtnBackCreateStudent" layoutX="14.0" layoutY="395.0" onAction="#BtnBackCreateStudentAction" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/OprettelseElev.css" text="Tilbage">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="36.0" layoutY="421.0" opacity="0.58" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="36.0" layoutY="420.0" opacity="0.58" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
