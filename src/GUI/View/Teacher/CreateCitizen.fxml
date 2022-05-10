@@ -17,7 +17,7 @@
 
 <AnchorPane prefHeight="590.0" prefWidth="824.0" stylesheets="@../CSS/CreateStudent.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.CreateCitizenController">
    <children>
-      <Pane layoutY="1.0" opacity="0.09" prefHeight="594.0" prefWidth="824.0" style="-fx-background-color: lightgreen;" />
+      <Pane layoutY="1.0" opacity="0.09" prefHeight="594.0" prefWidth="968.0" style="-fx-background-color: lightgreen;" />
       <Pane layoutY="-3.0" prefHeight="596.0" prefWidth="968.0">
          <children>
             <Label layoutX="210.0" layoutY="140.0" prefHeight="49.0" prefWidth="283.0" text="Borger oplysninger">
@@ -40,7 +40,7 @@
                <children>
                   <TextField promptText="Navn" />
                   <TextField fx:id="nameFileld" prefHeight="36.0" prefWidth="275.0" promptText="Navn" />
-                  <TextField fx:id="lastnameFiled1" layoutX="10.0" layoutY="18.0" prefHeight="38.0" prefWidth="275.0" promptText="Efternavn" GridPane.rowIndex="1" />
+                  <TextField fx:id="lastnameFiled1" layoutX="10.0" layoutY="18.0" prefHeight="35.0" prefWidth="275.0" promptText="Efternavn" GridPane.rowIndex="1" />
                   <TextField fx:id="cprField" layoutX="10.0" layoutY="60.0" prefHeight="36.0" prefWidth="275.0" promptText="CPR-nr" GridPane.rowIndex="2" />
                   <TextField fx:id="phoneField1" layoutX="10.0" layoutY="93.0" prefHeight="36.0" prefWidth="275.0" promptText="Telefon nummer" GridPane.rowIndex="3" />
                   <TextField fx:id="ageField1" prefHeight="38.0" prefWidth="275.0" promptText="Alder" GridPane.rowIndex="4" />
