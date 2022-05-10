@@ -93,7 +93,7 @@
       </JFXButton>
       <Pane layoutX="-4.0" prefHeight="720.0" prefWidth="199.0" style="-fx-background-color: #D4D3BE;">
          <children>
-            <Text fill="WHITE" layoutX="31.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Oprettelse&#10;af Elev" textAlignment="CENTER">
+            <Text fill="WHITE" layoutX="11.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klasse&#10;Organisering" textAlignment="CENTER">
                <font>
                   <Font size="32.0" />
                </font>
