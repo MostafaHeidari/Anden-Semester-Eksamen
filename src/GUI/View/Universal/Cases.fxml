@@ -111,5 +111,6 @@
             </FontAwesomeIconView>
          </children>
       </Pane>
+      <JFXButton fx:id="DeleteCase" layoutX="372.0" layoutY="595.0" onAction="#DeleteCaseBtn" text="Slet" />
    </children>
 </AnchorPane>

@@ -56,6 +56,13 @@ public class CaseDAO {
         return allCases;
     }
 
+    /**
+     * his method gets a uploadCaseInfo from the database
+     * @param caseName
+     * @param informationTxt
+     * @return uploadCaseInfo
+     * @throws SQLServerException
+     */
     public Case uploadCaseInfo(String caseName, String informationTxt, int selectedCitizen) throws SQLException {
         Connection connection = DC.getConnection();
 
@@ -82,6 +89,11 @@ public class CaseDAO {
         return null;
     }
 
+    /**
+     * This method sets a CaseID in a PatientsID with setCaseCitizen from the database
+     * @return setCaseCitizen from database
+     * @throws SQLServerException
+     */
     public void setCaseCitizen(int caseId, int citizenId){
         try (Connection connection = DC.getConnection()) {
             String sql = "INSERT INTO PatientsCases (CaseID, PatientsID) VALUES (?,?);";
