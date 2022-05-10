@@ -5,7 +5,14 @@
 
 #btnCategoryBack{
     -fx-font-size: 15px;
-    -fx-border-color:  #001569;
+    -fx-border-color: #001569;
     -fx-background-color: #15B559;
     -fx-text-fill: white;
+}
+
+#btnCategoryBack:hover{
+    -fx-text-fill: white;
+    -fx-border-color: #001569;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
 }

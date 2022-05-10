@@ -11,7 +11,12 @@
      -fx-background-color: white;
      -fx-text-fill: red;
 }
-
+#btnInfo{
+     -fx-font-size: 15px;
+     -fx-border-color: #001569;
+     -fx-background-color: #15B559;
+     -fx-text-fill: white;
+}
 
 #txtNameField,#txtLastnameField,#txtcprField,#txtEmailField,#txtTelefonField,#txtadgangskodField,#txtAgeField,#txtUserField{
      -fx-control-inner-background: white;
@@ -100,14 +105,11 @@
      -fx-text-fill: white;
 }
 
-#btnInfo{
-     -fx-border-color: #001569;
-}
-
 #btnInfo:hover{
-     -fx-border-color: #001569;
-     -fx-background-color: #001569;
      -fx-text-fill: white;
+     -fx-border-color: #001569;
+     -fx-border-width: 2px;
+     -fx-border-radius: 4px;
 }
 
 #citizentBoutten:hover{
