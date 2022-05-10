@@ -14,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -61,7 +62,9 @@ public class CasesController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        setSelectedCase();
+        tvCase.setOnMouseClicked((MouseEvent event) -> {
+            setSelectedCase();
+        });
     }
 
     /**

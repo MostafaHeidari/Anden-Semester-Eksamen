@@ -84,8 +84,8 @@
           <TableColumn fx:id="tcNameStudent" prefWidth="96.0" text="Navn" />
           <TableColumn fx:id="tcLastName" prefWidth="147.20001220703125" text="Efternavn" />
             <TableColumn fx:id="tcEmail" prefWidth="125.5999755859375" text="E-mail" />
-            <TableColumn fx:id="tcAge" minWidth="0.0" prefWidth="122.400146484375" text="Alder" />
             <TableColumn fx:id="tcUserName" prefWidth="124.7999267578125" text="Brugernavn" />
+            <TableColumn fx:id="tcAge" minWidth="0.0" prefWidth="122.400146484375" text="Alder" />
         </columns>
       </TableView>
       <Label layoutX="895.0" layoutY="42.0" text="List af Eleverne" textFill="#2b2121">
