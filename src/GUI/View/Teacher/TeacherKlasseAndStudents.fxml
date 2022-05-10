@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="787.0" prefWidth="1654.0" stylesheets="@../CSS/TeacherKlassAndStudents.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.TeacherKlasseAndStudentsController">
+<AnchorPane prefHeight="787.0" prefWidth="1491.0" stylesheets="@../CSS/TeacherKlassAndStudents.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.TeacherKlasseAndStudentsController">
    <children>
       <Pane layoutX="194.0" layoutY="63.0" prefHeight="56.0" prefWidth="498.0" style="-fx-background-color: #FFFFFF;">
          <effect>
@@ -35,19 +35,19 @@
             <TableColumn fx:id="tcAge" prefWidth="105.5999755859375" text="Alder" />
          </columns>
       </TableView>
-      <TableView fx:id="tvClassInformation" layoutX="875.0" layoutY="131.0" prefHeight="514.0" prefWidth="256.0">
+      <TableView fx:id="tvClassInformation" layoutX="860.0" layoutY="128.0" prefHeight="514.0" prefWidth="256.0">
          <columns>
             <TableColumn fx:id="tcClassId" prefWidth="70.933349609375" text="ID " />
             <TableColumn fx:id="tcClassName" prefWidth="192.79998779296875" text="KlasseNavn" />
          </columns>
       </TableView>
-      <TableView fx:id="tvStudentsInClasses" layoutX="1211.0" layoutY="129.0" prefHeight="514.0" prefWidth="396.0">
+      <TableView fx:id="tvStudentsInClasses" layoutX="1147.0" layoutY="124.0" prefHeight="514.0" prefWidth="329.0">
          <columns>
-            <TableColumn fx:id="tcStudentNameInClass" prefWidth="196.0" text="Name" />
-            <TableColumn fx:id="tcLastNameInClass" prefWidth="197.5999755859375" text="Efternavn" />
+            <TableColumn fx:id="tcStudentNameInClass" prefWidth="143.7332763671875" text="Name" />
+            <TableColumn fx:id="tcLastNameInClass" prefWidth="183.2000732421875" text="Efternavn" />
          </columns>
       </TableView>
-      <JFXButton fx:id="newClass" layoutX="875.0" layoutY="665.0" onAction="#newClassBtn" prefHeight="34.0" prefWidth="256.0" text="Ny Klasse">
+      <JFXButton fx:id="newClass" layoutX="860.0" layoutY="662.0" onAction="#newClassBtn" prefHeight="34.0" prefWidth="256.0" text="Ny Klasse">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
@@ -61,7 +61,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <Pane layoutX="874.0" layoutY="59.0" prefHeight="56.0" prefWidth="252.0" style="-fx-background-color: #FFFFFF;">
+      <Pane layoutX="859.0" layoutY="56.0" prefHeight="56.0" prefWidth="252.0" style="-fx-background-color: #FFFFFF;">
          <effect>
             <DropShadow height="9.3" radius="5.32" width="13.98" />
          </effect>
@@ -73,26 +73,26 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="1212.0" layoutY="62.0" prefHeight="56.0" prefWidth="396.0" style="-fx-background-color: #FFFFFF;">
+      <Pane layoutX="1148.0" layoutY="57.0" prefHeight="56.0" prefWidth="326.0" style="-fx-background-color: #FFFFFF;">
          <effect>
             <DropShadow height="9.3" radius="5.32" width="13.98" />
          </effect>
          <children>
-            <Label layoutX="155.0" layoutY="17.0" text="Elever i klassen">
+            <Label layoutX="115.0" layoutY="16.0" text="Elever i klassen">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <JFXButton fx:id="deleteStudentInClass" layoutX="1212.0" layoutY="665.0" onAction="#deleteStudentInClassBtn" prefHeight="34.0" prefWidth="396.0" text="Fjen Student fra Klasse">
+      <JFXButton fx:id="deleteStudentInClass" layoutX="1150.0" layoutY="662.0" onAction="#deleteStudentInClassBtn" prefHeight="34.0" prefWidth="331.0" text="Fjen Student fra Klasse">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <Pane layoutX="-4.0" layoutY="-8.0" prefHeight="795.0" prefWidth="190.0" style="-fx-background-color: #D4D3BE;">
+      <Pane layoutX="-4.0" layoutY="-8.0" prefHeight="795.0" prefWidth="173.0" style="-fx-background-color: #D4D3BE;">
          <children>
-            <JFXButton fx:id="BtnBack" layoutX="6.0" layoutY="741.0" onAction="#BackFrontpageBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
+            <JFXButton fx:id="BtnBack" layoutX="6.0" layoutY="741.0" onAction="#BackFrontpageBtn" prefHeight="40.0" prefWidth="166.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -108,12 +108,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="backStudent" layoutX="6.0" layoutY="679.0" onAction="#btnBackStudent" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Elever">
+            <JFXButton fx:id="backStudent" layoutX="6.0" layoutY="679.0" onAction="#btnBackStudent" prefHeight="40.0" prefWidth="165.0" stylesheets="@../CSS/CreateStudent.css" text="Elever">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="backPatientBtn" layoutX="6.0" layoutY="623.0" onAction="#btnBackPatient" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Borger">
+            <JFXButton fx:id="backPatientBtn" layoutX="6.0" layoutY="623.0" onAction="#btnBackPatient" prefHeight="40.0" prefWidth="165.0" stylesheets="@../CSS/CreateStudent.css" text="Borger">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -128,7 +128,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="citizenInformation" layoutX="6.0" layoutY="569.0" onAction="#citizenInformationBtn" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Borger Infomationer">
+            <JFXButton fx:id="citizenInformation" layoutX="6.0" layoutY="569.0" onAction="#citizenInformationBtn" prefHeight="40.0" prefWidth="165.0" stylesheets="@../CSS/CreateStudent.css" text="Borger Infomationer">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
