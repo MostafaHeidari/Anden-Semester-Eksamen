@@ -158,6 +158,11 @@
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="255.0" layoutY="271.0" text="E-mail " />
       <Label alignment="CENTER" layoutX="225.0" layoutY="313.0" text="BrugerNavn" />
       <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="219.0" layoutY="356.0" prefHeight="20.0" prefWidth="70.0" text="Alder " textAlignment="RIGHT" />
+      <JFXButton fx:id="Logout" layoutX="1198.0" layoutY="30.0" onAction="#LogOut" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
    </children>
    <stylesheets>
       <URL value="@../CSS/TeacherAndPatient.css" />

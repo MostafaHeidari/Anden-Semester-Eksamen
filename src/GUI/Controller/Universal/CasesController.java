@@ -19,6 +19,7 @@ import java.io.IOException;
 public class CasesController {
 
 
+    public JFXButton DeleteCase;
     private Citizen selectedCitizen;
 
     public CaseModel caseModel;
@@ -111,5 +112,9 @@ public class CasesController {
         nameCitizenTxt.setText(citizen.getCitizenName());
         lastNameCitizenTxt.setText(citizen.getCitizenLastName());
         setCaseView();
+    }
+
+    public void DeleteCaseBtn(ActionEvent actionEvent) {
+
     }
 }
