@@ -95,7 +95,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </FontAwesomeIconView>
-                  <JFXButton fx:id="citizenInformation" layoutX="14.0" layoutY="360.0" onAction="#citizenInformationBtn" prefHeight="40.0" prefWidth="170.0" stylesheets="@../CSS/CreateStudent.css" text="BogerInfomationer">
+                  <JFXButton fx:id="citizenInformation" layoutX="14.0" layoutY="360.0" onAction="#citizenInformationBtn" prefHeight="40.0" prefWidth="170.0" stylesheets="@../CSS/CreateStudent.css" text="BorgerInfomationer">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
