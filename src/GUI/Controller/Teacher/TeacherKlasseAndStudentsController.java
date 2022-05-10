@@ -293,4 +293,12 @@ public class TeacherKlasseAndStudentsController implements Initializable {
             classModel.deleteAClass(selectedClass);
         tvClassInformation.refresh();
     }
+
+    public void LogOutOfClass(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) backStudent.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("SOSUS System");
+        switcher.setScene(scene);
+    }
 }
