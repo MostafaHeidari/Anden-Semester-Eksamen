@@ -140,7 +140,7 @@
             </FontAwesomeIconView>
          </children>
       </Pane>
-      <JFXButton fx:id="deleteAClass" alignment="TOP_LEFT" layoutX="644.0" layoutY="227.0" onAction="#deleteAClassBtn" prefHeight="27.0" prefWidth="141.0" text="Delete en Klasse">
+      <JFXButton fx:id="deleteAClass" alignment="TOP_LEFT" layoutX="644.0" layoutY="227.0" onAction="#deleteAClassBtn" prefHeight="27.0" prefWidth="141.0" text="Slet en Klasse">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
