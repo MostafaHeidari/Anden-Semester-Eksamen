@@ -118,9 +118,9 @@ public class CaseDAO {
     public void deleteCase(Case selectedCase) {
 
 
-        String sql1 = "DELETE FROM Cases WHERE CaseID = (?);";
+        String sql1 = "DELETE FROM FunctionalAbility WHERE CaseID = (?);";
         String sql2 = "DELETE FROM PatientsCases WHERE CaseID = (?);";
-        String sql3 = "DELETE FROM FunctionalAbility WHERE CaseID = (?);";
+        String sql3 = "DELETE FROM Cases WHERE CaseID = (?);";
 
         try (Connection connection = DC.getConnection()) {
 
