@@ -112,7 +112,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="BtnBackPatient" layoutX="14.0" layoutY="540.0" onAction="#btnBackPatient" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Boger">
+            <JFXButton fx:id="BtnBackPatient" layoutX="14.0" layoutY="540.0" onAction="#btnBackPatient" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Borger">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -127,7 +127,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="citizenInformation" layoutX="14.0" layoutY="480.0" onAction="#citizenInformationBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="BogerInfomationer">
+            <JFXButton fx:id="citizenInformation" layoutX="14.0" layoutY="480.0" onAction="#citizenInformationBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="BorgerInfomationer">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
