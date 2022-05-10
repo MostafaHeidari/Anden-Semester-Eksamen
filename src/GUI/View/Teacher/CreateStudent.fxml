@@ -89,7 +89,7 @@
             <TableColumn fx:id="tcAge" minWidth="0.0" prefWidth="122.400146484375" text="Alder" />
         </columns>
       </TableView>
-      <Label layoutX="895.0" layoutY="42.0" text="List af Eleverne" textFill="#2b2121">
+      <Label layoutX="895.0" layoutY="42.0" text="Liste af Eleverne" textFill="#2b2121">
          <font>
             <Font size="14.0" />
          </font>
