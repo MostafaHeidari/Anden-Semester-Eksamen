@@ -66,10 +66,7 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     public TableColumn tcStudentId;
     @FXML
     public TableColumn tcLastname;
-    @FXML
-    public TableColumn tcEmail;
-    @FXML
-    public TableColumn tcAge;
+
 
     @FXML
     public TableView tvStudentsInClasses;
@@ -178,9 +175,6 @@ public class TeacherKlasseAndStudentsController implements Initializable {
 
         tcLastname.setCellValueFactory(new PropertyValueFactory<>("lastName"));
 
-        tcEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
-
-        tcAge.setCellValueFactory(new PropertyValueFactory<>("age"));
 
 
             try {

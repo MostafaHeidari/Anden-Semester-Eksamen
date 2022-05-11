@@ -6,6 +6,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -30,7 +31,6 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
             <TextField fx:id="txtNameField" prefHeight="98.0" prefWidth="318.0" promptText="Navn" stylesheets="@../CSS/TeacherAndPatient.css">
@@ -49,11 +49,7 @@
                   <InnerShadow height="8.16" radius="2.125" width="2.34" />
                </effect>
             </TextField>
-            <TextField fx:id="txtEmailField" prefHeight="36.0" prefWidth="328.0" promptText="E-mail" GridPane.rowIndex="2">
-               <effect>
-                  <InnerShadow height="8.16" radius="2.125" width="2.34" />
-               </effect></TextField>
-            <TextField fx:id="txtUserField" layoutX="10.0" layoutY="93.0" prefHeight="88.0" prefWidth="318.0" promptText="Brugernavn" style="-fx-background-color: EBF3EB;" GridPane.rowIndex="3">
+            <TextField fx:id="txtUserField" layoutX="10.0" layoutY="93.0" prefHeight="88.0" prefWidth="318.0" promptText="Brugernavn" style="-fx-background-color: EBF3EB;" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
@@ -61,10 +57,7 @@
                   <InnerShadow height="8.16" radius="2.125" width="2.34" />
                </effect>
             </TextField>
-            <TextField fx:id="txtAgeField" prefHeight="36.0" prefWidth="243.0" promptText="Alder" GridPane.rowIndex="4">
-               <effect>
-                  <InnerShadow height="8.16" radius="2.125" width="2.34" />
-               </effect></TextField>
+            <PasswordField fx:id="passwordTxt" prefHeight="43.0" prefWidth="243.0" promptText="Kodeord" GridPane.rowIndex="3" />
          </children>
       </GridPane>
       <JFXButton fx:id="BtnCreateStudent" layoutX="446.0" layoutY="406.0" onAction="#CreateStudentActionButton" prefHeight="28.0" prefWidth="94.0" text="Opret Elev" textFill="WHITE">
@@ -153,11 +146,10 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="261.0" layoutY="183.0" text="Navn  " />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="238.0" layoutY="226.0" text="Efternavn " />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="255.0" layoutY="271.0" text="E-mail " />
-      <Label alignment="CENTER" layoutX="225.0" layoutY="313.0" text="BrugerNavn" />
-      <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="219.0" layoutY="356.0" prefHeight="20.0" prefWidth="70.0" text="Alder " textAlignment="RIGHT" />
+      <Label alignment="CENTER" layoutX="252.0" layoutY="192.0" text="Navn:  " />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="242.0" layoutY="242.0" text="Efternavn: " />
+      <Label alignment="CENTER" layoutX="228.0" layoutY="298.0" text="BrugerNavn:" />
+      <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="220.0" layoutY="350.0" prefHeight="20.0" prefWidth="70.0" text="Kodeord:" textAlignment="RIGHT" />
       <JFXButton fx:id="Logout" layoutX="1213.0" layoutY="14.0" onAction="#LogOut" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
