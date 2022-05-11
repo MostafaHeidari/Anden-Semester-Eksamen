@@ -1,6 +1,6 @@
 package BE;
 
-public class patient {
+public class Citizen {
     private int patientID;
     private String namePatient;
     private String lastNamePatient;
@@ -8,7 +8,7 @@ public class patient {
     private String address;
     private boolean sex;
 
-    public patient(int patientID, String namePatient, String lastNamePatient, int phoneNumber, String address, boolean sex) {
+    public Citizen(int patientID, String namePatient, String lastNamePatient, int phoneNumber, String address, boolean sex) {
         this.patientID = patientID;
         this.namePatient = namePatient;
         this.lastNamePatient = lastNamePatient;
