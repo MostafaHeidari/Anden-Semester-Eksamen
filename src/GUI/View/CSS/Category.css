@@ -1,5 +1,7 @@
 .CategoryHealthConditions{
-    -fx-fill: red;
+    -fx-text-fill: red;
+    -fx-border-width: 2;
+    -fx-border-color: black;
 }
 .Category{
     -fx-border-color: grey;
