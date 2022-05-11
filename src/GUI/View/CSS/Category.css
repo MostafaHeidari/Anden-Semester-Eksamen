@@ -1,8 +1,12 @@
+VBox{
+    -fx-alignment: center;
+}
 .CategoryHealthConditions{
     -fx-border-width: 3;
     -fx-border-color: black;
-    -fx-border-radius: 3;
-    -fx-padding: 3;
+    -fx-border-radius: 5;
+    -fx-padding: 5;
+    -fx-font-size: 15px;
 }
 .Category{
     -fx-border-color: grey;
