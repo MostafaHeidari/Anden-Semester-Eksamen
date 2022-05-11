@@ -1,7 +1,6 @@
 package GUI.Model;
 
-import BE.Citizen;
-import BE.Student;
+import BE.CitizenInfo;
 import BLL.CitizenInfoManger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,7 +9,7 @@ import java.io.IOException;
 
 public class CitizenInfoModel {
     private CitizenInfoManger citizenInfoManger;
-    private ObservableList<Citizen> citizensList = FXCollections.observableArrayList();
+    private ObservableList<CitizenInfo> citizensList = FXCollections.observableArrayList();
 
     /**
      * Constructor

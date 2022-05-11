@@ -1,7 +1,6 @@
 package BLL;
 
-import BE.Citizen;
-import BE.Student;
+import BE.CitizenInfo;
 import DAL.CitizenInfoDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -23,8 +22,8 @@ public class CitizenInfoManger {
      * Gets the list of getAllCitizens using the getAllCitizens method in citizenInfoDAO.
      * @return a list of getAllClasses
      */
-    public ObservableList<Citizen> getAllCitizens() {
-        ObservableList<Citizen> citizensObs = FXCollections.observableArrayList();
+    public ObservableList<CitizenInfo> getAllCitizens() {
+        ObservableList<CitizenInfo> citizensObs = FXCollections.observableArrayList();
 
         try {
             citizensObs.addAll(citizenInfoDAO.getAllCitizens());

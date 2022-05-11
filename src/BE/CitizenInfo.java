@@ -1,6 +1,6 @@
 package BE;
 
-public class Citizen {
+public class CitizenInfo {
     public int citizenId;
     public String citizenName;
     public String citizenLastName;
@@ -13,7 +13,7 @@ public class Citizen {
      * @param citizenAge
      * Constructor with citizenId, citizenName,  citizenLastName, citizenAge
      */
-    public Citizen(int citizenId, String citizenName, String citizenLastName, String citizenAge) {
+    public CitizenInfo(int citizenId, String citizenName, String citizenLastName, String citizenAge) {
         this.citizenId = citizenId;
         this.citizenName = citizenName;
         this.citizenLastName = citizenLastName;
