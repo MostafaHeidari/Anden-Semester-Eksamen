@@ -113,21 +113,19 @@ public class CreateStudentController implements Initializable {
         else {
             String studentName = txtNameField.getText();
             String studentLastname = txtLastnameField.getText();
-            String studentEmail = txtEmailField.getText();
-            String studentAge = txtAgeField.getText();
             String StudentAccount = txtUserField.getText();
 
-            uploadStudentInfo(studentName, studentLastname, studentEmail, studentAge,StudentAccount);
+            uploadStudentInfo(studentName, studentLastname,StudentAccount);
         }
     }
 
     /**
      * uploads a student info with the uploadStudentInfo method
      */
-    private void uploadStudentInfo(String studentName, String studentLastname, String studentEmail, String studentAge, String userName) throws IOException, SQLException {
+    private void uploadStudentInfo(String studentName, String studentLastname, String userName) throws IOException, SQLException {
         StudentModel studentModelInfo = new StudentModel();
 
-        studentModelInfo.uploadStudentinfo(studentName, studentLastname, studentEmail, studentAge, userName);
+        studentModelInfo.uploadStudentinfo(studentName, studentLastname, userName);
 
         txtNameField.clear();
         txtLastnameField.clear();

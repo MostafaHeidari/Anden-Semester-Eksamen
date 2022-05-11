@@ -28,22 +28,20 @@ public class StudentDAO {
      * @return uploadStudentinfo
      * @throws SQLServerException
      */
-    public Student uploadStudentinfo(String studentName, String studentLastname, String studentEmail, String studentAge, String userName ) throws SQLException {
+    public Student uploadStudentinfo(String studentName, String studentLastname, String userName ) throws SQLException {
         Connection connection = DC.getConnection();
 
-        String sql = "INSERT INTO StudentTable (NameStudent,LastNameStudent,EmailStudent,StudentAge,UserName) VALUES (?,?,?,?,?);";
+        String sql = "INSERT INTO StudentTable (NameStudent,LastNameStudent,UserName) VALUES (?,?,?);";
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
         ps.setString(1, studentName);
         ps.setString(2, studentLastname);
-        ps.setString(3, studentEmail);
-        ps.setString(4, studentAge);
-        ps.setString(5, userName);
+        ps.setString(3, userName);
         int affectedRows = ps.executeUpdate();
         if (affectedRows == 1) {
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
                 int studentId = rs.getInt(1);
-                Student studentCord = new Student(studentId, studentName, studentLastname, studentEmail, studentAge,userName);
+                Student studentCord = new Student(studentId, studentName, studentLastname,userName);
                 return studentCord;
             }
 
@@ -59,14 +57,12 @@ public class StudentDAO {
      */
     public void editStudent(Student studentUpdate) throws Exception {
         try (Connection connection = DC.getConnection()) {
-            String sql = "UPDATE StudentTable SET NameStudent= (?), LastNameStudent=(?), EmailStudent=(?), StudentAge=(?), UserName= (?) WHERE StudentID = (?);";
+            String sql = "UPDATE StudentTable SET NameStudent= (?), LastNameStudent=(?), UserName= (?) WHERE StudentID = (?);";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, studentUpdate.getStudentName());
             preparedStatement.setString(2, studentUpdate.getLastName());
-            preparedStatement.setString(3, studentUpdate.getEmail());
-            preparedStatement.setString(4, studentUpdate.getAge());
-            preparedStatement.setString(5, studentUpdate.getUserName());
-            preparedStatement.setInt(6, studentUpdate.getStudentId());
+            preparedStatement.setString(3, studentUpdate.getUserName());
+            preparedStatement.setInt(4, studentUpdate.getStudentId());
             preparedStatement.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -115,8 +111,8 @@ public class StudentDAO {
         Statement statement = con.createStatement();
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) { // Creates and adds song objects into an array list
-            Student studentCord = new Student(rs.getInt("StudentID"), rs.getString("NameStudent"), rs.getString("LastNameStudent"),
-                    rs.getString("EmailStudent"), rs.getString("StudentAge"),rs.getString("UserName"));
+            Student studentCord = new Student(rs.getInt("StudentID"), rs.getString("NameStudent"),
+                    rs.getString("LastNameStudent") ,rs.getString("UserName"));
             allStudents.add(studentCord);
         }
         return allStudents;

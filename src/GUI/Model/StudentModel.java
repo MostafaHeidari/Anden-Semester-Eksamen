@@ -38,13 +38,12 @@ public class StudentModel {
      * Gets the uploadStudentinfo studentNavn, studentEfternavn, studentEmail, studentAlder and userName using uploadStudentinfo from studentManager
      * @param studentNavn
      * @param studentEfternavn
-     * @param studentEmail
-     * @param studentAlder
+
      * @param userName
      * @throws SQLServerException
      */
-    public void uploadStudentinfo(String studentNavn, String studentEfternavn, String studentEmail, String studentAlder, String userName) throws SQLException {
-        studentsList.add(studentManager.uploadStudentinfo(studentNavn,studentEfternavn,studentEmail,studentAlder,userName));
+    public void uploadStudentinfo(String studentNavn, String studentEfternavn, String userName) throws SQLException {
+        studentsList.add(studentManager.uploadStudentinfo(studentNavn,studentEfternavn,userName));
     }
 
 
