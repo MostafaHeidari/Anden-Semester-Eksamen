@@ -1,6 +1,6 @@
 package DAL;
 
-import BE.Citizen;
+import BE.CitizenInfo;
 import DAL.db.DatabaseConnector;
 
 import java.io.IOException;
@@ -28,21 +28,21 @@ public class CitizenInfoDAO {
      * Gets a list of getAllCitizens
      * @throws IOException
      */
-    public List<Citizen> getAllCitizens() throws SQLException {
+    public List<CitizenInfo> getAllCitizens() throws SQLException {
         Connection con = DC.getConnection();
 
-        List<Citizen> allCitizens = new ArrayList<>();
+        List<CitizenInfo> allCitizenInfos = new ArrayList<>();
 
 
         String sql = "SELECT * FROM Patients";
         Statement statement = con.createStatement();
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) { // Creates and adds song objects into an array list
-            Citizen citizenCord = new Citizen(rs.getInt("PatientID"), rs.getString("PatientName"), rs.getString("PatientLastName"),
+            CitizenInfo citizenInfoCord = new CitizenInfo(rs.getInt("PatientID"), rs.getString("PatientName"), rs.getString("PatientLastName"),
                     rs.getString("PatientAge"));
-            allCitizens.add(citizenCord);
+            allCitizenInfos.add(citizenInfoCord);
         }
-        return allCitizens;
+        return allCitizenInfos;
 
     }
 }

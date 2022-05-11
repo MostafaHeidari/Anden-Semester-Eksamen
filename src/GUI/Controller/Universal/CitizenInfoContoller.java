@@ -1,6 +1,6 @@
 package GUI.Controller.Universal;
 
-import BE.Citizen;
+import BE.CitizenInfo;
 import GUI.Model.CitizenInfoModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -25,7 +25,7 @@ public class CitizenInfoContoller implements Initializable {
 
     private CitizenInfoModel citizenInfoModel;
 
-    public Citizen selectedCitizen;
+    public CitizenInfo selectedCitizenInfo;
 
 
     @FXML
@@ -40,15 +40,15 @@ public class CitizenInfoContoller implements Initializable {
     public JFXButton createCase;
 
     @FXML
-    public TableView<Citizen>  tvCitizenInfo;
+    public TableView<CitizenInfo>  tvCitizenInfo;
     @FXML
-    public TableColumn<Citizen, Integer> tcCitizenId;
+    public TableColumn<CitizenInfo, Integer> tcCitizenId;
     @FXML
-    public TableColumn<Citizen, String>  tcNameCitizen;
+    public TableColumn<CitizenInfo, String>  tcNameCitizen;
     @FXML
-    public TableColumn<Citizen, String>  tcCitizenLastname;
+    public TableColumn<CitizenInfo, String>  tcCitizenLastname;
     @FXML
-    public TableColumn<Citizen, String>  tcCitizenAge;
+    public TableColumn<CitizenInfo, String>  tcCitizenAge;
 
     /**
      * Constructor
@@ -141,7 +141,7 @@ public class CitizenInfoContoller implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Cases.fxml"));
         Parent root = (Parent) fxmlLoader.load();
         CasesController casesController = fxmlLoader.<CasesController>getController();
-        casesController.setCitizenID(selectedCitizen);
+        casesController.setCitizenID(selectedCitizenInfo);
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
@@ -154,7 +154,7 @@ public class CitizenInfoContoller implements Initializable {
     private void setSelectedItems() {
         if (tvCitizenInfo.getSelectionModel().getSelectedItem() != null)
         {
-            selectedCitizen = tvCitizenInfo.getSelectionModel().getSelectedItem();
+            selectedCitizenInfo = tvCitizenInfo.getSelectionModel().getSelectedItem();
         }
 
     }
@@ -164,7 +164,7 @@ public class CitizenInfoContoller implements Initializable {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/CreateCase.fxml"));
         Parent root = (Parent) fxmlLoader.load();
         CreateCaseController casesController = fxmlLoader.<CreateCaseController>getController();
-        casesController.setCitizenID(selectedCitizen);
+        casesController.setCitizenID(selectedCitizenInfo);
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);

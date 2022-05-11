@@ -1,8 +1,7 @@
 package GUI.Controller.Universal;
 
 import BE.Case;
-import BE.Citizen;
-import BE.Student;
+import BE.CitizenInfo;
 import GUI.Model.CaseModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -26,7 +25,7 @@ public class CasesController implements Initializable {
 
 
     public JFXButton deleteCase;
-    private Citizen selectedCitizen;
+    private CitizenInfo selectedCitizenInfo;
 
     public CaseModel caseModel;
 
@@ -119,13 +118,13 @@ public class CasesController implements Initializable {
 
         tcCaseInfo.setCellValueFactory(new PropertyValueFactory<>("caseInformation"));
 
-        tvCase.setItems(caseModel.getAllCases(selectedCitizen.getCitizenId()));
+        tvCase.setItems(caseModel.getAllCases(selectedCitizenInfo.getCitizenId()));
     }
 
-    public void setCitizenID(Citizen citizen) {
-        selectedCitizen = citizen;
-        nameCitizenTxt.setText(citizen.getCitizenName());
-        lastNameCitizenTxt.setText(citizen.getCitizenLastName());
+    public void setCitizenID(CitizenInfo citizenInfo) {
+        selectedCitizenInfo = citizenInfo;
+        nameCitizenTxt.setText(citizenInfo.getCitizenName());
+        lastNameCitizenTxt.setText(citizenInfo.getCitizenLastName());
         setCaseView();
     }
 
