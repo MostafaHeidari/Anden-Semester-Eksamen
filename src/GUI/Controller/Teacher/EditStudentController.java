@@ -60,6 +60,7 @@ public class EditStudentController {
         this.selectedStudent.setLastName(updateStudentEfterNavn);
         this.selectedStudent.setUserName(updateStudentUser);
 
+
         studentModel.editStudent(this.selectedStudent);
 
         /*turn back to Create student window*/
@@ -76,7 +77,6 @@ public class EditStudentController {
         txtnameEditStudentField.setText(student.getStudentName());
         txtLastnameEditStudentField.setText(student.getLastName());
         txtUserNameEditField.setText(student.getUserName());
-
 
         this.selectedStudent = student;
     }
