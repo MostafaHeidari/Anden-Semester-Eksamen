@@ -1,6 +1,6 @@
 package BLL;
 
-import BE.SchoolClass;
+import BE.SchoolGroups;
 import DAL.db.Teacher.ClassDAO;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.FXCollections;
@@ -25,7 +25,7 @@ public class ClassManger {
      * @return
      * @throws SQLServerException
      */
-    public SchoolClass uploadClassInfo(String className) throws SQLException {
+    public SchoolGroups uploadClassInfo(String className) throws SQLException {
         return (classDAO.uploadClassInfo(className));
     }
 
@@ -33,8 +33,8 @@ public class ClassManger {
      * Gets the list of getAllClasses using the getAllClasses method in classDAO.
      * @return a list of getAllClasses
      */
-    public ObservableList<SchoolClass> getAllClasses() {
-        ObservableList<SchoolClass> classesObs = FXCollections.observableArrayList();
+    public ObservableList<SchoolGroups> getAllClasses() {
+        ObservableList<SchoolGroups> classesObs = FXCollections.observableArrayList();
         try {
             classesObs.addAll(classDAO.getAllClasses());
         } catch (Exception e) {
@@ -47,7 +47,7 @@ public class ClassManger {
      * Gets the deleteAClass, selectedClass using deleteAClass from classDAO
      * @param selectedClass
      */
-    public void deleteAClass(SchoolClass selectedClass) {
+    public void deleteAClass(SchoolGroups selectedClass) {
         classDAO.deleteAClass(selectedClass);
     }
 }

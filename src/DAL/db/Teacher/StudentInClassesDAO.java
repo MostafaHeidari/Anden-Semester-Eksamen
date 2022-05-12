@@ -1,6 +1,6 @@
 package DAL.db.Teacher;
 
-import BE.SchoolClass;
+import BE.SchoolGroups;
 import BE.Student;
 import DAL.db.DatabaseConnector;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
@@ -28,9 +28,9 @@ public class StudentInClassesDAO {
      * @param selectedStudent
      * @throws SQLServerException
      */
-    public void addStudentToClass(SchoolClass selectedClass, Student selectedStudent) throws SQLException {
+    public void addStudentToClass(SchoolGroups selectedClass, Student selectedStudent) throws SQLException {
         Connection connection = DC.getConnection();
-        int cId = selectedClass.getClassId();
+        int cId = selectedClass.getGroupId();
         int sId = selectedStudent.getStudentId();
 
         String sql = "INSERT INTO ClassStudents (ClassID , StudentID) VALUES ((?), (?)); ";
@@ -50,12 +50,12 @@ public class StudentInClassesDAO {
      * @return allStudentsInClasses from database
      * @throws SQLServerException
      */
-    public List<Student> getAllStudentsInClass(int classId) {
-        ArrayList<Student> allStudentsInClasses = new ArrayList<>();
+    public List<Student> getAllStudentsInGroups(int classId) {
+        ArrayList<Student> allStudentsInGroups = new ArrayList<>();
 
         try (Connection connection = DC.getConnection()) {
 
-            String sql = "SELECT StudentTable.* FROM StudentTable INNER JOIN ClassStudents ON StudentTable.StudentID = ClassStudents.StudentID WHERE ClassStudents.ClassID = (?);";
+            String sql = "SELECT StudentTable.* FROM StudentTable INNER JOIN GroupStudents ON StudentTable.StudentID = GroupStudents.StudentID WHERE GroupStudents.ClassID = (?);";
             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             statement.setInt(1, classId);
             statement.execute();
@@ -66,16 +66,16 @@ public class StudentInClassesDAO {
                 String username = rs.getString("UserName");
                 int id = rs.getInt("StudentID");
 
-                allStudentsInClasses.add(new Student(id, name, lastName, username));
+                allStudentsInGroups.add(new Student(id, name, lastName, username));
 
             }
-            return allStudentsInClasses;
+            return allStudentsInGroups;
         } catch (SQLServerException throwables) {
             throwables.printStackTrace();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        return allStudentsInClasses;
+        return allStudentsInGroups;
     }
 
     /**
@@ -84,12 +84,12 @@ public class StudentInClassesDAO {
      * @param selectedStudentInClass
      * @throws SQLServerException
      */
-    public void deleteStudentInClass(SchoolClass selectedClass, Student selectedStudentInClass) throws SQLException {
+    public void deleteStudentInGroups(SchoolGroups selectedClass, Student selectedStudentInClass) throws SQLException {
         Connection connection = DC.getConnection();
-        int cId = selectedClass.getClassId();
+        int cId = selectedClass.getGroupId();
         int mId = selectedStudentInClass.getStudentId();
 
-        String sql = "DELETE FROM ClassStudents WHERE ClassID = (?) AND StudentID = (?); ";
+        String sql = "DELETE FROM GroupStudents WHERE ClassID = (?) AND StudentID = (?); ";
 
         PreparedStatement pst = connection.prepareStatement(sql);
 

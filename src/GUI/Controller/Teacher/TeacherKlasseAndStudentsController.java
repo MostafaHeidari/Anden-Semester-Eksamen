@@ -1,6 +1,6 @@
 package GUI.Controller.Teacher;
 
-import BE.SchoolClass;
+import BE.SchoolGroups;
 import BE.Student;
 
 import GUI.Controller.Universal.SimpleDialogController;
@@ -35,7 +35,7 @@ public class TeacherKlasseAndStudentsController implements Initializable {
 
     public Student selectedStudentInClass;
 
-    public SchoolClass selectedClass;
+    public SchoolGroups selectedClass;
 
 
     @FXML
@@ -86,7 +86,7 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         try {
             setKlasseTableView();
             setStudentTableView();
-            setStudentsInClasses(); 
+            setStudentsInGroups();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -153,14 +153,14 @@ public class TeacherKlasseAndStudentsController implements Initializable {
      */
     private void setKlasseTableView() throws IOException {
 
-        tcClassId.setCellValueFactory(new PropertyValueFactory<>("classId"));
+        tcClassId.setCellValueFactory(new PropertyValueFactory<>("groupId"));
 
-        tcClassName.setCellValueFactory(new PropertyValueFactory<>("className"));
+        tcClassName.setCellValueFactory(new PropertyValueFactory<>("groupName"));
 
 
         tvClassInformation.setItems(classModel.getAllClasses());
         if(tvClassInformation.getItems().size() > 0){ //Set den valgte til den første i listen, hvis der er nogen
-            selectedClass = (SchoolClass) tvClassInformation.getItems().get(0);
+            selectedClass = (SchoolGroups) tvClassInformation.getItems().get(0);
         }
     }
 
@@ -186,16 +186,16 @@ public class TeacherKlasseAndStudentsController implements Initializable {
 
 
     /**
-     * Sets the setStudentsInClasses
+     * Sets the setStudentsInGroups
      */
-    public void setStudentsInClasses(){
+    public void setStudentsInGroups(){
 
         tcStudentNameInClass.setCellValueFactory(new PropertyValueFactory<Student, String>("studentName"));
 
         tcLastNameInClass.setCellValueFactory(new PropertyValueFactory<Student, String>("lastName"));
 
 
-        tvStudentsInClasses.setItems(studentModel.setStudentsInClass(selectedClass.classId));
+        tvStudentsInClasses.setItems(studentModel.setStudentsInClass(selectedClass.getGroupId()));
 
     }
 
@@ -213,15 +213,15 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         }
         if (tvClassInformation.getSelectionModel().getSelectedItem() != null)
         {
-            selectedClass = (SchoolClass) tvClassInformation.getSelectionModel().getSelectedItem();
-            setStudentsInClasses();
+            selectedClass = (SchoolGroups) tvClassInformation.getSelectionModel().getSelectedItem();
+            setStudentsInGroups();
         }
     }
 
     /**
      * add the student to a class
      */
-    public void addStudentToClassBtn(ActionEvent event) {
+    public void addStudentToGroupBtn(ActionEvent event) {
         try {
             studentModel.addStudentToClass(
                     selectedClass,
@@ -229,16 +229,16 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        tvStudentsInClasses.setItems(studentModel.setStudentsInClass(selectedClass.classId));
+        tvStudentsInClasses.setItems(studentModel.setStudentsInClass(selectedClass.getGroupId()));
         tvStudentsInClasses.refresh();
     }
 
     /**
      * delete the student to a class
      */
-    public void deleteStudentInClassBtn(ActionEvent event) throws SQLException {
+    public void deleteStudentInGroupsBtn(ActionEvent event) throws SQLException {
         if(SimpleDialogController.delete()){
-            studentModel.deleteStudentInClass(selectedClass,
+            studentModel.deleteStudentInGroups(selectedClass,
              selectedStudentInClass
             );
             tvStudentsInClasses.getItems().remove(selectedStudentInClass);
@@ -282,7 +282,7 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     /**
      * delete a class
      */
-    public void deleteAClassBtn(ActionEvent event) {
+    public void deleteAGroupBtn(ActionEvent event) {
         if (SimpleDialogController.delete())
             classModel.deleteAClass(selectedClass);
         tvClassInformation.refresh();

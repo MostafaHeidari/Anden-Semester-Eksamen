@@ -1,6 +1,6 @@
 package BLL;
 
-import BE.SchoolClass;
+import BE.SchoolGroups;
 import BE.Student;
 import DAL.db.Teacher.StudentDAO;
 import DAL.db.Teacher.StudentInClassesDAO;
@@ -56,7 +56,7 @@ public class StudentManager {
      * @param selectedStudent
      * @throws SQLServerException
      */
-    public void addStudentToClass(SchoolClass selectedClass, Student selectedStudent) throws SQLException {
+    public void addStudentToClass(SchoolGroups selectedClass, Student selectedStudent) throws SQLException {
         studentInClassesDAO.addStudentToClass(selectedClass, selectedStudent);
     }
 

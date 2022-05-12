@@ -1,6 +1,6 @@
 package DAL.db.Teacher;
 
-import BE.SchoolClass;
+import BE.SchoolGroups;
 import DAL.db.DatabaseConnector;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 
@@ -24,22 +24,22 @@ public class ClassDAO {
 
     /**
      * this method gets a uploadClassInfo from the database
-     * @param className
+     * @param groupName
      * @return
      * @throws SQLServerException
      */
-    public SchoolClass uploadClassInfo(String className) throws SQLException {
+    public SchoolGroups uploadClassInfo(String groupName) throws SQLException {
         Connection connection = DC.getConnection();
 
-        String sql = "INSERT INTO ClassTable(ClassName) VALUES (?);";
+        String sql = "INSERT INTO GroupTable(GroupName) VALUES (?);";
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-        ps.setString(1, className);
+        ps.setString(1, groupName);
         int affectedRows = ps.executeUpdate();
         if (affectedRows == 1) {
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
-                int classId = rs.getInt(1);
-                SchoolClass classCord = new SchoolClass(classId, className);
+                int groupId = rs.getInt(1);
+                SchoolGroups classCord = new SchoolGroups(groupId, groupName);
                 return classCord;
             }
         }
@@ -50,21 +50,21 @@ public class ClassDAO {
      * This method gets a list of SchoolClass with getAllClasses from the database
      * @return allClasses from database
      */
-    public List<SchoolClass> getAllClasses() throws SQLException {
+    public List<SchoolGroups> getAllClasses() throws SQLException {
         Connection con = DC.getConnection();
 
-        List<SchoolClass>  allClasses= new ArrayList<>();
+        List<SchoolGroups>  allGroups= new ArrayList<>();
 
 
-        String sql = "SELECT * FROM ClassTable";
+        String sql = "SELECT * FROM GroupTable";
         Statement statement = con.createStatement();
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) { // Creates and adds classes objects into an array list
-            SchoolClass classCord = new SchoolClass(rs.getInt("ClassID"), rs.getString("ClassName"));
-            allClasses.add(classCord);
+            SchoolGroups groupCord = new SchoolGroups(rs.getInt("GroupID"), rs.getString("GroupName"));
+            allGroups.add(groupCord);
         }
 
-        return allClasses;
+        return allGroups;
     }
 
     /**
@@ -72,11 +72,11 @@ public class ClassDAO {
      * @param selectedClass
      * @return
      */
-    public void deleteAClass(SchoolClass selectedClass) {
-        int pId = selectedClass.getClassId();
+    public void deleteAClass(SchoolGroups selectedClass) {
+        int pId = selectedClass.getGroupId();
 
-        String sql2 = "DELETE FROM ClassStudents WHERE ClassID = (?);";
-        String sql1 = "DELETE FROM ClassTable WHERE ClassID = (?);";
+        String sql2 = "DELETE FROM GroupStudents WHERE GroupID = (?);";
+        String sql1 = "DELETE FROM GroupTable WHERE GroupID = (?);";
 
         try(Connection connection = DC.getConnection())
         {

@@ -1,6 +1,6 @@
 package GUI.Model;
 
-import BE.SchoolClass;
+import BE.SchoolGroups;
 import BE.Student;
 import BLL.StudentManager;
 import BLL.StudentsInClassManager;
@@ -73,7 +73,7 @@ public class StudentModel {
      * @param selectedStudent
      * @throws SQLServerException
      */
-    public void addStudentToClass(SchoolClass selectedClass, Student selectedStudent) throws SQLException {
+    public void addStudentToClass(SchoolGroups selectedClass, Student selectedStudent) throws SQLException {
         studentManager.addStudentToClass(selectedClass,selectedStudent);
         studentInClassesList.add(selectedStudent);
     }
@@ -108,8 +108,8 @@ public class StudentModel {
      * @param selectedStudentInClass
      * @throws SQLServerException
      */
-    public void deleteStudentInClass(SchoolClass selectedClass, Student selectedStudentInClass) throws SQLException {
-        studentsInClassManger.deleteStudentInClass(selectedClass,selectedStudentInClass);
+    public void deleteStudentInGroups(SchoolGroups selectedClass, Student selectedStudentInClass) throws SQLException {
+        studentsInClassManger.deleteStudentInGroups(selectedClass,selectedStudentInClass);
         studentInClassesList.remove(selectedStudentInClass);
         classModel.uploadKlasseInfo(String.valueOf(selectedClass));
     }

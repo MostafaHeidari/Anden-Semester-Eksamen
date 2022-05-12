@@ -1,6 +1,6 @@
 package BLL;
 
-import BE.SchoolClass;
+import BE.SchoolGroups;
 import BE.Student;
 import DAL.db.Teacher.StudentInClassesDAO;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
@@ -27,8 +27,8 @@ public class StudentsInClassManager {
      * @param selectedStudentInClass
      * @throws SQLServerException
      */
-    public void deleteStudentInClass(SchoolClass selectedClass, Student selectedStudentInClass) throws SQLException {
-        studentInClassesDAO.deleteStudentInClass(selectedClass,selectedStudentInClass);
+    public void deleteStudentInGroups(SchoolGroups selectedClass, Student selectedStudentInClass) throws SQLException {
+        studentInClassesDAO.deleteStudentInGroups(selectedClass,selectedStudentInClass);
 
     }
 }

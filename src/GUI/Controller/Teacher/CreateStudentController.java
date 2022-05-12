@@ -208,10 +208,6 @@ public class CreateStudentController implements Initializable {
 
         tcLastName.setCellValueFactory(new PropertyValueFactory<>("lastName"));
 
-        tcEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
-
-        tcAge.setCellValueFactory(new PropertyValueFactory<>("age"));
-
         tcUserName.setCellValueFactory(new PropertyValueFactory<>("UserName"));
 
         tvStudent.setItems(studentModel.getAllStudents());

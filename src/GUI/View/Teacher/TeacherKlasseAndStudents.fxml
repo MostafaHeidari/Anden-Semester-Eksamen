@@ -37,7 +37,7 @@
       <TableView fx:id="tvClassInformation" layoutX="618.0" layoutY="130.0" prefHeight="528.0" prefWidth="182.0">
          <columns>
             <TableColumn fx:id="tcClassId" prefWidth="43.20001220703125" text="ID " />
-            <TableColumn fx:id="tcClassName" prefWidth="137.0" text="KlasseNavn" />
+            <TableColumn fx:id="tcClassName" prefWidth="137.0" text="GruppeNavn" />
          </columns>
       </TableView>
       <TableView fx:id="tvStudentsInClasses" layoutX="819.0" layoutY="130.0" prefHeight="528.0" prefWidth="270.0">
@@ -46,11 +46,11 @@
             <TableColumn fx:id="tcLastNameInClass" prefWidth="166.4000244140625" text="Efternavn" />
          </columns>
       </TableView>
-      <JFXButton fx:id="newClass" layoutX="618.0" layoutY="672.0" onAction="#newClassBtn" prefHeight="34.0" prefWidth="182.0" text="Ny Klasse">
+      <JFXButton fx:id="newGroup" layoutX="618.0" layoutY="672.0" onAction="#newGroupBtn" prefHeight="34.0" prefWidth="182.0" text="Ny Gruppe">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="addStudentToClass" alignment="TOP_LEFT" layoutX="441.0" layoutY="194.0" onAction="#addStudentToClassBtn" prefHeight="27.0" prefWidth="141.0" text="Tilføj elev til Klasse">
+      <JFXButton fx:id="addStudentToGroup" alignment="TOP_LEFT" layoutX="441.0" layoutY="194.0" onAction="#addStudentToGroupBtn" prefHeight="27.0" prefWidth="141.0" text="Tilføj elev til en Gruppe">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
@@ -65,7 +65,7 @@
             <DropShadow height="9.3" radius="5.32" width="13.98" />
          </effect>
          <children>
-            <Label layoutX="68.0" layoutY="18.0" text="Klasser">
+            <Label layoutX="68.0" layoutY="18.0" text="Gruppe">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -84,14 +84,14 @@
             </Label>
          </children>
       </Pane>
-      <JFXButton fx:id="deleteStudentInClass" layoutX="819.0" layoutY="672.0" onAction="#deleteStudentInClassBtn" prefHeight="34.0" prefWidth="270.0" text="Fjen Student fra Klasse">
+      <JFXButton fx:id="deleteStudentInGroup" layoutX="819.0" layoutY="672.0" onAction="#deleteStudentInGroupsBtn" prefHeight="34.0" prefWidth="270.0" text="Fjen Student fra Gruppe">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
       <Pane layoutX="-4.0" prefHeight="720.0" prefWidth="199.0" style="-fx-background-color: #D4D3BE;">
          <children>
-            <Text fill="WHITE" layoutX="11.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klasse&#10;Organisering" textAlignment="CENTER">
+            <Text fill="WHITE" layoutX="11.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gruppe&#10;Organisering" textAlignment="CENTER">
                <font>
                   <Font size="32.0" />
                </font>
@@ -138,7 +138,7 @@
             </FontAwesomeIconView>
          </children>
       </Pane>
-      <JFXButton fx:id="deleteAClass" alignment="TOP_LEFT" layoutX="441.0" layoutY="230.0" onAction="#deleteAClassBtn" prefHeight="27.0" prefWidth="141.0" text="Slet en Klasse">
+      <JFXButton fx:id="deleteAClass" alignment="TOP_LEFT" layoutX="441.0" layoutY="230.0" onAction="#deleteAGroupBtn" prefHeight="27.0" prefWidth="141.0" text="Slet en Gruppe">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

@@ -1,6 +1,5 @@
 package DAL.db.Teacher;
 
-import BE.SchoolClass;
 import BE.Student;
 import DAL.db.DatabaseConnector;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
@@ -76,7 +75,7 @@ public class StudentDAO {
      * @throws SQLServerException
      */
     public void removeStudent(Student student) {
-        String sql1 = "DELETE FROM ClassStudents WHERE StudentID = (?);";
+        String sql1 = "DELETE FROM GroupStudents WHERE StudentID = (?);";
         String sql2 = "DELETE FROM StudentTable WHERE StudentID = (?);";
 
         try (Connection connection = DC.getConnection()) {

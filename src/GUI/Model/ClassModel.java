@@ -1,6 +1,6 @@
 package GUI.Model;
 
-import BE.SchoolClass;
+import BE.SchoolGroups;
 import BLL.ClassManger;
 import DAL.db.Teacher.ClassDAO;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
@@ -13,7 +13,7 @@ import java.sql.SQLException;
 public class ClassModel {
     ClassDAO classDAO = new ClassDAO();
 
-    private ObservableList<SchoolClass> classList = FXCollections.observableArrayList();
+    private ObservableList<SchoolGroups> classList = FXCollections.observableArrayList();
 
     private ClassManger classManger;
 
@@ -29,7 +29,7 @@ public class ClassModel {
      * Gets the list of getAllClasses using the getAllClasses method in classManager.
      * @return a list of getAllClasses
      */
-    public ObservableList<SchoolClass> getAllClasses() {
+    public ObservableList<SchoolGroups> getAllClasses() {
         classList = classManger.getAllClasses();
         return classList;
     }
@@ -47,7 +47,7 @@ public class ClassModel {
      * Gets the deleteAClass selectedClass using deleteAClass from classManger
      * @param selectedClass
      */
-    public void deleteAClass(SchoolClass selectedClass) {
+    public void deleteAClass(SchoolGroups selectedClass) {
         classList.remove(selectedClass);
         classManger.deleteAClass(selectedClass);
     }

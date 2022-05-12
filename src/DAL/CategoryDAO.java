@@ -1,14 +1,10 @@
 package DAL;
 
-import BE.Login;
-import BE.SchoolClass;
 import DAL.db.DatabaseConnector;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.io.IOException;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class CategoryDAO {
 
