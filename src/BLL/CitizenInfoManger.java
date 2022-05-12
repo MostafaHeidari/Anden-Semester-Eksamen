@@ -32,4 +32,6 @@ public class CitizenInfoManger {
         }
         return citizensObs;
     }
+
+
 }
