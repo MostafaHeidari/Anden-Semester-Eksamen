@@ -1,8 +1,10 @@
 package GUI.Controller.Teacher;
 
 import BE.Student;
+import DAL.crypto.BCrypt;
 import GUI.Controller.Universal.NotFilledTxtFieldController;
 import GUI.Controller.Universal.SimpleDialogController;
+import GUI.Model.LoginModel;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -11,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -27,6 +30,9 @@ import java.util.ResourceBundle;
 public class CreateStudentController implements Initializable {
 
     public StudentModel studentModel;
+
+    private BCrypt bCrypt = new BCrypt();
+
 
 
     private EditStudentController editStudentController;
@@ -50,9 +56,7 @@ public class CreateStudentController implements Initializable {
     @FXML
     private TextField txtLastnameField;
     @FXML
-    private TextField txtEmailField;
-    @FXML
-    private TextField txtAgeField;
+    public PasswordField passwordTxt;
     @FXML
     private TextField txtUserField;
 
@@ -103,7 +107,7 @@ public class CreateStudentController implements Initializable {
      * Creating a student with the OpretElevActionButton method
      */
     public void CreateStudentActionButton(ActionEvent actionEvent) throws IOException, SQLException {
-        if (txtNameField.getText() == "" || txtLastnameField.getText() == "" || txtEmailField.getText() == "" || txtAgeField.getText() == ""){
+        if (txtNameField.getText() == "" || txtLastnameField.getText() == "" || passwordTxt.getText() == "" || txtUserField.getText() == ""){
             Popup popup = new Popup();
             NotFilledTxtFieldController controller = new NotFilledTxtFieldController();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/NotFilledTxtField.fxml"));
@@ -111,12 +115,35 @@ public class CreateStudentController implements Initializable {
             popup.getContent().add((Parent)loader.load());
         }
         else {
+
             String studentName = txtNameField.getText();
             String studentLastname = txtLastnameField.getText();
-            String StudentAccount = txtUserField.getText();
+            String studentAccount = txtUserField.getText();
+            
+            /** Randomly generated salt
+            / gensalt's log_rounds parameter determines the complexity
+             / the work factor is 2**log_rounds, and the default is 10
+            */
+            String salt = bCrypt.gensalt(10);
 
-            uploadStudentInfo(studentName, studentLastname,StudentAccount);
+
+            /** Hash a password for the first time
+            / Store this value in DB. Salt is included, so no need for separate salt column in DB
+             */
+            String hashedPassword = BCrypt.hashpw(passwordTxt.getText(),salt);
+            String studentUsername = txtUserField.getText();
+
+
+            uploadLogin(studentUsername,hashedPassword);
+            uploadStudentInfo(studentName, studentLastname,studentAccount);
         }
+    }
+
+
+    private void uploadLogin(String studentUsername, String hashedPassword) throws IOException, SQLException {
+        LoginModel loginModel = new LoginModel();
+
+        loginModel.uploadLogin(studentUsername,hashedPassword);
     }
 
     /**
@@ -129,9 +156,7 @@ public class CreateStudentController implements Initializable {
 
         txtNameField.clear();
         txtLastnameField.clear();
-        txtEmailField.clear();
-        txtAgeField.clear();
-
+        passwordTxt.clear();
         txtUserField.clear();
 
 
@@ -154,11 +179,11 @@ public class CreateStudentController implements Initializable {
     }
 
     /**
-     * Goes to the CreateStudent view
+     * Goes to the TeacherGroupAndStudents view
      */
-    public void BtnTilbageOpretStudentAction(ActionEvent actionEvent) throws IOException {
+    public void btnBackGroups(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) BtnCreateStudent.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherGroupAndStudents.fxml"));
         Scene scene = new Scene(root);
         switcher.setScene(scene);
     }

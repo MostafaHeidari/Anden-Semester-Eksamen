@@ -76,7 +76,7 @@ public class LoginController {
     }
 
     /**
-     * See what key is pressed
+     * See what key is pressed and presse login Btn on The enter key
      * @param keyEvent
      * @throws IOException
      * @throws SQLServerException

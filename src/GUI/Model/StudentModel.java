@@ -35,10 +35,9 @@ public class StudentModel {
     }
 
     /**
-     * Gets the uploadStudentinfo studentNavn, studentEfternavn, studentEmail, studentAlder and userName using uploadStudentinfo from studentManager
+     * Gets the uploadStudentinfo studentNavn, studentEfternavn and userName using uploadStudentinfo from studentManager
      * @param studentNavn
      * @param studentEfternavn
-
      * @param userName
      * @throws SQLServerException
      */

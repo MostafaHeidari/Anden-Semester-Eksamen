@@ -1,14 +1,12 @@
 package DAL;
 
 import BE.Login;
+import BE.Student;
 import DAL.db.DatabaseConnector;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class LoginDAO {
 
@@ -47,6 +45,30 @@ public class LoginDAO {
             System.out.println("Word");
         }
         System.out.println("error");
+        return null;
+    }
+
+    public Login uploadLogin(String studentUsername, String hashedPassword) throws SQLException {
+        Connection connection = connector.getConnection();
+
+        String sql = "INSERT INTO Login (Username,Password,Usertype) VALUES (?,?,?);";
+
+        PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+
+        ps.setString(1, studentUsername);
+        ps.setString(2, hashedPassword);
+        ps.setString(3, "Student");
+
+        int affectedRows = ps.executeUpdate();
+        if (affectedRows == 1) {
+            ResultSet rs = ps.getGeneratedKeys();
+            if (rs.next()) {
+                int loginId = rs.getInt(1);
+                Login LoginCord = new Login(loginId, studentUsername, hashedPassword,"Student");
+                return LoginCord;
+            }
+
+        }
         return null;
     }
 }
