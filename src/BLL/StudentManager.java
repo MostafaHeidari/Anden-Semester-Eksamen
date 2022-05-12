@@ -78,7 +78,7 @@ public class StudentManager {
         ObservableList<Student> studentsObs = FXCollections.observableArrayList();
 
         try {
-            studentsObs.addAll(studentInClassesDAO.getAllStudentsInClass(classId));
+            studentsObs.addAll(studentInClassesDAO.getAllStudentsInGroups(classId));
         } catch (Exception e) {
             e.printStackTrace();
         }
