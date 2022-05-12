@@ -38,8 +38,15 @@ public class CitizenInfoDAO {
         Statement statement = con.createStatement();
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) { // Creates and adds song objects into an array list
-            CitizenInfo citizenInfoCord = new CitizenInfo(rs.getInt("PatientID"), rs.getString("PatientName"), rs.getString("PatientLastName"),
-                    rs.getString("PatientAge"));
+            CitizenInfo citizenInfoCord = new CitizenInfo(
+                    rs.getInt("PatientID"),
+                    rs.getString("PatientName"),
+                    rs.getString("PatientLastName"),
+                    rs.getString("PatientAge"),
+                    rs.getInt("PatientPhone"),
+                    rs.getString("PatientEmail"),
+                    rs.getBoolean("PatientSex"),
+                    rs.getString("PatientGenInfo"));
             allCitizenInfos.add(citizenInfoCord);
         }
         return allCitizenInfos;
