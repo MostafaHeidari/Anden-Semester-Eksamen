@@ -26,25 +26,25 @@ public class GroupModel {
     }
 
     /**
-     * Gets the list of getAllClasses using the getAllClasses method in classManager.
-     * @return a list of getAllClasses
+     * Gets the list of getAllGroups using the getAllGroups method in GroupManger.
+     * @return a list of getAllGroups
      */
-    public ObservableList<SchoolGroups> getAllClasses() {
-        classList = groupManger.getAllClasses();
+    public ObservableList<SchoolGroups> getAllGroups() {
+        classList = groupManger.getAllGroups();
         return classList;
     }
 
     /**
-     * Gets the uploadKlasseInfo className using uploadKlasseInfo from classManger
-     * @param className
+     * Gets the uploadGroupInfo groupName using uploadGroupInfo from GroupManger
+     * @param groupName
      * @throws SQLServerException
      */
-    public void uploadKlasseInfo(String className) throws SQLException {
-        classList.add(groupManger.uploadClassInfo(className));
+    public void uploadGroupInfo(String groupName) throws SQLException {
+        classList.add(groupManger.uploadGroupInfo(groupName));
     }
 
     /**
-     * Gets the deleteAClass selectedGroup using deleteAClass from classManger
+     * Gets the deleteAGroup selectedGroup using deleteAGroup from GroupManger
      * @param selectedGroup
      */
     public void deleteAGroup(SchoolGroups selectedGroup) {

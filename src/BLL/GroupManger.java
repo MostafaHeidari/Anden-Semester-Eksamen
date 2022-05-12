@@ -20,23 +20,23 @@ public class GroupManger {
     }
 
     /**
-     * Gets the SchoolClass className using SchoolClass from ClassDAO
-     * @param className
+     * Gets the SchoolGroups groupName using SchoolGroups from GroupDAO
+     * @param groupName
      * @return
      * @throws SQLServerException
      */
-    public SchoolGroups uploadClassInfo(String className) throws SQLException {
-        return (groupDAO.uploadClassInfo(className));
+    public SchoolGroups uploadGroupInfo(String groupName) throws SQLException {
+        return (groupDAO.uploadGroupInfo(groupName));
     }
 
     /**
-     * Gets the list of getAllClasses using the getAllClasses method in classDAO.
-     * @return a list of getAllClasses
+     * Gets the list of getAllGroups using the getAllGroups method in GroupDAO.
+     * @return a list of getAllGroups
      */
-    public ObservableList<SchoolGroups> getAllClasses() {
+    public ObservableList<SchoolGroups> getAllGroups() {
         ObservableList<SchoolGroups> classesObs = FXCollections.observableArrayList();
         try {
-            classesObs.addAll(groupDAO.getAllClasses());
+            classesObs.addAll(groupDAO.getAllGroups());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -44,7 +44,7 @@ public class GroupManger {
     }
 
     /**
-     * Gets the deleteAClass, selectedGroup using deleteAClass from classDAO
+     * Gets the deleteAGroup, selectedGroup using deleteAGroup from GroupDAO
      * @param selectedGroup
      */
     public void deleteAGroup(SchoolGroups selectedGroup) {

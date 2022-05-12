@@ -23,12 +23,12 @@ public class GroupDAO {
     }
 
     /**
-     * this method gets a uploadClassInfo from the database
+     * this method gets a uploadGroupInfo from the database
      * @param groupName
      * @return
      * @throws SQLServerException
      */
-    public SchoolGroups uploadClassInfo(String groupName) throws SQLException {
+    public SchoolGroups uploadGroupInfo(String groupName) throws SQLException {
         Connection connection = DC.getConnection();
 
         String sql = "INSERT INTO GroupTable(GroupName) VALUES (?);";
@@ -39,18 +39,18 @@ public class GroupDAO {
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
                 int groupId = rs.getInt(1);
-                SchoolGroups classCord = new SchoolGroups(groupId, groupName);
-                return classCord;
+                SchoolGroups groupCord = new SchoolGroups(groupId, groupName);
+                return groupCord;
             }
         }
         return null;
     }
 
     /**
-     * This method gets a list of SchoolClass with getAllClasses from the database
-     * @return allClasses from database
+     * This method gets a list of SchoolGroup with getAllGroups from the database
+     * @return allGroups from database
      */
-    public List<SchoolGroups> getAllClasses() throws SQLException {
+    public List<SchoolGroups> getAllGroups() throws SQLException {
         Connection con = DC.getConnection();
 
         List<SchoolGroups>  allGroups= new ArrayList<>();
@@ -59,7 +59,7 @@ public class GroupDAO {
         String sql = "SELECT * FROM GroupTable";
         Statement statement = con.createStatement();
         ResultSet rs = statement.executeQuery(sql);
-        while (rs.next()) { // Creates and adds classes objects into an array list
+        while (rs.next()) { // Creates and adds groups objects into an array list
             SchoolGroups groupCord = new SchoolGroups(rs.getInt("GroupID"), rs.getString("GroupName"));
             allGroups.add(groupCord);
         }
@@ -68,7 +68,7 @@ public class GroupDAO {
     }
 
     /**
-     * this method gets a deleteAClass from the database
+     * this method gets a deleteAGroup from the database
      * @param schoolGroup
      * @return
      */

@@ -94,7 +94,7 @@ public class TeacherGroupAndStudentsController implements Initializable {
             tvClassInformation.getItems().clear();
 
 
-            tvClassInformation.setItems(groupModel.getAllClasses());
+            tvClassInformation.setItems(groupModel.getAllGroups());
         });
         tvClassInformation.setOnMouseClicked((MouseEvent event) -> {
             setSelectedItems();
@@ -156,7 +156,7 @@ public class TeacherGroupAndStudentsController implements Initializable {
         tcClassName.setCellValueFactory(new PropertyValueFactory<>("groupName"));
 
 
-        tvClassInformation.setItems(groupModel.getAllClasses());
+        tvClassInformation.setItems(groupModel.getAllGroups());
         if(tvClassInformation.getItems().size() > 0){ //Set den valgte til den første i listen, hvis der er nogen
             selectedGroup = (SchoolGroups) tvClassInformation.getItems().get(0);
         }

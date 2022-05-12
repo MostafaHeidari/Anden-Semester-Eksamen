@@ -75,7 +75,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </FontAwesomeIconView>
-                  <JFXButton fx:id="backClasses" layoutX="14.0" layoutY="480.0" onAction="#btnBackClasses" prefHeight="40.0" prefWidth="170.0" stylesheets="@../CSS/CreateStudent.css" text="Klasser">
+                  <JFXButton fx:id="backGroups" layoutX="14.0" layoutY="480.0" onAction="#btnBackGroups" prefHeight="40.0" prefWidth="170.0" stylesheets="@../CSS/CreateStudent.css" text="Klasser">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>

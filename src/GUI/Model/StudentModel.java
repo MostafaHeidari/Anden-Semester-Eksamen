@@ -111,6 +111,6 @@ public class StudentModel {
     public void deleteStudentInGroups(SchoolGroups selectedClass, Student selectedStudentInClass) throws SQLException {
         studentsInClassManger.deleteStudentInGroups(selectedClass,selectedStudentInClass);
         studentInClassesList.remove(selectedStudentInClass);
-        classModel.uploadKlasseInfo(String.valueOf(selectedClass));
+        classModel.uploadGroupInfo(String.valueOf(selectedClass));
     }
 }

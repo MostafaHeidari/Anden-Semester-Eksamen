@@ -40,7 +40,7 @@ public class CreateGroupController {
      * uploads the classinfo
      */
     private void uploadClassInfo(String className) throws SQLException, IOException {
-        classModelInfo.uploadKlasseInfo(className);
+        classModelInfo.uploadGroupInfo(className);
     }
 
     /**
