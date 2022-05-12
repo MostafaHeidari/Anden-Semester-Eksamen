@@ -63,11 +63,11 @@ public class StudentInClassesDAO {
             while (rs.next()) {
                 String name = rs.getString("NameStudent");
                 String lastName = rs.getString("LastNameStudent");
-
                 String username = rs.getString("UserName");
                 int id = rs.getInt("StudentID");
 
                 allStudentsInClasses.add(new Student(id, name, lastName, username));
+
             }
             return allStudentsInClasses;
         } catch (SQLServerException throwables) {
