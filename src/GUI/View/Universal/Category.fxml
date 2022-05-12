@@ -16,13 +16,13 @@
             <Font size="31.0" />
          </font>
       </Text>
-      <HBox alignment="CENTER" layoutY="56.0" prefHeight="520.0" prefWidth="1081.0">
+      <HBox alignment="CENTER" layoutY="56.0" prefHeight="520.0" prefWidth="1100.0">
          <children>
-            <VBox alignment="CENTER" prefHeight="520.0" prefWidth="232.0" style="-fx-border-width: 2;">
+            <VBox alignment="CENTER" prefHeight="520.0" prefWidth="324.0" style="-fx-border-width: 2;">
                <children>
                   <HBox fx:id="HBox" prefHeight="153.0" prefWidth="350.0" style="-fx-border-width: 2;">
                      <children>
-                        <VBox prefHeight="134.0" prefWidth="232.0" style="-fx-border-color: grey; -fx-background-color: white;" styleClass="Category">
+                        <VBox prefHeight="115.0" prefWidth="447.0" style="-fx-border-color: grey; -fx-background-color: white;" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Funktionsniveau">
                                  <font>
@@ -57,7 +57,7 @@
                   </HBox>
                   <HBox prefHeight="153.0" prefWidth="204.0" style="-fx-border-width: 2;">
                      <children>
-                        <VBox prefHeight="59.0" prefWidth="232.0" style="-fx-background-color: white; -fx-border-color: grey; -fx-min-height: 10;" styleClass="Category">
+                        <VBox prefHeight="115.0" prefWidth="491.0" style="-fx-background-color: white; -fx-border-color: grey; -fx-min-height: 10;" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Bevægeapparat">
                                  <font>
@@ -81,9 +81,9 @@
                   </HBox>
                   <HBox prefHeight="96.0" prefWidth="299.0" style="-fx-border-width: 2;">
                      <children>
-                        <VBox prefHeight="59.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                        <VBox prefHeight="61.0" prefWidth="411.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Seksualitet" styleClass="CategoryHealth">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Seksualitet">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
