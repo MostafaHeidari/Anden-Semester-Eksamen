@@ -54,15 +54,11 @@ public class EditStudentController {
     public void SaveInformationActionButton(ActionEvent actionEvent) throws Exception {
         String updateStudentName = txtnameEditStudentField.getText();
         String updateStudentEfterNavn = txtLastnameEditStudentField.getText();
-        String updateStudentEmail = txtEmailEditStudentField.getText();
-        String updateStudentAlder = txtAgeEditStudentFiled.getText();
         String updateStudentUser = txtUserNameEditField.getText();
 
         this.selectedStudent.setStudentName(updateStudentName);
         this.selectedStudent.setLastName(updateStudentEfterNavn);
-        this.selectedStudent.setEmail(updateStudentEmail);
         this.selectedStudent.setUserName(updateStudentUser);
-        this.selectedStudent.setAge(updateStudentAlder);
 
         studentModel.editStudent(this.selectedStudent);
 
@@ -79,9 +75,8 @@ public class EditStudentController {
     public void setSelectedStudent(Student student) {
         txtnameEditStudentField.setText(student.getStudentName());
         txtLastnameEditStudentField.setText(student.getLastName());
-        txtEmailEditStudentField.setText(student.getEmail());
         txtUserNameEditField.setText(student.getUserName());
-        txtAgeEditStudentFiled.setText(student.getAge());
+
 
         this.selectedStudent = student;
     }
