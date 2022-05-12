@@ -63,13 +63,10 @@ public class StudentInClassesDAO {
             while (rs.next()) {
                 String name = rs.getString("NameStudent");
                 String lastName = rs.getString("LastNameStudent");
-                //String email = rs.getString("EmailStudent");
-                //String age = rs.getString("StudentAge");
                 String username = rs.getString("UserName");
                 int id = rs.getInt("StudentID");
 
                 allStudentsInClasses.add(new Student(id, name, lastName, username));
-                //allStudentsInClasses.add(new Student(id, name, lastName, email, age, username));
 
             }
             return allStudentsInClasses;

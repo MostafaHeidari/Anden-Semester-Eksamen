@@ -79,9 +79,7 @@ public class EditStudentController {
     public void setSelectedStudent(Student student) {
         txtnameEditStudentField.setText(student.getStudentName());
         txtLastnameEditStudentField.setText(student.getLastName());
-        //txtEmailEditStudentField.setText(student.getEmail());
         txtUserNameEditField.setText(student.getUserName());
-        //txtAgeEditStudentFiled.setText(student.getAge());
 
         this.selectedStudent = student;
     }
