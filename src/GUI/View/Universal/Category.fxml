@@ -83,16 +83,19 @@
                      <children>
                         <VBox prefHeight="59.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Seksualitet">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Seksualitet" styleClass="CategoryHealth">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="seksualitet_1" onMouseClicked="#seksualitet_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med seksualitet">
+                              <Label fx:id="seksualitet_1" onMouseClicked="#seksualitet_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med seksualitet">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
                            </children>
                         </VBox>
                      </children>
