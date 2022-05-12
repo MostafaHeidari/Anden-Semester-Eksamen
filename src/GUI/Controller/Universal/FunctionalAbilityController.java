@@ -143,6 +143,29 @@ public class FunctionalAbilityController implements Initializable {
         deselectOthers(actionEvent, row2);
     }
 
+
+    /**
+     * Borgerens mening om tilstand knapper
+     * @param actionEvent
+     */
+    public void checked31(ActionEvent actionEvent) { //TODO
+    }
+
+    public void checked32(ActionEvent actionEvent) {
+    }
+
+    public void checked33(ActionEvent actionEvent) {
+    }
+
+    public void checked34(ActionEvent actionEvent) {
+    }
+
+    public void checked35(ActionEvent actionEvent) {
+    }
+
+    public void checked36(ActionEvent actionEvent) {
+    }
+
     /**
      * saves functional ability
      * @param actionEvent
@@ -193,4 +216,5 @@ public class FunctionalAbilityController implements Initializable {
         //array of names for the checkboxes
         stringResult = new String[]{"Ingen/ubetydelige begrænsninger", "Lette begrænsninger", "Moderate begrænsninger", "Svære begrænsninger", "Totale begrænsninger", "Ikke relevant"};
     }
+
 }
