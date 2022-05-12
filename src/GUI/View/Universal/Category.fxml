@@ -9,27 +9,27 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="625.0" prefWidth="900.0" style="-fx-background-color: #BBE5E8;" stylesheets="@../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.CategoryController">
+<AnchorPane prefHeight="750.0" prefWidth="900.0" style="-fx-background-color: #BBE5E8;" stylesheets="@../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.CategoryController">
    <children>
       <Text layoutX="348.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Helbredstilstande">
          <font>
             <Font size="31.0" />
          </font>
       </Text>
-      <HBox alignment="CENTER" layoutY="56.0" prefHeight="520.0" prefWidth="900.0">
+      <HBox alignment="CENTER" layoutY="38.0" prefHeight="703.0" prefWidth="1100.0">
          <children>
-            <VBox alignment="CENTER" prefHeight="520.0" prefWidth="0.0" style="-fx-border-width: 2;">
+            <VBox alignment="CENTER" prefHeight="520.0" prefWidth="324.0" style="-fx-border-width: 2;">
                <children>
                   <HBox fx:id="HBox" prefHeight="153.0" prefWidth="350.0" style="-fx-border-width: 2;">
                      <children>
-                        <VBox prefHeight="69.0" prefWidth="267.0" style="-fx-border-color: grey; -fx-background-color: white;" styleClass="Category">
+                        <VBox prefHeight="153.0" prefWidth="324.0" style="-fx-border-color: grey; -fx-background-color: white;" styleClass="Category">
                            <children>
-                              <Text styleClass="CategoryHealth" strokeType="OUTSIDE" strokeWidth="0.0" text="Funktionsniveau">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Funktionsniveau" underline="true">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
                                  <VBox.margin>
-                                    <Insets />
+                                    <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
                               <Label fx:id="funktionsniveau_1" onMouseClicked="#funktionsniveau_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med personlig pleje">
@@ -37,7 +37,7 @@
                                     <Font size="14.0" />
                                  </font>
                                  <VBox.margin>
-                                    <Insets bottom="5.0" />
+                                    <Insets bottom="10.0" />
                                  </VBox.margin>
                               </Label>
                               <Label fx:id="funktionsniveau_2" onMouseClicked="#funktionsniveau_2" styleClass="CategoryHealthConditions" text="Problemer med daglige aktiviteter">
@@ -45,7 +45,7 @@
                                     <Font size="14.0" />
                                  </font>
                                  <VBox.margin>
-                                    <Insets />
+                                    <Insets bottom="10.0" />
                                  </VBox.margin>
                               </Label>
                            </children>
@@ -57,92 +57,134 @@
                   </HBox>
                   <HBox prefHeight="153.0" prefWidth="204.0" style="-fx-border-width: 2;">
                      <children>
-                        <VBox style="-fx-background-color: white; -fx-border-color: grey; -fx-min-height: 10;" styleClass="Category">
+                        <VBox prefHeight="91.0" prefWidth="324.0" style="-fx-background-color: white; -fx-border-color: grey; -fx-min-height: 10;" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bevægeapparat">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Bevægeapparat" underline="true">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
                               </Text>
-                              <Text fx:id="bevægeapparat_1" onMouseClicked="#bevægeapparat_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med mobilitet og bevægelse">
+                              <Label fx:id="bevægeapparat_1" onMouseClicked="#bevægeapparat_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med mobilitet og bevægelse">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
                            </children>
                         </VBox>
                      </children>
                   </HBox>
                   <HBox prefHeight="96.0" prefWidth="299.0" style="-fx-border-width: 2;">
                      <children>
-                        <VBox prefHeight="59.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                        <VBox prefHeight="61.0" prefWidth="411.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Seksualitet">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Seksualitet" underline="true">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
                               </Text>
-                              <Text fx:id="seksualitet_1" onMouseClicked="#seksualitet_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med seksualitet">
+                              <Label fx:id="seksualitet_1" onMouseClicked="#seksualitet_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med seksualitet">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
                            </children>
                         </VBox>
                      </children>
                   </HBox>
-                  <VBox style="-fx-background-color: white; -fx-min-height: 230; -fx-border-color: grey; -fx-min-width: 10;" styleClass="Category">
+                  <VBox prefHeight="509.0" prefWidth="324.0" style="-fx-background-color: white; -fx-min-height: 230; -fx-border-color: grey; -fx-min-width: 10;" styleClass="Category">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hud og slimhinder">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Hud og slimhinder" underline="true">
                            <font>
                               <Font size="20.0" />
                            </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
                         </Text>
-                        <Text fx:id="hudogslimhinder_1" onMouseClicked="#hudogslimhinder_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med kirurgisk sår">
+                        <Label fx:id="hudogslimhinder_1" onMouseClicked="#hudogslimhinder_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med kirurgisk sår">
                            <font>
                               <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="hudogslimhinder_2" onMouseClicked="#hudogslimhinder_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med diabetisk sår">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="hudogslimhinder_2" onMouseClicked="#hudogslimhinder_2" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med diabetisk sår">
                            <font>
                               <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="hudogslimhinder_3" onMouseClicked="#hudogslimhinder_3" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med cancersår">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="hudogslimhinder_3" onMouseClicked="#hudogslimhinder_3" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med cancersår">
                            <font>
                               <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="hudogslimhinder_4" onMouseClicked="#hudogslimhinder_4" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med tryksår">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="hudogslimhinder_4" onMouseClicked="#hudogslimhinder_4" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med tryksår">
                            <font>
                               <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="hudogslimhinder_5" onMouseClicked="#hudogslimhinder_5" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med arterielt sår">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="hudogslimhinder_5" onMouseClicked="#hudogslimhinder_5" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med arterielt sår">
                            <font>
                               <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="hudogslimhinder_6" onMouseClicked="#hudogslimhinder_6" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med venøst sår">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="hudogslimhinder_6" onMouseClicked="#hudogslimhinder_6" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med venøst sår">
                            <font>
                               <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="hudogslimhinder_7" onMouseClicked="#hudogslimhinder_7" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med blandingssår">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="hudogslimhinder_7" onMouseClicked="#hudogslimhinder_7" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med blandingssår">
                            <font>
                               <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="hudogslimhinder_8" onMouseClicked="#hudogslimhinder_8" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med traumesår">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="hudogslimhinder_8" onMouseClicked="#hudogslimhinder_8" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med traumesår">
                            <font>
                               <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="hudogslimhinder_9" onMouseClicked="#hudogslimhinder_9" strokeType="OUTSIDE" strokeWidth="0.0" text="Andre problemer med hud og slimhinder">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="hudogslimhinder_9" onMouseClicked="#hudogslimhinder_9" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Andre problemer med hud og slimhinder">
                            <font>
                               <Font size="14.0" />
                            </font>
-                        </Text>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
                      </children>
                   </VBox>
                </children>
@@ -151,7 +193,7 @@
                <children>
                   <HBox fx:id="HBox1" maxHeight="79.0" prefHeight="79.0" prefWidth="227.0">
                      <children>
-                        <VBox minHeight="90.0" prefHeight="90.0" prefWidth="233.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                        <VBox minHeight="90.0" prefHeight="114.0" prefWidth="233.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Respiration og cirkulation">
                                  <font>
@@ -172,7 +214,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <VBox prefHeight="156.0" prefWidth="227.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                  <VBox prefHeight="326.0" prefWidth="232.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ernæring">
                            <font>
@@ -208,7 +250,7 @@
                   </VBox>
                   <HBox prefHeight="153.0" prefWidth="511.0">
                      <children>
-                        <VBox maxHeight="226.0" prefHeight="226.0" prefWidth="288.0" style="-fx-min-height: 200px; -fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                        <VBox maxHeight="230.0" prefHeight="210.0" prefWidth="232.0" style="-fx-min-height: 200px; -fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Smerter og sanseindtryk">
                                  <font>
@@ -261,7 +303,7 @@
                   </HBox>
                   <HBox maxHeight="99.0" prefHeight="99.0" prefWidth="227.0">
                      <children>
-                        <VBox minHeight="75.0" prefHeight="90.0" prefWidth="264.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                        <VBox minHeight="75.0" prefHeight="106.0" prefWidth="232.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Søvn og hvile">
                                  <font>
@@ -288,7 +330,7 @@
                <children>
                   <HBox prefHeight="153.0" prefWidth="511.0">
                      <children>
-                        <VBox minHeight="162.0" prefHeight="162.0" prefWidth="318.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                        <VBox minHeight="162.0" prefHeight="184.0" prefWidth="252.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Viden og udvikling">
                                  <font>
@@ -316,7 +358,7 @@
                   </HBox>
                   <HBox prefHeight="89.0" prefWidth="257.0">
                      <children>
-                        <VBox maxHeight="74.0" minHeight="6.0" prefHeight="74.0" prefWidth="327.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                        <VBox maxHeight="104.0" minHeight="6.0" prefHeight="104.0" prefWidth="252.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kommunikation">
                                  <font>
@@ -365,7 +407,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <VBox prefHeight="194.0" prefWidth="257.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                  <VBox prefHeight="311.0" prefWidth="252.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Udskillelse af affaldsstoffer">
                            <font>
@@ -403,7 +445,7 @@
             </VBox>
          </children>
       </HBox>
-      <JFXButton fx:id="btnCategoryBack" layoutX="423.0" layoutY="585.0" onAction="#CategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
+      <JFXButton fx:id="btnCategoryBack" layoutX="612.0" layoutY="1.0" onAction="#CategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
          <font>
             <Font size="15.0" />
          </font>
