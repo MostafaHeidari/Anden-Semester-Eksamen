@@ -14,7 +14,7 @@ public class TeacherController {
     @FXML
     public JFXButton citizentButton;
     @FXML
-    private JFXButton classBtn;
+    private JFXButton groupBtn;
     @FXML
     private JFXButton BtnCreateStudent1;
     @FXML
@@ -25,9 +25,9 @@ public class TeacherController {
     /**
      * Goes to the TeacherKlasseAndStudents view
      */
-    public void classBtn(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) classBtn.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
+    public void groupBtn(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) groupBtn.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherGroupAndStudents.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Classe Manger");
         switcher.setScene(scene);

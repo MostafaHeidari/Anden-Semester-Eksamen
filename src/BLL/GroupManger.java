@@ -1,7 +1,7 @@
 package BLL;
 
 import BE.SchoolGroups;
-import DAL.db.Teacher.ClassDAO;
+import DAL.db.Teacher.GroupDAO;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,14 +9,14 @@ import javafx.collections.ObservableList;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class ClassManger {
-    ClassDAO classDAO = new ClassDAO();
+public class GroupManger {
+    GroupDAO groupDAO = new GroupDAO();
 
     /**
      * Constructor
      * @throws IOException
      */
-    public ClassManger() throws IOException {
+    public GroupManger() throws IOException {
     }
 
     /**
@@ -26,7 +26,7 @@ public class ClassManger {
      * @throws SQLServerException
      */
     public SchoolGroups uploadClassInfo(String className) throws SQLException {
-        return (classDAO.uploadClassInfo(className));
+        return (groupDAO.uploadClassInfo(className));
     }
 
     /**
@@ -36,7 +36,7 @@ public class ClassManger {
     public ObservableList<SchoolGroups> getAllClasses() {
         ObservableList<SchoolGroups> classesObs = FXCollections.observableArrayList();
         try {
-            classesObs.addAll(classDAO.getAllClasses());
+            classesObs.addAll(groupDAO.getAllClasses());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -44,10 +44,10 @@ public class ClassManger {
     }
 
     /**
-     * Gets the deleteAClass, selectedClass using deleteAClass from classDAO
-     * @param selectedClass
+     * Gets the deleteAClass, selectedGroup using deleteAClass from classDAO
+     * @param selectedGroup
      */
-    public void deleteAClass(SchoolGroups selectedClass) {
-        classDAO.deleteAClass(selectedClass);
+    public void deleteAGroup(SchoolGroups selectedGroup) {
+        groupDAO.deleteAGroup(selectedGroup);
     }
 }

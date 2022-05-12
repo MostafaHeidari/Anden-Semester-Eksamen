@@ -82,7 +82,7 @@ public class CasesController implements Initializable {
      */
     public void backClassBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) backClass.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherGroupAndStudents.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Classe Manger");
         switcher.setScene(scene);

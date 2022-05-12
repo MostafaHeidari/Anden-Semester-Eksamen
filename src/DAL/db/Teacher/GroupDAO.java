@@ -9,7 +9,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClassDAO {
+public class GroupDAO {
 
     private DatabaseConnector DC;
 
@@ -17,7 +17,7 @@ public class ClassDAO {
      * Constructor
      * @throws IOException
      */
-    public ClassDAO() throws IOException
+    public GroupDAO() throws IOException
     {
         DC = new DatabaseConnector();
     }
@@ -69,11 +69,11 @@ public class ClassDAO {
 
     /**
      * this method gets a deleteAClass from the database
-     * @param selectedClass
+     * @param schoolGroup
      * @return
      */
-    public void deleteAClass(SchoolGroups selectedClass) {
-        int pId = selectedClass.getGroupId();
+    public void deleteAGroup(SchoolGroups schoolGroup) {
+        int pId = schoolGroup.getGroupId();
 
         String sql2 = "DELETE FROM GroupStudents WHERE GroupID = (?);";
         String sql1 = "DELETE FROM GroupTable WHERE GroupID = (?);";

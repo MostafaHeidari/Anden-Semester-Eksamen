@@ -15,7 +15,7 @@ import java.sql.SQLException;
 public class StudentModel {
 
     StudentDAO studentDAO = new StudentDAO();
-    private ClassModel classModel;
+    private GroupModel classModel;
     private StudentsInClassManager studentsInClassManger;
 
     private ObservableList<Student> studentsList = FXCollections.observableArrayList();
@@ -30,7 +30,7 @@ public class StudentModel {
      */
     public StudentModel() throws IOException {
         studentManager = new StudentManager();
-        classModel = new ClassModel();
+        classModel = new GroupModel();
         studentsInClassManger = new StudentsInClassManager();
     }
 
@@ -69,12 +69,12 @@ public class StudentModel {
 
     /**
      * Gets the addStudentToClass selectedClass and selectedStudent using updateCategory from studentManager
-     * @param selectedClass
+     * @param selectedGroup
      * @param selectedStudent
      * @throws SQLServerException
      */
-    public void addStudentToClass(SchoolGroups selectedClass, Student selectedStudent) throws SQLException {
-        studentManager.addStudentToClass(selectedClass,selectedStudent);
+    public void addStudentToGroup(SchoolGroups selectedGroup, Student selectedStudent) throws SQLException {
+        studentManager.addStudentToGroup(selectedGroup,selectedStudent);
         studentInClassesList.add(selectedStudent);
     }
 
@@ -83,8 +83,8 @@ public class StudentModel {
      * Gets the list of setStudentsInClass using the setStudentsInClass method in studentManager.
      * @return a list of setStudentsInClass
      */
-    public ObservableList<Student> setStudentsInClass(int classId){
-        studentsList = studentManager.getAllStudentsByClass(classId);
+    public ObservableList<Student> setStudentsInGroup(int groupId){
+        studentsList = studentManager.getAllStudentsInGroups(groupId);
         return studentsList;
     }
 

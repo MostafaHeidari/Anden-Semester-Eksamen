@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1123.0" stylesheets="@../CSS/TeacherKlassAndStudents.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.TeacherKlasseAndStudentsController">
+<AnchorPane prefHeight="720.0" prefWidth="1123.0" stylesheets="@../CSS/TeacherKlassAndStudents.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.TeacherGroupAndStudentsController">
    <children>
       <Pane layoutX="207.0" layoutY="63.0" prefHeight="56.0" prefWidth="221.0" style="-fx-background-color: #FFFFFF;">
          <effect>
@@ -40,10 +40,10 @@
             <TableColumn fx:id="tcClassName" prefWidth="137.0" text="GruppeNavn" />
          </columns>
       </TableView>
-      <TableView fx:id="tvStudentsInClasses" layoutX="819.0" layoutY="130.0" prefHeight="528.0" prefWidth="270.0">
+      <TableView fx:id="tvStudentsInGroups" layoutX="819.0" layoutY="130.0" prefHeight="528.0" prefWidth="270.0">
          <columns>
-            <TableColumn fx:id="tcStudentNameInClass" prefWidth="101.60003662109375" text="Name" />
-            <TableColumn fx:id="tcLastNameInClass" prefWidth="166.4000244140625" text="Efternavn" />
+            <TableColumn fx:id="tcStudentNameInGroup" prefWidth="101.60003662109375" text="Name" />
+            <TableColumn fx:id="tcLastNameInGroup" prefWidth="166.4000244140625" text="Efternavn" />
          </columns>
       </TableView>
       <JFXButton fx:id="newGroup" layoutX="618.0" layoutY="672.0" onAction="#newGroupBtn" prefHeight="34.0" prefWidth="182.0" text="Ny Gruppe">

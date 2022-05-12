@@ -3,7 +3,7 @@ package BLL;
 import BE.SchoolGroups;
 import BE.Student;
 import DAL.db.Teacher.StudentDAO;
-import DAL.db.Teacher.StudentInClassesDAO;
+import DAL.db.Teacher.StudentInGroupsDAO;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -13,7 +13,7 @@ import java.sql.SQLException;
 
 public class StudentManager {
     StudentDAO studentDAO;
-    StudentInClassesDAO studentInClassesDAO;
+    StudentInGroupsDAO studentInGroupsDAO;
 
     /**
      * Constructor
@@ -21,7 +21,7 @@ public class StudentManager {
      */
     public StudentManager() throws IOException {
         studentDAO = new StudentDAO();
-        studentInClassesDAO = new StudentInClassesDAO();
+        studentInGroupsDAO = new StudentInGroupsDAO();
     }
 
     /**
@@ -52,12 +52,12 @@ public class StudentManager {
 
     /**
      * Gets the addStudentToClass selectedClass and selectedStudent using addStudentToClass from studentDAO
-     * @param selectedClass
+     * @param selectedGroup
      * @param selectedStudent
      * @throws SQLServerException
      */
-    public void addStudentToClass(SchoolGroups selectedClass, Student selectedStudent) throws SQLException {
-        studentInClassesDAO.addStudentToClass(selectedClass, selectedStudent);
+    public void addStudentToGroup(SchoolGroups selectedGroup, Student selectedStudent) throws SQLException {
+        studentInGroupsDAO.addStudentToGroup(selectedGroup, selectedStudent);
     }
 
     /**
@@ -74,11 +74,11 @@ public class StudentManager {
      * Gets the list of getAllStudentsByClass using the getAllStudentsByClass method in studentInClassesDAO.
      * @return a list of studentInClassesDAO
      */
-    public ObservableList<Student> getAllStudentsByClass(int classId) {
+    public ObservableList<Student> getAllStudentsInGroups(int groupId) {
         ObservableList<Student> studentsObs = FXCollections.observableArrayList();
 
         try {
-            studentsObs.addAll(studentInClassesDAO.getAllStudentsInClass(classId));
+            studentsObs.addAll(studentInGroupsDAO.getAllStudentsInGroups(groupId));
         } catch (Exception e) {
             e.printStackTrace();
         }

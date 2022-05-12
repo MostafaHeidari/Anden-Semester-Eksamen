@@ -1,8 +1,8 @@
 package GUI.Model;
 
 import BE.SchoolGroups;
-import BLL.ClassManger;
-import DAL.db.Teacher.ClassDAO;
+import BLL.GroupManger;
+import DAL.db.Teacher.GroupDAO;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,19 +10,19 @@ import javafx.collections.ObservableList;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class ClassModel {
-    ClassDAO classDAO = new ClassDAO();
+public class GroupModel {
+    GroupDAO groupDAO = new GroupDAO();
 
     private ObservableList<SchoolGroups> classList = FXCollections.observableArrayList();
 
-    private ClassManger classManger;
+    private GroupManger groupManger;
 
     /**
      * Constructor
      * @throws IOException
      */
-    public ClassModel() throws IOException {
-        classManger = new ClassManger();
+    public GroupModel() throws IOException {
+        groupManger = new GroupManger();
     }
 
     /**
@@ -30,7 +30,7 @@ public class ClassModel {
      * @return a list of getAllClasses
      */
     public ObservableList<SchoolGroups> getAllClasses() {
-        classList = classManger.getAllClasses();
+        classList = groupManger.getAllClasses();
         return classList;
     }
 
@@ -40,15 +40,15 @@ public class ClassModel {
      * @throws SQLServerException
      */
     public void uploadKlasseInfo(String className) throws SQLException {
-        classList.add(classManger.uploadClassInfo(className));
+        classList.add(groupManger.uploadClassInfo(className));
     }
 
     /**
-     * Gets the deleteAClass selectedClass using deleteAClass from classManger
-     * @param selectedClass
+     * Gets the deleteAClass selectedGroup using deleteAClass from classManger
+     * @param selectedGroup
      */
-    public void deleteAClass(SchoolGroups selectedClass) {
-        classList.remove(selectedClass);
-        classManger.deleteAClass(selectedClass);
+    public void deleteAGroup(SchoolGroups selectedGroup) {
+        classList.remove(selectedGroup);
+        groupManger.deleteAGroup(selectedGroup);
     }
 }

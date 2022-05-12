@@ -1,6 +1,6 @@
 package GUI.Controller.Teacher;
 
-import GUI.Model.ClassModel;
+import GUI.Model.GroupModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -12,18 +12,18 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class CreateClassController {
+public class CreateGroupController {
 
     public JFXButton saveButton;
     public JFXButton backButton;
     public TextField classNameTxt;
-    ClassModel classModelInfo = new ClassModel();
+    GroupModel classModelInfo = new GroupModel();
 
     /**
      * Constructor
      * @throws IOException
      */
-    public CreateClassController() throws IOException {
+    public CreateGroupController() throws IOException {
     }
 
 
@@ -55,7 +55,7 @@ public class CreateClassController {
      */
     private void cancel(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) saveButton.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherGroupAndStudents.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Klassen");
         switcher.setScene(scene);

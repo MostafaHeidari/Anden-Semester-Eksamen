@@ -26,8 +26,6 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
             <TextField fx:id="txtnameEditStudentField" prefHeight="98.0" prefWidth="318.0" promptText="Navn">
@@ -40,13 +38,11 @@
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="txtEmailEditStudentField" prefHeight="31.0" prefWidth="328.0" promptText="E-mail" GridPane.rowIndex="2" />
-            <TextField fx:id="txtUserNameEditField" layoutX="10.0" layoutY="93.0" prefHeight="88.0" prefWidth="318.0" promptText="Brugernavn" GridPane.rowIndex="3">
+            <TextField fx:id="txtUserNameEditField" layoutX="10.0" layoutY="93.0" prefHeight="88.0" prefWidth="318.0" promptText="Brugernavn" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="txtAgeEditStudentFiled" prefHeight="32.0" prefWidth="328.0" promptText="Alder" GridPane.rowIndex="4" />
          </children>
          <effect>
             <InnerShadow height="2.28" radius="1.81" width="6.96" />
@@ -81,11 +77,9 @@
             </Text>
          </children>
       </Pane>
-      <Label alignment="CENTER" layoutX="236.0" layoutY="174.0" prefHeight="18.0" prefWidth="54.0" text="Navn" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="227.0" layoutY="211.0" prefHeight="18.0" prefWidth="63.0" text="Efternavn" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="248.0" prefHeight="18.0" prefWidth="42.0" text="E-mail " />
-      <Label alignment="CENTER" layoutX="220.0" layoutY="286.0" prefHeight="18.0" prefWidth="70.0" text="BrugerNavn" />
-      <Label alignment="CENTER" layoutX="248.0" layoutY="322.0" prefHeight="18.0" prefWidth="42.0" text="Alder" />
+      <Label alignment="CENTER" layoutX="221.0" layoutY="187.0" prefHeight="18.0" prefWidth="54.0" text="Navn:" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="249.0" prefHeight="18.0" prefWidth="63.0" text="Efternavn:" />
+      <Label alignment="CENTER" layoutX="214.0" layoutY="312.0" prefHeight="18.0" prefWidth="70.0" text="BrugerNavn:" />
       <Line endX="148.0" layoutX="34.0" layoutY="100.0" startX="-14.899984359741211" startY="1.52587890625E-5" stroke="WHITE" />
       <Label layoutX="327.0" layoutY="134.0" text="Indtast elevoplysninger" textFill="#2b2121">
          <font>

@@ -49,7 +49,7 @@
 }
 
 /* Button font size and background color*/
-#classBtn,#BtnCreatePatient, #citizentButton, #BtnSlet, #BtnCreateStudent1{
+#groupBtn,#BtnCreatePatient, #citizentButton, #BtnSlet, #BtnCreateStudent1{
      -fx-font-size: 15px;
      -fx-border-color:  #001569;
      -fx-background-color: #15B559;
@@ -72,7 +72,7 @@
 }
 
 
-#classBtn:hover{
+#groupBtn:hover{
      -fx-font-size: 15px;
      -fx-background-color: white;
      -fx-text-fill: #2B2121;

@@ -2,14 +2,14 @@ package BLL;
 
 import BE.SchoolGroups;
 import BE.Student;
-import DAL.db.Teacher.StudentInClassesDAO;
+import DAL.db.Teacher.StudentInGroupsDAO;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
 public class StudentsInClassManager {
-    private StudentInClassesDAO studentInClassesDAO;
+    private StudentInGroupsDAO studentInGroupsDAO;
 
     /**
      * Gets the StudentsInClassManger using StudentsInClassManger from studentInClassesDAO
@@ -17,7 +17,7 @@ public class StudentsInClassManager {
      * @throws SQLServerException
      */
     public StudentsInClassManager() throws IOException {
-        studentInClassesDAO = new StudentInClassesDAO();
+        studentInGroupsDAO = new StudentInGroupsDAO();
     }
 
 
@@ -28,7 +28,7 @@ public class StudentsInClassManager {
      * @throws SQLServerException
      */
     public void deleteStudentInGroups(SchoolGroups selectedClass, Student selectedStudentInClass) throws SQLException {
-        studentInClassesDAO.deleteStudentInGroups(selectedClass,selectedStudentInClass);
+        studentInGroupsDAO.deleteStudentInGroups(selectedClass,selectedStudentInClass);
 
     }
 }

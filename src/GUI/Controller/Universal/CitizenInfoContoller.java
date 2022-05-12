@@ -105,9 +105,9 @@ public class CitizenInfoContoller implements Initializable {
     /**
      * Goes to TeacherKlasseAndStudents view
      */
-    public void backClassBtn(ActionEvent event) throws IOException {
+    public void btnBackGroups(ActionEvent event) throws IOException {
         Stage switcher = (Stage) backStudent.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherGroupAndStudents.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Klassen");
         switcher.setScene(scene);

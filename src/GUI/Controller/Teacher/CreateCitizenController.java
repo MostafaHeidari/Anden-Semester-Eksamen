@@ -21,7 +21,7 @@ public class CreateCitizenController {
      */
     public void btnBackClasses(ActionEvent event) throws IOException {
         Stage switcher = (Stage) BtnBack.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherKlasseAndStudents.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherGroupAndStudents.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Klasse Manager");
         switcher.setScene(scene);

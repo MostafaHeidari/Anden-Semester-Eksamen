@@ -10,7 +10,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentInClassesDAO {
+public class StudentInGroupsDAO {
 
     private DatabaseConnector DC;
 
@@ -18,19 +18,19 @@ public class StudentInClassesDAO {
      * Constructor
      * @throws IOException
      */
-    public StudentInClassesDAO() throws IOException {
+    public StudentInGroupsDAO() throws IOException {
         DC = new DatabaseConnector();
     }
 
     /**
      * his method gets a addStudentToClass from the database
-     * @param selectedClass
+     * @param selectedGroup
      * @param selectedStudent
      * @throws SQLServerException
      */
-    public void addStudentToClass(SchoolGroups selectedClass, Student selectedStudent) throws SQLException {
+    public void addStudentToGroup(SchoolGroups selectedGroup, Student selectedStudent) throws SQLException {
         Connection connection = DC.getConnection();
-        int cId = selectedClass.getGroupId();
+        int cId = selectedGroup.getGroupId();
         int sId = selectedStudent.getStudentId();
 
         String sql = "INSERT INTO ClassStudents (ClassID , StudentID) VALUES ((?), (?)); ";
@@ -55,7 +55,7 @@ public class StudentInClassesDAO {
 
         try (Connection connection = DC.getConnection()) {
 
-            String sql = "SELECT StudentTable.* FROM StudentTable INNER JOIN GroupStudents ON StudentTable.StudentID = GroupStudents.StudentID WHERE GroupStudents.ClassID = (?);";
+            String sql = "SELECT StudentTable.* FROM StudentTable INNER JOIN GroupStudents ON StudentTable.StudentID = GroupStudents.StudentID WHERE GroupStudents.GroupID = (?);";
             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             statement.setInt(1, classId);
             statement.execute();
@@ -80,13 +80,13 @@ public class StudentInClassesDAO {
 
     /**
      * his method gets a deleteStudentInClass from the database
-     * @param selectedClass
+     * @param selectedGroup
      * @param selectedStudentInClass
      * @throws SQLServerException
      */
-    public void deleteStudentInGroups(SchoolGroups selectedClass, Student selectedStudentInClass) throws SQLException {
+    public void deleteStudentInGroups(SchoolGroups selectedGroup, Student selectedStudentInClass) throws SQLException {
         Connection connection = DC.getConnection();
-        int cId = selectedClass.getGroupId();
+        int cId = selectedGroup.getGroupId();
         int mId = selectedStudentInClass.getStudentId();
 
         String sql = "DELETE FROM GroupStudents WHERE ClassID = (?) AND StudentID = (?); ";

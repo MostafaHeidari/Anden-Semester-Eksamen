@@ -4,7 +4,7 @@ import BE.SchoolGroups;
 import BE.Student;
 
 import GUI.Controller.Universal.SimpleDialogController;
-import GUI.Model.ClassModel;
+import GUI.Model.GroupModel;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -24,18 +24,18 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class TeacherKlasseAndStudentsController implements Initializable {
+public class TeacherGroupAndStudentsController implements Initializable {
 
     public StudentModel studentModel;
 
-    public ClassModel classModel;
+    public GroupModel groupModel;
 
 
     public Student selectedStudent;
 
-    public Student selectedStudentInClass;
+    public Student selectedStudentInGroup;
 
-    public SchoolGroups selectedClass;
+    public SchoolGroups selectedGroup;
 
 
     @FXML
@@ -69,13 +69,11 @@ public class TeacherKlasseAndStudentsController implements Initializable {
 
 
     @FXML
-    public TableView tvStudentsInClasses;
+    public TableView tvStudentsInGroups;
     @FXML
-    public TableColumn tcClaseNameForStudentClasses;
+    public TableColumn tcStudentNameInGroup;
     @FXML
-    public TableColumn tcStudentNameInClass;
-    @FXML
-    public TableColumn tcLastNameInClass;
+    public TableColumn tcLastNameInGroup;
 
 
     /**
@@ -90,13 +88,13 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        tvStudentsInClasses.setOnMouseClicked((MouseEvent event) -> {
+        tvStudentsInGroups.setOnMouseClicked((MouseEvent event) -> {
             setSelectedItems();
 
             tvClassInformation.getItems().clear();
 
 
-            tvClassInformation.setItems(classModel.getAllClasses());
+            tvClassInformation.setItems(groupModel.getAllClasses());
         });
         tvClassInformation.setOnMouseClicked((MouseEvent event) -> {
             setSelectedItems();
@@ -110,8 +108,8 @@ public class TeacherKlasseAndStudentsController implements Initializable {
      * Constructor
      * @throws IOException
      */
-    public TeacherKlasseAndStudentsController() throws IOException {
-        classModel = new ClassModel();
+    public TeacherGroupAndStudentsController() throws IOException {
+        groupModel = new GroupModel();
         studentModel = new StudentModel();
     }
 
@@ -129,9 +127,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
     /**
      * Goes to the CreateKlasse view
      */
-    public void newClassBtn(ActionEvent actionEvent) throws IOException {
+    public void newGroupBtn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) backStudent.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateClasses.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateGroups.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Classe Manger");
         switcher.setScene(scene);
@@ -158,9 +156,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         tcClassName.setCellValueFactory(new PropertyValueFactory<>("groupName"));
 
 
-        tvClassInformation.setItems(classModel.getAllClasses());
+        tvClassInformation.setItems(groupModel.getAllClasses());
         if(tvClassInformation.getItems().size() > 0){ //Set den valgte til den første i listen, hvis der er nogen
-            selectedClass = (SchoolGroups) tvClassInformation.getItems().get(0);
+            selectedGroup = (SchoolGroups) tvClassInformation.getItems().get(0);
         }
     }
 
@@ -190,12 +188,12 @@ public class TeacherKlasseAndStudentsController implements Initializable {
      */
     public void setStudentsInGroups(){
 
-        tcStudentNameInClass.setCellValueFactory(new PropertyValueFactory<Student, String>("studentName"));
+        tcStudentNameInGroup.setCellValueFactory(new PropertyValueFactory<Student, String>("studentName"));
 
-        tcLastNameInClass.setCellValueFactory(new PropertyValueFactory<Student, String>("lastName"));
+        tcLastNameInGroup.setCellValueFactory(new PropertyValueFactory<Student, String>("lastName"));
 
 
-        tvStudentsInClasses.setItems(studentModel.setStudentsInClass(selectedClass.getGroupId()));
+        tvStudentsInGroups.setItems(studentModel.setStudentsInGroup(selectedGroup.getGroupId()));
 
     }
 
@@ -203,9 +201,9 @@ public class TeacherKlasseAndStudentsController implements Initializable {
      * Sets the setSelectedItems
      */
     private void setSelectedItems() {
-        if (tvStudentsInClasses.getSelectionModel().getSelectedItem() != null)
+        if (tvStudentsInGroups.getSelectionModel().getSelectedItem() != null)
         {
-            selectedStudentInClass = (Student) tvStudentsInClasses.getSelectionModel().getSelectedItem();
+            selectedStudentInGroup = (Student) tvStudentsInGroups.getSelectionModel().getSelectedItem();
         }
         if (tvStudent.getSelectionModel().getSelectedItem() != null)
         {
@@ -213,7 +211,7 @@ public class TeacherKlasseAndStudentsController implements Initializable {
         }
         if (tvClassInformation.getSelectionModel().getSelectedItem() != null)
         {
-            selectedClass = (SchoolGroups) tvClassInformation.getSelectionModel().getSelectedItem();
+            selectedGroup = (SchoolGroups) tvClassInformation.getSelectionModel().getSelectedItem();
             setStudentsInGroups();
         }
     }
@@ -223,14 +221,14 @@ public class TeacherKlasseAndStudentsController implements Initializable {
      */
     public void addStudentToGroupBtn(ActionEvent event) {
         try {
-            studentModel.addStudentToClass(
-                    selectedClass,
+            studentModel.addStudentToGroup(
+                    selectedGroup,
                     selectedStudent);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        tvStudentsInClasses.setItems(studentModel.setStudentsInClass(selectedClass.getGroupId()));
-        tvStudentsInClasses.refresh();
+        tvStudentsInGroups.setItems(studentModel.setStudentsInGroup(selectedGroup.getGroupId()));
+        tvStudentsInGroups.refresh();
     }
 
     /**
@@ -238,11 +236,11 @@ public class TeacherKlasseAndStudentsController implements Initializable {
      */
     public void deleteStudentInGroupsBtn(ActionEvent event) throws SQLException {
         if(SimpleDialogController.delete()){
-            studentModel.deleteStudentInGroups(selectedClass,
-             selectedStudentInClass
+            studentModel.deleteStudentInGroups(selectedGroup,
+             selectedStudentInGroup
             );
-            tvStudentsInClasses.getItems().remove(selectedStudentInClass);
-            tvStudentsInClasses.refresh();
+            tvStudentsInGroups.getItems().remove(selectedStudentInGroup);
+            tvStudentsInGroups.refresh();
         }
     }
 
@@ -284,7 +282,7 @@ public class TeacherKlasseAndStudentsController implements Initializable {
      */
     public void deleteAGroupBtn(ActionEvent event) {
         if (SimpleDialogController.delete())
-            classModel.deleteAClass(selectedClass);
+            groupModel.deleteAGroup(selectedGroup);
         tvClassInformation.refresh();
     }
 

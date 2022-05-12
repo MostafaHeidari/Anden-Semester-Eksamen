@@ -1,0 +1,19 @@
+#saveButton,#backButton{
+    -fx-font-size: 12px;
+    -fx-background-color: #009B42;
+    -fx-text-fill: white;
+}
+
+#saveButton:hover{
+    -fx-font-size: 15px;
+    -fx-border-color: #001569;
+    -fx-background-color: #15B559;
+    -fx-text-fill: white;
+}
+
+#backButton:hover{
+    -fx-font-size: 15px;
+    -fx-border-color: #001569;
+    -fx-background-color: #15B559;
+    -fx-text-fill: white;
+}
