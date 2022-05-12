@@ -49,10 +49,11 @@ public class CitizenInfoDAO {
         }
         return allCitizenInfos;
     }
-
+/*
     public CitizenInfo createCitizen(String citizenName, String citizenLastName, String citizenAge, int phoneNumber, String address, String sex, String information) throws SQLException {
         try (Connection connection = DC.getConnection()) {
-            String sql = "INSERT INTO Citizen (firstName, lastName , SSN, address, sex, info) VALUES (?,?,?,?,?,?);";
+
+            String sql = "INSERT INTO Patients (PatientID, PatientName , PatientLastName, PatientAge, PatientSex, PatientGenInfo) VALUES (?,?,?,?,?,?);";
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
                 preparedStatement.setString(1, citizenName);
                 preparedStatement.setString(2, citizenLastName);
@@ -71,8 +72,12 @@ public class CitizenInfoDAO {
                 CitizenInfo citizen = new CitizenInfo(id, citizenName, citizenLastName, citizenAge, phoneNumber,address, sex, information);
                 return citizen;
             }
+
+
         } catch (SQLServerException throwables) {
             throw new SQLException();
         }
     }
+
+ */
 }

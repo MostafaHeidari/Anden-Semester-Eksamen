@@ -70,4 +70,7 @@ public class CreateCitizenController {
         switcher.setTitle("SOSUS System");
         switcher.setScene(scene);
     }
+
+    public void btnBackClasses(ActionEvent actionEvent) {
+    }
 }
