@@ -200,7 +200,7 @@
                                     <Font size="20.0" />
                                  </font>
                                  <VBox.margin>
-                                    <Insets />
+                                    <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
                               <Label fx:id="respirationogcirkulation_1" onMouseClicked="#respirationogcirkulation_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Respirationsproblemer">
@@ -223,7 +223,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <VBox prefHeight="274.0" prefWidth="272.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                  <VBox prefHeight="275.0" prefWidth="272.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ernæring" underline="true">
                            <font>
@@ -277,76 +277,109 @@
                   </VBox>
                   <HBox prefHeight="153.0" prefWidth="511.0">
                      <children>
-                        <VBox maxHeight="230.0" prefHeight="200.0" prefWidth="288.0" style="-fx-min-height: 200px; -fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                        <VBox maxHeight="355.0" prefHeight="243.0" prefWidth="272.0" style="-fx-min-height: 200px; -fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Smerter og sanseindtryk">
                                  <font>
-                                    <Font size="20.0" />
+                                    <Font size="14.0" />
                                  </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
                               </Text>
-                              <Text fx:id="smerterogsanseindtryk_1" onMouseClicked="#smerterogsanseindtryk_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Akutte smerter">
+                              <Label fx:id="smerterogsanseindtryk_1" onMouseClicked="#smerterogsanseindtryk_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Akutte smerter">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
-                              <Text fx:id="smerterogsanseindtryk_2" onMouseClicked="#smerterogsanseindtryk_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Periodevise smerter">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="smerterogsanseindtryk_2" onMouseClicked="#smerterogsanseindtryk_2" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Periodevise smerter">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
-                              <Text fx:id="smerterogsanseindtryk_3" onMouseClicked="#smerterogsanseindtryk_3" strokeType="OUTSIDE" strokeWidth="0.0" text="Kroniske smerter">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="smerterogsanseindtryk_3" onMouseClicked="#smerterogsanseindtryk_3" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Kroniske smerter">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
-                              <Text fx:id="smerterogsanseindtryk_4" onMouseClicked="#smerterogsanseindtryk_4" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med synssans">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="smerterogsanseindtryk_4" onMouseClicked="#smerterogsanseindtryk_4" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med synssans">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
-                              <Text fx:id="smerterogsanseindtryk_5" onMouseClicked="#smerterogsanseindtryk_5" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med lugtesans">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="smerterogsanseindtryk_5" onMouseClicked="#smerterogsanseindtryk_5" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med lugtesans">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
-                              <Text fx:id="smerterogsanseindtryk_6" onMouseClicked="#smerterogsanseindtryk_6" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med hørelse">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="smerterogsanseindtryk_6" onMouseClicked="#smerterogsanseindtryk_6" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med hørelse">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
-                              <Text fx:id="smerterogsanseindtryk_7" onMouseClicked="#smerterogsanseindtryk_7" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med smagssans">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="smerterogsanseindtryk_7" onMouseClicked="#smerterogsanseindtryk_7" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med smagssans">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
-                              <Text fx:id="smerterogsanseindtryk_8" onMouseClicked="#smerterogsanseindtryk_8" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med følesans">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="smerterogsanseindtryk_8" onMouseClicked="#smerterogsanseindtryk_8" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med følesans">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
                            </children>
                         </VBox>
                      </children>
                   </HBox>
                   <HBox maxHeight="99.0" prefHeight="99.0" prefWidth="227.0">
                      <children>
-                        <VBox minHeight="75.0" prefHeight="99.0" prefWidth="281.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                        <VBox maxHeight="134.0" minHeight="75.0" minWidth="120.0" prefHeight="134.0" prefWidth="272.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Søvn og hvile">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="søvnoghvile_1" onMouseClicked="#søvnoghvile_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Døgnrytmeproblemer">
+                              <Label fx:id="søvnoghvile_1" onMouseClicked="#søvnoghvile_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Døgnrytmeproblemer">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
-                              <Text fx:id="søvnoghvile_2" onMouseClicked="#søvnoghvile_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Søvnproblemer">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="søvnoghvile_2" onMouseClicked="#søvnoghvile_2" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Søvnproblemer">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
                            </children>
                         </VBox>
                      </children>
