@@ -6,6 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class CitizenInfoModel {
     private CitizenInfoManger citizenInfoManger;
@@ -26,5 +27,13 @@ public class CitizenInfoModel {
     public ObservableList getAllCitizens() {
         citizensList = citizenInfoManger.getAllCitizens();
         return citizensList;
+    }
+
+    /**
+     * Creates a case using the createCitizen method from citizenManager
+     */
+
+    public CitizenInfo createCitizen(String citizenName, String citizenLastName, String citizenAge, int citizinPhoneNumber, String citizenAddress, String citizenSEX, String citizenInformation) throws SQLException {
+        return citizenInfoManger.createCitizen(citizenName, citizenLastName, citizenAge, citizinPhoneNumber, citizenAddress, citizenSEX,citizenInformation);
     }
 }

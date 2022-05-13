@@ -6,6 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class CitizenInfoManger {
     private CitizenInfoDAO citizenInfoDAO;
@@ -33,5 +34,13 @@ public class CitizenInfoManger {
         return citizensObs;
     }
 
+
+
+    /**
+     * Creates a case using the createCitizen method from citizenDAO
+     */
+    public CitizenInfo createCitizen(String citizenName, String citizenLastName, String citizenAge, int citizinPhoneNumber, String citizenAddress, String citizenSEX, String citizenInformation) throws SQLException {
+         return citizenInfoDAO.createCitizen(citizenName, citizenLastName, citizenAge, citizinPhoneNumber, citizenAddress, citizenSEX,citizenInformation);
+    }
 
 }

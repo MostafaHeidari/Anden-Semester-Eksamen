@@ -20,7 +20,7 @@
    <children>
       <Pane prefHeight="638.0" prefWidth="951.0">
          <children>
-            <Label layoutX="349.0" layoutY="50.0" prefHeight="49.0" prefWidth="283.0" text="Borger oplysninger">
+            <Label layoutX="349.0" layoutY="50.0" prefHeight="49.0" prefWidth="283.0" text="Indtaste Borger Oplysninger">
                <font>
                   <Font size="20.0" />
                </font>
@@ -37,16 +37,16 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <TextField prefHeight="40.0" prefWidth="275.0" promptText="Navn" />
-                  <TextField fx:id="lastnameFiled1" layoutX="10.0" layoutY="18.0" prefHeight="35.0" prefWidth="275.0" promptText="Efternavn" GridPane.rowIndex="1" />
-                  <TextField fx:id="cprField" layoutX="10.0" layoutY="60.0" prefHeight="36.0" prefWidth="275.0" promptText="CPR-nr" GridPane.rowIndex="2" />
-                  <TextField fx:id="phoneField1" layoutX="10.0" layoutY="93.0" prefHeight="36.0" prefWidth="275.0" promptText="Telefon nummer" GridPane.rowIndex="3" />
-                  <DatePicker prefHeight="35.0" prefWidth="274.0" promptText="Alder" GridPane.rowIndex="4" />
+                  <TextField fx:id="txtFieldCitizenFirstName" prefHeight="40.0" prefWidth="275.0" promptText="Navn" />
+                  <TextField fx:id="txtFieldCitizenLastName" layoutX="10.0" layoutY="18.0" prefHeight="35.0" prefWidth="275.0" promptText="Efternavn" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtFieldCitizenCPR" layoutX="10.0" layoutY="60.0" prefHeight="36.0" prefWidth="275.0" promptText="CPR-nr" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtFieldCitizenTelefon" layoutX="10.0" layoutY="93.0" prefHeight="36.0" prefWidth="275.0" promptText="Telefon nummer" GridPane.rowIndex="3" />
+                  <DatePicker fx:id="txtFieldCitizenAge" prefHeight="35.0" prefWidth="274.0" promptText="Alder" GridPane.rowIndex="4" />
                </children>
             </GridPane>
-            <TextArea fx:id="infoBox" layoutX="350.0" layoutY="403.0" prefHeight="145.0" prefWidth="551.0" promptText="Generelle Oplysninger" />
-            <CheckBox layoutX="431.0" layoutY="364.0" mnemonicParsing="false" text="Mand" />
-            <CheckBox layoutX="353.0" layoutY="364.0" mnemonicParsing="false" text="Kvinde" />
+            <TextArea fx:id="txtAreaCitizenGeneralInfo" layoutX="350.0" layoutY="403.0" prefHeight="145.0" prefWidth="551.0" promptText="Generelle Oplysninger" />
+            <CheckBox fx:id="checkBoxMale" layoutX="431.0" layoutY="359.0" mnemonicParsing="false" text="Mand" />
+            <CheckBox fx:id="checkBoxFemale" layoutX="353.0" layoutY="359.0" mnemonicParsing="false" text="Kvinde" />
             <JFXButton fx:id="BtnLogOutOfPatient" layoutX="848.0" layoutY="14.0" onAction="#LogOutOfPatient" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -102,14 +102,18 @@
                </children>
             </Pane>
             <Line endX="148.0" layoutX="34.0" layoutY="100.0" startX="-14.899984359741211" startY="1.52587890625E-5" stroke="WHITE" />
-            <CheckBox layoutX="513.0" layoutY="364.0" mnemonicParsing="false" text="Andet" />
+            <CheckBox fx:id="checkBoxOther" layoutX="513.0" layoutY="359.0" mnemonicParsing="false" text="Andet" />
             <Label layoutX="317.0" layoutY="136.0" text="Navn" />
             <Label layoutX="295.0" layoutY="180.0" text="Efternavn" />
             <Label layoutX="271.0" layoutY="225.0" text="CPR-Nummer" />
             <Label layoutX="258.0" layoutY="276.0" text="Telefon nummer" />
             <Label layoutX="317.0" layoutY="316.0" text="Alder" />
-            <JFXButton layoutX="753.0" layoutY="581.0" prefHeight="38.0" prefWidth="147.0" style="-fx-background-color: #009B42;" text="Gem oplysninger" textFill="WHITE" />
+            <JFXButton fx:id="btnSaveCitizen" layoutX="350.0" layoutY="577.0" onAction="#btnHandleSaveCitizen" prefHeight="38.0" prefWidth="147.0" style="-fx-background-color: #009B42;" text="Gem oplysninger" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
             <Line endX="929.3333129882812" endY="473.86669921875" layoutX="-30.0" layoutY="89.0" startX="382.0000305175781" startY="473.86669921875" stroke="#d4d3be" />
+            <Label layoutX="322.0" layoutY="359.0" text="Køn" />
          </children>
       </Pane>
    </children>

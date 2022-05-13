@@ -6,11 +6,48 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class CreateCitizenController {
+    //textFiled
+    @FXML
+    public TextField txtFieldCitizenFirstName;
+    @FXML
+    public TextField txtFieldCitizenLastName;
+    @FXML
+    public TextField txtFieldCitizenCPR;
+    @FXML
+    public TextField txtFieldCitizenTelefon;
+    @FXML
+    public TextArea txtAreaCitizenGeneralInfo;
+
+    //CheckBox
+    @FXML
+    public DatePicker txtFieldCitizenAge;
+    @FXML
+    public CheckBox checkBoxMale;
+    @FXML
+    public CheckBox checkBoxFemale;
+    @FXML
+    public CheckBox checkBoxOther;
+
+
+
+    @FXML
+    public JFXButton backClasses;
+    @FXML
+    public JFXButton backStudent;
+    @FXML
+    public JFXButton citizenInformation;
+
+    @FXML
+    public JFXButton btnSaveCitizen;
     @FXML
     private JFXButton BtnLogOutOfPatient;
     @FXML
@@ -72,5 +109,8 @@ public class CreateCitizenController {
     }
 
     public void btnBackClasses(ActionEvent actionEvent) {
+    }
+
+    public void btnHandleSaveCitizen(ActionEvent actionEvent) {
     }
 }
