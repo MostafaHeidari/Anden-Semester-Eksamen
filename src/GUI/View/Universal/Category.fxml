@@ -11,12 +11,17 @@
 
 <AnchorPane prefHeight="750.0" prefWidth="900.0" style="-fx-background-color: #BBE5E8;" stylesheets="@../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.CategoryController">
    <children>
-      <Text layoutX="348.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Helbredstilstande">
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Helbredstilstande">
          <font>
             <Font size="31.0" />
          </font>
       </Text>
-      <HBox alignment="CENTER" layoutY="38.0" prefHeight="708.0" prefWidth="1100.0">
+      <JFXButton fx:id="btnCategoryBack" onAction="#CategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <HBox alignment="CENTER" layoutY="2.0" prefHeight="744.0" prefWidth="1100.0">
          <children>
             <VBox alignment="CENTER" prefHeight="520.0" prefWidth="324.0" style="-fx-border-width: 2;">
                <children>
@@ -189,7 +194,7 @@
                   </VBox>
                </children>
             </VBox>
-            <VBox prefHeight="661.0" prefWidth="272.0">
+            <VBox prefHeight="520.0" prefWidth="324.0">
                <children>
                   <VBox maxHeight="121.0" minHeight="121.0" prefHeight="121.0" prefWidth="272.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                      <children>
@@ -347,13 +352,13 @@
                   </VBox>
                </children>
             </VBox>
-            <VBox prefHeight="519.0" prefWidth="242.0">
+            <VBox prefHeight="520.0" prefWidth="324.0">
                <children>
                   <HBox prefHeight="153.0" prefWidth="511.0">
                      <children>
-                        <VBox minHeight="162.0" prefHeight="184.0" prefWidth="252.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                        <VBox minHeight="146.0" prefHeight="146.0" prefWidth="358.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Viden og udvikling">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Viden og udvikling" underline="true">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -388,9 +393,9 @@
                   </HBox>
                   <HBox prefHeight="89.0" prefWidth="257.0">
                      <children>
-                        <VBox maxHeight="104.0" minHeight="6.0" prefHeight="104.0" prefWidth="252.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                        <VBox maxHeight="104.0" minHeight="6.0" prefHeight="67.0" prefWidth="370.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kommunikation">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kommunikation" underline="true">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -409,9 +414,9 @@
                   </HBox>
                   <HBox prefHeight="153.0" prefWidth="204.0">
                      <children>
-                        <VBox prefHeight="138.0" prefWidth="313.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                        <VBox prefHeight="186.0" prefWidth="352.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Psykosociale forhold">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Psykosociale forhold" underline="true">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -452,7 +457,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <VBox maxHeight="539.0" minHeight="112.0" prefHeight="431.0" prefWidth="272.0" style="-fx-min-height: 200px; -fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                  <VBox maxHeight="539.0" minHeight="112.0" prefHeight="368.0" prefWidth="272.0" style="-fx-min-height: 200px; -fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Smerter og sanseindtryk" underline="true">
                            <font>
@@ -532,10 +537,5 @@
             </VBox>
          </children>
       </HBox>
-      <JFXButton fx:id="btnCategoryBack" layoutX="612.0" layoutY="1.0" onAction="#CategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </JFXButton>
    </children>
 </AnchorPane>
