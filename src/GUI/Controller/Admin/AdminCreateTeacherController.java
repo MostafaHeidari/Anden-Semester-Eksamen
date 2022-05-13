@@ -27,7 +27,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class AdminViewCreateTeacherController implements Initializable {
+public class AdminCreateTeacherController implements Initializable {
 
 
     TeacherModel teacherModel;
@@ -69,7 +69,7 @@ public class AdminViewCreateTeacherController implements Initializable {
      * Constructor
      * @throws IOException
      */
-    public AdminViewCreateTeacherController() throws IOException {
+    public AdminCreateTeacherController() throws IOException {
 
         teacherModel = TeacherModel.getInstance();
 
