@@ -200,16 +200,22 @@
                                     <Font size="20.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="respirationogcirkulation_1" onMouseClicked="#respirationogcirkulation_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Respirationsproblemer">
+                              <Label fx:id="respirationogcirkulation_1" onMouseClicked="#respirationogcirkulation_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Respirationsproblemer">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
-                              <Text fx:id="respirationogcirkulation_2" onMouseClicked="#respirationogcirkulation_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Cirkulationsproblemer">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="respirationogcirkulation_2" onMouseClicked="#respirationogcirkulation_2" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Cirkulationsproblemer">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
                            </children>
                         </VBox>
                      </children>
