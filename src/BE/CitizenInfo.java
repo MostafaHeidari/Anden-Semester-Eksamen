@@ -1,14 +1,14 @@
 package BE;
 
 public class CitizenInfo {
-    public int citizenId;
-    public String citizenName;
-    public String citizenLastName;
-    public String citizenAge;
-    private int phoneNumber;
-    private String address;
-    private boolean sex;
-    public String information;
+    private int citizenId;
+    private String citizenName;
+    private String citizenLastName;
+    private String citizenAge;
+    private int citizinPhoneNumber;
+    private String citizenAddress;
+    private boolean citizenSEX;
+    private String citizenInformation;
 
     /**
      * @param citizenId
@@ -17,15 +17,16 @@ public class CitizenInfo {
      * @param citizenAge
      * Constructor with citizenId, citizenName,  citizenLastName, citizenAge
      */
-    public CitizenInfo(int citizenId, String citizenName, String citizenLastName, String citizenAge, int phoneNumber, String address, boolean sex, String information) {
+
+    public CitizenInfo(int citizenId, String citizenName, String citizenLastName, String citizenAge, int citizinPhoneNumber, String citizenAddress, boolean citizenSEX, String citizenInformation) {
         this.citizenId = citizenId;
         this.citizenName = citizenName;
         this.citizenLastName = citizenLastName;
         this.citizenAge = citizenAge;
-        this.phoneNumber = phoneNumber;
-        this.address = address;
-        this.sex = sex;
-        this.information = information;
+        this.citizinPhoneNumber = citizinPhoneNumber;
+        this.citizenAddress = citizenAddress;
+        this.citizenSEX = citizenSEX;
+        this.citizenInformation = citizenInformation;
     }
 
     public int getCitizenId() {
@@ -60,36 +61,49 @@ public class CitizenInfo {
         this.citizenAge = citizenAge;
     }
 
-    public int getPhoneNumber() {
-        return phoneNumber;
+    public int getCitizinPhoneNumber() {
+        return citizinPhoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setCitizinPhoneNumber(int citizinPhoneNumber) {
+        this.citizinPhoneNumber = citizinPhoneNumber;
     }
 
-    public String getAddress() {
-        return address;
+    public String getCitizenAddress() {
+        return citizenAddress;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setCitizenAddress(String citizenAddress) {
+        this.citizenAddress = citizenAddress;
     }
 
-    public boolean isSex() {
-        return sex;
+    public boolean isCitizenSEX() {
+        return citizenSEX;
     }
 
-    public void setSex(boolean sex) {
-        this.sex = sex;
+    public void setCitizenSEX(boolean citizenSEX) {
+        this.citizenSEX = citizenSEX;
     }
 
-    public String getInformation() {
-        return information;
+    public String getCitizenInformation() {
+        return citizenInformation;
     }
 
-    public void setInformation(String information) {
-        this.information = information;
+    public void setCitizenInformation(String citizenInformation) {
+        this.citizenInformation = citizenInformation;
     }
 
+    @Override
+    public String toString() {
+        return "CitizenInfo{" +
+                "citizenId=" + citizenId +
+                ", citizenName='" + citizenName + '\'' +
+                ", citizenLastName='" + citizenLastName + '\'' +
+                ", citizenAge='" + citizenAge + '\'' +
+                ", citizinPhoneNumber=" + citizinPhoneNumber +
+                ", citizenAddress='" + citizenAddress + '\'' +
+                ", citizenSEX=" + citizenSEX +
+                ", citizenInformation='" + citizenInformation + '\'' +
+                '}';
+    }
 }
