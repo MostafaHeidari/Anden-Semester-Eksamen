@@ -7,7 +7,7 @@ public class CitizenInfo {
     private String citizenAge;
     private int citizinPhoneNumber;
     private String citizenAddress;
-    private boolean citizenSEX;
+    private String citizenSEX;
     private String citizenInformation;
 
     /**
@@ -18,7 +18,7 @@ public class CitizenInfo {
      * Constructor with citizenId, citizenName,  citizenLastName, citizenAge
      */
 
-    public CitizenInfo(int citizenId, String citizenName, String citizenLastName, String citizenAge, int citizinPhoneNumber, String citizenAddress, boolean citizenSEX, String citizenInformation) {
+    public CitizenInfo(int citizenId, String citizenName, String citizenLastName, String citizenAge, int citizinPhoneNumber, String citizenAddress, String citizenSEX, String citizenInformation) {
         this.citizenId = citizenId;
         this.citizenName = citizenName;
         this.citizenLastName = citizenLastName;
@@ -77,11 +77,11 @@ public class CitizenInfo {
         this.citizenAddress = citizenAddress;
     }
 
-    public boolean isCitizenSEX() {
+    public String isCitizenSEX() {
         return citizenSEX;
     }
 
-    public void setCitizenSEX(boolean citizenSEX) {
+    public void setCitizenSEX(String citizenSEX) {
         this.citizenSEX = citizenSEX;
     }
 
