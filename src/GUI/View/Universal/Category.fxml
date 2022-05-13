@@ -455,26 +455,38 @@
                                     <Font size="20.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="psykosocialeforhold_1" onMouseClicked="#psykosocialeforhold_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med socialt samvær">
+                              <Label fx:id="psykosocialeforhold_1" onMouseClicked="#psykosocialeforhold_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med socialt samvær">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
-                              <Text fx:id="psykosocialeforhold_2" onMouseClicked="#psykosocialeforhold_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Emotionelle problemer">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="psykosocialeforhold_2" onMouseClicked="#psykosocialeforhold_2" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Emotionelle problemer">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
-                              <Text fx:id="psykosocialeforhold_3" onMouseClicked="#psykosocialeforhold_3" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med misbrug">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="psykosocialeforhold_3" onMouseClicked="#psykosocialeforhold_3" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med misbrug">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
-                              <Text fx:id="psykosocialeforhold_4" onMouseClicked="#psykosocialeforhold_4" strokeType="OUTSIDE" strokeWidth="0.0" text="Mentale problemer">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="psykosocialeforhold_4" onMouseClicked="#psykosocialeforhold_4" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Mentale problemer">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
                            </children>
                         </VBox>
                      </children>
@@ -486,31 +498,46 @@
                               <Font size="20.0" />
                            </font>
                         </Text>
-                        <Text fx:id="udskillelseafaffaldsstoffer_1" onMouseClicked="#udskillelseafaffaldsstoffer_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med vandladning">
+                        <Label fx:id="udskillelseafaffaldsstoffer_1" onMouseClicked="#udskillelseafaffaldsstoffer_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med vandladning">
                            <font>
                               <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="udskillelseafaffaldsstoffer_2" onMouseClicked="#udskillelseafaffaldsstoffer_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med urininkontinens">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="udskillelseafaffaldsstoffer_2" onMouseClicked="#udskillelseafaffaldsstoffer_2" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med urininkontinens">
                            <font>
                               <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="udskillelseafaffaldsstoffer_3" onMouseClicked="#udskillelseafaffaldsstoffer_3" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med afføringsindkontinens">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="udskillelseafaffaldsstoffer_3" onMouseClicked="#udskillelseafaffaldsstoffer_3" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med afføringsindkontinens">
                            <font>
                               <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="udskillelseafaffaldsstoffer_4" onMouseClicked="#udskillelseafaffaldsstoffer_4" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med mave og tarm">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="udskillelseafaffaldsstoffer_4" onMouseClicked="#udskillelseafaffaldsstoffer_4" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med mave og tarm">
                            <font>
                               <Font size="14.0" />
                            </font>
-                        </Text>
-                        <Text fx:id="udskillelseafaffaldsstoffer_5" onMouseClicked="#udskillelseafaffaldsstoffer_5" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med væske fra dræn">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="udskillelseafaffaldsstoffer_5" onMouseClicked="#udskillelseafaffaldsstoffer_5" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med væske fra dræn">
                            <font>
                               <Font size="14.0" />
                            </font>
-                        </Text>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Label>
                      </children>
                   </VBox>
                </children>
