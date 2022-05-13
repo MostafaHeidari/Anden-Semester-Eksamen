@@ -6,7 +6,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -57,7 +56,11 @@
                   <InnerShadow height="8.16" radius="2.125" width="2.34" />
                </effect>
             </TextField>
-            <PasswordField fx:id="passwordTxt" prefHeight="43.0" prefWidth="243.0" promptText="Kodeord" GridPane.rowIndex="3" />
+            <TextField fx:id="passwordTxt" prefHeight="45.0" prefWidth="243.0" promptText="Kodeord" style="-fx-background-color: EBF3EB;" GridPane.rowIndex="3">
+               <effect>
+                  <InnerShadow height="8.16" radius="2.125" width="2.34" />
+               </effect>
+            </TextField>
          </children>
       </GridPane>
       <JFXButton fx:id="BtnCreateStudent" layoutX="446.0" layoutY="406.0" onAction="#CreateStudentActionButton" prefHeight="28.0" prefWidth="94.0" text="Opret Elev" textFill="WHITE">

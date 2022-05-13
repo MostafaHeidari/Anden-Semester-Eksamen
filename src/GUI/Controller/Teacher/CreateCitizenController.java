@@ -108,8 +108,6 @@ public class CreateCitizenController {
         switcher.setScene(scene);
     }
 
-    public void btnBackClasses(ActionEvent actionEvent) {
-    }
 
     public void btnHandleSaveCitizen(ActionEvent actionEvent) {
     }
