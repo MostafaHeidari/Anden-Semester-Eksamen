@@ -49,8 +49,9 @@ public class CitizenInfoDAO {
         }
         return allCitizenInfos;
     }
-/*
-    public CitizenInfo createCitizen(String citizenName, String citizenLastName, String citizenAge, int phoneNumber, String address, String sex, String information) throws SQLException {
+
+    //This method is used to Creating Citizen by inserting information in Patients table in a database.
+    public CitizenInfo createCitizen(String citizenName, String citizenLastName, String citizenAge, int citizinPhoneNumber, String citizenAddress, String citizenSEX, String citizenInformation) throws SQLException {
         try (Connection connection = DC.getConnection()) {
 
             String sql = "INSERT INTO Patients (PatientID, PatientName , PatientLastName, PatientAge, PatientSex, PatientGenInfo) VALUES (?,?,?,?,?,?);";
@@ -58,10 +59,10 @@ public class CitizenInfoDAO {
                 preparedStatement.setString(1, citizenName);
                 preparedStatement.setString(2, citizenLastName);
                 preparedStatement.setString(3, citizenAge);
-                preparedStatement.setInt(4, phoneNumber);
-                preparedStatement.setString(5, address);
-                preparedStatement.setBoolean(6, Boolean.parseBoolean(sex));
-                preparedStatement.setString(7, information);
+                preparedStatement.setInt(4, citizinPhoneNumber);
+                preparedStatement.setString(5, citizenAddress);
+                preparedStatement.setBoolean(6, Boolean.parseBoolean(citizenSEX));
+                preparedStatement.setString(7, citizenInformation);
                 preparedStatement.execute();
                 ResultSet resultSet = preparedStatement.getGeneratedKeys();
                 int id = 0;
@@ -69,15 +70,12 @@ public class CitizenInfoDAO {
                     id = resultSet.getInt(1);
                 }
 
-                CitizenInfo citizen = new CitizenInfo(id, citizenName, citizenLastName, citizenAge, phoneNumber,address, sex, information);
+                CitizenInfo citizen = new CitizenInfo(id, citizenName, citizenLastName, citizenAge, citizinPhoneNumber,citizenAddress, citizenSEX, citizenInformation);
                 return citizen;
             }
-
 
         } catch (SQLServerException throwables) {
             throw new SQLException();
         }
     }
-
- */
 }
