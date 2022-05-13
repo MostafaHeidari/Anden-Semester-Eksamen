@@ -16,7 +16,7 @@
             <Font size="31.0" />
          </font>
       </Text>
-      <HBox alignment="CENTER" layoutY="38.0" prefHeight="703.0" prefWidth="1100.0">
+      <HBox alignment="CENTER" layoutY="38.0" prefHeight="708.0" prefWidth="1100.0">
          <children>
             <VBox alignment="CENTER" prefHeight="520.0" prefWidth="324.0" style="-fx-border-width: 2;">
                <children>
@@ -193,7 +193,7 @@
                <children>
                   <HBox fx:id="HBox1" maxHeight="79.0" prefHeight="79.0" prefWidth="227.0">
                      <children>
-                        <VBox maxHeight="148.0" minHeight="130.0" prefHeight="109.0" prefWidth="272.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                        <VBox maxHeight="148.0" minHeight="121.0" prefHeight="121.0" prefWidth="272.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Respiration og cirkulation" underline="true">
                                  <font>
@@ -223,7 +223,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <VBox prefHeight="275.0" prefWidth="272.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                  <VBox prefHeight="387.0" prefWidth="272.0" style="-fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ernæring" underline="true">
                            <font>
@@ -277,7 +277,7 @@
                   </VBox>
                   <HBox prefHeight="153.0" prefWidth="511.0">
                      <children>
-                        <VBox maxHeight="355.0" prefHeight="243.0" prefWidth="272.0" style="-fx-min-height: 200px; -fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
+                        <VBox maxHeight="355.0" prefHeight="220.0" prefWidth="272.0" style="-fx-min-height: 200px; -fx-background-color: white; -fx-border-color: grey;" styleClass="Category">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Smerter og sanseindtryk">
                                  <font>
