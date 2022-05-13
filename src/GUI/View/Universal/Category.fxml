@@ -11,17 +11,17 @@
 
 <AnchorPane prefHeight="910.0" prefWidth="1272.0" style="-fx-background-color: #BBE5E8;" stylesheets="@../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.CategoryController">
    <children>
-      <JFXButton fx:id="btnCategoryBack" layoutX="612.0" layoutY="850.0" onAction="#CategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
+      <JFXButton fx:id="btnCategoryBack" layoutX="596.0" layoutY="817.0" onAction="#CategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Text layoutX="529.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Helbredstilstande" wrappingWidth="283.7420654296875">
+      <Text layoutX="529.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Helbredstilstande" wrappingWidth="283.7420654296875">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <HBox alignment="CENTER" layoutX="85.0" layoutY="64.0" prefHeight="765.0" prefWidth="1100.0">
+      <HBox alignment="CENTER" layoutX="85.0" layoutY="50.0" prefHeight="765.0" prefWidth="1100.0">
          <children>
             <VBox alignment="CENTER" prefHeight="520.0" prefWidth="324.0" style="-fx-border-width: 2;">
                <children>
