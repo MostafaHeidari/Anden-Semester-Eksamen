@@ -11,7 +11,7 @@ public class Student {
      * @param studentName
      * @param lastName
      * @param userName
-     * Constructor with studentId,  studentName, lastName, email, userName
+     * Constructor with studentId,  studentName, lastName, userName
      */
     public Student(int studentId, String studentName, String lastName,String userName) {
         this.studentId = studentId;

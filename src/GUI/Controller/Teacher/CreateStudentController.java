@@ -139,7 +139,9 @@ public class CreateStudentController implements Initializable {
         }
     }
 
-
+    /**
+     * uploads a student login info with the uploadLogin method
+     */
     private void uploadLogin(String studentUsername, String hashedPassword) throws IOException, SQLException {
         LoginModel loginModel = LoginModel.getInstance();
 
@@ -226,6 +228,10 @@ public class CreateStudentController implements Initializable {
     public void GamOplysingerActionButton(ActionEvent actionEvent) {
     }
 
+    /**
+     * here we set the information in the tableView
+     * @throws IOException
+     */
     public void setStudentTableView() throws IOException {
         tcId.setCellValueFactory(new PropertyValueFactory<>("studentId"));
 

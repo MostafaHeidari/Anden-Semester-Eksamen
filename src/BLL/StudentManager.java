@@ -86,7 +86,7 @@ public class StudentManager {
     }
 
     /**
-     * Gets the uploadStudentinfo studentName, studentLastname, studentEmail, studentAge and userName using uploadStudentinfo from studentDAO
+     * Gets the uploadStudentinfo studentName, studentLastname and userName using uploadStudentinfo from studentDAO
      * @param studentName
      * @param studentLastname
      * @param userName

@@ -14,7 +14,6 @@ import java.sql.SQLException;
 
 public class StudentModel {
 
-    StudentDAO studentDAO = new StudentDAO();
     private GroupModel classModel;
     private StudentsInClassManager studentsInClassManger;
 

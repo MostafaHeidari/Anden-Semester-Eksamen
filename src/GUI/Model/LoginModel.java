@@ -69,4 +69,15 @@ public class LoginModel {
         String salt = getSalt();
         loginList.add(loginManager.uploadLogin(studentUsername,BCrypt.hashpw(hashedPassword, salt), salt));
     }
+
+    /**
+     * Gets the uploadLogin studentUsername, studentPassword using uploadLogin from loginManager
+     * @param userNameTeacher
+     * @param passwordTeacher
+     * @throws SQLServerException
+     */
+    public void uploadLoginTeacher(String userNameTeacher, String passwordTeacher) throws SQLException {
+        String salt = getSalt();
+        loginList.add(loginManager.uploadLoginTeacher(userNameTeacher,BCrypt.hashpw(passwordTeacher, salt), salt));
+    }
 }
