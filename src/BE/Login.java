@@ -7,6 +7,7 @@ public class Login implements ILogin {
     private int id;
     private String username;
     private String password;
+    private String salt
     private String UserType;
 
     /**
@@ -19,14 +20,14 @@ public class Login implements ILogin {
      * @param id
      * @param username
      * @param password
-     * @param UserType
+     * @param userType
      * Constructor with id, username and password
      */
     public Login(int id, String username, String password, String UserType) {
         this.id = id;
         this.username = username;
         this.password = password;
-        this.UserType = UserType;
+        this.UserType = userType;
     }
 
     /**

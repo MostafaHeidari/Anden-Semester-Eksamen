@@ -51,7 +51,7 @@ public class CitizenInfoDAO {
     }
 
     //This method is used to Creating Citizen by inserting information in Patients table in a database.
-    public CitizenInfo createCitizen(String citizenName, String citizenLastName, String citizenAge, int citizinPhoneNumber, String citizenAddress, String citizenSEX, String citizenInformation) throws SQLException {
+    public CitizenInfo createCitizen(String citizenName, String citizenLastName, String citizenAge, int citizinPhoneNumber, String citizenAddress, Boolean citizenSEX, String citizenInformation) throws SQLException {
         try (Connection connection = DC.getConnection()) {
 
             String sql = "INSERT INTO Patients (PatientID, PatientName , PatientLastName, PatientAge, PatientSex, PatientGenInfo) VALUES (?,?,?,?,?,?);";
@@ -61,7 +61,7 @@ public class CitizenInfoDAO {
                 preparedStatement.setString(3, citizenAge);
                 preparedStatement.setInt(4, citizinPhoneNumber);
                 preparedStatement.setString(5, citizenAddress);
-                preparedStatement.setBoolean(6, Boolean.parseBoolean(citizenSEX));
+                preparedStatement.setBoolean(6, Boolean.parseBoolean(String.valueOf(citizenSEX)));
                 preparedStatement.setString(7, citizenInformation);
                 preparedStatement.execute();
                 ResultSet resultSet = preparedStatement.getGeneratedKeys();
