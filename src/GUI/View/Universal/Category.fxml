@@ -397,21 +397,30 @@
                                     <Font size="20.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="videnogudvikling_1" onMouseClicked="#videnogudvikling_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med hudkommelse">
+                              <Label fx:id="videnogudvikling_1" onMouseClicked="#videnogudvikling_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med hudkommelse">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
-                              <Text fx:id="videnogudvikling_2" onMouseClicked="#videnogudvikling_2" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med indsigt i Behandlingsformål">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="videnogudvikling_2" onMouseClicked="#videnogudvikling_2" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med indsigt i Behandlingsformål">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
-                              <Text fx:id="videnogudvikling_3" onMouseClicked="#videnogudvikling_4" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med sygdomsindsigt">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="videnogudvikling_3" onMouseClicked="#videnogudvikling_4" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med sygdomsindsigt">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
                            </children>
                         </VBox>
                      </children>
@@ -425,11 +434,14 @@
                                     <Font size="20.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="kommunikation_1" onMouseClicked="#kommunikation_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Problemer med kommunikation">
+                              <Label fx:id="kommunikation_1" onMouseClicked="#kommunikation_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med kommunikation">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
-                              </Text>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
                            </children>
                         </VBox>
                      </children>
