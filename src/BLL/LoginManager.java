@@ -35,10 +35,11 @@ public class LoginManager {
      * Gets the uploadLogin studentUsername, studentPassword using uploadLogin from LoginDAO
      * @param studentUsername
      * @param hashedPassword
+     * @param salt
      * @return
      * @throws SQLServerException
      */
-    public Login uploadLogin(String studentUsername, String hashedPassword) throws SQLException {
-        return(loginDao.uploadLogin(studentUsername, hashedPassword));
+    public Login uploadLogin(String studentUsername, String hashedPassword, String salt) throws SQLException {
+        return(loginDao.uploadLogin(studentUsername, hashedPassword, salt));
     }
 }

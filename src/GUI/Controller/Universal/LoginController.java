@@ -1,6 +1,8 @@
 package GUI.Controller.Universal;
 
 import BE.Login;
+import DAL.crypto.BCrypt;
+import GUI.Controller.Teacher.CreateStudentController;
 import GUI.Model.LoginModel;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
@@ -17,6 +19,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class LoginController {
+    private CreateStudentController createStudentController = new CreateStudentController();
+
     public FontAwesomeIconView LockIkon;
     public FontAwesomeIconView userIkon;
     @FXML
@@ -27,7 +31,7 @@ public class LoginController {
     private TextField txtPasswordField;
 
 
-    private LoginModel loginModel = new LoginModel();
+    private LoginModel loginModel = LoginModel.getInstance();
 
     /**
      * Constructor
@@ -42,36 +46,43 @@ public class LoginController {
      * @throws SQLServerException
      */
     public void Login() throws IOException, SQLServerException {
+        /** Randomly generated salt
+         / gensalt's log_rounds parameter determines the complexity
+         / the work factor is 2**log_rounds, and the default is 10
+         */
+
         Login login =  loginModel.login(txtFieldUsername.getText(), txtPasswordField.getText());
+
         /**
          * Testing in terminal to see right data from user
          */
-        System.out.println(txtFieldUsername.getText());
-        System.out.println(txtPasswordField.getText());
+        //System.out.println(txtFieldUsername.getText());
+        //System.out.println(txtPasswordField.getText());
 
+        if(login != null) {
 
-        /**
-         * If Student then login
-         */
-        if(login.getUserType().equals("Student")){
-            Stage switcher = (Stage) btnLogin.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Patient.fxml"));
-            switcher.setTitle("Patient");
-            Scene scene = new Scene(root);
-            switcher.setScene(scene);
+            /**
+             * If Student then login
+             */
+            if (login.getUserType().equals("Student")) {
+                Stage switcher = (Stage) btnLogin.getScene().getWindow();
+                Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Patient.fxml"));
+                switcher.setTitle("Patient");
+                Scene scene = new Scene(root);
+                switcher.setScene(scene);
+            }
+
+            /**
+             * If Teacher then login
+             */
+            if (login.getUserType().equals("Teacher")) {
+                Stage switcher = (Stage) btnLogin.getScene().getWindow();
+                Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
+                switcher.setTitle("Teacher");
+                Scene scene = new Scene(root);
+                switcher.setScene(scene);
+            }
         }
-
-        /**
-         * If Teacher then login
-         */
-        if(login.getUserType().equals("Teacher")){
-            Stage switcher = (Stage) btnLogin.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
-            switcher.setTitle("Teacher");
-            Scene scene = new Scene(root);
-            switcher.setScene(scene);
-        }
-
 
     }
 

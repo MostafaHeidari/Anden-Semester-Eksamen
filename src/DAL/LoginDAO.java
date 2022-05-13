@@ -2,6 +2,7 @@ package DAL;
 
 import BE.Login;
 import BE.Student;
+import DAL.crypto.BCrypt;
 import DAL.db.DatabaseConnector;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 
@@ -27,18 +28,21 @@ public class LoginDAO {
      * @throws SQLServerException
      */
     public Login login(String Username, String Password) {
-        String sql = "SELECT * FROM Login WHERE Username =? AND Password =?;";
+        //Get all users where
+        String sql = "SELECT * FROM Login WHERE Username =?;";
         try(Connection connection = connector.getConnection()){
             PreparedStatement st = connection.prepareStatement(sql);
             st.setString(1, Username);
-            st.setString(2, Password);
             ResultSet rs = st.executeQuery();
-            if (rs.next()){
-                int id = rs.getInt("UserID");
-                String username = rs.getString("Username");
-                String password = rs.getString("Password");
-                String UserType = rs.getString("Usertype");
-                return new Login(id, username, password, UserType);
+            while (rs.next()){
+                if(rs.getString("Password").equals(BCrypt.hashpw(Password, rs.getString("Salt")))){
+                    int id = rs.getInt("UserID");
+                    String username = rs.getString("Username");
+                    String password = rs.getString("Password");
+                    String UserType = rs.getString("Usertype");
+                    return new Login(id, username, password, UserType);
+                }
+
             }
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
@@ -48,16 +52,17 @@ public class LoginDAO {
         return null;
     }
 
-    public Login uploadLogin(String studentUsername, String hashedPassword) throws SQLException {
+    public Login uploadLogin(String studentUsername, String hashedPassword, String salt) throws SQLException {
         Connection connection = connector.getConnection();
 
-        String sql = "INSERT INTO Login (Username,Password,Usertype) VALUES (?,?,?);";
+        String sql = "INSERT INTO Login (Username,Password,Usertype, Salt) VALUES (?,?,?, ?);";
 
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
         ps.setString(1, studentUsername);
         ps.setString(2, hashedPassword);
         ps.setString(3, "Student");
+        ps.setString(4, salt);
 
         int affectedRows = ps.executeUpdate();
         if (affectedRows == 1) {

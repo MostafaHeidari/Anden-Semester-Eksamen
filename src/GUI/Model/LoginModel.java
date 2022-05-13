@@ -1,19 +1,40 @@
 package GUI.Model;
 
 import BE.Login;
-import BE.Student;
 import BLL.LoginManager;
+import DAL.crypto.BCrypt;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.io.IOException;
+import java.security.SecureRandom;
 import java.sql.SQLException;
 
 public class LoginModel {
+
+        // Static variable reference of single_instance
+        // of type Singleton
+    private static LoginModel single_instance = null;
+
+
+        // Static method
+        // Static method to create instance of Singleton class
+        public static LoginModel getInstance() throws IOException {
+            if (single_instance == null)
+                single_instance = new LoginModel();
+
+            return single_instance;
+        }
+
     private LoginManager loginManager;
 
     private ObservableList<Login> loginList = FXCollections.observableArrayList();
+
+    // Password -> A salt -> A hash
+    // Store : password = password , salt = BCrypt.gensalt , hash =   new SecureRandom()
+    // Log rounds
+    String salt;
 
     /**
      * Constructor
@@ -21,6 +42,10 @@ public class LoginModel {
      */
     public LoginModel() throws IOException {
         loginManager = new LoginManager();
+    }
+
+    public String getSalt(){
+        return BCrypt.gensalt(10);
     }
 
     /**
@@ -41,6 +66,7 @@ public class LoginModel {
      * @throws SQLServerException
      */
     public void uploadLogin(String studentUsername, String hashedPassword) throws SQLException {
-        loginList.add(loginManager.uploadLogin(studentUsername,hashedPassword));
+        String salt = getSalt();
+        loginList.add(loginManager.uploadLogin(studentUsername,BCrypt.hashpw(hashedPassword, salt), salt));
     }
 }

@@ -77,17 +77,22 @@ public class StudentDAO {
     public void removeStudent(Student student) {
         String sql1 = "DELETE FROM GroupStudents WHERE StudentID = (?);";
         String sql2 = "DELETE FROM StudentTable WHERE StudentID = (?);";
+        String sql3 = "DELETE FROM Login WHERE Username = (?);";
 
         try (Connection connection = DC.getConnection()) {
 
+
             PreparedStatement ps1 = connection.prepareStatement(sql1, Statement.RETURN_GENERATED_KEYS);
             PreparedStatement ps2 = connection.prepareStatement(sql2, Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps3 = connection.prepareStatement(sql3, Statement.RETURN_GENERATED_KEYS);
 
             ps1.setInt(1, student.getStudentId());
             ps2.setInt(1, student.getStudentId());
+            ps3.setString(1,student.getUserName());
 
             ps1.executeUpdate();
             ps2.executeUpdate();
+            ps3.executeUpdate();
 
 
         } catch (SQLException throwables) {

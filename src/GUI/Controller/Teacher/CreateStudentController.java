@@ -31,9 +31,6 @@ public class CreateStudentController implements Initializable {
 
     public StudentModel studentModel;
 
-    private BCrypt bCrypt = new BCrypt();
-
-
 
     private EditStudentController editStudentController;
 
@@ -78,6 +75,7 @@ public class CreateStudentController implements Initializable {
     public Student selectedStudent;
 
 
+
     /**
      * Constructor
      * @throws IOException
@@ -103,6 +101,14 @@ public class CreateStudentController implements Initializable {
         });
     }
 
+    public String saltPw(){
+        /** Randomly generated salt
+         / Statict salt
+         */
+        String salt = "SuperCoolAppLol";
+        return salt;
+    }
+
     /**
      * Creating a student with the OpretElevActionButton method
      */
@@ -119,29 +125,23 @@ public class CreateStudentController implements Initializable {
             String studentName = txtNameField.getText();
             String studentLastname = txtLastnameField.getText();
             String studentAccount = txtUserField.getText();
-            
-            /** Randomly generated salt
-            / gensalt's log_rounds parameter determines the complexity
-             / the work factor is 2**log_rounds, and the default is 10
-            */
-            String salt = bCrypt.gensalt(10);
+
 
 
             /** Hash a password for the first time
             / Store this value in DB. Salt is included, so no need for separate salt column in DB
              */
-            String hashedPassword = BCrypt.hashpw(passwordTxt.getText(),salt);
             String studentUsername = txtUserField.getText();
 
 
-            uploadLogin(studentUsername,hashedPassword);
+            uploadLogin(studentUsername,passwordTxt.getText());
             uploadStudentInfo(studentName, studentLastname,studentAccount);
         }
     }
 
 
     private void uploadLogin(String studentUsername, String hashedPassword) throws IOException, SQLException {
-        LoginModel loginModel = new LoginModel();
+        LoginModel loginModel = LoginModel.getInstance();
 
         loginModel.uploadLogin(studentUsername,hashedPassword);
     }
