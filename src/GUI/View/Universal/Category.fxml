@@ -297,7 +297,7 @@
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Søvn og hvile" underline="true">
                                  <font>
-                                    <Font size="20.0" />
+                                    <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets bottom="5.0" />
@@ -329,7 +329,7 @@
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Udskillelse af affaldsstoffer" underline="true">
                                  <font>
-                                    <Font size="20.0" />
+                                    <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets bottom="5.0" />
@@ -389,7 +389,7 @@
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Viden og udvikling" underline="true">
                                  <font>
-                                    <Font size="20.0" />
+                                    <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets bottom="3.0" />
@@ -429,7 +429,7 @@
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kommunikation" underline="true">
                                  <font>
-                                    <Font size="20.0" />
+                                    <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets bottom="3.0" />
@@ -453,7 +453,7 @@
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Psykosociale forhold" underline="true">
                                  <font>
-                                    <Font size="20.0" />
+                                    <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets bottom="5.0" />
@@ -501,7 +501,7 @@
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Smerter og sanseindtryk" underline="true">
                                  <font>
-                                    <Font size="20.0" />
+                                    <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets bottom="5.0" />
