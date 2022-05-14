@@ -31,7 +31,7 @@
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Funktionsniveau" underline="true">
                                  <font>
-                                    <Font size="20.0" />
+                                    <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets bottom="5.0" />
@@ -66,7 +66,7 @@
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Bevægeapparat" underline="true">
                                  <font>
-                                    <Font size="20.0" />
+                                    <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets bottom="5.0" />
@@ -90,7 +90,7 @@
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Seksualitet" underline="true">
                                  <font>
-                                    <Font size="20.0" />
+                                    <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets bottom="5.0" />
@@ -117,7 +117,7 @@
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Hud og slimhinder" underline="true">
                                  <font>
-                                    <Font size="20.0" />
+                                    <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets bottom="5.0" />
@@ -209,7 +209,7 @@
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Respiration og cirkulation" underline="true">
                                  <font>
-                                    <Font size="20.0" />
+                                    <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets bottom="5.0" />
@@ -241,7 +241,7 @@
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Ernæring" underline="true">
                                  <font>
-                                    <Font size="20.0" />
+                                    <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets bottom="5.0" />
@@ -392,7 +392,7 @@
                                     <Font size="20.0" />
                                  </font>
                                  <VBox.margin>
-                                    <Insets bottom="5.0" />
+                                    <Insets bottom="3.0" />
                                  </VBox.margin>
                               </Text>
                               <Label fx:id="videnogudvikling_1" onMouseClicked="#videnogudvikling_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med hudkommelse">
@@ -432,7 +432,7 @@
                                     <Font size="20.0" />
                                  </font>
                                  <VBox.margin>
-                                    <Insets bottom="5.0" />
+                                    <Insets bottom="3.0" />
                                  </VBox.margin>
                               </Text>
                               <Label fx:id="kommunikation_1" onMouseClicked="#kommunikation_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med kommunikation">
@@ -440,14 +440,14 @@
                                     <Font size="14.0" />
                                  </font>
                                  <VBox.margin>
-                                    <Insets bottom="5.0" />
+                                    <Insets bottom="7.0" />
                                  </VBox.margin>
                               </Label>
                            </children>
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="208.0" prefWidth="322.0" styleClass="Category">
+                  <HBox prefHeight="182.0" prefWidth="322.0" styleClass="Category">
                      <children>
                         <VBox prefHeight="186.0" prefWidth="352.0" styleClass="Category">
                            <children>
@@ -495,7 +495,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="390.0" prefWidth="322.0">
+                  <HBox prefHeight="397.0" prefWidth="322.0">
                      <children>
                         <VBox maxHeight="539.0" minHeight="112.0" prefHeight="358.0" prefWidth="378.0" styleClass="Category">
                            <children>
