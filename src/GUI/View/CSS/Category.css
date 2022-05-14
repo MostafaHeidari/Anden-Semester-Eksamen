@@ -1,5 +1,9 @@
+HBox{
+    -fx-border-color: black;
+}
 VBox{
     -fx-alignment: center;
+    -fx-border-color: black;
 }
 .CategoryHealthConditions{
     -fx-border-width: 3;
