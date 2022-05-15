@@ -37,22 +37,6 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <Label fx:id="funktionsniveau_3"  style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med personlig pleje">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="funktionsniveau_2" onMouseClicked="#funktionsniveau_2" styleClass="CategoryHealthConditions" text="Problemer med daglige aktiviteter">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
                            </children>
                            <HBox.margin>
                               <Insets />

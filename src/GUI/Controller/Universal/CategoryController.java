@@ -54,19 +54,16 @@ public class CategoryController {
      * Subcategory changing text
      */
     public void funktionsniveau_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        //shiftWindow("Problemer med personlig pleje");
         Stage switcher = (Stage) funktionsniveau_1.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/SubCategoriesFunktionsNiveau.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SubCategoriesFunktionsNiveau.fxml"));
+        Parent root = loader.load();
         Scene scene = new Scene(root);
+
+        SubcategoryFunctionLevelController controller = loader.getController();
+        controller.setId();
+
         switcher.setTitle("Funktions Niveau");
         switcher.setScene(scene);
-    }
-
-    /**
-     * Subcategory changing text
-     */
-    public void funktionsniveau_2(MouseEvent mouseEvent) throws IOException, SQLException {
-        shiftWindow("Problemer med daglige aktiviteter");
     }
 
     /**
