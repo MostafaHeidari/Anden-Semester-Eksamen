@@ -53,7 +53,7 @@ public class CreateStudentController implements Initializable {
     @FXML
     private TextField txtLastnameField;
     @FXML
-    public PasswordField passwordTxt;
+    public TextField passwordTxt;
     @FXML
     private TextField txtUserField;
 
