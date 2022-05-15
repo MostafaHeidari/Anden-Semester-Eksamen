@@ -46,10 +46,6 @@ public class LoginController {
      * @throws SQLServerException
      */
     public void Login() throws IOException, SQLServerException {
-        /** Randomly generated salt
-         / gensalt's log_rounds parameter determines the complexity
-         / the work factor is 2**log_rounds, and the default is 10
-         */
 
         Login login =  loginModel.login(txtFieldUsername.getText(), txtPasswordField.getText());
 

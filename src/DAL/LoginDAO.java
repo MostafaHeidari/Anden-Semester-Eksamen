@@ -32,7 +32,10 @@ public class LoginDAO {
         String sql = "SELECT * FROM Login WHERE Username =?;";
         try(Connection connection = connector.getConnection()){
             PreparedStatement st = connection.prepareStatement(sql);
+
             st.setString(1, Username);
+
+
             ResultSet rs = st.executeQuery();
             while (rs.next()){
                 if(rs.getString("Password").equals(BCrypt.hashpw(Password, rs.getString("Salt")))){
@@ -42,6 +45,7 @@ public class LoginDAO {
                     String UserType = rs.getString("Usertype");
                     return new Login(id, username, password, UserType);
                 }
+
 
             }
         } catch (SQLException sqlException) {
@@ -80,7 +84,7 @@ public class LoginDAO {
     public Login uploadLoginTeacher(String userNameTeacher, String hashpw, String salt) throws SQLException {
         Connection connection = connector.getConnection();
 
-        String sql = "INSERT INTO Login (Username,Password,Usertype, Salt) VALUES (?,?,?, ?);";
+        String sql = "INSERT INTO Login (Username,Password,Usertype, Salt) VALUES (?,?,?,?);";
 
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
