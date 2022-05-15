@@ -20,7 +20,7 @@ public class CategoryController {
     @FXML
     private JFXButton btnCategoryBack;
     @FXML
-    private Text funktionsniveau;
+    private Text funktionsniveau_1;
 
     /**
      * Goes to Patient view
@@ -54,7 +54,12 @@ public class CategoryController {
      * Subcategory changing text
      */
     public void funktionsniveau_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        shiftWindow("Problemer med personlig pleje");
+        //shiftWindow("Problemer med personlig pleje");
+        Stage switcher = (Stage) funktionsniveau_1.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/SubCategoriesFunktionsNiveau.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("Funktions Niveau");
+        switcher.setScene(scene);
     }
 
     /**
@@ -352,11 +357,4 @@ public class CategoryController {
         shiftWindow("Problemer med væske fra dræn");
     }
 
-    public void funktionsniveau(MouseEvent mouseEvent) throws IOException {
-        Stage switcher = (Stage) funktionsniveau.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/SubCategoriesFunktionsNiveau.fxml"));
-        Scene scene = new Scene(root);
-        switcher.setTitle("Funktions Niveau");
-        switcher.setScene(scene);
-    }
 }
