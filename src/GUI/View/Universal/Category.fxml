@@ -29,7 +29,7 @@
                      <children>
                         <VBox prefHeight="153.0" prefWidth="324.0" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Funktionsniveau" underline="true">
+                              <Text fx:id="funktionsniveau" onMouseClicked="#funktionsniveau" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Funktionsniveau" underline="true">
                                  <font>
                                     <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>

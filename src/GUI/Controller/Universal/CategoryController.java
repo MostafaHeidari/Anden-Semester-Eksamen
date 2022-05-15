@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -18,6 +19,8 @@ public class CategoryController {
     private javafx.scene.layout.HBox HBox;
     @FXML
     private JFXButton btnCategoryBack;
+    @FXML
+    private Text funktionsniveau;
 
     /**
      * Goes to Patient view
@@ -347,5 +350,13 @@ public class CategoryController {
      */
     public void udskillelseafaffaldsstoffer_5(MouseEvent mouseEvent) throws IOException, SQLException {
         shiftWindow("Problemer med væske fra dræn");
+    }
+
+    public void funktionsniveau(MouseEvent mouseEvent) throws IOException {
+        Stage switcher = (Stage) funktionsniveau.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/SubCategoriesFunktionsNiveau.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("Funktions Niveau");
+        switcher.setScene(scene);
     }
 }
