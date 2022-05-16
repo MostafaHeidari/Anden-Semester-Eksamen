@@ -37,7 +37,7 @@
                   <TextField fx:id="txtFieldCitizenFirstName" prefHeight="40.0" prefWidth="275.0" promptText="Navn" />
                   <TextField fx:id="txtFieldCitizenLastName" layoutX="10.0" layoutY="18.0" prefHeight="35.0" prefWidth="275.0" promptText="Efternavn" GridPane.rowIndex="1" />
                   <TextField fx:id="txtFieldCitizenCPR" layoutX="10.0" layoutY="60.0" prefHeight="36.0" prefWidth="275.0" promptText="CPR-nr" GridPane.rowIndex="2" />
-                  <TextField fx:id="txtFieldCitizenTelefon1" prefHeight="34.0" prefWidth="275.0" promptText="Adresse" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtFieldCitizenAddresse" prefHeight="34.0" prefWidth="275.0" promptText="Adresse" GridPane.rowIndex="3" />
                </children>
             </GridPane>
             <TextArea fx:id="txtAreaCitizenGeneralInfo" layoutX="354.0" layoutY="335.0" prefHeight="195.0" prefWidth="548.0" promptText="Generelle Oplysninger" />

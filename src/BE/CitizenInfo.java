@@ -15,13 +15,12 @@ public class CitizenInfo {
 
      * Constructor with citizenId, citizenName,  citizenLastName, citizenAge
      */
-
-    public CitizenInfo(int citizenId, String citizenName, String citizenLastName, String citizenAddress, String citizenSEX, String citizenInformation) {
+    public CitizenInfo(int citizenId, String citizenName, String citizenLastName, String citizenAddress, String CPR, String citizenInformation) {
         this.citizenId = citizenId;
         this.citizenName = citizenName;
         this.citizenLastName = citizenLastName;
         this.citizenAddress = citizenAddress;
-        this.CPR = citizenSEX;
+        this.CPR = CPR;
         this.citizenInformation = citizenInformation;
     }
 
@@ -49,10 +48,6 @@ public class CitizenInfo {
         this.citizenLastName = citizenLastName;
     }
 
-
-
-
-
     public String getCitizenAddress() {
         return citizenAddress;
     }
@@ -61,7 +56,7 @@ public class CitizenInfo {
         this.citizenAddress = citizenAddress;
     }
 
-    public String isCitizenSEX() {
+    public String getCPR() {
         return CPR;
     }
 
@@ -83,8 +78,8 @@ public class CitizenInfo {
                 "citizenId=" + citizenId +
                 ", citizenName='" + citizenName + '\'' +
                 ", citizenLastName='" + citizenLastName + '\'' +
-                 ", citizenAddress='" + citizenAddress + '\'' +
-                ", citizenSEX=" + CPR +
+                ", citizenAddress='" + citizenAddress + '\'' +
+                ", CPR='" + CPR + '\'' +
                 ", citizenInformation='" + citizenInformation + '\'' +
                 '}';
     }
