@@ -7,14 +7,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.SubcategoryHudOgSLimhinderController">
+<AnchorPane prefHeight="767.0" prefWidth="1057.0" stylesheets="@../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.SubcategoryHudOgSLimhinderController">
    <children>
-      <JFXButton fx:id="btnBack" layoutX="625.0" layoutY="547.0" onAction="#subCategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
+      <JFXButton fx:id="btnBack" layoutX="625.0" layoutY="700.0" onAction="#subCategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="btnLogOut" layoutX="725.0" layoutY="547.0" onAction="#subCategoryLogOut" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Log ud">
+      <JFXButton fx:id="btnLogOut" layoutX="725.0" layoutY="700.0" onAction="#subCategoryLogOut" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Log ud">
          <font>
             <Font size="15.0" />
          </font>
@@ -32,7 +32,7 @@
       <TextArea fx:id="txtsurgicalWound" layoutX="301.0" layoutY="80.0" prefHeight="92.0" prefWidth="501.0" />
       <TextArea fx:id="txtdiabeticWound" layoutX="300.0" layoutY="190.0" prefHeight="88.0" prefWidth="501.0" />
 
-      <JFXButton fx:id="btnSave" layoutX="536.0" layoutY="547.0" onAction="#subCategorySave" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Gem">
+      <JFXButton fx:id="btnSave" layoutX="536.0" layoutY="700.0" onAction="#subCategorySave" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Gem">
          <font>
             <Font size="15.0" />
          </font>
@@ -44,6 +44,18 @@
       </Label>
       <TextArea fx:id="txtCancerWound" layoutX="300.0" layoutY="305.0" prefHeight="88.0" prefWidth="501.0" />
       <Label layoutX="12.0" layoutY="329.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med cancer sår">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtPressureWound" layoutX="300.0" layoutY="409.0" prefHeight="88.0" prefWidth="501.0" />
+      <Label layoutX="13.0" layoutY="431.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med tryk sår">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtArtilleryWound" layoutX="300.0" layoutY="529.0" prefHeight="88.0" prefWidth="501.0" />
+      <Label layoutX="17.0" layoutY="554.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med artellerielt sår">
          <font>
             <Font size="14.0" />
          </font>

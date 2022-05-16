@@ -20,10 +20,16 @@ public class SubcategoryHudOgSLimhinderController {
     private JFXButton btnBack;
     @FXML
     private JFXButton btnLogOut;
-
-    public TextArea txtsurgicalWound;
-    public TextArea txtdiabeticWound;
-    public TextArea txtCancerWound;
+    @FXML
+    private TextArea txtsurgicalWound;
+    @FXML
+    private TextArea txtdiabeticWound;
+    @FXML
+    private TextArea txtCancerWound;
+    @FXML
+    private TextArea txtPressureWound;
+    @FXML
+    private TextArea txtArtilleryWound;
 
    // this is instance variable is not used to now//
     private int caseID = 27;
@@ -68,22 +74,33 @@ public class SubcategoryHudOgSLimhinderController {
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
         if (categoryModel.readCategory(caseID,"Problems with surgical wound") == null){
-
             categoryModel.createCategory(caseID,"Problems with surgical wound",txtsurgicalWound.getText());
         }
         categoryModel.updateCategory(caseID,"Problems with surgical wound",txtsurgicalWound.getText());
 
-        if (categoryModel.readCategory(caseID,"Problems with diabetic wound") == null){
 
+        if (categoryModel.readCategory(caseID,"Problems with diabetic wound") == null){
             categoryModel.createCategory(caseID,"Problems with diabetic wound",txtdiabeticWound.getText());
         }
         categoryModel.updateCategory(caseID,"Problems with diabetic wound",txtdiabeticWound.getText());
 
-        if (categoryModel.readCategory(caseID,"Problems with cancer wound") == null){
 
+        if (categoryModel.readCategory(caseID,"Problems with cancer wound") == null){
             categoryModel.createCategory(caseID,"Problems with cancer wound",txtCancerWound.getText());
         }
         categoryModel.updateCategory(caseID,"Problems with cancer wound",txtCancerWound.getText());
+
+
+        if (categoryModel.readCategory(caseID,"Problems with pressure wound") == null){
+            categoryModel.createCategory(caseID,"Problems with pressure wound",txtPressureWound.getText());
+        }
+        categoryModel.updateCategory(caseID,"Problems with pressure wound",txtPressureWound.getText());
+
+
+        if (categoryModel.readCategory(caseID,"Problems with artillery wound") == null){
+            categoryModel.createCategory(caseID,"Problems with artillery wound",txtArtilleryWound.getText());
+        }
+        categoryModel.updateCategory(caseID,"Problems with artillery wound",txtArtilleryWound.getText());
     }
 
     /**
@@ -95,5 +112,7 @@ public class SubcategoryHudOgSLimhinderController {
         txtsurgicalWound.setText(categoryModel.readCategory(caseID,"Problems with surgical wound"));
         txtdiabeticWound.setText(categoryModel.readCategory(caseID,"Problems with diabetic wound"));
         txtCancerWound.setText(categoryModel.readCategory(caseID,"Problems with cancer wound"));
+        txtPressureWound.setText(categoryModel.readCategory(caseID,"Problems with pressure wound"));
+        txtArtilleryWound.setText(categoryModel.readCategory(caseID,"Problems with artillery wound"));
     }
 }
