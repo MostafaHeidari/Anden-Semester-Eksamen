@@ -33,7 +33,9 @@ public class CitizenInfoModel {
      * Creates a case using the createCitizen method from citizenManager
      */
 
-    public CitizenInfo createCitizen(String citizenName, String citizenLastName, String citizenAddress, String CPR, String citizenInformation) throws SQLException {
-        return citizenInfoManger.createCitizen(citizenName, citizenLastName, citizenAddress, CPR,citizenInformation);
+
+
+    public void createCitizen(String citizenName, String citizenLastName, String citizenAddress, String CPR, String citizenInformation) throws SQLException {
+        citizensList.add(citizenInfoManger.createCitizen(citizenName, citizenLastName, citizenAddress, CPR,citizenInformation));
     }
 }

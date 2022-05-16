@@ -52,12 +52,12 @@ public class CitizenInfoDAO {
     public CitizenInfo createCitizen(String citizenName, String citizenLastName, String citizenAddress, String CPR, String citizenInformation) throws SQLException {
         try (Connection connection = DC.getConnection()) {
 
-            String sql = "INSERT INTO Patients (PatientID, PatientName , PatientLastName, PatientSex, PatientGenInfo) VALUES (?,?,?,?,?);";
+            String sql = "INSERT INTO Patients (PatientID, PatientName , PatientLastName, PatientGenInfo, Cpr) VALUES (?,?,?,?,?);";
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
                 preparedStatement.setString(1, citizenName);
                 preparedStatement.setString(2, citizenLastName);
                 preparedStatement.setString(3, citizenAddress);
-                preparedStatement.setString(4, citizenAddress);
+                preparedStatement.setString(4, CPR);
                 preparedStatement.setString(5, citizenInformation);
                 preparedStatement.execute();
                 ResultSet resultSet = preparedStatement.getGeneratedKeys();

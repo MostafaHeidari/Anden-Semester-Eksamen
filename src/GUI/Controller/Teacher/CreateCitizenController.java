@@ -1,5 +1,7 @@
 package GUI.Controller.Teacher;
 
+import BE.CitizenInfo;
+import GUI.Model.CitizenInfoModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,20 +26,9 @@ public class CreateCitizenController {
     @FXML
     public TextField txtFieldCitizenCPR;
     @FXML
-    public TextField txtFieldCitizenTelefon;
+    public TextField txtFieldCitizenAddresse;
     @FXML
     public TextArea txtAreaCitizenGeneralInfo;
-
-    //CheckBox
-    @FXML
-    public DatePicker txtFieldCitizenAge;
-    @FXML
-    public CheckBox checkBoxMale;
-    @FXML
-    public CheckBox checkBoxFemale;
-    @FXML
-    public CheckBox checkBoxOther;
-
 
 
     @FXML
@@ -53,6 +44,24 @@ public class CreateCitizenController {
     private JFXButton BtnLogOutOfPatient;
     @FXML
     private JFXButton BtnBack;
+
+
+    public void btnHandleSaveCitizen() throws Exception {
+        String firstName = txtFieldCitizenFirstName.getText();
+        String lastName = txtFieldCitizenLastName.getText();
+        String Address = txtFieldCitizenAddresse.getText();
+        String cpr = txtFieldCitizenCPR.getText();
+        String info = txtAreaCitizenGeneralInfo.getText();
+
+        uploadCitizenInfo(firstName, lastName, Address, cpr, info);
+
+    }
+
+    public void uploadCitizenInfo(String firstName, String lastName, String address, String cpr, String info) throws IOException, SQLException {
+
+        CitizenInfoModel citizenInfo = new CitizenInfoModel();
+        citizenInfo.createCitizen(firstName, lastName, address, cpr, info);
+    }
 
     /**
      * Goes to TeacherKlasseAndStudents view
@@ -108,24 +117,5 @@ public class CreateCitizenController {
         switcher.setTitle("SOSUS System");
         switcher.setScene(scene);
     }
-
-
-
-    public void btnHandleSaveCitizen() throws SQLException {
-        String firstName = txtFieldCitizenFirstName.getText();
-        String lastName = txtFieldCitizenLastName.getText();
-        String CPR = txtFieldCitizenCPR.getText();
-        String phoneNumber = txtFieldCitizenTelefon.getText();
-        String Age = txtFieldCitizenAge.toString();
-        String info = txtAreaCitizenGeneralInfo.getText();
-        String sex = null;
-        if(checkBoxMale.isSelected()){
-            sex = "Male";
-        }else if(checkBoxFemale.isSelected()){
-            sex = "Female";
-        }else if (checkBoxOther.isSelected()){
-            sex = "Other";
-        }
-    }
-
 }
+

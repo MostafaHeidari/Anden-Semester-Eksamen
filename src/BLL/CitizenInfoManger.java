@@ -13,6 +13,7 @@ public class CitizenInfoManger {
 
     /**
      * Constructor
+     *
      * @throws IOException
      */
     public CitizenInfoManger() throws IOException {
@@ -21,6 +22,7 @@ public class CitizenInfoManger {
 
     /**
      * Gets the list of getAllCitizens using the getAllCitizens method in citizenInfoDAO.
+     *
      * @return a list of getAllClasses
      */
     public ObservableList<CitizenInfo> getAllCitizens() {
@@ -35,12 +37,12 @@ public class CitizenInfoManger {
     }
 
 
-
     /**
      * Creates a case using the createCitizen method from citizenDAO
      */
+
     public CitizenInfo createCitizen(String citizenName, String citizenLastName, String citizenAddress, String CPR, String citizenInformation) throws SQLException {
-         return citizenInfoDAO.createCitizen(citizenName, citizenLastName, citizenAddress, CPR,citizenInformation);
+        return (citizenInfoDAO.createCitizen(citizenName, citizenLastName, citizenAddress, CPR, citizenInformation));
     }
 
 }

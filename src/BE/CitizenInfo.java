@@ -24,6 +24,9 @@ public class CitizenInfo {
         this.citizenInformation = citizenInformation;
     }
 
+
+
+
     public int getCitizenId() {
         return citizenId;
     }
