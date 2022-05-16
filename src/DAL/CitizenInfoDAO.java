@@ -1,6 +1,7 @@
 package DAL;
 
 import BE.CitizenInfo;
+import BE.Student;
 import DAL.db.DatabaseConnector;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 
@@ -15,15 +16,16 @@ public class CitizenInfoDAO {
 
     /**
      * Constructor
+     *
      * @throws IOException
      */
-    public CitizenInfoDAO() throws IOException
-    {
+    public CitizenInfoDAO() throws IOException {
         DC = new DatabaseConnector();
     }
 
     /**
      * Gets a list of getAllCitizens
+     *
      * @throws IOException
      */
     public List<CitizenInfo> getAllCitizens() throws SQLException {
@@ -40,9 +42,9 @@ public class CitizenInfoDAO {
                     rs.getInt("PatientID"),
                     rs.getString("PatientName"),
                     rs.getString("PatientLastName"),
-                     rs.getString("PatientEmail"),
-                    rs.getString("PatientSex"),
-                    rs.getString("PatientGenInfo"));
+                    rs.getString("PatientGenInfo"),
+                    rs.getString("Cpr"),
+                    rs.getString("PatientAddress"));
             allCitizenInfos.add(citizenInfoCord);
         }
         return allCitizenInfos;
@@ -50,28 +52,38 @@ public class CitizenInfoDAO {
 
     //This method is used to Creating Citizen by inserting information in Patients table in a database.
     public CitizenInfo createCitizen(String citizenName, String citizenLastName, String citizenAddress, String CPR, String citizenInformation) throws SQLException {
+
         try (Connection connection = DC.getConnection()) {
 
-            String sql = "INSERT INTO Patients (PatientID, PatientName , PatientLastName, PatientGenInfo, Cpr) VALUES (?,?,?,?,?);";
-            try (PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
-                preparedStatement.setString(1, citizenName);
-                preparedStatement.setString(2, citizenLastName);
-                preparedStatement.setString(3, citizenAddress);
-                preparedStatement.setString(4, CPR);
-                preparedStatement.setString(5, citizenInformation);
-                preparedStatement.execute();
-                ResultSet resultSet = preparedStatement.getGeneratedKeys();
-                int id = 0;
-                if (resultSet.next()) {
-                    id = resultSet.getInt(1);
+            String sql = "INSERT INTO Patients (PatientName, PatientLastName , PatientGenInfo, Cpr, PatientAddress) VALUES (?,?,?,?,?);";
+
+            PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+
+            ps.setString(1, citizenName);
+            ps.setString(2, citizenLastName);
+            ps.setString(3, citizenInformation);
+            ps.setString(4, CPR);
+            ps.setString(5, citizenAddress);
+
+
+            int affectedRows = ps.executeUpdate();
+
+            if (affectedRows == 1) {
+                ResultSet rs = ps.getGeneratedKeys();
+                if (rs.next()) {
+                    int citizenId = rs.getInt(1);
+                    CitizenInfo citizenCord = new CitizenInfo(citizenId, citizenName, citizenLastName, citizenAddress, CPR, citizenInformation);
+                    return citizenCord;
                 }
 
-                CitizenInfo citizen = new CitizenInfo(id, citizenName, citizenLastName,citizenAddress, CPR, citizenInformation);
-                return citizen;
             }
-
-        } catch (SQLServerException throwables) {
-            throw new SQLException();
         }
+        catch (SQLServerException throwables) {
+        throw new SQLException();
+        }
+
+        return null;
     }
 }
+
+

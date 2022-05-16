@@ -66,6 +66,7 @@ public class TeacherDAO {
         ps.setString(4, teacherUserName);
 
         int affectedRows = ps.executeUpdate();
+
         if (affectedRows == 1) {
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {

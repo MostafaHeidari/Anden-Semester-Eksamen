@@ -18,6 +18,9 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class CreateCitizenController {
+
+    CitizenInfoModel citizenInfo;
+
     //textFiled
     @FXML
     public TextField txtFieldCitizenFirstName;
@@ -45,6 +48,9 @@ public class CreateCitizenController {
     @FXML
     private JFXButton BtnBack;
 
+    public CreateCitizenController() throws IOException {
+        citizenInfo = new CitizenInfoModel();
+    }
 
     public void btnHandleSaveCitizen() throws Exception {
         String firstName = txtFieldCitizenFirstName.getText();
@@ -57,10 +63,15 @@ public class CreateCitizenController {
 
     }
 
-    public void uploadCitizenInfo(String firstName, String lastName, String address, String cpr, String info) throws IOException, SQLException {
+    public void uploadCitizenInfo(String firstName, String lastName, String address, String cpr, String info) throws SQLException {
 
-        CitizenInfoModel citizenInfo = new CitizenInfoModel();
         citizenInfo.createCitizen(firstName, lastName, address, cpr, info);
+
+        txtFieldCitizenFirstName.clear();
+        txtFieldCitizenLastName.clear();
+        txtFieldCitizenAddresse.clear();
+        txtFieldCitizenCPR.clear();
+        txtAreaCitizenGeneralInfo.clear();
     }
 
     /**

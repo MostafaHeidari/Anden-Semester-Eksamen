@@ -31,11 +31,15 @@ public class StudentDAO {
         Connection connection = DC.getConnection();
 
         String sql = "INSERT INTO StudentTable (NameStudent,LastNameStudent,UserName) VALUES (?,?,?);";
+
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+
         ps.setString(1, studentName);
         ps.setString(2, studentLastname);
         ps.setString(3, userName);
+
         int affectedRows = ps.executeUpdate();
+
         if (affectedRows == 1) {
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {

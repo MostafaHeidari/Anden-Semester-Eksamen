@@ -147,4 +147,7 @@ public class CasesController implements Initializable {
 
     public void btnBackGroups(ActionEvent actionEvent) {
     }
+
+    public void funktionsevneBtn(ActionEvent event) {
+    }
 }
