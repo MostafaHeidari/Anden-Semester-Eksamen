@@ -78,6 +78,17 @@ public class LoginController {
                 Scene scene = new Scene(root);
                 switcher.setScene(scene);
             }
+
+            /**
+             * If Admin then login
+             */
+            if (login.getUserType().equals("Admin")) {
+                Stage switcher = (Stage) btnLogin.getScene().getWindow();
+                Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Admin/AdminCreateTeacher.fxml"));
+                switcher.setTitle("Teacher");
+                Scene scene = new Scene(root);
+                switcher.setScene(scene);
+            }
         }
 
     }

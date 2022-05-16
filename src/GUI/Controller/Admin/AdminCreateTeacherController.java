@@ -152,8 +152,16 @@ public class AdminCreateTeacherController implements Initializable {
             selectedTeacher = (Teacher) tvTeacher.getSelectionModel().getSelectedItem();
         }
     }
-    public void createAdminBtn(ActionEvent event) {
 
+    /**
+     * Goes to the Create Admin view
+     */
+    public void createAdminBtn(ActionEvent event) throws IOException {
+        Stage switcher = (Stage) BtnBack.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Admin/AdminCreateAdmin.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("Opret System");
+        switcher.setScene(scene);
     }
 
 

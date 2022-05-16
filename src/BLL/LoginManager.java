@@ -54,4 +54,16 @@ public class LoginManager {
     public Login uploadLoginTeacher(String userNameTeacher, String hashpw, String salt) throws SQLException {
         return(loginDao.uploadLoginTeacher(userNameTeacher, hashpw, salt));
     }
+
+    /**
+     * Gets the uploadLogin userNameAdmin, adminPassword using uploadLogin from LoginDAO
+     * @param userNameAdmin
+     * @param hashpw
+     * @param salt
+     * @return
+     * @throws SQLServerException
+     */
+    public Login uploadLoginAdmin(String userNameAdmin, String hashpw, String salt) throws SQLException {
+        return(loginDao.uploadLoginAdmin(userNameAdmin, hashpw, salt));
+    }
 }

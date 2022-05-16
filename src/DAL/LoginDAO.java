@@ -105,4 +105,29 @@ public class LoginDAO {
         }
         return null;
     }
+
+    public Login uploadLoginAdmin(String userNameAdmin, String hashpw, String salt) throws SQLException {
+        Connection connection = connector.getConnection();
+
+        String sql = "INSERT INTO Login (Username,Password,Usertype, Salt) VALUES (?,?,?,?);";
+
+        PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+
+        ps.setString(1, userNameAdmin);
+        ps.setString(2, hashpw);
+        ps.setString(3, "Admin");
+        ps.setString(4, salt);
+
+        int affectedRows = ps.executeUpdate();
+        if (affectedRows == 1) {
+            ResultSet rs = ps.getGeneratedKeys();
+            if (rs.next()) {
+                int loginId = rs.getInt(1);
+                Login LoginCord = new Login(loginId, userNameAdmin, hashpw,"Teacher");
+                return LoginCord;
+            }
+
+        }
+        return null;
+    }
 }
