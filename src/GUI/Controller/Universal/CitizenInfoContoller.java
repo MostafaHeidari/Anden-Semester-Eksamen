@@ -169,4 +169,12 @@ public class CitizenInfoContoller implements Initializable {
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
     }
+
+    public void LogOut(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) caseInfo.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("SOSU System");
+        switcher.setScene(scene);
+    }
 }

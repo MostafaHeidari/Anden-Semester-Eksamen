@@ -40,4 +40,10 @@ public class CitizenController {
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
     }
+
+    public void createCaseBtn(ActionEvent actionEvent) {
+    }
+
+    public void caseInfoBtn(ActionEvent actionEvent) {
+    }
 }
