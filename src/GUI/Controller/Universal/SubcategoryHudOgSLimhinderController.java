@@ -23,6 +23,7 @@ public class SubcategoryHudOgSLimhinderController {
 
     public TextArea txtsurgicalWound;
     public TextArea txtdiabeticWound;
+    public TextArea txtCancerWound;
 
    // this is instance variable is not used to now//
     private int caseID = 27;
@@ -77,6 +78,12 @@ public class SubcategoryHudOgSLimhinderController {
             categoryModel.createCategory(caseID,"Problems with diabetic wound",txtdiabeticWound.getText());
         }
         categoryModel.updateCategory(caseID,"Problems with diabetic wound",txtdiabeticWound.getText());
+
+        if (categoryModel.readCategory(caseID,"Problems with cancer wound") == null){
+
+            categoryModel.createCategory(caseID,"Problems with cancer wound",txtCancerWound.getText());
+        }
+        categoryModel.updateCategory(caseID,"Problems with cancer wound",txtCancerWound.getText());
     }
 
     /**
@@ -87,5 +94,6 @@ public class SubcategoryHudOgSLimhinderController {
     public void setId() throws SQLException {
         txtsurgicalWound.setText(categoryModel.readCategory(caseID,"Problems with surgical wound"));
         txtdiabeticWound.setText(categoryModel.readCategory(caseID,"Problems with diabetic wound"));
+        txtCancerWound.setText(categoryModel.readCategory(caseID,"Problems with cancer wound"));
     }
 }
