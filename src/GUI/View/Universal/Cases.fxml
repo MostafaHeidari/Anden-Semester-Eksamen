@@ -110,5 +110,27 @@
             </FontAwesomeIconView>
          </children>
       </Pane>
-      <JFXButton fx:id="deleteCase" layoutX="382.0" layoutY="607.0" onAction="#deleteCaseBtn" prefHeight="29.0" prefWidth="80.0" text="Slet" />
+      <JFXButton fx:id="deleteCase" layoutX="357.0" layoutY="607.0" onAction="#deleteCaseBtn" prefHeight="29.0" prefWidth="100.0" text="Slet Case" />
+   <JFXButton fx:id="funktionsevne" layoutX="224.0" layoutY="170.0" onAction="#funktionsevneBtn" prefHeight="29.0" prefWidth="100.0" style="-fx-background-color: #15B559;" text="Funktionsevne" textFill="WHITE" />
+   <JFXButton fx:id="funktionsevne1" layoutX="224.0" layoutY="134.0" onAction="#funktionsevneBtn" prefHeight="29.0" prefWidth="100.0" style="-fx-background-color: #15B559;" text="Omgivelse Info" textFill="WHITE" />
+   <Text layoutX="225.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPR-nummer:">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Text>
+   <Text layoutX="223.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="General Borger Info:">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Text>
+   <Text fx:id="CprCitizenTxt" layoutX="335.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Text>
+   <Text fx:id="GenInfoTxt1" layoutX="223.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Text>
    </AnchorPane>

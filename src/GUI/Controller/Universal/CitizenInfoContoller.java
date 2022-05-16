@@ -159,6 +159,7 @@ public class CitizenInfoContoller implements Initializable {
 
     }
 
+
     public void createCaseBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) caseInfo.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/CreateCase.fxml"));

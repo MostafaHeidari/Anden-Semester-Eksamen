@@ -1,5 +1,6 @@
 package GUI.Controller.Student;
 
+import GUI.Controller.Universal.CreateCaseController;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,6 +19,8 @@ public class CitizenController {
     private JFXButton btnLogout;
     @FXML
     private JFXButton btnInfo;
+    @FXML
+    private JFXButton createCase;
 
     /**
      * Log out and goes to the Login view
@@ -30,20 +33,13 @@ public class CitizenController {
         switcher.setScene(scene);
     }
 
-    /**
-     * Goes to the Category view
-     */
-    public void InfoCategorys(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) btnLogout.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Category.fxml"));
-        Scene scene = new Scene(root);
-        switcher.setTitle("SOSU System");
-        switcher.setScene(scene);
-    }
-
     public void createCaseBtn(ActionEvent actionEvent) {
+        //TODO
+        //opret case
     }
 
     public void caseInfoBtn(ActionEvent actionEvent) {
+        //TODO
+        //liste af alle cases
     }
 }
