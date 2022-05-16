@@ -83,7 +83,7 @@
                      <children>
                         <VBox prefHeight="452.0" prefWidth="320.0" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Hud og slimhinder" underline="true">
+                              <Text fx:id="hudogslimhinder_1" onMouseClicked="#hudogslimhinder_1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Hud og slimhinder" underline="true">
                                  <font>
                                     <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
@@ -91,7 +91,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <Label fx:id="hudogslimhinder_1" onMouseClicked="#hudogslimhinder_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med kirurgisk sår">
+                              <Label style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med kirurgisk sår">
                                  <font>
                                     <Font size="14.0" />
                                  </font>

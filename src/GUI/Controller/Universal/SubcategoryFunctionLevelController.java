@@ -27,7 +27,6 @@ public class SubcategoryFunctionLevelController {
 
    // this is instance variable is not used to now//
     private int caseID = 27;
-    private String problemName;
 
     CategoryModel categoryModel = new CategoryModel();
 
