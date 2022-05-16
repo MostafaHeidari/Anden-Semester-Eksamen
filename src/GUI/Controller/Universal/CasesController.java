@@ -54,6 +54,10 @@ public class CasesController implements Initializable {
     public Text nameCitizenTxt;
     @FXML
     public Text lastNameCitizenTxt;
+    @FXML
+    public Text CprCitizenTxt;
+    @FXML
+    public Text GenInfoTxt1;
 
     public CasesController() throws IOException {
         caseModel = new CaseModel();
@@ -125,6 +129,8 @@ public class CasesController implements Initializable {
         selectedCitizenInfo = citizenInfo;
         nameCitizenTxt.setText(citizenInfo.getCitizenName());
         lastNameCitizenTxt.setText(citizenInfo.getCitizenLastName());
+        CprCitizenTxt.setText(citizenInfo.getCPR());
+        GenInfoTxt1.setText(citizenInfo.getCitizenInformation());
         setCaseView();
     }
 
