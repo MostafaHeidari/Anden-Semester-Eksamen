@@ -14,16 +14,15 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class SubcategoryFunctionLevelController {
+public class SubcategoryHudOgSLimhinderController {
 
     @FXML
     private JFXButton btnBack;
     @FXML
     private JFXButton btnLogOut;
 
-    public Text subCatText;
-    public TextArea txtPersonalCare;
-    public TextArea txtDailyActivities;
+    public TextArea txtsurgicalWound;
+    public TextArea txtdiabeticWound;
 
    // this is instance variable is not used to now//
     private int caseID = 27;
@@ -34,7 +33,7 @@ public class SubcategoryFunctionLevelController {
      * Constructor
      * @throws IOException
      */
-    public SubcategoryFunctionLevelController() throws IOException, SQLException {
+    public SubcategoryHudOgSLimhinderController() throws IOException, SQLException {
 
     }
 
@@ -67,17 +66,17 @@ public class SubcategoryFunctionLevelController {
      * @throws SQLException
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
-        if (categoryModel.readCategory(caseID,"Problems with personal care") == null){
+        if (categoryModel.readCategory(caseID,"Problems with surgical wound") == null){
 
-            categoryModel.createCategory(caseID,"Problems with personal care",txtPersonalCare.getText());
+            categoryModel.createCategory(caseID,"Problems with surgical wound",txtsurgicalWound.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with personal care",txtPersonalCare.getText());
+        categoryModel.updateCategory(caseID,"Problems with surgical wound",txtsurgicalWound.getText());
 
-        if (categoryModel.readCategory(caseID,"Problems with daily activities") == null){
+        if (categoryModel.readCategory(caseID,"Problems with diabetic wound") == null){
 
-            categoryModel.createCategory(caseID,"Problems with daily activities",txtDailyActivities.getText());
+            categoryModel.createCategory(caseID,"Problems with diabetic wound",txtdiabeticWound.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with daily activities",txtDailyActivities.getText());
+        categoryModel.updateCategory(caseID,"Problems with diabetic wound",txtdiabeticWound.getText());
     }
 
     /**
@@ -86,7 +85,7 @@ public class SubcategoryFunctionLevelController {
      */
 
     public void setId() throws SQLException {
-     txtPersonalCare.setText(categoryModel.readCategory(caseID,"Problems with personal care"));
-     txtDailyActivities.setText(categoryModel.readCategory(caseID,"Problems with daily activities"));
+        txtsurgicalWound.setText(categoryModel.readCategory(caseID,"Problems with surgical wound"));
+        txtdiabeticWound.setText(categoryModel.readCategory(caseID,"Problems with diabetic wound"));
     }
 }
