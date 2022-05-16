@@ -38,7 +38,7 @@
             <TextField fx:id="teacherEmailTxt" layoutX="114.0" layoutY="238.0" prefHeight="33.0" prefWidth="244.0" promptText="E-mail" />
             <TextField fx:id="teacherUserNameTxt" layoutX="114.0" layoutY="279.0" prefHeight="33.0" prefWidth="244.0" promptText="Brugernavn" />
             <PasswordField fx:id="teacherPasswordTxt" layoutX="114.0" layoutY="323.0" prefHeight="33.0" prefWidth="244.0" promptText="Adgangskode" />
-            <Button fx:id="createTeacher" layoutX="107.0" layoutY="429.0" mnemonicParsing="false" onAction="#createTeacherBtn" prefHeight="33.0" prefWidth="244.0" text="Opret underviser" />
+            <Button fx:id="createTeacher" layoutX="114.0" layoutY="396.0" mnemonicParsing="false" onAction="#createTeacherBtn" prefHeight="33.0" prefWidth="244.0" stylesheets="@../CSS/CreateStudent.css" text="Opret underviser" />
             <Label layoutX="70.0" layoutY="163.0" text="Navn" />
             <Label layoutX="48.0" layoutY="204.0" text="Efternavn" />
             <Label layoutX="65.0" layoutY="246.0" text="E-mail" />

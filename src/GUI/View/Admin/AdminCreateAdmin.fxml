@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="GUI.Controller.Admin.AdminCreateAdminController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="620.0" prefWidth="767.0" style="-fx-background-color: BBE5E8FF;" stylesheets="@../CSS/AdminCreateAdmin.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Admin.AdminCreateAdminController">
+   <children>
+      <JFXButton fx:id="BtnBack" layoutX="32.0" layoutY="549.0" onAction="#BtnBack" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Text fill="#0b0a0a" layoutX="154.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Oprette en Admin" textAlignment="CENTER" wrappingWidth="458.99993896484375">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <TextField fx:id="adminNameTxt" layoutX="124.0" layoutY="234.0" prefHeight="33.0" prefWidth="244.0" promptText="Navn" />
+      <TextField fx:id="adminUserNameTxt" layoutX="124.0" layoutY="281.0" prefHeight="33.0" prefWidth="244.0" promptText="Brugernavn" />
+      <PasswordField fx:id="adminPasswordTxt" layoutX="124.0" layoutY="333.0" prefHeight="33.0" prefWidth="244.0" promptText="Adgangskode" />
+      <Button fx:id="createAdmin" layoutX="117.0" layoutY="439.0" mnemonicParsing="false" onAction="#createAdminBtn" prefHeight="33.0" prefWidth="244.0" stylesheets="@../CSS/AdminCreateAdmin.css" text="Opret Admin" />
+      <Label layoutX="79.0" layoutY="242.0" text="Navn" />
+      <Label layoutX="49.0" layoutY="289.0" text="Brugernavn" />
+      <Label layoutX="38.0" layoutY="341.0" text="Adgangskode" />
+      <TableView fx:id="tvAdmin" layoutX="416.0" layoutY="120.0" prefHeight="393.0" prefWidth="311.0">
+         <columns>
+            <TableColumn fx:id="tcAdminName" prefWidth="115.0" text="Navn" />
+            <TableColumn fx:id="tcAdminUserName" prefWidth="195.0" text="BrugerNavn" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="deleteAdmin" layoutX="556.0" layoutY="549.0" onAction="#deleteAdminBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Slet Admin">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
 </AnchorPane>

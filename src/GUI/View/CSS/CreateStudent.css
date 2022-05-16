@@ -1,7 +1,7 @@
 /*    "Oprettelse af Elev" styling of elements   */
 
 
-#BtnCreateStudent,#BtnEditStudent,#BtnDeleteStudent,#BtnSaveInformation {
+#BtnCreateStudent,#BtnEditStudent,#BtnDeleteStudent,#BtnSaveInformation,#createTeacher {
     -fx-font-size: 12px;
     -fx-background-color: #009B42;
     -fx-text-fill: white;
@@ -137,6 +137,13 @@
     -fx-border-color: #009B42;
     -fx-border-width: 2px;
     -fx-background-color: #009B42;
+}
+
+#createTeacher:hover{
+    -fx-text-fill: white;
+    -fx-border-color: #001569;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
 }
 
 
