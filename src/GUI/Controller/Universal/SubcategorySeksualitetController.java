@@ -64,7 +64,7 @@ public class SubcategorySeksualitetController {
      * @throws SQLException
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
-        if (categoryModel.readCategory(caseID,"Problems with moving") == null){
+        if (categoryModel.readCategory(caseID,"Problems with seksualitet") == null){
 
             categoryModel.createCategory(caseID,"Problems with seksualitet",txtSeksualitet.getText());
         }
