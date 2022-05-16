@@ -40,7 +40,7 @@
                   <TextField fx:id="txtFieldCitizenAddresse" prefHeight="34.0" prefWidth="275.0" promptText="Adresse" GridPane.rowIndex="3" />
                </children>
             </GridPane>
-            <TextArea fx:id="txtAreaCitizenGeneralInfo" layoutX="354.0" layoutY="335.0" prefHeight="195.0" prefWidth="548.0" promptText="Generelle Oplysninger" />
+            <TextArea fx:id="txtAreaCitizenGeneralInfo" layoutX="354.0" layoutY="321.0" prefHeight="209.0" prefWidth="548.0" promptText="Generelle Oplysninger" />
             <JFXButton fx:id="BtnLogOutOfPatient" layoutX="852.0" layoutY="14.0" onAction="#LogOutOfPatient" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
