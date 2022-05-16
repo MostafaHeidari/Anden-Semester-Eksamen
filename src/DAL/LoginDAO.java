@@ -130,4 +130,32 @@ public class LoginDAO {
         }
         return null;
     }
+
+
+    /**
+     * his method gets a removeAdmin from the database
+     * @param selectedAdmin
+     * @throws SQLServerException
+     */
+    public void removeAdmin(Login selectedAdmin) {
+
+        String sql1 = "DELETE FROM Login WHERE UserID = (?);";
+
+        try (Connection connection = connector.getConnection()) {
+
+
+            PreparedStatement ps1 = connection.prepareStatement(sql1, Statement.RETURN_GENERATED_KEYS);
+
+
+            ps1.setInt(1, selectedAdmin.getId());
+
+
+            ps1.executeUpdate();
+
+
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 }

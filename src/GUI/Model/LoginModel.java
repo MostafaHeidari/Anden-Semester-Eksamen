@@ -92,4 +92,15 @@ public class LoginModel {
         String salt = getSalt();
         loginList.add(loginManager.uploadLoginAdmin(userNameAdmin,BCrypt.hashpw(passwordAdmin, salt), salt));
     }
+
+
+    /**
+     * Gets the removeAdmin selectedAdmin using removeAdmin from loginManager
+     * @param selectedAdmin
+     * @throws SQLServerException
+     */
+    public void removeAdmin(Login selectedAdmin) {
+        loginManager.removeAdmin(selectedAdmin);
+        loginList.remove(selectedAdmin);
+    }
 }

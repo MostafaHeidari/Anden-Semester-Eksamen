@@ -66,4 +66,13 @@ public class LoginManager {
     public Login uploadLoginAdmin(String userNameAdmin, String hashpw, String salt) throws SQLException {
         return(loginDao.uploadLoginAdmin(userNameAdmin, hashpw, salt));
     }
+
+    /**
+     * Gets the removeAdmin selectedAdmin using removeAdmin from loginDao
+     * @param selectedAdmin
+     * @throws SQLServerException
+     */
+    public void removeAdmin(Login selectedAdmin) {
+        loginDao.removeAdmin(selectedAdmin);
+    }
 }

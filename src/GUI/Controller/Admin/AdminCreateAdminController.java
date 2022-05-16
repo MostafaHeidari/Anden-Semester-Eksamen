@@ -1,6 +1,9 @@
 package GUI.Controller.Admin;
 
+import BE.Login;
+import BE.Teacher;
 import GUI.Controller.Universal.NotFilledTxtFieldController;
+import GUI.Controller.Universal.SimpleDialogController;
 import GUI.Model.Admin.AdminModel;
 import GUI.Model.LoginModel;
 import com.jfoenix.controls.JFXButton;
@@ -12,6 +15,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Popup;
 import javafx.stage.Stage;
 
@@ -23,6 +27,10 @@ import java.util.ResourceBundle;
 public class AdminCreateAdminController implements Initializable {
 
     AdminModel adminModel;
+
+    LoginModel loginModel;
+
+    public Login selectedAdmin;
 
     @FXML
     public JFXButton BtnBack;
@@ -48,6 +56,8 @@ public class AdminCreateAdminController implements Initializable {
     public AdminCreateAdminController() throws IOException {
 
         adminModel = AdminModel.getInstance();
+
+        loginModel = LoginModel.getInstance();
     }
 
 
@@ -62,6 +72,10 @@ public class AdminCreateAdminController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        tvAdmin.setOnMouseClicked((MouseEvent event) -> {
+            setSelectedAdmin();
+        });
     }
 
 
@@ -111,14 +125,22 @@ public class AdminCreateAdminController implements Initializable {
 
 
         loginModel.uploadLoginAdmin(userNameAdmin,passwordAdmin);
-        
+
         tvAdmin.getItems().clear();
 
 
         tvAdmin.setItems(adminModel.getAllAdmins());
     }
 
+    /**
+     * remove a Teacher with the deleteTeacherBtn method
+     */
     public void deleteAdminBtn(ActionEvent actionEvent) {
+        if (SimpleDialogController.delete() && selectedAdmin != null) {
+            loginModel.removeAdmin(selectedAdmin);
+            tvAdmin.getItems().clear();
+            tvAdmin.setItems(adminModel.getAllAdmins());
+        }
     }
 
 
@@ -133,5 +155,14 @@ public class AdminCreateAdminController implements Initializable {
         tvAdmin.setItems(adminModel.getAllAdmins());
     }
 
+    /**
+     * selects a Admin with the setSelectedAdmin method
+     */
+    private void setSelectedAdmin() {
+        if (tvAdmin.getSelectionModel().getSelectedItem() != null)
+        {
+            selectedAdmin = (Login) tvAdmin.getSelectionModel().getSelectedItem();
+        }
+    }
 
 }
