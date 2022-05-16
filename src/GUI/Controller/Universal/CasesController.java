@@ -23,12 +23,13 @@ import java.util.ResourceBundle;
 
 public class CasesController implements Initializable {
 
-
+    @FXML
     public JFXButton deleteCase;
+    @FXML
     private CitizenInfo selectedCitizenInfo;
-
+    @FXML
     public CaseModel caseModel;
-
+    @FXML
     public Case selectedCase;
 
 
