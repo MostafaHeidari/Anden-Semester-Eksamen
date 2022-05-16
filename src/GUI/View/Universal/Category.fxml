@@ -27,7 +27,7 @@
                <children>
                   <HBox fx:id="HBox" prefHeight="153.0" prefWidth="350.0" styleClass="Category">
                      <children>
-                        <VBox prefHeight="153.0" prefWidth="324.0" styleClass="Category">
+                        <VBox prefHeight="237.0" prefWidth="320.0" styleClass="Category">
                            <children>
                               <Text fx:id="funktionsniveau_1" onMouseClicked="#funktionsniveau_1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Funktionsniveau" underline="true">
                                  <font>
@@ -60,9 +60,9 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="96.0" prefWidth="299.0" styleClass="Category">
+                  <HBox prefHeight="96.0" prefWidth="322.0" styleClass="Category">
                      <children>
-                        <VBox prefHeight="61.0" prefWidth="411.0" styleClass="Category">
+                        <VBox prefHeight="170.0" prefWidth="320.0" styleClass="Category">
                            <children>
                               <Text fx:id="seksualitet_1" onMouseClicked="#seksualitet_1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Seksualitet" underline="true">
                                  <font>
@@ -79,9 +79,9 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="447.0" prefWidth="322.0">
+                  <HBox prefHeight="403.0" prefWidth="322.0">
                      <children>
-                        <VBox prefHeight="452.0" prefWidth="320.0" styleClass="Category">
+                        <VBox prefHeight="346.0" prefWidth="320.0" styleClass="Category">
                            <children>
                               <Text fx:id="hudogslimhinder_1" onMouseClicked="#hudogslimhinder_1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Hud og slimhinder" underline="true">
                                  <font>
@@ -91,78 +91,6 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <Label style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med kirurgisk sår">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="hudogslimhinder_2" onMouseClicked="#hudogslimhinder_2" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med diabetisk sår">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="hudogslimhinder_3" onMouseClicked="#hudogslimhinder_3" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med cancersår">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="hudogslimhinder_4" onMouseClicked="#hudogslimhinder_4" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med tryksår">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="hudogslimhinder_5" onMouseClicked="#hudogslimhinder_5" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med arterielt sår">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="hudogslimhinder_6" onMouseClicked="#hudogslimhinder_6" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med venøst sår">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="hudogslimhinder_7" onMouseClicked="#hudogslimhinder_7" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med blandingssår">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="hudogslimhinder_8" onMouseClicked="#hudogslimhinder_8" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med traumesår">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="hudogslimhinder_9" onMouseClicked="#hudogslimhinder_9" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Andre problemer med hud og slimhinder">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
                            </children>
                         </VBox>
                      </children>

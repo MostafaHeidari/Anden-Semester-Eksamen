@@ -122,6 +122,18 @@ public class SubcategoryHudOgSLimhinderController {
             categoryModel.createCategory(caseID,"Problems with mixed wound",txtMixedWound.getText());
         }
         categoryModel.updateCategory(caseID,"Problems with mixed wound",txtMixedWound.getText());
+
+
+        if (categoryModel.readCategory(caseID,"Problems with trauma wound") == null){
+            categoryModel.createCategory(caseID,"Problems with trauma wound",txtTraumaWound.getText());
+        }
+        categoryModel.updateCategory(caseID,"Problems with trauma wound",txtTraumaWound.getText());
+
+
+        if (categoryModel.readCategory(caseID,"Other problems") == null){
+            categoryModel.createCategory(caseID,"Other problems",txtOtherProblems.getText());
+        }
+        categoryModel.updateCategory(caseID,"Other problems",txtOtherProblems.getText());
     }
 
     /**
@@ -137,5 +149,7 @@ public class SubcategoryHudOgSLimhinderController {
         txtArtilleryWound.setText(categoryModel.readCategory(caseID,"Problems with artillery wound"));
         txtVenousWound.setText(categoryModel.readCategory(caseID,"Problems with venous wound"));
         txtMixedWound.setText(categoryModel.readCategory(caseID,"Problems with mixed wound"));
+        txtTraumaWound.setText(categoryModel.readCategory(caseID,"Problems with trauma wound"));
+        txtOtherProblems.setText(categoryModel.readCategory(caseID,"Other problems"));
     }
 }
