@@ -106,10 +106,10 @@
 }
 
 #btnInfo:hover{
-     -fx-text-fill: white;
-     -fx-border-color: #001569;
-     -fx-border-width: 2px;
-     -fx-border-radius: 4px;
+     -fx-font-size: 15px;
+         -fx-background-color: white;
+         -fx-text-fill: #2B2121;
+         -fx-border-color: #15B559;
 }
 
 #citizentBoutten:hover{
@@ -127,6 +127,27 @@
      -fx-text-fill: white;
 }
 
+#caseInfo, #createCase{
+    -fx-font-size: 15px;
+    -fx-border-color:  #001569;
+    -fx-background-color: #15B559;
+    -fx-text-fill: white;
+}
+
+
+#caseInfo:hover{
+    -fx-font-size: 15px;
+    -fx-background-color: white;
+    -fx-text-fill: #2B2121;
+    -fx-border-color: #15B559;
+}
+
+#createCase:hover{
+    -fx-font-size: 15px;
+    -fx-background-color: white;
+    -fx-text-fill: #2B2121;
+    -fx-border-color: #15B559;
+}
 
 
 

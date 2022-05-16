@@ -41,11 +41,11 @@
             <Line endX="125.0" layoutX="57.0" layoutY="90.0" startX="-40.0" stroke="WHITE" />
          </children>
       </Pane>
-      <JFXButton fx:id="createCase" layoutX="214.0" layoutY="460.0" onAction="#createCaseBtn" prefHeight="33.0" prefWidth="101.0" stylesheets="@CSS/Citizent.css" text="Opret Case">
+      <JFXButton fx:id="createCase" layoutX="214.0" layoutY="460.0" onAction="#createCaseBtn" prefHeight="33.0" prefWidth="101.0" text="Opret Case">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="caseInfo" layoutX="214.0" layoutY="550.0" onAction="#caseInfoBtn" prefHeight="33.0" prefWidth="101.0" stylesheets="@CSS/Citizent.css" text="Se Cases">
+      <JFXButton fx:id="caseInfo" layoutX="214.0" layoutY="550.0" onAction="#caseInfoBtn" prefHeight="33.0" prefWidth="101.0" text="Se Cases">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
