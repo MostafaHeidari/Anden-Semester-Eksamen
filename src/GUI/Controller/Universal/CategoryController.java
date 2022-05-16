@@ -77,7 +77,7 @@ public class CategoryController {
         Parent root = loader.load();
         Scene scene = new Scene(root);
 
-        SubcategoryFunctionLevelController controller = loader.getController();
+        SubcategoryMovingApparatController controller = loader.getController();
         controller.setId();
 
         switcher.setTitle("Funktions Niveau");
