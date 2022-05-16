@@ -24,20 +24,26 @@
             <Font name="Arial Narrow Bold Italic" size="20.0" />
          </font>
       </Text>
-      <Label layoutX="15.0" layoutY="126.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med kirurgisk sår">
+      <Label layoutX="13.0" layoutY="108.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med kirurgisk sår">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtsurgicalWound" layoutX="299.0" layoutY="75.0" prefHeight="142.0" prefWidth="501.0" />
-      <TextArea fx:id="txtdiabeticWound" layoutX="299.0" layoutY="300.0" prefHeight="142.0" prefWidth="501.0" />
+      <TextArea fx:id="txtsurgicalWound" layoutX="301.0" layoutY="80.0" prefHeight="92.0" prefWidth="501.0" />
+      <TextArea fx:id="txtdiabeticWound" layoutX="300.0" layoutY="190.0" prefHeight="88.0" prefWidth="501.0" />
 
       <JFXButton fx:id="btnSave" layoutX="536.0" layoutY="547.0" onAction="#subCategorySave" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Gem">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Label layoutX="15.0" layoutY="354.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med daglige aktiviteter">
+      <Label layoutX="13.0" layoutY="218.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med diabetis sår">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtCancerWound" layoutX="300.0" layoutY="305.0" prefHeight="88.0" prefWidth="501.0" />
+      <Label layoutX="12.0" layoutY="329.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med cancer sår">
          <font>
             <Font size="14.0" />
          </font>
