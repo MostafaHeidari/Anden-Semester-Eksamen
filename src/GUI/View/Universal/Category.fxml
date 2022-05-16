@@ -64,7 +64,7 @@
                      <children>
                         <VBox prefHeight="61.0" prefWidth="411.0" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Seksualitet" underline="true">
+                              <Text fx:id="seksualitet_1" onMouseClicked="#seksualitet_1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Seksualitet" underline="true">
                                  <font>
                                     <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
@@ -72,14 +72,6 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <Label fx:id="seksualitet_1" onMouseClicked="#seksualitet_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med seksualitet">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
                            </children>
                            <HBox.margin>
                               <Insets />
