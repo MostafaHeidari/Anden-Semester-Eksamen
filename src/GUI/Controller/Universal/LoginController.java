@@ -61,7 +61,7 @@ public class LoginController {
              */
             if (login.getUserType().equals("Student")) {
                 Stage switcher = (Stage) btnLogin.getScene().getWindow();
-                Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Citizent.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Student/Citizent.fxml"));
                 switcher.setTitle("Patient");
                 Scene scene = new Scene(root);
                 switcher.setScene(scene);

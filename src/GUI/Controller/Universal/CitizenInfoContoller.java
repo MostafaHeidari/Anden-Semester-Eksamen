@@ -31,7 +31,7 @@ public class CitizenInfoContoller implements Initializable {
     @FXML
     public JFXButton caseInfo;
     @FXML
-    public JFXButton backClass;
+    public JFXButton backGroups;
     @FXML
     public JFXButton backStudent;
     @FXML
@@ -95,7 +95,7 @@ public class CitizenInfoContoller implements Initializable {
      * Goes to Teacher view
      */
     public void backToLastPageBtn(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) backClass.getScene().getWindow();
+        Stage switcher = (Stage) backGroups.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Forside");

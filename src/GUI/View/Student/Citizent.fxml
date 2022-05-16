@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="Patient" prefHeight="600.0" prefWidth="900.0" stylesheets="@CSS/TeacherAndPatient.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.CitizenController">
+<AnchorPane fx:id="Patient" prefHeight="600.0" prefWidth="900.0" stylesheets="@../CSS/TeacherAndPatient.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Student.CitizenController">
    <children>
       <TableView fx:id="tableViewPatients" layoutX="328.0" layoutY="91.0" prefHeight="492.0" prefWidth="475.0">
         <columns>
