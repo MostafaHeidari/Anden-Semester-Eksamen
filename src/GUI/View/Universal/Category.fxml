@@ -48,7 +48,7 @@
                      <children>
                         <VBox minHeight="90.0" prefHeight="90.0" prefWidth="320.0" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Bevægeapparat" underline="true">
+                              <Text fx:id="bevægeapparat_1" onMouseClicked="#bevægeapparat_1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Bevægeapparat" underline="true">
                                  <font>
                                     <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
@@ -56,7 +56,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <Label fx:id="bevægeapparat_1" onMouseClicked="#bevægeapparat_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med mobilitet og bevægelse">
+                              <Label style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med mobilitet og bevægelse">
                                  <font>
                                     <Font size="14.0" />
                                  </font>

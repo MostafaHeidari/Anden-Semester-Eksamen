@@ -24,7 +24,7 @@
             <Font name="Arial Narrow Bold Italic" size="20.0" />
          </font>
       </Text>
-      <Label fx:id="funktionsniveau_1" layoutX="15.0" layoutY="200.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med mobilitet og bevægelse">
+      <Label fx:id="bevægeapparat_1" layoutX="15.0" layoutY="200.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med mobilitet og bevægelse">
          <font>
             <Font size="14.0" />
          </font>

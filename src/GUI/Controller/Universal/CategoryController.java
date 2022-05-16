@@ -21,6 +21,8 @@ public class CategoryController {
     private JFXButton btnCategoryBack;
     @FXML
     private Text funktionsniveau_1;
+    @FXML
+    private Text bevægeapparat_1;
 
     /**
      * Goes to Patient view
@@ -70,7 +72,16 @@ public class CategoryController {
      * Subcategory changing text
      */
     public void bevægeapparat_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        shiftWindow("Problemer med mobilitet og bevægelse");
+        Stage switcher = (Stage) bevægeapparat_1.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SubCategoriesMovingApparat.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        SubcategoryFunctionLevelController controller = loader.getController();
+        controller.setId();
+
+        switcher.setTitle("Funktions Niveau");
+        switcher.setScene(scene);
     }
 
     /**
