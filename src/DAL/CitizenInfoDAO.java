@@ -40,9 +40,7 @@ public class CitizenInfoDAO {
                     rs.getInt("PatientID"),
                     rs.getString("PatientName"),
                     rs.getString("PatientLastName"),
-                    rs.getString("PatientAge"),
-                    rs.getInt("PatientPhone"),
-                    rs.getString("PatientEmail"),
+                     rs.getString("PatientEmail"),
                     rs.getString("PatientSex"),
                     rs.getString("PatientGenInfo"));
             allCitizenInfos.add(citizenInfoCord);
@@ -51,18 +49,16 @@ public class CitizenInfoDAO {
     }
 
     //This method is used to Creating Citizen by inserting information in Patients table in a database.
-    public CitizenInfo createCitizen(String citizenName, String citizenLastName, String citizenAge, int citizinPhoneNumber, String citizenAddress, String citizenSEX, String citizenInformation) throws SQLException {
+    public CitizenInfo createCitizen(String citizenName, String citizenLastName, String citizenAddress, String CPR, String citizenInformation) throws SQLException {
         try (Connection connection = DC.getConnection()) {
 
-            String sql = "INSERT INTO Patients (PatientID, PatientName , PatientLastName, PatientAge, PatientSex, PatientGenInfo) VALUES (?,?,?,?,?,?);";
+            String sql = "INSERT INTO Patients (PatientID, PatientName , PatientLastName, PatientSex, PatientGenInfo) VALUES (?,?,?,?,?);";
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
                 preparedStatement.setString(1, citizenName);
                 preparedStatement.setString(2, citizenLastName);
-                preparedStatement.setString(3, citizenAge);
-                preparedStatement.setInt(4, citizinPhoneNumber);
-                preparedStatement.setString(5, citizenAddress);
-                preparedStatement.setString(6, citizenSEX);
-                preparedStatement.setString(7, citizenInformation);
+                preparedStatement.setString(3, citizenAddress);
+                preparedStatement.setString(4, citizenAddress);
+                preparedStatement.setString(5, citizenInformation);
                 preparedStatement.execute();
                 ResultSet resultSet = preparedStatement.getGeneratedKeys();
                 int id = 0;
@@ -70,7 +66,7 @@ public class CitizenInfoDAO {
                     id = resultSet.getInt(1);
                 }
 
-                CitizenInfo citizen = new CitizenInfo(id, citizenName, citizenLastName, citizenAge, citizinPhoneNumber,citizenAddress, citizenSEX, citizenInformation);
+                CitizenInfo citizen = new CitizenInfo(id, citizenName, citizenLastName,citizenAddress, CPR, citizenInformation);
                 return citizen;
             }
 

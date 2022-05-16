@@ -4,28 +4,24 @@ public class CitizenInfo {
     private int citizenId;
     private String citizenName;
     private String citizenLastName;
-    private String citizenAge;
-    private int citizinPhoneNumber;
     private String citizenAddress;
-    private String citizenSEX;
+    private String CPR;
     private String citizenInformation;
 
     /**
      * @param citizenId
      * @param citizenName
      * @param citizenLastName
-     * @param citizenAge
+
      * Constructor with citizenId, citizenName,  citizenLastName, citizenAge
      */
 
-    public CitizenInfo(int citizenId, String citizenName, String citizenLastName, String citizenAge, int citizinPhoneNumber, String citizenAddress, String citizenSEX, String citizenInformation) {
+    public CitizenInfo(int citizenId, String citizenName, String citizenLastName, String citizenAddress, String citizenSEX, String citizenInformation) {
         this.citizenId = citizenId;
         this.citizenName = citizenName;
         this.citizenLastName = citizenLastName;
-        this.citizenAge = citizenAge;
-        this.citizinPhoneNumber = citizinPhoneNumber;
         this.citizenAddress = citizenAddress;
-        this.citizenSEX = citizenSEX;
+        this.CPR = citizenSEX;
         this.citizenInformation = citizenInformation;
     }
 
@@ -53,21 +49,9 @@ public class CitizenInfo {
         this.citizenLastName = citizenLastName;
     }
 
-    public String getCitizenAge() {
-        return citizenAge;
-    }
 
-    public void setCitizenAge(String citizenAge) {
-        this.citizenAge = citizenAge;
-    }
 
-    public int getCitizinPhoneNumber() {
-        return citizinPhoneNumber;
-    }
 
-    public void setCitizinPhoneNumber(int citizinPhoneNumber) {
-        this.citizinPhoneNumber = citizinPhoneNumber;
-    }
 
     public String getCitizenAddress() {
         return citizenAddress;
@@ -78,11 +62,11 @@ public class CitizenInfo {
     }
 
     public String isCitizenSEX() {
-        return citizenSEX;
+        return CPR;
     }
 
-    public void setCitizenSEX(String citizenSEX) {
-        this.citizenSEX = citizenSEX;
+    public void setCPR(String CPR) {
+        this.CPR = CPR;
     }
 
     public String getCitizenInformation() {
@@ -99,10 +83,8 @@ public class CitizenInfo {
                 "citizenId=" + citizenId +
                 ", citizenName='" + citizenName + '\'' +
                 ", citizenLastName='" + citizenLastName + '\'' +
-                ", citizenAge='" + citizenAge + '\'' +
-                ", citizinPhoneNumber=" + citizinPhoneNumber +
-                ", citizenAddress='" + citizenAddress + '\'' +
-                ", citizenSEX=" + citizenSEX +
+                 ", citizenAddress='" + citizenAddress + '\'' +
+                ", citizenSEX=" + CPR +
                 ", citizenInformation='" + citizenInformation + '\'' +
                 '}';
     }
