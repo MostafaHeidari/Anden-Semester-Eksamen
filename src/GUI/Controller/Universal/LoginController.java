@@ -1,7 +1,6 @@
 package GUI.Controller.Universal;
 
 import BE.Login;
-import DAL.crypto.BCrypt;
 import GUI.Controller.Teacher.CreateStudentController;
 import GUI.Model.LoginModel;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
@@ -62,7 +61,7 @@ public class LoginController {
              */
             if (login.getUserType().equals("Student")) {
                 Stage switcher = (Stage) btnLogin.getScene().getWindow();
-                Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Patient.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Citizent.fxml"));
                 switcher.setTitle("Patient");
                 Scene scene = new Scene(root);
                 switcher.setScene(scene);

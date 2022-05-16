@@ -33,7 +33,7 @@ public class CategoryController {
      */
     public void CategoryBack(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) btnCategoryBack.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Patient.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Citizent.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU Helbredstilstande");
         switcher.setScene(scene);
