@@ -8,20 +8,19 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class SubcategoryMovingApparatController {
+public class SubcategorySeksualitetController {
 
     @FXML
     private JFXButton btnBack;
     @FXML
     private JFXButton btnLogOut;
 
-    public TextArea txtMovingApparat;
+    public TextArea txtSeksualitet;
 
    // this is instance variable is not used to now//
     private int caseID = 27;
@@ -32,7 +31,7 @@ public class SubcategoryMovingApparatController {
      * Constructor
      * @throws IOException
      */
-    public SubcategoryMovingApparatController() throws IOException, SQLException {
+    public SubcategorySeksualitetController() throws IOException, SQLException {
 
     }
 
@@ -67,9 +66,9 @@ public class SubcategoryMovingApparatController {
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
         if (categoryModel.readCategory(caseID,"Problems with moving") == null){
 
-            categoryModel.createCategory(caseID,"Problems with moving",txtMovingApparat.getText());
+            categoryModel.createCategory(caseID,"Problems with seksualitet",txtSeksualitet.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with moving",txtMovingApparat.getText());
+        categoryModel.updateCategory(caseID,"Problems with seksualitet",txtSeksualitet.getText());
     }
 
     /**
@@ -78,6 +77,6 @@ public class SubcategoryMovingApparatController {
      */
 
     public void setId() throws SQLException {
-        txtMovingApparat.setText(categoryModel.readCategory(caseID,"Problems with moving"));
+        txtSeksualitet.setText(categoryModel.readCategory(caseID,"Problems with seksualitet"));
     }
 }
