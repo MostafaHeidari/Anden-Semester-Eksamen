@@ -25,6 +25,8 @@ public class CategoryController {
     private Text bevægeapparat_1;
     @FXML
     private Text seksualitet_1;
+    @FXML
+    private Text hudogslimhinder_1;
 
     /**
      * Goes to Patient view
@@ -103,7 +105,16 @@ public class CategoryController {
     }
 
     public void hudogslimhinder_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        shiftWindow("Problemer med kirurgisk sår");
+        Stage switcher = (Stage) hudogslimhinder_1.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SubCategoriesSkinAndSlimhind.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        SubcategoryHudOgSLimhinderController controller = loader.getController();
+        controller.setId();
+
+        switcher.setTitle("Hud og Slimhinder");
+        switcher.setScene(scene);
     }
 
     /**

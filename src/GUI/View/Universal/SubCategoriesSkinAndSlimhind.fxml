@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.SubcategoryFunctionLevelController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.SubcategoryHudOgSLimhinderController">
    <children>
       <JFXButton fx:id="btnBack" layoutX="625.0" layoutY="547.0" onAction="#subCategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
          <font>
