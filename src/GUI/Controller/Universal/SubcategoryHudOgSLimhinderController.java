@@ -30,6 +30,15 @@ public class SubcategoryHudOgSLimhinderController {
     private TextArea txtPressureWound;
     @FXML
     private TextArea txtArtilleryWound;
+    @FXML
+    private TextArea txtVenousWound;
+    @FXML
+    private TextArea txtMixedWound;
+    @FXML
+    private TextArea txtTraumaWound;
+    @FXML
+    private TextArea txtOtherProblems;
+
 
    // this is instance variable is not used to now//
     private int caseID = 27;
@@ -101,6 +110,18 @@ public class SubcategoryHudOgSLimhinderController {
             categoryModel.createCategory(caseID,"Problems with artillery wound",txtArtilleryWound.getText());
         }
         categoryModel.updateCategory(caseID,"Problems with artillery wound",txtArtilleryWound.getText());
+
+
+        if (categoryModel.readCategory(caseID,"Problems with venous wound") == null){
+            categoryModel.createCategory(caseID,"Problems with venous wound",txtVenousWound.getText());
+        }
+        categoryModel.updateCategory(caseID,"Problems with venous wound",txtVenousWound.getText());
+
+
+        if (categoryModel.readCategory(caseID,"Problems with mixed wound") == null){
+            categoryModel.createCategory(caseID,"Problems with mixed wound",txtMixedWound.getText());
+        }
+        categoryModel.updateCategory(caseID,"Problems with mixed wound",txtMixedWound.getText());
     }
 
     /**
@@ -114,5 +135,7 @@ public class SubcategoryHudOgSLimhinderController {
         txtCancerWound.setText(categoryModel.readCategory(caseID,"Problems with cancer wound"));
         txtPressureWound.setText(categoryModel.readCategory(caseID,"Problems with pressure wound"));
         txtArtilleryWound.setText(categoryModel.readCategory(caseID,"Problems with artillery wound"));
+        txtVenousWound.setText(categoryModel.readCategory(caseID,"Problems with venous wound"));
+        txtMixedWound.setText(categoryModel.readCategory(caseID,"Problems with mixed wound"));
     }
 }
