@@ -13,6 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class CreateCitizenController {
     //textFiled
@@ -109,6 +110,22 @@ public class CreateCitizenController {
     }
 
 
-    public void btnHandleSaveCitizen(ActionEvent actionEvent) {
+
+    public void btnHandleSaveCitizen() throws SQLException {
+        String firstName = txtFieldCitizenFirstName.getText();
+        String lastName = txtFieldCitizenLastName.getText();
+        String CPR = txtFieldCitizenCPR.getText();
+        String phoneNumber = txtFieldCitizenTelefon.getText();
+        String Age = txtFieldCitizenAge.toString();
+        String info = txtAreaCitizenGeneralInfo.getText();
+        String sex = null;
+        if(checkBoxMale.isSelected()){
+            sex = "Male";
+        }else if(checkBoxFemale.isSelected()){
+            sex = "Female";
+        }else if (checkBoxOther.isSelected()){
+            sex = "Other";
+        }
     }
+
 }
