@@ -1,4 +1,4 @@
-package GUI.Controller.Universal;
+package GUI.Controller.Universal.SubCategory;
 
 import GUI.Model.CategoryModel;
 import com.jfoenix.controls.JFXButton;
@@ -14,17 +14,19 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class SubcategoryMovingApparatController {
+public class SubcategoryController {
 
     @FXML
     private JFXButton btnBack;
     @FXML
     private JFXButton btnLogOut;
 
-    public TextArea txtMovingApparat;
+    public Text subCatText;
+    public TextArea txtDescription;
 
    // this is instance variable is not used to now//
-    private int caseID = -1;
+    private int caseID = 27;
+    private String problemName;
 
     CategoryModel categoryModel = new CategoryModel();
 
@@ -32,8 +34,7 @@ public class SubcategoryMovingApparatController {
      * Constructor
      * @throws IOException
      */
-    public SubcategoryMovingApparatController() throws IOException, SQLException {
-
+    public SubcategoryController() throws IOException {
     }
 
     /**
@@ -42,13 +43,8 @@ public class SubcategoryMovingApparatController {
 
     public void subCategoryBack(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) btnBack.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Category.fxml"));
-        Parent root = loader.load();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Category.fxml"));
         Scene scene = new Scene(root);
-
-        CategoryController controller = loader.getController();
-        controller.setCaseID(caseID);
-
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
     }
@@ -70,20 +66,21 @@ public class SubcategoryMovingApparatController {
      * @throws SQLException
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
-        if (categoryModel.readCategory(caseID,"Problems with moving") == null){
+        if (categoryModel.readCategory(caseID,problemName) == null){
 
-            categoryModel.createCategory(caseID,"Problems with moving",txtMovingApparat.getText());
+            categoryModel.createCategory(caseID,problemName,txtDescription.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with moving",txtMovingApparat.getText());
+        categoryModel.updateCategory(caseID,problemName,txtDescription.getText());
     }
 
     /**
      * this method is used to sende information from en controller to other controller
+     * @param problemName
      * @throws SQLException
      */
-
-    public void setId(int caseID) throws SQLException {
-        this.caseID = caseID;
-        txtMovingApparat.setText(categoryModel.readCategory(caseID,"Problems with moving"));
+    public void setId(String problemName) throws SQLException {
+        this.problemName = problemName;
+        txtDescription.setText(categoryModel.readCategory(caseID,problemName));
+        subCatText.setText(problemName);
     }
 }

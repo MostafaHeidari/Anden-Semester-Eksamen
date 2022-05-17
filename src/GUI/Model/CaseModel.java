@@ -1,6 +1,7 @@
 package GUI.Model;
 
 import BE.Case;
+import BE.CitizenInfo;
 import BE.Student;
 import BLL.CaseManger;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
@@ -14,6 +15,8 @@ public class CaseModel {
     private ObservableList<Case> caseList = FXCollections.observableArrayList();
 
     private CaseManger caseManger;
+
+    private CitizenInfo citizenId;
 
     public CaseModel() throws IOException {
         caseManger = new CaseManger();
@@ -47,5 +50,14 @@ public class CaseModel {
      */
     public void uploadCaseInfo(String caseName, String informationTxt, int selectedCitizen) throws SQLException {
         caseList.add(caseManger.uploadCaseInfo(caseName,informationTxt,selectedCitizen));
+    }
+
+    /**
+     * Gets the editStudent student using editStudent from studentManager
+     * @param selectedCase
+     * @throws SQLServerException
+     */
+    public void editCase(Case selectedCase) {
+        caseManger.editCase(selectedCase);
     }
 }

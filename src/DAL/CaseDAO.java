@@ -1,7 +1,6 @@
 package DAL;
 
 import BE.Case;
-import BE.Student;
 import DAL.db.DatabaseConnector;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 
@@ -27,6 +26,7 @@ public class CaseDAO {
     /**
      * Gets a list of getAllCases that are inner joined on PatientsCases
      * @throws IOException
+     * @param citizenId
      */
     public List<Case> getAllCases(int citizenId) {
 
@@ -140,5 +140,19 @@ public class CaseDAO {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+    }
+
+    public Case editCase(Case selectedCase) {
+        try (Connection connection = DC.getConnection()) {
+            String sql = "UPDATE Cases SET CaseName= (?), CaseInformation=(?) WHERE CaseID = (?);";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, selectedCase.getCaseName());
+            preparedStatement.setString(2, selectedCase.getCaseInformation());
+            preparedStatement.setInt(3, selectedCase.getCaseId());
+            preparedStatement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
     }
 }

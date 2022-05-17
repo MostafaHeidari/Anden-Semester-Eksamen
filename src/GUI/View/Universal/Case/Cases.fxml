@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="650.0" prefWidth="950.0" stylesheets="@../CSS/CreateCase.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.CasesController">
+<AnchorPane prefHeight="650.0" prefWidth="950.0" stylesheets="@../../CSS/CreateCase.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.Case.CasesController">
       <Pane layoutX="469.0" layoutY="33.0" prefHeight="56.0" prefWidth="467.0" style="-fx-background-color: #FFFFFF;">
          <effect>
             <DropShadow height="9.3" radius="5.32" width="13.98" />
@@ -60,7 +60,7 @@
       </Text>
       <Pane prefHeight="650.0" prefWidth="199.0" style="-fx-background-color: #D4D3BE;">
          <children>
-            <JFXButton fx:id="backToLastPage" layoutX="14.0" layoutY="593.0" onAction="#backToLastPageBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
+            <JFXButton fx:id="backToLastPage" layoutX="14.0" layoutY="593.0" onAction="#backToLastPageBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../../CSS/CreateStudent.css" text="Tilbage">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -76,13 +76,13 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="backGroups" layoutX="14.0" layoutY="533.0" onAction="#btnBackGroups" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Grupper">
+            <JFXButton fx:id="backGroups" layoutX="14.0" layoutY="533.0" onAction="#btnBackGroups" prefHeight="40.0" prefWidth="171.0" stylesheets="@../../CSS/CreateStudent.css" text="Grupper">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
 
-            <JFXButton fx:id="backCitizen" layoutX="14.0" layoutY="473.0" onAction="#backCitizenBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Borger">
+            <JFXButton fx:id="backCitizen" layoutX="14.0" layoutY="473.0" onAction="#backCitizenBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../../CSS/CreateStudent.css" text="Borger">
 
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -98,7 +98,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <JFXButton fx:id="backStudent" layoutX="14.0" layoutY="413.0" onAction="#backStudentBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Elever">
+            <JFXButton fx:id="backStudent" layoutX="14.0" layoutY="413.0" onAction="#backStudentBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../../CSS/CreateStudent.css" text="Elever">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -134,4 +134,9 @@
       </font>
    </Text>
    <JFXButton fx:id="Category" layoutX="336.0" layoutY="170.0" onAction="#BtnCategory" prefHeight="29.0" prefWidth="116.0" style="-fx-background-color: #15B559;" text="Helbredstilstande" textFill="WHITE" />
+   <JFXButton fx:id="editCase" layoutX="357.0" layoutY="564.0" onAction="#editCaseBtn" prefHeight="29.0" prefWidth="100.0" text="Edit Case">
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </JFXButton>
    </AnchorPane>

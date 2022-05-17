@@ -1,7 +1,6 @@
 package GUI.Controller.Student;
 
 import BE.CitizenInfo;
-import GUI.Controller.Universal.CreateCaseController;
 import GUI.Model.CitizenInfoModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
