@@ -4,6 +4,7 @@ import BE.Case;
 import BE.CitizenInfo;
 import BE.Student;
 import GUI.Controller.Teacher.EditStudentController;
+import GUI.Controller.Universal.CategoryController;
 import GUI.Controller.Universal.SimpleDialogController;
 import GUI.Model.CaseModel;
 import com.jfoenix.controls.JFXButton;
