@@ -24,7 +24,7 @@ public class SubcategoryMovingApparatController {
     public TextArea txtMovingApparat;
 
    // this is instance variable is not used to now//
-    private int caseID = 27;
+    private int caseID = -1;
 
     CategoryModel categoryModel = new CategoryModel();
 
@@ -42,8 +42,13 @@ public class SubcategoryMovingApparatController {
 
     public void subCategoryBack(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) btnBack.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Category.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Category.fxml"));
+        Parent root = loader.load();
         Scene scene = new Scene(root);
+
+        CategoryController controller = loader.getController();
+        controller.setCaseID(caseID);
+
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
     }
@@ -77,7 +82,8 @@ public class SubcategoryMovingApparatController {
      * @throws SQLException
      */
 
-    public void setId() throws SQLException {
+    public void setId(int caseID) throws SQLException {
+        this.caseID = caseID;
         txtMovingApparat.setText(categoryModel.readCategory(caseID,"Problems with moving"));
     }
 }
