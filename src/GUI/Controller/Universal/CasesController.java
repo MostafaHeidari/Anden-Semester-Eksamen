@@ -59,6 +59,8 @@ public class CasesController implements Initializable {
     public Text CprCitizenTxt;
     @FXML
     public Text GenInfoTxt1;
+    @FXML
+    public JFXButton Category;
 
     public CasesController() throws IOException {
         caseModel = new CaseModel();
@@ -156,5 +158,18 @@ public class CasesController implements Initializable {
     }
 
     public void funktionsevneBtn(ActionEvent event) {
+    }
+
+    public void BtnCategory(ActionEvent actionEvent) throws IOException {
+        if (tvCase.getSelectionModel().getSelectedItem() != null)
+        {
+            selectedCase = (Case) tvCase.getSelectionModel().getSelectedItem();
+            Stage switcher = (Stage) Category.getScene().getWindow();
+            Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Category.fxml"));
+            Scene scene = new Scene(root);
+            switcher.setTitle("Helbredstilstande");
+            switcher.setScene(scene);
+        }
+
     }
 }

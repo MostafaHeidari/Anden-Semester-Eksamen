@@ -133,5 +133,5 @@
          <Font size="16.0" />
       </font>
    </Text>
-   <JFXButton fx:id="funktionsevne2" layoutX="336.0" layoutY="170.0" onAction="#funktionsevneBtn" prefHeight="29.0" prefWidth="100.0" style="-fx-background-color: #15B559;" text="Funktionsevne" textFill="WHITE" />
+   <JFXButton fx:id="Category" layoutX="336.0" layoutY="170.0" onAction="#BtnCategory" prefHeight="29.0" prefWidth="116.0" style="-fx-background-color: #15B559;" text="Helbredstilstande" textFill="WHITE" />
    </AnchorPane>
