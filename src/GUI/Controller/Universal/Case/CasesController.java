@@ -188,7 +188,7 @@ public class CasesController implements Initializable {
             stage.setScene(new Scene(root1));
 
             fxmlLoader1.<CasesEditController>getController().setSelectedCase(selectedCase);
-
+            fxmlLoader1.<CasesEditController>getController().setController(this);
             stage.show();
 
         }

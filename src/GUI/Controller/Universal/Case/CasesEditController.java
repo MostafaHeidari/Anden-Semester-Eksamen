@@ -19,6 +19,8 @@ public class CasesEditController {
 
     Case selectedCase;
 
+    private CasesController mainController;
+
     int selectedCitizenInfo;
 
     public TextField caseNameTxt;
@@ -41,6 +43,7 @@ public class CasesEditController {
 
 
         caseModel.editCase(this.selectedCase);
+        mainController.tvCase.refresh();
 
         /*turn back to Create student window*/
         Stage switcher = (Stage) saveCase.getScene().getWindow();
@@ -70,5 +73,10 @@ public class CasesEditController {
 
     public void setSelectedCase(int selectedCitizenInfo) {
         this.selectedCitizenInfo = selectedCitizenInfo;
+    }
+
+
+    public void setController(CasesController casesController) {
+        mainController = casesController;
     }
 }
