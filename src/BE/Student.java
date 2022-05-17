@@ -1,10 +1,10 @@
 package BE;
 
 public class Student {
-    public int studentId;
-    public String studentName;
-    public String lastName;
-    public String userName;
+    private int studentId;
+    private String studentName;
+    private String lastName;
+    private String userName;
 
     /**
      * @param studentId

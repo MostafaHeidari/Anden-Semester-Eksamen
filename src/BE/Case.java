@@ -1,9 +1,9 @@
 package BE;
 
 public class Case {
-    public int caseId;
-    public String caseName;
-    public String caseInformation;
+    private int caseId;
+    private String caseName;
+    private String caseInformation;
 
     /**
      * @param caseId
