@@ -1,4 +1,4 @@
-package GUI.Controller.Universal;
+package GUI.Controller.Universal.SubCategory;
 
 import GUI.Controller.Universal.CategoryController;
 import GUI.Model.CategoryModel;
@@ -9,19 +9,20 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class SubcategorySeksualitetController {
+public class SubcategoryMovingApparatController {
 
     @FXML
     private JFXButton btnBack;
     @FXML
     private JFXButton btnLogOut;
 
-    public TextArea txtSeksualitet;
+    public TextArea txtMovingApparat;
 
    // this is instance variable is not used to now//
     private int caseID = -1;
@@ -32,7 +33,7 @@ public class SubcategorySeksualitetController {
      * Constructor
      * @throws IOException
      */
-    public SubcategorySeksualitetController() throws IOException, SQLException {
+    public SubcategoryMovingApparatController() throws IOException, SQLException {
 
     }
 
@@ -70,11 +71,11 @@ public class SubcategorySeksualitetController {
      * @throws SQLException
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
-        if (categoryModel.readCategory(caseID,"Problems with seksualitet") == null){
+        if (categoryModel.readCategory(caseID,"Problems with moving") == null){
 
-            categoryModel.createCategory(caseID,"Problems with seksualitet",txtSeksualitet.getText());
+            categoryModel.createCategory(caseID,"Problems with moving",txtMovingApparat.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with seksualitet",txtSeksualitet.getText());
+        categoryModel.updateCategory(caseID,"Problems with moving",txtMovingApparat.getText());
     }
 
     /**
@@ -84,6 +85,6 @@ public class SubcategorySeksualitetController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtSeksualitet.setText(categoryModel.readCategory(caseID,"Problems with seksualitet"));
+        txtMovingApparat.setText(categoryModel.readCategory(caseID,"Problems with moving"));
     }
 }

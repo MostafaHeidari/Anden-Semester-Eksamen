@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="767.0" prefWidth="1057.0" stylesheets="@../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.SubcategoryNutritionController">
+<AnchorPane prefHeight="767.0" prefWidth="1057.0" stylesheets="@../../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.SubCategory.SubcategoryNutritionController">
 
    <children>
       <JFXButton fx:id="btnBack" layoutX="625.0" layoutY="700.0" onAction="#subCategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
