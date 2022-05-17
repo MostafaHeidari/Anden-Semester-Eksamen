@@ -30,9 +30,7 @@ public class LoginModel {
 
     private final ObservableList<Login> loginList = FXCollections.observableArrayList();
 
-    // Password -> A salt -> A hash
-    // Store : password = password , salt = BCrypt.gensalt , hash =   new SecureRandom()
-    // Log rounds
+
     String salt;
 
     /**

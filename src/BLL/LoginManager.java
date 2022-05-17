@@ -1,7 +1,6 @@
 package BLL;
 
 import BE.Login;
-import BE.Student;
 import DAL.LoginDAO;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 
@@ -9,7 +8,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class LoginManager {
-    private LoginDAO loginDao;
+    private final LoginDAO loginDao;
 
     /**
      * Constructor
@@ -46,25 +45,25 @@ public class LoginManager {
     /**
      * Gets the uploadLogin studentUsername, studentPassword using uploadLogin from LoginDAO
      * @param userNameTeacher
-     * @param hashpw
+     * @param hashPassword
      * @param salt
      * @return
      * @throws SQLServerException
      */
-    public Login uploadLoginTeacher(String userNameTeacher, String hashpw, String salt) throws SQLException {
-        return(loginDao.uploadLoginTeacher(userNameTeacher, hashpw, salt));
+    public Login uploadLoginTeacher(String userNameTeacher, String hashPassword, String salt) throws SQLException {
+        return(loginDao.uploadLoginTeacher(userNameTeacher, hashPassword, salt));
     }
 
     /**
      * Gets the uploadLogin userNameAdmin, adminPassword using uploadLogin from LoginDAO
      * @param userNameAdmin
-     * @param hashpw
+     * @param hashPassword
      * @param salt
      * @return
      * @throws SQLServerException
      */
-    public Login uploadLoginAdmin(String userNameAdmin, String hashpw, String salt) throws SQLException {
-        return(loginDao.uploadLoginAdmin(userNameAdmin, hashpw, salt));
+    public Login uploadLoginAdmin(String userNameAdmin, String hashPassword, String salt) throws SQLException {
+        return(loginDao.uploadLoginAdmin(userNameAdmin, hashPassword, salt));
     }
 
     /**
