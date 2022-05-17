@@ -30,6 +30,8 @@ public class CategoryController {
     private Text seksualitet_1;
     @FXML
     private Text hudogslimhinder_1;
+    @FXML
+    private Text nutrition_1;
 
     /**
      * Goes to Patient view
@@ -199,7 +201,16 @@ public class CategoryController {
      * Subcategory changing text
      */
     public void ernæring_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        shiftWindow("Problemer med væskeindtag");
+        Stage switcher = (Stage) nutrition_1.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SubCategoriesNutrition.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        SubcategoryNutritionController controller = loader.getController();
+        controller.setId(caseID);
+
+        switcher.setTitle("Ernæring");
+        switcher.setScene(scene);
     }
 
     /**
