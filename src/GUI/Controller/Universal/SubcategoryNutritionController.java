@@ -1,5 +1,6 @@
 package GUI.Controller.Universal;
 
+import GUI.Controller.Universal.CategoryController;
 import GUI.Model.CategoryModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;

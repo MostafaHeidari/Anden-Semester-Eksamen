@@ -1,6 +1,5 @@
 package GUI.Controller.Universal;
 
-import GUI.Controller.Universal.SubCategory.*;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -50,7 +49,7 @@ public class CategoryController {
     private void shiftWindow(String vindue) throws IOException, SQLException {
 
         Stage switcher = (Stage) HBox.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SupCategories/SubCategories.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SubCategories.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 
@@ -71,7 +70,7 @@ public class CategoryController {
      */
     public void funktionsniveau_1(MouseEvent mouseEvent) throws IOException, SQLException {
         Stage switcher = (Stage) funktionsniveau_1.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SupCategories/SubCategoriesFunktionsNiveau.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SubCategoriesFunktionsNiveau.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 
@@ -87,7 +86,7 @@ public class CategoryController {
      */
     public void bevægeapparat_1(MouseEvent mouseEvent) throws IOException, SQLException {
         Stage switcher = (Stage) bevægeapparat_1.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SupCategories/SubCategoriesMovingApparat.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SubCategoriesMovingApparat.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 
@@ -103,7 +102,7 @@ public class CategoryController {
      */
     public void seksualitet_1(MouseEvent mouseEvent) throws IOException, SQLException {
         Stage switcher = (Stage) seksualitet_1.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SupCategories/SubCategoriesSeksualitet.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SubCategoriesSeksualitet.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 
@@ -116,7 +115,7 @@ public class CategoryController {
 
     public void hudogslimhinder_1(MouseEvent mouseEvent) throws IOException, SQLException {
         Stage switcher = (Stage) hudogslimhinder_1.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SupCategories/SubCategoriesSkinAndSlimhind.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SubCategoriesSkinAndSlimhind.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 

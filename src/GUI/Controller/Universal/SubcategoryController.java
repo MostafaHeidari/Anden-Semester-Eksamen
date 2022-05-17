@@ -1,6 +1,5 @@
-package GUI.Controller.Universal.SubCategory;
+package GUI.Controller.Universal;
 
-import GUI.Controller.Universal.CategoryController;
 import GUI.Model.CategoryModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -9,22 +8,25 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class SubcategorySeksualitetController {
+public class SubcategoryController {
 
     @FXML
     private JFXButton btnBack;
     @FXML
     private JFXButton btnLogOut;
 
-    public TextArea txtSeksualitet;
+    public Text subCatText;
+    public TextArea txtDescription;
 
    // this is instance variable is not used to now//
-    private int caseID = -1;
+    private int caseID = 27;
+    private String problemName;
 
     CategoryModel categoryModel = new CategoryModel();
 
@@ -32,8 +34,7 @@ public class SubcategorySeksualitetController {
      * Constructor
      * @throws IOException
      */
-    public SubcategorySeksualitetController() throws IOException, SQLException {
-
+    public SubcategoryController() throws IOException {
     }
 
     /**
@@ -42,13 +43,8 @@ public class SubcategorySeksualitetController {
 
     public void subCategoryBack(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) btnBack.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Category.fxml"));
-        Parent root = loader.load();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Category.fxml"));
         Scene scene = new Scene(root);
-
-        CategoryController controller = loader.getController();
-        controller.setCaseID(caseID);
-
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
     }
@@ -70,20 +66,21 @@ public class SubcategorySeksualitetController {
      * @throws SQLException
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
-        if (categoryModel.readCategory(caseID,"Problems with seksualitet") == null){
+        if (categoryModel.readCategory(caseID,problemName) == null){
 
-            categoryModel.createCategory(caseID,"Problems with seksualitet",txtSeksualitet.getText());
+            categoryModel.createCategory(caseID,problemName,txtDescription.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with seksualitet",txtSeksualitet.getText());
+        categoryModel.updateCategory(caseID,problemName,txtDescription.getText());
     }
 
     /**
      * this method is used to sende information from en controller to other controller
+     * @param problemName
      * @throws SQLException
      */
-
-    public void setId(int caseID) throws SQLException {
-        this.caseID = caseID;
-        txtSeksualitet.setText(categoryModel.readCategory(caseID,"Problems with seksualitet"));
+    public void setId(String problemName) throws SQLException {
+        this.problemName = problemName;
+        txtDescription.setText(categoryModel.readCategory(caseID,problemName));
+        subCatText.setText(problemName);
     }
 }

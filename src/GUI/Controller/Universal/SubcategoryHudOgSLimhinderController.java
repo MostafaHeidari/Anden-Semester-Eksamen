@@ -1,4 +1,4 @@
-package GUI.Controller.Universal.SubCategory;
+package GUI.Controller.Universal;
 
 import GUI.Controller.Universal.CategoryController;
 import GUI.Model.CategoryModel;

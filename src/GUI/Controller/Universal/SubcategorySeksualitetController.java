@@ -1,4 +1,4 @@
-package GUI.Controller.Universal.SubCategory;
+package GUI.Controller.Universal;
 
 import GUI.Controller.Universal.CategoryController;
 import GUI.Model.CategoryModel;
@@ -9,22 +9,19 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class SubcategoryFunctionLevelController {
+public class SubcategorySeksualitetController {
 
     @FXML
     private JFXButton btnBack;
     @FXML
     private JFXButton btnLogOut;
 
-    public Text subCatText;
-    public TextArea txtPersonalCare;
-    public TextArea txtDailyActivities;
+    public TextArea txtSeksualitet;
 
    // this is instance variable is not used to now//
     private int caseID = -1;
@@ -35,7 +32,7 @@ public class SubcategoryFunctionLevelController {
      * Constructor
      * @throws IOException
      */
-    public SubcategoryFunctionLevelController() throws IOException, SQLException {
+    public SubcategorySeksualitetController() throws IOException, SQLException {
 
     }
 
@@ -73,17 +70,11 @@ public class SubcategoryFunctionLevelController {
      * @throws SQLException
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
-        if (categoryModel.readCategory(caseID,"Problems with personal care") == null){
+        if (categoryModel.readCategory(caseID,"Problems with seksualitet") == null){
 
-            categoryModel.createCategory(caseID,"Problems with personal care",txtPersonalCare.getText());
+            categoryModel.createCategory(caseID,"Problems with seksualitet",txtSeksualitet.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with personal care",txtPersonalCare.getText());
-
-        if (categoryModel.readCategory(caseID,"Problems with daily activities") == null){
-
-            categoryModel.createCategory(caseID,"Problems with daily activities",txtDailyActivities.getText());
-        }
-        categoryModel.updateCategory(caseID,"Problems with daily activities",txtDailyActivities.getText());
+        categoryModel.updateCategory(caseID,"Problems with seksualitet",txtSeksualitet.getText());
     }
 
     /**
@@ -93,7 +84,6 @@ public class SubcategoryFunctionLevelController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtPersonalCare.setText(categoryModel.readCategory(caseID,"Problems with personal care"));
-        txtDailyActivities.setText(categoryModel.readCategory(caseID,"Problems with daily activities"));
+        txtSeksualitet.setText(categoryModel.readCategory(caseID,"Problems with seksualitet"));
     }
 }
