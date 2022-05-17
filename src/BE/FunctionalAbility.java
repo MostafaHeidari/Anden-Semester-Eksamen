@@ -1,8 +1,8 @@
 package BE;
 
 public class FunctionalAbility {
-    public String condition;
-    public String futureCondition;
+    private String condition;
+    private String futureCondition;
 
     /**
      * @param caseID
