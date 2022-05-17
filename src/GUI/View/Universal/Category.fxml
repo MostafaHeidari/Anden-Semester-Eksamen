@@ -103,7 +103,7 @@
                      <children>
                         <VBox maxHeight="152.0" minHeight="121.0" prefHeight="152.0" prefWidth="324.0" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Respiration og cirkulation" underline="true">
+                              <Text fx:id="respirationogcirkulation_1" onMouseClicked="#respirationogcirkulation_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Respiration og cirkulation" underline="true">
                                  <font>
                                     <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
@@ -111,7 +111,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <Label fx:id="respirationogcirkulation_1" onMouseClicked="#respirationogcirkulation_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Respirationsproblemer">
+                              <Label style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Respirationsproblemer">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -135,7 +135,7 @@
                      <children>
                         <VBox prefHeight="256.0" prefWidth="329.0" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Ernæring" underline="true">
+                              <Text fx:id="nutrition_1" onMouseClicked="#ernæring_1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Ernæring" underline="true">
                                  <font>
                                     <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
@@ -143,7 +143,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <Label fx:id="ernæring_1" onMouseClicked="#ernæring_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med væskeindtag">
+                              <Label style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med væskeindtag">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
