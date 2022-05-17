@@ -11,7 +11,7 @@
      -fx-background-color: white;
      -fx-text-fill: red;
 }
-#btnInfo{
+#btnInfo,#editCase{
      -fx-font-size: 15px;
      -fx-border-color: #001569;
      -fx-background-color: #15B559;
@@ -143,6 +143,12 @@
 }
 
 #createCase:hover{
+    -fx-font-size: 15px;
+    -fx-background-color: white;
+    -fx-text-fill: #2B2121;
+    -fx-border-color: #15B559;
+}
+#editCase:hover{
     -fx-font-size: 15px;
     -fx-background-color: white;
     -fx-text-fill: #2B2121;

@@ -84,9 +84,6 @@ public class CitizenInfoContoller implements Initializable {
 
         tcCitizenLastname.setCellValueFactory(new PropertyValueFactory<>("citizenLastName"));
 
-        tcCitizenAge.setCellValueFactory(new PropertyValueFactory<>("citizenAge"));
-
-
         tvCitizenInfo.setItems(citizenInfoModel.getAllCitizens());
 
     }
@@ -149,7 +146,7 @@ public class CitizenInfoContoller implements Initializable {
 
 
     /**
-     * Changes selected Name  in the adminEventMangerTableViewName
+     * Changes selected Name tvCitizenInfo in the adminEventMangerTableViewName
      */
     private void setSelectedItems() {
         if (tvCitizenInfo.getSelectionModel().getSelectedItem() != null)

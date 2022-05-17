@@ -61,9 +61,9 @@ public class CitizenInfoDAO {
 
             ps.setString(1, citizenName);
             ps.setString(2, citizenLastName);
-            ps.setString(3, citizenInformation);
+            ps.setString(5, citizenInformation);
             ps.setString(4, CPR);
-            ps.setString(5, citizenAddress);
+            ps.setString(3, citizenAddress);
 
 
             int affectedRows = ps.executeUpdate();

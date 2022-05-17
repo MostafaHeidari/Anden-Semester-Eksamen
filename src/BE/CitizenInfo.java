@@ -12,8 +12,10 @@ public class CitizenInfo {
      * @param citizenId
      * @param citizenName
      * @param citizenLastName
-
-     * Constructor with citizenId, citizenName,  citizenLastName, citizenAge
+     * @param citizenAddress
+     * @param CPR
+     * @param citizenInformation
+     * Constructor with citizenId, citizenName,  citizenLastName, citizenAddress, CPR, citizenInformation
      */
     public CitizenInfo(int citizenId, String citizenName, String citizenLastName, String citizenAddress, String CPR, String citizenInformation) {
         this.citizenId = citizenId;

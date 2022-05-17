@@ -13,17 +13,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="Patient" prefHeight="600.0" prefWidth="900.0" stylesheets="@../CSS/TeacherAndPatient.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Student.CitizenController">
+<AnchorPane fx:id="Patient" prefHeight="600.0" prefWidth="1202.0" stylesheets="@../CSS/TeacherAndPatient.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Student.CitizenController">
    <children>
-      <TableView fx:id="tableViewPatients" layoutX="328.0" layoutY="92.0" prefHeight="492.0" prefWidth="475.0">
+      <TableView fx:id="tvPatients" layoutX="328.0" layoutY="92.0" prefHeight="492.0" prefWidth="803.0">
         <columns>
-          <TableColumn id="ID" prefWidth="35.0" text="ID" />
-          <TableColumn id="Name" prefWidth="200.0" text="Navn" />
-            <TableColumn prefWidth="200.0" text="Efternavn" />
-            <TableColumn id="Age" minWidth="0.0" prefWidth="39.0" text="Alder" />
+          <TableColumn id="ID" fx:id="tcCitizenId" prefWidth="35.0" text="ID" />
+          <TableColumn id="Name" fx:id="tcCitizenName" prefWidth="144.0" text="Navn" />
+            <TableColumn fx:id="tcCitizenLastName" prefWidth="168.0" text="Efternavn" />
+            <TableColumn id="Age" fx:id="tcCitizenAddress" minWidth="0.0" prefWidth="186.0" text="Address" />
+            <TableColumn id="Age" fx:id="tcCPR" minWidth="0.0" prefWidth="87.0" text="Cpr Nr." />
+            <TableColumn id="Age" fx:id="tcCitizenInformation" minWidth="0.0" prefWidth="182.0" text="Boger Informationer" />
         </columns>
       </TableView>
-      <JFXButton fx:id="btnLogout" layoutX="833.0" layoutY="14.0" onAction="#LogOut" text="Log ud">
+      <JFXButton fx:id="btnLogout" layoutX="1138.0" layoutY="14.0" onAction="#LogOut" text="Log ud">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
@@ -45,7 +47,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <Pane layoutX="328.0" layoutY="21.0" prefHeight="56.0" prefWidth="475.0" style="-fx-background-color: #FFFFFF;">
+      <Pane layoutX="328.0" layoutY="21.0" prefHeight="56.0" prefWidth="803.0" style="-fx-background-color: #FFFFFF;">
          <effect>
             <DropShadow height="9.3" radius="5.32" width="13.98" />
          </effect>
@@ -55,8 +57,8 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="176.0" layoutY="35.0" size="20" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
-            <Text layoutX="204.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste af Borger" textAlignment="CENTER" />
+            <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="349.0" layoutY="33.0" size="20" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
+            <Text layoutX="377.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste af Borger" textAlignment="CENTER" />
          </children>
       </Pane>
       <JFXButton fx:id="backToLastPage" layoutX="11.0" layoutY="540.0" prefHeight="40.0" prefWidth="179.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
@@ -69,5 +71,10 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </FontAwesomeIconView>
+      <JFXButton fx:id="editCase" layoutX="214.0" layoutY="459.0" onAction="#editCaseBtn" prefHeight="33.0" prefWidth="101.0" text="Edit Case">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
    </children>
 </AnchorPane>
