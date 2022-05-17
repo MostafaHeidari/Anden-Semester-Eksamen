@@ -15,6 +15,8 @@ import java.sql.SQLException;
 
 public class CategoryController {
 
+    private int caseID;
+
     @FXML
     private javafx.scene.layout.HBox HBox;
     @FXML

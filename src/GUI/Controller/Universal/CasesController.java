@@ -164,6 +164,8 @@ public class CasesController implements Initializable {
         if (tvCase.getSelectionModel().getSelectedItem() != null)
         {
             selectedCase = (Case) tvCase.getSelectionModel().getSelectedItem();
+            selectedCase.getCaseId();
+
             Stage switcher = (Stage) Category.getScene().getWindow();
             Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Category.fxml"));
             Scene scene = new Scene(root);
