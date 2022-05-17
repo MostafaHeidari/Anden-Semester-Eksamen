@@ -1,4 +1,4 @@
-package GUI.Controller.Universal;
+package GUI.Controller.Universal.SubCategory;
 
 import GUI.Model.CategoryModel;
 import com.jfoenix.controls.JFXButton;

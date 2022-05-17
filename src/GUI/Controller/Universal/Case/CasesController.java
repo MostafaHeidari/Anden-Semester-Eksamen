@@ -1,7 +1,10 @@
-package GUI.Controller.Universal;
+package GUI.Controller.Universal.Case;
 
 import BE.Case;
 import BE.CitizenInfo;
+import BE.Student;
+import GUI.Controller.Teacher.EditStudentController;
+import GUI.Controller.Universal.SimpleDialogController;
 import GUI.Model.CaseModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -25,6 +28,7 @@ public class CasesController implements Initializable {
 
     @FXML
     public JFXButton deleteCase;
+    public JFXButton editCase;
     @FXML
     private CitizenInfo selectedCitizenInfo;
     @FXML
@@ -171,5 +175,22 @@ public class CasesController implements Initializable {
             switcher.setScene(scene);
         }
 
+    }
+
+
+    public void editCaseBtn(ActionEvent event) throws IOException {
+        if (selectedCase != null) {
+            Case selectedCase = (Case) tvCase.getSelectionModel().getSelectedItem();
+            Parent root1;
+            FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Case/CasesEdit.fxml"));
+            root1 = (Parent) fxmlLoader1.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));
+
+            fxmlLoader1.<CasesEditController>getController().setSelectedCase(selectedCase);
+
+            stage.show();
+
+        }
     }
 }

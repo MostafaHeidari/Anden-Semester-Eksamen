@@ -1,4 +1,4 @@
-package GUI.Controller.Universal;
+package GUI.Controller.Universal.SubCategory;
 
 import GUI.Model.CategoryModel;
 import com.jfoenix.controls.JFXButton;
@@ -14,14 +14,16 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class SubcategoryMovingApparatController {
+public class SubcategoryFunctionLevelController {
 
     @FXML
     private JFXButton btnBack;
     @FXML
     private JFXButton btnLogOut;
 
-    public TextArea txtMovingApparat;
+    public Text subCatText;
+    public TextArea txtPersonalCare;
+    public TextArea txtDailyActivities;
 
    // this is instance variable is not used to now//
     private int caseID = 27;
@@ -32,7 +34,7 @@ public class SubcategoryMovingApparatController {
      * Constructor
      * @throws IOException
      */
-    public SubcategoryMovingApparatController() throws IOException, SQLException {
+    public SubcategoryFunctionLevelController() throws IOException, SQLException {
 
     }
 
@@ -65,11 +67,17 @@ public class SubcategoryMovingApparatController {
      * @throws SQLException
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
-        if (categoryModel.readCategory(caseID,"Problems with moving") == null){
+        if (categoryModel.readCategory(caseID,"Problems with personal care") == null){
 
-            categoryModel.createCategory(caseID,"Problems with moving",txtMovingApparat.getText());
+            categoryModel.createCategory(caseID,"Problems with personal care",txtPersonalCare.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with moving",txtMovingApparat.getText());
+        categoryModel.updateCategory(caseID,"Problems with personal care",txtPersonalCare.getText());
+
+        if (categoryModel.readCategory(caseID,"Problems with daily activities") == null){
+
+            categoryModel.createCategory(caseID,"Problems with daily activities",txtDailyActivities.getText());
+        }
+        categoryModel.updateCategory(caseID,"Problems with daily activities",txtDailyActivities.getText());
     }
 
     /**
@@ -78,6 +86,7 @@ public class SubcategoryMovingApparatController {
      */
 
     public void setId() throws SQLException {
-        txtMovingApparat.setText(categoryModel.readCategory(caseID,"Problems with moving"));
+     txtPersonalCare.setText(categoryModel.readCategory(caseID,"Problems with personal care"));
+     txtDailyActivities.setText(categoryModel.readCategory(caseID,"Problems with daily activities"));
     }
 }

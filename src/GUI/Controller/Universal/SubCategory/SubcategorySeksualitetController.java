@@ -1,4 +1,4 @@
-package GUI.Controller.Universal;
+package GUI.Controller.Universal.SubCategory;
 
 import GUI.Model.CategoryModel;
 import com.jfoenix.controls.JFXButton;
@@ -8,25 +8,22 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class SubcategoryController {
+public class SubcategorySeksualitetController {
 
     @FXML
     private JFXButton btnBack;
     @FXML
     private JFXButton btnLogOut;
 
-    public Text subCatText;
-    public TextArea txtDescription;
+    public TextArea txtSeksualitet;
 
    // this is instance variable is not used to now//
     private int caseID = 27;
-    private String problemName;
 
     CategoryModel categoryModel = new CategoryModel();
 
@@ -34,7 +31,8 @@ public class SubcategoryController {
      * Constructor
      * @throws IOException
      */
-    public SubcategoryController() throws IOException {
+    public SubcategorySeksualitetController() throws IOException, SQLException {
+
     }
 
     /**
@@ -66,21 +64,19 @@ public class SubcategoryController {
      * @throws SQLException
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
-        if (categoryModel.readCategory(caseID,problemName) == null){
+        if (categoryModel.readCategory(caseID,"Problems with seksualitet") == null){
 
-            categoryModel.createCategory(caseID,problemName,txtDescription.getText());
+            categoryModel.createCategory(caseID,"Problems with seksualitet",txtSeksualitet.getText());
         }
-        categoryModel.updateCategory(caseID,problemName,txtDescription.getText());
+        categoryModel.updateCategory(caseID,"Problems with seksualitet",txtSeksualitet.getText());
     }
 
     /**
      * this method is used to sende information from en controller to other controller
-     * @param problemName
      * @throws SQLException
      */
-    public void setId(String problemName) throws SQLException {
-        this.problemName = problemName;
-        txtDescription.setText(categoryModel.readCategory(caseID,problemName));
-        subCatText.setText(problemName);
+
+    public void setId() throws SQLException {
+        txtSeksualitet.setText(categoryModel.readCategory(caseID,"Problems with seksualitet"));
     }
 }

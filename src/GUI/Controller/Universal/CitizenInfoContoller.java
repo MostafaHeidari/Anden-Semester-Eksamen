@@ -1,6 +1,8 @@
 package GUI.Controller.Universal;
 
 import BE.CitizenInfo;
+import GUI.Controller.Universal.Case.CasesController;
+import GUI.Controller.Universal.Case.CreateCaseController;
 import GUI.Model.CitizenInfoModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -135,12 +137,12 @@ public class CitizenInfoContoller implements Initializable {
 
     public void caseInfoBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) caseInfo.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Cases.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Case/Cases.fxml"));
         Parent root = (Parent) fxmlLoader.load();
         CasesController casesController = fxmlLoader.<CasesController>getController();
         casesController.setCitizenID(selectedCitizenInfo);
         Scene scene = new Scene(root);
-        switcher.setTitle("SOSU System");
+        switcher.setTitle("Case System");
         switcher.setScene(scene);
     }
 
@@ -159,12 +161,12 @@ public class CitizenInfoContoller implements Initializable {
 
     public void createCaseBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) caseInfo.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/CreateCase.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Case/CreateCase.fxml"));
         Parent root = (Parent) fxmlLoader.load();
         CreateCaseController casesController = fxmlLoader.<CreateCaseController>getController();
         casesController.setCitizenID(selectedCitizenInfo);
         Scene scene = new Scene(root);
-        switcher.setTitle("SOSU System");
+        switcher.setTitle("Create Case");
         switcher.setScene(scene);
     }
 
@@ -175,4 +177,6 @@ public class CitizenInfoContoller implements Initializable {
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
     }
+
+
 }

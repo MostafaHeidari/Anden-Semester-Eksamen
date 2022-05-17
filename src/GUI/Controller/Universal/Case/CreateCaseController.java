@@ -1,4 +1,4 @@
-package GUI.Controller.Universal;
+package GUI.Controller.Universal.Case;
 
 import BE.CitizenInfo;
 import GUI.Model.CaseModel;
@@ -27,6 +27,9 @@ public class CreateCaseController {
     @FXML
     public TextField caseNameTxt;
 
+    /**
+     * Saves a Case info with the uploadCaseInfo method
+     */
     public void saveCaseBtn(ActionEvent event) throws SQLException, IOException {
         String uploadCaseName = caseNameTxt.getText();
         String uploadCaseInformation = InformationTxt.getText();
@@ -34,6 +37,10 @@ public class CreateCaseController {
         backToPatientsBtn(event);
     }
 
+
+    /**
+     * Returns to Login with the LogOutAction method
+     */
     public void LogOutAction(ActionEvent event) throws IOException {
         Stage switcher = (Stage) LogOut.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
@@ -42,7 +49,9 @@ public class CreateCaseController {
         switcher.setScene(scene);
     }
 
-
+    /**
+     * Returns to CitizenInfo with the backToPatientsBtn method
+     */
     public void backToPatientsBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) backTo.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/CitizenInfo.fxml"));
@@ -52,7 +61,7 @@ public class CreateCaseController {
     }
 
     /**
-     * uploads a student info with the uploadStudentInfo method
+     * uploads a Case info with the uploadCaseInfo method
      */
     private void uploadCaseInfo(String caseName, String informationTxt, int selectedCitizen) throws IOException, SQLException {
         CaseModel caseModel = new CaseModel();

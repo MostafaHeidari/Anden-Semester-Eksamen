@@ -33,8 +33,7 @@
             <columns>
                 <TableColumn fx:id="tcCitizenId" prefWidth="35.0" text="ID " />
                 <TableColumn fx:id="tcNameCitizen" prefWidth="200.0" text="Navn" />
-                <TableColumn fx:id="tcCitizenLastname" prefWidth="200.0" text="Efternavn" />
-                <TableColumn fx:id="tcCitizenAge" prefWidth="39.0" text="Alder" />
+                <TableColumn fx:id="tcCitizenLastname" prefWidth="239.0" text="Efternavn" />
             </columns>
         </TableView>
         <Pane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #D4D3BE;">

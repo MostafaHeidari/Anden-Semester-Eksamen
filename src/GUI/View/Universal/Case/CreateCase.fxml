@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.Case.CreateCaseController">
+   <children>
+      <GridPane fx:id="GridPane" layoutX="300.0" layoutY="185.0" prefHeight="187.0" prefWidth="326.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="146.0" minHeight="10.0" prefHeight="146.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField fx:id="caseNameTxt" prefHeight="98.0" prefWidth="318.0" promptText="Navn">
+               <GridPane.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="InformationTxt" layoutX="10.0" layoutY="18.0" prefHeight="105.0" prefWidth="326.0" promptText="Infomation" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+      <JFXButton fx:id="saveCase" layoutX="507.0" layoutY="385.0" onAction="#saveCaseBtn" prefHeight="28.0" prefWidth="119.0" stylesheets="@../../CSS/CreateCase.css" text="Gem oplysninger" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="LogOut" layoutX="633.0" layoutY="14.0" onAction="#LogOutAction" style="-fx-background-color: #009B42;" text="Log ud" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Pane prefHeight="450.0" prefWidth="199.0" style="-fx-background-color: #D4D3BE;">
+         <children>
+            <JFXButton fx:id="backTo" layoutX="14.0" layoutY="395.0" onAction="#backToPatientsBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../../CSS/CreateStudent.css" text="Tilbage">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="35.0" layoutY="420.0" opacity="0.58" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <Text fill="WHITE" layoutX="21.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opret Case" textAlignment="CENTER">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" layoutX="254.0" layoutY="191.0" prefHeight="18.0" prefWidth="37.0" text="Navn:" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="229.0" layoutY="246.0" prefHeight="18.0" prefWidth="62.0" text="Infomation:" />
+      <Label layoutX="337.0" layoutY="144.0" text="Indtast borgeroplysninger" textFill="#2b2121">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="300.0" layoutY="165.0" size="30" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
+      <Line endX="148.0" layoutX="34.0" layoutY="100.0" startX="-14.899984359741211" startY="1.52587890625E-5" stroke="WHITE" />
+   </children>
+</AnchorPane>

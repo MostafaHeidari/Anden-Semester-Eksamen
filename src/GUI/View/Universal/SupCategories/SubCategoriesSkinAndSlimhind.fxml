@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="767.0" prefWidth="1057.0" stylesheets="@../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.SubcategoryHudOgSLimhinderController">
+<AnchorPane prefHeight="767.0" prefWidth="1417.0" stylesheets="@../../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.SubCategory.SubcategoryHudOgSLimhinderController">
    <children>
       <JFXButton fx:id="btnBack" layoutX="625.0" layoutY="700.0" onAction="#subCategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
          <font>
@@ -29,8 +29,8 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtsurgicalWound" layoutX="301.0" layoutY="80.0" prefHeight="92.0" prefWidth="501.0" />
-      <TextArea fx:id="txtdiabeticWound" layoutX="300.0" layoutY="190.0" prefHeight="88.0" prefWidth="501.0" />
+      <TextArea fx:id="txtsurgicalWound" layoutX="301.0" layoutY="80.0" prefHeight="92.0" prefWidth="393.0" />
+      <TextArea fx:id="txtdiabeticWound" layoutX="300.0" layoutY="190.0" prefHeight="88.0" prefWidth="394.0" />
 
       <JFXButton fx:id="btnSave" layoutX="536.0" layoutY="700.0" onAction="#subCategorySave" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Gem">
          <font>
@@ -42,23 +42,47 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtCancerWound" layoutX="300.0" layoutY="305.0" prefHeight="88.0" prefWidth="501.0" />
+      <TextArea fx:id="txtCancerWound" layoutX="300.0" layoutY="305.0" prefHeight="88.0" prefWidth="395.0" />
       <Label layoutX="12.0" layoutY="329.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med cancer sår">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtPressureWound" layoutX="300.0" layoutY="409.0" prefHeight="88.0" prefWidth="501.0" />
+      <TextArea fx:id="txtPressureWound" layoutX="300.0" layoutY="409.0" prefHeight="88.0" prefWidth="393.0" />
       <Label layoutX="13.0" layoutY="431.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med tryk sår">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtArtilleryWound" layoutX="300.0" layoutY="529.0" prefHeight="88.0" prefWidth="501.0" />
+      <TextArea fx:id="txtArtilleryWound" layoutX="300.0" layoutY="529.0" prefHeight="88.0" prefWidth="394.0" />
       <Label layoutX="17.0" layoutY="554.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med artellerielt sår">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
+      <Label layoutX="700.0" layoutY="555.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Andre problemer med hud og slimhinder">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtVenousWound" layoutX="1000.0" layoutY="78.0" prefHeight="92.0" prefWidth="399.0" />
+      <Label layoutX="700.0" layoutY="265.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med blandings sår">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="700.0" layoutY="414.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med traume sår">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="700.0" layoutY="109.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med venøst sår">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtMixedWound" layoutX="1000.0" layoutY="238.0" prefHeight="92.0" prefWidth="396.0" />
+      <TextArea fx:id="txtTraumaWound" layoutX="1000.0" layoutY="395.0" prefHeight="92.0" prefWidth="394.0" />
+      <TextArea fx:id="txtOtherProblems" layoutX="1000.0" layoutY="527.0" prefHeight="92.0" prefWidth="396.0" />
    </children>
 </AnchorPane>

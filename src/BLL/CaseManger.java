@@ -20,6 +20,7 @@ public class CaseManger {
     /**
      * Gets the list of getAllCases using the getAllCases method in caseDAO.
      * @return a list of getAllCases
+     * @param citizenId
      */
     public ObservableList<Case> getAllCases(int citizenId) {
         ObservableList<Case> cases = FXCollections.observableArrayList();
@@ -54,4 +55,12 @@ public class CaseManger {
     public void deleteCase(Case selectedCase) {
         caseDAO.deleteCase(selectedCase);
     }
+
+
+
+    public Case editCase(Case selectedCase) {
+        return caseDAO.editCase(selectedCase);
+    }
+
+
 }
