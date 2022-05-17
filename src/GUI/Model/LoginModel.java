@@ -8,7 +8,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.io.IOException;
-import java.security.SecureRandom;
 import java.sql.SQLException;
 
 public class LoginModel {
@@ -27,9 +26,9 @@ public class LoginModel {
             return single_instance;
         }
 
-    private LoginManager loginManager;
+    private final LoginManager loginManager;
 
-    private ObservableList<Login> loginList = FXCollections.observableArrayList();
+    private final ObservableList<Login> loginList = FXCollections.observableArrayList();
 
     // Password -> A salt -> A hash
     // Store : password = password , salt = BCrypt.gensalt , hash =   new SecureRandom()

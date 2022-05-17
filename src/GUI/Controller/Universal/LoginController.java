@@ -18,10 +18,13 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class LoginController {
-    private CreateStudentController createStudentController = new CreateStudentController();
+    private final CreateStudentController createStudentController = new CreateStudentController();
 
+    @FXML
     public FontAwesomeIconView LockIkon;
+    @FXML
     public FontAwesomeIconView userIkon;
+
     @FXML
     private Button btnLogin;
     @FXML
@@ -30,7 +33,7 @@ public class LoginController {
     private TextField txtPasswordField;
 
 
-    private LoginModel loginModel = LoginModel.getInstance();
+    private final LoginModel loginModel = LoginModel.getInstance();
 
     /**
      * Constructor
@@ -47,12 +50,6 @@ public class LoginController {
     public void Login() throws IOException, SQLServerException {
 
         Login login =  loginModel.login(txtFieldUsername.getText(), txtPasswordField.getText());
-
-        /**
-         * Testing in terminal to see right data from user
-         */
-        //System.out.println(txtFieldUsername.getText());
-        //System.out.println(txtPasswordField.getText());
 
         if(login != null) {
 

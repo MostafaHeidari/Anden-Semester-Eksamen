@@ -65,13 +65,10 @@ public class CreateStudentController implements Initializable {
     public TableColumn tcNameStudent;
     @FXML
     public TableColumn tcLastName;
-    @FXML
-    public TableColumn tcEmail;
-    @FXML
-    public TableColumn tcAge;
+
     @FXML
     public TableColumn tcUserName;
-
+    @FXML
     public Student selectedStudent;
 
 
@@ -102,9 +99,6 @@ public class CreateStudentController implements Initializable {
     }
 
     public String saltPw(){
-        /** Randomly generated salt
-         / Statict salt
-         */
         String salt = "SuperCoolAppLol";
         return salt;
     }
@@ -161,9 +155,7 @@ public class CreateStudentController implements Initializable {
         passwordTxt.clear();
         txtUserField.clear();
 
-
         tvStudent.getItems().clear();
-
 
         tvStudent.setItems(studentModel.getAllStudents());
     }
@@ -223,12 +215,6 @@ public class CreateStudentController implements Initializable {
 
 
     /**
-     * this button must to save the selected students information
-     */
-    public void GamOplysingerActionButton(ActionEvent actionEvent) {
-    }
-
-    /**
      * here we set the information in the tableView
      * @throws IOException
      */
@@ -243,7 +229,6 @@ public class CreateStudentController implements Initializable {
 
         tvStudent.setItems(studentModel.getAllStudents());
     }
-
 
 
     /**

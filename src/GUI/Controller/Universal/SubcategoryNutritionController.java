@@ -1,4 +1,4 @@
-package GUI.Controller.Universal.SubCategory;
+package GUI.Controller.Universal;
 
 import GUI.Model.CategoryModel;
 import com.jfoenix.controls.JFXButton;
@@ -8,13 +8,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class SubcategoryHudOgSLimhinderController {
+public class SubcategoryNutritionController {
 
     @FXML
     private JFXButton btnBack;
@@ -30,14 +29,6 @@ public class SubcategoryHudOgSLimhinderController {
     private TextArea txtPressureWound;
     @FXML
     private TextArea txtArtilleryWound;
-    @FXML
-    private TextArea txtVenousWound;
-    @FXML
-    private TextArea txtMixedWound;
-    @FXML
-    private TextArea txtTraumaWound;
-    @FXML
-    private TextArea txtOtherProblems;
 
 
    // this is instance variable is not used to now//
@@ -49,7 +40,7 @@ public class SubcategoryHudOgSLimhinderController {
      * Constructor
      * @throws IOException
      */
-    public SubcategoryHudOgSLimhinderController() throws IOException, SQLException {
+    public SubcategoryNutritionController() throws IOException, SQLException {
 
     }
 
@@ -115,30 +106,6 @@ public class SubcategoryHudOgSLimhinderController {
             categoryModel.createCategory(caseID,"Problems with artillery wound",txtArtilleryWound.getText());
         }
         categoryModel.updateCategory(caseID,"Problems with artillery wound",txtArtilleryWound.getText());
-
-
-        if (categoryModel.readCategory(caseID,"Problems with venous wound") == null){
-            categoryModel.createCategory(caseID,"Problems with venous wound",txtVenousWound.getText());
-        }
-        categoryModel.updateCategory(caseID,"Problems with venous wound",txtVenousWound.getText());
-
-
-        if (categoryModel.readCategory(caseID,"Problems with mixed wound") == null){
-            categoryModel.createCategory(caseID,"Problems with mixed wound",txtMixedWound.getText());
-        }
-        categoryModel.updateCategory(caseID,"Problems with mixed wound",txtMixedWound.getText());
-
-
-        if (categoryModel.readCategory(caseID,"Problems with trauma wound") == null){
-            categoryModel.createCategory(caseID,"Problems with trauma wound",txtTraumaWound.getText());
-        }
-        categoryModel.updateCategory(caseID,"Problems with trauma wound",txtTraumaWound.getText());
-
-
-        if (categoryModel.readCategory(caseID,"Other problems") == null){
-            categoryModel.createCategory(caseID,"Other problems",txtOtherProblems.getText());
-        }
-        categoryModel.updateCategory(caseID,"Other problems",txtOtherProblems.getText());
     }
 
     /**
@@ -153,9 +120,5 @@ public class SubcategoryHudOgSLimhinderController {
         txtCancerWound.setText(categoryModel.readCategory(caseID,"Problems with cancer wound"));
         txtPressureWound.setText(categoryModel.readCategory(caseID,"Problems with pressure wound"));
         txtArtilleryWound.setText(categoryModel.readCategory(caseID,"Problems with artillery wound"));
-        txtVenousWound.setText(categoryModel.readCategory(caseID,"Problems with venous wound"));
-        txtMixedWound.setText(categoryModel.readCategory(caseID,"Problems with mixed wound"));
-        txtTraumaWound.setText(categoryModel.readCategory(caseID,"Problems with trauma wound"));
-        txtOtherProblems.setText(categoryModel.readCategory(caseID,"Other problems"));
     }
 }

@@ -16,6 +16,8 @@ import java.sql.SQLException;
 
 public class CategoryController {
 
+    private int caseID = -1;
+
     @FXML
     private javafx.scene.layout.HBox HBox;
     @FXML
@@ -57,6 +59,11 @@ public class CategoryController {
         switcher.setScene(scene);
     }
 
+    public void setCaseID(int id)
+    {
+        this.caseID = id;
+    }
+
     /**
      * Subcategory changing text
      */
@@ -67,7 +74,7 @@ public class CategoryController {
         Scene scene = new Scene(root);
 
         SubcategoryFunctionLevelController controller = loader.getController();
-        controller.setId();
+        controller.setId(caseID);
 
         switcher.setTitle("Funktions Niveau");
         switcher.setScene(scene);
@@ -83,7 +90,7 @@ public class CategoryController {
         Scene scene = new Scene(root);
 
         SubcategoryMovingApparatController controller = loader.getController();
-        controller.setId();
+        controller.setId(caseID);
 
         switcher.setTitle("Funktions Niveau");
         switcher.setScene(scene);
@@ -99,7 +106,7 @@ public class CategoryController {
         Scene scene = new Scene(root);
 
         SubcategorySeksualitetController controller = loader.getController();
-        controller.setId();
+        controller.setId(caseID);
 
         switcher.setTitle("Seksualitet");
         switcher.setScene(scene);
@@ -112,7 +119,7 @@ public class CategoryController {
         Scene scene = new Scene(root);
 
         SubcategoryHudOgSLimhinderController controller = loader.getController();
-        controller.setId();
+        controller.setId(caseID);
 
         switcher.setTitle("Hud og Slimhinder");
         switcher.setScene(scene);
