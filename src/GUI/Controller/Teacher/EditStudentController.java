@@ -20,12 +20,6 @@ public class EditStudentController {
     public TextField txtnameEditStudentField;
     @FXML
     public TextField txtLastnameEditStudentField;
-    @FXML
-    public TextField txtEmailEditStudentField;
-    @FXML
-    public TextField txtTelefonField;
-    @FXML
-    public TextField txtAgeEditStudentFiled;
 
     @FXML
     public TextField txtUserNameEditField;

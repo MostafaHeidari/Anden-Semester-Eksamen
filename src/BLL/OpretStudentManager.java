@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class OpretStudentManager {
-    private OpretStudentLoginDAO opretStudentDAO;
+    private final OpretStudentLoginDAO opretStudentDAO;
 
     /**
      * Constructor

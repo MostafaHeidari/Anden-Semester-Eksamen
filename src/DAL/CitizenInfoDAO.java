@@ -77,12 +77,33 @@ public class CitizenInfoDAO {
                 }
 
             }
-        }
-        catch (SQLServerException throwables) {
-        throw new SQLException();
+        } catch (SQLServerException throwables) {
+            throw new SQLException();
         }
 
         return null;
+    }
+
+    /**
+     * this method update the citizen info from DB.
+     *
+     * @param citizenInfoUpdate
+     * @throws SQLServerException
+     */
+    public void editCitizen(CitizenInfo citizenInfoUpdate) throws Exception {
+        try (Connection connection = DC.getConnection()) {
+            String sql = "UPDATE Patients SET PatientName = (?), PatientLastName =(?), PatientGenInfo = (?), Cpr = (?),PatientAddress = (?) WHERE PatientID = (?);";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, citizenInfoUpdate.getCitizenName());
+            preparedStatement.setString(2, citizenInfoUpdate.getCitizenLastName());
+            preparedStatement.setString(3, citizenInfoUpdate.getCitizenInformation());
+            preparedStatement.setString(4, citizenInfoUpdate.getCPR());
+            preparedStatement.setString(5, citizenInfoUpdate.getCitizenAddress());
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 }
 
