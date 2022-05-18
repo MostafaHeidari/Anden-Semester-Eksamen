@@ -1,5 +1,6 @@
 package GUI.Controller.Universal.SubCategory;
 
+import BE.CitizenInfo;
 import GUI.Controller.Universal.CategoryController;
 import GUI.Model.CategoryModel;
 import com.jfoenix.controls.JFXButton;
@@ -15,6 +16,9 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class SubcategoryNutritionController {
+
+    private CitizenInfo selectedCitizenInfo;
+
 
     @FXML
     private JFXButton btnBack;
@@ -57,6 +61,7 @@ public class SubcategoryNutritionController {
 
         CategoryController controller = loader.getController();
         controller.setCaseID(caseID);
+        controller.setSelectedCitizen(selectedCitizenInfo);
 
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
@@ -121,5 +126,9 @@ public class SubcategoryNutritionController {
         txtWeightChange.setText(categoryModel.readCategory(caseID,"Inappropriate weight change"));
         txtOverWeight.setText(categoryModel.readCategory(caseID,"Problems with over weight"));
         txtUnderWeight.setText(categoryModel.readCategory(caseID,"Problems with under weight"));
+    }
+
+    public void setSelectedCitizen(CitizenInfo selectedCitizen) {
+        selectedCitizenInfo = selectedCitizen;
     }
 }

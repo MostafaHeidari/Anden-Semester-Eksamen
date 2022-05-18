@@ -67,6 +67,7 @@ public class CategoryController {
 
         SubcategoryController controller = loader.getController();
         controller.setId(vindue);
+        controller.setSelectedCitizen(selectedCitizenInfo);
 
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
@@ -88,6 +89,7 @@ public class CategoryController {
 
         SubcategoryFunctionLevelController controller = loader.getController();
         controller.setId(caseID);
+        controller.setSelectedCitizen(selectedCitizenInfo);
 
         switcher.setTitle("Funktions Niveau");
         switcher.setScene(scene);
@@ -104,6 +106,7 @@ public class CategoryController {
 
         SubcategoryMovingApparatController controller = loader.getController();
         controller.setId(caseID);
+        controller.setSelectedCitizen(selectedCitizenInfo);
 
         switcher.setTitle("Funktions Niveau");
         switcher.setScene(scene);
@@ -120,6 +123,7 @@ public class CategoryController {
 
         SubcategorySeksualitetController controller = loader.getController();
         controller.setId(caseID);
+        controller.setSelectedCitizen(selectedCitizenInfo);
 
         switcher.setTitle("Seksualitet");
         switcher.setScene(scene);
@@ -133,6 +137,7 @@ public class CategoryController {
 
         SubcategoryHudOgSLimhinderController controller = loader.getController();
         controller.setId(caseID);
+        controller.setSelectedCitizen(selectedCitizenInfo);
 
         switcher.setTitle("Hud og Slimhinder");
         switcher.setScene(scene);
@@ -205,6 +210,8 @@ public class CategoryController {
 
         SubcategoryRespirationAndCirculationController controller = loader.getController();
         controller.setId(caseID);
+        controller.setSelectedCitizen(selectedCitizenInfo);
+
 
         switcher.setTitle("Respiration og Cirkulation");
         switcher.setScene(scene);
@@ -228,6 +235,8 @@ public class CategoryController {
 
         SubcategoryNutritionController controller = loader.getController();
         controller.setId(caseID);
+        controller.setSelectedCitizen(selectedCitizenInfo);
+
 
         switcher.setTitle("Ernæring");
         switcher.setScene(scene);
@@ -328,6 +337,8 @@ public class CategoryController {
 
         SubcategorySleepController controller = loader.getController();
         controller.setId(caseID);
+        controller.setSelectedCitizen(selectedCitizenInfo);
+
 
         switcher.setTitle("Søvn og hvile");
         switcher.setScene(scene);

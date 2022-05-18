@@ -1,5 +1,6 @@
 package GUI.Controller.Universal.SubCategory;
 
+import BE.CitizenInfo;
 import GUI.Controller.Universal.CategoryController;
 import GUI.Model.CategoryModel;
 import com.jfoenix.controls.JFXButton;
@@ -16,6 +17,9 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class SubcategoryMovingApparatController {
+
+    private CitizenInfo selectedCitizenInfo;
+
 
     @FXML
     private JFXButton btnBack;
@@ -49,6 +53,7 @@ public class SubcategoryMovingApparatController {
 
         CategoryController controller = loader.getController();
         controller.setCaseID(caseID);
+        controller.setSelectedCitizen(selectedCitizenInfo);
 
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
@@ -86,5 +91,9 @@ public class SubcategoryMovingApparatController {
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
         txtMovingApparat.setText(categoryModel.readCategory(caseID,"Problems with moving"));
+    }
+
+    public void setSelectedCitizen(CitizenInfo selectedCitizen) {
+        selectedCitizenInfo = selectedCitizen;
     }
 }

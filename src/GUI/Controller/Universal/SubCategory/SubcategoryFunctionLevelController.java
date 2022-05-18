@@ -1,5 +1,6 @@
 package GUI.Controller.Universal.SubCategory;
 
+import BE.CitizenInfo;
 import GUI.Controller.Universal.CategoryController;
 import GUI.Model.CategoryModel;
 import com.jfoenix.controls.JFXButton;
@@ -16,6 +17,8 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class SubcategoryFunctionLevelController {
+
+    private CitizenInfo selectedCitizenInfo;
 
     @FXML
     private JFXButton btnBack;
@@ -51,6 +54,7 @@ public class SubcategoryFunctionLevelController {
 
         CategoryController controller = loader.getController();
         controller.setCaseID(caseID);
+        controller.setSelectedCitizen(selectedCitizenInfo);
 
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
@@ -95,5 +99,9 @@ public class SubcategoryFunctionLevelController {
         this.caseID = caseID;
         txtPersonalCare.setText(categoryModel.readCategory(caseID,"Problems with personal care"));
         txtDailyActivities.setText(categoryModel.readCategory(caseID,"Problems with daily activities"));
+    }
+
+    public void setSelectedCitizen(CitizenInfo selectedCitizen) {
+        selectedCitizenInfo = selectedCitizen;
     }
 }

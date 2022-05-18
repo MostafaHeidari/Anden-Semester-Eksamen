@@ -1,5 +1,6 @@
 package GUI.Controller.Universal.SubCategory;
 
+import BE.CitizenInfo;
 import GUI.Controller.Universal.CategoryController;
 import GUI.Model.CategoryModel;
 import com.jfoenix.controls.JFXButton;
@@ -16,6 +17,10 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class SubcategoryRespirationAndCirculationController {
+
+    private CitizenInfo selectedCitizenInfo;
+
+
     @FXML
     private JFXButton btnBack;
     @FXML
@@ -50,6 +55,7 @@ public class SubcategoryRespirationAndCirculationController {
 
         CategoryController controller = loader.getController();
         controller.setCaseID(caseID);
+        controller.setSelectedCitizen(selectedCitizenInfo);
 
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
@@ -94,5 +100,10 @@ public class SubcategoryRespirationAndCirculationController {
         this.caseID = caseID;
         txtRespiration.setText(categoryModel.readCategory(caseID,"Respiration problems"));
         txtCirkulation.setText(categoryModel.readCategory(caseID,"Circulation problems"));
+    }
+
+    public void setSelectedCitizen(CitizenInfo selectedCitizen) {
+        selectedCitizenInfo = selectedCitizen;
+
     }
 }

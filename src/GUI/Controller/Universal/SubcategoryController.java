@@ -1,5 +1,6 @@
 package GUI.Controller.Universal;
 
+import BE.CitizenInfo;
 import GUI.Model.CategoryModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -15,6 +16,8 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class SubcategoryController {
+
+    private CitizenInfo selectedCitizenInfo;
 
     @FXML
     private JFXButton btnBack;
@@ -43,8 +46,11 @@ public class SubcategoryController {
 
     public void subCategoryBack(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) btnBack.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Category.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Category.fxml"));
+        Parent root = loader.load();
         Scene scene = new Scene(root);
+        CategoryController controller = loader.getController();
+        controller.setSelectedCitizen(selectedCitizenInfo);
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
     }
@@ -82,5 +88,9 @@ public class SubcategoryController {
         this.problemName = problemName;
         txtDescription.setText(categoryModel.readCategory(caseID,problemName));
         subCatText.setText(problemName);
+    }
+
+    public void setSelectedCitizen(CitizenInfo selectedCitizen) {
+        selectedCitizenInfo = selectedCitizen;
     }
 }

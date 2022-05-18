@@ -1,5 +1,6 @@
 package GUI.Controller.Universal.SubCategory;
 
+import BE.CitizenInfo;
 import GUI.Controller.Universal.CategoryController;
 import GUI.Model.CategoryModel;
 import com.jfoenix.controls.JFXButton;
@@ -16,6 +17,10 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class SubcategorySleepController {
+
+    private CitizenInfo selectedCitizenInfo;
+
+
     @FXML
     private JFXButton btnBack;
     @FXML
@@ -50,6 +55,7 @@ public class SubcategorySleepController {
 
         CategoryController controller = loader.getController();
         controller.setCaseID(caseID);
+        controller.setSelectedCitizen(selectedCitizenInfo);
 
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
@@ -94,5 +100,9 @@ public class SubcategorySleepController {
         this.caseID = caseID;
         txtDayProblems.setText(categoryModel.readCategory(caseID,"Day problems"));
         txtSleepProblems.setText(categoryModel.readCategory(caseID,"Sleep problems"));
+    }
+
+    public void setSelectedCitizen(CitizenInfo selectedCitizen) {
+        selectedCitizenInfo = selectedCitizen;
     }
 }
