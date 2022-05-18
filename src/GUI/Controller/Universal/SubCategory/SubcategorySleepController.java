@@ -15,15 +15,15 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class SubcategoryRespirationAndCirculationController {
+public class SubcategorySleepController {
     @FXML
     private JFXButton btnBack;
     @FXML
     private JFXButton btnLogOut;
 
     public Text subCatText;
-    public TextArea txtRespiration;
-    public TextArea txtCirkulation;
+    public TextArea txtDayProblems;
+    public TextArea txtSleepProblems;
 
     // this is instance variable is not used to now//
     private int caseID = -1;
@@ -34,7 +34,7 @@ public class SubcategoryRespirationAndCirculationController {
      * Constructor
      * @throws IOException
      */
-    public SubcategoryRespirationAndCirculationController() throws IOException, SQLException {
+    public SubcategorySleepController() throws IOException, SQLException {
 
     }
 
@@ -72,17 +72,17 @@ public class SubcategoryRespirationAndCirculationController {
      * @throws SQLException
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
-        if (categoryModel.readCategory(caseID,"Respiration problems") == null){
+        if (categoryModel.readCategory(caseID,"Day problems") == null){
 
-            categoryModel.createCategory(caseID,"Respiration problems",txtRespiration.getText());
+            categoryModel.createCategory(caseID,"Day problems",txtDayProblems.getText());
         }
-        categoryModel.updateCategory(caseID,"Respiration problems",txtRespiration.getText());
+        categoryModel.updateCategory(caseID,"Day problems",txtDayProblems.getText());
 
-        if (categoryModel.readCategory(caseID,"Circulation problems") == null){
+        if (categoryModel.readCategory(caseID,"Sleep problems") == null){
 
-            categoryModel.createCategory(caseID,"Circulation problems",txtCirkulation.getText());
+            categoryModel.createCategory(caseID,"Sleep problems",txtSleepProblems.getText());
         }
-        categoryModel.updateCategory(caseID,"Circulation problems",txtCirkulation.getText());
+        categoryModel.updateCategory(caseID,"Sleep problems",txtSleepProblems.getText());
     }
 
     /**
@@ -92,7 +92,7 @@ public class SubcategoryRespirationAndCirculationController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtRespiration.setText(categoryModel.readCategory(caseID,"Respiration problems"));
-        txtCirkulation.setText(categoryModel.readCategory(caseID,"Circulation problems"));
+        txtDayProblems.setText(categoryModel.readCategory(caseID,"Day problems"));
+        txtSleepProblems.setText(categoryModel.readCategory(caseID,"Sleep problems"));
     }
 }

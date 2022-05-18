@@ -135,7 +135,7 @@
                      <children>
                         <VBox maxHeight="134.0" minHeight="75.0" minWidth="120.0" prefHeight="107.0" prefWidth="320.0" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Søvn og hvile" underline="true">
+                              <Text fx:id="søvnoghvile_1" onMouseClicked="#søvnoghvile_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Søvn og hvile" underline="true">
                                  <font>
                                     <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
@@ -143,7 +143,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <Label fx:id="søvnoghvile_1" onMouseClicked="#søvnoghvile_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Døgnrytmeproblemer">
+                              <Label style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Døgnrytmeproblemer">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
