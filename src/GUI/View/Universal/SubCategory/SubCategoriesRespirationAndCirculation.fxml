@@ -24,20 +24,20 @@
             <Font name="Arial Narrow Bold Italic" size="20.0" />
          </font>
       </Text>
-      <Label fx:id="funktionsniveau_1" layoutX="15.0" layoutY="126.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med personlig pleje">
+      <Label fx:id="funktionsniveau_1" layoutX="15.0" layoutY="126.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Respirationsproblemer">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtPersonalCare" layoutX="299.0" layoutY="75.0" prefHeight="142.0" prefWidth="501.0" />
-      <TextArea fx:id="txtDailyActivities" layoutX="299.0" layoutY="300.0" prefHeight="142.0" prefWidth="501.0" />
+      <TextArea fx:id="txtRespiration" layoutX="299.0" layoutY="75.0" prefHeight="142.0" prefWidth="501.0" />
+      <TextArea fx:id="txtCirkulation" layoutX="299.0" layoutY="300.0" prefHeight="142.0" prefWidth="501.0" />
 
       <JFXButton fx:id="btnSave" layoutX="536.0" layoutY="547.0" onAction="#subCategorySave" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Gem">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Label fx:id="funktionsniveau_11" layoutX="15.0" layoutY="354.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med daglige aktiviteter">
+      <Label fx:id="funktionsniveau_11" layoutX="15.0" layoutY="354.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Cirkulationsproblemer">
          <font>
             <Font size="14.0" />
          </font>

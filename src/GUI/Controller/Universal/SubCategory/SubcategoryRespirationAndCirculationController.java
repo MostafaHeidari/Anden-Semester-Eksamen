@@ -22,8 +22,8 @@ public class SubcategoryRespirationAndCirculationController {
     private JFXButton btnLogOut;
 
     public Text subCatText;
-    public TextArea txtPersonalCare;
-    public TextArea txtDailyActivities;
+    public TextArea txtRespiration;
+    public TextArea txtCirkulation;
 
     // this is instance variable is not used to now//
     private int caseID = -1;
@@ -72,17 +72,17 @@ public class SubcategoryRespirationAndCirculationController {
      * @throws SQLException
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
-        if (categoryModel.readCategory(caseID,"Problems with personal care") == null){
+        if (categoryModel.readCategory(caseID,"Respiration problems") == null){
 
-            categoryModel.createCategory(caseID,"Problems with personal care",txtPersonalCare.getText());
+            categoryModel.createCategory(caseID,"Respiration problems",txtRespiration.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with personal care",txtPersonalCare.getText());
+        categoryModel.updateCategory(caseID,"Respiration problems",txtRespiration.getText());
 
-        if (categoryModel.readCategory(caseID,"Problems with daily activities") == null){
+        if (categoryModel.readCategory(caseID,"Circulation problems") == null){
 
-            categoryModel.createCategory(caseID,"Problems with daily activities",txtDailyActivities.getText());
+            categoryModel.createCategory(caseID,"Circulation problems",txtCirkulation.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with daily activities",txtDailyActivities.getText());
+        categoryModel.updateCategory(caseID,"Circulation problems",txtCirkulation.getText());
     }
 
     /**
@@ -92,7 +92,7 @@ public class SubcategoryRespirationAndCirculationController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtPersonalCare.setText(categoryModel.readCategory(caseID,"Problems with personal care"));
-        txtDailyActivities.setText(categoryModel.readCategory(caseID,"Problems with daily activities"));
+        txtRespiration.setText(categoryModel.readCategory(caseID,"Respiration problems"));
+        txtCirkulation.setText(categoryModel.readCategory(caseID,"Problems with daily activities"));
     }
 }
