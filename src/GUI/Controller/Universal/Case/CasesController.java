@@ -136,7 +136,7 @@ public class CasesController implements Initializable {
 
             CategoryController controller = loader.getController();
             controller.setCaseID(selectedCase.getCaseId());
-
+            loader.<CategoryController>getController().setSelectedCitizen(selectedCitizenInfo);
             switcher.setTitle("Helbredstilstande");
             switcher.setScene(scene);
         }

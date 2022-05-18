@@ -1,5 +1,7 @@
 package GUI.Controller.Universal;
 
+import BE.CitizenInfo;
+import GUI.Controller.Universal.Case.CasesController;
 import GUI.Controller.Universal.SubCategory.*;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -17,6 +19,8 @@ import java.sql.SQLException;
 public class CategoryController {
 
     private int caseID = -1;
+
+    private CitizenInfo selectedCitizenInfo;
 
     @FXML
     private javafx.scene.layout.HBox HBox;
@@ -38,13 +42,26 @@ public class CategoryController {
     private Text søvnoghvile_1;
 
     /**
-     * Goes to Patient view
+     * Goes to Cases view
      */
     public void CategoryBack(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) btnCategoryBack.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Student/Case.fxml"));
+        /*Stage switcher = (Stage) btnCategoryBack.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Case/Cases.fxml"));
         Scene scene = new Scene(root);
+        CasesController casesController = root.<CasesController>getController();
+        casesController.setCitizenID(selectedCitizenInfo);
         switcher.setTitle("SOSU Helbredstilstande");
+        switcher.setScene(scene);
+
+         */
+
+        Stage switcher = (Stage) btnCategoryBack.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Case/Cases.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
+        CasesController casesController = fxmlLoader.<CasesController>getController();
+        casesController.setSelectedCitizen(selectedCitizenInfo);
+        Scene scene = new Scene(root);
+        switcher.setTitle("Case System");
         switcher.setScene(scene);
     }
 
@@ -428,4 +445,7 @@ public class CategoryController {
         shiftWindow("Problemer med væske fra dræn");
     }
 
+    public void setSelectedCitizen(CitizenInfo selectedCitizen) {
+        selectedCitizenInfo = selectedCitizen;
+    }
 }
