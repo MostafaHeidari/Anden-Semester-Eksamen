@@ -65,7 +65,11 @@ public class CitizenController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        setStudentTableView();
+        try {
+            setStudentTableView();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         tvPatients.setOnMouseClicked((MouseEvent event) -> {
             setSelectedItems();
         });
@@ -128,7 +132,7 @@ public class CitizenController implements Initializable {
 
     }
 
-    private void setStudentTableView() {
+    private void setStudentTableView() throws IOException {
         tcCitizenId.setCellValueFactory(new PropertyValueFactory<>("citizenId"));
 
         tcCitizenName.setCellValueFactory(new PropertyValueFactory<>("citizenName"));

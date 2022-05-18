@@ -166,17 +166,32 @@ public class CreateCitizenController implements Initializable {
     }
 
 
-    //edit Citizen button //
-    public void btnHandleSaveCitizenEdit(ActionEvent actionEvent) {
 
-    }
 
 
     public void DeleteCitizenAction(ActionEvent actionEvent) {
     }
 
-    public void EditCitizenAction(ActionEvent actionEvent) {
+
+
+
+    public void EditCitizenAction(ActionEvent actionEvent) throws IOException {
+        if (seletedCitizen != null) {
+            CitizenInfo selectedCitizen = (CitizenInfo) tvCitizen.getSelectionModel().getSelectedItem();
+            Parent root1;
+            FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/GUI/View/Teacher/EditCitizen.fxml"));
+            root1 = (Parent) fxmlLoader1.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));
+
+            //something is wrong
+            fxmlLoader1.<EditCitizenController>getController().setSelectedCitizen(selectedCitizen);
+            fxmlLoader1.<EditCitizenController>getController().setSelectedTable(tvCitizen);
+            stage.show();
+        }
     }
+
+
 
     /**
      * Goes to TeacherKlasseAndStudents view

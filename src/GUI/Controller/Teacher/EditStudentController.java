@@ -1,5 +1,6 @@
 package GUI.Controller.Teacher;
 
+import BE.CitizenInfo;
 import BE.Student;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
@@ -112,7 +113,6 @@ public class EditStudentController {
             e.printStackTrace();
         }
     }
-
 
 }
 

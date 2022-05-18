@@ -25,7 +25,7 @@ public class CitizenInfoModel {
      * Gets the list of getAllCitizens using the getAllCitizens method in citizenInfoManger.
      * @return a list of getAllCitizens
      */
-    public ObservableList getAllCitizens() {
+    public ObservableList getAllCitizens() throws IOException {
         citizensList = citizenInfoManger.getAllCitizens();
         return citizensList;
     }
