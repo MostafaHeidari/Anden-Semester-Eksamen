@@ -32,6 +32,8 @@ public class CategoryController {
     private Text hudogslimhinder_1;
     @FXML
     private Text nutrition_1;
+    @FXML
+    private Text respirationogcirkulation_1;
 
     /**
      * Goes to Patient view
@@ -187,7 +189,16 @@ public class CategoryController {
      * Subcategory changing text
      */
     public void respirationogcirkulation_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        shiftWindow("Respirationsproblemer");
+        Stage switcher = (Stage) respirationogcirkulation_1.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SubCategory/SubCategoriesRespirationAndCirculation.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        SubcategoryRespirationAndCirculationController controller = loader.getController();
+        controller.setId(caseID);
+
+        switcher.setTitle("Respiration og Cirkulation");
+        switcher.setScene(scene);
     }
 
     /**
