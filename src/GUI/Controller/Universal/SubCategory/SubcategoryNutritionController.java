@@ -29,7 +29,7 @@ public class SubcategoryNutritionController {
     @FXML
     private TextArea txtOverWeight;
     @FXML
-    private TextArea txtArtilleryWound;
+    private TextArea txtUnderWeight;
 
 
    // this is instance variable is not used to now//
@@ -103,10 +103,10 @@ public class SubcategoryNutritionController {
         categoryModel.updateCategory(caseID,"Problems with over weight",txtOverWeight.getText());
 
 
-        if (categoryModel.readCategory(caseID,"Problems with artillery wound") == null){
-            categoryModel.createCategory(caseID,"Problems with artillery wound",txtArtilleryWound.getText());
+        if (categoryModel.readCategory(caseID,"Problems with under weight") == null){
+            categoryModel.createCategory(caseID,"Problems with under weight",txtUnderWeight.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with artillery wound",txtArtilleryWound.getText());
+        categoryModel.updateCategory(caseID,"Problems with under weight",txtUnderWeight.getText());
     }
 
     /**
@@ -120,6 +120,6 @@ public class SubcategoryNutritionController {
         txtFoodIntake.setText(categoryModel.readCategory(caseID,"Problems with food intake"));
         txtWeightChange.setText(categoryModel.readCategory(caseID,"Inappropriate weight change"));
         txtOverWeight.setText(categoryModel.readCategory(caseID,"Problems with over weight"));
-        txtArtilleryWound.setText(categoryModel.readCategory(caseID,"Problems with artillery wound"));
+        txtUnderWeight.setText(categoryModel.readCategory(caseID,"Problems with under weight"));
     }
 }

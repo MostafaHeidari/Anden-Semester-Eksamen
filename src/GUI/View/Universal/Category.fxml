@@ -143,46 +143,6 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <Label style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med væskeindtag">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="ernæring_2" onMouseClicked="#ernæring_2" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med fødeindtag">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="ernæring_3" onMouseClicked="#ernæring_3" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Uhensigtsmæssig vægtændring">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="ernæring_4" onMouseClicked="#ernæring_4" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med overvægt">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="ernæring_5" onMouseClicked="#ernæring_5" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med undervægt">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
                            </children>
                         </VBox>
                      </children>
