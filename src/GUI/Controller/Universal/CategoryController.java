@@ -45,16 +45,6 @@ public class CategoryController {
      * Goes to Cases view
      */
     public void CategoryBack(ActionEvent actionEvent) throws IOException {
-        /*Stage switcher = (Stage) btnCategoryBack.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Case/Cases.fxml"));
-        Scene scene = new Scene(root);
-        CasesController casesController = root.<CasesController>getController();
-        casesController.setCitizenID(selectedCitizenInfo);
-        switcher.setTitle("SOSU Helbredstilstande");
-        switcher.setScene(scene);
-
-         */
-
         Stage switcher = (Stage) btnCategoryBack.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Case/Cases.fxml"));
         Parent root = (Parent) fxmlLoader.load();
