@@ -140,15 +140,15 @@ public class CreateCitizenController implements Initializable {
      * @throws IOException
      */
     public void setCitizenTableView() throws IOException {
-        tcId.setCellValueFactory(new PropertyValueFactory<>("studentId"));
+        tcId.setCellValueFactory(new PropertyValueFactory<>("citizenId"));
 
-        tcNameCitizen.setCellValueFactory(new PropertyValueFactory<>("studentName"));
+        tcNameCitizen.setCellValueFactory(new PropertyValueFactory<>("citizenName"));
 
-        tcLastCitizen.setCellValueFactory(new PropertyValueFactory<>("lastName"));
+        tcLastCitizen.setCellValueFactory(new PropertyValueFactory<>("citizenLastName"));
 
         tcCitizenCPR.setCellValueFactory(new PropertyValueFactory<>("CPR"));
 
-        tcCitizenAdresse.setCellValueFactory(new PropertyValueFactory<>("Adresse"));
+        tcCitizenAdresse.setCellValueFactory(new PropertyValueFactory<>("citizenAdresse"));
 
         tvCitizen.setItems(citizenInfoModel.getAllCitizens());
     }
