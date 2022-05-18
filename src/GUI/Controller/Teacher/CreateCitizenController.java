@@ -1,21 +1,30 @@
 package GUI.Controller.Teacher;
 
 import BE.CitizenInfo;
+import BE.Student;
 import GUI.Model.CitizenInfoModel;
+import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
-public class CreateCitizenController {
+public class CreateCitizenController implements Initializable {
     CitizenInfoModel citizenInfo;
+
+    public CitizenInfoModel citizenInfoModel;
 
     // table view of Citizen
     public TableView tvCitizen;
@@ -48,7 +57,7 @@ public class CreateCitizenController {
     public TextArea txtAreaCitizenGeneralInfoEdit;
 
     @FXML
-    private JFXButton btnSaveCitizenEdit;
+    public JFXButton btnSaveCitizenEdit;
 
 
 
@@ -82,6 +91,25 @@ public class CreateCitizenController {
 
     public CreateCitizenController() throws IOException {
         citizenInfo = new CitizenInfoModel();
+        this.citizenInfoModel= new CitizenInfoModel();
+    }
+
+    public CitizenInfo seletedCitizen;
+
+    /**
+     * initialize method
+     */
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        try {
+            setCitizenTableView();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        tvCitizen.setOnMouseClicked((MouseEvent event) -> {
+            setSelectedCitizen();
+        });
+
     }
 
     public void btnHandleSaveCitizen() throws Exception {
@@ -104,6 +132,37 @@ public class CreateCitizenController {
         txtFieldCitizenAddresse.clear();
         txtFieldCitizenCPR.clear();
         txtAreaCitizenGeneralInfo.clear();
+    }
+
+
+    /**
+     * here we set the information in the tableView
+     * @throws IOException
+     */
+    public void setCitizenTableView() throws IOException {
+        tcId.setCellValueFactory(new PropertyValueFactory<>("studentId"));
+
+        tcNameCitizen.setCellValueFactory(new PropertyValueFactory<>("studentName"));
+
+        tcLastCitizen.setCellValueFactory(new PropertyValueFactory<>("lastName"));
+
+        tcCitizenCPR.setCellValueFactory(new PropertyValueFactory<>("CPR"));
+
+        tcCitizenAdresse.setCellValueFactory(new PropertyValueFactory<>("Adresse"));
+
+        tvCitizen.setItems(citizenInfoModel.getAllCitizens());
+    }
+
+
+
+    /**
+     * selects a student with the setSelectedStudent method
+     */
+    private void setSelectedCitizen() {
+        if (tvCitizen.getSelectionModel().getSelectedItem() != null)
+        {
+           seletedCitizen = (CitizenInfo) tvCitizen.getSelectionModel().getSelectedItem();
+        }
     }
 
 

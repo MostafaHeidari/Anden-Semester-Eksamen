@@ -74,12 +74,12 @@ public class CreateStudentController implements Initializable {
 
 
     /**
-     * Constructor
+     * Constructorthis.studentModel = new StudentModel();
+     *         this.editStudentController = new EditStudentController();
      * @throws IOException
      */
     public CreateStudentController() throws IOException {
-        this.studentModel = new StudentModel();
-        this.editStudentController = new EditStudentController();
+
     }
 
     /**
