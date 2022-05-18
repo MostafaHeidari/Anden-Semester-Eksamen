@@ -2,6 +2,7 @@ package GUI.Controller.Student;
 
 import BE.Case;
 import BE.CitizenInfo;
+import GUI.Controller.Universal.Case.CasesController;
 import GUI.Controller.Universal.Case.CasesEditController;
 import GUI.Controller.Universal.Case.CreateCaseController;
 import GUI.Model.CitizenInfoModel;
@@ -97,9 +98,18 @@ public class CitizenController implements Initializable {
         stage.show();
     }
 
-    public void caseInfoBtn(ActionEvent actionEvent) {
-        //TODO
-        //liste af alle cases
+    public void caseInfoBtn(ActionEvent actionEvent) throws IOException {
+        if (selectedCitizenInfo != null) {
+            Parent root1;
+            FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Case/Cases.fxml"));
+            root1 = (Parent) fxmlLoader1.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));
+
+            fxmlLoader1.<CasesController>getController().setSelectedCitizen(selectedCitizenInfo);
+            stage.show();
+
+        }
     }
 
     public void editCaseBtn(ActionEvent event) {

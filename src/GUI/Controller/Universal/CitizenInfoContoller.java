@@ -1,7 +1,9 @@
 package GUI.Controller.Universal;
 
+import BE.Case;
 import BE.CitizenInfo;
 import GUI.Controller.Universal.Case.CasesController;
+import GUI.Controller.Universal.Case.CasesEditController;
 import GUI.Controller.Universal.Case.CreateCaseController;
 import GUI.Model.CitizenInfoModel;
 import com.jfoenix.controls.JFXButton;
@@ -136,7 +138,7 @@ public class CitizenInfoContoller implements Initializable {
 
 
     public void caseInfoBtn(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) caseInfo.getScene().getWindow();
+      /*  Stage switcher = (Stage) caseInfo.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Case/Cases.fxml"));
         Parent root = (Parent) fxmlLoader.load();
         CasesController casesController = fxmlLoader.<CasesController>getController();
@@ -144,6 +146,19 @@ public class CitizenInfoContoller implements Initializable {
         Scene scene = new Scene(root);
         switcher.setTitle("Case System");
         switcher.setScene(scene);
+
+       */
+        if (selectedCitizenInfo != null) {
+            Parent root1;
+            FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Case/Cases.fxml"));
+            root1 = (Parent) fxmlLoader1.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));
+
+            fxmlLoader1.<CasesController>getController().setSelectedCitizen(selectedCitizenInfo);
+            stage.show();
+
+        }
     }
 
 

@@ -71,10 +71,5 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </FontAwesomeIconView>
-      <JFXButton fx:id="editCase" layoutX="214.0" layoutY="459.0" onAction="#editCaseBtn" prefHeight="33.0" prefWidth="101.0" text="Edit Case">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
    </children>
 </AnchorPane>

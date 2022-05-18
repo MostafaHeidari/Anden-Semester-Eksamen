@@ -82,45 +82,12 @@ public class CasesController implements Initializable {
      * Goes to CitizenInfo view
      */
     public void backToLastPageBtn(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) backToLastPage.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/CitizenInfo.fxml"));
-        Scene scene = new Scene(root);
-        switcher.setTitle("Borger Informationer");
-        switcher.setScene(scene);
+        /*turn back to Create student window*/
+        Stage switcher = (Stage) deleteCase.getScene().getWindow();
+        switcher.setTitle("Case System");
+        switcher.close();
     }
 
-    /**
-     * Goes to TeacherKlasseAndStudents view
-     */
-    public void backClassBtn(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) backClass.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherGroupAndStudents.fxml"));
-        Scene scene = new Scene(root);
-        switcher.setTitle("Classe Manger");
-        switcher.setScene(scene);
-    }
-
-    /**
-     * Goes to CreateCitizen view
-     */
-    public void backCitizenBtn(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) backCitizen.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateCitizen.fxml"));
-        Scene scene = new Scene(root);
-        switcher.setTitle("Opret Borger");
-        switcher.setScene(scene);
-    }
-
-    /**
-     * Goes to CreateStudent view
-     */
-    public void backStudentBtn(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) backStudent.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
-        Scene scene = new Scene(root);
-        switcher.setTitle("Opret Student");
-        switcher.setScene(scene);
-    }
 
     private void setCaseView(){
 
@@ -133,14 +100,6 @@ public class CasesController implements Initializable {
         tvCase.setItems(caseModel.getAllCases(selectedCitizenInfo.getCitizenId()));
     }
 
-    public void setCitizenID(CitizenInfo citizenInfo) {
-        selectedCitizenInfo = citizenInfo;
-        nameCitizenTxt.setText(citizenInfo.getCitizenName());
-        lastNameCitizenTxt.setText(citizenInfo.getCitizenLastName());
-        CprCitizenTxt.setText(citizenInfo.getCPR());
-        GenInfoTxt1.setText(citizenInfo.getCitizenInformation());
-        setCaseView();
-    }
 
     public void deleteCaseBtn(ActionEvent actionEvent) {
         if (SimpleDialogController.delete() && selectedCase != null) {
@@ -199,5 +158,15 @@ public class CasesController implements Initializable {
             stage.show();
 
         }
+    }
+
+    public void setSelectedCitizen(CitizenInfo selectedCitizen) {
+        selectedCitizenInfo = selectedCitizen;
+        nameCitizenTxt.setText(selectedCitizen.getCitizenName());
+        lastNameCitizenTxt.setText(selectedCitizen.getCitizenLastName());
+        CprCitizenTxt.setText(selectedCitizen.getCPR());
+        GenInfoTxt1.setText(selectedCitizen.getCitizenInformation());
+        setCaseView();
+
     }
 }
