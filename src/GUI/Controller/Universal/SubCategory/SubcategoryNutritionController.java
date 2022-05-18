@@ -23,7 +23,7 @@ public class SubcategoryNutritionController {
     @FXML
     private TextArea txtFluidIntake;
     @FXML
-    private TextArea txtdiabeticWound;
+    private TextArea txtFoodIntake;
     @FXML
     private TextArea txtCancerWound;
     @FXML
@@ -85,10 +85,10 @@ public class SubcategoryNutritionController {
         categoryModel.updateCategory(caseID,"Problems with fluid intake",txtFluidIntake.getText());
 
 
-        if (categoryModel.readCategory(caseID,"Problems with diabetic wound") == null){
-            categoryModel.createCategory(caseID,"Problems with diabetic wound",txtdiabeticWound.getText());
+        if (categoryModel.readCategory(caseID,"Problems with food intake") == null){
+            categoryModel.createCategory(caseID,"Problems with food intake",txtFoodIntake.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with diabetic wound",txtdiabeticWound.getText());
+        categoryModel.updateCategory(caseID,"Problems with food intake",txtFoodIntake.getText());
 
 
         if (categoryModel.readCategory(caseID,"Problems with cancer wound") == null){
@@ -117,7 +117,7 @@ public class SubcategoryNutritionController {
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
         txtFluidIntake.setText(categoryModel.readCategory(caseID,"Problems with fluid intake"));
-        txtdiabeticWound.setText(categoryModel.readCategory(caseID,"Problems with diabetic wound"));
+        txtFoodIntake.setText(categoryModel.readCategory(caseID,"Problems with food intake"));
         txtCancerWound.setText(categoryModel.readCategory(caseID,"Problems with cancer wound"));
         txtPressureWound.setText(categoryModel.readCategory(caseID,"Problems with pressure wound"));
         txtArtilleryWound.setText(categoryModel.readCategory(caseID,"Problems with artillery wound"));
