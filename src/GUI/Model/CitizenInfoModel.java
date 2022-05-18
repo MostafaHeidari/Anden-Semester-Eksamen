@@ -1,6 +1,7 @@
 package GUI.Model;
 
 import BE.CitizenInfo;
+import BE.Student;
 import BLL.CitizenInfoManger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,7 +10,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class CitizenInfoModel {
-    private CitizenInfoManger citizenInfoManger;
+    private final CitizenInfoManger citizenInfoManger;
     private ObservableList<CitizenInfo> citizensList = FXCollections.observableArrayList();
 
     /**
@@ -37,5 +38,12 @@ public class CitizenInfoModel {
 
     public void createCitizen(String citizenName, String citizenLastName, String citizenAddress, String CPR, String citizenInformation) throws SQLException {
         citizensList.add(citizenInfoManger.createCitizen(citizenName, citizenLastName, citizenAddress, CPR,citizenInformation));
+    }
+
+    // this method used to edit the Citizen.
+    public void editCitizen(CitizenInfo citizenInfo) throws Exception {
+        citizenInfoManger.editCitizen(citizenInfo);
+        citizensList.clear();
+        citizensList.addAll(citizenInfoManger.getAllCitizens());
     }
 }

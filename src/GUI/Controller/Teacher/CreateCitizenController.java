@@ -8,18 +8,50 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
 public class CreateCitizenController {
-
     CitizenInfoModel citizenInfo;
+
+    // table view of Citizen
+    public TableView tvCitizen;
+    @FXML
+    public TableColumn tcId;
+    @FXML
+    public TableColumn tcNameCitizen;
+    @FXML
+    public TableColumn tcLastCitizen;
+    @FXML
+    public TableColumn tcCitizenCPR;
+    @FXML
+    public TableColumn tcCitizenAdresse;
+
+    @FXML
+    public JFXButton BtnDeleteCitizen;
+    @FXML
+    public JFXButton BtnEditCitizen;
+
+    //edit Citizen
+    @FXML
+    public TextField txtFieldCitizenFirstNameEdit;
+    @FXML
+    public TextField txtFieldCitizenLastNameEdit;
+    @FXML
+    public TextField txtFieldCitizenCPREdit;
+    @FXML
+    public TextField txtFieldCitizenAddresseEdit;
+    @FXML
+    public TextArea txtAreaCitizenGeneralInfoEdit;
+
+    @FXML
+    private JFXButton btnSaveCitizenEdit;
+
+
+
 
     //textFiled
     @FXML
@@ -72,6 +104,19 @@ public class CreateCitizenController {
         txtFieldCitizenAddresse.clear();
         txtFieldCitizenCPR.clear();
         txtAreaCitizenGeneralInfo.clear();
+    }
+
+
+    //edit Citizen button //
+    public void btnHandleSaveCitizenEdit(ActionEvent actionEvent) {
+
+    }
+
+
+    public void DeleteCitizenAction(ActionEvent actionEvent) {
+    }
+
+    public void EditCitizenAction(ActionEvent actionEvent) {
     }
 
     /**
@@ -128,5 +173,6 @@ public class CreateCitizenController {
         switcher.setTitle("SOSUS System");
         switcher.setScene(scene);
     }
+
 }
 

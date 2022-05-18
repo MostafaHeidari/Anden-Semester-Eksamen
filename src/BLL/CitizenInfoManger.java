@@ -45,4 +45,8 @@ public class CitizenInfoManger {
         return (citizenInfoDAO.createCitizen(citizenName, citizenLastName, citizenAddress, CPR, citizenInformation));
     }
 
+    // edit Citizen method
+    public void editCitizen(CitizenInfo CitizenInfo) throws Exception {
+        citizenInfoDAO.editCitizen(CitizenInfo);
+    }
 }

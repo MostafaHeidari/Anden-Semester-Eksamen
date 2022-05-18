@@ -14,14 +14,14 @@ import java.sql.SQLException;
 
 public class StudentModel {
 
-    private GroupModel classModel;
-    private StudentsInClassManager studentsInClassManger;
+    private final GroupModel classModel;
+    private final StudentsInClassManager studentsInClassManger;
 
     private ObservableList<Student> studentsList = FXCollections.observableArrayList();
-    private ObservableList<Student> studentInClassesList = FXCollections.observableArrayList();
+    private final ObservableList<Student> studentInClassesList = FXCollections.observableArrayList();
 
 
-    private StudentManager studentManager;
+    private final StudentManager studentManager;
 
     /**
      * Constructor

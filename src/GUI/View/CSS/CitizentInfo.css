@@ -1,4 +1,13 @@
 
+
+
+#BtnDeleteCitizen, #BtnEditCitizen{
+    -fx-font-size: 12px;
+    -fx-background-color: #009B42;
+    -fx-text-fill: white;
+}
+
+
 #caseInfo, #createCase{
     -fx-font-size: 15px;
     -fx-border-color:  #001569;
