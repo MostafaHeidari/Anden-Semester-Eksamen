@@ -1,6 +1,9 @@
 package GUI.Controller.Student;
 
+import BE.Case;
 import BE.CitizenInfo;
+import GUI.Controller.Universal.Case.CasesEditController;
+import GUI.Controller.Universal.Case.CreateCaseController;
 import GUI.Model.CitizenInfoModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
@@ -81,9 +84,17 @@ public class CitizenController implements Initializable {
         switcher.setScene(scene);
     }
 
-    public void createCaseBtn(ActionEvent actionEvent) {
-        //TODO
-        //opret case
+    public void createCaseBtn(ActionEvent actionEvent) throws IOException {
+        CitizenInfo citizenInfo = (CitizenInfo) tvPatients.getSelectionModel().getSelectedItem();
+        Parent root1;
+        FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Case/CreateCase.fxml"));
+        root1 = (Parent) fxmlLoader1.load();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root1));
+
+        fxmlLoader1.<CreateCaseController>getController().setCitizenID(citizenInfo);
+
+        stage.show();
     }
 
     public void caseInfoBtn(ActionEvent actionEvent) {

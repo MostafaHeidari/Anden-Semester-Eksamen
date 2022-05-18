@@ -160,14 +160,16 @@ public class CitizenInfoContoller implements Initializable {
 
 
     public void createCaseBtn(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) caseInfo.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Case/CreateCase.fxml"));
-        Parent root = (Parent) fxmlLoader.load();
-        CreateCaseController casesController = fxmlLoader.<CreateCaseController>getController();
-        casesController.setCitizenID(selectedCitizenInfo);
-        Scene scene = new Scene(root);
-        switcher.setTitle("Create Case");
-        switcher.setScene(scene);
+        CitizenInfo citizenInfo = (CitizenInfo) tvCitizenInfo.getSelectionModel().getSelectedItem();
+        Parent root1;
+        FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Case/CreateCase.fxml"));
+        root1 = (Parent) fxmlLoader1.load();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root1));
+
+        fxmlLoader1.<CreateCaseController>getController().setCitizenID(citizenInfo);
+
+        stage.show();
     }
 
     public void LogOut(ActionEvent actionEvent) throws IOException {

@@ -53,11 +53,18 @@ public class CreateCaseController {
      * Returns to CitizenInfo with the backToPatientsBtn method
      */
     public void backToPatientsBtn(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) backTo.getScene().getWindow();
+       /* Stage switcher = (Stage) backTo.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/CitizenInfo.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Borger Informationer");
         switcher.setScene(scene);
+        */
+
+
+        /*turn back to Create student window*/
+        Stage switcher = (Stage) saveCase.getScene().getWindow();
+        switcher.setTitle("Case System");
+        switcher.close();
     }
 
     /**
