@@ -34,6 +34,8 @@ public class CategoryController {
     private Text nutrition_1;
     @FXML
     private Text respirationogcirkulation_1;
+    @FXML
+    private Text søvnoghvile_1;
 
     /**
      * Goes to Patient view
@@ -312,7 +314,16 @@ public class CategoryController {
      * Subcategory changing text
      */
     public void søvnoghvile_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        shiftWindow("Døgnrytmeproblemer");
+        Stage switcher = (Stage) søvnoghvile_1.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SubCategory/SubCategoriesSleep.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        SubcategorySleepController controller = loader.getController();
+        controller.setId(caseID);
+
+        switcher.setTitle("Søvn og hvile");
+        switcher.setScene(scene);
     }
 
     /**
