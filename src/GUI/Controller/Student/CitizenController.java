@@ -139,11 +139,11 @@ public class CitizenController implements Initializable {
 
         tcCitizenLastName.setCellValueFactory(new PropertyValueFactory<>("citizenLastName"));
 
-        tcCitizenAddress.setCellValueFactory(new PropertyValueFactory<>("citizenInformation"));
+        tcCitizenAddress.setCellValueFactory(new PropertyValueFactory<>("citizenAddress"));
 
         tcCPR.setCellValueFactory(new PropertyValueFactory<>("CPR"));
 
-        tcCitizenInformation.setCellValueFactory(new PropertyValueFactory<>("citizenAddress"));
+        tcCitizenInformation.setCellValueFactory(new PropertyValueFactory<>("citizenInformation"));
 
 
         tvPatients.setItems(citizenInfoModel.getAllCitizens());
