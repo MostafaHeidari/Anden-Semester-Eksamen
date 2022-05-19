@@ -113,8 +113,8 @@ public class CitizenInfoDAO {
      */
     public void removeCitizen(CitizenInfo citizenInfo) {
         String sql1 = "DELETE FROM Patients WHERE PatientID = (?);";
-        String sql2 = "DELETE FROM PatientsCases WHERE PatientID = (?);";
-        String sql3 = "DELETE FROM Cases WHERE CaseID = (?);";
+        String sql2 = "DELETE FROM PatientsCases WHERE PatientsID = (?);";
+        String sql3 = "DELETE FROM Cases c, PatientsCases pc WHERE c.CaseID = pc.CaseID AND pc.PatientsID = (?);";
 
 
         try (Connection connection = DC.getConnection()) {
