@@ -114,7 +114,7 @@ public class CitizenInfoDAO {
     public void removeCitizen(CitizenInfo citizenInfo) {
         String sql1 = "DELETE FROM Patients WHERE PatientID = (?);";
         String sql2 = "DELETE FROM PatientsCases WHERE PatientsID = (?);";
-        String sql3 = "DELETE FROM Cases c, PatientsCases pc WHERE c.CaseID = pc.CaseID AND pc.PatientsID = (?);";
+        String sql3 = "DELETE FROM Cases JOIN PatientsCases ON Cases.CaseID = PatientsCases.CaseID WHERE PatientsID = (?);";
 
 
         try (Connection connection = DC.getConnection()) {
@@ -126,9 +126,9 @@ public class CitizenInfoDAO {
             ps2.setInt(1, citizenInfo.getCitizenId());
             ps3.setInt(1, citizenInfo.getCitizenId());
 
-            ps1.executeUpdate();
-            ps2.executeUpdate();
             ps3.executeUpdate();
+            ps2.executeUpdate();
+            ps1.executeUpdate();
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
