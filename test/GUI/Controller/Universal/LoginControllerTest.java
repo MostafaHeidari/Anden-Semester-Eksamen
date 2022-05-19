@@ -19,7 +19,16 @@ class LoginControllerTest {
 
         // Act - do the actual calc or method run
         //Student
-        boolean actualValue = Login.equals("Student");
+        boolean ActualStudentLoginValue = Login.equals("Student");
+        boolean expectedStudentLoginValue = Login.equals("Student");
+
+        //Teacher
+        boolean ActualTeacherLoginValue = Login.equals("Teacher");
+        boolean expectedTeacherLoginValue = Login.equals("Teacher");
+
+        //Admin
+        boolean ActualAdminLoginValue = Login.equals("admin");
+        boolean expectedAdminLoginValue = Login.equals("admin");
 
     }
 
