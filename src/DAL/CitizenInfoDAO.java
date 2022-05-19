@@ -61,9 +61,9 @@ public class CitizenInfoDAO {
 
             ps.setString(1, citizenName);
             ps.setString(2, citizenLastName);
-            ps.setString(5, citizenInformation);
+            ps.setString(3, citizenInformation);
             ps.setString(4, CPR);
-            ps.setString(3, citizenAddress);
+            ps.setString(5, citizenAddress);
 
 
             int affectedRows = ps.executeUpdate();
@@ -96,9 +96,10 @@ public class CitizenInfoDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, citizenInfoUpdate.getCitizenName());
             preparedStatement.setString(2, citizenInfoUpdate.getCitizenLastName());
-            preparedStatement.setString(5, citizenInfoUpdate.getCitizenInformation());
+            preparedStatement.setString(3, citizenInfoUpdate.getCitizenInformation());
             preparedStatement.setString(4, citizenInfoUpdate.getCPR());
-            preparedStatement.setString(3, citizenInfoUpdate.getCitizenAddress());
+            preparedStatement.setString(5, citizenInfoUpdate.getCitizenAddress());
+            preparedStatement.setInt(6, citizenInfoUpdate.getCitizenId());
             preparedStatement.executeUpdate();
 
         } catch (SQLException throwables) {
@@ -112,11 +113,17 @@ public class CitizenInfoDAO {
      */
     public void removeCitizen(CitizenInfo citizenInfo) {
         String sql1 = "DELETE FROM Patients WHERE PatientID = (?);";
+        String sql2 = "DELETE FROM PatientsCases WHERE PatientID = (?);";
 
         try (Connection connection = DC.getConnection()) {
             PreparedStatement ps1 = connection.prepareStatement(sql1, Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps2 = connection.prepareStatement(sql2, Statement.RETURN_GENERATED_KEYS);
+
             ps1.setInt(1, citizenInfo.getCitizenId());
+            ps2.setInt(1, citizenInfo.getCitizenId());
+
             ps1.executeUpdate();
+            ps2.executeUpdate();
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();

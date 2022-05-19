@@ -111,7 +111,7 @@ public class CreateCitizenController implements Initializable {
 
     }
 
-    public void uploadCitizenInfo(String firstName, String lastName, String address, String cpr, String info) throws SQLException {
+    public void uploadCitizenInfo(String firstName, String lastName, String address, String cpr, String info) throws SQLException, IOException {
 
         citizenInfo.createCitizen(firstName, lastName, address, cpr, info);
 
@@ -120,6 +120,11 @@ public class CreateCitizenController implements Initializable {
         txtFieldCitizenAddresse.clear();
         txtFieldCitizenCPR.clear();
         txtAreaCitizenGeneralInfo.clear();
+
+        tvCitizen.getItems().clear();
+
+        tvCitizen.setItems(citizenInfoModel.getAllCitizens());
+
     }
 
 
