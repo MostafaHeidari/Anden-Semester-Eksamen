@@ -2,6 +2,7 @@ package GUI.Controller.Teacher;
 
 import BE.CitizenInfo;
 import BE.Student;
+import GUI.Controller.Universal.SimpleDialogController;
 import GUI.Model.CitizenInfoModel;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
@@ -44,20 +45,7 @@ public class CreateCitizenController implements Initializable {
     @FXML
     public JFXButton BtnEditCitizen;
 
-    //edit Citizen
-    @FXML
-    public TextField txtFieldCitizenFirstNameEdit;
-    @FXML
-    public TextField txtFieldCitizenLastNameEdit;
-    @FXML
-    public TextField txtFieldCitizenCPREdit;
-    @FXML
-    public TextField txtFieldCitizenAddresseEdit;
-    @FXML
-    public TextArea txtAreaCitizenGeneralInfoEdit;
 
-    @FXML
-    public JFXButton btnSaveCitizenEdit;
 
 
 
@@ -115,11 +103,11 @@ public class CreateCitizenController implements Initializable {
     public void btnHandleSaveCitizen() throws Exception {
         String firstName = txtFieldCitizenFirstName.getText();
         String lastName = txtFieldCitizenLastName.getText();
-        String Address = txtFieldCitizenAddresse.getText();
         String cpr = txtFieldCitizenCPR.getText();
+        String Address = txtFieldCitizenAddresse.getText();
         String info = txtAreaCitizenGeneralInfo.getText();
 
-        uploadCitizenInfo(firstName, lastName, Address, cpr, info);
+        uploadCitizenInfo(firstName, lastName, cpr, Address, info);
 
     }
 
@@ -148,7 +136,7 @@ public class CreateCitizenController implements Initializable {
 
         tcCitizenCPR.setCellValueFactory(new PropertyValueFactory<>("CPR"));
 
-        tcCitizenAdresse.setCellValueFactory(new PropertyValueFactory<>("citizenAdresse"));
+        tcCitizenAdresse.setCellValueFactory(new PropertyValueFactory<>("citizenAddress"));
 
         tvCitizen.setItems(citizenInfoModel.getAllCitizens());
     }
@@ -165,11 +153,13 @@ public class CreateCitizenController implements Initializable {
         }
     }
 
-
-
-
-
+    /**
+     * remove a citizen with the SletElevAction method
+     */
     public void DeleteCitizenAction(ActionEvent actionEvent) {
+        if (SimpleDialogController.delete() && seletedCitizen != null) {
+            citizenInfoModel.removeCitizen(seletedCitizen);
+        }
     }
 
 

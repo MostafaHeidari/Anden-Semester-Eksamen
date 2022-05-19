@@ -106,11 +106,11 @@ public class EditCitizenController {
        this.selectedCitizen = citizenInfo;
     }
 
-    public void setSelectedTable(TableView tvStudent) {
-        tvStudent.getItems().clear();
+    public void setSelectedTable(TableView tvCitizen) {
+        tvCitizen.getItems().clear();
 
         try {
-            tvStudent.setItems(citizenInfoModel.getAllCitizens());
+            tvCitizen.setItems(citizenInfoModel.getAllCitizens());
         } catch (IOException e) {
             e.printStackTrace();
         }

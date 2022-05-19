@@ -3,6 +3,7 @@ package GUI.Model;
 import BE.CitizenInfo;
 import BE.Student;
 import BLL.CitizenInfoManger;
+import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -40,10 +41,25 @@ public class CitizenInfoModel {
         citizensList.add(citizenInfoManger.createCitizen(citizenName, citizenLastName, citizenAddress, CPR,citizenInformation));
     }
 
-    // this method used to edit the Citizen.
+    /**
+     * Gets the editCitizen student using editCitizen from citizenInfoManger
+     * @param citizenInfo
+     * @throws SQLServerException
+     */
     public void editCitizen(CitizenInfo citizenInfo) throws Exception {
         citizenInfoManger.editCitizen(citizenInfo);
         citizensList.clear();
         citizensList.addAll(citizenInfoManger.getAllCitizens());
+    }
+
+
+    /**
+     * Gets the removeCitizen selectedCitizen using removeCitizen from citizenInfoManger
+     * @param selectedCitizen
+     * @throws SQLServerException
+     */
+    public void removeCitizen (CitizenInfo selectedCitizen) {
+        citizenInfoManger.removeCitizen(selectedCitizen);
+        citizensList.remove(selectedCitizen);
     }
 }

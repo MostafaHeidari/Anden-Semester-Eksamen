@@ -1,7 +1,9 @@
 package BLL;
 
 import BE.CitizenInfo;
+import BE.Student;
 import DAL.CitizenInfoDAO;
+import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -9,7 +11,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class CitizenInfoManger {
-    private CitizenInfoDAO citizenInfoDAO;
+    private final CitizenInfoDAO citizenInfoDAO;
 
     /**
      * Constructor
@@ -45,8 +47,22 @@ public class CitizenInfoManger {
         return (citizenInfoDAO.createCitizen(citizenName, citizenLastName, citizenAddress, CPR, citizenInformation));
     }
 
-    // edit Citizen method
+    /**
+     * Gets the editCitizen student using editCitizen from studentDAO
+     * @param CitizenInfo
+     * @throws SQLServerException
+     */
     public void editCitizen(CitizenInfo CitizenInfo) throws Exception {
         citizenInfoDAO.editCitizen(CitizenInfo);
+    }
+
+
+    /**
+     * Gets the removeCitizen selectedCitizen using removeCitizen from citizenInfoDAO
+     * @param selectedCitizen
+     * @throws SQLServerException
+     */
+    public void removeCitizen(CitizenInfo selectedCitizen) {
+        citizenInfoDAO.removeCitizen(selectedCitizen);
     }
 }

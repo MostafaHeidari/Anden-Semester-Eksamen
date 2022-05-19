@@ -96,10 +96,27 @@ public class CitizenInfoDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, citizenInfoUpdate.getCitizenName());
             preparedStatement.setString(2, citizenInfoUpdate.getCitizenLastName());
-            preparedStatement.setString(3, citizenInfoUpdate.getCitizenInformation());
+            preparedStatement.setString(5, citizenInfoUpdate.getCitizenInformation());
             preparedStatement.setString(4, citizenInfoUpdate.getCPR());
-            preparedStatement.setString(5, citizenInfoUpdate.getCitizenAddress());
+            preparedStatement.setString(3, citizenInfoUpdate.getCitizenAddress());
             preparedStatement.executeUpdate();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
+    /**
+     * @param citizenInfo
+     * @throws SQLServerException
+     */
+    public void removeCitizen(CitizenInfo citizenInfo) {
+        String sql1 = "DELETE FROM Patients WHERE PatientID = (?);";
+
+        try (Connection connection = DC.getConnection()) {
+            PreparedStatement ps1 = connection.prepareStatement(sql1, Statement.RETURN_GENERATED_KEYS);
+            ps1.setInt(1, citizenInfo.getCitizenId());
+            ps1.executeUpdate();
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
