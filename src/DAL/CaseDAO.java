@@ -120,21 +120,25 @@ public class CaseDAO {
 
         String sql1 = "DELETE FROM FunctionalAbility WHERE CaseID = (?);";
         String sql2 = "DELETE FROM PatientsCases WHERE CaseID = (?);";
-        String sql3 = "DELETE FROM Cases WHERE CaseID = (?);";
+        String sql3 = "DELETE FROM HealthConditons WHERE CaseID = (?);";
+        String sql4 = "DELETE FROM Cases WHERE CaseID = (?);";
 
         try (Connection connection = DC.getConnection()) {
 
             PreparedStatement ps1 = connection.prepareStatement(sql1, Statement.RETURN_GENERATED_KEYS);
             PreparedStatement ps2 = connection.prepareStatement(sql2, Statement.RETURN_GENERATED_KEYS);
             PreparedStatement ps3 = connection.prepareStatement(sql3, Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps4 = connection.prepareStatement(sql4, Statement.RETURN_GENERATED_KEYS);
 
             ps1.setInt(1, selectedCase.getCaseId());
             ps2.setInt(1, selectedCase.getCaseId());
             ps3.setInt(1, selectedCase.getCaseId());
+            ps4.setInt(1, selectedCase.getCaseId());
 
             ps1.executeUpdate();
             ps2.executeUpdate();
             ps3.executeUpdate();
+            ps4.executeUpdate();
 
 
         } catch (SQLException throwables) {
