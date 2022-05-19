@@ -79,7 +79,7 @@ public class CreateStudentController implements Initializable {
      * @throws IOException
      */
     public CreateStudentController() throws IOException {
-
+        studentModel = new StudentModel();
     }
 
     /**
