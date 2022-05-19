@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -29,6 +30,16 @@ class LoginControllerTest {
         //Admin
         boolean ActualAdminLoginValue = Login.equals("admin");
         boolean expectedAdminLoginValue = Login.equals("admin");
+
+        // Assert - check if actual val is equal to expected val
+        //Student
+        Assertions.assertEquals(ActualStudentLoginValue, expectedStudentLoginValue);
+
+        //Teacher
+        Assertions.assertEquals(ActualTeacherLoginValue, expectedTeacherLoginValue);
+
+        //Admin
+        Assertions.assertEquals(ActualAdminLoginValue, expectedAdminLoginValue);
 
     }
 
