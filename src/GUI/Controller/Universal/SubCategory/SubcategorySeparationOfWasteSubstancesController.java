@@ -29,7 +29,7 @@ public class SubcategorySeparationOfWasteSubstancesController {
     @FXML
     private TextArea txtIUrinaryIncontinence;
     @FXML
-    private TextArea txtWeightChange;
+    private TextArea txtFecalIncontinence;
     @FXML
     private TextArea txtOverWeight;
     @FXML
@@ -96,10 +96,10 @@ public class SubcategorySeparationOfWasteSubstancesController {
         categoryModel.updateCategory(caseID,"Problems with urinary incontinence",txtIUrinaryIncontinence.getText());
 
 
-        if (categoryModel.readCategory(caseID,"Inappropriate weight change") == null){
-            categoryModel.createCategory(caseID,"Inappropriate weight change",txtWeightChange.getText());
+        if (categoryModel.readCategory(caseID,"Problems with fecal incontinence") == null){
+            categoryModel.createCategory(caseID,"Problems with fecal incontinence",txtFecalIncontinence.getText());
         }
-        categoryModel.updateCategory(caseID,"Inappropriate weight change",txtWeightChange.getText());
+        categoryModel.updateCategory(caseID,"Problems with fecal incontinence",txtFecalIncontinence.getText());
 
 
         if (categoryModel.readCategory(caseID,"Problems with over weight") == null){
@@ -123,7 +123,7 @@ public class SubcategorySeparationOfWasteSubstancesController {
         this.caseID = caseID;
         txturination.setText(categoryModel.readCategory(caseID,"Problems with urination"));
         txtIUrinaryIncontinence.setText(categoryModel.readCategory(caseID,"Problems with urinary incontinence"));
-        txtWeightChange.setText(categoryModel.readCategory(caseID,"Inappropriate weight change"));
+        txtFecalIncontinence.setText(categoryModel.readCategory(caseID,"Problems with fecal incontinence"));
         txtOverWeight.setText(categoryModel.readCategory(caseID,"Problems with over weight"));
         txtUnderWeight.setText(categoryModel.readCategory(caseID,"Problems with under weight"));
     }
