@@ -55,7 +55,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </JFXButton>
-                  <Label layoutX="18.0" layoutY="7.0" text="Redigering&#10;af Citizen" textAlignment="CENTER" textFill="WHITE">
+                  <Label layoutX="18.0" layoutY="7.0" text="Opret&#10;af Citizen" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="32.0" />
                      </font>
@@ -102,23 +102,22 @@
             <Label layoutX="265.0" layoutY="183.0" text="Efternavn" />
             <Label layoutX="243.0" layoutY="232.0" text="CPR-Nummer" />
             <Label layoutX="272.0" layoutY="278.0" text="Adresse" />
-            <JFXButton fx:id="btnSaveCitizen" layoutX="405.0" layoutY="551.0" onAction="#btnHandleSaveCitizen" prefHeight="30.0" prefWidth="115.0" style="-fx-background-color: #009B42;" text="Gem oplysninger" textFill="WHITE">
+            <JFXButton fx:id="btnSaveCitizen" layoutX="328.0" layoutY="544.0" onAction="#btnHandleSaveCitizen" prefHeight="30.0" prefWidth="115.0" stylesheets="@../CSS/CreateStudent.css" text="Gem oplysninger" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></JFXButton>
-            <Line endX="665.3333740234375" endY="473.86676025390625" layoutX="-59.0" layoutY="65.0" startX="389.20001220703125" startY="473.86669921875" stroke="#d4d3be" />
             <Label layoutX="269.0" layoutY="259.0" />
-            <JFXButton fx:id="BtnDeleteCitizen" layoutX="923.0" layoutY="551.0" onAction="#DeleteCitizenAction" prefHeight="30.0" prefWidth="109.0" stylesheets="@../CSS/CreateStudent.css" text="Slet Citizen" textFill="WHITE">
+            <JFXButton fx:id="BtnDeleteCitizen" layoutX="798.0" layoutY="544.0" onAction="#DeleteCitizenAction" prefHeight="30.0" prefWidth="109.0" stylesheets="@../CSS/CreateStudent.css" text="Slet Citizen" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="BtnEditCitizen" layoutX="791.0" layoutY="551.0" onAction="#EditCitizenAction" prefHeight="30.0" prefWidth="109.0" stylesheets="@../CSS/CreateStudent.css" text="Rediger Citizen" textFill="WHITE">
+            <JFXButton fx:id="BtnEditCitizen" layoutX="666.0" layoutY="544.0" onAction="#EditCitizenAction" prefHeight="30.0" prefWidth="109.0" stylesheets="@../CSS/CreateStudent.css" text="Rediger Citizen" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <TableView fx:id="tvCitizen" layoutX="666.0" layoutY="127.0" prefHeight="405.0" prefWidth="496.0">
+            <TableView fx:id="tvCitizen" layoutX="666.0" layoutY="125.0" prefHeight="405.0" prefWidth="496.0">
                <columns>
                   <TableColumn fx:id="tcId" prefWidth="55.0" text="Id" />
                   <TableColumn fx:id="tcNameCitizen" prefWidth="96.0" text="Navn" />

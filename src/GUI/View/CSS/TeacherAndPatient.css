@@ -1,6 +1,6 @@
 
 .root{
-     -fx-background-color: white;
+     -fx-background-color:  #BBE5E8;
 }
 
 #infoBox{
@@ -18,7 +18,7 @@
      -fx-text-fill: white;
 }
 
-#txtNameField,#txtLastnameField,#txtcprField,#txtEmailField,#txtTelefonField,#txtadgangskodField,#txtAgeField,#txtUserField{
+#txtcprField,#txtEmailField,#txtTelefonField,#txtadgangskodField,#txtAgeField{
      -fx-control-inner-background: white;
      -fx-text-fill: #2B2121;
      -fx-background-color:  #EBF3EB;

@@ -2,19 +2,22 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="950.0" stylesheets="@../CSS/CreateStudent.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.EditCitizenController">
+<AnchorPane prefHeight="600.0" prefWidth="950.0" stylesheets="@../CSS/CitizentInfo.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.EditCitizenController">
    <children>
       <Pane prefHeight="638.0" prefWidth="951.0">
          <children>
@@ -34,13 +37,35 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <TextField fx:id="txtFieldCitizenFirstNameEdit" prefHeight="40.0" prefWidth="275.0" promptText="Navn" />
-                  <TextField fx:id="txtFieldCitizenLastNameEdit" layoutX="10.0" layoutY="18.0" prefHeight="35.0" prefWidth="275.0" promptText="Efternavn" GridPane.rowIndex="1" />
-                  <TextField fx:id="txtFieldCitizenCPREdit" layoutX="10.0" layoutY="60.0" prefHeight="36.0" prefWidth="275.0" promptText="CPR-nr" GridPane.rowIndex="2" />
-                  <TextField fx:id="txtFieldCitizenAddresseEdit" prefHeight="34.0" prefWidth="275.0" promptText="Adresse" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtFieldCitizenFirstNameEdit" prefHeight="40.0" prefWidth="275.0" promptText="Navn">
+                     <effect>
+                        <InnerShadow height="4.08" radius="1.105" width="2.34" />
+                     </effect></TextField>
+                  <TextField fx:id="txtFieldCitizenLastNameEdit" layoutX="10.0" layoutY="18.0" prefHeight="35.0" prefWidth="275.0" promptText="Efternavn" GridPane.rowIndex="1">
+                     <effect>
+                        <InnerShadow height="4.08" radius="1.105" width="2.34" />
+                     </effect></TextField>
+                  <TextField fx:id="txtFieldCitizenCPREdit" layoutX="10.0" layoutY="60.0" prefHeight="36.0" prefWidth="275.0" promptText="CPR-nr" GridPane.rowIndex="2">
+                     <effect>
+                        <InnerShadow height="4.08" radius="1.105" width="2.34" />
+                     </effect></TextField>
+                  <TextField fx:id="txtFieldCitizenAddresseEdit" prefHeight="34.0" prefWidth="275.0" promptText="Adresse" GridPane.rowIndex="3">
+                     <effect>
+                        <InnerShadow height="4.08" radius="1.105" width="2.34" />
+                     </effect></TextField>
                </children>
             </GridPane>
-            <TextArea fx:id="txtAreaCitizenGeneralInfoEdit" layoutX="350.0" layoutY="319.0" prefHeight="209.0" prefWidth="548.0" promptText="Generelle Oplysninger" />
+            <TextArea fx:id="txtAreaCitizenGeneralInfoEdit" layoutX="349.0" layoutY="319.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="209.0" prefWidth="552.0" promptText="Generelle Oplysninger" style="-fx-border-color: EBF3EB;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <InnerShadow>
+                     <color>
+                        <Color red="0.9215686321258545" green="0.9529411792755127" blue="0.9215686321258545" />
+                     </color>
+                  </InnerShadow>
+               </effect></TextArea>
             <JFXButton fx:id="BtnLogOutOfPatient" layoutX="852.0" layoutY="14.0" onAction="#LogOutOfPatient" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -75,7 +100,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <Line endX="929.3333129882812" endY="473.86669921875" layoutX="-30.0" layoutY="68.0" startX="389.20001220703125" startY="473.86669921875" stroke="#d4d3be" />
+            <Line endX="929.3333129882812" endY="473.86669921875" layoutX="-32.0" layoutY="68.0" startX="385.20001220703125" startY="473.86669921875" stroke="#d4d3be" />
             <Label layoutX="269.0" layoutY="259.0" />
          </children>
       </Pane>

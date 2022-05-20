@@ -11,7 +11,7 @@
 
 <AnchorPane onKeyPressed="#handleOnKeyPressed" prefHeight="600.0" prefWidth="900.0" stylesheets="@../CSS/Login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.LoginController">
     <children>
-        <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="69.0" prefHeight="38.0" prefWidth="900.0" text="SOSU Dokumentations System" textAlignment="CENTER">
+        <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="69.0" prefHeight="38.0" prefWidth="900.0" text="SOSU Dokumentations System" textAlignment="CENTER">
             <font>
                 <Font name="Arial Black" size="24.0" />
             </font>
@@ -19,18 +19,18 @@
                 <Glow />
             </effect>
         </Label>
-        <TextField fx:id="txtFieldUsername" layoutX="325.0" layoutY="210.0" prefHeight="40.0" prefWidth="250.0" promptText="Brugernavn">
+        <TextField fx:id="txtFieldUsername" layoutX="342.0" layoutY="210.0" prefHeight="40.0" prefWidth="250.0" promptText="Brugernavn">
          <font>
             <Font size="14.0" />
          </font>
         </TextField>
-        <PasswordField fx:id="txtPasswordField" layoutX="325.0" layoutY="268.0" prefHeight="40.0" prefWidth="250.0" promptText="Adgangskode">
+        <PasswordField fx:id="txtPasswordField" layoutX="342.0" layoutY="268.0" prefHeight="40.0" prefWidth="250.0" promptText="Adgangskode">
          <font>
             <Font size="14.0" />
          </font>
       </PasswordField>
-      <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="325.0" layoutY="344.0" onAction="#Login" prefHeight="40.0" prefWidth="250.0" ripplerFill="#00000091" text="Log ind" textFill="WHITE" />
-      <FontAwesomeIconView fx:id="LockIkon" fill="#2b2121" glyphName="LOCK" layoutX="290.0" layoutY="296.0" selectionEnd="1" size="25" text="" wrappingWidth="14.142857551574593" />
-      <FontAwesomeIconView fx:id="userIkon" fill="#2b2121" glyphName="USER" layoutX="290.0" layoutY="238.0" selectionEnd="1" selectionFill="#543f3f" size="25" text="" wrappingWidth="14.142857551574707" />
+      <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="342.0" layoutY="344.0" onAction="#Login" prefHeight="40.0" prefWidth="250.0" ripplerFill="#00000091" text="Log ind" textFill="WHITE" />
+      <FontAwesomeIconView fx:id="LockIkon" fill="#2b2121" glyphName="LOCK" layoutX="307.0" layoutY="296.0" selectionEnd="1" size="25" text="" wrappingWidth="14.142857551574593" />
+      <FontAwesomeIconView fx:id="userIkon" fill="#2b2121" glyphName="USER" layoutX="307.0" layoutY="238.0" selectionEnd="1" selectionFill="#543f3f" size="25" text="" wrappingWidth="14.142857551574707" />
     </children>
 </AnchorPane>

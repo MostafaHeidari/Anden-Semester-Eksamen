@@ -1,5 +1,45 @@
 
 
+/* text-fields style of CitizenInfo*/
+
+.root{
+    -fx-background-color: white;
+}
+
+#txtFieldCitizenFirstName,#txtFieldCitizenLastName,#txtFieldCitizenCPR,#txtAreaCitizenGeneralInfo,#txtFieldCitizenAddresse{
+    -fx-text-fill: #2B2121;
+    -fx-border-color: #15B559;
+}
+
+.text-area:focused{
+    -fx-control-inner-background: #EBF3EB;
+    -fx-border-color: #15B559;
+}
+.text-field:focused{
+    -fx-control-inner-background: #EBF3EB;
+    -fx-border-color: #15B559;
+}
+.table-row-cell:selected {
+    -fx-background-color:  #D4D3BE;
+ }
+
+.table-view .column-header .label {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-background-color: #777779;
+ }
+.table-view{
+    -fx-border-color: #777779;
+ }
+
+/* text-fields style of EditCitizen*/
+#txtFieldCitizenFirstNameEdit,#txtFieldCitizenLastNameEdit,#txtFieldCitizenCPREdit,#txtFieldCitizenAddresseEdit,#txtAreaCitizenGeneralInfoEdit{
+    -fx-control-inner-background: white;
+    -fx-text-fill: #2B2121;
+    -fx-background-color:  #EBF3EB;
+}
+
+
 
 #BtnDeleteCitizen, #BtnEditCitizen{
     -fx-font-size: 12px;

@@ -168,8 +168,6 @@ public class CreateCitizenController implements Initializable {
     }
 
 
-
-
     public void EditCitizenAction(ActionEvent actionEvent) throws IOException {
         if (seletedCitizen != null) {
             CitizenInfo selectedCitizen = (CitizenInfo) tvCitizen.getSelectionModel().getSelectedItem();
@@ -177,6 +175,7 @@ public class CreateCitizenController implements Initializable {
             FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/GUI/View/Teacher/EditCitizen.fxml"));
             root1 = (Parent) fxmlLoader1.load();
             Stage stage = new Stage();
+            stage.setTitle("Borger Redigering");
             stage.setScene(new Scene(root1));
 
             //something is wrong

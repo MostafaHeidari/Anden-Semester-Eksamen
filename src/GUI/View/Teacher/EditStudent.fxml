@@ -28,17 +28,17 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <TextField fx:id="txtnameEditStudentField" prefHeight="98.0" prefWidth="318.0" promptText="Navn">
+            <TextField fx:id="txtnameEditStudentField" prefHeight="47.0" prefWidth="328.0" promptText="Navn">
                <GridPane.margin>
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="txtLastnameEditStudentField" layoutX="10.0" layoutY="18.0" prefHeight="113.0" prefWidth="318.0" promptText="Efternavn" GridPane.rowIndex="1">
+            <TextField fx:id="txtLastnameEditStudentField" layoutX="10.0" layoutY="18.0" prefHeight="46.0" prefWidth="328.0" promptText="Efternavn" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="txtUserNameEditField" layoutX="10.0" layoutY="93.0" prefHeight="88.0" prefWidth="318.0" promptText="Brugernavn" GridPane.rowIndex="2">
+            <TextField fx:id="txtUserNameEditField" layoutX="10.0" layoutY="93.0" prefHeight="47.0" prefWidth="328.0" promptText="Brugernavn" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets bottom="5.0" top="5.0" />
                </GridPane.margin>
@@ -77,15 +77,15 @@
             </Text>
          </children>
       </Pane>
-      <Label alignment="CENTER" layoutX="221.0" layoutY="187.0" prefHeight="18.0" prefWidth="54.0" text="Navn:" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="249.0" prefHeight="18.0" prefWidth="63.0" text="Efternavn:" />
-      <Label alignment="CENTER" layoutX="214.0" layoutY="312.0" prefHeight="18.0" prefWidth="70.0" text="BrugerNavn:" />
+      <Label alignment="CENTER" layoutX="234.0" layoutY="188.0" prefHeight="18.0" prefWidth="54.0" text="Navn:" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="218.0" layoutY="249.0" prefHeight="18.0" prefWidth="63.0" text="Efternavn:" />
+      <Label alignment="CENTER" layoutX="209.0" layoutY="312.0" prefHeight="18.0" prefWidth="70.0" text="BrugerNavn:" />
       <Line endX="148.0" layoutX="34.0" layoutY="100.0" startX="-14.899984359741211" startY="1.52587890625E-5" stroke="WHITE" />
-      <Label layoutX="327.0" layoutY="134.0" text="Indtast elevoplysninger" textFill="#2b2121">
+      <Label layoutX="327.0" layoutY="126.0" text="Indtast elevoplysninger" textFill="#2b2121">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="290.0" layoutY="155.0" size="30" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
+      <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="290.0" layoutY="147.0" size="30" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
    </children>
 </AnchorPane>
