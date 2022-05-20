@@ -23,7 +23,7 @@ public class SubcategoryCommunicationController {
     @FXML
     private JFXButton btnLogOut;
     @FXML
-    public TextArea txtSeksualitet;
+    public TextArea txtCommunication;
 
     // this is instance variable is not used to now//
     private int caseID = -1;
@@ -73,11 +73,11 @@ public class SubcategoryCommunicationController {
      * @throws SQLException
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
-        if (categoryModel.readCategory(caseID,"Problems with seksualitet") == null){
+        if (categoryModel.readCategory(caseID,"Problems with communication") == null){
 
-            categoryModel.createCategory(caseID,"Problems with seksualitet",txtSeksualitet.getText());
+            categoryModel.createCategory(caseID,"Problems with communication",txtCommunication.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with seksualitet",txtSeksualitet.getText());
+        categoryModel.updateCategory(caseID,"Problems with communication",txtCommunication.getText());
     }
 
     /**
@@ -87,7 +87,7 @@ public class SubcategoryCommunicationController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtSeksualitet.setText(categoryModel.readCategory(caseID,"Problems with seksualitet"));
+        txtCommunication.setText(categoryModel.readCategory(caseID,"Problems with communication"));
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {

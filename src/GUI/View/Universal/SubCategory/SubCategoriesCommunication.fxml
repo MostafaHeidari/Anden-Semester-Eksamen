@@ -19,17 +19,17 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Text layoutX="100.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seksualitet" textAlignment="CENTER" underline="true" wrappingWidth="700.0">
+      <Text layoutX="100.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kommunikation" textAlignment="CENTER" underline="true" wrappingWidth="700.0">
          <font>
             <Font name="Arial Narrow Bold Italic" size="20.0" />
          </font>
       </Text>
-      <Label fx:id="seksualitet_1" layoutX="15.0" layoutY="200.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med seksualitet">
+      <Label fx:id="" layoutX="7.0" layoutY="200.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med kommunikation">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtSeksualitet" layoutX="300.0" layoutY="125.0" prefHeight="206.0" prefWidth="501.0" />
+      <TextArea fx:id="txtCommunication" layoutX="300.0" layoutY="125.0" prefHeight="206.0" prefWidth="501.0" />
 
       <JFXButton fx:id="btnSave" layoutX="536.0" layoutY="547.0" onAction="#subCategorySave" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Gem">
          <font>

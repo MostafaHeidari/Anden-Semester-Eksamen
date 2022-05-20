@@ -42,7 +42,10 @@ public class CategoryController {
     private Text søvnoghvile_1;
     @FXML
     private Text udskillelseafaffaldsstoffer_1;
-    @FXML Text videnogudvikling_1;
+    @FXML
+    private Text videnogudvikling_1;
+    @FXML
+    private Text kommunikation_1;
 
 
     /**
@@ -395,7 +398,18 @@ public class CategoryController {
      * Subcategory changing text
      */
     public void kommunikation_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        shiftWindow("Problemer med kommunikation");
+        Stage switcher = (Stage) kommunikation_1.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SubCategory/SubCategoriesCommunication.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        SubcategoryCommunicationController controller = loader.getController();
+        controller.setId(caseID);
+        controller.setSelectedCitizen(selectedCitizenInfo);
+
+
+        switcher.setTitle("Kommunikation");
+        switcher.setScene(scene);
     }
 
     /**

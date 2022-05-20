@@ -187,7 +187,7 @@
                      <children>
                         <VBox maxHeight="104.0" minHeight="6.0" prefHeight="67.0" prefWidth="370.0" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kommunikation" underline="true">
+                              <Text fx:id="kommunikation_1" onMouseClicked="#kommunikation_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Kommunikation" underline="true">
                                  <font>
                                     <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
@@ -195,14 +195,6 @@
                                     <Insets bottom="3.0" />
                                  </VBox.margin>
                               </Text>
-                              <Label fx:id="kommunikation_1" onMouseClicked="#kommunikation_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med kommunikation">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="7.0" />
-                                 </VBox.margin>
-                              </Label>
                            </children>
                         </VBox>
                      </children>
