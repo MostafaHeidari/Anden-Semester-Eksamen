@@ -29,15 +29,21 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtMemoryProblems" layoutX="299.0" layoutY="75.0" prefHeight="142.0" prefWidth="501.0" />
-      <TextArea fx:id="txtTreatmentPurpose" layoutX="299.0" layoutY="300.0" prefHeight="142.0" prefWidth="501.0" />
+      <TextArea fx:id="txtMemoryProblems" layoutX="299.0" layoutY="93.0" prefHeight="124.0" prefWidth="501.0" />
+      <TextArea fx:id="txtTreatmentPurpose" layoutX="299.0" layoutY="238.0" prefHeight="124.0" prefWidth="501.0" />
 
       <JFXButton fx:id="btnSave" layoutX="536.0" layoutY="547.0" onAction="#subCategorySave" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Gem">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Label fx:id="funktionsniveau_11" layoutX="15.0" layoutY="354.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med indsigt i Behandlingsformål">
+      <Label fx:id="funktionsniveau_11" layoutX="15.0" layoutY="283.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med indsigt i Behandlingsformål">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtDiseaseInsight" layoutX="299.0" layoutY="381.0" prefHeight="124.0" prefWidth="501.0" />
+      <Label fx:id="funktionsniveau_111" layoutX="15.0" layoutY="426.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med sygdomsindsigt">
          <font>
             <Font size="14.0" />
          </font>

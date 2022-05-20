@@ -28,6 +28,7 @@ public class SubcategoryKnowledgeAndDevelopmentController {
     public Text subCatText;
     public TextArea txtMemoryProblems;
     public TextArea txtTreatmentPurpose;
+    public TextArea txtDiseaseInsight;
 
     // this is instance variable is not used to now//
     private int caseID = -1;
@@ -88,6 +89,12 @@ public class SubcategoryKnowledgeAndDevelopmentController {
             categoryModel.createCategory(caseID,"TreatmentProblems",txtTreatmentPurpose.getText());
         }
         categoryModel.updateCategory(caseID,"TreatmentProblems",txtTreatmentPurpose.getText());
+
+        if (categoryModel.readCategory(caseID,"Disease Insight problems") == null){
+
+            categoryModel.createCategory(caseID,"Disease Insight problems",txtDiseaseInsight.getText());
+        }
+        categoryModel.updateCategory(caseID,"Disease Insight problems",txtDiseaseInsight.getText());
     }
 
     /**
@@ -99,6 +106,7 @@ public class SubcategoryKnowledgeAndDevelopmentController {
         this.caseID = caseID;
         txtMemoryProblems.setText(categoryModel.readCategory(caseID,"Memory problems"));
         txtTreatmentPurpose.setText(categoryModel.readCategory(caseID,"TreatmentProblems"));
+        txtDiseaseInsight.setText(categoryModel.readCategory(caseID,"Disease Insight problems"));
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {
