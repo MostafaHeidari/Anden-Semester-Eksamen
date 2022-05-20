@@ -151,7 +151,7 @@
                      <children>
                         <VBox prefHeight="269.0" prefWidth="324.0" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Udskillelse af affaldsstoffer" underline="true">
+                              <Text fx:id="udskillelseafaffaldsstoffer_1" onMouseClicked="#udskillelseafaffaldsstoffer_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Udskillelse af affaldsstoffer" underline="true">
                                  <font>
                                     <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
@@ -159,7 +159,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <Label fx:id="udskillelseafaffaldsstoffer_1" onMouseClicked="#udskillelseafaffaldsstoffer_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med vandladning">
+                              <Label style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med vandladning">
                                  <font>
                                     <Font size="14.0" />
                                  </font>

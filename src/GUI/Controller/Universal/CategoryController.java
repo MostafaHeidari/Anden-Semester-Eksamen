@@ -40,6 +40,9 @@ public class CategoryController {
     private Text respirationogcirkulation_1;
     @FXML
     private Text søvnoghvile_1;
+    @FXML
+    private Text udskillelseafaffaldsstoffer_1;
+
 
     /**
      * Goes to Cases view
@@ -415,7 +418,18 @@ public class CategoryController {
      * Subcategory changing text
      */
     public void udskillelseafaffaldsstoffer_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        shiftWindow("Problemer med vandladning");
+        Stage switcher = (Stage) udskillelseafaffaldsstoffer_1.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SubCategory/SubCategoriesSeparationOfWasteSubstances.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        SubcategorySeparationOfWasteSubstancesController controller = loader.getController();
+        controller.setId(caseID);
+        controller.setSelectedCitizen(selectedCitizenInfo);
+
+
+        switcher.setTitle("Udskillelse af affaldsdstoffer");
+        switcher.setScene(scene);
     }
 
     /**
