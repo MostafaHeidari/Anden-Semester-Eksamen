@@ -46,6 +46,8 @@ public class CategoryController {
     private Text videnogudvikling_1;
     @FXML
     private Text kommunikation_1;
+    @FXML
+    private Text psykosocialeforhold_1;
 
 
     /**
@@ -416,7 +418,18 @@ public class CategoryController {
      * Subcategory changing text
      */
     public void psykosocialeforhold_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        shiftWindow("Problemer med socialt samvær");
+        Stage switcher = (Stage) psykosocialeforhold_1.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SubCategory/SubCategoriesPsychosocialRelationships.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        SubcategoryPsychosocialRelationshipsController controller = loader.getController();
+        controller.setId(caseID);
+        controller.setSelectedCitizen(selectedCitizenInfo);
+
+
+        switcher.setTitle("Kommunikation");
+        switcher.setScene(scene);
     }
 
     /**
