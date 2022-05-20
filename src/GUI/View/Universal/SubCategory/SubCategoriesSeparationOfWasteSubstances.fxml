@@ -20,17 +20,17 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Text layoutX="100.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ernæring" textAlignment="CENTER" underline="true" wrappingWidth="700.0">
+      <Text layoutX="100.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Udskillelse af affaldsstoffer" textAlignment="CENTER" underline="true" wrappingWidth="700.0">
          <font>
             <Font name="Arial Narrow Bold Italic" size="20.0" />
          </font>
       </Text>
-      <Label layoutX="13.0" layoutY="108.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med væskeindtag">
+      <Label layoutX="13.0" layoutY="108.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med vandladning">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtFluidIntake" layoutX="301.0" layoutY="80.0" prefHeight="92.0" prefWidth="501.0" />
+      <TextArea fx:id="txturination" layoutX="301.0" layoutY="80.0" prefHeight="92.0" prefWidth="501.0" />
       <TextArea fx:id="txtFoodIntake" layoutX="300.0" layoutY="190.0" prefHeight="88.0" prefWidth="501.0" />
 
       <JFXButton fx:id="btnSave" layoutX="536.0" layoutY="700.0" onAction="#subCategorySave" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Gem">
