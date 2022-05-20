@@ -26,8 +26,8 @@ public class SubcategoryKnowledgeAndDevelopmentController {
     private JFXButton btnLogOut;
 
     public Text subCatText;
-    public TextArea txtDayProblems;
-    public TextArea txtSleepProblems;
+    public TextArea txtMemoryProblems;
+    public TextArea txtTreatmentPurpose;
 
     // this is instance variable is not used to now//
     private int caseID = -1;
@@ -77,17 +77,17 @@ public class SubcategoryKnowledgeAndDevelopmentController {
      * @throws SQLException
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
-        if (categoryModel.readCategory(caseID,"Day problems") == null){
+        if (categoryModel.readCategory(caseID,"Memory problems") == null){
 
-            categoryModel.createCategory(caseID,"Day problems",txtDayProblems.getText());
+            categoryModel.createCategory(caseID,"Memory problems",txtMemoryProblems.getText());
         }
-        categoryModel.updateCategory(caseID,"Day problems",txtDayProblems.getText());
+        categoryModel.updateCategory(caseID,"Memory problems",txtMemoryProblems.getText());
 
-        if (categoryModel.readCategory(caseID,"Sleep problems") == null){
+        if (categoryModel.readCategory(caseID,"TreatmentProblems") == null){
 
-            categoryModel.createCategory(caseID,"Sleep problems",txtSleepProblems.getText());
+            categoryModel.createCategory(caseID,"TreatmentProblems",txtTreatmentPurpose.getText());
         }
-        categoryModel.updateCategory(caseID,"Sleep problems",txtSleepProblems.getText());
+        categoryModel.updateCategory(caseID,"TreatmentProblems",txtTreatmentPurpose.getText());
     }
 
     /**
@@ -97,8 +97,8 @@ public class SubcategoryKnowledgeAndDevelopmentController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtDayProblems.setText(categoryModel.readCategory(caseID,"Day problems"));
-        txtSleepProblems.setText(categoryModel.readCategory(caseID,"Sleep problems"));
+        txtMemoryProblems.setText(categoryModel.readCategory(caseID,"Memory problems"));
+        txtTreatmentPurpose.setText(categoryModel.readCategory(caseID,"TreatmentProblems"));
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {
