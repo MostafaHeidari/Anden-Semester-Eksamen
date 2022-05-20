@@ -24,9 +24,9 @@ public class SubcategoryPsychosocialRelationshipsController {
     @FXML
     private JFXButton btnLogOut;
     @FXML
-    private TextArea txtFluidIntake;
+    private TextArea txtSocialRealitionship;
     @FXML
-    private TextArea txtFoodIntake;
+    private TextArea txtEmotionelleProblems;
     @FXML
     private TextArea txtWeightChange;
     @FXML
@@ -83,16 +83,16 @@ public class SubcategoryPsychosocialRelationshipsController {
      * @throws SQLException
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
-        if (categoryModel.readCategory(caseID,"Problems with fluid intake") == null){
-            categoryModel.createCategory(caseID,"Problems with fluid intake",txtFluidIntake.getText());
+        if (categoryModel.readCategory(caseID,"Problems with Social Relationship") == null){
+            categoryModel.createCategory(caseID,"Problems with Social Relationship",txtSocialRealitionship.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with fluid intake",txtFluidIntake.getText());
+        categoryModel.updateCategory(caseID,"Problems with Social Relationship",txtSocialRealitionship.getText());
 
 
-        if (categoryModel.readCategory(caseID,"Problems with food intake") == null){
-            categoryModel.createCategory(caseID,"Problems with food intake",txtFoodIntake.getText());
+        if (categoryModel.readCategory(caseID,"Problems with Emotions") == null){
+            categoryModel.createCategory(caseID,"Problems with Emotions",txtEmotionelleProblems.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with food intake",txtFoodIntake.getText());
+        categoryModel.updateCategory(caseID,"Problems with Emotions",txtEmotionelleProblems.getText());
 
 
         if (categoryModel.readCategory(caseID,"Inappropriate weight change") == null){
@@ -120,8 +120,8 @@ public class SubcategoryPsychosocialRelationshipsController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtFluidIntake.setText(categoryModel.readCategory(caseID,"Problems with fluid intake"));
-        txtFoodIntake.setText(categoryModel.readCategory(caseID,"Problems with food intake"));
+        txtSocialRealitionship.setText(categoryModel.readCategory(caseID,"Problems with Social Relationship"));
+        txtEmotionelleProblems.setText(categoryModel.readCategory(caseID,"Problems with Emotions"));
         txtWeightChange.setText(categoryModel.readCategory(caseID,"Inappropriate weight change"));
         txtOverWeight.setText(categoryModel.readCategory(caseID,"Problems with over weight"));
         txtUnderWeight.setText(categoryModel.readCategory(caseID,"Problems with under weight"));

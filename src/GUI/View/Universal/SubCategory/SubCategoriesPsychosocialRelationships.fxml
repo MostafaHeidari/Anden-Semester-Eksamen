@@ -30,8 +30,8 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtFluidIntake" layoutX="301.0" layoutY="80.0" prefHeight="92.0" prefWidth="501.0" />
-      <TextArea fx:id="txtFoodIntake" layoutX="300.0" layoutY="190.0" prefHeight="88.0" prefWidth="501.0" />
+      <TextArea fx:id="txtSocialRealitionship" layoutX="301.0" layoutY="80.0" prefHeight="92.0" prefWidth="501.0" />
+      <TextArea fx:id="txtEmotionelleProblems" layoutX="300.0" layoutY="190.0" prefHeight="88.0" prefWidth="501.0" />
 
       <JFXButton fx:id="btnSave" layoutX="536.0" layoutY="700.0" onAction="#subCategorySave" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Gem">
          <font>
