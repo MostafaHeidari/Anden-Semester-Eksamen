@@ -20,12 +20,12 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Text layoutX="100.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ernæring" textAlignment="CENTER" underline="true" wrappingWidth="700.0">
+      <Text layoutX="100.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Psykosocial forhold" textAlignment="CENTER" underline="true" wrappingWidth="700.0">
          <font>
             <Font name="Arial Narrow Bold Italic" size="20.0" />
          </font>
       </Text>
-      <Label layoutX="13.0" layoutY="108.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med væskeindtag">
+      <Label layoutX="13.0" layoutY="108.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med socialt samvær">
          <font>
             <Font size="14.0" />
          </font>
@@ -38,25 +38,19 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Label layoutX="13.0" layoutY="218.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med fødeindtag">
+      <Label layoutX="13.0" layoutY="218.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Emotionelle problemer">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
       <TextArea fx:id="txtWeightChange" layoutX="300.0" layoutY="305.0" prefHeight="88.0" prefWidth="501.0" />
-      <Label layoutX="12.0" layoutY="329.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Uhensigtsmæssig vægtændring">
+      <Label layoutX="12.0" layoutY="329.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med misbrug">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtOverWeight" layoutX="300.0" layoutY="409.0" prefHeight="88.0" prefWidth="501.0" />
-      <Label layoutX="13.0" layoutY="431.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med overvægt">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <TextArea fx:id="txtUnderWeight" layoutX="300.0" layoutY="529.0" prefHeight="88.0" prefWidth="501.0" />
-      <Label layoutX="17.0" layoutY="554.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med undervægt">
+      <TextArea fx:id="txtOverWeight" layoutX="306.0" layoutY="435.0" prefHeight="88.0" prefWidth="501.0" />
+      <Label layoutX="7.0" layoutY="463.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Mentale problemer">
          <font>
             <Font size="14.0" />
          </font>
