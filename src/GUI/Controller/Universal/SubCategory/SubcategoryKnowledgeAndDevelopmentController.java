@@ -25,9 +25,13 @@ public class SubcategoryKnowledgeAndDevelopmentController {
     @FXML
     private JFXButton btnLogOut;
 
+    @FXML
     public Text subCatText;
+    @FXML
     public TextArea txtMemoryProblems;
+    @FXML
     public TextArea txtTreatmentPurpose;
+    @FXML
     public TextArea txtDiseaseInsight;
 
     // this is instance variable is not used to now//

@@ -1,6 +1,5 @@
 package GUI.Controller.Admin;
 
-import BE.Student;
 import BE.Teacher;
 import GUI.Controller.Universal.NotFilledTxtFieldController;
 import GUI.Controller.Universal.SimpleDialogController;
@@ -72,7 +71,6 @@ public class AdminCreateTeacherController implements Initializable {
     public AdminCreateTeacherController() throws IOException {
 
         teacherModel = TeacherModel.getInstance();
-
     }
 
     /**
@@ -130,7 +128,6 @@ public class AdminCreateTeacherController implements Initializable {
             uploadLogin(userNameTeacher,passwordTeacher);
             uploadTeacherInfo(teacherName, teacherLastName,teacherEmail,teacherUserName);
         }
-
     }
 
     /**
@@ -189,9 +186,7 @@ public class AdminCreateTeacherController implements Initializable {
         teacherUserNameTxt.clear();
         teacherPasswordTxt.clear();
 
-
         tvTeacher.getItems().clear();
-
 
         tvTeacher.setItems(teacherModel.getAllTeachers());
     }
@@ -212,7 +207,4 @@ public class AdminCreateTeacherController implements Initializable {
 
         tvTeacher.setItems(teacherModel.getAllTeachers());
     }
-
-
-
 }

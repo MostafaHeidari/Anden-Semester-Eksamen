@@ -1,7 +1,6 @@
 package BLL;
 
 import BE.CitizenInfo;
-import BE.Student;
 import DAL.CitizenInfoDAO;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.FXCollections;

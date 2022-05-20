@@ -1,6 +1,5 @@
 package GUI.Model;
 
-import BE.FunctionalAbility;
 import BLL.FunctionalAbilityManager;
 import DAL.FunctionalAbilityDAO;
 

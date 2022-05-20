@@ -1,7 +1,6 @@
 package GUI.Controller.Teacher;
 
 import BE.CitizenInfo;
-import BE.Student;
 import GUI.Model.CitizenInfoModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;

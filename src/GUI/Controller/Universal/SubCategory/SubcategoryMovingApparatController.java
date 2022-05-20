@@ -25,7 +25,7 @@ public class SubcategoryMovingApparatController {
     private JFXButton btnBack;
     @FXML
     private JFXButton btnLogOut;
-
+    @FXML
     public TextArea txtMovingApparat;
 
    // this is instance variable is not used to now//

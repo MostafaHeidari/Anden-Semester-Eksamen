@@ -1,6 +1,5 @@
 package DAL.db.Admin;
 
-import BE.Student;
 import BE.Teacher;
 import DAL.db.DatabaseConnector;
 import com.microsoft.sqlserver.jdbc.SQLServerException;

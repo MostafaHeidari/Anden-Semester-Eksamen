@@ -1,6 +1,5 @@
 package BLL;
 
-import BE.Student;
 import DAL.CategoryDAO;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 

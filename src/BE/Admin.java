@@ -5,8 +5,6 @@ public class Admin {
     private String userNameAdmin;
     private String passwordAdmin;
 
-
-
     /**
      * @param userNameAdmin
      * @param passwordAdmin

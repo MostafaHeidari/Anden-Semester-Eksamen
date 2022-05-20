@@ -22,7 +22,7 @@ public class FunctionalAbilityController implements Initializable {
 
     public FunctionalAbilityModel functionalAbilityModel;
 
-    private FunctionalAbilityDAO functionalAbilityDAO;
+    private final FunctionalAbilityDAO functionalAbilityDAO;
 
     @FXML
     private Button Button;
@@ -216,5 +216,4 @@ public class FunctionalAbilityController implements Initializable {
         //array of names for the checkboxes
         stringResult = new String[]{"Ingen/ubetydelige begrænsninger", "Lette begrænsninger", "Moderate begrænsninger", "Svære begrænsninger", "Totale begrænsninger", "Ikke relevant"};
     }
-
 }

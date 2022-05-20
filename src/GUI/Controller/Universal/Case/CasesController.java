@@ -2,8 +2,6 @@ package GUI.Controller.Universal.Case;
 
 import BE.Case;
 import BE.CitizenInfo;
-import BE.Student;
-import GUI.Controller.Teacher.EditStudentController;
 import GUI.Controller.Universal.CategoryController;
 import GUI.Controller.Universal.SimpleDialogController;
 import GUI.Model.CaseModel;
@@ -140,7 +138,6 @@ public class CasesController implements Initializable {
             switcher.setTitle("Helbredstilstande");
             switcher.setScene(scene);
         }
-
     }
 
 

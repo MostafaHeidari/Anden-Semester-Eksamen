@@ -1,7 +1,6 @@
 package GUI.Model;
 
 import BE.CitizenInfo;
-import BE.Student;
 import BLL.CitizenInfoManger;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.FXCollections;

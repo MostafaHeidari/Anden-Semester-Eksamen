@@ -1,7 +1,6 @@
 package DAL;
 
 import BE.CitizenInfo;
-import BE.Student;
 import DAL.db.DatabaseConnector;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 

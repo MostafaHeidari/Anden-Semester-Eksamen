@@ -1,7 +1,6 @@
 package BLL;
 
 import DAL.FunctionalAbilityDAO;
-
 import java.io.IOException;
 
 public class FunctionalAbilityManager {
@@ -14,5 +13,4 @@ public class FunctionalAbilityManager {
         public FunctionalAbilityManager() throws IOException {
             functionalAbilityDAO = new FunctionalAbilityDAO();
         }
-
 }

@@ -1,6 +1,5 @@
 package GUI.Controller.Student;
 
-import BE.Case;
 import BE.CitizenInfo;
 import GUI.Controller.Universal.Case.CasesController;
 import GUI.Controller.Universal.Case.CasesEditController;
@@ -75,9 +74,6 @@ public class CitizenController implements Initializable {
         });
     }
 
-
-
-
     /**
      * Log out and goes to the Login view
      */
@@ -116,11 +112,6 @@ public class CitizenController implements Initializable {
         }
     }
 
-    public void editCaseBtn(ActionEvent event) {
-    }
-
-
-
     /**
      * Changes selected Name tvCitizenInfo in the adminEventMangerTableViewName
      */
@@ -148,5 +139,4 @@ public class CitizenController implements Initializable {
 
         tvPatients.setItems(citizenInfoModel.getAllCitizens());
     }
-
 }

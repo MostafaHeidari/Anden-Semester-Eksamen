@@ -25,8 +25,11 @@ public class SubcategoryFunctionLevelController {
     @FXML
     private JFXButton btnLogOut;
 
+    @FXML
     public Text subCatText;
+    @FXML
     public TextArea txtPersonalCare;
+    @FXML
     public TextArea txtDailyActivities;
 
    // this is instance variable is not used to now//

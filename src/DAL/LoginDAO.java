@@ -1,7 +1,6 @@
 package DAL;
 
 import BE.Login;
-import BE.Student;
 import DAL.crypto.BCrypt;
 import DAL.db.DatabaseConnector;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
@@ -143,16 +142,11 @@ public class LoginDAO {
 
         try (Connection connection = connector.getConnection()) {
 
-
             PreparedStatement ps1 = connection.prepareStatement(sql1, Statement.RETURN_GENERATED_KEYS);
-
 
             ps1.setInt(1, selectedAdmin.getId());
 
-
             ps1.executeUpdate();
-
-
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();

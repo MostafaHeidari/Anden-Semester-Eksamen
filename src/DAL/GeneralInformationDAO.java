@@ -52,5 +52,4 @@ public class GeneralInformationDAO {
         }
         return null;
     }
-
 }

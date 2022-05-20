@@ -194,6 +194,4 @@ public class CitizenInfoContoller implements Initializable {
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
     }
-
-
 }

@@ -18,8 +18,11 @@ public class CreateCaseController {
 
     public CitizenInfo selectedCitizenInfo;;
 
+    @FXML
     public JFXButton backTo;
+    @FXML
     public JFXButton LogOut;
+    @FXML
     public JFXButton saveCase;
 
     @FXML

@@ -26,8 +26,11 @@ public class SubcategorySleepController {
     @FXML
     private JFXButton btnLogOut;
 
+    @FXML
     public Text subCatText;
+    @FXML
     public TextArea txtDayProblems;
+    @FXML
     public TextArea txtSleepProblems;
 
     // this is instance variable is not used to now//

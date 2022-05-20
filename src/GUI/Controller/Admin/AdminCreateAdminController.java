@@ -1,7 +1,6 @@
 package GUI.Controller.Admin;
 
 import BE.Login;
-import BE.Teacher;
 import GUI.Controller.Universal.NotFilledTxtFieldController;
 import GUI.Controller.Universal.SimpleDialogController;
 import GUI.Model.Admin.AdminModel;
@@ -60,8 +59,6 @@ public class AdminCreateAdminController implements Initializable {
         loginModel = LoginModel.getInstance();
     }
 
-
-
     /**
      * initialize
      */
@@ -109,7 +106,6 @@ public class AdminCreateAdminController implements Initializable {
 
 
             uploadLogin(userNameAdmin,passwordAdmin);
-
         }
     }
 
@@ -164,5 +160,4 @@ public class AdminCreateAdminController implements Initializable {
             selectedAdmin = (Login) tvAdmin.getSelectionModel().getSelectedItem();
         }
     }
-
 }

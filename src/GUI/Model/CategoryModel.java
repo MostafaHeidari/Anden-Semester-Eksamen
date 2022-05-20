@@ -1,15 +1,14 @@
 package GUI.Model;
 
 import BLL.CategoryManager;
-import BLL.LoginManager;
-import DAL.CategoryDAO;
+
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
 public class CategoryModel {
-    private CategoryManager categoryManager;
+    private final CategoryManager categoryManager;
 
     /**
      * Constructor

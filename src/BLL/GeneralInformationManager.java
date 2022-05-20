@@ -1,6 +1,6 @@
 package BLL;
 
- import DAL.GeneralInformationDAO;
+import DAL.GeneralInformationDAO;
 
 public class GeneralInformationManager {
 
@@ -9,5 +9,4 @@ public class GeneralInformationManager {
     public GeneralInformationManager(GeneralInformationDAO generalInformationDAO) {
         this.generalInformationDAO = generalInformationDAO;
     }
-
 }

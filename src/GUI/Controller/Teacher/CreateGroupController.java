@@ -3,6 +3,7 @@ package GUI.Controller.Teacher;
 import GUI.Model.GroupModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -14,9 +15,13 @@ import java.sql.SQLException;
 
 public class CreateGroupController {
 
+    @FXML
     public JFXButton saveButton;
+    @FXML
     public JFXButton backButton;
+    @FXML
     public TextField classNameTxt;
+
     GroupModel classModelInfo = new GroupModel();
 
     /**

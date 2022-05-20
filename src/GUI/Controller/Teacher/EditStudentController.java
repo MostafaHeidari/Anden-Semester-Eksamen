@@ -1,6 +1,5 @@
 package GUI.Controller.Teacher;
 
-import BE.CitizenInfo;
 import BE.Student;
 import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
@@ -86,8 +85,6 @@ public class EditStudentController {
         Scene scene = new Scene(root);
         switcher.setTitle("Create student");
         switcher.setScene(scene);
-
-
     }
 
     /**

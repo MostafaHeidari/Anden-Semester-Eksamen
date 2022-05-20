@@ -2,7 +2,6 @@ package GUI.Model;
 
 import BE.Case;
 import BE.CitizenInfo;
-import BE.Student;
 import BLL.CaseManger;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.FXCollections;
@@ -14,7 +13,7 @@ import java.sql.SQLException;
 public class CaseModel {
     private ObservableList<Case> caseList = FXCollections.observableArrayList();
 
-    private CaseManger caseManger;
+    private final CaseManger caseManger;
 
     private CitizenInfo citizenId;
 

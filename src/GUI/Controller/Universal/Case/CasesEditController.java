@@ -1,13 +1,9 @@
 package GUI.Controller.Universal.Case;
 
 import BE.Case;
-import BE.CitizenInfo;
-import BE.Student;
 import GUI.Model.CaseModel;
-import GUI.Model.StudentModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -79,6 +75,4 @@ public class CasesEditController {
     public void setController(CasesController casesController) {
         mainController = casesController;
     }
-
-
 }

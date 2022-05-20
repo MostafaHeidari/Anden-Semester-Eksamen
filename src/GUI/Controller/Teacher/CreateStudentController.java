@@ -1,7 +1,6 @@
 package GUI.Controller.Teacher;
 
 import BE.Student;
-import DAL.crypto.BCrypt;
 import GUI.Controller.Universal.NotFilledTxtFieldController;
 import GUI.Controller.Universal.SimpleDialogController;
 import GUI.Model.LoginModel;
@@ -120,13 +119,10 @@ public class CreateStudentController implements Initializable {
             String studentLastname = txtLastnameField.getText();
             String studentAccount = txtUserField.getText();
 
-
-
             /** Hash a password for the first time
             / Store this value in DB. Salt is included, so no need for separate salt column in DB
              */
             String studentUsername = txtUserField.getText();
-
 
             uploadLogin(studentUsername,passwordTxt.getText());
             uploadStudentInfo(studentName, studentLastname,studentAccount);
@@ -229,7 +225,6 @@ public class CreateStudentController implements Initializable {
 
         tvStudent.setItems(studentModel.getAllStudents());
     }
-
 
     /**
      * Goes to the TeacherKlasseAndStudents view

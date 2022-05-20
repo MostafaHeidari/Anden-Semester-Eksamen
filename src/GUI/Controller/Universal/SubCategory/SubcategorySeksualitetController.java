@@ -23,7 +23,7 @@ public class SubcategorySeksualitetController {
     private JFXButton btnBack;
     @FXML
     private JFXButton btnLogOut;
-
+    @FXML
     public TextArea txtSeksualitet;
 
    // this is instance variable is not used to now//
