@@ -33,7 +33,7 @@ public class SubcategorySeparationOfWasteSubstancesController {
     @FXML
     private TextArea txtStomachAndIntestines;
     @FXML
-    private TextArea txtUnderWeight;
+    private TextArea txtFluidFromSinks;
 
 
     // this is instance variable is not used to now//
@@ -108,10 +108,10 @@ public class SubcategorySeparationOfWasteSubstancesController {
         categoryModel.updateCategory(caseID,"Problems with stomach and intestines",txtStomachAndIntestines.getText());
 
 
-        if (categoryModel.readCategory(caseID,"Problems with under weight") == null){
-            categoryModel.createCategory(caseID,"Problems with under weight",txtUnderWeight.getText());
+        if (categoryModel.readCategory(caseID,"Problems with fluid from sinks") == null){
+            categoryModel.createCategory(caseID,"Problems with fluid from sinks",txtFluidFromSinks.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with under weight",txtUnderWeight.getText());
+        categoryModel.updateCategory(caseID,"Problems with fluid from sinks",txtFluidFromSinks.getText());
     }
 
     /**
@@ -125,7 +125,7 @@ public class SubcategorySeparationOfWasteSubstancesController {
         txtIUrinaryIncontinence.setText(categoryModel.readCategory(caseID,"Problems with urinary incontinence"));
         txtFecalIncontinence.setText(categoryModel.readCategory(caseID,"Problems with fecal incontinence"));
         txtStomachAndIntestines.setText(categoryModel.readCategory(caseID,"Problems with stomach and intestines"));
-        txtUnderWeight.setText(categoryModel.readCategory(caseID,"Problems with under weight"));
+        txtFluidFromSinks.setText(categoryModel.readCategory(caseID,"Problems with fluid from sinks"));
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {

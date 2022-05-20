@@ -159,46 +159,6 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <Label style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med vandladning">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="udskillelseafaffaldsstoffer_2" onMouseClicked="#udskillelseafaffaldsstoffer_2" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med urininkontinens">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="udskillelseafaffaldsstoffer_3" onMouseClicked="#udskillelseafaffaldsstoffer_3" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med afføringsindkontinens">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="udskillelseafaffaldsstoffer_4" onMouseClicked="#udskillelseafaffaldsstoffer_4" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med mave og tarm">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="udskillelseafaffaldsstoffer_5" onMouseClicked="#udskillelseafaffaldsstoffer_5" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med væske fra dræn">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
                            </children>
                         </VBox>
                      </children>
