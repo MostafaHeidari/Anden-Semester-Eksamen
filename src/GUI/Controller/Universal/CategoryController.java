@@ -42,6 +42,7 @@ public class CategoryController {
     private Text søvnoghvile_1;
     @FXML
     private Text udskillelseafaffaldsstoffer_1;
+    @FXML Text videnogudvikling_1;
 
 
     /**
@@ -358,7 +359,18 @@ public class CategoryController {
      * Subcategory changing text
      */
     public void videnogudvikling_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        shiftWindow("Problemer med hudkommelse");
+        Stage switcher = (Stage) videnogudvikling_1.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SubCategory/SubCategoriesKnowledgeAndDevelopment.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        SubcategoryKnowledgeAndDevelopmentController controller = loader.getController();
+        controller.setId(caseID);
+        controller.setSelectedCitizen(selectedCitizenInfo);
+
+
+        switcher.setTitle("Viden og udvikling");
+        switcher.setScene(scene);
     }
 
     public void videnogudvikling_2(MouseEvent mouseEvent) throws IOException, SQLException {
