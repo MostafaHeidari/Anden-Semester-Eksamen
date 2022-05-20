@@ -49,8 +49,8 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtOverWeight" layoutX="300.0" layoutY="409.0" prefHeight="88.0" prefWidth="501.0" />
-      <Label layoutX="13.0" layoutY="431.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med overvægt">
+      <TextArea fx:id="txtStomachAndIntestines" layoutX="300.0" layoutY="409.0" prefHeight="88.0" prefWidth="501.0" />
+      <Label layoutX="13.0" layoutY="431.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med mave og tarm">
          <font>
             <Font size="14.0" />
          </font>
