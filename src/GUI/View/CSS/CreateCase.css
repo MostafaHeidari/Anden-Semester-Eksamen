@@ -32,3 +32,15 @@
     -fx-text-fill: #2B2121;
     -fx-border-color: #15B559;
 }
+
+#backTo{
+    -fx-font-size: 12px;
+    -fx-text-fill: #001569;
+    -fx-border-color: #797862;
+}
+
+#backTo:hover{
+    -fx-font-size: 12px;
+    -fx-text-fill: #001569;
+    -fx-border-color: #797862;
+}
