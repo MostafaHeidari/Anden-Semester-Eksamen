@@ -43,13 +43,13 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtWeightChange" layoutX="300.0" layoutY="305.0" prefHeight="88.0" prefWidth="501.0" />
+      <TextArea fx:id="txtAbuseProblems" layoutX="300.0" layoutY="305.0" prefHeight="88.0" prefWidth="501.0" />
       <Label layoutX="12.0" layoutY="329.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med misbrug">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtOverWeight" layoutX="306.0" layoutY="435.0" prefHeight="88.0" prefWidth="501.0" />
+      <TextArea fx:id="txtMentalProblems" layoutX="306.0" layoutY="435.0" prefHeight="88.0" prefWidth="501.0" />
       <Label layoutX="7.0" layoutY="463.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Mentale problemer">
          <font>
             <Font size="14.0" />

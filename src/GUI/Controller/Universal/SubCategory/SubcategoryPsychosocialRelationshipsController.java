@@ -28,11 +28,9 @@ public class SubcategoryPsychosocialRelationshipsController {
     @FXML
     private TextArea txtEmotionelleProblems;
     @FXML
-    private TextArea txtWeightChange;
+    private TextArea txtAbuseProblems;
     @FXML
-    private TextArea txtOverWeight;
-    @FXML
-    private TextArea txtUnderWeight;
+    private TextArea txtMentalProblems;
 
 
     // this is instance variable is not used to now//
@@ -95,22 +93,16 @@ public class SubcategoryPsychosocialRelationshipsController {
         categoryModel.updateCategory(caseID,"Problems with Emotions",txtEmotionelleProblems.getText());
 
 
-        if (categoryModel.readCategory(caseID,"Inappropriate weight change") == null){
-            categoryModel.createCategory(caseID,"Inappropriate weight change",txtWeightChange.getText());
+        if (categoryModel.readCategory(caseID,"Problems with abuse") == null){
+            categoryModel.createCategory(caseID,"Problems with abuse",txtAbuseProblems.getText());
         }
-        categoryModel.updateCategory(caseID,"Inappropriate weight change",txtWeightChange.getText());
+        categoryModel.updateCategory(caseID,"Problems with abuse",txtAbuseProblems.getText());
 
 
-        if (categoryModel.readCategory(caseID,"Problems with over weight") == null){
-            categoryModel.createCategory(caseID,"Problems with over weight",txtOverWeight.getText());
+        if (categoryModel.readCategory(caseID,"Problems with mental") == null){
+            categoryModel.createCategory(caseID,"Problems with mental",txtMentalProblems.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with over weight",txtOverWeight.getText());
-
-
-        if (categoryModel.readCategory(caseID,"Problems with under weight") == null){
-            categoryModel.createCategory(caseID,"Problems with under weight",txtUnderWeight.getText());
-        }
-        categoryModel.updateCategory(caseID,"Problems with under weight",txtUnderWeight.getText());
+        categoryModel.updateCategory(caseID,"Problems with mental",txtMentalProblems.getText());
     }
 
     /**
@@ -122,9 +114,8 @@ public class SubcategoryPsychosocialRelationshipsController {
         this.caseID = caseID;
         txtSocialRealitionship.setText(categoryModel.readCategory(caseID,"Problems with Social Relationship"));
         txtEmotionelleProblems.setText(categoryModel.readCategory(caseID,"Problems with Emotions"));
-        txtWeightChange.setText(categoryModel.readCategory(caseID,"Inappropriate weight change"));
-        txtOverWeight.setText(categoryModel.readCategory(caseID,"Problems with over weight"));
-        txtUnderWeight.setText(categoryModel.readCategory(caseID,"Problems with under weight"));
+        txtAbuseProblems.setText(categoryModel.readCategory(caseID,"Problems with abuse"));
+        txtMentalProblems.setText(categoryModel.readCategory(caseID,"Problems with mental"));
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {
