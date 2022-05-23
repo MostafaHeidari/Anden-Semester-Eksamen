@@ -211,38 +211,6 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <Label style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med socialt samvær">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="psykosocialeforhold_2" onMouseClicked="#psykosocialeforhold_2" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Emotionelle problemer">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="psykosocialeforhold_3" onMouseClicked="#psykosocialeforhold_3" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med misbrug">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="psykosocialeforhold_4" onMouseClicked="#psykosocialeforhold_4" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Mentale problemer">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" />
-                                 </VBox.margin>
-                              </Label>
                            </children>
                         </VBox>
                      </children>
@@ -251,7 +219,7 @@
                      <children>
                         <VBox maxHeight="539.0" minHeight="112.0" prefHeight="358.0" prefWidth="378.0" styleClass="Category">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Smerter og sanseindtryk" underline="true">
+                              <Text fx:id="smerterogsanseindtryk_1" onMouseClicked="#smerterogsanseindtryk_1"  strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Smerter og sanseindtryk" underline="true">
                                  <font>
                                     <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
@@ -259,7 +227,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <Label fx:id="smerterogsanseindtryk_1" onMouseClicked="#smerterogsanseindtryk_1" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Akutte smerter">
+                              <Label style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Akutte smerter">
                                  <font>
                                     <Font size="14.0" />
                                  </font>

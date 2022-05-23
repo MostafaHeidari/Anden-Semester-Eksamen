@@ -48,6 +48,8 @@ public class CategoryController {
     private Text kommunikation_1;
     @FXML
     private Text psykosocialeforhold_1;
+    @FXML
+    private Text smerterogsanseindtryk_1;
 
 
     /**
@@ -283,7 +285,18 @@ public class CategoryController {
      * Subcategory changing text
      */
     public void smerterogsanseindtryk_1(MouseEvent mouseEvent) throws IOException, SQLException {
-        shiftWindow("Akutte smerter");
+        Stage switcher = (Stage) smerterogsanseindtryk_1.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/SubCategory/SubCategoriesPainAndSensoryImpressions.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        SubcategoryPainAndSensoryImpressionsController controller = loader.getController();
+        controller.setId(caseID);
+        controller.setSelectedCitizen(selectedCitizenInfo);
+
+
+        switcher.setTitle("Smerte og Sanseindtryk");
+        switcher.setScene(scene);
     }
 
     /**
