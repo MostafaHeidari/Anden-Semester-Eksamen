@@ -6,6 +6,8 @@ import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FunctionalAbilityDAO {
 
@@ -21,27 +23,51 @@ public class FunctionalAbilityDAO {
 
     /**
      * this method gets a uploadCaseID from the database
-     * @param condition
-     * @param futureCondition
+     * @param tilstand
+     * @param fremtidigTilstand
+     * @param borgerTilstand
      * @return functionalAbilityCord
      * @throws SQLServerException
      */
-    public FunctionalAbility uploadCaseID(String condition, String futureCondition) throws SQLException {
+    public FunctionalAbility uploadCaseID(int CaseID, String tilstand, String fremtidigTilstand, String borgerTilstand) throws SQLException {
         Connection connection = DC.getConnection();
 
-        String sql = "INSERT INTO FunctionalAbility (condition, futureCondition) VALUES (?,?);";
+        String sql = "INSERT INTO FunctionalAbility (CaseID, tilstand, fremtidigTilstand, borgerTilstand) VALUES (?,?,?,?);";
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-        ps.setString(1, condition);
-        ps.setString(2, futureCondition);
-        int affectedRows = ps.executeUpdate();
-        if (affectedRows == 1) {
-            ResultSet rs = ps.getGeneratedKeys();
-            if (rs.next()) {
-                int CaseID = rs.getInt(1);
-                FunctionalAbility functionalAbilityCord = new FunctionalAbility(CaseID, condition, futureCondition);
-                return functionalAbilityCord;
-            }
+        ps.setInt(1, CaseID);
+        ps.setString(2, tilstand);
+        ps.setString(3, fremtidigTilstand);
+        ps.setString(4, borgerTilstand);
+        ps.execute();
+        ResultSet resultSet = ps.getGeneratedKeys();
+        int id = 0;
+        if (resultSet.next()) {
+            id = resultSet.getInt(1);
         }
-        return null;
+        FunctionalAbility functionalAbilityCord = new FunctionalAbility(CaseID, tilstand, fremtidigTilstand, borgerTilstand);
+        return functionalAbilityCord;
+
     }
+/*
+    public List<FunctionalAbility> getAllFuncionalAbilities() throws SQLException {
+        Connection con = DC.getConnection();
+
+        List<FunctionalAbility> allFuncionalAbilities = new ArrayList<>();
+
+
+        String sql = "SELECT * FROM FunctionalAbility";
+        Statement statement = con.createStatement();
+        ResultSet rs = statement.executeQuery(sql);
+        while (rs.next()) {
+            FunctionalAbility functionalAbilityCord = new FunctionalAbility(
+                    rs.getInt("CaseID"),
+                    rs.getString("tilstand"),
+                    rs.getString("fremtidigTilstand"),
+                    rs.getString("borgerTilstand"));
+            allFuncionalAbilities.add(functionalAbilityCord);
+        }
+        return allFuncionalAbilities;
+    }
+
+ */
 }

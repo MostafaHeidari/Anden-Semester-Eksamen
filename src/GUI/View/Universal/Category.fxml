@@ -2,7 +2,6 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -21,7 +20,7 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <HBox alignment="CENTER" layoutX="175.0" layoutY="50.0" prefHeight="765.0">
+      <HBox alignment="CENTER" layoutX="168.0" layoutY="104.0" prefHeight="635.0" prefWidth="974.0">
          <children>
             <VBox alignment="CENTER" prefHeight="520.0" prefWidth="324.0" styleClass="Category">
                <children>
@@ -44,7 +43,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="109.0" prefWidth="322.0" styleClass="Category">
+                  <HBox prefHeight="188.0" prefWidth="322.0" styleClass="Category">
                      <children>
                         <VBox minHeight="90.0" prefHeight="90.0" prefWidth="320.0" styleClass="Category">
                            <children>
@@ -60,7 +59,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="96.0" prefWidth="322.0" styleClass="Category">
+                  <HBox prefHeight="206.0" prefWidth="322.0" styleClass="Category">
                      <children>
                         <VBox prefHeight="170.0" prefWidth="320.0" styleClass="Category">
                            <children>
@@ -79,7 +78,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="403.0" prefWidth="322.0">
+                  <HBox prefHeight="191.0" prefWidth="322.0">
                      <children>
                         <VBox prefHeight="346.0" prefWidth="320.0" styleClass="Category">
                            <children>
@@ -99,7 +98,7 @@
             </VBox>
             <VBox prefHeight="520.0" prefWidth="324.0" styleClass="Category">
                <children>
-                  <HBox prefHeight="130.0" prefWidth="322.0">
+                  <HBox prefHeight="174.0" prefWidth="322.0">
                      <children>
                         <VBox maxHeight="152.0" minHeight="121.0" prefHeight="152.0" prefWidth="324.0" styleClass="Category">
                            <children>
@@ -115,7 +114,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox prefHeight="219.0" prefWidth="322.0">
                      <children>
                         <VBox prefHeight="256.0" prefWidth="329.0" styleClass="Category">
                            <children>
@@ -131,7 +130,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="121.0" prefWidth="322.0">
+                  <HBox prefHeight="158.0" prefWidth="322.0">
                      <children>
                         <VBox maxHeight="134.0" minHeight="75.0" minWidth="120.0" prefHeight="107.0" prefWidth="320.0" styleClass="Category">
                            <children>
@@ -147,7 +146,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox prefHeight="165.0" prefWidth="322.0">
                      <children>
                         <VBox prefHeight="269.0" prefWidth="324.0" styleClass="Category">
                            <children>
@@ -199,7 +198,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="182.0" prefWidth="322.0" styleClass="Category">
+                  <HBox prefHeight="176.0" prefWidth="322.0" styleClass="Category">
                      <children>
                         <VBox prefHeight="186.0" prefWidth="352.0" styleClass="Category">
                            <children>
@@ -215,11 +214,11 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="397.0" prefWidth="322.0">
+                  <HBox prefHeight="197.0" prefWidth="322.0">
                      <children>
                         <VBox maxHeight="539.0" minHeight="112.0" prefHeight="358.0" prefWidth="378.0" styleClass="Category">
                            <children>
-                              <Text fx:id="smerterogsanseindtryk_1" onMouseClicked="#smerterogsanseindtryk_1"  strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Smerter og sanseindtryk" underline="true">
+                              <Text fx:id="smerterogsanseindtryk_1" onMouseClicked="#smerterogsanseindtryk_1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Smerter og sanseindtryk" underline="true">
                                  <font>
                                     <Font name="Arial Narrow Bold Italic" size="20.0" />
                                  </font>
@@ -227,70 +226,6 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <Label style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Akutte smerter">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="smerterogsanseindtryk_2" onMouseClicked="#smerterogsanseindtryk_2" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Periodevise smerter">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="smerterogsanseindtryk_3" onMouseClicked="#smerterogsanseindtryk_3" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Kroniske smerter">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="smerterogsanseindtryk_4" onMouseClicked="#smerterogsanseindtryk_4" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med synssans">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="smerterogsanseindtryk_5" onMouseClicked="#smerterogsanseindtryk_5" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med lugtesans">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="smerterogsanseindtryk_6" onMouseClicked="#smerterogsanseindtryk_6" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med hørelse">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="smerterogsanseindtryk_7" onMouseClicked="#smerterogsanseindtryk_7" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med smagssans">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="smerterogsanseindtryk_8" onMouseClicked="#smerterogsanseindtryk_8" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med følesans">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </Label>
                            </children>
                         </VBox>
                      </children>

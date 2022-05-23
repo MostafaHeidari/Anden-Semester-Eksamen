@@ -3,16 +3,21 @@ package BE;
 public class FunctionalAbility {
     private String condition;
     private String futureCondition;
+    private String borgerTilstand;
+    private int caseID;
 
     /**
      * @param caseID
      * @param condition
      * @param futureCondition
+     * @param borgerTilstand
      * Constructor with FunctionalAbility, caseID,  condition, futureCondition
      */
-    public FunctionalAbility(int caseID, String condition, String futureCondition) {
+    public FunctionalAbility(int caseID, String condition, String futureCondition, String borgerTilstand) {
         this.condition = condition;
         this.futureCondition = futureCondition;
+        this.borgerTilstand = borgerTilstand;
+        this.caseID = caseID;
     }
 
     /**
@@ -32,6 +37,14 @@ public class FunctionalAbility {
     }
 
     /**
+     * Gets the BorgerTilstand
+     * @return BorgerTilstand
+     */
+    public String getBorgerTilstand() {
+        return borgerTilstand;
+    }
+
+    /**
      * Sets the condition
      * @return condition
      */
@@ -46,4 +59,16 @@ public class FunctionalAbility {
     public void setFutureCondition(String futureCondition) {
         this.futureCondition = futureCondition;
     }
+
+    /**
+     * Sets the borgerTilstand
+     * @return borgerTilstand
+     */
+    public void setBorgerTilstand(String borgerTilstand) {
+        this.borgerTilstand = borgerTilstand;
+    }
+
+    public int getCaseID() { return caseID; }
+
+    public void setCaseID(int caseID) { this.caseID = caseID; }
 }

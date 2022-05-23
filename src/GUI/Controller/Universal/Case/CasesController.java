@@ -119,7 +119,17 @@ public class CasesController implements Initializable {
     public void btnBackGroups(ActionEvent actionEvent) {
     }
 
-    public void funktionsevneBtn(ActionEvent event) {
+    public void funktionsevneBtn(ActionEvent event) throws IOException {
+        if (tvCase.getSelectionModel().getSelectedItem() != null) {
+            selectedCase = (Case) tvCase.getSelectionModel().getSelectedItem();
+            int tempCaseID = selectedCase.getCaseId();
+            Stage switcher = (Stage) Category.getScene().getWindow();
+            switcher.setUserData(tempCaseID);
+            Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/FunctionalAbility.fxml"));
+            Scene scene = new Scene(root);
+            switcher.setTitle("FunktionsEvne");
+            switcher.setScene(scene);
+        }
     }
 
     public void BtnCategory(ActionEvent actionEvent) throws IOException {

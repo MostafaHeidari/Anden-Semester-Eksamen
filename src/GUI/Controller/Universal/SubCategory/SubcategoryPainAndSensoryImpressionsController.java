@@ -24,23 +24,21 @@ public class SubcategoryPainAndSensoryImpressionsController {
     @FXML
     private JFXButton btnLogOut;
     @FXML
-    private TextArea txtsurgicalWound;
+    private TextArea txtAcutePain;
     @FXML
-    private TextArea txtdiabeticWound;
+    private TextArea txtPeriodePain;
     @FXML
-    private TextArea txtCancerWound;
+    private TextArea txtChronicPain;
     @FXML
-    private TextArea txtPressureWound;
+    private TextArea txtEyeProblem;
     @FXML
-    private TextArea txtArtilleryWound;
+    private TextArea txtSmellProblems;
     @FXML
-    private TextArea txtVenousWound;
+    private TextArea txthearProblems;
     @FXML
-    private TextArea txtMixedWound;
+    private TextArea txtTasteProblems;
     @FXML
-    private TextArea txtTraumaWound;
-    @FXML
-    private TextArea txtOtherProblems;
+    private TextArea txtFeelingProblems;
 
 
     // this is instance variable is not used to now//
@@ -91,58 +89,52 @@ public class SubcategoryPainAndSensoryImpressionsController {
      * @throws SQLException
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
-        if (categoryModel.readCategory(caseID,"Problems with surgical wound") == null){
-            categoryModel.createCategory(caseID,"Problems with surgical wound",txtsurgicalWound.getText());
+        if (categoryModel.readCategory(caseID,"Acute pain") == null){
+            categoryModel.createCategory(caseID,"Acute pain",txtAcutePain.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with surgical wound",txtsurgicalWound.getText());
+        categoryModel.updateCategory(caseID,"Acute pain",txtAcutePain.getText());
 
 
-        if (categoryModel.readCategory(caseID,"Problems with diabetic wound") == null){
-            categoryModel.createCategory(caseID,"Problems with diabetic wound",txtdiabeticWound.getText());
+        if (categoryModel.readCategory(caseID,"Periode pain") == null){
+            categoryModel.createCategory(caseID,"Periode pain",txtPeriodePain.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with diabetic wound",txtdiabeticWound.getText());
+        categoryModel.updateCategory(caseID,"Periode pain",txtPeriodePain.getText());
 
 
-        if (categoryModel.readCategory(caseID,"Problems with cancer wound") == null){
-            categoryModel.createCategory(caseID,"Problems with cancer wound",txtCancerWound.getText());
+        if (categoryModel.readCategory(caseID,"Chronic pain") == null){
+            categoryModel.createCategory(caseID,"Chronic pain",txtChronicPain.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with cancer wound",txtCancerWound.getText());
+        categoryModel.updateCategory(caseID,"Chronic pain",txtChronicPain.getText());
 
 
-        if (categoryModel.readCategory(caseID,"Problems with pressure wound") == null){
-            categoryModel.createCategory(caseID,"Problems with pressure wound",txtPressureWound.getText());
+        if (categoryModel.readCategory(caseID,"Eye problem") == null){
+            categoryModel.createCategory(caseID,"Eye problem",txtEyeProblem.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with pressure wound",txtPressureWound.getText());
+        categoryModel.updateCategory(caseID,"Eye problem",txtEyeProblem.getText());
 
 
-        if (categoryModel.readCategory(caseID,"Problems with artillery wound") == null){
-            categoryModel.createCategory(caseID,"Problems with artillery wound",txtArtilleryWound.getText());
+        if (categoryModel.readCategory(caseID,"Smell problems") == null){
+            categoryModel.createCategory(caseID,"Smell problems",txtSmellProblems.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with artillery wound",txtArtilleryWound.getText());
+        categoryModel.updateCategory(caseID,"Smell problems",txtSmellProblems.getText());
 
 
-        if (categoryModel.readCategory(caseID,"Problems with venous wound") == null){
-            categoryModel.createCategory(caseID,"Problems with venous wound",txtVenousWound.getText());
+        if (categoryModel.readCategory(caseID,"Hear problems") == null){
+            categoryModel.createCategory(caseID,"Hear problems",txthearProblems.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with venous wound",txtVenousWound.getText());
+        categoryModel.updateCategory(caseID,"Hear problems",txthearProblems.getText());
 
 
-        if (categoryModel.readCategory(caseID,"Problems with mixed wound") == null){
-            categoryModel.createCategory(caseID,"Problems with mixed wound",txtMixedWound.getText());
+        if (categoryModel.readCategory(caseID,"Taste problems") == null){
+            categoryModel.createCategory(caseID,"Taste problems",txtTasteProblems.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with mixed wound",txtMixedWound.getText());
+        categoryModel.updateCategory(caseID,"Taste problems",txtTasteProblems.getText());
 
 
-        if (categoryModel.readCategory(caseID,"Problems with trauma wound") == null){
-            categoryModel.createCategory(caseID,"Problems with trauma wound",txtTraumaWound.getText());
+        if (categoryModel.readCategory(caseID,"Feeling problems") == null){
+            categoryModel.createCategory(caseID,"Feeling problems",txtFeelingProblems.getText());
         }
-        categoryModel.updateCategory(caseID,"Problems with trauma wound",txtTraumaWound.getText());
-
-
-        if (categoryModel.readCategory(caseID,"Other problems") == null){
-            categoryModel.createCategory(caseID,"Other problems",txtOtherProblems.getText());
-        }
-        categoryModel.updateCategory(caseID,"Other problems",txtOtherProblems.getText());
+        categoryModel.updateCategory(caseID,"PFeeling problems",txtFeelingProblems.getText());
     }
 
     /**
@@ -152,15 +144,14 @@ public class SubcategoryPainAndSensoryImpressionsController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtsurgicalWound.setText(categoryModel.readCategory(caseID,"Problems with surgical wound"));
-        txtdiabeticWound.setText(categoryModel.readCategory(caseID,"Problems with diabetic wound"));
-        txtCancerWound.setText(categoryModel.readCategory(caseID,"Problems with cancer wound"));
-        txtPressureWound.setText(categoryModel.readCategory(caseID,"Problems with pressure wound"));
-        txtArtilleryWound.setText(categoryModel.readCategory(caseID,"Problems with artillery wound"));
-        txtVenousWound.setText(categoryModel.readCategory(caseID,"Problems with venous wound"));
-        txtMixedWound.setText(categoryModel.readCategory(caseID,"Problems with mixed wound"));
-        txtTraumaWound.setText(categoryModel.readCategory(caseID,"Problems with trauma wound"));
-        txtOtherProblems.setText(categoryModel.readCategory(caseID,"Other problems"));
+        txtAcutePain.setText(categoryModel.readCategory(caseID,"Acute pain"));
+        txtPeriodePain.setText(categoryModel.readCategory(caseID,"Periode pain"));
+        txtChronicPain.setText(categoryModel.readCategory(caseID,"Chronic Pain"));
+        txtEyeProblem.setText(categoryModel.readCategory(caseID,"Eye problem"));
+        txtSmellProblems.setText(categoryModel.readCategory(caseID,"Smell problems"));
+        txthearProblems.setText(categoryModel.readCategory(caseID,"Hear problems"));
+        txtTasteProblems.setText(categoryModel.readCategory(caseID,"Problems with mixed wound"));
+        txtFeelingProblems.setText(categoryModel.readCategory(caseID,"Feeling problems"));
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {

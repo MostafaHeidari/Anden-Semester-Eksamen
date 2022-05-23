@@ -1,5 +1,6 @@
 package GUI.Controller.Universal;
 
+import BE.FunctionalAbility;
 import DAL.FunctionalAbilityDAO;
 import GUI.Model.FunctionalAbilityModel;
 import javafx.event.ActionEvent;
@@ -9,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.control.CheckBox;
 import javafx.scene.Node;
@@ -16,6 +18,7 @@ import javafx.scene.Node;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class FunctionalAbilityController implements Initializable {
@@ -23,6 +26,8 @@ public class FunctionalAbilityController implements Initializable {
     public FunctionalAbilityModel functionalAbilityModel;
 
     private final FunctionalAbilityDAO functionalAbilityDAO;
+
+    private int caseID;
 
     @FXML
     private Button Button;
@@ -56,6 +61,21 @@ public class FunctionalAbilityController implements Initializable {
     private CheckBox cb26;
 
     private CheckBox[] row2;
+
+    @FXML
+    private CheckBox cb31;
+    @FXML
+    private CheckBox cb32;
+    @FXML
+    private CheckBox cb33;
+    @FXML
+    private CheckBox cb34;
+    @FXML
+    private CheckBox cb35;
+    @FXML
+    private CheckBox cb36;
+
+    private CheckBox[] row3;
 
 
     private String[] stringResult;
@@ -148,22 +168,28 @@ public class FunctionalAbilityController implements Initializable {
      * Borgerens mening om tilstand knapper
      * @param actionEvent
      */
-    public void checked31(ActionEvent actionEvent) { //TODO
+    public void checked31(ActionEvent actionEvent) {
+        deselectOthers(actionEvent, row3);
     }
 
     public void checked32(ActionEvent actionEvent) {
+        deselectOthers(actionEvent, row3);
     }
 
     public void checked33(ActionEvent actionEvent) {
+        deselectOthers(actionEvent, row3);
     }
 
     public void checked34(ActionEvent actionEvent) {
+        deselectOthers(actionEvent, row3);
     }
 
     public void checked35(ActionEvent actionEvent) {
+        deselectOthers(actionEvent, row3);
     }
 
     public void checked36(ActionEvent actionEvent) {
+        deselectOthers(actionEvent, row3);
     }
 
     /**
@@ -176,6 +202,7 @@ public class FunctionalAbilityController implements Initializable {
 
 //switches scene when you press save
         Stage switcher = (Stage) Button.getScene().getWindow();
+        System.out.println(caseID);
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU System");
@@ -197,10 +224,15 @@ public class FunctionalAbilityController implements Initializable {
             }
         }
 
+        int row3int = 0;
+        for(int i = 0; i < row3.length; i++){
+            if(row3[i].isSelected()){
+                row3int = i;
+            }
+        }
+
         //uploads the selected checkbox to database with their respectable names, which you get from the stringResult array
-        functionalAbilityDAO.uploadCaseID(stringResult[row1int], stringResult[row2int]);
-        //TODO
-        //save choice to database
+        functionalAbilityDAO.uploadCaseID(caseID, stringResult[row1int], stringResult[row2int], stringResult[row3int]);
     }
 
     /**
@@ -210,10 +242,27 @@ public class FunctionalAbilityController implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+       //Stage switcher = (Stage) Button.getScene().getWindow();
+        //caseID = Integer.parseInt(switcher.getUserData().toString());
         //array of checkboxes in row 1 and 2
         row1 = new CheckBox[]{cb1, cb2, cb3, cb4, cb5, cb6};
         row2 = new CheckBox[]{cb21, cb22, cb23, cb24, cb25, cb26};
+        row3 = new CheckBox[]{cb31, cb32, cb33, cb34, cb35, cb36};
         //array of names for the checkboxes
         stringResult = new String[]{"Ingen/ubetydelige begrænsninger", "Lette begrænsninger", "Moderate begrænsninger", "Svære begrænsninger", "Totale begrænsninger", "Ikke relevant"};
+
+        /*
+        try{
+            List<FunctionalAbility> allFuncionalAbilities = functionalAbilityDAO.getAllFuncionalAbilities();
+            for (int i = 0; i < allFuncionalAbilities.size(); i++){
+                if (allFuncionalAbilities.get(i).getCaseID() == caseID){
+                    System.out.println(allFuncionalAbilities.get(i).getcondition());
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        */
     }
+
 }
