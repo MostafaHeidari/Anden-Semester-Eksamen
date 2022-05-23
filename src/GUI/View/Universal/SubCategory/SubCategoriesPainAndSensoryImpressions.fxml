@@ -60,29 +60,23 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="700.0" layoutY="555.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Andre problemer med hud og slimhinder">
+      <TextArea fx:id="txthearProblems" layoutX="1000.0" layoutY="78.0" prefHeight="92.0" prefWidth="399.0" />
+      <Label layoutX="700.0" layoutY="265.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med smagssans">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtVenousWound" layoutX="1000.0" layoutY="78.0" prefHeight="92.0" prefWidth="399.0" />
-      <Label layoutX="700.0" layoutY="265.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med blandings sår">
+      <Label layoutX="700.0" layoutY="414.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med følesans">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="700.0" layoutY="414.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med traume sår">
+      <Label layoutX="700.0" layoutY="109.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med hørelse">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="700.0" layoutY="109.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med venøst sår">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <TextArea fx:id="txtMixedWound" layoutX="1000.0" layoutY="238.0" prefHeight="92.0" prefWidth="396.0" />
-      <TextArea fx:id="txtTraumaWound" layoutX="1000.0" layoutY="395.0" prefHeight="92.0" prefWidth="394.0" />
-      <TextArea fx:id="txtOtherProblems" layoutX="1000.0" layoutY="527.0" prefHeight="92.0" prefWidth="396.0" />
+      <TextArea fx:id="txtTasteProblems" layoutX="1000.0" layoutY="238.0" prefHeight="92.0" prefWidth="396.0" />
+      <TextArea fx:id="txtFeelingProblems" layoutX="1000.0" layoutY="395.0" prefHeight="92.0" prefWidth="394.0" />
    </children>
 </AnchorPane>
