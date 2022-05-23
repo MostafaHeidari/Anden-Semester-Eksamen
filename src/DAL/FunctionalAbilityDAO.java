@@ -48,7 +48,7 @@ public class FunctionalAbilityDAO {
         return functionalAbilityCord;
 
     }
-/*
+
     public List<FunctionalAbility> getAllFuncionalAbilities() throws SQLException {
         Connection con = DC.getConnection();
 
@@ -69,5 +69,5 @@ public class FunctionalAbilityDAO {
         return allFuncionalAbilities;
     }
 
- */
+
 }

@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.scene.control.CheckBox;
 import javafx.scene.Node;
@@ -30,7 +31,10 @@ public class FunctionalAbilityController implements Initializable {
     private int caseID;
 
     @FXML
+    private AnchorPane Pane;
+    @FXML
     private Button Button;
+
     @FXML
     private CheckBox cb1;
     @FXML
@@ -235,23 +239,13 @@ public class FunctionalAbilityController implements Initializable {
         functionalAbilityDAO.uploadCaseID(caseID, stringResult[row1int], stringResult[row2int], stringResult[row3int]);
     }
 
-    /**
-     * initialize
-     * @param location
-     * @param resources
-     */
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-       //Stage switcher = (Stage) Button.getScene().getWindow();
-        //caseID = Integer.parseInt(switcher.getUserData().toString());
-        //array of checkboxes in row 1 and 2
-        row1 = new CheckBox[]{cb1, cb2, cb3, cb4, cb5, cb6};
-        row2 = new CheckBox[]{cb21, cb22, cb23, cb24, cb25, cb26};
-        row3 = new CheckBox[]{cb31, cb32, cb33, cb34, cb35, cb36};
-        //array of names for the checkboxes
-        stringResult = new String[]{"Ingen/ubetydelige begrænsninger", "Lette begrænsninger", "Moderate begrænsninger", "Svære begrænsninger", "Totale begrænsninger", "Ikke relevant"};
+    public void rememberChoice() throws IOException {
+        FXMLLoader switcher = new FXMLLoader(getClass().getResource("/GUI/View/Universal/FunctionalAbility.fxml"));
+        Parent root = (Parent)switcher.load();
+        FunctionalAbilityController controller = (FunctionalAbilityController)switcher.getController();
+        caseID = Integer.parseInt(switcher.getController().toString());
+        System.out.println(caseID = Integer.parseInt(switcher.getController().toString()));
 
-        /*
         try{
             List<FunctionalAbility> allFuncionalAbilities = functionalAbilityDAO.getAllFuncionalAbilities();
             for (int i = 0; i < allFuncionalAbilities.size(); i++){
@@ -262,7 +256,24 @@ public class FunctionalAbilityController implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        */
+    }
+
+
+    /**
+     * initialize
+     * @param location
+     * @param resources
+     */
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        //array of checkboxes in row 1 and 2
+        row1 = new CheckBox[]{cb1, cb2, cb3, cb4, cb5, cb6};
+        row2 = new CheckBox[]{cb21, cb22, cb23, cb24, cb25, cb26};
+        row3 = new CheckBox[]{cb31, cb32, cb33, cb34, cb35, cb36};
+
+        //array of names for the checkboxes
+        stringResult = new String[]{"Ingen/ubetydelige begrænsninger", "Lette begrænsninger", "Moderate begrænsninger", "Svære begrænsninger", "Totale begrænsninger", "Ikke relevant"};
+
     }
 
 }
