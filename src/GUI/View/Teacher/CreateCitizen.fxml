@@ -55,7 +55,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </JFXButton>
-                  <Label layoutX="18.0" layoutY="7.0" text="Opret&#10;af Citizen" textAlignment="CENTER" textFill="WHITE">
+                  <Label layoutX="18.0" layoutY="7.0" text="Opret&#10;af Citizen" textAlignment="CENTER" textFill="#001569">
                      <font>
                         <Font size="32.0" />
                      </font>
@@ -97,7 +97,7 @@
                   </FontAwesomeIconView>
                </children>
             </Pane>
-            <Line endX="148.0" layoutX="34.0" layoutY="100.0" startX="-14.899984359741211" startY="1.52587890625E-5" stroke="WHITE" />
+            <Line endX="162.8000030517578" endY="2.288818359375E-5" layoutX="34.0" layoutY="100.0" startX="-34.0000114440918" startY="2.288818359375E-5" stroke="WHITE" />
             <Label layoutX="289.0" layoutY="136.0" text="Navn" />
             <Label layoutX="265.0" layoutY="183.0" text="Efternavn" />
             <Label layoutX="243.0" layoutY="232.0" text="CPR-Nummer" />

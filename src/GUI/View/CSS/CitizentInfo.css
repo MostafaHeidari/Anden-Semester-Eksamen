@@ -8,7 +8,7 @@
 
 #txtFieldCitizenFirstName,#txtFieldCitizenLastName,#txtFieldCitizenCPR,#txtAreaCitizenGeneralInfo,#txtFieldCitizenAddresse{
     -fx-text-fill: #2B2121;
-    -fx-border-color: #15B559;
+    -fx-border-color: #001569;
 }
 
 .text-area:focused{

@@ -70,7 +70,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <Text fill="WHITE" layoutX="23.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Redigering&#10;af Eleven" textAlignment="CENTER">
+            <Text fill="#001569" layoutX="23.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Redigering&#10;af Eleven" textAlignment="CENTER">
                <font>
                   <Font size="32.0" />
                </font>
@@ -80,7 +80,7 @@
       <Label alignment="CENTER" layoutX="234.0" layoutY="188.0" prefHeight="18.0" prefWidth="54.0" text="Navn:" />
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="218.0" layoutY="249.0" prefHeight="18.0" prefWidth="63.0" text="Efternavn:" />
       <Label alignment="CENTER" layoutX="209.0" layoutY="312.0" prefHeight="18.0" prefWidth="70.0" text="BrugerNavn:" />
-      <Line endX="148.0" layoutX="34.0" layoutY="100.0" startX="-14.899984359741211" startY="1.52587890625E-5" stroke="WHITE" />
+      <Line endX="165.19998168945312" endY="3.0517578125E-5" layoutX="34.0" layoutY="100.0" startX="-34.00000762939453" startY="3.0517578125E-5" stroke="WHITE" />
       <Label layoutX="327.0" layoutY="126.0" text="Indtast elevoplysninger" textFill="#2b2121">
          <font>
             <Font size="14.0" />

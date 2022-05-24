@@ -133,7 +133,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <Text fill="WHITE" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Oprettelse&#10;af Elev" textAlignment="CENTER" wrappingWidth="199.0">
+            <Text fill="#001569" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Oprettelse&#10;af Elev" textAlignment="CENTER" wrappingWidth="199.0">
                <font>
                   <Font size="32.0" />
                </font>
@@ -155,6 +155,6 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <Line endX="148.0" layoutX="34.0" layoutY="100.0" startX="-14.899984359741211" startY="1.52587890625E-5" stroke="WHITE" />
+      <Line endX="164.99998474121094" endY="-0.40624237060546875" layoutX="34.0" layoutY="101.0" startX="-34.0000114440918" startY="-0.40624237060546875" stroke="WHITE" />
    </children>
 </AnchorPane>
