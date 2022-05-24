@@ -40,7 +40,7 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <Text layoutX="226.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LastName:">
+      <Text layoutX="226.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LastName:">
          <font>
             <Font size="16.0" />
          </font>
@@ -49,7 +49,7 @@
          <font>
             <Font size="16.0" />
          </font></Text>
-      <Text fx:id="lastNameCitizenTxt" layoutX="309.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <Text fx:id="lastNameCitizenTxt" layoutX="309.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
          <font>
             <Font size="16.0" />
          </font></Text>
@@ -78,15 +78,15 @@
             </FontAwesomeIconView>
          </children>
       </Pane>
-      <JFXButton fx:id="deleteCase" layoutX="357.0" layoutY="607.0" onAction="#deleteCaseBtn" prefHeight="29.0" prefWidth="100.0" text="Slet Case" />
-   <JFXButton fx:id="funktionsevne" layoutX="224.0" layoutY="170.0" onAction="#funktionsevneBtn" prefHeight="29.0" prefWidth="100.0" style="-fx-background-color: #15B559;" text="Funktionsevne" textFill="WHITE" />
-   <JFXButton fx:id="funktionsevne1" layoutX="224.0" layoutY="134.0" onAction="#funktionsevneBtn" prefHeight="29.0" prefWidth="100.0" style="-fx-background-color: #15B559;" text="Omgivelse Info" textFill="WHITE" />
+      <JFXButton fx:id="deleteCase" layoutX="347.0" layoutY="607.0" onAction="#deleteCaseBtn" prefHeight="29.0" prefWidth="110.0" text="Slet Case" />
+   <JFXButton fx:id="funktionsevne" layoutX="213.0" layoutY="562.0" onAction="#funktionsevneBtn" prefHeight="29.0" prefWidth="110.0" style="-fx-background-color: #15B559;" text="Funktionsevne" textFill="WHITE" />
+   <JFXButton fx:id="funktionsevne1" layoutX="213.0" layoutY="607.0" onAction="#funktionsevneBtn" prefHeight="29.0" prefWidth="110.0" style="-fx-background-color: #15B559;" text="Omgivelse Info" textFill="WHITE" />
    <Text layoutX="225.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPR-nummer:">
       <font>
          <Font size="16.0" />
       </font>
    </Text>
-   <Text layoutX="223.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="General Borger Info:">
+   <Text layoutX="224.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="General Borger Info:">
       <font>
          <Font size="16.0" />
       </font>
@@ -96,13 +96,13 @@
          <Font size="16.0" />
       </font>
    </Text>
-   <Text fx:id="GenInfoTxt1" layoutX="223.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+   <Text fx:id="GenInfoTxt1" layoutX="224.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
       <font>
          <Font size="16.0" />
       </font>
    </Text>
-   <JFXButton fx:id="Category" layoutX="336.0" layoutY="170.0" onAction="#BtnCategory" prefHeight="29.0" prefWidth="116.0" style="-fx-background-color: #15B559;" text="Helbredstilstande" textFill="WHITE" />
-   <JFXButton fx:id="editCase" layoutX="357.0" layoutY="564.0" onAction="#editCaseBtn" prefHeight="29.0" prefWidth="100.0" text="Edit Case">
+   <JFXButton fx:id="Category" layoutX="213.0" layoutY="517.0" onAction="#BtnCategory" prefHeight="29.0" prefWidth="110.0" style="-fx-background-color: #15B559;" text="Helbredstilstande" textFill="WHITE" />
+   <JFXButton fx:id="editCase" layoutX="347.0" layoutY="562.0" onAction="#editCaseBtn" prefHeight="29.0" prefWidth="110.0" text="Edit Case">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>
