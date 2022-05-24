@@ -20,13 +20,13 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <HBox alignment="CENTER" layoutX="111.0" layoutY="75.0" prefHeight="635.0" prefWidth="974.0">
+      <HBox alignment="CENTER" layoutX="111.0" layoutY="75.0" prefHeight="624.0" prefWidth="974.0">
          <children>
             <VBox alignment="CENTER" prefHeight="520.0" prefWidth="324.0" styleClass="Category">
                <children>
-                  <HBox fx:id="HBox" maxHeight="150.0" minHeight="150.0" prefHeight="150.0" prefWidth="350.0" styleClass="Category">
+                  <HBox fx:id="HBox" maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="350.0" styleClass="Category">
                      <children>
-                        <VBox maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="320.0" styleClass="Category">
+                        <VBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="320.0" styleClass="Category">
                            <children>
                               <Text fx:id="funktionsniveau_1" onMouseClicked="#funktionsniveau_1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Funktionsniveau" underline="true">
                                  <font>
@@ -43,9 +43,9 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox maxHeight="150.0" minHeight="150.0" prefHeight="150.0" prefWidth="322.0" styleClass="Category">
+                  <HBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="322.0" styleClass="Category">
                      <children>
-                        <VBox maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="320.0" styleClass="Category">
+                        <VBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="320.0" styleClass="Category">
                            <children>
                               <Text fx:id="bevægeapparat_1" onMouseClicked="#bevægeapparat_1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Bevægeapparat" underline="true">
                                  <font>
@@ -59,9 +59,9 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox maxHeight="150.0" minHeight="150.0" prefHeight="150.0" prefWidth="322.0" styleClass="Category">
+                  <HBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="322.0" styleClass="Category">
                      <children>
-                        <VBox maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="320.0" styleClass="Category">
+                        <VBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="320.0" styleClass="Category">
                            <children>
                               <Text fx:id="seksualitet_1" onMouseClicked="#seksualitet_1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Seksualitet" underline="true">
                                  <font>
@@ -78,9 +78,9 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox maxHeight="150.0" minHeight="150.0" prefHeight="150.0" prefWidth="322.0">
+                  <HBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="322.0">
                      <children>
-                        <VBox maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="320.0" styleClass="Category">
+                        <VBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="320.0" styleClass="Category">
                            <children>
                               <Text fx:id="hudogslimhinder_1" onMouseClicked="#hudogslimhinder_1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Hud og slimhinder" underline="true">
                                  <font>
@@ -98,9 +98,9 @@
             </VBox>
             <VBox prefHeight="520.0" prefWidth="324.0" styleClass="Category">
                <children>
-                  <HBox prefHeight="174.0" prefWidth="322.0">
+                  <HBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="322.0">
                      <children>
-                        <VBox maxHeight="152.0" minHeight="121.0" prefHeight="152.0" prefWidth="324.0" styleClass="Category">
+                        <VBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="324.0" styleClass="Category">
                            <children>
                               <Text fx:id="respirationogcirkulation_1" onMouseClicked="#respirationogcirkulation_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Respiration og cirkulation" underline="true">
                                  <font>
@@ -114,9 +114,9 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="319.0" prefWidth="322.0">
+                  <HBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="322.0">
                      <children>
-                        <VBox prefHeight="256.0" prefWidth="329.0" styleClass="Category">
+                        <VBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="329.0" styleClass="Category">
                            <children>
                               <Text fx:id="nutrition_1" onMouseClicked="#ernæring_1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Ernæring" underline="true">
                                  <font>
@@ -130,9 +130,9 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="240.0" prefWidth="322.0">
+                  <HBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="322.0">
                      <children>
-                        <VBox maxHeight="134.0" minHeight="75.0" minWidth="120.0" prefHeight="107.0" prefWidth="320.0" styleClass="Category">
+                        <VBox maxHeight="155.0" minHeight="155.0" minWidth="120.0" prefHeight="155.0" prefWidth="320.0" styleClass="Category">
                            <children>
                               <Text fx:id="søvnoghvile_1" onMouseClicked="#søvnoghvile_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Søvn og hvile" underline="true">
                                  <font>
@@ -146,9 +146,9 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="165.0" prefWidth="322.0">
+                  <HBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="322.0">
                      <children>
-                        <VBox prefHeight="269.0" prefWidth="324.0" styleClass="Category">
+                        <VBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="324.0" styleClass="Category">
                            <children>
                               <Text fx:id="udskillelseafaffaldsstoffer_1" onMouseClicked="#udskillelseafaffaldsstoffer_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Udskillelse af affaldsstoffer" underline="true">
                                  <font>
@@ -164,11 +164,11 @@
                   </HBox>
                </children>
             </VBox>
-            <VBox prefHeight="520.0" prefWidth="324.0" styleClass="Category">
+            <VBox minHeight="155.0" prefHeight="155.0" prefWidth="324.0" styleClass="Category">
                <children>
-                  <HBox prefHeight="153.0" prefWidth="511.0" styleClass="Category">
+                  <HBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="511.0" styleClass="Category">
                      <children>
-                        <VBox minHeight="146.0" prefHeight="146.0" prefWidth="358.0" styleClass="Category">
+                        <VBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="358.0" styleClass="Category">
                            <children>
                               <Text fx:id="videnogudvikling_1" onMouseClicked="#videnogudvikling_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Viden og udvikling" underline="true">
                                  <font>
@@ -182,9 +182,9 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="106.0" prefWidth="322.0" styleClass="Category">
+                  <HBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="322.0" styleClass="Category">
                      <children>
-                        <VBox maxHeight="104.0" minHeight="6.0" prefHeight="67.0" prefWidth="370.0" styleClass="Category">
+                        <VBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="370.0" styleClass="Category">
                            <children>
                               <Text fx:id="kommunikation_1" onMouseClicked="#kommunikation_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Kommunikation" underline="true">
                                  <font>
@@ -198,9 +198,9 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="176.0" prefWidth="322.0" styleClass="Category">
+                  <HBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="322.0" styleClass="Category">
                      <children>
-                        <VBox prefHeight="186.0" prefWidth="352.0" styleClass="Category">
+                        <VBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="352.0" styleClass="Category">
                            <children>
                               <Text fx:id="psykosocialeforhold_1" onMouseClicked="#psykosocialeforhold_1" strokeType="OUTSIDE" strokeWidth="0.0" text="Psykosociale forhold" underline="true">
                                  <font>
@@ -214,9 +214,9 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="197.0" prefWidth="322.0">
+                  <HBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="322.0">
                      <children>
-                        <VBox maxHeight="539.0" minHeight="112.0" prefHeight="358.0" prefWidth="378.0" styleClass="Category">
+                        <VBox maxHeight="155.0" minHeight="155.0" prefHeight="155.0" prefWidth="378.0" styleClass="Category">
                            <children>
                               <Text fx:id="smerterogsanseindtryk_1" onMouseClicked="#smerterogsanseindtryk_1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Smerter og sanseindtryk" underline="true">
                                  <font>
