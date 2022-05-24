@@ -117,7 +117,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="25.0" prefWidth="950.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nuværende" textAlignment="CENTER" />
+                  <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.2" text="Nuværende" textAlignment="CENTER" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="36.0" prefWidth="872.0">
@@ -213,9 +213,10 @@
                      </children>
                   </VBox>
                </children></HBox>
+            <HBox prefHeight="30.0" prefWidth="950.0" />
             <HBox alignment="CENTER" prefHeight="25.0" prefWidth="950.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Forventet" textAlignment="CENTER" />
+                  <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.2" text="Forventet" textAlignment="CENTER" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="36.0" prefWidth="872.0">
@@ -318,7 +319,7 @@
             <HBox prefHeight="25.0" prefWidth="950.0" />
             <HBox alignment="CENTER" prefHeight="25.0" prefWidth="872.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Faglig notat" textAlignment="CENTER" />
+                  <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.2" text="Faglig notat" textAlignment="CENTER" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="75.0" prefWidth="950.0">
@@ -337,6 +338,10 @@
                </children>
             </HBox>
             <HBox prefHeight="25.0" prefWidth="950.0" />
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="950.0">
+               <children>
+                  <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.2" text="Udførelse" textAlignment="CENTER" />
+               </children></HBox>
             <HBox alignment="CENTER" prefHeight="30.0" prefWidth="950.0" spacing="32.0">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Udfører selv" />
@@ -396,7 +401,11 @@
                   </JFXCheckBox>
                </children>
             </HBox>
-            <HBox prefHeight="25.0" prefWidth="950.0" />
+            <HBox prefHeight="30.0" prefWidth="950.0" />
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="950.0">
+               <children>
+                  <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.2" text="Betydning af udførelse" />
+               </children></HBox>
             <HBox alignment="CENTER" prefHeight="30.0" prefWidth="950.0" spacing="50.0">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Oplever ikke begrænsninger" />
@@ -432,7 +441,7 @@
             <HBox prefHeight="25.0" prefWidth="950.0" />
             <HBox alignment="CENTER" prefHeight="25.0" prefWidth="950.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Borgerens ønsker og mål" />
+                  <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.2" text="Borgerens ønsker og mål" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="75.0" prefWidth="950.0">
@@ -455,5 +464,6 @@
          </font>
       </Text>
       <JFXButton fx:id="Button2" layoutX="14.0" layoutY="907.0" onAction="#buttonBack" prefHeight="29.0" prefWidth="62.0" styleClass="Button" stylesheets="@../CSS/FunctionalAbility.css" text="Tilbage" textFill="WHITE" />
+      <HBox layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="950.0" />
    </children>
 </AnchorPane>
