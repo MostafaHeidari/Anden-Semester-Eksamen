@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -34,6 +35,11 @@ public class FunctionalAbilityController implements Initializable {
     private AnchorPane Pane;
     @FXML
     private Button Button;
+
+    @FXML
+    private TextArea tb1;
+    @FXML
+    private TextArea tb2;
 
     @FXML
     private CheckBox cb1;
@@ -66,6 +72,7 @@ public class FunctionalAbilityController implements Initializable {
 
     private CheckBox[] row2;
 
+
     @FXML
     private CheckBox cb31;
     @FXML
@@ -74,12 +81,16 @@ public class FunctionalAbilityController implements Initializable {
     private CheckBox cb33;
     @FXML
     private CheckBox cb34;
-    @FXML
-    private CheckBox cb35;
-    @FXML
-    private CheckBox cb36;
 
     private CheckBox[] row3;
+
+
+    @FXML
+    private CheckBox cb41;
+    @FXML
+    private CheckBox cb42;
+
+    private CheckBox[] row4;
 
 
     private String[] stringResult;
@@ -112,7 +123,7 @@ public class FunctionalAbilityController implements Initializable {
     }
 
     /**
-     * nuværende tilstands knapper
+     * nuværende niveau
      * @param actionEvent
      */
     public void Checked1(ActionEvent actionEvent) {
@@ -140,7 +151,7 @@ public class FunctionalAbilityController implements Initializable {
     }
 
     /**
-     * Kommene tilstands knapper
+     * Forventet niveau
      * @param actionEvent
      */
     public void checked21(ActionEvent actionEvent) {
@@ -169,7 +180,7 @@ public class FunctionalAbilityController implements Initializable {
 
 
     /**
-     * Borgerens mening om tilstand knapper
+     * Udførelse
      * @param actionEvent
      */
     public void checked31(ActionEvent actionEvent) {
@@ -188,12 +199,17 @@ public class FunctionalAbilityController implements Initializable {
         deselectOthers(actionEvent, row3);
     }
 
-    public void checked35(ActionEvent actionEvent) {
-        deselectOthers(actionEvent, row3);
+
+    /**
+     * Betydning af udførelse
+     * @param actionEvent
+     */
+    public void checked41(ActionEvent actionEvent) {
+        deselectOthers(actionEvent, row4);
     }
 
-    public void checked36(ActionEvent actionEvent) {
-        deselectOthers(actionEvent, row3);
+    public void checked42(ActionEvent actionEvent) {
+        deselectOthers(actionEvent, row4);
     }
 
     /**
@@ -206,10 +222,9 @@ public class FunctionalAbilityController implements Initializable {
 
 //switches scene when you press save
         Stage switcher = (Stage) Button.getScene().getWindow();
-        System.out.println(caseID);
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/FunctionalAbilityCategory.fxml"));
         Scene scene = new Scene(root);
-        switcher.setTitle("SOSU System");
+        switcher.setTitle("FunktionsevneTilstand Kategori");
         switcher.setScene(scene);
 
 
@@ -235,8 +250,15 @@ public class FunctionalAbilityController implements Initializable {
             }
         }
 
+        int row4int = 0;
+        for(int i = 0; i < row4.length; i++){
+            if(row4[i].isSelected()){
+                row4int = i;
+            }
+        }
+
         //uploads the selected checkbox to database with their respectable names, which you get from the stringResult array
-        functionalAbilityDAO.uploadCaseID(caseID, stringResult[row1int], stringResult[row2int], stringResult[row3int]);
+        functionalAbilityDAO.uploadCaseID(caseID, stringResult[row1int], stringResult[row2int]);
     }
 
     public void rememberChoice() throws IOException {
@@ -269,11 +291,21 @@ public class FunctionalAbilityController implements Initializable {
         //array of checkboxes in row 1 and 2
         row1 = new CheckBox[]{cb1, cb2, cb3, cb4, cb5, cb6};
         row2 = new CheckBox[]{cb21, cb22, cb23, cb24, cb25, cb26};
-        row3 = new CheckBox[]{cb31, cb32, cb33, cb34, cb35, cb36};
+        row3 = new CheckBox[]{cb31, cb32, cb33, cb34};
+        row4 = new CheckBox[]{cb41, cb42};
 
         //array of names for the checkboxes
         stringResult = new String[]{"Ingen/ubetydelige begrænsninger", "Lette begrænsninger", "Moderate begrænsninger", "Svære begrænsninger", "Totale begrænsninger", "Ikke relevant"};
 
     }
 
+    public void buttonBack(ActionEvent actionEvent) throws IOException {
+        Stage switcher = (Stage) Button.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/FunctionalAbilityCategory.fxml"));
+        Scene scene = new Scene(root);
+        switcher.setTitle("FunktionsevneTilstand Kategori");
+        switcher.setScene(scene);
+
+
+    }
 }

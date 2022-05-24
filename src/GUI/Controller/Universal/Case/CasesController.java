@@ -125,9 +125,9 @@ public class CasesController implements Initializable {
             int tempCaseID = selectedCase.getCaseId();
             Stage switcher = (Stage) Category.getScene().getWindow();
             switcher.setUserData(tempCaseID);
-            Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/FunctionalAbility.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/FunctionalAbilityCategory.fxml"));
             Scene scene = new Scene(root);
-            switcher.setTitle("FunktionsEvne");
+            switcher.setTitle("FunktionsevneTilstand Kategori");
             switcher.setScene(scene);
         }
     }

@@ -2,7 +2,7 @@
     -fx-label-padding: 0;
 }
 
-#Button{
+#Button, #Button2{
     -fx-text-fill: white;
     -fx-border-color: #009B42;
     -fx-border-width: 2px;

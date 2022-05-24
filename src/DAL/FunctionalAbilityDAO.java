@@ -25,26 +25,24 @@ public class FunctionalAbilityDAO {
      * this method gets a uploadCaseID from the database
      * @param tilstand
      * @param fremtidigTilstand
-     * @param borgerTilstand
      * @return functionalAbilityCord
      * @throws SQLServerException
      */
-    public FunctionalAbility uploadCaseID(int CaseID, String tilstand, String fremtidigTilstand, String borgerTilstand) throws SQLException {
+    public FunctionalAbility uploadCaseID(int CaseID, String tilstand, String fremtidigTilstand) throws SQLException {
         Connection connection = DC.getConnection();
 
-        String sql = "INSERT INTO FunctionalAbility (CaseID, tilstand, fremtidigTilstand, borgerTilstand) VALUES (?,?,?,?);";
+        String sql = "INSERT INTO FunctionalAbility (CaseID, tilstand, fremtidigTilstand) VALUES (?,?,?);";
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
         ps.setInt(1, CaseID);
         ps.setString(2, tilstand);
         ps.setString(3, fremtidigTilstand);
-        ps.setString(4, borgerTilstand);
         ps.execute();
         ResultSet resultSet = ps.getGeneratedKeys();
         int id = 0;
         if (resultSet.next()) {
             id = resultSet.getInt(1);
         }
-        FunctionalAbility functionalAbilityCord = new FunctionalAbility(CaseID, tilstand, fremtidigTilstand, borgerTilstand);
+        FunctionalAbility functionalAbilityCord = new FunctionalAbility(CaseID, tilstand, fremtidigTilstand);
         return functionalAbilityCord;
 
     }
@@ -62,8 +60,8 @@ public class FunctionalAbilityDAO {
             FunctionalAbility functionalAbilityCord = new FunctionalAbility(
                     rs.getInt("CaseID"),
                     rs.getString("tilstand"),
-                    rs.getString("fremtidigTilstand"),
-                    rs.getString("borgerTilstand"));
+                    rs.getString("fremtidigTilstand")
+            );
             allFuncionalAbilities.add(functionalAbilityCord);
         }
         return allFuncionalAbilities;
