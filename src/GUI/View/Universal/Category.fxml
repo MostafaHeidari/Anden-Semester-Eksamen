@@ -8,19 +8,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="910.0" prefWidth="1272.0" style="-fx-background-color: #BBE5E8;" stylesheets="@../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.CategoryController">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #BBE5E8;" stylesheets="@../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.CategoryController">
    <children>
-      <JFXButton fx:id="btnCategoryBack" layoutX="596.0" layoutY="817.0" onAction="#CategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
+      <JFXButton fx:id="btnCategoryBack" layoutX="596.0" layoutY="750.0" onAction="#CategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Text layoutX="529.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Helbredstilstande" wrappingWidth="283.7420654296875">
+      <Text layoutX="529.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Helbredstilstande" wrappingWidth="283.7420654296875">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <HBox alignment="CENTER" layoutX="168.0" layoutY="104.0" prefHeight="635.0" prefWidth="974.0">
+      <HBox alignment="CENTER" layoutX="168.0" layoutY="100.0" prefHeight="635.0" prefWidth="974.0">
          <children>
             <VBox alignment="CENTER" prefHeight="520.0" prefWidth="324.0" styleClass="Category">
                <children>
