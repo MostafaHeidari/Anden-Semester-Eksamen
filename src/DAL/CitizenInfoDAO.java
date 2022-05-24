@@ -41,9 +41,9 @@ public class CitizenInfoDAO {
                     rs.getInt("PatientID"),
                     rs.getString("PatientName"),
                     rs.getString("PatientLastName"),
-                    rs.getString("PatientGenInfo"),
+                    rs.getString("PatientAddress"),
                     rs.getString("Cpr"),
-                    rs.getString("PatientAddress"));
+                    rs.getString("PatientGenInfo"));
             allCitizenInfos.add(citizenInfoCord);
         }
         return allCitizenInfos;

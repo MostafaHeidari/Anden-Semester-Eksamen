@@ -39,7 +39,7 @@ public class CategoryController {
     @FXML
     private Text respirationogcirkulation_1;
     @FXML
-    private Text søvnoghvile_1;
+    private Text  søvnoghvile_1;
     @FXML
     private Text udskillelseafaffaldsstoffer_1;
     @FXML
