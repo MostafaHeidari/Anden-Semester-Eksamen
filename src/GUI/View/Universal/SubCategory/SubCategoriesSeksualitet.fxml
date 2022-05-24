@@ -7,14 +7,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@../../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.SubCategory.SubcategorySeksualitetController">
+<AnchorPane prefHeight="390.0" prefWidth="900.0" stylesheets="@../../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.SubCategory.SubcategorySeksualitetController">
    <children>
-      <JFXButton fx:id="btnBack" layoutX="625.0" layoutY="547.0" onAction="#subCategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
+      <JFXButton fx:id="btnBack" layoutX="625.0" layoutY="325.0" onAction="#subCategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="btnLogOut" layoutX="725.0" layoutY="547.0" onAction="#subCategoryLogOut" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Log ud">
+      <JFXButton fx:id="btnLogOut" layoutX="725.0" layoutY="325.0" onAction="#subCategoryLogOut" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Log ud">
          <font>
             <Font size="15.0" />
          </font>
@@ -24,14 +24,14 @@
             <Font name="Arial Narrow Bold Italic" size="20.0" />
          </font>
       </Text>
-      <Label fx:id="seksualitet_1" layoutX="15.0" layoutY="200.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med seksualitet">
+      <Label fx:id="seksualitet_1" layoutX="15.0" layoutY="175.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med seksualitet">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtSeksualitet" layoutX="300.0" layoutY="125.0" prefHeight="206.0" prefWidth="501.0" />
+      <TextArea fx:id="txtSeksualitet" layoutX="333.0" layoutY="100.0" prefHeight="206.0" prefWidth="501.0" />
 
-      <JFXButton fx:id="btnSave" layoutX="536.0" layoutY="547.0" onAction="#subCategorySave" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Gem">
+      <JFXButton fx:id="btnSave" layoutX="536.0" layoutY="325.0" onAction="#subCategorySave" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Gem">
          <font>
             <Font size="15.0" />
          </font>
