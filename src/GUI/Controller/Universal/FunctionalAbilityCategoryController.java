@@ -14,7 +14,8 @@ import java.io.IOException;
 
 public class FunctionalAbilityCategoryController {
 
-    private CitizenInfo selectedCitizenInfo;
+    private CitizenInfo selectedCitizenId;
+
     private int selectedCaseID;
 
     @FXML
@@ -26,47 +27,67 @@ public class FunctionalAbilityCategoryController {
         Parent root = loader.load();
         Scene scene = new Scene(root);
         CasesController controller = loader.getController();
-        controller.setSelectedCitizen(selectedCitizenInfo);
+        controller.setSelectedCitizen(selectedCitizenId);
         switcher.setTitle("FunktionsevneTilstand Kategori");
         switcher.setScene(scene);
     }
 
     public void cat1Btn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) Pane.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/FunctionalAbilitySubCategory1.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/FunctionalAbilitySubCategory1.fxml"));
+        Parent root = loader.load();
         Scene scene = new Scene(root);
+        FunctionalAbilitySubCategory1Controller controller = loader.getController();
+        controller.setSelectedCitizen(selectedCitizenId);
+        controller.setSelectedCase(selectedCaseID);
         switcher.setTitle("FunktionsevneTilstand Kategori");
         switcher.setScene(scene);
     }
 
     public void cat2Btn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) Pane.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/FunctionalAbilitySubCategory2.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/FunctionalAbilitySubCategory2.fxml"));
+        Parent root = loader.load();
         Scene scene = new Scene(root);
+        FunctionalAbilitySubCategory2Controller controller = loader.getController();
+        controller.setSelectedCitizen(selectedCitizenId);
+        controller.setSelectedCase(selectedCaseID);
         switcher.setTitle("FunktionsevneTilstand Kategori");
         switcher.setScene(scene);
     }
 
     public void cat3Btn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) Pane.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/FunctionalAbilitySubCategory2.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/FunctionalAbilitySubCategory3.fxml"));
+        Parent root = loader.load();
         Scene scene = new Scene(root);
+        FunctionalAbilitySubCategory3Controller controller = loader.getController();
+        controller.setSelectedCitizen(selectedCitizenId);
+        controller.setSelectedCase(selectedCaseID);
         switcher.setTitle("FunktionsevneTilstand Kategori");
         switcher.setScene(scene);
     }
 
     public void cat4Btn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) Pane.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/FunctionalAbilitySubCategory4.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/FunctionalAbilitySubCategory4.fxml"));
+        Parent root = loader.load();
         Scene scene = new Scene(root);
+        FunctionalAbilitySubCategory4Controller controller = loader.getController();
+        controller.setSelectedCitizen(selectedCitizenId);
+        controller.setSelectedCase(selectedCaseID);
         switcher.setTitle("FunktionsevneTilstand Kategori");
         switcher.setScene(scene);
     }
 
     public void cat5Btn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) Pane.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/FunctionalAbilitySubCategory5.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/FunctionalAbilitySubCategory5.fxml"));
+        Parent root = loader.load();
         Scene scene = new Scene(root);
+        FunctionalAbilitySubCategory5Controller controller = loader.getController();
+        controller.setSelectedCitizen(selectedCitizenId);
+        controller.setSelectedCase(selectedCaseID);
         switcher.setTitle("FunktionsevneTilstand Kategori");
         switcher.setScene(scene);
     }
@@ -76,6 +97,6 @@ public class FunctionalAbilityCategoryController {
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {
-        selectedCitizenInfo = selectedCitizen;
+        selectedCitizenId = selectedCitizen;
     }
 }

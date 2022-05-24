@@ -1,5 +1,6 @@
 package GUI.Controller.Universal;
 
+import BE.CitizenInfo;
 import BE.FunctionalAbility;
 import DAL.FunctionalAbilityDAO;
 import GUI.Model.FunctionalAbilityModel;
@@ -29,7 +30,11 @@ public class FunctionalAbilityController implements Initializable {
 
     private final FunctionalAbilityDAO functionalAbilityDAO;
 
-    private int caseID;
+
+    private CitizenInfo selectedCitizenId;
+
+    private int selectedCaseId;
+
 
     @FXML
     private AnchorPane Pane;
@@ -258,20 +263,20 @@ public class FunctionalAbilityController implements Initializable {
         }
 
         //uploads the selected checkbox to database with their respectable names, which you get from the stringResult array
-        functionalAbilityDAO.uploadCaseID(caseID, stringResult[row1int], stringResult[row2int]);
+        functionalAbilityDAO.uploadCaseID(selectedCaseId, stringResult[row1int], stringResult[row2int]);
     }
 
     public void rememberChoice() throws IOException {
         FXMLLoader switcher = new FXMLLoader(getClass().getResource("/GUI/View/Universal/FunctionalAbility.fxml"));
         Parent root = (Parent)switcher.load();
         FunctionalAbilityController controller = (FunctionalAbilityController)switcher.getController();
-        caseID = Integer.parseInt(switcher.getController().toString());
-        System.out.println(caseID = Integer.parseInt(switcher.getController().toString()));
+        selectedCaseId = Integer.parseInt(switcher.getController().toString());
+        System.out.println(selectedCaseId = Integer.parseInt(switcher.getController().toString()));
 
         try{
             List<FunctionalAbility> allFuncionalAbilities = functionalAbilityDAO.getAllFuncionalAbilities();
             for (int i = 0; i < allFuncionalAbilities.size(); i++){
-                if (allFuncionalAbilities.get(i).getCaseID() == caseID){
+                if (allFuncionalAbilities.get(i).getCaseID() == selectedCaseId){
                     System.out.println(allFuncionalAbilities.get(i).getcondition());
                 }
             }
@@ -300,12 +305,22 @@ public class FunctionalAbilityController implements Initializable {
     }
 
     public void buttonBack(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) Button.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/FunctionalAbilityCategory.fxml"));
+        Stage switcher = (Stage) Pane.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/FunctionalAbilityCategory.fxml"));
+        Parent root = loader.load();
         Scene scene = new Scene(root);
-        switcher.setTitle("FunktionsevneTilstand Kategori");
+        FunctionalAbilityCategoryController controller = loader.getController();
+        controller.setSelectedCitizen(selectedCitizenId);
+        controller.setCaseID(selectedCaseId);
+        switcher.setTitle("FunktionsevneTilstand");
         switcher.setScene(scene);
+    }
 
+    public void setSelectedCitizen(CitizenInfo citizenId) {
+        selectedCitizenId = citizenId;
+    }
 
+    public void setCaseID(int caseId) {
+        selectedCaseId = caseId;
     }
 }
