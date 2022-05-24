@@ -4,7 +4,6 @@ public class Teacher {
     private int teacherId;
     private String teacherName;
     private String teacherLastName;
-    private String teacherEmail;
     private String teacherUserName;
 
 
@@ -16,11 +15,10 @@ public class Teacher {
      * @param teacherUserName
      * Constructor with teacherId,  teacherName, teacherLastName, teacherEmail, teacherUserName
      */
-    public Teacher(int teacherId, String teacherName, String teacherLastName, String teacherEmail, String teacherUserName) {
+    public Teacher(int teacherId, String teacherName, String teacherLastName, String teacherUserName) {
         this.teacherId = teacherId;
         this.teacherName = teacherName;
         this.teacherLastName = teacherLastName;
-        this.teacherEmail = teacherEmail;
         this.teacherUserName = teacherUserName;
     }
 
@@ -70,22 +68,6 @@ public class Teacher {
      */
     public void setTeacherLastName(String teacherLastName) {
         this.teacherLastName = teacherLastName;
-    }
-
-    /**
-     * Gets the teacherEmail
-     * @return teacherEmail
-     */
-    public String getTeacherEmail() {
-        return teacherEmail;
-    }
-
-    /**
-     * Sets the teacherEmail
-     * @param teacherEmail
-     */
-    public void setTeacherEmail(String teacherEmail) {
-        this.teacherEmail = teacherEmail;
     }
 
     /**

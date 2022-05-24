@@ -55,12 +55,11 @@ public class TeacherModel {
      * Gets the uploadTeacherInfo teacherName, teacherLastName, teacherEmail and teacherUserName using uploadTeacherInfo from teacherManger
      * @param teacherName
      * @param teacherLastName
-     * @param teacherEmail
      * @param teacherUserName
      * @throws SQLServerException
      */
-    public void uploadTeacherInfo(String teacherName, String teacherLastName, String teacherEmail, String teacherUserName) throws SQLException {
-        teacherList.add(teacherManger.uploadTeacherInfo(teacherName,teacherLastName,teacherEmail,teacherUserName));
+    public void uploadTeacherInfo(String teacherName, String teacherLastName, String teacherUserName) throws SQLException {
+        teacherList.add(teacherManger.uploadTeacherInfo(teacherName,teacherLastName,teacherUserName));
     }
 
     /**

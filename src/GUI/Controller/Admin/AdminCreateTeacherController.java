@@ -47,8 +47,6 @@ public class AdminCreateTeacherController implements Initializable {
     @FXML
     public TextField teacherLastNameTxt;
     @FXML
-    public TextField teacherEmailTxt;
-    @FXML
     public TextField teacherUserNameTxt;
     @FXML
     public TextField teacherPasswordTxt;
@@ -59,8 +57,6 @@ public class AdminCreateTeacherController implements Initializable {
     public TableColumn tcTeacherName;
     @FXML
     public TableColumn tcTeacherLastName;
-    @FXML
-    public TableColumn tcTeacherEmail;
     @FXML
     public TableColumn tcTeacherUserName;
 
@@ -105,7 +101,7 @@ public class AdminCreateTeacherController implements Initializable {
      * Creating a teacher with the createTeacherBtn method
      */
     public void createTeacherBtn(ActionEvent event) throws IOException, SQLException {
-        if (teacherNameTxt.getText() == "" || teacherLastNameTxt.getText() == "" || teacherEmailTxt.getText() == "" || teacherUserNameTxt.getText() == "" || teacherPasswordTxt.getText() == "" ){
+        if (teacherNameTxt.getText() == "" || teacherLastNameTxt.getText() == "" || teacherUserNameTxt.getText() == "" || teacherPasswordTxt.getText() == "" ){
             Popup popup = new Popup();
             NotFilledTxtFieldController controller = new NotFilledTxtFieldController();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/NotFilledTxtField.fxml"));
@@ -116,7 +112,6 @@ public class AdminCreateTeacherController implements Initializable {
 
             String teacherName = teacherNameTxt.getText();
             String teacherLastName = teacherLastNameTxt.getText();
-            String teacherEmail =   teacherEmailTxt.getText();
             String teacherUserName = teacherUserNameTxt.getText();
 
             String userNameTeacher = teacherUserNameTxt.getText();
@@ -126,7 +121,7 @@ public class AdminCreateTeacherController implements Initializable {
 
 
             uploadLogin(userNameTeacher,passwordTeacher);
-            uploadTeacherInfo(teacherName, teacherLastName,teacherEmail,teacherUserName);
+            uploadTeacherInfo(teacherName, teacherLastName,teacherUserName);
         }
     }
 
@@ -175,14 +170,13 @@ public class AdminCreateTeacherController implements Initializable {
     /**
      * uploads a teacher info with the uploadTeacherInfo method
      */
-    private void uploadTeacherInfo(String teacherName, String teacherLastName, String teacherEmail, String teacherUserName) throws IOException, SQLException {
+    private void uploadTeacherInfo(String teacherName, String teacherLastName, String teacherUserName) throws IOException, SQLException {
         TeacherModel teacherModel =  TeacherModel.getInstance();
 
-        teacherModel.uploadTeacherInfo(teacherName, teacherLastName, teacherEmail,teacherUserName);
+        teacherModel.uploadTeacherInfo(teacherName, teacherLastName,teacherUserName);
 
         teacherNameTxt.clear();
         teacherLastNameTxt.clear();
-        teacherEmailTxt.clear();
         teacherUserNameTxt.clear();
         teacherPasswordTxt.clear();
 
@@ -200,8 +194,6 @@ public class AdminCreateTeacherController implements Initializable {
         tcTeacherName.setCellValueFactory(new PropertyValueFactory<>("teacherName"));
 
         tcTeacherLastName.setCellValueFactory(new PropertyValueFactory<>("teacherLastName"));
-
-        tcTeacherEmail.setCellValueFactory(new PropertyValueFactory<>("teacherEmail"));
 
         tcTeacherUserName.setCellValueFactory(new PropertyValueFactory<>("teacherUserName"));
 

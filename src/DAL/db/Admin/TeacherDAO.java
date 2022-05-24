@@ -36,7 +36,7 @@ public class TeacherDAO {
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) { // Creates and adds song objects into an array list
             Teacher teacherCord = new Teacher(rs.getInt("teacherId"), rs.getString("teacherName"),
-                    rs.getString("teacherLastName") ,rs.getString("teacherEmail"),rs.getString("teacherUserName"));
+                    rs.getString("teacherLastName") ,rs.getString("teacherUserName"));
             allTeachers.add(teacherCord);
         }
         return allTeachers;
@@ -47,12 +47,11 @@ public class TeacherDAO {
      * his method gets a uploadTeacherInfo from the database
      * @param teacherName
      * @param teacherLastName
-     * @param teacherEmail
      * @param teacherUserName
      * @return uploadTeacherInfo
      * @throws SQLServerException
      */
-    public Teacher uploadTeacherInfo(String teacherName, String teacherLastName, String teacherEmail, String teacherUserName) throws SQLException {
+    public Teacher uploadTeacherInfo(String teacherName, String teacherLastName, String teacherUserName) throws SQLException {
         Connection connection = DC.getConnection();
 
         String sql = "INSERT INTO Teachers (TeacherName,TeacherLastName,TeacherEmail,TeacherUserName) VALUES (?,?,?,?);";
@@ -61,8 +60,7 @@ public class TeacherDAO {
 
         ps.setString(1, teacherName);
         ps.setString(2, teacherLastName);
-        ps.setString(3, teacherEmail);
-        ps.setString(4, teacherUserName);
+        ps.setString(3, teacherUserName);
 
         int affectedRows = ps.executeUpdate();
 
@@ -70,7 +68,7 @@ public class TeacherDAO {
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
                 int teacherId = rs.getInt(1);
-                Teacher teacherCord = new Teacher(teacherId, teacherName, teacherLastName,teacherEmail,teacherUserName);
+                Teacher teacherCord = new Teacher(teacherId, teacherName, teacherLastName,teacherUserName);
                 return teacherCord;
             }
 

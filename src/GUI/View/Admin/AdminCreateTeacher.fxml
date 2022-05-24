@@ -33,31 +33,28 @@
                   <Font size="32.0" />
                </font>
             </Text>
-            <TextField fx:id="teacherNameTxt" layoutX="114.0" layoutY="154.0" prefHeight="33.0" prefWidth="244.0" promptText="Navn" />
-            <TextField fx:id="teacherLastNameTxt" layoutX="114.0" layoutY="196.0" prefHeight="33.0" prefWidth="244.0" promptText="Efternavn" />
-            <TextField fx:id="teacherEmailTxt" layoutX="114.0" layoutY="238.0" prefHeight="33.0" prefWidth="244.0" promptText="E-mail" />
+            <TextField fx:id="teacherNameTxt" layoutX="114.0" layoutY="193.0" prefHeight="33.0" prefWidth="244.0" promptText="Navn" />
+            <TextField fx:id="teacherLastNameTxt" layoutX="114.0" layoutY="235.0" prefHeight="33.0" prefWidth="244.0" promptText="Efternavn" />
             <TextField fx:id="teacherUserNameTxt" layoutX="114.0" layoutY="279.0" prefHeight="33.0" prefWidth="244.0" promptText="Brugernavn" />
             <PasswordField fx:id="teacherPasswordTxt" layoutX="114.0" layoutY="323.0" prefHeight="33.0" prefWidth="244.0" promptText="Adgangskode" />
             <Button fx:id="createTeacher" layoutX="114.0" layoutY="396.0" mnemonicParsing="false" onAction="#createTeacherBtn" prefHeight="33.0" prefWidth="244.0" stylesheets="@../CSS/CreateStudent.css" text="Opret underviser" />
-            <Label layoutX="70.0" layoutY="163.0" text="Navn" />
-            <Label layoutX="48.0" layoutY="204.0" text="Efternavn" />
-            <Label layoutX="65.0" layoutY="246.0" text="E-mail" />
+            <Label layoutX="65.0" layoutY="201.0" text="Navn" />
+            <Label layoutX="48.0" layoutY="243.0" text="Efternavn" />
             <Label layoutX="38.0" layoutY="287.0" text="Brugernavn" />
             <Label layoutX="28.0" layoutY="331.0" text="Adgangskode" />
-            <TableView fx:id="tvTeacher" layoutX="406.0" layoutY="110.0" prefHeight="393.0" prefWidth="467.0">
+            <TableView fx:id="tvTeacher" layoutX="406.0" layoutY="110.0" prefHeight="393.0" prefWidth="430.0">
               <columns>
-                <TableColumn fx:id="tcTeacherName" prefWidth="75.0" text="Navn" />
-                <TableColumn fx:id="tcTeacherLastName" prefWidth="75.0" text="EfterNavn" />
-                  <TableColumn fx:id="tcTeacherEmail" prefWidth="156.0" text="E-Mail" />
-                  <TableColumn fx:id="tcTeacherUserName" prefWidth="160.0" text="BrugerNavn" />
+                <TableColumn fx:id="tcTeacherName" prefWidth="136.0" text="Navn" />
+                <TableColumn fx:id="tcTeacherLastName" prefWidth="106.0" text="EfterNavn" />
+                  <TableColumn fx:id="tcTeacherUserName" prefWidth="187.0" text="BrugerNavn" />
               </columns>
             </TableView>
-            <JFXButton fx:id="createAdmin" layoutX="702.0" layoutY="531.0" onAction="#createAdminBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Opret Admin">
+            <JFXButton fx:id="createAdmin" layoutX="665.0" layoutY="539.0" onAction="#createAdminBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Opret Admin">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="deleteTeacher" layoutX="406.0" layoutY="531.0" onAction="#deleteTeacherBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Slet Underviser">
+            <JFXButton fx:id="deleteTeacher" layoutX="406.0" layoutY="539.0" onAction="#deleteTeacherBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Slet Underviser">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

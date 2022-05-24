@@ -44,13 +44,12 @@ public class TeacherManger {
      * Gets the uploadTeacherInfo teacherName, teacherLastName, studentEmail and teacherUserName  using uploadTeacherInfo from teacherDAO
      * @param teacherName
      * @param teacherLastName
-     * @param teacherEmail
      * @param teacherUserName
      * @return
      * @throws SQLServerException
      */
-    public Teacher uploadTeacherInfo(String teacherName, String teacherLastName, String teacherEmail, String teacherUserName) throws SQLException {
-        return(teacherDAO.uploadTeacherInfo(teacherName, teacherLastName, teacherEmail, teacherUserName));
+    public Teacher uploadTeacherInfo(String teacherName, String teacherLastName, String teacherUserName) throws SQLException {
+        return(teacherDAO.uploadTeacherInfo(teacherName, teacherLastName, teacherUserName));
     }
 
     /**
