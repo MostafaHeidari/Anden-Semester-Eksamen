@@ -2,7 +2,9 @@ package GUI.Controller.Universal.Case;
 
 import BE.Case;
 import BE.CitizenInfo;
+import BE.FunctionalAbility;
 import GUI.Controller.Universal.CategoryController;
+import GUI.Controller.Universal.FunctionalAbilityCategoryController;
 import GUI.Controller.Universal.SimpleDialogController;
 import GUI.Model.CaseModel;
 import com.jfoenix.controls.JFXButton;
@@ -124,9 +126,15 @@ public class CasesController implements Initializable {
             selectedCase = (Case) tvCase.getSelectionModel().getSelectedItem();
             int tempCaseID = selectedCase.getCaseId();
             Stage switcher = (Stage) Category.getScene().getWindow();
+
             switcher.setUserData(tempCaseID);
-            Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/FunctionalAbilityCategory.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/FunctionalAbilityCategory.fxml"));
+            Parent root = loader.load();
             Scene scene = new Scene(root);
+
+            FunctionalAbilityCategoryController controller = loader.getController();
+            controller.setCaseID(selectedCase.getCaseId());
+            loader.<FunctionalAbilityCategoryController>getController().setSelectedCitizen(selectedCitizenInfo);
             switcher.setTitle("FunktionsevneTilstand Kategori");
             switcher.setScene(scene);
         }

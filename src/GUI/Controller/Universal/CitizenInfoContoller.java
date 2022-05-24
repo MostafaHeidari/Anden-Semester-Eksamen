@@ -93,13 +93,13 @@ public class CitizenInfoContoller implements Initializable {
     }
 
     /**
-     * Goes to Teacher view
+     * Goes to Login view
      */
     public void backToLastPageBtn(ActionEvent event) throws IOException {
-        Stage switcher = (Stage) backGroups.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
+        Stage switcher = (Stage) caseInfo.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
         Scene scene = new Scene(root);
-        switcher.setTitle("Forside");
+        switcher.setTitle("SOSU System");
         switcher.setScene(scene);
     }
 
