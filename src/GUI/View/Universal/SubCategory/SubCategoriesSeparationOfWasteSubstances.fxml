@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="767.0" prefWidth="1057.0" stylesheets="@../../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.SubCategory.SubcategorySeparationOfWasteSubstancesController">
+<AnchorPane prefHeight="767.0" prefWidth="873.0" stylesheets="@../../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.SubCategory.SubcategorySeparationOfWasteSubstancesController">
 
    <children>
       <JFXButton fx:id="btnBack" layoutX="625.0" layoutY="700.0" onAction="#subCategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
@@ -30,8 +30,8 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txturination" layoutX="301.0" layoutY="80.0" prefHeight="92.0" prefWidth="501.0" />
-      <TextArea fx:id="txtIUrinaryIncontinence" layoutX="300.0" layoutY="190.0" prefHeight="88.0" prefWidth="501.0" />
+      <TextArea fx:id="txturination" layoutX="333.0" layoutY="80.0" prefHeight="92.0" prefWidth="501.0" />
+      <TextArea fx:id="txtIUrinaryIncontinence" layoutX="333.0" layoutY="190.0" prefHeight="88.0" prefWidth="501.0" />
 
       <JFXButton fx:id="btnSave" layoutX="536.0" layoutY="700.0" onAction="#subCategorySave" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Gem">
          <font>
@@ -43,19 +43,19 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtFecalIncontinence" layoutX="300.0" layoutY="305.0" prefHeight="88.0" prefWidth="501.0" />
+      <TextArea fx:id="txtFecalIncontinence" layoutX="333.0" layoutY="305.0" prefHeight="88.0" prefWidth="501.0" />
       <Label layoutX="12.0" layoutY="329.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med afføringsindkontinens">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtStomachAndIntestines" layoutX="300.0" layoutY="409.0" prefHeight="88.0" prefWidth="501.0" />
+      <TextArea fx:id="txtStomachAndIntestines" layoutX="333.0" layoutY="409.0" prefHeight="88.0" prefWidth="501.0" />
       <Label layoutX="13.0" layoutY="431.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med mave og tarm">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtFluidFromSinks" layoutX="300.0" layoutY="529.0" prefHeight="88.0" prefWidth="501.0" />
+      <TextArea fx:id="txtFluidFromSinks" layoutX="333.0" layoutY="529.0" prefHeight="88.0" prefWidth="501.0" />
       <Label layoutX="17.0" layoutY="554.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med væske fra dræn">
          <font>
             <Font size="14.0" />
