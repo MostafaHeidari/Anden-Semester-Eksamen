@@ -8,25 +8,25 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="910.0" prefWidth="1272.0" style="-fx-background-color: #BBE5E8;" stylesheets="@../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.CategoryController">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #BBE5E8;" stylesheets="@../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.CategoryController">
    <children>
-      <JFXButton fx:id="btnCategoryBack" layoutX="596.0" layoutY="817.0" onAction="#CategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
+      <JFXButton fx:id="btnCategoryBack" layoutX="555.0" layoutY="725.0" onAction="#CategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Text layoutX="529.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Helbredstilstande" wrappingWidth="283.7420654296875">
+      <Text layoutX="444.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Helbredstilstande" wrappingWidth="283.7420654296875">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <HBox alignment="CENTER" layoutX="168.0" layoutY="104.0" prefHeight="635.0" prefWidth="974.0">
+      <HBox alignment="CENTER" layoutX="111.0" layoutY="75.0" prefHeight="635.0" prefWidth="974.0">
          <children>
             <VBox alignment="CENTER" prefHeight="520.0" prefWidth="324.0" styleClass="Category">
                <children>
-                  <HBox fx:id="HBox" prefHeight="153.0" prefWidth="350.0" styleClass="Category">
+                  <HBox fx:id="HBox" maxHeight="150.0" minHeight="150.0" prefHeight="150.0" prefWidth="350.0" styleClass="Category">
                      <children>
-                        <VBox prefHeight="237.0" prefWidth="320.0" styleClass="Category">
+                        <VBox maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="320.0" styleClass="Category">
                            <children>
                               <Text fx:id="funktionsniveau_1" onMouseClicked="#funktionsniveau_1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Funktionsniveau" underline="true">
                                  <font>
@@ -43,9 +43,9 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="188.0" prefWidth="322.0" styleClass="Category">
+                  <HBox maxHeight="150.0" minHeight="150.0" prefHeight="150.0" prefWidth="322.0" styleClass="Category">
                      <children>
-                        <VBox minHeight="90.0" prefHeight="90.0" prefWidth="320.0" styleClass="Category">
+                        <VBox maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="320.0" styleClass="Category">
                            <children>
                               <Text fx:id="bevægeapparat_1" onMouseClicked="#bevægeapparat_1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Bevægeapparat" underline="true">
                                  <font>
@@ -59,9 +59,9 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="206.0" prefWidth="322.0" styleClass="Category">
+                  <HBox maxHeight="150.0" minHeight="150.0" prefHeight="150.0" prefWidth="322.0" styleClass="Category">
                      <children>
-                        <VBox prefHeight="170.0" prefWidth="320.0" styleClass="Category">
+                        <VBox maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="320.0" styleClass="Category">
                            <children>
                               <Text fx:id="seksualitet_1" onMouseClicked="#seksualitet_1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Seksualitet" underline="true">
                                  <font>
@@ -78,9 +78,9 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="191.0" prefWidth="322.0">
+                  <HBox maxHeight="150.0" minHeight="150.0" prefHeight="150.0" prefWidth="322.0">
                      <children>
-                        <VBox prefHeight="346.0" prefWidth="320.0" styleClass="Category">
+                        <VBox maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="320.0" styleClass="Category">
                            <children>
                               <Text fx:id="hudogslimhinder_1" onMouseClicked="#hudogslimhinder_1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="CategoryHealth" text="Hud og slimhinder" underline="true">
                                  <font>
@@ -114,7 +114,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="219.0" prefWidth="322.0">
+                  <HBox prefHeight="319.0" prefWidth="322.0">
                      <children>
                         <VBox prefHeight="256.0" prefWidth="329.0" styleClass="Category">
                            <children>
@@ -130,7 +130,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="158.0" prefWidth="322.0">
+                  <HBox prefHeight="240.0" prefWidth="322.0">
                      <children>
                         <VBox maxHeight="134.0" minHeight="75.0" minWidth="120.0" prefHeight="107.0" prefWidth="320.0" styleClass="Category">
                            <children>

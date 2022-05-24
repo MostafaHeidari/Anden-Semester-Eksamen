@@ -26,7 +26,7 @@
 #txtNameField,#txtLastnameField,#txtcprField,#txtEmailField,#txtTelefonField,#txtadgangskodField,#txtAgeField,#txtUserField,#passwordTxt{
     -fx-control-inner-background: white;
     -fx-text-fill: #2B2121;
-    -fx-border-color: #15B559;
+    -fx-border-color: #001569;
  }
 
 
