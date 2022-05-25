@@ -44,3 +44,15 @@
     -fx-text-fill: #001569;
     -fx-border-color: #797862;
 }
+
+#backToCases{
+    -fx-font-size: 12px;
+    -fx-text-fill: #001569;
+    -fx-border-color: #797862;
+}
+
+#backToCases:hover{
+    -fx-font-size: 12px;
+    -fx-text-fill: #001569;
+    -fx-border-color: #797862;
+}

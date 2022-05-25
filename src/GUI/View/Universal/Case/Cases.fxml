@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="Pane" prefHeight="650.0" prefWidth="950.0" stylesheets="@../../CSS/CreateCase.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.Case.CasesController">
+<AnchorPane  fx:id="Pane" prefHeight="650.0" prefWidth="950.0" stylesheets="@../../CSS/CreateCase.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.Case.CasesController">
       <Pane layoutX="469.0" layoutY="33.0" prefHeight="56.0" prefWidth="467.0" style="-fx-background-color: #FFFFFF;">
          <effect>
             <DropShadow height="9.3" radius="5.32" width="13.98" />
@@ -25,14 +25,14 @@
                </font>
             </Label>
             <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="184.0" layoutY="35.0" size="20" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
-            <Text layoutX="212.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste af Cases" />
+            <Text layoutX="212.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste af Sager" />
          </children>
       </Pane>
       <TableView fx:id="tvCase" layoutX="469.0" layoutY="103.0" prefHeight="533.0" prefWidth="467.0">
          <columns>
             <TableColumn fx:id="tcCaseId" prefWidth="48.0" text="ID " />
-            <TableColumn fx:id="tcCaseName" prefWidth="95.0" text="CaseNavn" />
-            <TableColumn fx:id="tcCaseInfo" prefWidth="323.0" text="CaseInfomationer" />
+            <TableColumn fx:id="tcCaseName" prefWidth="95.0" text="SagsNavn" />
+            <TableColumn fx:id="tcCaseInfo" prefWidth="323.0" text="SagsInfomationer" />
          </columns>
       </TableView>
       <Text layoutX="226.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
@@ -65,7 +65,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <Text fill="#001569" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cases" textAlignment="CENTER" wrappingWidth="199.0">
+            <Text fill="#001569" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sager" textAlignment="CENTER" wrappingWidth="199.0">
                <font>
                   <Font size="32.0" />
                </font>
@@ -78,7 +78,7 @@
             </FontAwesomeIconView>
          </children>
       </Pane>
-      <JFXButton fx:id="deleteCase" layoutX="347.0" layoutY="607.0" onAction="#deleteCaseBtn" prefHeight="29.0" prefWidth="110.0" text="Slet Case" />
+      <JFXButton fx:id="deleteCase" layoutX="347.0" layoutY="607.0" onAction="#deleteCaseBtn" prefHeight="29.0" prefWidth="110.0" text="Slet Sag" />
    <JFXButton fx:id="funktionsevne" layoutX="213.0" layoutY="562.0" onAction="#funktionsevneBtn" prefHeight="29.0" prefWidth="110.0" style="-fx-background-color: #15B559;" text="Funktionsevne" textFill="WHITE" />
    <JFXButton fx:id="funktionsevne1" layoutX="213.0" layoutY="607.0" onAction="#funktionsevneBtn" prefHeight="29.0" prefWidth="110.0" style="-fx-background-color: #15B559;" text="Omgivelse Info" textFill="WHITE" />
    <Text layoutX="228.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alder:">
@@ -92,7 +92,7 @@
       </font>
    </Text>
    <JFXButton fx:id="Category" layoutX="213.0" layoutY="517.0" onAction="#BtnCategory" prefHeight="29.0" prefWidth="110.0" style="-fx-background-color: #15B559;" text="Helbredstilstande" textFill="WHITE" />
-   <JFXButton fx:id="editCase" layoutX="347.0" layoutY="562.0" onAction="#editCaseBtn" prefHeight="29.0" prefWidth="110.0" text="Edit Case">
+   <JFXButton fx:id="editCase" layoutX="347.0" layoutY="562.0" onAction="#editCaseBtn" prefHeight="29.0" prefWidth="110.0" text="Edit Sag">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>
