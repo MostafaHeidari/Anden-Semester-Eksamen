@@ -21,6 +21,7 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class CreateCitizenController implements Initializable {
+
     CitizenInfoModel citizenInfo;
 
     public CitizenInfoModel citizenInfoModel;
@@ -34,9 +35,9 @@ public class CreateCitizenController implements Initializable {
     @FXML
     public TableColumn tcLastCitizen;
     @FXML
-    public TableColumn tcCitizenCPR;
-    @FXML
-    public TableColumn tcCitizenAdresse;
+    public TableColumn tcCitizenAge;
+
+
 
     @FXML
     public JFXButton BtnDeleteCitizen;
@@ -54,15 +55,11 @@ public class CreateCitizenController implements Initializable {
     @FXML
     public TextField txtFieldCitizenLastName;
     @FXML
-    public TextField txtFieldCitizenCPR;
-    @FXML
-    public TextField txtFieldCitizenAddresse;
-    @FXML
-    public TextArea txtAreaCitizenGeneralInfo;
+    public TextField txtFieldCitizenAge;
 
 
     @FXML
-    public JFXButton backClasses;
+    public JFXButton backGroups;
     @FXML
     public JFXButton backStudent;
     @FXML
@@ -101,23 +98,19 @@ public class CreateCitizenController implements Initializable {
     public void btnHandleSaveCitizen() throws Exception {
         String firstName = txtFieldCitizenFirstName.getText();
         String lastName = txtFieldCitizenLastName.getText();
-        String cpr = txtFieldCitizenCPR.getText();
-        String Address = txtFieldCitizenAddresse.getText();
-        String info = txtAreaCitizenGeneralInfo.getText();
+        String Age = txtFieldCitizenAge.getText();
 
-        uploadCitizenInfo(firstName, lastName, cpr, Address, info);
+        uploadCitizenInfo(firstName, lastName, Age);
 
     }
 
-    public void uploadCitizenInfo(String firstName, String lastName, String address, String cpr, String info) throws SQLException, IOException {
+    public void uploadCitizenInfo(String firstName, String lastName,String Age) throws SQLException, IOException {
 
-        citizenInfo.createCitizen(firstName, lastName, address, cpr, info);
+        citizenInfo.createCitizen(firstName, lastName, Age);
 
         txtFieldCitizenFirstName.clear();
         txtFieldCitizenLastName.clear();
-        txtFieldCitizenAddresse.clear();
-        txtFieldCitizenCPR.clear();
-        txtAreaCitizenGeneralInfo.clear();
+        txtFieldCitizenAge.clear();
 
         tvCitizen.getItems().clear();
 
@@ -137,9 +130,7 @@ public class CreateCitizenController implements Initializable {
 
         tcLastCitizen.setCellValueFactory(new PropertyValueFactory<>("citizenLastName"));
 
-        tcCitizenCPR.setCellValueFactory(new PropertyValueFactory<>("CPR"));
-
-        tcCitizenAdresse.setCellValueFactory(new PropertyValueFactory<>("citizenAddress"));
+        tcCitizenAge.setCellValueFactory(new PropertyValueFactory<>("Age"));
 
         tvCitizen.setItems(citizenInfoModel.getAllCitizens());
     }

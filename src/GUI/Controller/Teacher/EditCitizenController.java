@@ -22,11 +22,8 @@ public class EditCitizenController {
     @FXML
     public TextField txtFieldCitizenLastNameEdit;
     @FXML
-    public TextField txtFieldCitizenCPREdit;
-    @FXML
-    public TextField txtFieldCitizenAddresseEdit;
-    @FXML
-    public TextArea txtAreaCitizenGeneralInfoEdit;
+    public TextField txtFieldCitizenAgeEdit;
+
 
     @FXML
     public JFXButton BtnLogOutOfPatient;
@@ -69,15 +66,12 @@ public class EditCitizenController {
 
         String updateCitizenName = txtFieldCitizenFirstNameEdit.getText();
         String updateCitizenLastName = txtFieldCitizenLastNameEdit.getText();
-        String updateCitizenCPR = txtFieldCitizenCPREdit.getText();
-        String updateCitizenAdresse = txtFieldCitizenAddresseEdit.getText();
-        String updateCitizenInformation = txtAreaCitizenGeneralInfoEdit.getText();
+        String updateCitizenCPR = txtFieldCitizenAgeEdit.getText();
 
         this.selectedCitizen.setCitizenName(updateCitizenName);
         this.selectedCitizen.setCitizenLastName(updateCitizenLastName);
-        this.selectedCitizen.setCPR(updateCitizenCPR);
-        this.selectedCitizen.setCitizenAddress(updateCitizenAdresse);
-        this.selectedCitizen.setCitizenInformation(updateCitizenInformation);
+        this.selectedCitizen.setAge(updateCitizenCPR);
+
 
 
         citizenInfoModel.editCitizen(this.selectedCitizen);
@@ -98,9 +92,8 @@ public class EditCitizenController {
     public void setSelectedCitizen(CitizenInfo citizenInfo) {
         txtFieldCitizenFirstNameEdit.setText(citizenInfo.getCitizenName());
         txtFieldCitizenLastNameEdit.setText(citizenInfo.getCitizenLastName());
-        txtFieldCitizenCPREdit.setText(citizenInfo.getCPR());
-        txtFieldCitizenAddresseEdit.setText(citizenInfo.getCitizenAddress());
-        txtAreaCitizenGeneralInfoEdit.setText(citizenInfo.getCitizenInformation());
+        txtFieldCitizenAgeEdit.setText(citizenInfo.getAge());
+
 
        this.selectedCitizen = citizenInfo;
     }

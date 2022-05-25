@@ -4,26 +4,20 @@ public class CitizenInfo {
     private int citizenId;
     private String citizenName;
     private String citizenLastName;
-    private String citizenAddress;
-    private String CPR;
-    private String citizenInformation;
+    private String Age;
 
     /**
      * @param citizenId
      * @param citizenName
      * @param citizenLastName
-     * @param citizenAddress
-     * @param CPR
-     * @param citizenInformation
-     * Constructor with citizenId, citizenName,  citizenLastName, citizenAddress, CPR, citizenInformation
+     * @param Age
+     * Constructor with citizenId, citizenName,  citizenLastName, CPR
      */
-    public CitizenInfo(int citizenId, String citizenName, String citizenLastName, String citizenAddress, String CPR, String citizenInformation) {
+    public CitizenInfo(int citizenId, String citizenName, String citizenLastName, String Age) {
         this.citizenId = citizenId;
         this.citizenName = citizenName;
         this.citizenLastName = citizenLastName;
-        this.citizenAddress = citizenAddress;
-        this.CPR = CPR;
-        this.citizenInformation = citizenInformation;
+        this.Age = Age;
     }
 
 
@@ -53,29 +47,14 @@ public class CitizenInfo {
         this.citizenLastName = citizenLastName;
     }
 
-    public String getCitizenAddress() {
-        return citizenAddress;
+    public String getAge() {
+        return Age;
     }
 
-    public void setCitizenAddress(String citizenAddress) {
-        this.citizenAddress = citizenAddress;
+    public void setAge(String CPR) {
+        this.Age = Age;
     }
 
-    public String getCPR() {
-        return CPR;
-    }
-
-    public void setCPR(String CPR) {
-        this.CPR = CPR;
-    }
-
-    public String getCitizenInformation() {
-        return citizenInformation;
-    }
-
-    public void setCitizenInformation(String citizenInformation) {
-        this.citizenInformation = citizenInformation;
-    }
 
     @Override
     public String toString() {
@@ -83,9 +62,7 @@ public class CitizenInfo {
                 "citizenId=" + citizenId +
                 ", citizenName='" + citizenName + '\'' +
                 ", citizenLastName='" + citizenLastName + '\'' +
-                ", citizenAddress='" + citizenAddress + '\'' +
-                ", CPR='" + CPR + '\'' +
-                ", citizenInformation='" + citizenInformation + '\'' +
+                ", Age='" + Age + '\'' +
                 '}';
     }
 }

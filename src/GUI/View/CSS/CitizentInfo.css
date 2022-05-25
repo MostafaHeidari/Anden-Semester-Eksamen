@@ -6,7 +6,7 @@
     -fx-background-color: white;
 }
 
-#txtFieldCitizenFirstName,#txtFieldCitizenLastName,#txtFieldCitizenCPR,#txtAreaCitizenGeneralInfo,#txtFieldCitizenAddresse{
+#txtFieldCitizenFirstName,#txtFieldCitizenLastName,#txtFieldCitizenAge,#txtAreaCitizenGeneralInfo,#txtFieldCitizenAddresse{
     -fx-text-fill: #2B2121;
     -fx-border-color: #001569;
 }
@@ -33,7 +33,7 @@
  }
 
 /* text-fields style of EditCitizen*/
-#txtFieldCitizenFirstNameEdit,#txtFieldCitizenLastNameEdit,#txtFieldCitizenCPREdit,#txtFieldCitizenAddresseEdit,#txtAreaCitizenGeneralInfoEdit{
+#txtFieldCitizenFirstNameEdit,#txtFieldCitizenLastNameEdit,#txtFieldCitizenAgeEdit,#txtFieldCitizenAddresseEdit,#txtAreaCitizenGeneralInfoEdit{
     -fx-control-inner-background: white;
     -fx-text-fill: #2B2121;
     -fx-background-color:  #EBF3EB;

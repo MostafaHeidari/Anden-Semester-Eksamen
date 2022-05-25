@@ -41,28 +41,25 @@ public class CitizenInfoDAO {
                     rs.getInt("PatientID"),
                     rs.getString("PatientName"),
                     rs.getString("PatientLastName"),
-                    rs.getString("PatientAddress"),
-                    rs.getString("Cpr"),
-                    rs.getString("PatientGenInfo"));
+                    rs.getString("Age"));
             allCitizenInfos.add(citizenInfoCord);
         }
         return allCitizenInfos;
     }
 
     //This method is used to Creating Citizen by inserting information in Patients table in a database.
-    public CitizenInfo createCitizen(String citizenName, String citizenLastName, String citizenAddress, String CPR, String citizenInformation) throws SQLException {
+    public CitizenInfo createCitizen(String citizenName, String citizenLastName, String Age) throws SQLException {
 
         try (Connection connection = DC.getConnection()) {
 
-            String sql = "INSERT INTO Patients (PatientName, PatientLastName , PatientGenInfo, Cpr, PatientAddress) VALUES (?,?,?,?,?);";
+            String sql = "INSERT INTO Patients (PatientName, PatientLastName, Cpr) VALUES (?,?,?);";
 
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
             ps.setString(1, citizenName);
             ps.setString(2, citizenLastName);
-            ps.setString(3, citizenInformation);
-            ps.setString(4, CPR);
-            ps.setString(5, citizenAddress);
+            ps.setString(3, Age);
+
 
 
             int affectedRows = ps.executeUpdate();
@@ -71,7 +68,7 @@ public class CitizenInfoDAO {
                 ResultSet rs = ps.getGeneratedKeys();
                 if (rs.next()) {
                     int citizenId = rs.getInt(1);
-                    CitizenInfo citizenCord = new CitizenInfo(citizenId, citizenName, citizenLastName, citizenAddress, CPR, citizenInformation);
+                    CitizenInfo citizenCord = new CitizenInfo(citizenId, citizenName, citizenLastName, Age);
                     return citizenCord;
                 }
 
@@ -91,13 +88,11 @@ public class CitizenInfoDAO {
      */
     public void editCitizen(CitizenInfo citizenInfoUpdate) throws Exception {
         try (Connection connection = DC.getConnection()) {
-            String sql = "UPDATE Patients SET PatientName = (?), PatientLastName =(?), PatientGenInfo = (?), Cpr = (?),PatientAddress = (?) WHERE PatientID = (?);";
+            String sql = "UPDATE Patients SET PatientName = (?), PatientLastName =(?),  Age = (?), WHERE PatientID = (?);";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, citizenInfoUpdate.getCitizenName());
             preparedStatement.setString(2, citizenInfoUpdate.getCitizenLastName());
-            preparedStatement.setString(3, citizenInfoUpdate.getCitizenInformation());
-            preparedStatement.setString(4, citizenInfoUpdate.getCPR());
-            preparedStatement.setString(5, citizenInfoUpdate.getCitizenAddress());
+            preparedStatement.setString(4, citizenInfoUpdate.getAge());
             preparedStatement.setInt(6, citizenInfoUpdate.getCitizenId());
             preparedStatement.executeUpdate();
 

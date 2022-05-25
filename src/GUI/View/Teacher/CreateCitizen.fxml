@@ -36,7 +36,7 @@
                <children>
                   <TextField fx:id="txtFieldCitizenFirstName" prefHeight="40.0" prefWidth="275.0" promptText="Navn" />
                   <TextField fx:id="txtFieldCitizenLastName" layoutX="10.0" layoutY="18.0" prefHeight="35.0" prefWidth="275.0" promptText="Efternavn" GridPane.rowIndex="1" />
-                  <TextField fx:id="txtFieldCitizenCPR" layoutX="10.0" layoutY="60.0" prefHeight="36.0" prefWidth="275.0" promptText="Alder" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtFieldCitizenAge" layoutX="10.0" layoutY="60.0" prefHeight="36.0" prefWidth="275.0" promptText="Alder" GridPane.rowIndex="2" />
                </children>
             </GridPane>
             <JFXButton fx:id="BtnLogOutOfPatient" layoutX="1049.0" layoutY="14.0" onAction="#LogOutOfPatient" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE">
@@ -96,8 +96,8 @@
             <Line endX="162.8000030517578" endY="2.288818359375E-5" layoutX="34.0" layoutY="100.0" startX="-34.0000114440918" startY="2.288818359375E-5" stroke="WHITE" />
             <Label layoutX="278.0" layoutY="224.0" text="Navn" />
             <Label layoutX="253.0" layoutY="286.0" text="Efternavn" />
-            <Label layoutX="281.0" layoutY="347.0" text="Age" />
-            <JFXButton fx:id="btnSaveCitizen" layoutX="397.0" layoutY="425.0" onAction="#btnHandleSaveCitizen" prefHeight="30.0" prefWidth="115.0" stylesheets="@../CSS/CreateStudent.css" text="Gem oplysninger" textFill="WHITE">
+            <Label layoutX="277.0" layoutY="347.0" text="Alder" />
+            <JFXButton fx:id="btnSaveCitizen" layoutX="317.0" layoutY="388.0" onAction="#btnHandleSaveCitizen" prefHeight="30.0" prefWidth="115.0" stylesheets="@../CSS/CreateStudent.css" text="Gem oplysninger" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></JFXButton>
@@ -117,7 +117,7 @@
                   <TableColumn fx:id="tcId" prefWidth="55.0" text="Id" />
                   <TableColumn fx:id="tcNameCitizen" prefWidth="96.0" text="Navn" />
                   <TableColumn fx:id="tcLastCitizen" prefWidth="122.4000244140625" text="Efternavn" />
-                  <TableColumn fx:id="tcCitizenCPR" prefWidth="134.0" text="Alder" />
+                  <TableColumn fx:id="tcCitizenAge" prefWidth="134.0" text="Alder" />
                </columns>
             </TableView>
          </children>

@@ -36,8 +36,8 @@ public class CitizenInfoModel {
 
 
 
-    public void createCitizen(String citizenName, String citizenLastName, String citizenAddress, String CPR, String citizenInformation) throws SQLException {
-        citizensList.add(citizenInfoManger.createCitizen(citizenName, citizenLastName, citizenAddress, CPR,citizenInformation));
+    public void createCitizen(String citizenName, String citizenLastName,  String Age) throws SQLException {
+        citizensList.add(citizenInfoManger.createCitizen(citizenName, citizenLastName,Age));
     }
 
     /**

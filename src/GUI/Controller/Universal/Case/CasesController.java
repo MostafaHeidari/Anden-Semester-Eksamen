@@ -30,6 +30,7 @@ public class CasesController implements Initializable {
     @FXML
     public JFXButton deleteCase;
     public JFXButton editCase;
+
     @FXML
     private CitizenInfo selectedCitizenInfo;
     @FXML
@@ -61,7 +62,7 @@ public class CasesController implements Initializable {
     @FXML
     public Text lastNameCitizenTxt;
     @FXML
-    public Text CprCitizenTxt;
+    public Text ageCitizenTxt;
     @FXML
     public Text GenInfoTxt1;
     @FXML
@@ -179,8 +180,7 @@ public class CasesController implements Initializable {
         selectedCitizenInfo = selectedCitizen;
         nameCitizenTxt.setText(selectedCitizen.getCitizenName());
         lastNameCitizenTxt.setText(selectedCitizen.getCitizenLastName());
-        CprCitizenTxt.setText(selectedCitizen.getCPR());
-        GenInfoTxt1.setText(selectedCitizen.getCitizenInformation());
+        ageCitizenTxt.setText(selectedCitizen.getAge());
         setCaseView();
 
     }

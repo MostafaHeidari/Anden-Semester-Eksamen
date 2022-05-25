@@ -81,22 +81,12 @@
       <JFXButton fx:id="deleteCase" layoutX="347.0" layoutY="607.0" onAction="#deleteCaseBtn" prefHeight="29.0" prefWidth="110.0" text="Slet Case" />
    <JFXButton fx:id="funktionsevne" layoutX="213.0" layoutY="562.0" onAction="#funktionsevneBtn" prefHeight="29.0" prefWidth="110.0" style="-fx-background-color: #15B559;" text="Funktionsevne" textFill="WHITE" />
    <JFXButton fx:id="funktionsevne1" layoutX="213.0" layoutY="607.0" onAction="#funktionsevneBtn" prefHeight="29.0" prefWidth="110.0" style="-fx-background-color: #15B559;" text="Omgivelse Info" textFill="WHITE" />
-   <Text layoutX="225.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPR-nummer:">
+   <Text layoutX="228.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alder:">
       <font>
          <Font size="16.0" />
       </font>
    </Text>
-   <Text layoutX="224.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="General Borger Info:">
-      <font>
-         <Font size="16.0" />
-      </font>
-   </Text>
-   <Text fx:id="CprCitizenTxt" layoutX="335.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-      <font>
-         <Font size="16.0" />
-      </font>
-   </Text>
-   <Text fx:id="GenInfoTxt1" layoutX="224.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+   <Text fx:id="ageCitizenTxt" layoutX="279.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
       <font>
          <Font size="16.0" />
       </font>
