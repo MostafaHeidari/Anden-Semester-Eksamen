@@ -32,15 +32,8 @@ public class CitizenController implements Initializable {
     @FXML
     public JFXButton caseInfo;
     @FXML
-    public JFXButton editCase;
-    @FXML
-    public JFXButton backToLastPage;
-    @FXML
     private JFXButton btnLogout;
-    @FXML
-    private JFXButton btnInfo;
-    @FXML
-    private JFXButton createCase;
+
 
     @FXML
     public TableView tvPatients;
