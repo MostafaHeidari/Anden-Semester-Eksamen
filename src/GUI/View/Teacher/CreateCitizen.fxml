@@ -6,7 +6,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -18,14 +17,14 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="950.0" stylesheets="@../CSS/CitizentInfo.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.CreateCitizenController">
    <children>
-      <Pane prefHeight="638.0" prefWidth="1200.0">
+      <Pane prefHeight="638.0" prefWidth="1119.0">
          <children>
             <Label layoutX="330.0" layoutY="50.0" prefHeight="49.0" prefWidth="283.0" text="Indtaste Borger Oplysninger">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <GridPane fx:id="GridPane1" layoutX="328.0" layoutY="122.0" prefHeight="187.0" prefWidth="275.0">
+            <GridPane fx:id="GridPane1" layoutX="317.0" layoutY="201.0" prefHeight="187.0" prefWidth="275.0">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                </columnConstraints>
@@ -33,17 +32,14 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
                   <TextField fx:id="txtFieldCitizenFirstName" prefHeight="40.0" prefWidth="275.0" promptText="Navn" />
                   <TextField fx:id="txtFieldCitizenLastName" layoutX="10.0" layoutY="18.0" prefHeight="35.0" prefWidth="275.0" promptText="Efternavn" GridPane.rowIndex="1" />
-                  <TextField fx:id="txtFieldCitizenCPR" layoutX="10.0" layoutY="60.0" prefHeight="36.0" prefWidth="275.0" promptText="CPR-nr" GridPane.rowIndex="2" />
-                  <TextField fx:id="txtFieldCitizenAddresse" prefHeight="34.0" prefWidth="275.0" promptText="Adresse" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtFieldCitizenCPR" layoutX="10.0" layoutY="60.0" prefHeight="36.0" prefWidth="275.0" promptText="Alder" GridPane.rowIndex="2" />
                </children>
             </GridPane>
-            <TextArea fx:id="txtAreaCitizenGeneralInfo" layoutX="328.0" layoutY="318.0" prefHeight="209.0" prefWidth="276.0" promptText="Generelle Oplysninger" />
-            <JFXButton fx:id="BtnLogOutOfPatient" layoutX="1108.0" layoutY="16.0" onAction="#LogOutOfPatient" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE">
+            <JFXButton fx:id="BtnLogOutOfPatient" layoutX="1049.0" layoutY="14.0" onAction="#LogOutOfPatient" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -98,15 +94,14 @@
                </children>
             </Pane>
             <Line endX="162.8000030517578" endY="2.288818359375E-5" layoutX="34.0" layoutY="100.0" startX="-34.0000114440918" startY="2.288818359375E-5" stroke="WHITE" />
-            <Label layoutX="289.0" layoutY="136.0" text="Navn" />
-            <Label layoutX="265.0" layoutY="183.0" text="Efternavn" />
-            <Label layoutX="243.0" layoutY="232.0" text="CPR-Nummer" />
-            <Label layoutX="272.0" layoutY="278.0" text="Adresse" />
-            <JFXButton fx:id="btnSaveCitizen" layoutX="328.0" layoutY="544.0" onAction="#btnHandleSaveCitizen" prefHeight="30.0" prefWidth="115.0" stylesheets="@../CSS/CreateStudent.css" text="Gem oplysninger" textFill="WHITE">
+            <Label layoutX="278.0" layoutY="224.0" text="Navn" />
+            <Label layoutX="253.0" layoutY="286.0" text="Efternavn" />
+            <Label layoutX="281.0" layoutY="347.0" text="Age" />
+            <JFXButton fx:id="btnSaveCitizen" layoutX="397.0" layoutY="425.0" onAction="#btnHandleSaveCitizen" prefHeight="30.0" prefWidth="115.0" stylesheets="@../CSS/CreateStudent.css" text="Gem oplysninger" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></JFXButton>
-            <Label layoutX="269.0" layoutY="259.0" />
+            <Label layoutX="258.0" layoutY="338.0" />
             <JFXButton fx:id="BtnDeleteCitizen" layoutX="798.0" layoutY="544.0" onAction="#DeleteCitizenAction" prefHeight="30.0" prefWidth="109.0" stylesheets="@../CSS/CreateStudent.css" text="Slet Citizen" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -117,13 +112,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <TableView fx:id="tvCitizen" layoutX="666.0" layoutY="125.0" prefHeight="405.0" prefWidth="496.0">
+            <TableView fx:id="tvCitizen" layoutX="666.0" layoutY="125.0" prefHeight="405.0" prefWidth="409.0">
                <columns>
                   <TableColumn fx:id="tcId" prefWidth="55.0" text="Id" />
                   <TableColumn fx:id="tcNameCitizen" prefWidth="96.0" text="Navn" />
                   <TableColumn fx:id="tcLastCitizen" prefWidth="122.4000244140625" text="Efternavn" />
-                  <TableColumn fx:id="tcCitizenCPR" prefWidth="114.4000244140625" text="CPR-Nr" />
-                  <TableColumn fx:id="tcCitizenAdresse" prefWidth="114.4000244140625" text="Adresse" />
+                  <TableColumn fx:id="tcCitizenCPR" prefWidth="134.0" text="Alder" />
                </columns>
             </TableView>
          </children>
