@@ -32,6 +32,8 @@ public class SubcategoryMovingApparatController {
     @FXML
     private TextArea txtMovingApparatPresent;
     @FXML
+    private TextArea txtMovingApparatDate;
+    @FXML
     private JFXComboBox jfxComboBox;
 
 
@@ -96,6 +98,7 @@ public class SubcategoryMovingApparatController {
         }
         categoryModel.updateCategory(caseID,"Present",txtMovingApparatPresent.getText(), "Condition");
 
+        
        // jfxComboBox.getSelectionModel().getSelectedItem();
     }
 
