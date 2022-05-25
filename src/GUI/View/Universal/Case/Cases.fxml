@@ -78,9 +78,24 @@
             </FontAwesomeIconView>
          </children>
       </Pane>
-      <JFXButton fx:id="deleteCase" layoutX="377.0" layoutY="607.0" onAction="#deleteCaseBtn" prefHeight="29.0" prefWidth="80.0" text="Slet Sag" />
-   <JFXButton fx:id="funktionsevne" layoutX="228.0" layoutY="210.0" onAction="#funktionsevneBtn" prefHeight="50.0" prefWidth="212.0" style="-fx-background-color: #ffbf00;" text="Funktionsevne" textFill="WHITE" />
-   <JFXButton fx:id="funktionsevne1" layoutX="230.0" layoutY="270.0" onAction="#funktionsevneBtn" prefHeight="50.0" prefWidth="212.0" style="-fx-background-color: #ff0000;" text="General Info" textFill="WHITE" />
+      <JFXButton fx:id="deleteCase" layoutX="377.0" layoutY="607.0" onAction="#deleteCaseBtn" prefHeight="29.0" prefWidth="80.0" text="Slet Sag">
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></JFXButton>
+   <JFXButton fx:id="funktionsevne" layoutX="228.0" layoutY="210.0" onAction="#funktionsevneBtn" prefHeight="50.0" prefWidth="212.0" style="-fx-background-color: #ffbf00;" text="Funktionsevne" textFill="WHITE">
+      <font>
+         <Font size="18.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></JFXButton>
+   <JFXButton fx:id="funktionsevne1" layoutX="230.0" layoutY="270.0" onAction="#funktionsevneBtn" prefHeight="50.0" prefWidth="212.0" style="-fx-background-color: #ff0000;" text="General Info" textFill="WHITE">
+      <font>
+         <Font size="18.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></JFXButton>
    <Text layoutX="226.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alder:">
       <font>
          <Font size="16.0" />
@@ -91,8 +106,14 @@
          <Font size="16.0" />
       </font>
    </Text>
-   <JFXButton fx:id="Category" layoutX="228.0" layoutY="150.0" onAction="#BtnCategory" prefHeight="50.0" prefWidth="212.0" style="-fx-background-color: #00bfff;" text="Helbredstilstande" textFill="WHITE" />
-   <JFXButton fx:id="editCase" layoutX="377.0" layoutY="562.0" onAction="#editCaseBtn" prefHeight="29.0" prefWidth="80.0" text="Ændre Sag">
+   <JFXButton fx:id="Category" layoutX="228.0" layoutY="150.0" onAction="#BtnCategory" prefHeight="50.0" prefWidth="212.0" style="-fx-background-color: #00bfff;" text="Helbredstilstande" textFill="WHITE">
+      <font>
+         <Font size="18.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></JFXButton>
+   <JFXButton fx:id="editCase" layoutX="377.0" layoutY="567.0" onAction="#editCaseBtn" prefHeight="29.0" prefWidth="80.0" text="Ændre Sag">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>
