@@ -49,15 +49,6 @@ public class CasesController implements Initializable {
     public TableColumn tcCaseName;
 
     @FXML
-    public JFXButton backToLastPage;
-    @FXML
-    public JFXButton backClass;
-    @FXML
-    public JFXButton backCitizen;
-    @FXML
-    public JFXButton backStudent;
-
-    @FXML
     public Text nameCitizenTxt;
     @FXML
     public Text lastNameCitizenTxt;
@@ -118,9 +109,6 @@ public class CasesController implements Initializable {
         }
     }
 
-
-    public void btnBackGroups(ActionEvent actionEvent) {
-    }
 
     public void funktionsevneBtn(ActionEvent event) throws IOException {
         if (tvCase.getSelectionModel().getSelectedItem() != null) {
