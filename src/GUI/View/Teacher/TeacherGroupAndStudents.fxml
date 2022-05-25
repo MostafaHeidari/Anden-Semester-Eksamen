@@ -50,7 +50,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXButton fx:id="addStudentToGroup" alignment="TOP_LEFT" layoutX="441.0" layoutY="194.0" onAction="#addStudentToGroupBtn" prefHeight="27.0" prefWidth="141.0" text="Tilføj elev til en Gruppe">
+      <JFXButton fx:id="addStudentToGroup" alignment="TOP_LEFT" layoutX="450.0" layoutY="197.0" onAction="#addStudentToGroupBtn" prefHeight="27.0" prefWidth="141.0" text="Tilføj elev til en Gruppe">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
@@ -91,7 +91,7 @@
       </JFXButton>
       <Pane layoutX="-4.0" prefHeight="720.0" prefWidth="199.0" style="-fx-background-color: #D4D3BE;">
          <children>
-            <Text fill="WHITE" layoutX="11.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gruppe&#10;Organisering" textAlignment="CENTER">
+            <Text fill="#001569" layoutX="11.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gruppe&#10;Organisering" textAlignment="CENTER">
                <font>
                   <Font size="32.0" />
                </font>
@@ -138,7 +138,7 @@
             </FontAwesomeIconView>
          </children>
       </Pane>
-      <JFXButton fx:id="deleteAClass" alignment="TOP_LEFT" layoutX="441.0" layoutY="230.0" onAction="#deleteAGroupBtn" prefHeight="27.0" prefWidth="141.0" text="Slet en Gruppe">
+      <JFXButton fx:id="deleteAClass" alignment="TOP_LEFT" layoutX="450.0" layoutY="233.0" onAction="#deleteAGroupBtn" prefHeight="27.0" prefWidth="141.0" text="Slet en Gruppe">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

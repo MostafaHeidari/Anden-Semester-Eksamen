@@ -21,7 +21,7 @@
             <FontAwesomeIconView fill="#2b2121" layoutX="226.0" layoutY="36.0" size="20" text="" />
          </children>
          <effect>
-            <Glow level="0.29" />
+            <Glow level="0.39" />
          </effect>
       </Pane>
       <JFXButton fx:id="Logout" layoutX="583.0" layoutY="14.0" onAction="#LogOut" style="-fx-background-color: #001569;" text="Log ud" textFill="WHITE">
