@@ -1,0 +1,31 @@
+.root {
+    -fx-background-color: #EBF3EB;
+}
+
+.button{
+    -fx-background-color: none;
+    -fx-border-insets: right;
+}
+
+.button:hover{
+    -fx-border-style: solid;
+ }
+
+#BtnBack{
+    -fx-font-size: 12px;
+    -fx-text-fill: #001569;
+    -fx-border-color: #797862;
+    -fx-background-color: none;
+}
+
+#BtnBack:hover{
+    -fx-font-size: 15px;
+    -fx-background-color: white;
+    -fx-text-fill: #2B2121;
+    -fx-border-color: #15B559;
+}
+
+#InfoTextBox{
+    -fx-border-color: #797862;
+    
+}

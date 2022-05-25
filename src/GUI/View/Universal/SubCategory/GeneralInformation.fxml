@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="657.0" prefWidth="1031.0" stylesheets="@../../CSS/GeneralInfo.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.GeneralinformationController">
+   <children>
+      <Pane prefHeight="666.0" prefWidth="198.0" style="-fx-background-color: #D4D3BE;">
+         <children>
+            <JFXButton fx:id="BtnBack" layoutX="14.0" layoutY="592.0" onAction="#BtnBack" prefHeight="40.0" prefWidth="170.0" stylesheets="@../../CSS/CreateStudent.css" text="Tilbage">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="49.0" layoutY="618.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <Label layoutX="14.0" layoutY="23.0" prefHeight="97.0" prefWidth="171.0" text=" Generelle &#10;oplysninger" textAlignment="CENTER" textFill="#001569">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Line endX="162.8000030517578" endY="2.288818359375E-5" layoutX="36.0" layoutY="126.0" startX="-34.0000114440918" startY="2.288818359375E-5" stroke="WHITE" />
+      <TextArea fx:id="InfoTextBox" layoutX="526.0" layoutY="39.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="549.0" prefWidth="478.0" promptText="Indtast oplysningerne">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font size="18.0" />
+         </font></TextArea>
+      <Pane layoutX="242.0" layoutY="39.0" prefHeight="596.0" prefWidth="262.0" style="-fx-background-color: #EBF3EB;">
+         <effect>
+            <DropShadow height="23.39" radius="12.935" width="30.35" />
+         </effect>
+         <children>
+            <GridPane layoutX="32.0" layoutY="15.0" prefHeight="566.0" prefWidth="198.0" styleClass="sidebar">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="234.0552978515625" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="234.0552978515625" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="365.30413818359375" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="365.30413818359375" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="380.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="380.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="380.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="380.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="380.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="380.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="380.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="BtnMestring" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="Mestring">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Borgerens bevidste eller ubevidstehåndtering af livet/sygdommen – bådeudfordringer og muligheder" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="BtnMotivation" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="72.0" prefWidth="198.0" styleClass="topbar-buttons" text="Motivation" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Drivkraften bag at borgeren handler påen bestemt måde eller går i gangmed/opretholder en opgave/indsats." />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="BtnRessourcer" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="Ressourcer" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="De fysiske eller mentale kræfter, somborgerenen i et vist omfang har tilrådighed og kan udnytte. Fysiske kræfterkan fx være i form af fysisk sundhed ogstyrke. Mentale kræfter kan fx være iform af psykisk sundhed og styrke,herunder tanker og måder at forholde sigtil situationer og andre mennesker på. " />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="BtnRoller" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="75.0" prefWidth="386.0" text="Roller" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="De roller som er særligt vigtige forborgeren i forhold til familie, arbejde ogsamfund." />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="BtnVaner" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="75.0" prefWidth="386.0" text="Væner" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Regelmæssig adfærd som borgeren hartillært gennem stadig gentagelse ogudførelse helt eller delvist ubevidst." />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="BtnUddannelse" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="77.0" prefWidth="198.0" styleClass="topbar-buttons" text="Uddannelse / Job" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Nuværende eller tidligere uddannelsesog/eller erhvervsmæssig baggrund.Fx folkeskole, erhvervsuddannelse ogvideregående uddannelse." />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="BtnLivsHistorie" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="LivsHistorie" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="En beskrivelse af borgerens oplevelse afvæsentlige begivenheder, interesser oggøremål igennem livet" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="BtnHelbred" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="Helbreds Oplysninger" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Helbredsoplysninger:Aktuelle eller tidligere sygdomme oghandicap der har betydning forborgerens situation.Sundhedsfaglige kontakter:Medarbejder eller enheder indenforsundhedsvæsenet borgeren er tilknyttet,fx øjenlæge, tandlæge, fodterapeut ellerafdeling/ambulatorium." />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="BtnHelp" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="Hjælpemidler" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Udstyr, produkter og teknologi somanvendes af borgeren i dagligeaktiviteter, inkl. sådanne som er tilpasseteller særligt fremstillet til, implanteret i,placeret på eller nær personen, somanvender dem. (Inkl. almindeligegenstande og hjælpemidler og teknologitil personlig anvendelse). " />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="BtnBolige" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="Boligens indretning" GridPane.rowIndex="9">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="En beskrivelse af boligens fysiske rammerog omgivelser, der har betydning forborgerens hverdagsliv og funktionsevne." />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="BtnNetwork" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="Netværk" GridPane.rowIndex="10">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Personer som er tæt på borgeren, ogsom giver praktisk og/ellerfølelsesmæssigt støtte og omsorgoverfor borgeren. Netværk kan væreoffentligt eller privat." />
+                     </tooltip>
+                  </Button>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </GridPane>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnSaveCitizen" buttonType="RAISED" layoutX="704.0" layoutY="604.0" onAction="#btnHandleSaveCitizen" prefHeight="30.0" prefWidth="122.0" stylesheets="@../../CSS/CreateStudent.css" text="Gem oplysninger" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
