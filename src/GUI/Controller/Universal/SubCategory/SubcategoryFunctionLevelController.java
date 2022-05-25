@@ -82,15 +82,15 @@ public class SubcategoryFunctionLevelController {
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
         if (categoryModel.readCategory(caseID,"Problems with personal care") == null){
 
-            categoryModel.createCategory(caseID,"Problems with personal care",txtPersonalCare.getText());
+            categoryModel.createCategory(caseID,"Problems with personal care",txtPersonalCare.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with personal care",txtPersonalCare.getText());
+        categoryModel.updateCategory(caseID,"Problems with personal care",txtPersonalCare.getText(), "Condition");
 
         if (categoryModel.readCategory(caseID,"Problems with daily activities") == null){
 
-            categoryModel.createCategory(caseID,"Problems with daily activities",txtDailyActivities.getText());
+            categoryModel.createCategory(caseID,"Problems with daily activities",txtDailyActivities.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with daily activities",txtDailyActivities.getText());
+        categoryModel.updateCategory(caseID,"Problems with daily activities",txtDailyActivities.getText(), "Condition");
     }
 
     /**
@@ -100,8 +100,8 @@ public class SubcategoryFunctionLevelController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtPersonalCare.setText(categoryModel.readCategory(caseID,"Problems with personal care"));
-        txtDailyActivities.setText(categoryModel.readCategory(caseID,"Problems with daily activities"));
+        txtPersonalCare.setText(categoryModel.readCategory(caseID,"Problems with personal care")[0]);
+        txtDailyActivities.setText(categoryModel.readCategory(caseID,"Problems with daily activities")[0]);
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {

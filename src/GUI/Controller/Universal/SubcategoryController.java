@@ -74,9 +74,9 @@ public class SubcategoryController {
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
         if (categoryModel.readCategory(caseID,problemName) == null){
 
-            categoryModel.createCategory(caseID,problemName,txtDescription.getText());
+            categoryModel.createCategory(caseID,problemName,txtDescription.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,problemName,txtDescription.getText());
+        categoryModel.updateCategory(caseID,problemName,txtDescription.getText(), "Condition");
     }
 
     /**
@@ -86,7 +86,7 @@ public class SubcategoryController {
      */
     public void setId(String problemName) throws SQLException {
         this.problemName = problemName;
-        txtDescription.setText(categoryModel.readCategory(caseID,problemName));
+        txtDescription.setText(categoryModel.readCategory(caseID,problemName)[0]);
         subCatText.setText(problemName);
     }
 

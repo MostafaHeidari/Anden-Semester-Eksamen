@@ -1,40 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane style="-fx-background-color: #BBE5E8;" prefHeight="418.0" prefWidth="900.0" stylesheets="@../../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.SubCategory.SubcategoryMovingApparatController">
+<AnchorPane prefHeight="833.0" prefWidth="456.0" style="-fx-background-color: #BBE5E8;" stylesheets="@../../CSS/Category.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.SubCategory.SubcategoryMovingApparatController">
    <children>
-      <JFXButton fx:id="btnBack" layoutX="625.0" layoutY="350.0" onAction="#subCategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
+      <JFXButton fx:id="btnBack" layoutX="200.0" layoutY="800.0" onAction="#subCategoryBack" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Tilbage">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="btnLogOut" layoutX="725.0" layoutY="350.0" onAction="#subCategoryLogOut" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Log ud">
+      <JFXButton fx:id="btnLogOut" layoutX="300.0" layoutY="800.0" onAction="#subCategoryLogOut" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Log ud">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Text layoutX="100.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bevægelses Apparat" textAlignment="CENTER" underline="true" wrappingWidth="700.0">
+      <Text layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bevægelses Apparat" textAlignment="CENTER" underline="true" wrappingWidth="212.5535896447235">
          <font>
             <Font name="Arial Narrow Bold Italic" size="20.0" />
          </font>
       </Text>
-      <Label fx:id="bevægeapparat_1" layoutX="15.0" layoutY="200.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med mobilitet og bevægelse">
+      <Label layoutX="100.0" layoutY="50.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="Problemer med mobilitet og bevægelse">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextArea fx:id="txtMovingApparat" layoutX="333.0" layoutY="125.0" prefHeight="206.0" prefWidth="501.0" />
+      <TextArea fx:id="txtMovingApparatNotat" layoutX="70.0" layoutY="200.0" prefHeight="121.0" prefWidth="324.0" />
 
-      <JFXButton fx:id="btnSave" layoutX="536.0" layoutY="350.0" onAction="#subCategorySave" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Gem">
+      <JFXButton fx:id="btnSave" layoutX="100.0" layoutY="800.0" onAction="#subCategorySave" prefHeight="33.0" prefWidth="75.0" style="-fx-border-color: blue;" text="Gem">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
+      <Label layoutX="14.0" layoutY="160.0" minWidth="139.0" prefHeight="35.0" prefWidth="139.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="FAGLIGT NOTAT :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="360.0" minWidth="139.0" prefHeight="35.0" prefWidth="139.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="NUVÆRENDE VURDERING:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtMovingApparatPresent" layoutX="70.0" layoutY="400.0" prefHeight="121.0" prefWidth="324.0" />
+      <TextArea fx:id="txtMovingApparatDate" layoutX="66.0" layoutY="647.0" prefHeight="53.0" prefWidth="324.0" />
+      <Label layoutX="14.0" layoutY="604.0" minWidth="139.0" prefHeight="35.0" prefWidth="139.0" style="-fx-space: 10;" styleClass="CategoryHealthConditions" text="DATO">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+
+      <JFXComboBox id="jfxComboBox" layoutX="194.0" layoutY="553.0" prefWidth="200" promptText="Vælg forventet niveau">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <Label fx:id="Mindskes">
+                  Mindskes
+               </Label>
+               <Label fx:id="uændret">
+                  Forbliver uændret
+               </Label>
+               <Label fx:id="Forsvinder">
+                  Forsvinder
+               </Label>
+            </FXCollections>
+         </items>
+         <validators>
+            <RequiredFieldValidator message="Input Required!">
+            </RequiredFieldValidator>
+         </validators>
+      </JFXComboBox>
    </children>
 </AnchorPane>

@@ -83,15 +83,15 @@ public class SubcategorySleepController {
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
         if (categoryModel.readCategory(caseID,"Day problems") == null){
 
-            categoryModel.createCategory(caseID,"Day problems",txtDayProblems.getText());
+            categoryModel.createCategory(caseID,"Day problems",txtDayProblems.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Day problems",txtDayProblems.getText());
+        categoryModel.updateCategory(caseID,"Day problems",txtDayProblems.getText(), "Condition");
 
         if (categoryModel.readCategory(caseID,"Sleep problems") == null){
 
-            categoryModel.createCategory(caseID,"Sleep problems",txtSleepProblems.getText());
+            categoryModel.createCategory(caseID,"Sleep problems",txtSleepProblems.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Sleep problems",txtSleepProblems.getText());
+        categoryModel.updateCategory(caseID,"Sleep problems",txtSleepProblems.getText(), "Condition");
     }
 
     /**
@@ -101,8 +101,8 @@ public class SubcategorySleepController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtDayProblems.setText(categoryModel.readCategory(caseID,"Day problems"));
-        txtSleepProblems.setText(categoryModel.readCategory(caseID,"Sleep problems"));
+        txtDayProblems.setText(categoryModel.readCategory(caseID,"Day problems")[0]);
+        txtSleepProblems.setText(categoryModel.readCategory(caseID,"Sleep problems")[0]);
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {

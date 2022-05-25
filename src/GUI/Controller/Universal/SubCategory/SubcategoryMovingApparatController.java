@@ -4,11 +4,13 @@ import BE.CitizenInfo;
 import GUI.Controller.Universal.CategoryController;
 import GUI.Model.CategoryModel;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXComboBox;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -26,7 +28,14 @@ public class SubcategoryMovingApparatController {
     @FXML
     private JFXButton btnLogOut;
     @FXML
-    public TextArea txtMovingApparat;
+    private TextArea txtMovingApparatNotat;
+    @FXML
+    private TextArea txtMovingApparatPresent;
+    @FXML
+    private TextArea txtMovingApparatDate;
+    @FXML
+    private JFXComboBox jfxComboBox;
+
 
    // this is instance variable is not used to now//
     private int caseID = -1;
@@ -76,11 +85,29 @@ public class SubcategoryMovingApparatController {
      * @throws SQLException
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
-        if (categoryModel.readCategory(caseID,"Problems with moving") == null){
+        if (categoryModel.readCategory(caseID,"Notat") == null){
 
-            categoryModel.createCategory(caseID,"Problems with moving",txtMovingApparat.getText());
+            categoryModel.createCategory(caseID,"Notat",txtMovingApparatNotat.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with moving",txtMovingApparat.getText());
+        categoryModel.updateCategory(caseID,"Notat",txtMovingApparatNotat.getText(), "Condition");
+
+
+        if (categoryModel.readCategory(caseID,"Present") == null){
+
+            categoryModel.createCategory(caseID,"Present",txtMovingApparatPresent.getText(), "Condition");
+        }
+        categoryModel.updateCategory(caseID,"Present",txtMovingApparatPresent.getText(), "Condition");
+
+
+
+        if (categoryModel.readCategory(caseID,"Date") == null){
+
+            categoryModel.createCategory(caseID,"Date",txtMovingApparatDate.getText(), "Condition");
+        }
+        categoryModel.updateCategory(caseID,"Date",txtMovingApparatDate.getText(), "Condition");
+
+
+        // jfxComboBox.getSelectionModel().getSelectedItem();
     }
 
     /**
@@ -90,10 +117,12 @@ public class SubcategoryMovingApparatController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtMovingApparat.setText(categoryModel.readCategory(caseID,"Problems with moving"));
+        txtMovingApparatNotat.setText(categoryModel.readCategory(caseID,"Notat")[0]);
+        txtMovingApparatPresent.setText(categoryModel.readCategory(caseID,"Present")[0]);
     }
-
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {
         selectedCitizenInfo = selectedCitizen;
     }
+
+
 }

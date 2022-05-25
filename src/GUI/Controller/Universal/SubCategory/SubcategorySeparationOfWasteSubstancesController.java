@@ -85,33 +85,33 @@ public class SubcategorySeparationOfWasteSubstancesController {
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
         if (categoryModel.readCategory(caseID,"Problems with urination") == null){
-            categoryModel.createCategory(caseID,"Problems with urination",txturination.getText());
+            categoryModel.createCategory(caseID,"Problems with urination",txturination.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with urination",txturination.getText());
+        categoryModel.updateCategory(caseID,"Problems with urination",txturination.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Problems with urinary incontinence") == null){
-            categoryModel.createCategory(caseID,"Problems with urinary incontinence",txtIUrinaryIncontinence.getText());
+            categoryModel.createCategory(caseID,"Problems with urinary incontinence",txtIUrinaryIncontinence.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with urinary incontinence",txtIUrinaryIncontinence.getText());
+        categoryModel.updateCategory(caseID,"Problems with urinary incontinence",txtIUrinaryIncontinence.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Problems with fecal incontinence") == null){
-            categoryModel.createCategory(caseID,"Problems with fecal incontinence",txtFecalIncontinence.getText());
+            categoryModel.createCategory(caseID,"Problems with fecal incontinence",txtFecalIncontinence.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with fecal incontinence",txtFecalIncontinence.getText());
+        categoryModel.updateCategory(caseID,"Problems with fecal incontinence",txtFecalIncontinence.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Problems with stomach and intestines") == null){
-            categoryModel.createCategory(caseID,"Problems with stomach and intestines",txtStomachAndIntestines.getText());
+            categoryModel.createCategory(caseID,"Problems with stomach and intestines",txtStomachAndIntestines.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with stomach and intestines",txtStomachAndIntestines.getText());
+        categoryModel.updateCategory(caseID,"Problems with stomach and intestines",txtStomachAndIntestines.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Problems with fluid from sinks") == null){
-            categoryModel.createCategory(caseID,"Problems with fluid from sinks",txtFluidFromSinks.getText());
+            categoryModel.createCategory(caseID,"Problems with fluid from sinks",txtFluidFromSinks.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with fluid from sinks",txtFluidFromSinks.getText());
+        categoryModel.updateCategory(caseID,"Problems with fluid from sinks",txtFluidFromSinks.getText(), "Condition");
     }
 
     /**
@@ -121,11 +121,11 @@ public class SubcategorySeparationOfWasteSubstancesController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txturination.setText(categoryModel.readCategory(caseID,"Problems with urination"));
-        txtIUrinaryIncontinence.setText(categoryModel.readCategory(caseID,"Problems with urinary incontinence"));
-        txtFecalIncontinence.setText(categoryModel.readCategory(caseID,"Problems with fecal incontinence"));
-        txtStomachAndIntestines.setText(categoryModel.readCategory(caseID,"Problems with stomach and intestines"));
-        txtFluidFromSinks.setText(categoryModel.readCategory(caseID,"Problems with fluid from sinks"));
+        txturination.setText(categoryModel.readCategory(caseID,"Problems with urination")[0]);
+        txtIUrinaryIncontinence.setText(categoryModel.readCategory(caseID,"Problems with urinary incontinence")[0]);
+        txtFecalIncontinence.setText(categoryModel.readCategory(caseID,"Problems with fecal incontinence")[0]);
+        txtStomachAndIntestines.setText(categoryModel.readCategory(caseID,"Problems with stomach and intestines")[0]);
+        txtFluidFromSinks.setText(categoryModel.readCategory(caseID,"Problems with fluid from sinks")[0]);
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {

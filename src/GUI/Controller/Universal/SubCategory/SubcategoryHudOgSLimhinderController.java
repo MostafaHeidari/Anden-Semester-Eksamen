@@ -94,57 +94,57 @@ public class SubcategoryHudOgSLimhinderController {
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
         if (categoryModel.readCategory(caseID,"Problems with surgical wound") == null){
-            categoryModel.createCategory(caseID,"Problems with surgical wound",txtsurgicalWound.getText());
+            categoryModel.createCategory(caseID,"Problems with surgical wound",txtsurgicalWound.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with surgical wound",txtsurgicalWound.getText());
+        categoryModel.updateCategory(caseID,"Problems with surgical wound",txtsurgicalWound.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Problems with diabetic wound") == null){
-            categoryModel.createCategory(caseID,"Problems with diabetic wound",txtdiabeticWound.getText());
+            categoryModel.createCategory(caseID,"Problems with diabetic wound",txtdiabeticWound.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with diabetic wound",txtdiabeticWound.getText());
+        categoryModel.updateCategory(caseID,"Problems with diabetic wound",txtdiabeticWound.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Problems with cancer wound") == null){
-            categoryModel.createCategory(caseID,"Problems with cancer wound",txtCancerWound.getText());
+            categoryModel.createCategory(caseID,"Problems with cancer wound",txtCancerWound.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with cancer wound",txtCancerWound.getText());
+        categoryModel.updateCategory(caseID,"Problems with cancer wound",txtCancerWound.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Problems with pressure wound") == null){
-            categoryModel.createCategory(caseID,"Problems with pressure wound",txtPressureWound.getText());
+            categoryModel.createCategory(caseID,"Problems with pressure wound",txtPressureWound.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with pressure wound",txtPressureWound.getText());
+        categoryModel.updateCategory(caseID,"Problems with pressure wound",txtPressureWound.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Problems with artillery wound") == null){
-            categoryModel.createCategory(caseID,"Problems with artillery wound",txtArtilleryWound.getText());
+            categoryModel.createCategory(caseID,"Problems with artillery wound",txtArtilleryWound.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with artillery wound",txtArtilleryWound.getText());
+        categoryModel.updateCategory(caseID,"Problems with artillery wound",txtArtilleryWound.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Problems with venous wound") == null){
-            categoryModel.createCategory(caseID,"Problems with venous wound",txtVenousWound.getText());
+            categoryModel.createCategory(caseID,"Problems with venous wound",txtVenousWound.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with venous wound",txtVenousWound.getText());
+        categoryModel.updateCategory(caseID,"Problems with venous wound",txtVenousWound.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Problems with mixed wound") == null){
-            categoryModel.createCategory(caseID,"Problems with mixed wound",txtMixedWound.getText());
+            categoryModel.createCategory(caseID,"Problems with mixed wound",txtMixedWound.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with mixed wound",txtMixedWound.getText());
+        categoryModel.updateCategory(caseID,"Problems with mixed wound",txtMixedWound.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Problems with trauma wound") == null){
-            categoryModel.createCategory(caseID,"Problems with trauma wound",txtTraumaWound.getText());
+            categoryModel.createCategory(caseID,"Problems with trauma wound",txtTraumaWound.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with trauma wound",txtTraumaWound.getText());
+        categoryModel.updateCategory(caseID,"Problems with trauma wound",txtTraumaWound.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Other problems") == null){
-            categoryModel.createCategory(caseID,"Other problems",txtOtherProblems.getText());
+            categoryModel.createCategory(caseID,"Other problems",txtOtherProblems.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Other problems",txtOtherProblems.getText());
+        categoryModel.updateCategory(caseID,"Other problems",txtOtherProblems.getText(), "Condition");
     }
 
     /**
@@ -154,15 +154,15 @@ public class SubcategoryHudOgSLimhinderController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtsurgicalWound.setText(categoryModel.readCategory(caseID,"Problems with surgical wound"));
-        txtdiabeticWound.setText(categoryModel.readCategory(caseID,"Problems with diabetic wound"));
-        txtCancerWound.setText(categoryModel.readCategory(caseID,"Problems with cancer wound"));
-        txtPressureWound.setText(categoryModel.readCategory(caseID,"Problems with pressure wound"));
-        txtArtilleryWound.setText(categoryModel.readCategory(caseID,"Problems with artillery wound"));
-        txtVenousWound.setText(categoryModel.readCategory(caseID,"Problems with venous wound"));
-        txtMixedWound.setText(categoryModel.readCategory(caseID,"Problems with mixed wound"));
-        txtTraumaWound.setText(categoryModel.readCategory(caseID,"Problems with trauma wound"));
-        txtOtherProblems.setText(categoryModel.readCategory(caseID,"Other problems"));
+        txtsurgicalWound.setText(categoryModel.readCategory(caseID,"Problems with surgical wound")[0]);
+        txtdiabeticWound.setText(categoryModel.readCategory(caseID,"Problems with diabetic wound")[0]);
+        txtCancerWound.setText(categoryModel.readCategory(caseID,"Problems with cancer wound")[0]);
+        txtPressureWound.setText(categoryModel.readCategory(caseID,"Problems with pressure wound")[0]);
+        txtArtilleryWound.setText(categoryModel.readCategory(caseID,"Problems with artillery wound")[0]);
+        txtVenousWound.setText(categoryModel.readCategory(caseID,"Problems with venous wound")[0]);
+        txtMixedWound.setText(categoryModel.readCategory(caseID,"Problems with mixed wound")[0]);
+        txtTraumaWound.setText(categoryModel.readCategory(caseID,"Problems with trauma wound")[0]);
+        txtOtherProblems.setText(categoryModel.readCategory(caseID,"Other problems")[0]);
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {

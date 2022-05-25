@@ -82,27 +82,27 @@ public class SubcategoryPsychosocialRelationshipsController {
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
         if (categoryModel.readCategory(caseID,"Problems with Social Relationship") == null){
-            categoryModel.createCategory(caseID,"Problems with Social Relationship",txtSocialRealitionship.getText());
+            categoryModel.createCategory(caseID,"Problems with Social Relationship",txtSocialRealitionship.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with Social Relationship",txtSocialRealitionship.getText());
+        categoryModel.updateCategory(caseID,"Problems with Social Relationship",txtSocialRealitionship.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Problems with Emotions") == null){
-            categoryModel.createCategory(caseID,"Problems with Emotions",txtEmotionelleProblems.getText());
+            categoryModel.createCategory(caseID,"Problems with Emotions",txtEmotionelleProblems.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with Emotions",txtEmotionelleProblems.getText());
+        categoryModel.updateCategory(caseID,"Problems with Emotions",txtEmotionelleProblems.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Problems with abuse") == null){
-            categoryModel.createCategory(caseID,"Problems with abuse",txtAbuseProblems.getText());
+            categoryModel.createCategory(caseID,"Problems with abuse",txtAbuseProblems.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with abuse",txtAbuseProblems.getText());
+        categoryModel.updateCategory(caseID,"Problems with abuse",txtAbuseProblems.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Problems with mental") == null){
-            categoryModel.createCategory(caseID,"Problems with mental",txtMentalProblems.getText());
+            categoryModel.createCategory(caseID,"Problems with mental",txtMentalProblems.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with mental",txtMentalProblems.getText());
+        categoryModel.updateCategory(caseID,"Problems with mental",txtMentalProblems.getText(), "Condition");
     }
 
     /**
@@ -112,10 +112,10 @@ public class SubcategoryPsychosocialRelationshipsController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtSocialRealitionship.setText(categoryModel.readCategory(caseID,"Problems with Social Relationship"));
-        txtEmotionelleProblems.setText(categoryModel.readCategory(caseID,"Problems with Emotions"));
-        txtAbuseProblems.setText(categoryModel.readCategory(caseID,"Problems with abuse"));
-        txtMentalProblems.setText(categoryModel.readCategory(caseID,"Problems with mental"));
+        txtSocialRealitionship.setText(categoryModel.readCategory(caseID,"Problems with Social Relationship")[0]);
+        txtEmotionelleProblems.setText(categoryModel.readCategory(caseID,"Problems with Emotions")[0]);
+        txtAbuseProblems.setText(categoryModel.readCategory(caseID,"Problems with abuse")[0]);
+        txtMentalProblems.setText(categoryModel.readCategory(caseID,"Problems with mental")[0]);
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {

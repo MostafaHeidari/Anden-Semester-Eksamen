@@ -25,8 +25,8 @@ public class CategoryModel {
      * @param ProblemDescription
      * @throws SQLServerException
      */
-    public void createCategory(int caseID, String ProblemName, String ProblemDescription) throws SQLException{
-        categoryManager.createCategory(caseID, ProblemName, ProblemDescription);
+    public void createCategory(int caseID, String ProblemName, String ProblemDescription, String ExpectedCondition) throws SQLException{
+        categoryManager.createCategory(caseID, ProblemName, ProblemDescription, ExpectedCondition);
     }
 
     /**
@@ -36,7 +36,7 @@ public class CategoryModel {
      * @return
      * @throws SQLServerException
      */
-    public String readCategory(int caseID, String ProblemName) throws SQLException{
+    public String[] readCategory(int caseID, String ProblemName) throws SQLException{
         return categoryManager.readCategory(caseID, ProblemName);
     }
 
@@ -47,7 +47,7 @@ public class CategoryModel {
      * @param ProblemDescription
      * @throws SQLServerException
      */
-    public void updateCategory(int caseID, String ProblemName, String ProblemDescription) throws SQLException{
-        categoryManager.updateCategory(caseID, ProblemName, ProblemDescription);
+    public void updateCategory(int caseID, String ProblemName, String ProblemDescription, String ExpectedCondition) throws SQLException{
+        categoryManager.updateCategory(caseID, ProblemName, ProblemDescription, ExpectedCondition);
     }
 }
