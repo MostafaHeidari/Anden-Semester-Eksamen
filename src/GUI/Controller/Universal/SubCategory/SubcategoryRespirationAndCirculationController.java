@@ -83,15 +83,15 @@ public class SubcategoryRespirationAndCirculationController {
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
         if (categoryModel.readCategory(caseID,"Respiration problems") == null){
 
-            categoryModel.createCategory(caseID,"Respiration problems",txtRespiration.getText());
+            categoryModel.createCategory(caseID,"Respiration problems",txtRespiration.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Respiration problems",txtRespiration.getText());
+        categoryModel.updateCategory(caseID,"Respiration problems",txtRespiration.getText(), "Condition");
 
         if (categoryModel.readCategory(caseID,"Circulation problems") == null){
 
-            categoryModel.createCategory(caseID,"Circulation problems",txtCirkulation.getText());
+            categoryModel.createCategory(caseID,"Circulation problems",txtCirkulation.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Circulation problems",txtCirkulation.getText());
+        categoryModel.updateCategory(caseID,"Circulation problems",txtCirkulation.getText(), "Condition");
     }
 
     /**
@@ -101,8 +101,8 @@ public class SubcategoryRespirationAndCirculationController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtRespiration.setText(categoryModel.readCategory(caseID,"Respiration problems"));
-        txtCirkulation.setText(categoryModel.readCategory(caseID,"Circulation problems"));
+        txtRespiration.setText(categoryModel.readCategory(caseID,"Respiration problems")[0]);
+        txtCirkulation.setText(categoryModel.readCategory(caseID,"Circulation problems")[0]);
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {

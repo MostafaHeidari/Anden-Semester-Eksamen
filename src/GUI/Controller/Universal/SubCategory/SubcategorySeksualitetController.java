@@ -76,9 +76,9 @@ public class SubcategorySeksualitetController {
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
         if (categoryModel.readCategory(caseID,"Problems with seksualitet") == null){
 
-            categoryModel.createCategory(caseID,"Problems with seksualitet",txtSeksualitet.getText());
+            categoryModel.createCategory(caseID,"Problems with seksualitet",txtSeksualitet.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with seksualitet",txtSeksualitet.getText());
+        categoryModel.updateCategory(caseID,"Problems with seksualitet",txtSeksualitet.getText(), "Condition");
     }
 
     /**
@@ -88,7 +88,7 @@ public class SubcategorySeksualitetController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtSeksualitet.setText(categoryModel.readCategory(caseID,"Problems with seksualitet"));
+        txtSeksualitet.setText(categoryModel.readCategory(caseID,"Problems with seksualitet")[0]);
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {

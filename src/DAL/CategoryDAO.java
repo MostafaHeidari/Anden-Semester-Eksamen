@@ -26,9 +26,9 @@ public class CategoryDAO {
      * @param ProblemDescription
      * @throws SQLServerException
      */
-    public void createCategory(int caseID, String ProblemName, String ProblemDescription) throws SQLException {
+    public void createCategory(int caseID, String ProblemName, String ProblemDescription, String ExpectedCondition) throws SQLException {
 
-        String sql = "INSERT INTO HealthConditions(caseID,ProblemName,ProblemDescription) VALUES (?,?,?);";
+        String sql = "INSERT INTO HealthConditions(caseID,ProblemName,ProblemDescription, ExpectedCondition) VALUES (?,?,?,?);";
 
         try(Connection connection = DC.getConnection()){
 
@@ -36,6 +36,7 @@ public class CategoryDAO {
             ps.setInt(1, caseID);
             ps.setString(2, ProblemName);
             ps.setString(3, ProblemDescription);
+            ps.setString(4, ExpectedCondition);
 
             int affectedRows = ps.executeUpdate();
 
@@ -50,9 +51,9 @@ public class CategoryDAO {
      * @param ProblemName
      * @throws SQLServerException
      */
-    public String readCategory(int caseID, String ProblemName) throws SQLException {
+    public String[] readCategory(int caseID, String ProblemName) throws SQLException {
 
-        String sql = "SELECT ProblemDescription FROM HealthConditions WHERE caseID = (?) AND ProblemName = (?);";
+        String sql = "SELECT ProblemDescription, ExpectedCondition FROM HealthConditions WHERE caseID = (?) AND ProblemName = (?);";
 
         try(Connection connection = DC.getConnection()){
 
@@ -62,7 +63,10 @@ public class CategoryDAO {
 
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                String result = rs.getString(1);
+                String[] result = new String[2];
+                result[0] = rs.getString(1);
+                result[1] = rs.getString(2);
+
                 System.out.println(result);
                 return result;
             }
@@ -83,15 +87,16 @@ public class CategoryDAO {
      * @param ProblemDescription
      * @throws SQLServerException
      */
-    public void updateCategory(int caseID, String ProblemName, String ProblemDescription) throws SQLException {
+    public void updateCategory(int caseID, String ProblemName, String ProblemDescription, String ExpectedCondition) throws SQLException {
 
-        String sql = "UPDATE HealthConditions SET ProblemDescription = (?)  WHERE caseID = (?) AND ProblemName = (?);";
+        String sql = "UPDATE HealthConditions SET ProblemDescription = (?), ExpectedCondition = (?) WHERE caseID = (?) AND ProblemName = (?);";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, ProblemDescription);
-            ps.setInt(2, caseID);
-            ps.setString(3, ProblemName);
+            ps.setString(2, ExpectedCondition);
+            ps.setInt(3, caseID);
+            ps.setString(4, ProblemName);
 
             int affectedRows = ps.executeUpdate();
 

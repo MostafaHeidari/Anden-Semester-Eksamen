@@ -90,51 +90,51 @@ public class SubcategoryPainAndSensoryImpressionsController {
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
         if (categoryModel.readCategory(caseID,"Acute pain") == null){
-            categoryModel.createCategory(caseID,"Acute pain",txtAcutePain.getText());
+            categoryModel.createCategory(caseID,"Acute pain",txtAcutePain.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Acute pain",txtAcutePain.getText());
+        categoryModel.updateCategory(caseID,"Acute pain",txtAcutePain.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Periode pain") == null){
-            categoryModel.createCategory(caseID,"Periode pain",txtPeriodePain.getText());
+            categoryModel.createCategory(caseID,"Periode pain",txtPeriodePain.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Periode pain",txtPeriodePain.getText());
+        categoryModel.updateCategory(caseID,"Periode pain",txtPeriodePain.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Chronic pain") == null){
-            categoryModel.createCategory(caseID,"Chronic pain",txtChronicPain.getText());
+            categoryModel.createCategory(caseID,"Chronic pain",txtChronicPain.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Chronic pain",txtChronicPain.getText());
+        categoryModel.updateCategory(caseID,"Chronic pain",txtChronicPain.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Eye problem") == null){
-            categoryModel.createCategory(caseID,"Eye problem",txtEyeProblem.getText());
+            categoryModel.createCategory(caseID,"Eye problem",txtEyeProblem.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Eye problem",txtEyeProblem.getText());
+        categoryModel.updateCategory(caseID,"Eye problem",txtEyeProblem.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Smell problems") == null){
-            categoryModel.createCategory(caseID,"Smell problems",txtSmellProblems.getText());
+            categoryModel.createCategory(caseID,"Smell problems",txtSmellProblems.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Smell problems",txtSmellProblems.getText());
+        categoryModel.updateCategory(caseID,"Smell problems",txtSmellProblems.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Hear problems") == null){
-            categoryModel.createCategory(caseID,"Hear problems",txthearProblems.getText());
+            categoryModel.createCategory(caseID,"Hear problems",txthearProblems.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Hear problems",txthearProblems.getText());
+        categoryModel.updateCategory(caseID,"Hear problems",txthearProblems.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Taste problems") == null){
-            categoryModel.createCategory(caseID,"Taste problems",txtTasteProblems.getText());
+            categoryModel.createCategory(caseID,"Taste problems",txtTasteProblems.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Taste problems",txtTasteProblems.getText());
+        categoryModel.updateCategory(caseID,"Taste problems",txtTasteProblems.getText(), "Condition");
 
 
         if (categoryModel.readCategory(caseID,"Feeling problems") == null){
-            categoryModel.createCategory(caseID,"Feeling problems",txtFeelingProblems.getText());
+            categoryModel.createCategory(caseID,"Feeling problems",txtFeelingProblems.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"PFeeling problems",txtFeelingProblems.getText());
+        categoryModel.updateCategory(caseID,"PFeeling problems",txtFeelingProblems.getText(), "Condition");
     }
 
     /**
@@ -144,14 +144,14 @@ public class SubcategoryPainAndSensoryImpressionsController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtAcutePain.setText(categoryModel.readCategory(caseID,"Acute pain"));
-        txtPeriodePain.setText(categoryModel.readCategory(caseID,"Periode pain"));
-        txtChronicPain.setText(categoryModel.readCategory(caseID,"Chronic Pain"));
-        txtEyeProblem.setText(categoryModel.readCategory(caseID,"Eye problem"));
-        txtSmellProblems.setText(categoryModel.readCategory(caseID,"Smell problems"));
-        txthearProblems.setText(categoryModel.readCategory(caseID,"Hear problems"));
-        txtTasteProblems.setText(categoryModel.readCategory(caseID,"Problems with mixed wound"));
-        txtFeelingProblems.setText(categoryModel.readCategory(caseID,"Feeling problems"));
+        txtAcutePain.setText(categoryModel.readCategory(caseID,"Acute pain")[0]);
+        txtPeriodePain.setText(categoryModel.readCategory(caseID,"Periode pain")[0]);
+        txtChronicPain.setText(categoryModel.readCategory(caseID,"Chronic Pain")[0]);
+        txtEyeProblem.setText(categoryModel.readCategory(caseID,"Eye problem")[0]);
+        txtSmellProblems.setText(categoryModel.readCategory(caseID,"Smell problems")[0]);
+        txthearProblems.setText(categoryModel.readCategory(caseID,"Hear problems")[0]);
+        txtTasteProblems.setText(categoryModel.readCategory(caseID,"Problems with mixed wound")[0]);
+        txtFeelingProblems.setText(categoryModel.readCategory(caseID,"Feeling problems")[0]);
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {

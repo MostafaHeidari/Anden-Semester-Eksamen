@@ -75,9 +75,9 @@ public class SubcategoryCommunicationController {
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
         if (categoryModel.readCategory(caseID,"Problems with communication") == null){
 
-            categoryModel.createCategory(caseID,"Problems with communication",txtCommunication.getText());
+            categoryModel.createCategory(caseID,"Problems with communication",txtCommunication.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Problems with communication",txtCommunication.getText());
+        categoryModel.updateCategory(caseID,"Problems with communication",txtCommunication.getText(), "Condition");
     }
 
     /**
@@ -87,7 +87,7 @@ public class SubcategoryCommunicationController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtCommunication.setText(categoryModel.readCategory(caseID,"Problems with communication"));
+        txtCommunication.setText(categoryModel.readCategory(caseID,"Problems with communication")[0]);
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {

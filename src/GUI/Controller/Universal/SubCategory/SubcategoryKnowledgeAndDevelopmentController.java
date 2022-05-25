@@ -85,21 +85,21 @@ public class SubcategoryKnowledgeAndDevelopmentController {
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
         if (categoryModel.readCategory(caseID,"Memory problems") == null){
 
-            categoryModel.createCategory(caseID,"Memory problems",txtMemoryProblems.getText());
+            categoryModel.createCategory(caseID,"Memory problems",txtMemoryProblems.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Memory problems",txtMemoryProblems.getText());
+        categoryModel.updateCategory(caseID,"Memory problems",txtMemoryProblems.getText(), "Condition");
 
         if (categoryModel.readCategory(caseID,"TreatmentProblems") == null){
 
-            categoryModel.createCategory(caseID,"TreatmentProblems",txtTreatmentPurpose.getText());
+            categoryModel.createCategory(caseID,"TreatmentProblems",txtTreatmentPurpose.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"TreatmentProblems",txtTreatmentPurpose.getText());
+        categoryModel.updateCategory(caseID,"TreatmentProblems",txtTreatmentPurpose.getText(), "Condition");
 
         if (categoryModel.readCategory(caseID,"Disease Insight problems") == null){
 
-            categoryModel.createCategory(caseID,"Disease Insight problems",txtDiseaseInsight.getText());
+            categoryModel.createCategory(caseID,"Disease Insight problems",txtDiseaseInsight.getText(), "Condition");
         }
-        categoryModel.updateCategory(caseID,"Disease Insight problems",txtDiseaseInsight.getText());
+        categoryModel.updateCategory(caseID,"Disease Insight problems",txtDiseaseInsight.getText(), "Condition");
     }
 
     /**
@@ -109,9 +109,9 @@ public class SubcategoryKnowledgeAndDevelopmentController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtMemoryProblems.setText(categoryModel.readCategory(caseID,"Memory problems"));
-        txtTreatmentPurpose.setText(categoryModel.readCategory(caseID,"TreatmentProblems"));
-        txtDiseaseInsight.setText(categoryModel.readCategory(caseID,"Disease Insight problems"));
+        txtMemoryProblems.setText(categoryModel.readCategory(caseID,"Memory problems")[0]);
+        txtTreatmentPurpose.setText(categoryModel.readCategory(caseID,"TreatmentProblems")[0]);
+        txtDiseaseInsight.setText(categoryModel.readCategory(caseID,"Disease Insight problems")[0]);
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {
