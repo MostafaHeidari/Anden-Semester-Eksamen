@@ -98,8 +98,16 @@ public class SubcategoryMovingApparatController {
         }
         categoryModel.updateCategory(caseID,"Present",txtMovingApparatPresent.getText(), "Condition");
 
-        
-       // jfxComboBox.getSelectionModel().getSelectedItem();
+
+
+        if (categoryModel.readCategory(caseID,"Date") == null){
+
+            categoryModel.createCategory(caseID,"Date",txtMovingApparatDate.getText(), "Condition");
+        }
+        categoryModel.updateCategory(caseID,"Date",txtMovingApparatDate.getText(), "Condition");
+
+
+        // jfxComboBox.getSelectionModel().getSelectedItem();
     }
 
     /**
