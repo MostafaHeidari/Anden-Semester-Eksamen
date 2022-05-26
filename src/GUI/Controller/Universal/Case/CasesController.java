@@ -29,7 +29,19 @@ public class CasesController implements Initializable {
 
     @FXML
     public JFXButton deleteCase;
+    @FXML
     public JFXButton editCase;
+    @FXML
+    public JFXButton Category;
+
+    @FXML
+    public TableView tvLastUpdated;
+    @FXML
+    public TableColumn tcProblemId;
+    @FXML
+    public TableColumn tcProblemName;
+    @FXML
+    public TableColumn tcProblemInfo;
 
     @FXML
     private CitizenInfo selectedCitizenInfo;
@@ -54,10 +66,8 @@ public class CasesController implements Initializable {
     public Text lastNameCitizenTxt;
     @FXML
     public Text ageCitizenTxt;
-    @FXML
-    public Text GenInfoTxt1;
-    @FXML
-    public JFXButton Category;
+
+
 
     public CasesController() throws IOException {
         caseModel = new CaseModel();

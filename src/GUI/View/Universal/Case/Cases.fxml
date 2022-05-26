@@ -98,8 +98,8 @@
    <TableView fx:id="tvLastUpdated" layoutX="521.0" layoutY="116.0" prefHeight="388.0" prefWidth="467.0">
       <columns>
          <TableColumn fx:id="tcProblemId" prefWidth="48.0" text="ID " />
-         <TableColumn fx:id="tcProblemName1" prefWidth="109.0" text="Problem navn" />
-         <TableColumn fx:id="tcProblemInfo1" prefWidth="270.0" text="ProblemInfo" />
+         <TableColumn fx:id="tcProblemName" prefWidth="109.0" text="Problem navn" />
+         <TableColumn fx:id="tcProblemInfo" prefWidth="309.0" text="ProblemInfo" />
       </columns>
    </TableView>
    </AnchorPane>
