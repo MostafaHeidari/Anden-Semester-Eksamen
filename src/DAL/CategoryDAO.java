@@ -30,6 +30,7 @@ public class CategoryDAO {
 
         String sql = "INSERT INTO HealthConditions(caseID,ProblemName,ProblemDescription, ExpectedCondition) VALUES (?,?,?,?);";
 
+        System.out.println("Create 4");
         try(Connection connection = DC.getConnection()){
 
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -70,11 +71,9 @@ public class CategoryDAO {
                 System.out.println(result);
                 return result;
             }
-
             return null;
 
         } catch (SQLException sqlException) {
-            System.out.println("test3");
             sqlException.printStackTrace();
         }
         return null;

@@ -88,29 +88,21 @@ public class SubcategoryMovingApparatController {
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
         if (categoryModel.readCategory(caseID,"Notat") == null){
-
             categoryModel.createCategory(caseID,"Notat",txtMovingApparatNotat.getText(), "Condition");
         }
         categoryModel.updateCategory(caseID,"Notat",txtMovingApparatNotat.getText(), "Condition");
 
-
         if (categoryModel.readCategory(caseID,"Present") == null){
-
             categoryModel.createCategory(caseID,"Present",txtMovingApparatPresent.getText(), "Condition");
         }
         categoryModel.updateCategory(caseID,"Present",txtMovingApparatPresent.getText(), "Condition");
 
-
-
         if (categoryModel.readCategory(caseID,"Date") == null){
-
             categoryModel.createCategory(caseID,"Date",txtMovingApparatDate.getText(), "Condition");
         }
         categoryModel.updateCategory(caseID,"Date",txtMovingApparatDate.getText(), "Condition");
 
-
         if (categoryModel.readCategory(caseID,"Observation") == null){
-
             categoryModel.createCategory(caseID,"Observation",txtMovingApparatObservation.getText(), "Condition");
         }
         categoryModel.updateCategory(caseID,"Observation",txtMovingApparatObservation.getText(), "Condition");
@@ -125,10 +117,14 @@ public class SubcategoryMovingApparatController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtMovingApparatNotat.setText(categoryModel.readCategory(caseID,"Notat")[0]);
-        txtMovingApparatPresent.setText(categoryModel.readCategory(caseID,"Present")[0]);
-        txtMovingApparatDate.setText(categoryModel.readCategory(caseID,"Date")[0]);
-        txtMovingApparatObservation.setText(categoryModel.readCategory(caseID,"Observation")[0]);
+        if (categoryModel.readCategory(caseID,"Notat") != null){
+            txtMovingApparatNotat.setText(categoryModel.readCategory(caseID,"Notat")[0]);}
+        if (categoryModel.readCategory(caseID,"Present") != null){
+        txtMovingApparatPresent.setText(categoryModel.readCategory(caseID,"Present")[0]);}
+            if (categoryModel.readCategory(caseID,"Date") != null){
+        txtMovingApparatDate.setText(categoryModel.readCategory(caseID,"Date")[0]);}
+                if (categoryModel.readCategory(caseID,"Observation") != null){
+        txtMovingApparatObservation.setText(categoryModel.readCategory(caseID,"Observation")[0]);}
     }
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {
         selectedCitizenInfo = selectedCitizen;
