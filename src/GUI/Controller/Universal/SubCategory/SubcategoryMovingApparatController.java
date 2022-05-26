@@ -35,6 +35,8 @@ public class SubcategoryMovingApparatController {
     private TextArea txtMovingApparatDate;
     @FXML
     private JFXComboBox jfxComboBox;
+    @FXML
+    private TextArea txtMovingApparatObservation;
 
 
    // this is instance variable is not used to now//
@@ -107,6 +109,12 @@ public class SubcategoryMovingApparatController {
         categoryModel.updateCategory(caseID,"Date",txtMovingApparatDate.getText(), "Condition");
 
 
+        if (categoryModel.readCategory(caseID,"Observation") == null){
+
+            categoryModel.createCategory(caseID,"Observation",txtMovingApparatObservation.getText(), "Condition");
+        }
+        categoryModel.updateCategory(caseID,"Observation",txtMovingApparatObservation.getText(), "Condition");
+
         // jfxComboBox.getSelectionModel().getSelectedItem();
     }
 
@@ -119,6 +127,8 @@ public class SubcategoryMovingApparatController {
         this.caseID = caseID;
         txtMovingApparatNotat.setText(categoryModel.readCategory(caseID,"Notat")[0]);
         txtMovingApparatPresent.setText(categoryModel.readCategory(caseID,"Present")[0]);
+        txtMovingApparatDate.setText(categoryModel.readCategory(caseID,"Date")[0]);
+        txtMovingApparatObservation.setText(categoryModel.readCategory(caseID,"Observation")[0]);
     }
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {
         selectedCitizenInfo = selectedCitizen;
