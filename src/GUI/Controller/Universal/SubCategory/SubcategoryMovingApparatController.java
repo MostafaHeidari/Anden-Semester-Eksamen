@@ -35,6 +35,8 @@ public class SubcategoryMovingApparatController {
     private TextArea txtMovingApparatDate;
     @FXML
     private JFXComboBox jfxComboBox;
+    @FXML
+    private TextArea txtMovingApparatObservation;
 
 
    // this is instance variable is not used to now//
