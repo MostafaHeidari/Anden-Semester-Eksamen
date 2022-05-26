@@ -3,7 +3,12 @@ package BE;
 public class FunctionalAbility {
     private String condition;
     private String futureCondition;
+    private String professionalNote;
+    private String performance;
+    private String performanceMeaning;
+    private String citizenNote;
     private int caseID;
+
 
     /**
      * @param caseID
@@ -13,47 +18,72 @@ public class FunctionalAbility {
     public FunctionalAbility(int caseID, String condition, String futureCondition) {
         this.condition = condition;
         this.futureCondition = futureCondition;
+        this.professionalNote = professionalNote;
+        this.performance = performance;
+        this.performanceMeaning = performanceMeaning;
+        this.citizenNote = citizenNote;
         this.caseID = caseID;
     }
 
     /**
-     * Gets the condition
-     * @return condition
+     * Getters
+     * @return condition, futureCondition, professionalNote, performance, performanceMeaning and citizenNote
      */
     public String getcondition() {
         return condition;
     }
 
-    /**
-     * Gets the futureCondition
-     * @return futureCondition
-     */
     public String getfutureCondition() {
         return futureCondition;
     }
 
+    public String getProfessionalNote() {
+        return professionalNote;
+    }
+
+    public String getPerformance() {
+        return performance;
+    }
+
+    public String getPerformanceMeaning() {
+        return performanceMeaning;
+    }
+
+    public String getCitizenNote() {
+        return citizenNote;
+    }
+
+    public int getCaseID() { return caseID; }
+
+    //-----
+
     /**
-     * Sets the condition
-     * @return condition
+     * Setters
+     * @return condition, futureCondition, professionalNote, performance, performanceMeaning and citizenNote
      */
     public void setCondition(String condition) {
         this.condition = condition;
     }
 
-    /**
-     * Sets the futureCondition
-     * @return futureCondition
-     */
     public void setFutureCondition(String futureCondition) {
         this.futureCondition = futureCondition;
     }
 
-    /**
-     * Sets the borgerTilstand
-     * @return borgerTilstand
-     */
+    public void setProfessionalNote(String professionalNote) {
+        this.professionalNote = professionalNote;
+    }
 
-    public int getCaseID() { return caseID; }
+    public void setPerformance(String performance) {
+        this.performance = performance;
+    }
+
+    public void setPerformanceMeaning(String performanceMeaning) {
+        this.performanceMeaning = performanceMeaning;
+    }
+
+    public void setCitizenNote(String citizenNote) {
+        this.citizenNote = citizenNote;
+    }
 
     public void setCaseID(int caseID) { this.caseID = caseID; }
 }
