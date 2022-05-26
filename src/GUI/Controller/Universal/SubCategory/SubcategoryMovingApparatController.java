@@ -88,29 +88,21 @@ public class SubcategoryMovingApparatController {
      */
     public void subCategorySave(ActionEvent actionEvent) throws SQLException {
         if (categoryModel.readCategory(caseID,"Notat") == null){
-
             categoryModel.createCategory(caseID,"Notat",txtMovingApparatNotat.getText(), "Condition");
         }
         categoryModel.updateCategory(caseID,"Notat",txtMovingApparatNotat.getText(), "Condition");
 
-
         if (categoryModel.readCategory(caseID,"Present") == null){
-
             categoryModel.createCategory(caseID,"Present",txtMovingApparatPresent.getText(), "Condition");
         }
         categoryModel.updateCategory(caseID,"Present",txtMovingApparatPresent.getText(), "Condition");
 
-
-
         if (categoryModel.readCategory(caseID,"Date") == null){
-
             categoryModel.createCategory(caseID,"Date",txtMovingApparatDate.getText(), "Condition");
         }
         categoryModel.updateCategory(caseID,"Date",txtMovingApparatDate.getText(), "Condition");
 
-
         if (categoryModel.readCategory(caseID,"Observation") == null){
-
             categoryModel.createCategory(caseID,"Observation",txtMovingApparatObservation.getText(), "Condition");
         }
         categoryModel.updateCategory(caseID,"Observation",txtMovingApparatObservation.getText(), "Condition");
