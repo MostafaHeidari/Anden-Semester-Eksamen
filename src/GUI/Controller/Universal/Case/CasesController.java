@@ -182,4 +182,7 @@ public class CasesController implements Initializable {
         setCaseView();
 
     }
+
+    public void generalInfoBtn(ActionEvent actionEvent) {
+    }
 }

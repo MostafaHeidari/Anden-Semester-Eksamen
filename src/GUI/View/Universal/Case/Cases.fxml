@@ -12,94 +12,120 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="Pane" prefHeight="650.0" prefWidth="1041.0" stylesheets="@../../CSS/CreateCase.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.Case.CasesController">
-      <Pane layoutX="521.0" layoutY="28.0" prefHeight="56.0" prefWidth="467.0" style="-fx-background-color: #FFFFFF;">
-         <effect>
-            <DropShadow height="9.3" radius="5.32" width="13.98" />
-         </effect>
-         <children>
-            <Label layoutX="174.0" layoutY="16.0">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Label>
-            <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="184.0" layoutY="35.0" size="20" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
-            <Text layoutX="212.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Siste opdatert " />
-         </children>
-      </Pane>
-      <TableView fx:id="tvCase" layoutX="203.0" layoutY="112.0" prefHeight="396.0" prefWidth="288.0">
-         <columns>
-            <TableColumn fx:id="tcCaseId" prefWidth="48.0" text="ID " />
-            <TableColumn fx:id="tcCaseName" prefWidth="95.0" text="Sag Navn" />
-            <TableColumn fx:id="tcCaseInfo" prefWidth="144.0" text="Sag Infomationer" />
-         </columns>
-      </TableView>
-      <Text layoutX="226.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Text>
-      <Text layoutX="226.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Efternavn:">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Text>
-      <Text fx:id="nameCitizenTxt" layoutX="281.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-         <font>
-            <Font size="16.0" />
-         </font></Text>
-      <Text fx:id="lastNameCitizenTxt" layoutX="308.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-         <font>
-            <Font size="16.0" />
-         </font></Text>
-      <Text layoutX="115.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Borger">
-         <font>
-            <Font size="22.0" />
-         </font>
-      </Text>
-      <Pane prefHeight="650.0" prefWidth="199.0" style="-fx-background-color: #D4D3BE;">
-         <children>
-            <JFXButton fx:id="backToLastPage" layoutX="14.0" layoutY="593.0" onAction="#backToLastPageBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../../CSS/CreateStudent.css" text="Tilbage">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </JFXButton>
-            <Text fill="#001569" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sager" textAlignment="CENTER" wrappingWidth="199.0">
-               <font>
-                  <Font size="32.0" />
-               </font>
-            </Text>
-            <FontAwesomeIconView fill="#001569" glyphName="USER" layoutX="63.0" layoutY="618.0" opacity="0.5" selectionFill="RED" size="15" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="27.507747650146428">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </FontAwesomeIconView>
-         </children>
-      </Pane>
-      <JFXButton fx:id="deleteCase" layoutX="347.0" layoutY="607.0" onAction="#deleteCaseBtn" prefHeight="29.0" prefWidth="110.0" text="Slet Sag" />
-   <JFXButton fx:id="funktionsevne" layoutX="213.0" layoutY="562.0" onAction="#funktionsevneBtn" prefHeight="29.0" prefWidth="110.0" style="-fx-background-color: #15B559;" text="Funktionsevne" textFill="WHITE" />
-   <JFXButton fx:id="funktionsevne1" layoutX="213.0" layoutY="607.0" onAction="#funktionsevneBtn" prefHeight="29.0" prefWidth="110.0" style="-fx-background-color: #15B559;" text="Omgivelse Info" textFill="WHITE" />
-   <Text layoutX="228.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alder:">
-      <font>
-         <Font size="16.0" />
-      </font>
-   </Text>
-   <Text fx:id="ageCitizenTxt" layoutX="279.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-      <font>
-         <Font size="16.0" />
-      </font>
-   </Text>
-   <JFXButton fx:id="Category" layoutX="213.0" layoutY="517.0" onAction="#BtnCategory" prefHeight="29.0" prefWidth="110.0" style="-fx-background-color: #15B559;" text="Helbredstilstande" textFill="WHITE" />
-   <JFXButton fx:id="editCase" layoutX="347.0" layoutY="562.0" onAction="#editCaseBtn" prefHeight="29.0" prefWidth="110.0" text="Edit Sag">
-      <cursor>
-         <Cursor fx:constant="HAND" />
-      </cursor>
-   </JFXButton>
-   <TableView fx:id="tvLastUpdated" layoutX="521.0" layoutY="116.0" prefHeight="388.0" prefWidth="467.0">
-      <columns>
-         <TableColumn fx:id="tcProblemId" prefWidth="48.0" text="ID " />
-         <TableColumn fx:id="tcProblemName" prefWidth="109.0" text="Problem navn" />
-         <TableColumn fx:id="tcProblemInfo" prefWidth="309.0" text="ProblemInfo" />
-      </columns>
-   </TableView>
+<AnchorPane fx:id="Pane" prefHeight="660.0" prefWidth="1200.0" stylesheets="@../../CSS/CreateCase.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.Case.CasesController">
+   <AnchorPane fx:id="Pane1" prefHeight="660.0" prefWidth="1200.0" stylesheets="@../../CSS/CreateCase.css">
+      <children>
+         <TableView fx:id="tvLastUpdated" layoutX="713.0" layoutY="100.0" prefHeight="533.0" prefWidth="467.0">
+            <columns>
+               <TableColumn fx:id="tcProblemId" prefWidth="48.0" text="ID " />
+               <TableColumn fx:id="tcProblemName" prefWidth="109.0" text="Problem navn" />
+               <TableColumn fx:id="tcProblemInfo" prefWidth="309.0" text="ProblemInfo" />
+            </columns>
+         </TableView>
+            <Pane layoutX="713.0" layoutY="33.0" prefHeight="56.0" prefWidth="467.0" style="-fx-background-color: #FFFFFF;">
+               <effect>
+                  <DropShadow height="9.3" radius="5.32" width="13.98" />
+               </effect>
+               <children>
+                  <Label layoutX="174.0" layoutY="16.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="174.0" layoutY="35.0" size="20" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
+                  <Text layoutX="202.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sidste opdateret " />
+               </children>
+            </Pane>
+         <Pane layoutX="253.0" layoutY="33.0" prefHeight="56.0" prefWidth="440.0" style="-fx-background-color: #FFFFFF;">
+            <effect>
+               <DropShadow height="9.3" radius="5.32" width="13.98" />
+            </effect>
+            <children>
+               <Label layoutX="174.0" layoutY="16.0">
+                  <font>
+                     <Font name="System Bold" size="14.0" />
+                  </font>
+               </Label>
+               <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="171.0" layoutY="35.0" size="20" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
+               <Text layoutX="199.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste af Sager" />
+            </children>
+         </Pane>
+         <TableView fx:id="tvCase" layoutX="252.0" layoutY="100.0" prefHeight="533.0" prefWidth="440.0">
+            <columns>
+               <TableColumn fx:id="tcCaseId" prefWidth="48.0" text="ID " />
+               <TableColumn fx:id="tcCaseName" prefWidth="95.0" text="Sag Navn" />
+               <TableColumn fx:id="tcCaseInfo" prefWidth="323.0" text="Sag Infomationer" />
+            </columns>
+         </TableView>
+         <Text layoutX="20.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Text>
+         <Text layoutX="20.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Efternavn:">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Text>
+         <Text fx:id="nameCitizenTxt" layoutX="94.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Text>
+         <Text fx:id="lastNameCitizenTxt" layoutX="94.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Text>
+         <Text layoutX="115.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Borger">
+            <font>
+               <Font size="22.0" />
+            </font>
+         </Text>
+         <JFXButton fx:id="deleteCase" layoutX="152.0" layoutY="603.0" onAction="#deleteCaseBtn" prefHeight="29.0" prefWidth="80.0" stylesheets="@../../CSS/Citizent.css" text="Slet Sag">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </JFXButton>
+         <JFXButton fx:id="funktionsevne" layoutX="20.0" layoutY="211.0" onAction="#funktionsevneBtn" prefHeight="50.0" prefWidth="212.0" stylesheets="@../../CSS/Citizent.css" text="Funktionsevne" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </JFXButton>
+         <JFXButton fx:id="genreralInfo" layoutX="20.0" layoutY="271.0" onAction="#generalInfoBtn" prefHeight="50.0" prefWidth="212.0" stylesheets="@../../CSS/Citizent.css" text="General Info" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </JFXButton>
+         <Text layoutX="20.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alder:">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Text>
+         <Text fx:id="ageCitizenTxt" layoutX="94.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Text>
+         <JFXButton fx:id="Category" layoutX="20.0" layoutY="151.0" onAction="#BtnCategory" prefHeight="50.0" prefWidth="212.0" stylesheets="@../../CSS/Citizent.css" text="Helbredstilstande" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </JFXButton>
+         <JFXButton fx:id="editCase" layoutX="152.0" layoutY="563.0" onAction="#editCaseBtn" prefHeight="29.0" prefWidth="80.0" styleClass="#editCase" stylesheets="@../../CSS/Citizent.css" text="Ændre Sag">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </JFXButton>
+      </children>
+   </AnchorPane>
    </AnchorPane>

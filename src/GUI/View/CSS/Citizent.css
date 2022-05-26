@@ -1,29 +1,71 @@
 
-#caseInfo, #createCase, #editCase{
-    -fx-font-size: 15px;
+#caseInfo, #createCase, #editCase, #deleteCase {
+    -fx-font-size: 12px;
     -fx-border-color:  #001569;
     -fx-background-color: #15B559;
     -fx-text-fill: white;
 }
 
+#Category {
+    -fx-background-color: #00bfff;
+    -fx-text-fill: white;
+}
+
+#funktionsevne {
+    -fx-background-color: #ffbf00;
+    -fx-text-fill: white;
+}
+
+#genreralInfo {
+    -fx-background-color: #db4b4b;
+    -fx-text-fill: white;
+}
+
+
+
 
 #caseInfo:hover{
-    -fx-font-size: 15px;
+    -fx-font-size: 12px;
     -fx-background-color: white;
     -fx-text-fill: #2B2121;
     -fx-border-color: #15B559;
 }
 
 #createCase:hover{
-    -fx-font-size: 15px;
+    -fx-font-size: 12px;
     -fx-background-color: white;
     -fx-text-fill: #2B2121;
     -fx-border-color: #15B559;
 }
 
-#editCase:hover{
-    -fx-font-size: 15px;
+#editCase:hover {
+    -fx-font-size: 12px;
     -fx-background-color: white;
     -fx-text-fill: #2B2121;
     -fx-border-color: #15B559;
+}
+
+#deleteCase:hover {
+    -fx-font-size: 12px;
+    -fx-background-color: white;
+    -fx-text-fill: #2B2121;
+    -fx-border-color: #15B559;
+}
+
+#Category:hover {
+    -fx-background-color: white;
+    -fx-text-fill: #000000;
+    -fx-border-color: #00bfff;
+}
+
+#funktionsevne:hover {
+    -fx-background-color: white;
+    -fx-text-fill: #000000;
+    -fx-border-color: #ffbf00;
+}
+
+#genreralInfo:hover {
+    -fx-background-color: white;
+    -fx-text-fill: #000000;
+    -fx-border-color: #db4b4b;
 }
