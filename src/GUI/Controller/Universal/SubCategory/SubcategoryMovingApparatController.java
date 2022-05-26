@@ -119,6 +119,7 @@ public class SubcategoryMovingApparatController {
         this.caseID = caseID;
         txtMovingApparatNotat.setText(categoryModel.readCategory(caseID,"Notat")[0]);
         txtMovingApparatPresent.setText(categoryModel.readCategory(caseID,"Present")[0]);
+        txtMovingApparatDate.setText(categoryModel.readCategory(caseID,"Date")[0]);
     }
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {
         selectedCitizenInfo = selectedCitizen;
