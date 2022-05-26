@@ -70,8 +70,11 @@ public class CategoryDAO {
                 System.out.println(result);
                 return result;
             }
+            String[] result = new String[2];
+            result[0] = "";
+            result[1] = "";
 
-            return null;
+            return result;
 
         } catch (SQLException sqlException) {
             System.out.println("test3");
