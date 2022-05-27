@@ -52,7 +52,7 @@ public class CitizenInfoDAO {
 
         try (Connection connection = DC.getConnection()) {
 
-            String sql = "INSERT INTO Patients (PatientName, PatientLastName, Cpr) VALUES (?,?,?);";
+            String sql = "INSERT INTO Patients (PatientName, PatientLastName, Age) VALUES (?,?,?);";
 
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
@@ -88,12 +88,12 @@ public class CitizenInfoDAO {
      */
     public void editCitizen(CitizenInfo citizenInfoUpdate) throws Exception {
         try (Connection connection = DC.getConnection()) {
-            String sql = "UPDATE Patients SET PatientName = (?), PatientLastName =(?),  Age = (?), WHERE PatientID = (?);";
+            String sql = "UPDATE Patients SET PatientName = (?), PatientLastName =(?),  Age = (?) WHERE PatientID = (?);";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, citizenInfoUpdate.getCitizenName());
             preparedStatement.setString(2, citizenInfoUpdate.getCitizenLastName());
-            preparedStatement.setString(4, citizenInfoUpdate.getAge());
-            preparedStatement.setInt(6, citizenInfoUpdate.getCitizenId());
+            preparedStatement.setString(3, citizenInfoUpdate.getAge());
+            preparedStatement.setInt(4, citizenInfoUpdate.getCitizenId());
             preparedStatement.executeUpdate();
 
         } catch (SQLException throwables) {

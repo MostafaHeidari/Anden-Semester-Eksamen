@@ -39,14 +39,6 @@ public class TeacherGroupAndStudentsController implements Initializable {
 
 
     @FXML
-    public JFXButton newClass;
-    @FXML
-    public JFXButton newStudent1;
-    @FXML
-    public JFXButton addStudentToClass;
-    @FXML
-    public JFXButton deleteStudentInClass;
-    @FXML
     public JFXButton backStudent;
     @FXML
     public JFXButton backPatientBtn;
