@@ -20,12 +20,16 @@
 
 #BtnBack:hover{
     -fx-font-size: 15px;
-    -fx-background-color: white;
+    -fx-background-color: #d96969;
     -fx-text-fill: #2B2121;
-    -fx-border-color: #15B559;
+    -fx-border-color: #cb2424;
 }
 
 #InfoTextBox{
     -fx-border-color: #797862;
     
+}
+
+#pane{
+    -fx-background-color: #da5b5b;
 }

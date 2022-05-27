@@ -3,8 +3,19 @@
 }
 
 #Button, #Button2{
+    -fx-font-size: 12px;
+    -fx-border-color:  #001569;
+    -fx-background-color: #15B559;
     -fx-text-fill: white;
-    -fx-border-color: #009B42;
-    -fx-border-width: 2px;
-    -fx-background-color: #009B42;
+}
+
+#Button:hover, #Button2:hover {
+    -fx-font-size: 12px;
+    -fx-background-color: white;
+    -fx-text-fill: #2B2121;
+    -fx-border-color: #15B559;
+}
+
+#cb1:hover {
+    ;
 }

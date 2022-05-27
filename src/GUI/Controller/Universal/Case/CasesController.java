@@ -6,6 +6,7 @@ import BE.FunctionalAbility;
 import BE.SchoolGroups;
 import GUI.Controller.Universal.CategoryController;
 import GUI.Controller.Universal.FunctionalAbilityCategoryController;
+import GUI.Controller.Universal.GeneralinformationController;
 import GUI.Controller.Universal.SimpleDialogController;
 import GUI.Model.CaseModel;
 import com.jfoenix.controls.JFXButton;
@@ -127,6 +128,22 @@ public class CasesController implements Initializable {
         }
     }
 
+    public void generalInfoBtn(ActionEvent actionEvent) throws IOException {
+        {
+            selectedCase = (Case) tvCase.getSelectionModel().getSelectedItem();
+
+            Stage switcher = (Stage) Category.getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/GeneralInformation.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+
+            GeneralinformationController controller = loader.getController();
+            controller.setCaseID(selectedCase.getCaseId());
+            loader.<GeneralinformationController>getController().setSelectedCitizen(selectedCitizenInfo);
+            switcher.setTitle("General Info");
+            switcher.setScene(scene);
+        }
+    }
 
     public void funktionsevneBtn(ActionEvent event) throws IOException {
         if (tvCase.getSelectionModel().getSelectedItem() != null) {
@@ -188,10 +205,6 @@ public class CasesController implements Initializable {
         lastNameCitizenTxt.setText(selectedCitizen.getCitizenLastName());
         ageCitizenTxt.setText(selectedCitizen.getAge());
         setCaseView();
-
-    }
-
-    public void generalInfoBtn(ActionEvent actionEvent) {
 
     }
 

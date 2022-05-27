@@ -58,7 +58,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <Pane prefHeight="450.0" prefWidth="199.0" style="-fx-background-color: #D4D3BE;">
+      <Pane prefHeight="450.0" prefWidth="199.0" style="-fx-background-color: #efef77;">
          <children>
             <JFXButton fx:id="BtnBackCreateStudent" layoutX="14.0" layoutY="395.0" onAction="#BtnBackCreateStudentAction" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/OprettelseElev.css" text="Tilbage">
                <cursor>

@@ -27,7 +27,7 @@ public class CitizenInfoContoller implements Initializable {
 
 
 
-    private CitizenInfoModel citizenInfoModel;
+    private final CitizenInfoModel citizenInfoModel;
 
     public CitizenInfo selectedCitizenInfo;
 

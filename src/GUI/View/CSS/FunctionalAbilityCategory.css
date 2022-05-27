@@ -1,0 +1,21 @@
+#pane {
+    -fx-background-color: #ecc56c;
+}
+
+#category {
+    -fx-text-fill: #001569;
+}
+
+#backToLastPage:hover {
+    -fx-text-fill: black;
+    -fx-border-color: #ffef00;
+    -fx-border-width: 1px;
+    -fx-font-size: 14px;
+    -fx-background-color: #ecc56c;
+}
+#backToLastPage {
+    -fx-font-size: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #001569;
+    -fx-border-color: #797862;
+}

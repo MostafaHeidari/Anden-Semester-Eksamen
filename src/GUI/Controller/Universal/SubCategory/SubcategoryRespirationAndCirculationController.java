@@ -101,8 +101,12 @@ public class SubcategoryRespirationAndCirculationController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtRespiration.setText(categoryModel.readCategory(caseID,"Respiration problems")[0]);
-        txtCirkulation.setText(categoryModel.readCategory(caseID,"Circulation problems")[0]);
+        if(categoryModel.readCategory(caseID,"Respiration problems") != null){
+            txtRespiration.setText(categoryModel.readCategory(caseID,"Respiration problems")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"Circulation problems") != null){
+            txtCirkulation.setText(categoryModel.readCategory(caseID,"Circulation problems")[0]);
+        }
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {

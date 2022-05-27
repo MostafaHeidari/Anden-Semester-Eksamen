@@ -17,6 +17,8 @@ public class FunctionalAbilitySubCategory1Controller {
 
     private CitizenInfo selectedCitizenId;
 
+    private int selectedCategoryId;
+
     @FXML
     AnchorPane Pane;
 

@@ -457,13 +457,13 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <JFXButton fx:id="Button" layoutX="874.0" layoutY="907.0" onAction="#buttonSave" prefHeight="29.0" prefWidth="62.0" styleClass="Button" stylesheets="@../CSS/FunctionalAbility.css" text="Gem" />
+      <JFXButton fx:id="Button" layoutX="874.0" layoutY="907.0" onAction="#buttonSave" prefHeight="29.0" prefWidth="62.0" stylesheets="@../CSS/FunctionalAbility.css" text="Gem" />
       <Text fx:id="subCatName" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategori her" textAlignment="CENTER" wrappingWidth="950.0">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <JFXButton fx:id="Button2" layoutX="14.0" layoutY="907.0" onAction="#buttonBack" prefHeight="29.0" prefWidth="62.0" styleClass="Button" stylesheets="@../CSS/FunctionalAbility.css" text="Tilbage" textFill="WHITE" />
+      <JFXButton fx:id="Button2" layoutX="14.0" layoutY="907.0" onAction="#buttonBack" prefHeight="29.0" prefWidth="62.0" stylesheets="@../CSS/FunctionalAbility.css" text="Tilbage" textFill="WHITE" />
       <HBox layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="950.0" />
    </children>
 </AnchorPane>

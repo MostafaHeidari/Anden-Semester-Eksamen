@@ -4,6 +4,7 @@ import BE.Case;
 import GUI.Model.CaseModel;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -19,10 +20,15 @@ public class CasesEditController {
 
     int selectedCitizenInfo;
 
+    @FXML
     public TextField caseNameTxt;
+    @FXML
     public TextField InformationTxt;
+    @FXML
     public JFXButton saveCase;
+    @FXML
     public JFXButton LogOut;
+    @FXML
     public JFXButton backTo;
 
     public CasesEditController() throws IOException {

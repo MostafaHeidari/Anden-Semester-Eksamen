@@ -121,11 +121,22 @@ public class SubcategoryNutritionController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtFluidIntake.setText(categoryModel.readCategory(caseID,"Problems with fluid intake")[0]);
-        txtFoodIntake.setText(categoryModel.readCategory(caseID,"Problems with food intake")[0]);
-        txtWeightChange.setText(categoryModel.readCategory(caseID,"Inappropriate weight change")[0]);
-        txtOverWeight.setText(categoryModel.readCategory(caseID,"Problems with over weight")[0]);
-        txtUnderWeight.setText(categoryModel.readCategory(caseID,"Problems with under weight")[0]);
+        if(categoryModel.readCategory(caseID,"Problems with fluid intake") != null){
+            txtFluidIntake.setText(categoryModel.readCategory(caseID,"Problems with fluid intake")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"Problems with food intake") != null){
+            txtFoodIntake.setText(categoryModel.readCategory(caseID,"Problems with food intake")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"Inappropriate weight change") != null){
+            txtWeightChange.setText(categoryModel.readCategory(caseID,"Inappropriate weight change")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"Problems with over weight") != null){
+            txtOverWeight.setText(categoryModel.readCategory(caseID,"Problems with over weight")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"Problems with under weight") != null){
+            txtUnderWeight.setText(categoryModel.readCategory(caseID,"Problems with under weight")[0]);
+
+        }
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {

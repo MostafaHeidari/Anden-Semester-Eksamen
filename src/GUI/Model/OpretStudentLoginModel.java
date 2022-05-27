@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 public class OpretStudentLoginModel {
 
-    private OpretStudentManager opretStudentManager;
+    private final OpretStudentManager opretStudentManager;
 
     /**
      * Constructor

@@ -54,7 +54,7 @@ public class EditCitizenController {
     }
 
     public void BtnBack(ActionEvent actionEvent) throws IOException {
-        Stage switcher = (Stage) BtnLogOutOfPatient.getScene().getWindow();
+        Stage switcher = (Stage) BtnBack.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateCitizen.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Student");
