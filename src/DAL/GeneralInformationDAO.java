@@ -9,7 +9,7 @@ import java.sql.*;
 
 public class GeneralInformationDAO {
 
-    private DatabaseConnector DC;
+    private final DatabaseConnector DC;
 
     /**
      * Constructor

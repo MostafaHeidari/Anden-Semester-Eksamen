@@ -11,7 +11,7 @@ import java.util.List;
 
 public class FunctionalAbilityDAO {
 
-    private DatabaseConnector DC;
+    private final DatabaseConnector DC;
 
     /**
      * Constructor

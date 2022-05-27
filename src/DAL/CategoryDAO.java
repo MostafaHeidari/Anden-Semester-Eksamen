@@ -8,7 +8,7 @@ import java.sql.*;
 
 public class CategoryDAO {
 
-    private DatabaseConnector DC;
+    private final DatabaseConnector DC;
 
     /**
      * Constructor
