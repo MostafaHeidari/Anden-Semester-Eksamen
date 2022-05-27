@@ -15,7 +15,7 @@ public class FunctionalAbility {
      * @param condition
      * @param futureCondition
      */
-    public FunctionalAbility(int caseID, String condition, String futureCondition) {
+    public FunctionalAbility(int caseID, String condition, String futureCondition, String professionalNote, String performance, String performanceMeaning, String citizenNote) {
         this.condition = condition;
         this.futureCondition = futureCondition;
         this.professionalNote = professionalNote;

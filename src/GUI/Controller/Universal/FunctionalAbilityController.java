@@ -46,6 +46,9 @@ public class FunctionalAbilityController implements Initializable {
     @FXML
     private TextArea tb2;
 
+    private String tb1StringResult;
+    private String tb2StringResult;
+
     @FXML
     private CheckBox cb1;
     @FXML
@@ -99,6 +102,8 @@ public class FunctionalAbilityController implements Initializable {
 
 
     private String[] stringResult;
+    private String[] stringResult2;
+    private String[] stringResult3;
 
 
     /**
@@ -224,7 +229,6 @@ public class FunctionalAbilityController implements Initializable {
      * @throws SQLException
      */
     public void buttonSave(ActionEvent actionEvent) throws IOException, SQLException {
-
 //switches scene when you press save
         Stage switcher = (Stage) Button.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/FunctionalAbilityCategory.fxml"));
@@ -262,8 +266,12 @@ public class FunctionalAbilityController implements Initializable {
             }
         }
 
+        tb1StringResult = tb1.getText();
+        tb2StringResult = tb2.getText();
+
         //uploads the selected checkbox to database with their respectable names, which you get from the stringResult array
-        functionalAbilityDAO.uploadCaseID(selectedCaseId, stringResult[row1int], stringResult[row2int]);
+        functionalAbilityDAO.uploadCaseID(selectedCaseId, stringResult[row1int], stringResult[row2int], tb1StringResult, stringResult2[row3int], stringResult3[row4int], tb2StringResult = tb2.getText());
+        rememberChoice();
     }
 
     public void rememberChoice() throws IOException {
@@ -293,15 +301,16 @@ public class FunctionalAbilityController implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //array of checkboxes in row 1 and 2
+        //array of checkboxes in row 1, 2, 3 and 4
         row1 = new CheckBox[]{cb1, cb2, cb3, cb4, cb5, cb6};
         row2 = new CheckBox[]{cb21, cb22, cb23, cb24, cb25, cb26};
         row3 = new CheckBox[]{cb31, cb32, cb33, cb34};
         row4 = new CheckBox[]{cb41, cb42};
 
-        //array of names for the checkboxes
+        //array of names for the checkboxes and textfields
         stringResult = new String[]{"Ingen/ubetydelige begrænsninger", "Lette begrænsninger", "Moderate begrænsninger", "Svære begrænsninger", "Totale begrænsninger", "Ikke relevant"};
-
+        stringResult2 = new String[]{"Udfører det selv", "Udfører dele selv", "Udfører ikke selv", "Ikke relevant"};
+        stringResult3 = new String[]{"Oplever ikke begrænsninger","Oplever begrænsninger"};
     }
 
     public void buttonBack(ActionEvent actionEvent) throws IOException {
