@@ -1,5 +1,6 @@
-package GUI.Controller;
+package GUI.Controller.Universal;
 
+import BE.CitizenInfo;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -28,10 +29,19 @@ public class GeneralinformationController {
     @FXML
     public Button BtnNetwork;
 
+    private CitizenInfo selectedCitizenInfo;
+
 
     public void BtnBack(ActionEvent actionEvent) {
     }
 
     public void btnHandleSaveCitizen(ActionEvent actionEvent) {
+    }
+
+    public void setCaseID(int caseId) {
+    }
+
+    public void setSelectedCitizen(CitizenInfo selectedCitizen) {
+        selectedCitizenInfo = selectedCitizen;
     }
 }
