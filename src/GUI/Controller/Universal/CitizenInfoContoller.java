@@ -97,7 +97,7 @@ public class CitizenInfoContoller implements Initializable {
      */
     public void backToLastPageBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) caseInfo.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/EditCitizen.fxml"));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
