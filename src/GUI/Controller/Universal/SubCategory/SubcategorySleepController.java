@@ -101,8 +101,12 @@ public class SubcategorySleepController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtDayProblems.setText(categoryModel.readCategory(caseID,"Day problems")[0]);
-        txtSleepProblems.setText(categoryModel.readCategory(caseID,"Sleep problems")[0]);
+        if(categoryModel.readCategory(caseID,"Day problems") != null){
+            txtDayProblems.setText(categoryModel.readCategory(caseID,"Day problems")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"Sleep problems") != null){
+            txtSleepProblems.setText(categoryModel.readCategory(caseID,"Sleep problems")[0]);
+        }
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {
