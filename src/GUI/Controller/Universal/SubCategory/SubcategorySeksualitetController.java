@@ -88,7 +88,9 @@ public class SubcategorySeksualitetController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtSeksualitet.setText(categoryModel.readCategory(caseID,"Problems with seksualitet")[0]);
+        if(categoryModel.readCategory(caseID,"Problems with seksualitet") != null){
+            txtSeksualitet.setText(categoryModel.readCategory(caseID,"Problems with seksualitet")[0]);
+        }
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {

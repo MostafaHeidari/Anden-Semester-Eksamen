@@ -36,7 +36,7 @@
                 <TableColumn fx:id="tcCitizenLastname" prefWidth="239.0" text="Efternavn" />
             </columns>
         </TableView>
-        <Pane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #D4D3BE;">
+        <Pane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #efef77;">
             <children>
             <Text fill="#001569" layoutX="18.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Borger&#10;Information" textAlignment="CENTER">
                <font>

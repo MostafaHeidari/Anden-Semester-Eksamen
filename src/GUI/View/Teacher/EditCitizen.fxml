@@ -47,7 +47,7 @@
                      </effect></TextField>
                </children>
             </GridPane>
-            <Pane prefHeight="396.0" prefWidth="199.0" style="-fx-background-color: #D4D3BE;">
+            <Pane prefHeight="396.0" prefWidth="199.0" style="-fx-background-color: #efef77;">
                <children>
                   <JFXButton fx:id="BtnBack" layoutX="15.0" layoutY="318.0" onAction="#BtnBack" prefHeight="40.0" prefWidth="170.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
                      <cursor>

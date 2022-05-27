@@ -5,6 +5,9 @@
 .root{
     -fx-background-color: white;
 }
+#rightPane{
+    -fx-background-color: #efef77;
+}
 
 #txtFieldCitizenFirstName,#txtFieldCitizenLastName,#txtFieldCitizenAge,#txtAreaCitizenGeneralInfo,#txtFieldCitizenAddresse{
     -fx-text-fill: #2B2121;
