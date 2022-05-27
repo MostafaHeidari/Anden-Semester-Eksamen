@@ -15,7 +15,7 @@ public class GroupModel {
 
     private ObservableList<SchoolGroups> classList = FXCollections.observableArrayList();
 
-    private GroupManger groupManger;
+    private final GroupManger groupManger;
 
     /**
      * Constructor

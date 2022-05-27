@@ -26,7 +26,7 @@ public class CitizenController implements Initializable {
 
     public CitizenInfo selectedCitizenInfo;
 
-    private CitizenInfoModel citizenInfoModel;
+    private final CitizenInfoModel citizenInfoModel;
 
 
     @FXML
