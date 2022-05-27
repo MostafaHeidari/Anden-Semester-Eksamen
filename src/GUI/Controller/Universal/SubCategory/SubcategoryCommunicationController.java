@@ -87,7 +87,9 @@ public class SubcategoryCommunicationController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtCommunication.setText(categoryModel.readCategory(caseID,"Problems with communication")[0]);
+        if(categoryModel.readCategory(caseID,"Problems with communication") != null){
+            txtCommunication.setText(categoryModel.readCategory(caseID,"Problems with communication")[0]);
+        }
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {

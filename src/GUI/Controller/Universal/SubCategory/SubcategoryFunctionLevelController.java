@@ -100,8 +100,12 @@ public class SubcategoryFunctionLevelController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtPersonalCare.setText(categoryModel.readCategory(caseID,"Problems with personal care")[0]);
-        txtDailyActivities.setText(categoryModel.readCategory(caseID,"Problems with daily activities")[0]);
+        if(categoryModel.readCategory(caseID,"Problems with personal care") != null){
+            txtPersonalCare.setText(categoryModel.readCategory(caseID,"Problems with personal care")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"Problems with daily activities") != null){
+            txtDailyActivities.setText(categoryModel.readCategory(caseID,"Problems with daily activities")[0]);
+        }
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {
