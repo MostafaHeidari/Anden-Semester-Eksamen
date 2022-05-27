@@ -3,6 +3,7 @@ package GUI.Controller.Universal.Case;
 import BE.Case;
 import BE.CitizenInfo;
 import BE.FunctionalAbility;
+import BE.SchoolGroups;
 import GUI.Controller.Universal.CategoryController;
 import GUI.Controller.Universal.FunctionalAbilityCategoryController;
 import GUI.Controller.Universal.SimpleDialogController;
@@ -34,6 +35,7 @@ public class CasesController implements Initializable {
     @FXML
     public JFXButton Category;
 
+
     @FXML
     public TableView tvLastUpdated;
     @FXML
@@ -43,12 +45,15 @@ public class CasesController implements Initializable {
     @FXML
     public TableColumn tcProblemInfo;
 
+
     @FXML
     private CitizenInfo selectedCitizenInfo;
     @FXML
     public CaseModel caseModel;
     @FXML
     public Case selectedCase;
+    @FXML
+    private FunctionalAbility selectedProblem;
 
 
     @FXML
@@ -100,6 +105,9 @@ public class CasesController implements Initializable {
         tcCaseInfo.setCellValueFactory(new PropertyValueFactory<>("caseInformation"));
 
         tvCase.setItems(caseModel.getAllCases(selectedCitizenInfo.getCitizenId()));
+        if(tvCase.getItems().size() > 0){ //Set den valgte til den første i listen, hvis der er nogen
+            selectedCase = (Case) tvCase.getItems().get(0);
+        }
     }
 
 
@@ -184,5 +192,21 @@ public class CasesController implements Initializable {
     }
 
     public void generalInfoBtn(ActionEvent actionEvent) {
+
     }
+
+    private void setProblemsView(){
+
+        tcProblemId.setCellValueFactory(new PropertyValueFactory<>("caseId"));
+
+        tcProblemName.setCellValueFactory(new PropertyValueFactory<>("condition"));
+
+        tcProblemInfo.setCellValueFactory(new PropertyValueFactory<>("caseInformation"));
+
+        tvLastUpdated.setItems(caseModel.getAllCases(selectedCitizenInfo.getCitizenId()));
+        if(tvLastUpdated.getItems().size() > 0){ //Set den valgte til den første i listen, hvis der er nogen
+            selectedProblem = (FunctionalAbility) tvLastUpdated.getItems().get(0);
+        }
+    }
+
 }

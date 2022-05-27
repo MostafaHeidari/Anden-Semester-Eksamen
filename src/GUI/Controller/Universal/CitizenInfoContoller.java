@@ -89,6 +89,9 @@ public class CitizenInfoContoller implements Initializable {
         tcCitizenLastname.setCellValueFactory(new PropertyValueFactory<>("citizenLastName"));
 
         tvCitizenInfo.setItems(citizenInfoModel.getAllCitizens());
+        if(tvCitizenInfo.getItems().size() > 0){ //Set den valgte til den første i listen, hvis der er nogen
+            selectedCitizenInfo = (CitizenInfo) tvCitizenInfo.getItems().get(0);
+        }
 
     }
 
