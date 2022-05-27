@@ -9,7 +9,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -70,7 +69,7 @@ public class EditCitizenController {
 
         this.selectedCitizen.setCitizenName(updateCitizenName);
         this.selectedCitizen.setCitizenLastName(updateCitizenLastName);
-        this.selectedCitizen.setAge(updateCitizenCPR);
+        this.selectedCitizen.setCitizenAge(updateCitizenCPR);
 
 
 
@@ -92,7 +91,7 @@ public class EditCitizenController {
     public void setSelectedCitizen(CitizenInfo citizenInfo) {
         txtFieldCitizenFirstNameEdit.setText(citizenInfo.getCitizenName());
         txtFieldCitizenLastNameEdit.setText(citizenInfo.getCitizenLastName());
-        txtFieldCitizenAgeEdit.setText(citizenInfo.getAge());
+        txtFieldCitizenAgeEdit.setText(citizenInfo.getCitizenAge());
 
 
        this.selectedCitizen = citizenInfo;

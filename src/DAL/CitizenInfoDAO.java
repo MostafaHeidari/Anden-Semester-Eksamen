@@ -92,7 +92,7 @@ public class CitizenInfoDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, citizenInfoUpdate.getCitizenName());
             preparedStatement.setString(2, citizenInfoUpdate.getCitizenLastName());
-            preparedStatement.setString(3, citizenInfoUpdate.getAge());
+            preparedStatement.setString(3, citizenInfoUpdate.getCitizenAge());
             preparedStatement.setInt(4, citizenInfoUpdate.getCitizenId());
             preparedStatement.executeUpdate();
 

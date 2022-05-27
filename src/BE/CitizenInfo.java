@@ -4,7 +4,7 @@ public class CitizenInfo {
     private int citizenId;
     private String citizenName;
     private String citizenLastName;
-    private String Age;
+    private String citizenAge;
 
     /**
      * @param citizenId
@@ -17,7 +17,7 @@ public class CitizenInfo {
         this.citizenId = citizenId;
         this.citizenName = citizenName;
         this.citizenLastName = citizenLastName;
-        this.Age = Age;
+        this.citizenAge = Age;
     }
 
 
@@ -47,12 +47,12 @@ public class CitizenInfo {
         this.citizenLastName = citizenLastName;
     }
 
-    public String getAge() {
-        return Age;
+    public String getCitizenAge() {
+        return citizenAge;
     }
 
-    public void setAge(String CPR) {
-        this.Age = Age;
+    public void setCitizenAge(String Age) {
+        this.citizenAge = Age;
     }
 
 
@@ -62,7 +62,7 @@ public class CitizenInfo {
                 "citizenId=" + citizenId +
                 ", citizenName='" + citizenName + '\'' +
                 ", citizenLastName='" + citizenLastName + '\'' +
-                ", Age='" + Age + '\'' +
+                ", Age='" + citizenAge + '\'' +
                 '}';
     }
 }

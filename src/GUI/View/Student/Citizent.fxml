@@ -12,31 +12,17 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="Patient" prefHeight="600.0" prefWidth="1000.0" stylesheets="@../CSS/TeacherAndPatient.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Student.CitizenController">
+<AnchorPane fx:id="Patient" prefHeight="660.0" prefWidth="840.0" stylesheets="@../CSS/TeacherAndPatient.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Student.CitizenController">
    <children>
-      <TableView fx:id="tvPatients" layoutX="129.0" layoutY="94.0" prefHeight="492.0" prefWidth="800.0">
+      <TableView fx:id="tvPatients" layoutX="140.0" layoutY="94.0" prefHeight="540.0" prefWidth="560.0">
         <columns>
           <TableColumn id="ID" fx:id="tcCitizenId" prefWidth="35.0" text="ID" />
-          <TableColumn id="Name" fx:id="tcCitizenName" prefWidth="144.0" text="Navn" />
-            <TableColumn fx:id="tcCitizenLastName" prefWidth="168.0" text="Efternavn" />
-            <TableColumn id="Age" fx:id="tcCitizenAddress" minWidth="0.0" prefWidth="186.0" text="Address" />
-            <TableColumn id="Age" fx:id="tcCPR" minWidth="0.0" prefWidth="87.0" text="Cpr Nr." />
-            <TableColumn id="Age" fx:id="tcCitizenInformation" minWidth="0.0" prefWidth="182.0" text="Boger Informationer" />
+          <TableColumn id="Name" fx:id="tcCitizenName" prefWidth="240.0" text="Navn" />
+            <TableColumn fx:id="tcCitizenLastName" prefWidth="240.0" text="Efternavn" />
+            <TableColumn id="Age" fx:id="tcCitizenAge" minWidth="0.0" prefWidth="44.0" text="Age" />
         </columns>
       </TableView>
-      <JFXButton fx:id="btnLogout" layoutX="942.0" layoutY="10.0" onAction="#LogOut" text="Log ud">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor></JFXButton>
-      <JFXButton fx:id="createCase" layoutX="14.0" layoutY="552.0" onAction="#createCaseBtn" prefHeight="33.0" prefWidth="101.0" text="Opret Sag">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor></JFXButton>
-      <JFXButton fx:id="caseInfo" layoutX="14.0" layoutY="507.0" onAction="#caseInfoBtn" prefHeight="33.0" prefWidth="101.0" text="Se Borger">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor></JFXButton>
-      <Pane layoutX="129.0" layoutY="30.0" prefHeight="56.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;">
+      <Pane layoutX="140.0" layoutY="27.0" prefHeight="56.0" prefWidth="560.0" style="-fx-background-color: #FFFFFF;">
          <effect>
             <DropShadow height="9.3" radius="5.32" width="13.98" />
          </effect>
@@ -46,9 +32,21 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="349.0" layoutY="33.0" size="20" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
-            <Text layoutX="377.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste af Borger" textAlignment="CENTER" />
+            <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="225.0" layoutY="35.0" size="20" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
+            <Text layoutX="253.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste af Borgere" textAlignment="CENTER" />
          </children>
       </Pane>
+      <JFXButton fx:id="btnLogout" layoutX="773.0" layoutY="15.0" onAction="#LogOut" text="Log ud">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="createCase" layoutX="20.0" layoutY="601.0" onAction="#createCaseBtn" prefHeight="33.0" prefWidth="101.0" text="Opret Sag">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="caseInfo" layoutX="20.0" layoutY="555.0" onAction="#caseInfoBtn" prefHeight="33.0" prefWidth="101.0" text="Se Borger">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
    </children>
 </AnchorPane>

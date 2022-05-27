@@ -28,7 +28,7 @@ public class FunctionalAbilityCategoryController {
         Scene scene = new Scene(root);
         CasesController controller = loader.getController();
         controller.setSelectedCitizen(selectedCitizenId);
-        switcher.setTitle("FunktionsevneTilstand Kategori");
+        switcher.setTitle("Sager");
         switcher.setScene(scene);
     }
 
@@ -85,6 +85,7 @@ public class FunctionalAbilityCategoryController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/FunctionalAbilitySubCategory5.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
+
         FunctionalAbilitySubCategory5Controller controller = loader.getController();
         controller.setSelectedCitizen(selectedCitizenId);
         controller.setSelectedCase(selectedCaseID);

@@ -44,12 +44,7 @@ public class CitizenController implements Initializable {
     @FXML
     public TableColumn tcCitizenLastName;
     @FXML
-    public TableColumn tcCitizenAddress;
-    @FXML
-    public TableColumn tcCPR;
-    @FXML
-    public TableColumn tcCitizenInformation;
-
+    public TableColumn tcCitizenAge;
 
     public CitizenController() throws IOException {
         citizenInfoModel = new CitizenInfoModel();
@@ -123,12 +118,7 @@ public class CitizenController implements Initializable {
 
         tcCitizenLastName.setCellValueFactory(new PropertyValueFactory<>("citizenLastName"));
 
-        tcCitizenAddress.setCellValueFactory(new PropertyValueFactory<>("citizenAddress"));
-
-        tcCPR.setCellValueFactory(new PropertyValueFactory<>("CPR"));
-
-        tcCitizenInformation.setCellValueFactory(new PropertyValueFactory<>("citizenInformation"));
-
+        tcCitizenAge.setCellValueFactory(new PropertyValueFactory<>("citizenAge"));
 
         tvPatients.setItems(citizenInfoModel.getAllCitizens());
     }

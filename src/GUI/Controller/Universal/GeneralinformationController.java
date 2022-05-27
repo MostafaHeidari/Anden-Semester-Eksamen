@@ -1,6 +1,7 @@
 package GUI.Controller.Universal;
 
 import BE.CitizenInfo;
+import GUI.Controller.Universal.Case.CasesController;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -38,24 +39,25 @@ public class GeneralinformationController {
     @FXML
     public JFXButton BtnBack;
 
-    private CitizenInfo selectedCitizenInfo;
+    private CitizenInfo selectedCitizenId;
 
 
     public void BtnBack(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) BtnBack.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Case/Cases.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/Case/Cases.fxml"));
+        Parent root = loader.load();
         Scene scene = new Scene(root);
-        switcher.setTitle("");
+
+        CasesController controller = loader.getController();
+        controller.setSelectedCitizen(selectedCitizenId);
+        switcher.setTitle("Sager");
         switcher.setScene(scene);
     }
 
     public void btnHandleSaveCitizen(ActionEvent actionEvent) {
     }
 
-    public void setCaseID(int caseId) {
-    }
-
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {
-        selectedCitizenInfo = selectedCitizen;
+        selectedCitizenId = selectedCitizen;
     }
 }

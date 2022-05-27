@@ -3,7 +3,6 @@ package GUI.Controller.Universal.Case;
 import BE.Case;
 import BE.CitizenInfo;
 import BE.FunctionalAbility;
-import BE.SchoolGroups;
 import GUI.Controller.Universal.CategoryController;
 import GUI.Controller.Universal.FunctionalAbilityCategoryController;
 import GUI.Controller.Universal.GeneralinformationController;
@@ -138,7 +137,6 @@ public class CasesController implements Initializable {
             Scene scene = new Scene(root);
 
             GeneralinformationController controller = loader.getController();
-            controller.setCaseID(selectedCase.getCaseId());
             loader.<GeneralinformationController>getController().setSelectedCitizen(selectedCitizenInfo);
             switcher.setTitle("General Info");
             switcher.setScene(scene);
@@ -203,7 +201,7 @@ public class CasesController implements Initializable {
         selectedCitizenInfo = selectedCitizen;
         nameCitizenTxt.setText(selectedCitizen.getCitizenName());
         lastNameCitizenTxt.setText(selectedCitizen.getCitizenLastName());
-        ageCitizenTxt.setText(selectedCitizen.getAge());
+        ageCitizenTxt.setText(selectedCitizen.getCitizenAge());
         setCaseView();
 
     }
