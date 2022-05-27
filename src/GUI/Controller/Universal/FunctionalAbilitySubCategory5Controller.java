@@ -17,6 +17,8 @@ public class FunctionalAbilitySubCategory5Controller {
 
     private CitizenInfo selectedCitizenId;
 
+    private int selectedCategoryId;
+
     @FXML
     AnchorPane Pane;
 
@@ -33,6 +35,7 @@ public class FunctionalAbilitySubCategory5Controller {
     }
 
     public void cat1Btn(ActionEvent actionEvent) throws IOException {
+        selectedCategoryId = 30;
         Stage switcher = (Stage) Pane.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/FunctionalAbility.fxml"));
         Parent root = loader.load();
@@ -40,6 +43,7 @@ public class FunctionalAbilitySubCategory5Controller {
         FunctionalAbilityController controller = loader.getController();
         controller.setSelectedCitizen(selectedCitizenId);
         controller.setCaseID(selectedCaseId);
+        controller.setCatID(selectedCategoryId);
         switcher.setTitle("FunktionsevneTilstand");
         switcher.setScene(scene);
     }

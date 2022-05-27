@@ -8,6 +8,7 @@ public class FunctionalAbility {
     private String performanceMeaning;
     private String citizenNote;
     private int caseID;
+    private int catID;
 
 
     /**
@@ -15,7 +16,7 @@ public class FunctionalAbility {
      * @param condition
      * @param futureCondition
      */
-    public FunctionalAbility(int caseID, String condition, String futureCondition, String professionalNote, String performance, String performanceMeaning, String citizenNote) {
+    public FunctionalAbility(int caseID, String condition, String futureCondition, String professionalNote, String performance, String performanceMeaning, String citizenNote, int catID) {
         this.condition = condition;
         this.futureCondition = futureCondition;
         this.professionalNote = professionalNote;
@@ -23,6 +24,7 @@ public class FunctionalAbility {
         this.performanceMeaning = performanceMeaning;
         this.citizenNote = citizenNote;
         this.caseID = caseID;
+        this.catID = catID;
     }
 
     /**
@@ -55,6 +57,8 @@ public class FunctionalAbility {
 
     public int getCaseID() { return caseID; }
 
+    public int getCatID() { return catID; }
+
     //-----
 
     /**
@@ -86,4 +90,6 @@ public class FunctionalAbility {
     }
 
     public void setCaseID(int caseID) { this.caseID = caseID; }
+
+    public void setCatID(int catID) { this.catID = catID; }
 }

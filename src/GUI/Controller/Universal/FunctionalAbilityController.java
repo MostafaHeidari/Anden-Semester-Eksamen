@@ -14,14 +14,17 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.scene.control.CheckBox;
 import javafx.scene.Node;
 
+import java.util.Arrays;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class FunctionalAbilityController implements Initializable {
@@ -30,16 +33,22 @@ public class FunctionalAbilityController implements Initializable {
 
     private final FunctionalAbilityDAO functionalAbilityDAO;
 
-
     private CitizenInfo selectedCitizenId;
+
+    private int selectedCatId;
 
     private int selectedCaseId;
 
+    private boolean updateNeeded;
 
     @FXML
     private AnchorPane Pane;
     @FXML
     private Button Button;
+    @FXML
+    private Text subCatName;
+
+    private String[] subCatNameArray;
 
     @FXML
     private TextArea tb1;
@@ -231,8 +240,12 @@ public class FunctionalAbilityController implements Initializable {
     public void buttonSave(ActionEvent actionEvent) throws IOException, SQLException {
 //switches scene when you press save
         Stage switcher = (Stage) Button.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/FunctionalAbilityCategory.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/FunctionalAbilityCategory.fxml"));
+        Parent root = loader.load();
         Scene scene = new Scene(root);
+        FunctionalAbilityCategoryController controller = loader.getController();
+        controller.setSelectedCitizen(selectedCitizenId);
+        controller.setCaseID(selectedCaseId);
         switcher.setTitle("FunktionsevneTilstand Kategori");
         switcher.setScene(scene);
 
@@ -270,28 +283,65 @@ public class FunctionalAbilityController implements Initializable {
         tb2StringResult = tb2.getText();
 
         //uploads the selected checkbox to database with their respectable names, which you get from the stringResult array
-        functionalAbilityDAO.uploadCaseID(selectedCaseId, stringResult[row1int], stringResult[row2int], tb1StringResult, stringResult2[row3int], stringResult3[row4int], tb2StringResult = tb2.getText());
-        rememberChoice();
+        if(updateNeeded){
+            functionalAbilityDAO.updateFunctionalAbility(selectedCaseId, stringResult[row1int], stringResult[row2int], tb1StringResult, stringResult2[row3int], stringResult3[row4int], tb2StringResult = tb2.getText(), selectedCatId);
+        }
+        else{
+            functionalAbilityDAO.uploadCaseID(selectedCaseId, stringResult[row1int], stringResult[row2int], tb1StringResult, stringResult2[row3int], stringResult3[row4int], tb2StringResult = tb2.getText(), selectedCatId);
+        }
     }
 
     public void rememberChoice() throws IOException {
-        FXMLLoader switcher = new FXMLLoader(getClass().getResource("/GUI/View/Universal/FunctionalAbility.fxml"));
-        Parent root = (Parent)switcher.load();
-        FunctionalAbilityController controller = (FunctionalAbilityController)switcher.getController();
-        selectedCaseId = Integer.parseInt(switcher.getController().toString());
-        System.out.println(selectedCaseId = Integer.parseInt(switcher.getController().toString()));
-
-        try{
+        try {
+            updateNeeded = false;
             List<FunctionalAbility> allFuncionalAbilities = functionalAbilityDAO.getAllFuncionalAbilities();
-            for (int i = 0; i < allFuncionalAbilities.size(); i++){
-                if (allFuncionalAbilities.get(i).getCaseID() == selectedCaseId){
-                    System.out.println(allFuncionalAbilities.get(i).getcondition());
+            for (int i = 0; i < allFuncionalAbilities.size(); i++) {
+                if (allFuncionalAbilities.get(i).getCaseID() == selectedCaseId && allFuncionalAbilities.get(i).getCatID() == selectedCatId) {
+                    updateNeeded = true;
+                    //For checkbox 1
+                    for (String str : stringResult) {
+                        if(Objects.equals(allFuncionalAbilities.get(i).getcondition(), str)) {
+                            int stringResultInt = Arrays.asList(stringResult).indexOf(str);
+                            row1[stringResultInt].setSelected(true);
+                        }
+                    }
+
+                    //For checkbox 2
+                    for (String str : stringResult) {
+                        if(Objects.equals(allFuncionalAbilities.get(i).getfutureCondition(), str)) {
+                            int stringResultInt = Arrays.asList(stringResult).indexOf(str);
+                            row2[stringResultInt].setSelected(true);
+                        }
+                    }
+
+                    //For textbox 1
+                    tb1.setText(allFuncionalAbilities.get(i).getProfessionalNote());
+
+                    //For checkbox 3
+                    for (String str : stringResult2) {
+                        if(Objects.equals(allFuncionalAbilities.get(i).getPerformance(), str)) {
+                            int stringResultInt = Arrays.asList(stringResult2).indexOf(str);
+                            row3[stringResultInt].setSelected(true);
+                        }
+                    }
+
+                    //For checkbox 4
+                    for (String str : stringResult3) {
+                        if(Objects.equals(allFuncionalAbilities.get(i).getPerformanceMeaning(), str)) {
+                            int stringResultInt = Arrays.asList(stringResult3).indexOf(str);
+                            row4[stringResultInt].setSelected(true);
+                        }
+                    }
+
+                    //for textbox 2
+                    tb2.setText(allFuncionalAbilities.get(i).getCitizenNote());
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
+
 
 
     /**
@@ -307,10 +357,21 @@ public class FunctionalAbilityController implements Initializable {
         row3 = new CheckBox[]{cb31, cb32, cb33, cb34};
         row4 = new CheckBox[]{cb41, cb42};
 
+        //array of category names
+        subCatNameArray = new String[]{"",
+                "Vaske sig", "Gå på toilet", "kropspleje", "Af- og påklædning,", "Spise", "Drikke", "Varetage egen sundhed", "Fødeindtagelse",
+                "Udføre daglige rutiner", "Skaffe sig varer og Tjenesteydelser", "Lave mad", "Lave husligt arbejde",
+                "Ændre kropsstilling", "Forflytte sig", "Løfte og bære", "Gå", "Bevæge sig omkring", "Færden i forskellige omgivelser", "Bruge transportmidler", "Udholdenhed", "Muskelstyrke",
+                "Tilegne sig færdigheder", "Problemløsning", "Anvende kommunikationsudstyr og-teknikker", "Orienteringsevne", "Energi og handlekraft", "Hukommelse", "Følelsesfunktioner", "overordnede kognitive funktioner",
+                "Vaske sig"
+        };
+
         //array of names for the checkboxes and textfields
         stringResult = new String[]{"Ingen/ubetydelige begrænsninger", "Lette begrænsninger", "Moderate begrænsninger", "Svære begrænsninger", "Totale begrænsninger", "Ikke relevant"};
         stringResult2 = new String[]{"Udfører det selv", "Udfører dele selv", "Udfører ikke selv", "Ikke relevant"};
         stringResult3 = new String[]{"Oplever ikke begrænsninger","Oplever begrænsninger"};
+
+
     }
 
     public void buttonBack(ActionEvent actionEvent) throws IOException {
@@ -331,5 +392,15 @@ public class FunctionalAbilityController implements Initializable {
 
     public void setCaseID(int caseId) {
         selectedCaseId = caseId;
+    }
+
+    public void setCatID(int catID){
+        selectedCatId = catID;
+        subCatName.setText(subCatNameArray[selectedCatId]);
+        try {
+            rememberChoice();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

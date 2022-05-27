@@ -28,10 +28,10 @@ public class FunctionalAbilityDAO {
      * @return functionalAbilityCord
      * @throws SQLServerException
      */
-    public FunctionalAbility uploadCaseID(int CaseID, String tilstand, String fremtidigTilstand, String fagligNotat, String udførelse, String betydningUdførelse, String borgerNotat) throws SQLException {
+    public FunctionalAbility uploadCaseID(int CaseID, String tilstand, String fremtidigTilstand, String fagligNotat, String udførelse, String betydningUdførelse, String borgerNotat, int CatID) throws SQLException {
         Connection connection = DC.getConnection();
 
-        String sql = "INSERT INTO FunctionalAbility (CaseID, tilstand, fremtidigTilstand, fagligNotat, udførelse, betydningUdførelse, borgerNotat) VALUES (?,?,?,?,?,?,?);";
+        String sql = "INSERT INTO FunctionalAbility (CaseID, tilstand, fremtidigTilstand, fagligNotat, udførelse, betydningUdførelse, borgerNotat, CatID ) VALUES (?,?,?,?,?,?,?,?);";
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
         ps.setInt(1, CaseID);
         ps.setString(2, tilstand);
@@ -40,6 +40,7 @@ public class FunctionalAbilityDAO {
         ps.setString(5, udførelse);
         ps.setString(6, betydningUdførelse);
         ps.setString(7, borgerNotat);
+        ps.setInt(8, CatID);
 
         ps.execute();
         ResultSet resultSet = ps.getGeneratedKeys();
@@ -47,7 +48,7 @@ public class FunctionalAbilityDAO {
         if (resultSet.next()) {
             id = resultSet.getInt(1);
         }
-        FunctionalAbility functionalAbilityCord = new FunctionalAbility(CaseID, tilstand, fremtidigTilstand, fagligNotat, udførelse, betydningUdførelse, borgerNotat);
+        FunctionalAbility functionalAbilityCord = new FunctionalAbility(CaseID, tilstand, fremtidigTilstand, fagligNotat, udførelse, betydningUdførelse, borgerNotat, CatID);
         return functionalAbilityCord;
 
     }
@@ -69,12 +70,34 @@ public class FunctionalAbilityDAO {
                     rs.getString("fagligNotat"),
                     rs.getString("udførelse"),
                     rs.getString("betydningUdførelse"),
-                    rs.getString("borgerNotat")
+                    rs.getString("borgerNotat"),
+                    rs.getInt("CatID")
             );
             allFuncionalAbilities.add(functionalAbilityCord);
         }
         return allFuncionalAbilities;
     }
 
+    public void updateFunctionalAbility(int CaseID, String tilstand, String fremtidigTilstand, String fagligNotat, String udførelse, String betydningUdførelse, String borgerNotat, int CatID) throws SQLException {
 
+        String sql = "UPDATE FunctionalAbility SET tilstand = (?), fremtidigTilstand = (?), fagligNotat = (?), udførelse = (?), betydningUdførelse = (?), borgerNotat = (?) WHERE CaseID = (?) AND CatID = (?);";
+
+        try(Connection connection = DC.getConnection()){
+            PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setString(1, tilstand);
+            ps.setString(2, fremtidigTilstand);
+            ps.setString(3, fagligNotat);
+            ps.setString(4, udførelse);
+            ps.setString(5, betydningUdførelse);
+            ps.setString(6, borgerNotat);
+            ps.setInt(7, CaseID);
+            ps.setInt(8, CatID);
+
+            ps.executeUpdate();
+
+        } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
+        }
+
+    }
 }

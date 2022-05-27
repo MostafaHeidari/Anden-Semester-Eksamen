@@ -28,7 +28,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <Text fx:id="kategori" fill="#001569" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sub-Kategori" textAlignment="CENTER" wrappingWidth="199.0">
+            <Text fx:id="kategori" fill="#001569" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mentale Funktioner" textAlignment="CENTER" wrappingWidth="199.0">
                <font>
                   <Font size="32.0" />
                </font>
