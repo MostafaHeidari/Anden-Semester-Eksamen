@@ -112,10 +112,18 @@ public class SubcategoryPsychosocialRelationshipsController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtSocialRealitionship.setText(categoryModel.readCategory(caseID,"Problems with Social Relationship")[0]);
-        txtEmotionelleProblems.setText(categoryModel.readCategory(caseID,"Problems with Emotions")[0]);
-        txtAbuseProblems.setText(categoryModel.readCategory(caseID,"Problems with abuse")[0]);
-        txtMentalProblems.setText(categoryModel.readCategory(caseID,"Problems with mental")[0]);
+        if(categoryModel.readCategory(caseID,"Problems with Social Relationship") != null){
+            txtSocialRealitionship.setText(categoryModel.readCategory(caseID,"Problems with Social Relationship")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"Problems with Emotions") != null){
+            txtEmotionelleProblems.setText(categoryModel.readCategory(caseID,"Problems with Emotions")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"Problems with abuse") != null){
+            txtAbuseProblems.setText(categoryModel.readCategory(caseID,"Problems with abuse")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"Problems with mental") != null){
+            txtMentalProblems.setText(categoryModel.readCategory(caseID,"Problems with mental")[0]);
+        }
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {
