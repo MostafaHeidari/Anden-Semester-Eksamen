@@ -87,7 +87,7 @@
             </FontAwesomeIconView>
             </children>
         </Pane>
-      <JFXButton fx:id="caseInfo" layoutX="214.0" layoutY="550.0" onAction="#caseInfoBtn" prefHeight="33.0" prefWidth="101.0" text="Se Boger" />
+      <JFXButton fx:id="caseInfo" layoutX="214.0" layoutY="550.0" onAction="#caseInfoBtn" prefHeight="33.0" prefWidth="101.0" text="Se Borger" />
       <JFXButton fx:id="createCase" layoutX="214.0" layoutY="505.0" onAction="#createCaseBtn" prefHeight="33.0" prefWidth="101.0" text="Opret Sag" />
       <JFXButton fx:id="LogOut" layoutX="833.0" layoutY="14.0" onAction="#LogOut" stylesheets="@../CSS/CitizentInfo.css" text="Log ud" textFill="WHITE">
          <cursor>

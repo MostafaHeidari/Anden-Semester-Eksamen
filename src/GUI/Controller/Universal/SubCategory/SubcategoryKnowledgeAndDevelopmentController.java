@@ -109,9 +109,15 @@ public class SubcategoryKnowledgeAndDevelopmentController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtMemoryProblems.setText(categoryModel.readCategory(caseID,"Memory problems")[0]);
-        txtTreatmentPurpose.setText(categoryModel.readCategory(caseID,"TreatmentProblems")[0]);
-        txtDiseaseInsight.setText(categoryModel.readCategory(caseID,"Disease Insight problems")[0]);
+        if(categoryModel.readCategory(caseID,"Memory problems") != null){
+            txtMemoryProblems.setText(categoryModel.readCategory(caseID,"Memory problems")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"TreatmentProblems") != null){
+            txtTreatmentPurpose.setText(categoryModel.readCategory(caseID,"TreatmentProblems")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"Disease Insight problems") != null){
+            txtDiseaseInsight.setText(categoryModel.readCategory(caseID,"Disease Insight problems")[0]);
+        }
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {
