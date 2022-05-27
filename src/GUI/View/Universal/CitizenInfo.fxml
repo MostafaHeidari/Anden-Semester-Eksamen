@@ -38,7 +38,7 @@
         </TableView>
         <Pane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #D4D3BE;">
             <children>
-            <Text fill="WHITE" layoutX="18.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Borger&#10;Information" textAlignment="CENTER">
+            <Text fill="#001569" layoutX="18.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Borger&#10;Information" textAlignment="CENTER">
                <font>
                   <Font size="32.0" />
                </font>
