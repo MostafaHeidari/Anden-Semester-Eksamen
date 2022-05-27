@@ -144,14 +144,30 @@ public class SubcategoryPainAndSensoryImpressionsController {
 
     public void setId(int caseID) throws SQLException {
         this.caseID = caseID;
-        txtAcutePain.setText(categoryModel.readCategory(caseID,"Acute pain")[0]);
-        txtPeriodePain.setText(categoryModel.readCategory(caseID,"Periode pain")[0]);
-        txtChronicPain.setText(categoryModel.readCategory(caseID,"Chronic Pain")[0]);
-        txtEyeProblem.setText(categoryModel.readCategory(caseID,"Eye problem")[0]);
-        txtSmellProblems.setText(categoryModel.readCategory(caseID,"Smell problems")[0]);
-        txthearProblems.setText(categoryModel.readCategory(caseID,"Hear problems")[0]);
-        txtTasteProblems.setText(categoryModel.readCategory(caseID,"Problems with mixed wound")[0]);
-        txtFeelingProblems.setText(categoryModel.readCategory(caseID,"Feeling problems")[0]);
+        if(categoryModel.readCategory(caseID,"Acute pain") != null){
+            txtAcutePain.setText(categoryModel.readCategory(caseID,"Acute pain")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"Periode pain") != null){
+            txtPeriodePain.setText(categoryModel.readCategory(caseID,"Periode pain")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"Chronic Pain") != null){
+            txtChronicPain.setText(categoryModel.readCategory(caseID,"Chronic Pain")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"Eye problem") != null){
+            txtEyeProblem.setText(categoryModel.readCategory(caseID,"Eye problem")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"Smell problems") != null){
+            txtSmellProblems.setText(categoryModel.readCategory(caseID,"Smell problems")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"Hear problems") != null){
+            txthearProblems.setText(categoryModel.readCategory(caseID,"Hear problems")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"Problems with mixed wound") != null){
+            txtTasteProblems.setText(categoryModel.readCategory(caseID,"Problems with mixed wound")[0]);
+        }
+        if(categoryModel.readCategory(caseID,"Feeling problems") != null){
+            txtFeelingProblems.setText(categoryModel.readCategory(caseID,"Feeling problems")[0]);
+        }
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {
