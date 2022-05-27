@@ -44,7 +44,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <Pane prefHeight="638.0" prefWidth="199.0" style="-fx-background-color: #D4D3BE;">
+            <Pane fx:id="rightPane" prefHeight="638.0" prefWidth="199.0" style="-fx-background-color: #D4D3BE;">
                <children>
                   <JFXButton fx:id="BtnBack" layoutX="14.0" layoutY="568.0" onAction="#BtnBack" prefHeight="40.0" prefWidth="170.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
                      <cursor>

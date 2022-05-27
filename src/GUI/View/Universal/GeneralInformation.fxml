@@ -19,7 +19,7 @@
 
 <AnchorPane prefHeight="657.0" prefWidth="1031.0" stylesheets="@../CSS/GeneralInfo.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.GeneralinformationController">
    <children>
-      <Pane prefHeight="666.0" prefWidth="198.0" style="-fx-background-color: #D4D3BE;">
+      <Pane prefHeight="666.0" prefWidth="198.0" style="-fx-background-color: efef77;">
          <children>
             <JFXButton fx:id="BtnBack" layoutX="14.0" layoutY="592.0" onAction="#BtnBack" prefHeight="40.0" prefWidth="170.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
                <cursor>

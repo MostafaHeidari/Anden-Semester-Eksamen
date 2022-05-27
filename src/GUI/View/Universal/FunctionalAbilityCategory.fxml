@@ -21,14 +21,14 @@
             <Text layoutX="332.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorier" />
          </children>
       </Pane>
-      <Pane prefHeight="650.0" prefWidth="199.0" style="-fx-background-color: #D4D3BE;">
+      <Pane prefHeight="650.0" prefWidth="199.0" style="-fx-background-color: #efef77;">
          <children>
             <JFXButton fx:id="backToLastPage" layoutX="14.0" layoutY="593.0" onAction="#backToLastPageBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <Text fill="WHITE" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategori" textAlignment="CENTER" wrappingWidth="199.0">
+            <Text fill="#001569" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategori" textAlignment="CENTER" wrappingWidth="199.0">
                <font>
                   <Font size="32.0" />
                </font>

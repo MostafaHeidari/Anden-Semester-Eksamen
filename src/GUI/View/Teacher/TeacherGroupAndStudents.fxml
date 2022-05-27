@@ -89,7 +89,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <Pane layoutX="-4.0" prefHeight="720.0" prefWidth="199.0" style="-fx-background-color: #D4D3BE;">
+      <Pane layoutX="-4.0" prefHeight="720.0" prefWidth="199.0" style="-fx-background-color: #efef77;">
          <children>
             <Text fill="#001569" layoutX="11.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gruppe&#10;Organisering" textAlignment="CENTER">
                <font>
