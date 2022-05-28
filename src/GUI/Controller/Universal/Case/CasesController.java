@@ -129,8 +129,6 @@ public class CasesController implements Initializable {
 
     public void generalInfoBtn(ActionEvent actionEvent) throws IOException {
         {
-            selectedCase = (Case) tvCase.getSelectionModel().getSelectedItem();
-
             Stage switcher = (Stage) Category.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/View/Universal/GeneralInformation.fxml"));
             Parent root = loader.load();

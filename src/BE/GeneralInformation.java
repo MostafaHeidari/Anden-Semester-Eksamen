@@ -5,258 +5,173 @@ public class GeneralInformation {
     private int id;
     private String mestring;
     private String motivation;
-    private String resources;
-    private String rolls;
-    private String habits;
-    private String educationAndJob;
-    private String lifeStory;
-    private final String healthInformation;
-    private final String AssistiveDevices;
-    private final String homeLayout;
-    private final String Network;
+    private String resourcer;
+    private String roller;
+    private String vaner;
+    private String uddanelseJob;
+    private String liveHistorie;
+    private String helbredsOplysninger;
+    private String hjælpeMidler;
+    private String boligensIndretning;
+    private String netværk;
+    private int patientID;
 
     /**
      * @param id
      * @param mestring
      * @param motivation
-     * @param resources
-     * @param rolls
-     * @param habits
-     * @param studyJOB
-     * @param lifeStory
-     * @param HealthInformation
-     * @param InteriorDesign
-     * @param Network
+     * @param resourcer
+     * @param roller
+     * @param vaner
+     * @param uddanelseJob
+     * @param liveHistorie
+     * @param helbredsOplysninger
+     * @param hjælpeMidler
+     * @param boligensIndretning
+     * @param netværk
      * Constructor with id, mestring,  motivation, resources, rolls, habits, studyJOB, lifeStory, HealthInformation, AssistiveDevices, InteriorDesign, Network
      */
-    public GeneralInformation(int id, String mestring, String motivation, String resources, String rolls, String habits, String studyJOB, String lifeStory, String HealthInformation, String AssistiveDevices, String InteriorDesign, String Network) {
-        this.id = id;
+    public GeneralInformation(String mestring, String motivation, String resourcer, String roller, String vaner, String uddanelseJob, String liveHistorie, String helbredsOplysninger, String hjælpeMidler, String boligensIndretning, String netværk, int patientID) {
         this.mestring = mestring;
         this.motivation = motivation;
-        this.resources = resources;
-        this.rolls = rolls;
-        this.habits = habits;
-        this.educationAndJob = studyJOB;
-        this.lifeStory = lifeStory;
-        this.healthInformation = HealthInformation;
-        this.AssistiveDevices = AssistiveDevices;
-        this.homeLayout = InteriorDesign;
-        this.Network = Network;
+        this.resourcer = resourcer;
+        this.roller = roller;
+        this.vaner = vaner;
+        this.uddanelseJob = uddanelseJob;
+        this.liveHistorie = liveHistorie;
+        this.helbredsOplysninger = helbredsOplysninger;
+        this.hjælpeMidler = hjælpeMidler;
+        this.boligensIndretning = boligensIndretning;
+        this.netværk = netværk;
+        this.patientID = patientID;
     }
 
     /**
-     * Gets the id
-     * @return id
+     * Getters and setters
      */
     public int getId() {
         return id;
     }
 
-    /**
-     * Sets the id
-     * @param id
-     */
     public void setId(int id) {
         this.id = id;
     }
 
-    /**
-     * Gets the mestring
-     * @return mestring
-     */
     public String getMestring() {
         return mestring;
     }
 
-    /**
-     * Sets the mestring
-     * @param mestring
-     */
     public void setMestring(String mestring) {
         this.mestring = mestring;
     }
 
-    /**
-     * Gets the motivation
-     * @return motivation
-     */
     public String getMotivation() {
         return motivation;
     }
 
-    /**
-     * Sets the motivation
-     * @param motivation
-     */
     public void setMotivation(String motivation) {
         this.motivation = motivation;
     }
 
-    /**
-     * Gets the resources
-     * @return resources
-     */
-    public String getResources() {
-        return resources;
+    public String getResourcer() {
+        return resourcer;
     }
 
-    /**
-     * Sets the ressourcer
-     * @param ressourcer
-     */
-    public void setResources(String ressourcer) {
-        this.resources = resources;
+    public void setResourcer(String resourcer) {
+        this.resourcer = resourcer;
     }
 
-    /**
-     * Gets the rolls
-     * @return rolls
-     */
-    public String getRolls() {
-        return rolls;
+    public String getRoller() {
+        return roller;
     }
 
-    /**
-     * Sets the rolls
-     * @param rolls
-     */
-    public void setRolls(String rolls) {
-        this.rolls = rolls;
+    public void setRoller(String roller) {
+        this.roller = roller;
     }
 
-    /**
-     * Gets the habits
-     * @return habits
-     */
-    public String getHabits() {
-        return habits;
+    public String getVaner() {
+        return vaner;
     }
 
-    /**
-     * Gets the habits
-     * @param habits
-     */
-    public void setHabits(String habits) {
-        this.habits = habits;
+    public void setVaner(String vaner) {
+        this.vaner = vaner;
     }
 
-    /**
-     * Gets the studyJOB
-     * @return studyJOB
-     */
-    public String getstudyJOB() {
-        return educationAndJob;
+    public String getUddanelseJob() {
+        return uddanelseJob;
     }
 
-    /**
-     * Sets the studyJOB
-     * @param studyJOB
-     */
-    public void setstudyJOB(String studyJOB) {
-        this.educationAndJob = studyJOB;
+    public void setUddanelseJob(String uddanelseJob) {
+        this.uddanelseJob = uddanelseJob;
     }
 
-    /**
-     * Gets the lifeStory
-     * @return lifeStory
-     */
-    public String getlifeStory() {
-        return lifeStory;
+    public String getLiveHistorie() {
+        return liveHistorie;
     }
 
-    /**
-     * Sets the lifeStory
-     * @param lifeStory
-     */
-    public void setlifeStory(String lifeStory) {
-        this.lifeStory = lifeStory;
+    public void setLiveHistorie(String liveHistorie) {
+        this.liveHistorie = liveHistorie;
     }
 
-    /**
-     * Gets the HealthInformation
-     * @return HealthInformation
-     */
-    public String getHealthInformation() {
-        return healthInformation;
+    public String getHelbredsOplysninger() {
+        return helbredsOplysninger;
     }
 
-    /**
-     * Sets the HealthInformation
-     * @param HealthInformation
-     */
-    public void setHealthInformation(String HealthInformation) {
-        HealthInformation = HealthInformation;
+    public void setHelbredsOplysninger(String helbredsOplysninger) {
+        this.helbredsOplysninger = helbredsOplysninger;
     }
 
-    /**
-     * Gets the AssistiveDevices
-     * @return AssistiveDevices
-     */
-    public String getAssistiveDevices() {
-        return AssistiveDevices;
+    public String getHjælpeMidler() {
+        return hjælpeMidler;
     }
 
-    /**
-     * Sets the AssistiveDevices
-     * @param AssistiveDevices
-     */
-    public void setAssistiveDevices(String AssistiveDevices) {
-        AssistiveDevices = AssistiveDevices;
+    public void setHjælpeMidler(String hjælpeMidler) {
+        this.hjælpeMidler = hjælpeMidler;
     }
 
-    /**
-     * Gets the InteriorDesign
-     * @return InteriorDesign
-     */
-    public String getInteriorDesign() {
-        return homeLayout;
+    public String getBoligensIndretning() {
+        return boligensIndretning;
     }
 
-    /**
-     * Sets the InteriorDesign
-     * @param InteriorDesign
-     */
-    public void setInteriorDesign(String InteriorDesign) {
-        InteriorDesign = InteriorDesign;
+    public void setBoligensIndretning(String boligensIndretning) {
+        this.boligensIndretning = boligensIndretning;
     }
 
-    /**
-     * Gets the Network
-     * @return Network
-     */
-    public String getNetwork() {
-        return Network;
+    public String getNetværk() {
+        return netværk;
     }
 
-    /**
-     * Sets the Network
-     * @param Network
-     */
-    public void setNetwork(String Network) {
-        Network = Network;
+    public void setNetværk(String netværk) {
+        this.netværk = netværk;
+    }
+
+    public int getPatientID() {
+        return patientID;
+    }
+
+    public void setPatientID(int patientID) {
+        this.patientID = patientID;
     }
 
     /**
      * ToString method
      * @return id, mestring, motivation, resources, rolls, habits, studyJOB, lifeStory, HealthInformation, AssistiveDevices, InteriorDesign, Network
      */
-
-
     @Override
     public String toString() {
         return "GeneralInformation{" +
                 "id=" + id +
                 ", mestring='" + mestring + '\'' +
                 ", motivation='" + motivation + '\'' +
-                ", resources='" + resources + '\'' +
-                ", rolls='" + rolls + '\'' +
-                ", habits='" + habits + '\'' +
-                ", educationAndJob='" + educationAndJob + '\'' +
-                ", lifeStory='" + lifeStory + '\'' +
-                ", healthInformation='" + healthInformation + '\'' +
-                ", AssistiveDevices='" + AssistiveDevices + '\'' +
-                ", homeLayout='" + homeLayout + '\'' +
-                ", Network='" + Network + '\'' +
+                ", resources='" + resourcer + '\'' +
+                ", rolls='" + roller + '\'' +
+                ", habits='" + vaner + '\'' +
+                ", educationAndJob='" + uddanelseJob + '\'' +
+                ", lifeStory='" + liveHistorie + '\'' +
+                ", healthInformation='" + helbredsOplysninger + '\'' +
+                ", AssistiveDevices='" + hjælpeMidler + '\'' +
+                ", homeLayout='" + boligensIndretning + '\'' +
+                ", Network='" + netværk + '\'' +
                 '}';
     }
 }

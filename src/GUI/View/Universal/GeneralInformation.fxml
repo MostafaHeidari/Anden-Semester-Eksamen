@@ -69,7 +69,7 @@
                   <RowConstraints maxHeight="380.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Button fx:id="BtnMestring" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="Mestring">
+                  <Button fx:id="BtnMestring" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#mestring" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="Mestring">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -77,7 +77,7 @@
                         <Tooltip text="Borgerens bevidste eller ubevidstehåndtering af livet/sygdommen – bådeudfordringer og muligheder" />
                      </tooltip>
                   </Button>
-                  <Button fx:id="BtnMotivation" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="72.0" prefWidth="198.0" styleClass="topbar-buttons" text="Motivation" GridPane.rowIndex="1">
+                  <Button fx:id="BtnMotivation" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#motivation" prefHeight="72.0" prefWidth="198.0" styleClass="topbar-buttons" text="Motivation" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -85,7 +85,7 @@
                         <Tooltip text="Drivkraften bag at borgeren handler påen bestemt måde eller går i gangmed/opretholder en opgave/indsats." />
                      </tooltip>
                   </Button>
-                  <Button fx:id="BtnRessourcer" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="Ressourcer" GridPane.rowIndex="2">
+                  <Button fx:id="BtnRessourcer" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#ressourcer" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="Ressourcer" GridPane.rowIndex="2">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -93,7 +93,7 @@
                         <Tooltip text="De fysiske eller mentale kræfter, somborgerenen i et vist omfang har tilrådighed og kan udnytte. Fysiske kræfterkan fx være i form af fysisk sundhed ogstyrke. Mentale kræfter kan fx være iform af psykisk sundhed og styrke,herunder tanker og måder at forholde sigtil situationer og andre mennesker på. " />
                      </tooltip>
                   </Button>
-                  <Button fx:id="BtnRoller" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="75.0" prefWidth="386.0" text="Roller" GridPane.rowIndex="3">
+                  <Button fx:id="BtnRoller" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#roller" prefHeight="75.0" prefWidth="386.0" text="Roller" GridPane.rowIndex="3">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -101,7 +101,7 @@
                         <Tooltip text="De roller som er særligt vigtige forborgeren i forhold til familie, arbejde ogsamfund." />
                      </tooltip>
                   </Button>
-                  <Button fx:id="BtnVaner" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="75.0" prefWidth="386.0" text="Væner" GridPane.rowIndex="4">
+                  <Button fx:id="BtnVaner" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#vaner" prefHeight="75.0" prefWidth="386.0" text="Vaner" GridPane.rowIndex="4">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -109,7 +109,7 @@
                         <Tooltip text="Regelmæssig adfærd som borgeren hartillært gennem stadig gentagelse ogudførelse helt eller delvist ubevidst." />
                      </tooltip>
                   </Button>
-                  <Button fx:id="BtnUddannelse" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="77.0" prefWidth="198.0" styleClass="topbar-buttons" text="Uddannelse / Job" GridPane.rowIndex="5">
+                  <Button fx:id="BtnUddannelse" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#uddannelse" prefHeight="77.0" prefWidth="198.0" styleClass="topbar-buttons" text="Uddannelse / Job" GridPane.rowIndex="5">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -117,7 +117,7 @@
                         <Tooltip text="Nuværende eller tidligere uddannelsesog/eller erhvervsmæssig baggrund.Fx folkeskole, erhvervsuddannelse ogvideregående uddannelse." />
                      </tooltip>
                   </Button>
-                  <Button fx:id="BtnLivsHistorie" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="LivsHistorie" GridPane.rowIndex="6">
+                  <Button fx:id="BtnLivsHistorie" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#livsHistorie" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="LivsHistorie" GridPane.rowIndex="6">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -125,7 +125,7 @@
                         <Tooltip text="En beskrivelse af borgerens oplevelse afvæsentlige begivenheder, interesser oggøremål igennem livet" />
                      </tooltip>
                   </Button>
-                  <Button fx:id="BtnHelbred" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="Helbreds Oplysninger" GridPane.rowIndex="7">
+                  <Button fx:id="BtnHelbred" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#helbred" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="Helbreds Oplysninger" GridPane.rowIndex="7">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -133,7 +133,7 @@
                         <Tooltip text="Helbredsoplysninger:Aktuelle eller tidligere sygdomme oghandicap der har betydning forborgerens situation.Sundhedsfaglige kontakter:Medarbejder eller enheder indenforsundhedsvæsenet borgeren er tilknyttet,fx øjenlæge, tandlæge, fodterapeut ellerafdeling/ambulatorium." />
                      </tooltip>
                   </Button>
-                  <Button fx:id="BtnHelp" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="Hjælpemidler" GridPane.rowIndex="8">
+                  <Button fx:id="BtnHjælpeMidler" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#hjælpeMidler" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="Hjælpemidler" GridPane.rowIndex="8">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -141,7 +141,7 @@
                         <Tooltip text="Udstyr, produkter og teknologi somanvendes af borgeren i dagligeaktiviteter, inkl. sådanne som er tilpasseteller særligt fremstillet til, implanteret i,placeret på eller nær personen, somanvender dem. (Inkl. almindeligegenstande og hjælpemidler og teknologitil personlig anvendelse). " />
                      </tooltip>
                   </Button>
-                  <Button fx:id="BtnBolige" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="Boligens indretning" GridPane.rowIndex="9">
+                  <Button fx:id="BtnBolig" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#bolig" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="Boligens indretning" GridPane.rowIndex="9">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -149,7 +149,7 @@
                         <Tooltip text="En beskrivelse af boligens fysiske rammerog omgivelser, der har betydning forborgerens hverdagsliv og funktionsevne." />
                      </tooltip>
                   </Button>
-                  <Button fx:id="BtnNetwork" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="Netværk" GridPane.rowIndex="10">
+                  <Button fx:id="BtnNetwork" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#network" prefHeight="75.0" prefWidth="386.0" styleClass="topbar-buttons" text="Netværk" GridPane.rowIndex="10">
                      <font>
                         <Font size="18.0" />
                      </font>
