@@ -2,7 +2,6 @@ package DAL;
 
 import BE.GeneralInformation;
 import DAL.db.DatabaseConnector;
-import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.io.IOException;
 import java.sql.*;
@@ -20,21 +19,21 @@ public class GeneralInformationDAO {
         DC = new DatabaseConnector();
     }
 
-    public GeneralInformation createGeneralInformation(String Mestring, String Motivation, String Ressourcer, String Roller, String Vaner, String UddanelseJob, String Livhistorie, String HelbredsOplysninger, String Hjælpemidler, String BoligensIndretning, String Netværk, int PatientID) throws SQLException {
+    public GeneralInformation createGeneralInformation(String mestring, String motivation, String resources, String roles, String habits, String educationAndJob, String lifestory, String healthInformation, String AssistiveDevices, String homeLayout, String network, int PatientID) throws SQLException {
         try (Connection connection = DC.getConnection()) {
             String sql = "INSERT INTO GeneralInfo (Mestring, Motivation, Ressourcer, Roller, Vaner, UddanelseJob, Livhistorie, HelbredsOplysninger, Hjælpemidler, BoligensIndretning, Netværk, PatientID) VALUES (?,?,?,?,?,?,?,?,?,?,?,?);";
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
-                preparedStatement.setString(1, Mestring);
-                preparedStatement.setString(2, Motivation);
-                preparedStatement.setString(3, Ressourcer);
-                preparedStatement.setString(4, Roller);
-                preparedStatement.setString(5, Vaner);
-                preparedStatement.setString(6, UddanelseJob);
-                preparedStatement.setString(7, Livhistorie);
-                preparedStatement.setString(8, HelbredsOplysninger);
-                preparedStatement.setString(9, Hjælpemidler);
-                preparedStatement.setString(10, BoligensIndretning);
-                preparedStatement.setString(11, Netværk);
+                preparedStatement.setString(1, mestring);
+                preparedStatement.setString(2, motivation);
+                preparedStatement.setString(3, resources);
+                preparedStatement.setString(4, roles);
+                preparedStatement.setString(5, habits);
+                preparedStatement.setString(6, educationAndJob);
+                preparedStatement.setString(7, lifestory);
+                preparedStatement.setString(9, healthInformation);
+                preparedStatement.setString(10, AssistiveDevices);
+                preparedStatement.setString(11, homeLayout);
+                preparedStatement.setString(8, network);
                 preparedStatement.setInt(12, PatientID);
                 preparedStatement.execute();
                 ResultSet resultSet = preparedStatement.getGeneratedKeys();
@@ -43,8 +42,8 @@ public class GeneralInformationDAO {
                     id = resultSet.getInt(1);
                 }
 
-                GeneralInformation generalInformation = new GeneralInformation(Mestring, Motivation, Ressourcer,
-                        Roller, Vaner, UddanelseJob, Livhistorie, HelbredsOplysninger, Hjælpemidler, BoligensIndretning, Netværk, PatientID
+                GeneralInformation generalInformation = new GeneralInformation(mestring, motivation, resources,
+                        roles, habits, educationAndJob, lifestory, healthInformation, AssistiveDevices, homeLayout, network, PatientID
                 );
                 return generalInformation;
             }
@@ -101,13 +100,13 @@ public class GeneralInformationDAO {
 
     }
 
-    public void updateRoller(String Roller, int PatientID) throws SQLException {
+    public void updateRoller(String Roles, int PatientID) throws SQLException {
 
         String sql = "UPDATE GeneralInfo SET Roller = (?) WHERE PatientID = (?);";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            preparedStatement.setString(1, Roller);
+            preparedStatement.setString(1, Roles);
             preparedStatement.setInt(2, PatientID);
 
             preparedStatement.executeUpdate();
@@ -118,13 +117,13 @@ public class GeneralInformationDAO {
 
     }
 
-    public void updateVaner(String Vaner, int PatientID) throws SQLException {
+    public void updateVaner(String Habit, int PatientID) throws SQLException {
 
-        String sql = "UPDATE GeneralInfo SET Vaner = (?) WHERE PatientID = (?);";
+        String sql = "UPDATE GeneralInfo SET Habit = (?) WHERE PatientID = (?);";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            preparedStatement.setString(1, Vaner);
+            preparedStatement.setString(1, Habit);
             preparedStatement.setInt(2, PatientID);
 
             preparedStatement.executeUpdate();
@@ -135,13 +134,13 @@ public class GeneralInformationDAO {
 
     }
 
-    public void updateUddanelseJob(String UddanelseJob, int PatientID) throws SQLException {
+    public void updateUddanelseJob(String EducationAndJob, int PatientID) throws SQLException {
 
-        String sql = "UPDATE GeneralInfo SET UddanelseJob = (?) WHERE PatientID = (?);";
+        String sql = "UPDATE GeneralInfo SET EducationAndJob = (?) WHERE PatientID = (?);";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            preparedStatement.setString(1, UddanelseJob);
+            preparedStatement.setString(1, EducationAndJob);
             preparedStatement.setInt(2, PatientID);
 
             preparedStatement.executeUpdate();
@@ -152,13 +151,13 @@ public class GeneralInformationDAO {
 
     }
 
-    public void updateLivhistorie(String Livhistorie, int PatientID) throws SQLException {
+    public void updateLivhistorie(String lifestory, int PatientID) throws SQLException {
 
-        String sql = "UPDATE GeneralInfo SET Livhistorie = (?) WHERE PatientID = (?);";
+        String sql = "UPDATE GeneralInfo SET lifestory = (?) WHERE PatientID = (?);";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            preparedStatement.setString(1, Livhistorie);
+            preparedStatement.setString(1, lifestory);
             preparedStatement.setInt(2, PatientID);
 
             preparedStatement.executeUpdate();
@@ -169,13 +168,13 @@ public class GeneralInformationDAO {
 
     }
 
-    public void updateHelbredsOplysninger(String HelbredsOplysninger, int PatientID) throws SQLException {
+    public void updateHelbredsOplysninger(String healthInformation, int PatientID) throws SQLException {
 
-        String sql = "UPDATE GeneralInfo SET HelbredsOplysninger = (?) WHERE PatientID = (?);";
+        String sql = "UPDATE GeneralInfo SET healthInformation = (?) WHERE PatientID = (?);";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            preparedStatement.setString(1, HelbredsOplysninger);
+            preparedStatement.setString(1, healthInformation);
             preparedStatement.setInt(2, PatientID);
 
             preparedStatement.executeUpdate();
@@ -186,13 +185,13 @@ public class GeneralInformationDAO {
 
     }
 
-    public void updateHjælpemidler(String Hjælpemidler, int PatientID) throws SQLException {
+    public void updateHjælpemidler(String AssistiveDevices, int PatientID) throws SQLException {
 
-        String sql = "UPDATE GeneralInfo SET Hjælpemidler = (?) WHERE PatientID = (?);";
+        String sql = "UPDATE GeneralInfo SET AssistiveDevices = (?) WHERE PatientID = (?);";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            preparedStatement.setString(1, Hjælpemidler);
+            preparedStatement.setString(1, AssistiveDevices);
             preparedStatement.setInt(2, PatientID);
 
             preparedStatement.executeUpdate();
@@ -203,13 +202,13 @@ public class GeneralInformationDAO {
 
     }
 
-    public void updateBoligensIndretning(String BoligensIndretning, int PatientID) throws SQLException {
+    public void updateBoligensIndretning(String HomeLayout, int PatientID) throws SQLException {
 
-        String sql = "UPDATE GeneralInfo SET BoligensIndretning = (?) WHERE PatientID = (?);";
+        String sql = "UPDATE GeneralInfo SET HomeLayout = (?) WHERE PatientID = (?);";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            preparedStatement.setString(1, BoligensIndretning);
+            preparedStatement.setString(1, HomeLayout);
             preparedStatement.setInt(2, PatientID);
 
             preparedStatement.executeUpdate();
@@ -220,13 +219,13 @@ public class GeneralInformationDAO {
 
     }
 
-    public void updateNetværk(String Netværk, int PatientID) throws SQLException {
+    public void updateNetværk(String Network, int PatientID) throws SQLException {
 
-        String sql = "UPDATE GeneralInfo SET Netværk = (?) WHERE PatientID = (?);";
+        String sql = "UPDATE GeneralInfo SET Network = (?) WHERE PatientID = (?);";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            preparedStatement.setString(1, Netværk);
+            preparedStatement.setString(1, Network);
             preparedStatement.setInt(2, PatientID);
 
             preparedStatement.executeUpdate();
@@ -234,7 +233,5 @@ public class GeneralInformationDAO {
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
         }
-
     }
-
 }

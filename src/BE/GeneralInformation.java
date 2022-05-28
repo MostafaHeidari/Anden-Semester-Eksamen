@@ -6,43 +6,43 @@ public class GeneralInformation {
     private String mestring;
     private String motivation;
     private String resourcer;
-    private String roller;
-    private String vaner;
-    private String uddanelseJob;
-    private String liveHistorie;
-    private String helbredsOplysninger;
-    private String hjælpeMidler;
-    private String boligensIndretning;
-    private String netværk;
+    private String rolls;
+    private String habits;
+    private String educationAndJob;
+    private String lifeStory;
+    private final String healthInformation;
+    private final String AssistiveDevices;
+    private final String homeLayout;
+    private final String Network;
     private int patientID;
 
     /**
-     * @param id
+
      * @param mestring
      * @param motivation
      * @param resourcer
-     * @param roller
-     * @param vaner
-     * @param uddanelseJob
-     * @param liveHistorie
-     * @param helbredsOplysninger
-     * @param hjælpeMidler
-     * @param boligensIndretning
-     * @param netværk
-     * Constructor with id, mestring,  motivation, resources, rolls, habits, studyJOB, lifeStory, HealthInformation, AssistiveDevices, InteriorDesign, Network
+     * @param rolls
+     * @param habits
+     * @param educationAndJob
+     * @param lifeStory
+     * @param healthInformation
+     * @param assistiveDevices
+     * @param network
+     * @param patientID
      */
-    public GeneralInformation(String mestring, String motivation, String resourcer, String roller, String vaner, String uddanelseJob, String liveHistorie, String helbredsOplysninger, String hjælpeMidler, String boligensIndretning, String netværk, int patientID) {
+    public GeneralInformation(String mestring, String motivation, String resourcer, String rolls, String habits, String educationAndJob, String lifeStory, String healthInformation, String assistiveDevices, String homeLayout, String network, int patientID) {
+        this.id = id;
         this.mestring = mestring;
         this.motivation = motivation;
         this.resourcer = resourcer;
-        this.roller = roller;
-        this.vaner = vaner;
-        this.uddanelseJob = uddanelseJob;
-        this.liveHistorie = liveHistorie;
-        this.helbredsOplysninger = helbredsOplysninger;
-        this.hjælpeMidler = hjælpeMidler;
-        this.boligensIndretning = boligensIndretning;
-        this.netværk = netværk;
+        this.rolls = rolls;
+        this.habits = habits;
+        this.educationAndJob = educationAndJob;
+        this.lifeStory = lifeStory;
+        this.healthInformation = healthInformation;
+        AssistiveDevices = assistiveDevices;
+        this.homeLayout = homeLayout;
+        Network = network;
         this.patientID = patientID;
     }
 
@@ -81,68 +81,52 @@ public class GeneralInformation {
         this.resourcer = resourcer;
     }
 
-    public String getRoller() {
-        return roller;
+    public String getRolls() {
+        return rolls;
     }
 
-    public void setRoller(String roller) {
-        this.roller = roller;
+    public void setRolls(String rolls) {
+        this.rolls = rolls;
     }
 
-    public String getVaner() {
-        return vaner;
+    public String getHabits() {
+        return habits;
     }
 
-    public void setVaner(String vaner) {
-        this.vaner = vaner;
+    public void setHabits(String habits) {
+        this.habits = habits;
     }
 
-    public String getUddanelseJob() {
-        return uddanelseJob;
+    public String getEducationAndJob() {
+        return educationAndJob;
     }
 
-    public void setUddanelseJob(String uddanelseJob) {
-        this.uddanelseJob = uddanelseJob;
+    public void setEducationAndJob(String educationAndJob) {
+        this.educationAndJob = educationAndJob;
     }
 
-    public String getLiveHistorie() {
-        return liveHistorie;
+    public String getLifeStory() {
+        return lifeStory;
     }
 
-    public void setLiveHistorie(String liveHistorie) {
-        this.liveHistorie = liveHistorie;
+    public void setLifeStory(String lifeStory) {
+        this.lifeStory = lifeStory;
     }
 
-    public String getHelbredsOplysninger() {
-        return helbredsOplysninger;
+    public String getHealthInformation() {
+        return healthInformation;
     }
 
-    public void setHelbredsOplysninger(String helbredsOplysninger) {
-        this.helbredsOplysninger = helbredsOplysninger;
+    public String getAssistiveDevices() {
+        return AssistiveDevices;
     }
 
-    public String getHjælpeMidler() {
-        return hjælpeMidler;
+    public String getHomeLayout() {
+        return homeLayout;
     }
 
-    public void setHjælpeMidler(String hjælpeMidler) {
-        this.hjælpeMidler = hjælpeMidler;
-    }
-
-    public String getBoligensIndretning() {
-        return boligensIndretning;
-    }
-
-    public void setBoligensIndretning(String boligensIndretning) {
-        this.boligensIndretning = boligensIndretning;
-    }
-
-    public String getNetværk() {
-        return netværk;
-    }
-
-    public void setNetværk(String netværk) {
-        this.netværk = netværk;
+    public String getNetwork() {
+        return Network;
     }
 
     public int getPatientID() {
@@ -157,21 +141,23 @@ public class GeneralInformation {
      * ToString method
      * @return id, mestring, motivation, resources, rolls, habits, studyJOB, lifeStory, HealthInformation, AssistiveDevices, InteriorDesign, Network
      */
+
     @Override
     public String toString() {
         return "GeneralInformation{" +
                 "id=" + id +
                 ", mestring='" + mestring + '\'' +
                 ", motivation='" + motivation + '\'' +
-                ", resources='" + resourcer + '\'' +
-                ", rolls='" + roller + '\'' +
-                ", habits='" + vaner + '\'' +
-                ", educationAndJob='" + uddanelseJob + '\'' +
-                ", lifeStory='" + liveHistorie + '\'' +
-                ", healthInformation='" + helbredsOplysninger + '\'' +
-                ", AssistiveDevices='" + hjælpeMidler + '\'' +
-                ", homeLayout='" + boligensIndretning + '\'' +
-                ", Network='" + netværk + '\'' +
+                ", resourcer='" + resourcer + '\'' +
+                ", rolls='" + rolls + '\'' +
+                ", habits='" + habits + '\'' +
+                ", educationAndJob='" + educationAndJob + '\'' +
+                ", lifeStory='" + lifeStory + '\'' +
+                ", healthInformation='" + healthInformation + '\'' +
+                ", AssistiveDevices='" + AssistiveDevices + '\'' +
+                ", homeLayout='" + homeLayout + '\'' +
+                ", Network='" + Network + '\'' +
+                ", patientID=" + patientID +
                 '}';
     }
 }
