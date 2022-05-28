@@ -11,7 +11,7 @@ public class CitizenInfo {
      * @param citizenName
      * @param citizenLastName
      * @param Age
-     * Constructor with citizenId, citizenName,  citizenLastName, CPR
+     * Constructor with citizenId, citizenName,  citizenLastName, Age
      */
     public CitizenInfo(int citizenId, String citizenName, String citizenLastName, String Age) {
         this.citizenId = citizenId;

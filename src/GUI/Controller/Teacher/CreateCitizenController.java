@@ -130,7 +130,7 @@ public class CreateCitizenController implements Initializable {
 
         tcLastCitizen.setCellValueFactory(new PropertyValueFactory<>("citizenLastName"));
 
-        tcCitizenAge.setCellValueFactory(new PropertyValueFactory<>("Age"));
+        tcCitizenAge.setCellValueFactory(new PropertyValueFactory<>("citizenAge"));
 
         tvCitizen.setItems(citizenInfoModel.getAllCitizens());
     }
