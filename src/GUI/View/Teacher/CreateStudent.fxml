@@ -8,6 +8,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -88,7 +89,7 @@
          </font>
       </Label>
       <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="296.0" layoutY="137.0" size="30" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
-      <Pane fx:id="rightPane" prefHeight="630.0" prefWidth="199.0" style="-fx-background-color: efef77;">
+      <Pane fx:id="rightPane" prefHeight="630.0" prefWidth="199.0" style="-fx-background-color: ecc56c;">
          <children>
             <JFXButton fx:id="BtnBack" layoutX="14.0" layoutY="554.0" onAction="#BtnBack" prefHeight="40.0" prefWidth="171.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
                <cursor>
@@ -139,6 +140,9 @@
                </font>
             </Text>
          </children>
+         <effect>
+            <DropShadow height="0.0" radius="2.5" width="12.0" />
+         </effect>
       </Pane>
       <FontAwesomeIconView fill="#9dc191" glyphName="USER" layoutX="739.0" layoutY="65.0" size="20" strokeMiterLimit="33.0" strokeWidth="1222.0" text="" wrappingWidth="37.10774993896479" />
       <Label layoutX="333.0" layoutY="116.0" text="Indtast elevoplysninger" textFill="#2b2121">

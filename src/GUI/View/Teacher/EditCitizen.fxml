@@ -5,6 +5,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -47,7 +48,7 @@
                      </effect></TextField>
                </children>
             </GridPane>
-            <Pane prefHeight="396.0" prefWidth="199.0" style="-fx-background-color: #efef77;">
+            <Pane prefHeight="398.0" prefWidth="199.0" style="-fx-background-color: ecc56c;">
                <children>
                   <JFXButton fx:id="BtnBack" layoutX="15.0" layoutY="318.0" onAction="#BtnBack" prefHeight="40.0" prefWidth="170.0" stylesheets="@../CSS/CreateStudent.css" text="Tilbage">
                      <cursor>
@@ -65,6 +66,9 @@
                      </cursor>
                   </FontAwesomeIconView>
                </children>
+               <effect>
+                  <DropShadow height="0.0" radius="2.5" width="12.0" />
+               </effect>
             </Pane>
             <Line endX="148.0" layoutX="34.0" layoutY="100.0" startX="-14.899984359741211" startY="1.52587890625E-5" stroke="WHITE" />
             <Label layoutX="306.0" layoutY="136.0" text="Navn" />

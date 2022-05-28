@@ -40,6 +40,9 @@
                </cursor>
             </FontAwesomeIconView>
          </children>
+         <effect>
+            <DropShadow height="0.0" radius="2.5" width="12.0" />
+         </effect>
       </Pane>
       <JFXButton fx:id="cat1" layoutX="316.0" layoutY="115.0" onAction="#cat1Btn" prefHeight="75.0" prefWidth="250.0" style="-fx-background-color: #15B559;" text="Vaske sig" textFill="WHITE">
          <font>

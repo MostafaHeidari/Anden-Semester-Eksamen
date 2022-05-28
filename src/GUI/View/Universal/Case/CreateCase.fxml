@@ -6,6 +6,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -43,7 +44,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <Pane prefHeight="450.0" prefWidth="199.0" style="-fx-background-color: #efef77;">
+      <Pane prefHeight="450.0" prefWidth="199.0" style="-fx-background-color: ecc56c;">
          <children>
             <JFXButton fx:id="backTo" layoutX="14.0" layoutY="395.0" onAction="#backToPatientsBtn" prefHeight="40.0" prefWidth="171.0" stylesheets="@../../CSS/CreateStudent.css" text="Tilbage">
                <cursor>
@@ -61,6 +62,9 @@
                </font>
             </Text>
          </children>
+         <effect>
+            <DropShadow height="0.0" radius="2.5" width="12.0" />
+         </effect>
       </Pane>
       <Label alignment="CENTER" layoutX="254.0" layoutY="191.0" prefHeight="18.0" prefWidth="37.0" text="Navn:" />
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="229.0" layoutY="246.0" prefHeight="18.0" prefWidth="62.0" text="Infomation:" />

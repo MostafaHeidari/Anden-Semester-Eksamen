@@ -89,7 +89,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <Pane layoutX="-4.0" prefHeight="720.0" prefWidth="199.0" style="-fx-background-color: #efef77;">
+      <Pane layoutX="-4.0" prefHeight="720.0" prefWidth="199.0" style="-fx-background-color: ecc56c;">
          <children>
             <Text fill="#001569" layoutX="11.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gruppe&#10;Organisering" textAlignment="CENTER">
                <font>
@@ -137,6 +137,9 @@
                </cursor>
             </FontAwesomeIconView>
          </children>
+         <effect>
+            <DropShadow height="0.0" radius="2.5" width="12.0" />
+         </effect>
       </Pane>
       <JFXButton fx:id="deleteAClass" alignment="TOP_LEFT" layoutX="450.0" layoutY="233.0" onAction="#deleteAGroupBtn" prefHeight="27.0" prefWidth="141.0" text="Slet en Gruppe">
          <cursor>

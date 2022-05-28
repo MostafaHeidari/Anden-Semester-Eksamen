@@ -37,6 +37,9 @@
                </font>
             </Label>
          </children>
+         <effect>
+            <DropShadow height="0.0" radius="2.5" width="12.0" />
+         </effect>
       </Pane>
       <Line endX="162.8000030517578" endY="2.288818359375E-5" layoutX="36.0" layoutY="126.0" startX="-34.0000114440918" startY="2.288818359375E-5" stroke="WHITE" />
       <TextArea fx:id="InfoTextBox" layoutX="526.0" layoutY="39.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="549.0" prefWidth="478.0" promptText="Indtast oplysningerne">
