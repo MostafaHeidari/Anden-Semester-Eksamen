@@ -9,7 +9,7 @@
 <AnchorPane prefHeight="207.0" prefWidth="390.0" stylesheets="@../CSS/CreateGroup.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Teacher.CreateGroupController">
    <children>
       <TextField fx:id="classNameTxt" layoutX="177.0" layoutY="74.0" />
-      <Text layoutX="69.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KlasseNavn:">
+      <Text layoutX="65.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gruppe Navn:">
          <font>
             <Font size="18.0" />
          </font>
