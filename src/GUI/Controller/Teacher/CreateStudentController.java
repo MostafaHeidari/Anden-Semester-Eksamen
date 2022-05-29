@@ -24,6 +24,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class CreateStudentController implements Initializable {
@@ -231,7 +232,7 @@ public class CreateStudentController implements Initializable {
      */
     public void btnBackClasses(ActionEvent event) throws IOException {
         Stage switcher = (Stage) backClasses.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/TeacherGroupAndStudents.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/View/Teacher/TeacherGroupAndStudents.fxml")));
         Scene scene = new Scene(root);
         switcher.setTitle("Classe Manger");
         switcher.setScene(scene);
@@ -242,7 +243,7 @@ public class CreateStudentController implements Initializable {
      */
     public void btnBackPatient(ActionEvent event) throws IOException {
         Stage switcher = (Stage) BtnBackPatient.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateCitizen.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/View/Teacher/CreateCitizen.fxml")));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Borger");
         switcher.setScene(scene);
@@ -273,7 +274,7 @@ public class CreateStudentController implements Initializable {
      */
     public void citizenInformationBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) BtnBackPatient.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/CitizenInfo.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/View/Universal/CitizenInfo.fxml")));
         Scene scene = new Scene(root);
         switcher.setTitle("Borger Informationer");
         switcher.setScene(scene);

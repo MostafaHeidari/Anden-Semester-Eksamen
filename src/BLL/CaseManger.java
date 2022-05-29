@@ -56,11 +56,7 @@ public class CaseManger {
         caseDAO.deleteCase(selectedCase);
     }
 
-
-
     public Case editCase(Case selectedCase) {
         return caseDAO.editCase(selectedCase);
     }
-
-
 }

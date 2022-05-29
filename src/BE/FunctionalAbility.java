@@ -10,7 +10,6 @@ public class FunctionalAbility {
     private int caseID;
     private int catID;
 
-
     /**
      * @param caseID
      * @param condition
@@ -58,8 +57,6 @@ public class FunctionalAbility {
     public int getCaseID() { return caseID; }
 
     public int getCatID() { return catID; }
-
-    //-----
 
     /**
      * Setters

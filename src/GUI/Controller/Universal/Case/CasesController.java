@@ -29,29 +29,29 @@ import java.util.ResourceBundle;
 public class CasesController implements Initializable {
 
     @FXML
-    public JFXButton deleteCase;
+    private JFXButton deleteCase;
     @FXML
-    public JFXButton editCase;
+    private JFXButton editCase;
     @FXML
-    public JFXButton Category;
+    private JFXButton Category;
 
 
     @FXML
-    public TableView tvLastUpdated;
+    private TableView tvLastUpdated;
     @FXML
-    public TableColumn tcProblemId;
+    private TableColumn tcProblemId;
     @FXML
-    public TableColumn tcProblemName;
+    private TableColumn tcProblemName;
     @FXML
-    public TableColumn tcProblemInfo;
+    private TableColumn tcProblemInfo;
 
 
     @FXML
     private CitizenInfo selectedCitizenInfo;
     @FXML
-    public CaseModel caseModel;
+    private CaseModel caseModel;
     @FXML
-    public Case selectedCase;
+    private Case selectedCase;
     @FXML
     private FunctionalAbility selectedProblem;
 
@@ -66,11 +66,11 @@ public class CasesController implements Initializable {
     public TableColumn tcCaseName;
 
     @FXML
-    public Text nameCitizenTxt;
+    private Text nameCitizenTxt;
     @FXML
-    public Text lastNameCitizenTxt;
+    private Text lastNameCitizenTxt;
     @FXML
-    public Text ageCitizenTxt;
+    private Text ageCitizenTxt;
 
 
 

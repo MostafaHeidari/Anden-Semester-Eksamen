@@ -135,8 +135,6 @@ public class CreateCitizenController implements Initializable {
         tvCitizen.setItems(citizenInfoModel.getAllCitizens());
     }
 
-
-
     /**
      * selects a student with the setSelectedStudent method
      */

@@ -16,6 +16,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class LoginController {
     private final CreateStudentController createStudentController = new CreateStudentController();
@@ -58,7 +59,7 @@ public class LoginController {
              */
             if (login.getUserType().equals("Student")) {
                 Stage switcher = (Stage) btnLogin.getScene().getWindow();
-                Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Student/Citizent.fxml"));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/View/Student/Citizent.fxml")));
                 switcher.setTitle("Patient");
                 Scene scene = new Scene(root);
                 switcher.setScene(scene);
@@ -69,7 +70,7 @@ public class LoginController {
              */
             if (login.getUserType().equals("Teacher")) {
                 Stage switcher = (Stage) btnLogin.getScene().getWindow();
-                Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/View/Teacher/Teacher.fxml")));
                 switcher.setTitle("Teacher");
                 Scene scene = new Scene(root);
                 switcher.setScene(scene);
@@ -80,7 +81,7 @@ public class LoginController {
              */
             if (login.getUserType().equals("Admin")) {
                 Stage switcher = (Stage) btnLogin.getScene().getWindow();
-                Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Admin/AdminCreateTeacher.fxml"));
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/View/Admin/AdminCreateTeacher.fxml")));
                 switcher.setTitle("Teacher");
                 Scene scene = new Scene(root);
                 switcher.setScene(scene);

@@ -29,6 +29,5 @@ public class StudentsInClassManager {
      */
     public void deleteStudentInGroups(SchoolGroups selectedClass, Student selectedStudentInClass) throws SQLException {
         studentInGroupsDAO.deleteStudentInGroups(selectedClass,selectedStudentInClass);
-
     }
 }

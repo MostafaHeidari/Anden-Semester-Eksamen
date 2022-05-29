@@ -1,9 +1,7 @@
 package BLL.Admin;
 
-import BE.Student;
 import BE.Teacher;
 import DAL.db.Admin.TeacherDAO;
-import DAL.db.Teacher.StudentDAO;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,9 +13,9 @@ public class TeacherManger {
 
     TeacherDAO teacherDAO;
 
-
     /**
      * Constructor
+     *
      * @throws IOException
      */
     public TeacherManger() throws IOException {
@@ -26,6 +24,7 @@ public class TeacherManger {
 
     /**
      * Gets the list of getAllTeachers using the getAllTeachers method in teacherDAO.
+     *
      * @return a list of getAllTeachers
      */
     public ObservableList<Teacher> getAllTeachers() {
@@ -42,6 +41,7 @@ public class TeacherManger {
 
     /**
      * Gets the uploadTeacherInfo teacherName, teacherLastName, studentEmail and teacherUserName  using uploadTeacherInfo from teacherDAO
+     *
      * @param teacherName
      * @param teacherLastName
      * @param teacherUserName
@@ -49,11 +49,12 @@ public class TeacherManger {
      * @throws SQLServerException
      */
     public Teacher uploadTeacherInfo(String teacherName, String teacherLastName, String teacherUserName) throws SQLException {
-        return(teacherDAO.uploadTeacherInfo(teacherName, teacherLastName, teacherUserName));
+        return (teacherDAO.uploadTeacherInfo(teacherName, teacherLastName, teacherUserName));
     }
 
     /**
      * Gets the removeTeacher selectedTeacher using removeTeacher from studentDAO
+     *
      * @param selectedTeacher
      * @throws SQLServerException
      */

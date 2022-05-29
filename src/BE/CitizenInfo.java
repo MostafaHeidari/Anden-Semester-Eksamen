@@ -21,8 +21,6 @@ public class CitizenInfo {
     }
 
 
-
-
     public int getCitizenId() {
         return citizenId;
     }

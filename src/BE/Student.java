@@ -85,8 +85,6 @@ public class Student {
         this.lastName = lastName;
     }
 
-
-
     /**
      * ToString method
      * @return studentId, studentName, lastName, email, age, userName

@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Objects;
 
 public class SubcategoryKnowledgeAndDevelopmentController {
 
@@ -27,13 +28,13 @@ public class SubcategoryKnowledgeAndDevelopmentController {
     private JFXButton btnLogOut;
 
     @FXML
-    public Text subCatText;
+    private Text subCatText;
     @FXML
-    public TextArea txtMemoryProblems;
+    private TextArea txtMemoryProblems;
     @FXML
-    public TextArea txtTreatmentPurpose;
+    private TextArea txtTreatmentPurpose;
     @FXML
-    public TextArea txtDiseaseInsight;
+    private TextArea txtDiseaseInsight;
 
     // this is instance variable is not used to now//
     private int caseID = -1;
@@ -71,7 +72,7 @@ public class SubcategoryKnowledgeAndDevelopmentController {
      */
     public void subCategoryLogOut(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) btnLogOut.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/View/Universal/Login.fxml")));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);
@@ -123,5 +124,4 @@ public class SubcategoryKnowledgeAndDevelopmentController {
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {
         selectedCitizenInfo = selectedCitizen;
     }
-
 }

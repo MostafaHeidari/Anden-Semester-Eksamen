@@ -22,6 +22,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class TeacherGroupAndStudentsController implements Initializable {
@@ -39,33 +40,33 @@ public class TeacherGroupAndStudentsController implements Initializable {
 
 
     @FXML
-    public JFXButton backStudent;
+    private JFXButton backStudent;
     @FXML
-    public JFXButton backPatientBtn;
+    private JFXButton backPatientBtn;
 
     @FXML
-    public TableView tvClassInformation;
+    private TableView tvClassInformation;
     @FXML
-    public TableColumn tcClassId;
+    private TableColumn tcClassId;
     @FXML
-    public TableColumn tcClassName;
+    private TableColumn tcClassName;
 
     @FXML
-    public TableView tvStudent;
+    private TableView tvStudent;
     @FXML
-    public TableColumn tcNameStudent;
+    private TableColumn tcNameStudent;
     @FXML
-    public TableColumn tcStudentId;
+    private TableColumn tcStudentId;
     @FXML
-    public TableColumn tcLastname;
+    private TableColumn tcLastname;
 
 
     @FXML
-    public TableView tvStudentsInGroups;
+    private TableView tvStudentsInGroups;
     @FXML
-    public TableColumn tcStudentNameInGroup;
+    private TableColumn tcStudentNameInGroup;
     @FXML
-    public TableColumn tcLastNameInGroup;
+    private TableColumn tcLastNameInGroup;
 
 
     /**
@@ -110,7 +111,7 @@ public class TeacherGroupAndStudentsController implements Initializable {
      */
     public void BackFrontpageBtn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) backStudent.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/Teacher.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/View/Teacher/Teacher.fxml")));
         Scene scene = new Scene(root);
         switcher.setTitle("Teacher");
         switcher.setScene(scene);
@@ -121,7 +122,7 @@ public class TeacherGroupAndStudentsController implements Initializable {
      */
     public void newGroupBtn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) backStudent.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateGroups.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/View/Teacher/CreateGroups.fxml")));
         Scene scene = new Scene(root);
         switcher.setTitle("Classe Manger");
         switcher.setScene(scene);
@@ -132,7 +133,7 @@ public class TeacherGroupAndStudentsController implements Initializable {
      */
     public void newStudentBtn(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) backStudent.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml")));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Student");
         switcher.setScene(scene);
@@ -241,7 +242,7 @@ public class TeacherGroupAndStudentsController implements Initializable {
      */
     public void btnBackPatient(ActionEvent event) throws IOException {
         Stage switcher = (Stage) backPatientBtn.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateCitizen.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/View/Teacher/CreateCitizen.fxml")));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Borger");
         switcher.setScene(scene);
@@ -252,7 +253,7 @@ public class TeacherGroupAndStudentsController implements Initializable {
      */
     public void citizenInformationBtn(ActionEvent event) throws IOException {
         Stage switcher = (Stage) backStudent.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/CitizenInfo.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/View/Universal/CitizenInfo.fxml")));
         Scene scene = new Scene(root);
         switcher.setTitle("Borger Informationer");
         switcher.setScene(scene);
@@ -263,7 +264,7 @@ public class TeacherGroupAndStudentsController implements Initializable {
      */
     public void btnBackStudent(ActionEvent event) throws IOException {
         Stage switcher = (Stage) backStudent.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/View/Teacher/CreateStudent.fxml")));
         Scene scene = new Scene(root);
         switcher.setTitle("Opret Student");
         switcher.setScene(scene);
@@ -280,7 +281,7 @@ public class TeacherGroupAndStudentsController implements Initializable {
 
     public void LogOutOfClass(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) backStudent.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/View/Universal/Login.fxml")));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSUS System");
         switcher.setScene(scene);

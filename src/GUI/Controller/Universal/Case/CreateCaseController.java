@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Objects;
 
 public class CreateCaseController {
 
@@ -23,7 +24,7 @@ public class CreateCaseController {
     @FXML
     public JFXButton LogOut;
     @FXML
-    public JFXButton saveCase;
+    private JFXButton saveCase;
 
     @FXML
     public TextField InformationTxt;
@@ -46,7 +47,7 @@ public class CreateCaseController {
      */
     public void LogOutAction(ActionEvent event) throws IOException {
         Stage switcher = (Stage) LogOut.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/View/Universal/Login.fxml")));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSUS System");
         switcher.setScene(scene);
@@ -56,13 +57,6 @@ public class CreateCaseController {
      * Returns to CitizenInfo with the backToPatientsBtn method
      */
     public void backToPatientsBtn(ActionEvent event) throws IOException {
-       /* Stage switcher = (Stage) backTo.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/CitizenInfo.fxml"));
-        Scene scene = new Scene(root);
-        switcher.setTitle("Borger Informationer");
-        switcher.setScene(scene);
-        */
-
 
         /*turn back to Create student window*/
         Stage switcher = (Stage) saveCase.getScene().getWindow();

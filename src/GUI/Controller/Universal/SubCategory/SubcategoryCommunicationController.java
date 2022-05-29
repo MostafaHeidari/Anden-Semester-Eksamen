@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Objects;
 
 public class SubcategoryCommunicationController {
     private CitizenInfo selectedCitizenInfo;
@@ -23,7 +24,7 @@ public class SubcategoryCommunicationController {
     @FXML
     private JFXButton btnLogOut;
     @FXML
-    public TextArea txtCommunication;
+    private TextArea txtCommunication;
 
     // this is instance variable is not used to now//
     private int caseID = -1;
@@ -61,7 +62,7 @@ public class SubcategoryCommunicationController {
      */
     public void subCategoryLogOut(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) btnLogOut.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/View/Universal/Login.fxml")));
         Scene scene = new Scene(root);
         switcher.setTitle("SOSU System");
         switcher.setScene(scene);

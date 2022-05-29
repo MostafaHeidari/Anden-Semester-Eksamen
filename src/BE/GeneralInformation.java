@@ -17,7 +17,6 @@ public class GeneralInformation {
     private int patientID;
 
     /**
-
      * @param mestring
      * @param motivation
      * @param resourcer

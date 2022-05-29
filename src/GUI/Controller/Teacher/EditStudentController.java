@@ -12,6 +12,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.util.Objects;
 
 
 public class EditStudentController {
@@ -81,7 +82,7 @@ public class EditStudentController {
      */
     public void LogOutAction(ActionEvent actionEvent) throws IOException {
         Stage switcher = (Stage) Logout.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/View/Universal/Login.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/GUI/View/Universal/Login.fxml")));
         Scene scene = new Scene(root);
         switcher.setTitle("Create student");
         switcher.setScene(scene);

@@ -21,15 +21,15 @@ public class CasesEditController {
     int selectedCitizenInfo;
 
     @FXML
-    public TextField caseNameTxt;
+    private TextField caseNameTxt;
     @FXML
-    public TextField InformationTxt;
+    private TextField InformationTxt;
     @FXML
-    public JFXButton saveCase;
+    private JFXButton saveCase;
     @FXML
-    public JFXButton LogOut;
+    private JFXButton LogOut;
     @FXML
-    public JFXButton backTo;
+    private JFXButton backTo;
 
     public CasesEditController() throws IOException {
     }

@@ -6,12 +6,10 @@ public class Teacher {
     private String teacherLastName;
     private String teacherUserName;
 
-
     /**
      * @param teacherId
      * @param teacherName
      * @param teacherLastName
-     * @param teacherEmail
      * @param teacherUserName
      * Constructor with teacherId,  teacherName, teacherLastName, teacherEmail, teacherUserName
      */
