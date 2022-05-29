@@ -362,7 +362,7 @@ public class FunctionalAbilityController implements Initializable {
                 "Udføre daglige rutiner", "Skaffe sig varer og Tjenesteydelser", "Lave mad", "Lave husligt arbejde",
                 "Ændre kropsstilling", "Forflytte sig", "Løfte og bære", "Gå", "Bevæge sig omkring", "Færden i forskellige omgivelser", "Bruge transportmidler", "Udholdenhed", "Muskelstyrke",
                 "Tilegne sig færdigheder", "Problemløsning", "Anvende kommunikationsudstyr og-teknikker", "Orienteringsevne", "Energi og handlekraft", "Hukommelse", "Følelsesfunktioner", "overordnede kognitive funktioner",
-                "Vaske sig"
+                "Have lønnet beskæftigelse"
         };
 
         //array of names for the checkboxes and textfields

@@ -2,9 +2,12 @@ package DAL;
 
 import BE.GeneralInformation;
 import DAL.db.DatabaseConnector;
+import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GeneralInformationDAO {
 
@@ -57,6 +60,7 @@ public class GeneralInformationDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, Mestring);
             preparedStatement.setInt(2, PatientID);
+
 
             preparedStatement.executeUpdate();
 
@@ -119,7 +123,7 @@ public class GeneralInformationDAO {
 
     public void updateVaner(String Habit, int PatientID) throws SQLException {
 
-        String sql = "UPDATE GeneralInfo SET Habit = (?) WHERE PatientID = (?);";
+        String sql = "UPDATE GeneralInfo SET Vaner = (?) WHERE PatientID = (?);";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -136,7 +140,7 @@ public class GeneralInformationDAO {
 
     public void updateUddanelseJob(String EducationAndJob, int PatientID) throws SQLException {
 
-        String sql = "UPDATE GeneralInfo SET EducationAndJob = (?) WHERE PatientID = (?);";
+        String sql = "UPDATE GeneralInfo SET UddanelseJob = (?) WHERE PatientID = (?);";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -153,7 +157,7 @@ public class GeneralInformationDAO {
 
     public void updateLivhistorie(String lifestory, int PatientID) throws SQLException {
 
-        String sql = "UPDATE GeneralInfo SET lifestory = (?) WHERE PatientID = (?);";
+        String sql = "UPDATE GeneralInfo SET Livhistorie = (?) WHERE PatientID = (?);";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -170,7 +174,7 @@ public class GeneralInformationDAO {
 
     public void updateHelbredsOplysninger(String healthInformation, int PatientID) throws SQLException {
 
-        String sql = "UPDATE GeneralInfo SET healthInformation = (?) WHERE PatientID = (?);";
+        String sql = "UPDATE GeneralInfo SET HelbredsOplysninger = (?) WHERE PatientID = (?);";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -187,7 +191,7 @@ public class GeneralInformationDAO {
 
     public void updateHjælpemidler(String AssistiveDevices, int PatientID) throws SQLException {
 
-        String sql = "UPDATE GeneralInfo SET AssistiveDevices = (?) WHERE PatientID = (?);";
+        String sql = "UPDATE GeneralInfo SET Hjælpemidler = (?) WHERE PatientID = (?);";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -204,7 +208,7 @@ public class GeneralInformationDAO {
 
     public void updateBoligensIndretning(String HomeLayout, int PatientID) throws SQLException {
 
-        String sql = "UPDATE GeneralInfo SET HomeLayout = (?) WHERE PatientID = (?);";
+        String sql = "UPDATE GeneralInfo SET BoligensIndretning = (?) WHERE PatientID = (?);";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -221,7 +225,7 @@ public class GeneralInformationDAO {
 
     public void updateNetværk(String Network, int PatientID) throws SQLException {
 
-        String sql = "UPDATE GeneralInfo SET Network = (?) WHERE PatientID = (?);";
+        String sql = "UPDATE GeneralInfo SET Netværk = (?) WHERE PatientID = (?);";
 
         try(Connection connection = DC.getConnection()){
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -233,5 +237,197 @@ public class GeneralInformationDAO {
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
         }
+    }
+
+    public List<GeneralInformation> getAllGeneralInformation(int citizenId) {
+
+        List<GeneralInformation> allGeneralInformation = new ArrayList<>();
+        try (Connection connection = DC.getConnection()) {
+
+            String select = "SELECT Mestring, Motivation, Ressourcer, Roller, Vaner, UddanelseJob, Livshistorie, HelbredsOplysninger, Hjælpemidler, BoligensOplysninger, Netværk, PatientID\n" +
+                    "                FROM GeneralInfo Where PatientID = ?";
+
+            PreparedStatement ps = connection.prepareStatement(select, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, citizenId);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+
+                GeneralInformation aGeneralInformation = new GeneralInformation(rs.getString(1), rs.getString(2),
+                        rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(11), rs.getInt(12));
+                allGeneralInformation.add(aGeneralInformation);
+            }
+
+        } catch (SQLServerException throwables) {
+            throwables.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return allGeneralInformation;
+    }
+
+    public String getMestring(int PatientID) throws SQLException {
+
+        String getString;
+        try (Connection connection = DC.getConnection()) {
+            String sql = "SELECT Mestring FROM GeneralInfo WHERE PatientID = (?);";
+
+            PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, PatientID);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            getString = rs.getString(1);
+        }
+        return getString;
+    }
+
+    public String getMotivation(int PatientID) throws SQLException {
+
+        String getString;
+        try (Connection connection = DC.getConnection()) {
+            String sql = "SELECT Motivation FROM GeneralInfo WHERE PatientID = (?);";
+
+            PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, PatientID);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            getString = rs.getString(1);
+        }
+        return getString;
+    }
+
+    public String getRessourcer(int PatientID) throws SQLException {
+
+        String getString;
+        try (Connection connection = DC.getConnection()) {
+            String sql = "SELECT Ressourcer FROM GeneralInfo WHERE PatientID = (?);";
+
+            PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, PatientID);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            getString = rs.getString(1);
+        }
+        return getString;
+    }
+
+    public String getRoller(int PatientID) throws SQLException {
+
+        String getString;
+        try (Connection connection = DC.getConnection()) {
+            String sql = "SELECT Roller FROM GeneralInfo WHERE PatientID = (?);";
+
+            PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, PatientID);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            getString = rs.getString(1);
+        }
+        return getString;
+    }
+
+    public String getVaner(int PatientID) throws SQLException {
+
+        String getString;
+        try (Connection connection = DC.getConnection()) {
+            String sql = "SELECT Vaner FROM GeneralInfo WHERE PatientID = (?);";
+
+            PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, PatientID);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            getString = rs.getString(1);
+        }
+        return getString;
+    }
+
+    public String getUddanelseJob(int PatientID) throws SQLException {
+
+        String getString;
+        try (Connection connection = DC.getConnection()) {
+            String sql = "SELECT UddanelseJob FROM GeneralInfo WHERE PatientID = (?);";
+
+            PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, PatientID);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            getString = rs.getString(1);
+        }
+        return getString;
+    }
+
+    public String getLivshistorie(int PatientID) throws SQLException {
+
+        String getString;
+        try (Connection connection = DC.getConnection()) {
+            String sql = "SELECT Livhistorie FROM GeneralInfo WHERE PatientID = (?);";
+
+            PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, PatientID);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            getString = rs.getString(1);
+        }
+        return getString;
+    }
+
+    public String getHelbredsOplysninger(int PatientID) throws SQLException {
+
+        String getString;
+        try (Connection connection = DC.getConnection()) {
+            String sql = "SELECT HelbredsOplysninger FROM GeneralInfo WHERE PatientID = (?);";
+
+            PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, PatientID);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            getString = rs.getString(1);
+        }
+        return getString;
+    }
+
+    public String getHjælpemidler(int PatientID) throws SQLException {
+
+        String getString;
+        try (Connection connection = DC.getConnection()) {
+            String sql = "SELECT Hjælpemidler FROM GeneralInfo WHERE PatientID = (?);";
+
+            PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, PatientID);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            getString = rs.getString(1);
+        }
+        return getString;
+    }
+
+    public String getBoligIndretning(int PatientID) throws SQLException {
+
+        String getString;
+        try (Connection connection = DC.getConnection()) {
+            String sql = "SELECT BoligensIndretning FROM GeneralInfo WHERE PatientID = (?);";
+
+            PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, PatientID);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            getString = rs.getString(1);
+        }
+        return getString;
+    }
+
+    public String getNetværk(int PatientID) throws SQLException {
+
+        String getString;
+        try (Connection connection = DC.getConnection()) {
+            String sql = "SELECT Netværk FROM GeneralInfo WHERE PatientID = (?);";
+
+            PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, PatientID);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            getString = rs.getString(1);
+        }
+        return getString;
     }
 }
