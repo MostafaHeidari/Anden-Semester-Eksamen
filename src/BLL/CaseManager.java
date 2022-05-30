@@ -9,11 +9,11 @@ import javafx.collections.ObservableList;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class CaseManger {
+public class CaseManager {
 
     CaseDAO caseDAO;
 
-    public CaseManger() throws IOException {
+    public CaseManager() throws IOException {
         caseDAO = new CaseDAO();
     }
 
