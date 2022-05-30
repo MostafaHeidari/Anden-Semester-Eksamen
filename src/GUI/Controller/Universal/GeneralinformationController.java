@@ -1,6 +1,8 @@
 package GUI.Controller.Universal;
 
+import BE.Case;
 import BE.CitizenInfo;
+import BE.GeneralInformation;
 import DAL.GeneralInformationDAO;
 import GUI.Controller.Universal.Case.CasesController;
 import GUI.Model.GeneralInformationModel;
@@ -14,6 +16,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -27,6 +30,7 @@ public class GeneralinformationController implements Initializable {
     public GeneralInformationModel generalInformationModel;
 
     private final GeneralInformationDAO generalInformationDAO;
+    private int CategoryID = 0;
     
     @FXML
     public Button BtnMestring;
@@ -54,6 +58,8 @@ public class GeneralinformationController implements Initializable {
     public JFXButton BtnBack;
     @FXML
     public TextArea InfoTextBox;
+    @FXML
+    public Text selectedCategory;
 
     private CitizenInfo selectedCitizenId;
 
@@ -79,41 +85,110 @@ public class GeneralinformationController implements Initializable {
     }
 
     public void btnHandleSaveCitizen(ActionEvent actionEvent) throws SQLException {
-        generalInformationDAO.updateMestring(InfoTextBox.getText(), selectedCitizenId.getCitizenId());
+
+        switch (CategoryID) {
+            case 1:  generalInformationDAO.updateMestring(InfoTextBox.getText(), selectedCitizenId.getCitizenId());
+                break;
+            case 2:  generalInformationDAO.updateMotivation(InfoTextBox.getText(), selectedCitizenId.getCitizenId());
+                break;
+            case 3:  generalInformationDAO.updateRessourcer(InfoTextBox.getText(), selectedCitizenId.getCitizenId());
+                break;
+            case 4:  generalInformationDAO.updateRoller(InfoTextBox.getText(), selectedCitizenId.getCitizenId());
+                break;
+            case 5:  generalInformationDAO.updateVaner(InfoTextBox.getText(), selectedCitizenId.getCitizenId());
+                break;
+            case 6:  generalInformationDAO.updateUddanelseJob(InfoTextBox.getText(), selectedCitizenId.getCitizenId());
+                break;
+            case 7:  generalInformationDAO.updateLivhistorie(InfoTextBox.getText(), selectedCitizenId.getCitizenId());
+                break;
+            case 8:  generalInformationDAO.updateHelbredsOplysninger(InfoTextBox.getText(), selectedCitizenId.getCitizenId());
+                break;
+            case 9:  generalInformationDAO.updateHjælpemidler(InfoTextBox.getText(), selectedCitizenId.getCitizenId());
+                break;
+            case 10: generalInformationDAO.updateBoligensIndretning(InfoTextBox.getText(), selectedCitizenId.getCitizenId());
+                break;
+            case 11: generalInformationDAO.updateNetværk(InfoTextBox.getText(), selectedCitizenId.getCitizenId());
+                break;
+            default:
+                break;
+        }
     }
 
     public void mestring(ActionEvent actionEvent) throws SQLException {
-        InfoTextBox.setText(String.valueOf(new PropertyValueFactory("Mestring")));
+        CategoryID = 1;
+        InfoTextBox.clear();
+        InfoTextBox.setText(generalInformationDAO.getMestring(selectedCitizenId.getCitizenId()));
+        selectedCategory.setText("Mestring");
     }
 
-    public void motivation(ActionEvent actionEvent) {
+    public void motivation(ActionEvent actionEvent) throws SQLException {
+        CategoryID = 2;
+        InfoTextBox.clear();
+        InfoTextBox.setText(generalInformationDAO.getMotivation(selectedCitizenId.getCitizenId()));
+        selectedCategory.setText("Motivation");
     }
 
-    public void ressourcer(ActionEvent actionEvent) {
+    public void ressourcer(ActionEvent actionEvent) throws SQLException {
+        CategoryID = 3;
+        InfoTextBox.clear();
+        InfoTextBox.setText(generalInformationDAO.getRessourcer(selectedCitizenId.getCitizenId()));
+        selectedCategory.setText("Ressourcer");
     }
 
-    public void roller(ActionEvent actionEvent) {
+    public void roller(ActionEvent actionEvent) throws SQLException {
+        CategoryID = 4;
+        InfoTextBox.clear();
+        InfoTextBox.setText(generalInformationDAO.getRoller(selectedCitizenId.getCitizenId()));
+        selectedCategory.setText("Roller");
     }
 
-    public void vaner(ActionEvent actionEvent) {
+    public void vaner(ActionEvent actionEvent) throws SQLException {
+        CategoryID = 5;
+        InfoTextBox.clear();
+        InfoTextBox.setText(generalInformationDAO.getVaner(selectedCitizenId.getCitizenId()));
+        selectedCategory.setText("Vaner");
     }
 
-    public void uddannelse(ActionEvent actionEvent) {
+    public void uddannelse(ActionEvent actionEvent) throws SQLException {
+        CategoryID = 6;
+        InfoTextBox.clear();
+        InfoTextBox.setText(generalInformationDAO.getUddanelseJob(selectedCitizenId.getCitizenId()));
+        selectedCategory.setText("Uddanelse");
     }
 
-    public void livsHistorie(ActionEvent actionEvent) {
+    public void livsHistorie(ActionEvent actionEvent) throws SQLException {
+        CategoryID = 7;
+        InfoTextBox.clear();
+        InfoTextBox.setText(generalInformationDAO.getLivshistorie(selectedCitizenId.getCitizenId()));
+        selectedCategory.setText("Livshistorie");
     }
 
-    public void helbred(ActionEvent actionEvent) {
+    public void helbred(ActionEvent actionEvent) throws SQLException {
+        CategoryID = 8;
+        InfoTextBox.clear();
+        InfoTextBox.setText(generalInformationDAO.getHelbredsOplysninger(selectedCitizenId.getCitizenId()));
+        selectedCategory.setText("Helbred");
     }
 
-    public void hjælpeMidler(ActionEvent actionEvent) {
+    public void hjælpeMidler(ActionEvent actionEvent) throws SQLException {
+        CategoryID = 9;
+        InfoTextBox.clear();
+        InfoTextBox.setText(generalInformationDAO.getHjælpemidler(selectedCitizenId.getCitizenId()));
+        selectedCategory.setText("Hjælpemidler");
     }
 
-    public void bolig(ActionEvent actionEvent) {
+    public void bolig(ActionEvent actionEvent) throws SQLException {
+        CategoryID = 10;
+        InfoTextBox.clear();
+        InfoTextBox.setText(generalInformationDAO.getBoligIndretning(selectedCitizenId.getCitizenId()));
+        selectedCategory.setText("Bolig");
     }
 
-    public void network(ActionEvent actionEvent) {
+    public void network(ActionEvent actionEvent) throws SQLException {
+        CategoryID = 11;
+        InfoTextBox.clear();
+        InfoTextBox.setText(generalInformationDAO.getNetværk(selectedCitizenId.getCitizenId()));
+        selectedCategory.setText("Netværk");
     }
 
     public void setSelectedCitizen(CitizenInfo selectedCitizen) {

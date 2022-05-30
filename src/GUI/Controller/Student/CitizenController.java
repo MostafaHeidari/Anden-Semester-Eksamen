@@ -15,6 +15,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -93,6 +94,8 @@ public class CitizenController implements Initializable {
             root1 = (Parent) fxmlLoader1.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root1));
+            Image icon = new Image(getClass().getResourceAsStream("/GUI/View/img/old lady.png"));
+            stage.getIcons().add(icon);
 
             fxmlLoader1.<CasesController>getController().setSelectedCitizen(selectedCitizenInfo);
             stage.show();

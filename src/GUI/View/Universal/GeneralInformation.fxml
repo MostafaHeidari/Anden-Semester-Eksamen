@@ -16,6 +16,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="657.0" prefWidth="1031.0" stylesheets="@../CSS/GeneralInfo.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.Universal.GeneralinformationController">
    <children>
@@ -172,5 +173,10 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
+      <Text fx:id="selectedCategory" layoutX="525.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vælg en Kategori" textAlignment="CENTER" wrappingWidth="478.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
