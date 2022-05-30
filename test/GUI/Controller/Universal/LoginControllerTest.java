@@ -40,7 +40,6 @@ class LoginControllerTest {
 
         //Admin
         Assertions.assertEquals(ActualAdminLoginValue, expectedAdminLoginValue);
-
     }
 
     @Test
