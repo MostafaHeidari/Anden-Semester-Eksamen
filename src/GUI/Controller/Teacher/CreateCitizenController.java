@@ -148,9 +148,12 @@ public class CreateCitizenController implements Initializable {
     /**
      * remove a citizen with the SletElevAction method
      */
-    public void DeleteCitizenAction(ActionEvent actionEvent) {
+    public void DeleteCitizenAction(ActionEvent actionEvent) throws IOException {
         if (SimpleDialogController.delete() && seletedCitizen != null) {
             citizenInfoModel.removeCitizen(seletedCitizen);
+            tvCitizen.getItems().clear();
+
+            tvCitizen.setItems(citizenInfoModel.getAllCitizens());
         }
     }
 
