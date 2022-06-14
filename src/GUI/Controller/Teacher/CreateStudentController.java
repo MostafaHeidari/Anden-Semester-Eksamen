@@ -256,7 +256,12 @@ public class CreateStudentController implements Initializable {
     public void DeleteStudentAction(ActionEvent actionEvent) {
         if (SimpleDialogController.delete() && selectedStudent != null) {
             studentModel.removeStudent(selectedStudent);
-            tvStudent.refresh();
+            tvStudent.getItems().clear();
+            try {
+                tvStudent.setItems(studentModel.getAllStudents());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
