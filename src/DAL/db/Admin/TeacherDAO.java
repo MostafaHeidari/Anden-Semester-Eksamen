@@ -54,7 +54,7 @@ public class TeacherDAO {
     public Teacher uploadTeacherInfo(String teacherName, String teacherLastName, String teacherUserName) throws SQLException {
         Connection connection = DC.getConnection();
 
-        String sql = "INSERT INTO Teachers (TeacherName,TeacherLastName,TeacherEmail,TeacherUserName) VALUES (?,?,?,?);";
+        String sql = "INSERT INTO Teachers (TeacherName,TeacherLastName,TeacherUserName) VALUES (?,?,?);";
 
         PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
