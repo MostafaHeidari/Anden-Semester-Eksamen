@@ -33,7 +33,7 @@ public class StudentInGroupsDAO {
         int cId = selectedGroup.getGroupId();
         int sId = selectedStudent.getStudentId();
 
-        String sql = "INSERT INTO ClassStudents (ClassID , StudentID) VALUES ((?), (?)); ";
+        String sql = "INSERT INTO GroupStudents (GroupID , StudentID) VALUES ((?), (?)); ";
 
         PreparedStatement pst = connection.prepareStatement(sql);
 
@@ -89,7 +89,7 @@ public class StudentInGroupsDAO {
         int cId = selectedGroup.getGroupId();
         int mId = selectedStudentInClass.getStudentId();
 
-        String sql = "DELETE FROM GroupStudents WHERE ClassID = (?) AND StudentID = (?); ";
+        String sql = "DELETE FROM GroupStudents WHERE GroupID = (?) AND StudentID = (?); ";
 
         PreparedStatement pst = connection.prepareStatement(sql);
 

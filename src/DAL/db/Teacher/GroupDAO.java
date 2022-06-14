@@ -75,8 +75,8 @@ public class GroupDAO {
     public void deleteAGroup(SchoolGroups schoolGroup) {
         int pId = schoolGroup.getGroupId();
 
-        String sql2 = "DELETE FROM GroupStudents WHERE GroupID = (?);";
-        String sql1 = "DELETE FROM GroupTable WHERE GroupID = (?);";
+        String sql1 = "DELETE FROM GroupStudents WHERE GroupID = (?);";
+        String sql2 = "DELETE FROM GroupTable WHERE GroupID = (?);";
 
         try(Connection connection = DC.getConnection())
         {
